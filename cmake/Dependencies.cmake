@@ -48,12 +48,7 @@ function(search_dependency pkg)
 
   # Then, try OSX frameworks.
   if(NOT ${pkg}_FOUND AND arg_FRAMEWORK)
-    find_library(${pkg}_LIBRARIES 
-            NAMES ${arg_FRAMEWORK} 
-            PATHS ${CMAKE_OSX_SYSROOT}/System/Library 
-            PATH_SUFFIXES Frameworks 
-            NO_DEFAULT_PATH
-    )
+    find_library(${pkg}_LIBRARIES NAMES ${arg_FRAMEWORK} PATHS ${CMAKE_OSX_SYSROOT}/System/Library PATH_SUFFIXES Frameworks NO_DEFAULT_PATH)
     if(${pkg}_LIBRARIES)
       set(${pkg}_FOUND TRUE)
     endif()
@@ -83,6 +78,11 @@ function(search_dependency pkg)
   set(${pkg}_FOUND ${${pkg}_FOUND} PARENT_SCOPE)
 endfunction()
 
+search_dependency(APPINDICATOR        PACKAGE appindicator-0.1 OPTIONAL)
+search_dependency(GDK_PIXBUF          PACKAGE gdk-pixbuf-2.0   OPTIONAL)
+search_dependency(GLIB                PACKAGE glib-2.0         OPTIONAL)
+search_dependency(GTK                 PACKAGE gtk+-2.0         OPTIONAL)
+
 search_dependency(LIBAVCODEC          PACKAGE libavcodec)
 search_dependency(LIBAVDEVICE         PACKAGE libavdevice)
 search_dependency(LIBAVFORMAT         PACKAGE libavformat)
@@ -91,25 +91,13 @@ search_dependency(LIBQRENCODE         PACKAGE libqrencode)
 search_dependency(LIBSODIUM           PACKAGE libsodium)
 search_dependency(LIBSWSCALE          PACKAGE libswscale)
 search_dependency(SQLCIPHER           PACKAGE sqlcipher)
+search_dependency(TOXCORE             PACKAGE toxcore)
 search_dependency(VPX                 PACKAGE vpx)
-
-# Try to find cmake toxcore libraries
-search_dependency(TOXCORE             PACKAGE toxcore          OPTIONAL)
-search_dependency(TOXAV               PACKAGE toxav            OPTIONAL)
-search_dependency(TOXENCRYPTSAVE      PACKAGE toxencryptsave   OPTIONAL)
-
-# If not found, use automake toxcore libraries
-if (NOT TOXCORE_FOUND OR
-        NOT TOXAV_FOUND OR
-        NOT TOXENCRYPTSAVE_FOUND)
-    search_dependency(TOXCORE             PACKAGE libtoxcore)
-    search_dependency(TOXAV               PACKAGE libtoxav)
-endif()
 
 search_dependency(OPENAL              PACKAGE openal FRAMEWORK OpenAL)
 
 # Automatic auto-away support. (X11 also using for capslock detection)
-search_dependency(X11                 PACKAGE x11 OPTIONAL)
+search_dependency(X11                 LIBRARY X11 OPTIONAL)
 search_dependency(XSS                 LIBRARY Xss OPTIONAL)
 
 if(APPLE)
@@ -122,7 +110,7 @@ if(APPLE)
 endif()
 
 if(WIN32)
-  set(ALL_LIBRARIES ${ALL_LIBRARIES} strmiids)
+  search_dependency(STRMIIDS          LIBRARY strmiids)
 endif()
 
 if (NOT GIT_DESCRIBE)
@@ -139,9 +127,7 @@ if (NOT GIT_DESCRIBE)
   endif()
 endif()
 
-add_definitions(
-  -DGIT_DESCRIBE="${GIT_DESCRIBE}"
-)
+add_definitions(-DGIT_DESCRIBE="${GIT_DESCRIBE}")
 
 if (NOT GIT_VERSION)
   execute_process(
@@ -157,9 +143,7 @@ if (NOT GIT_VERSION)
   endif()
 endif()
 
-add_definitions(
-  -DGIT_VERSION="${GIT_VERSION}"
-)
+add_definitions(-DGIT_VERSION="${GIT_VERSION}")
 
 if (NOT TIMESTAMP)
   execute_process(
@@ -179,13 +163,9 @@ if (X11_FOUND AND XSS_FOUND)
 endif()
 
 if (${APPLE_EXT} OR ${X11_EXT})
-  add_definitions(
-    -DQTOX_PLATFORM_EXT=1
-  )
+  add_definitions(-DQTOX_PLATFORM_EXT=1)
 else()
-  add_definitions(
-    -DQTOX_PLATFORM_EXT=0
-  )
+  add_definitions(-DQTOX_PLATFORM_EXT=0)
 endif()
 
 add_definitions(

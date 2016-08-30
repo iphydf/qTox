@@ -86,6 +86,11 @@ void AboutForm::replaceVersions()
     bodyUI->toxCoreVersion->setText(tr("toxcore version: %1").arg(TOXCORE_VERSION));
     bodyUI->qtVersion->setText(tr("Qt version: %1").arg(QT_VERSION_STR));
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    QString productName = QSysInfo::prettyProductName();
+#else
+    QString productName = "Windows / OS X / Linux (include version and/or distro)";
+#endif
     QString issueBody = QString("##### Brief Description\n\n"
                                 "OS: %1\n"
                                 "qTox version: %2\n"
@@ -105,7 +110,7 @@ void AboutForm::replaceVersions()
                                 "More information on how to write good bug reports in the wiki: "
                                 "https://github.com/qTox/qTox/wiki/Writing-Useful-Bug-Reports.\n\n"
                                 "Please remove any unnecessary template section before submitting.")
-                            .arg(QSysInfo::prettyProductName(),  GIT_DESCRIBE, GIT_VERSION,
+                            .arg(productName,  GIT_DESCRIBE, GIT_VERSION,
                                  TOXCORE_VERSION, QT_VERSION_STR);
 
     issueBody.replace("#", "%23").replace(":", "%3A");

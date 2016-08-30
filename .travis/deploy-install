@@ -1,0 +1,8 @@
+#!/bin/sh
+
+git clone --depth=1 --branch=one-big-lib https://github.com/iphydf/c-toxcore
+
+RUN $CMAKE -Bc-toxcore/$BUILD_DIR -Hc-toxcore -DBOOTSTRAP_DAEMON=OFF -DDEBUG=ON -DSTRICT_ABI=ON -DWARNINGS=OFF -DCMAKE_INSTALL_PREFIX:PATH=$CURDIR/libs
+RUN $MAKE -C c-toxcore/$BUILD_DIR -j$NPROC -k install
+
+rm -rf c-toxcore

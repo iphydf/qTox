@@ -18,6 +18,8 @@
 */
 
 
+#include <QtCore>
+#ifdef Q_OS_OSX
 #include "install_osx.h"
 #include <QApplication>
 #include <QDebug>
@@ -120,3 +122,4 @@ void osx::migrateProfiles()
     }
 }
 // End migrateProfiles() compatibility code
+#endif

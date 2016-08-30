@@ -1,5 +1,4 @@
 #!/usr/bin/env perl
-# This script used in `CMakeList.txt`. It's not required to run manually
 
 use strict;
 use File::Find;

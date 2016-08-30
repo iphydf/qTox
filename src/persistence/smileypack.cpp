@@ -75,8 +75,11 @@ QStringList loadDefaultPaths()
                       EMOTICONS_SUB_PATH};
 
     // qTox exclusive emoticons
-    QStandardPaths::StandardLocation location;
-    location = QStandardPaths::AppDataLocation;
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    QStandardPaths::StandardLocation location = QStandardPaths::AppDataLocation;
+#else
+    QStandardPaths::StandardLocation location = QStandardPaths::DataLocation;
+#endif
 
     QStringList locations = QStandardPaths::standardLocations(location);
     // system wide emoticons

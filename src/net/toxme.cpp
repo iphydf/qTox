@@ -20,6 +20,8 @@
 #include "toxme.h"
 #include "src/core/core.h"
 #include <QCoreApplication>
+#include "src/persistence/settings.h"
+#include <QtDebug>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QThread>

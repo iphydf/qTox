@@ -1,7 +1,46 @@
-sudo: required
-dist: trusty
 language: cpp
-cache: ccache
+dist: trusty
+sudo: required
+
+addons:
+  apt:
+    sources:
+      - sourceline: 'ppa:mc3man/trusty-media'
+      - sourceline: 'ppa:chris-lea/libsodium'
+    packages:
+      - ffmpeg
+      - libasound-dev
+      - libass-dev
+      - libfdk-aac-dev
+      - libgtk2.0-dev
+      - libmp3lame-dev
+      - libogg-dev
+      - libopenal-dev
+      - libopencore-amrnb-dev
+      - libopencore-amrwb-dev
+      - libopus-dev
+      - libqrencode-dev
+      - libqt5opengl5-dev
+      - libqt5svg5-dev
+      - libsdl1.2-dev
+      - libsdl2-dev
+      - libsodium-dev
+      - libsoxr-dev
+      - libspeex-dev
+      - libsqlcipher-dev
+      - libswscale-dev
+      - libva-dev
+      - libvdpau-dev
+      - libvidstab-dev
+      - libvorbis-dev
+      - libvpx-dev
+      - libwavpack-dev
+      - libx264-dev
+      - libx265-dev
+      - libxv-dev
+      - libxvidcore-dev
+      - qttools5-dev
+      - qttools5-dev-tools
 
 # regex is for release tags
 branches:
@@ -9,56 +48,25 @@ branches:
     - master
     - /^v(\d+\.){2}\d+$/
 
-matrix:
-  fast_finish: true
+jobs:
   include:
+    - stage: test
+      os: linux
+      env: JOB=test ENV=linux
+    - stage: deploy
+      os: linux
+      env: JOB=deploy ENV=linux
     - os: linux
-      env: JOB=verify-commit-format
+      env: JOB=deploy ENV=windows ARCH=i686 LIBTYPE=shared
+      services:
+        - docker
     - os: linux
-      env: JOB=build-docs DOXYGEN_CONFIG_FILE=doxygen.conf
-    - os: linux
-      env: JOB=build-gitstats GITSTATS_DIR=gitstats
-      addons:
-        apt:
-          packages:
-            - gitstats
-    # the actual compilin'
-    - os: linux
-      env: JOB=build-ubuntu-14-04
+      env: JOB=deploy ENV=windows ARCH=x86_64 LIBTYPE=shared
+      services:
+        - docker
     - os: osx
-      osx_image: xcode7.3
-      env: JOB=build-osx
+      env: JOB=deploy ENV=osx
 
-script: "./.travis/$JOB.sh"
-
-deploy:
-  # osx binary
-  - provider: releases
-    api_key:
-      secure: "BRbzTWRvadALRQSTihMKruOj64ydxusMUS9FQR//qFlS345ZYfYta43W//4LcWWDKtj6IvA6DRqNdabgWnpbpxpnm9gVftGUdOKlU3niPZhwsMkB2M12QHUnAP6DVOfGPvdciBV+6mu73SSxniEcrYjZ1CrRX7mknmehPpVKxNk="
-    file: "./qTox.dmg"
-    on:
-      condition: $TRAVIS_OS_NAME == osx
-      repo: qTox/qTox
-      tags: true
-    skip_cleanup: true
-
-  # branch for windows jenkins build
-  - provider: script
-    script: .travis/deploy-jenkins-branch.sh
-    on:
-      tags: true
-    skip_cleanup: true
-
-
-after_success:
-  - >
-    test $TRAVIS_PULL_REQUEST == "false"
-    && test $TRAVIS_BRANCH == "master"
-    && test $JOB == "build-docs"
-    && bash ./.travis/deploy-docs.sh
-  - >
-    test $TRAVIS_PULL_REQUEST == "false"
-    && test $TRAVIS_BRANCH == "master"
-    && test $JOB == "build-gitstats"
-    && bash ./.travis/deploy-gitstats.sh
+install:      .travis/phase $JOB $ENV install
+script:       .travis/phase $JOB $ENV script
+after_script: .travis/phase $JOB $ENV after_script

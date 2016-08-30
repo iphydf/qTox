@@ -19,6 +19,8 @@
 */
 
 
+#include <QtCore>
+#ifdef Q_OS_WIN
 #include "directshow.h"
 
 // Because of replacing to incorrect order, which leads to building failing,
@@ -255,3 +257,4 @@ QVector<VideoMode> DirectShow::getDeviceModes(QString devName)
 
     return modes;
 }
+#endif

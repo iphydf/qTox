@@ -22,6 +22,13 @@ execute_process(
   COMMAND brew --prefix qt5
   OUTPUT_VARIABLE QT_PREFIX_PATH
   OUTPUT_STRIP_TRAILING_WHITESPACE)
+if(NOT QT_PREFIX_PATH)
+  set(QT_PREFIX_PATH
+    /usr/src/mxe/usr/x86_64-w64-mingw32.shared/qt5
+    /usr/src/mxe/usr/i686-w64-mingw32.shared/qt5)
+endif()
+
+set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} ${QT_PREFIX_PATH})
 
 execute_process(
   COMMAND xcode-select -p
@@ -279,6 +286,12 @@ set(${PROJECT_NAME}_SOURCES
   src/persistence/smileypack.h
   src/persistence/toxsave.cpp
   src/persistence/toxsave.h
+  src/platform/camera/directshow.cpp
+  src/platform/camera/directshow.h
+  src/platform/camera/v4l2.cpp
+  src/platform/camera/v4l2.h
+  src/platform/install_osx.cpp
+  src/platform/install_osx.h
   src/platform/autorun.h
   src/platform/capslock.h
   src/platform/timer.h
@@ -434,45 +447,16 @@ set(${PROJECT_NAME}_SOURCES
   src/widget/widget.h
 )
 
-if (${CMAKE_SYSTEM_NAME} MATCHES "Windows")
+if(GDK_PIXBUF_FOUND AND GLIB_FOUND AND GTK_FOUND)
   set(${PROJECT_NAME}_SOURCES ${${PROJECT_NAME}_SOURCES}
-    src/platform/camera/directshow.cpp
-    src/platform/camera/directshow.h
-  )
-elseif (${CMAKE_SYSTEM_NAME} MATCHES "Linux" OR ${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-  set(${PROJECT_NAME}_SOURCES ${${PROJECT_NAME}_SOURCES}
-    src/platform/camera/v4l2.cpp
-    src/platform/camera/v4l2.h
-  )
-elseif (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-  set(${PROJECT_NAME}_SOURCES ${${PROJECT_NAME}_SOURCES}
-    src/platform/install_osx.cpp
-    src/platform/install_osx.h
-  )
-endif()
-
-add_definitions(-DQT_MESSAGELOGCONTEXT=1)
-
-if (NOT DEFINED ENABLE_STATUSNOTIFIER)
-  set(ENABLE_STATUSNOTIFIER True)
-endif()
-
-if(${ENABLE_STATUSNOTIFIER})
-  search_dependency(GDK_PIXBUF  PACKAGE gdk-pixbuf-2.0   OPTIONAL)
-  search_dependency(GLIB        PACKAGE glib-2.0         OPTIONAL)
-  search_dependency(GTK         PACKAGE gtk+-2.0         OPTIONAL)
-
-  if(GDK_PIXBUF_FOUND AND GLIB_FOUND AND GTK_FOUND)
-      set(${PROJECT_NAME}_SOURCES ${${PROJECT_NAME}_SOURCES}
-        src/platform/statusnotifier/closures.c
-        src/platform/statusnotifier/closures.h
-        src/platform/statusnotifier/enums.c
-        src/platform/statusnotifier/enums.h
-        src/platform/statusnotifier/interfaces.h
-        src/platform/statusnotifier/statusnotifier.c
-        src/platform/statusnotifier/statusnotifier.h)
-      add_definitions(-DENABLE_SYSTRAY_STATUSNOTIFIER_BACKEND=1)
-  endif()
+    src/platform/statusnotifier/closures.c
+    src/platform/statusnotifier/closures.h
+    src/platform/statusnotifier/enums.c
+    src/platform/statusnotifier/enums.h
+    src/platform/statusnotifier/interfaces.h
+    src/platform/statusnotifier/statusnotifier.c
+    src/platform/statusnotifier/statusnotifier.h)
+  add_definitions(-DENABLE_SYSTRAY_STATUSNOTIFIER_BACKEND=1)
 endif()
 
 if(AVFOUNDATION_FOUND)
@@ -481,33 +465,12 @@ if(AVFOUNDATION_FOUND)
     src/platform/camera/avfoundation.h)
 endif()
 
-if (NOT DEFINED ENABLE_APPINDICATOR)
-  set(ENABLE_APPINDICATOR False)
+if(APPINDICATOR_FOUND)
+  add_definitions(-DENABLE_SYSTRAY_UNITY_BACKEND=1)
 endif()
 
-if(${ENABLE_APPINDICATOR})
-  search_dependency(APPINDICATOR PACKAGE appindicator-0.1)
-  search_dependency(GDK_PIXBUF   PACKAGE gdk-pixbuf-2.0)
-  search_dependency(GLIB         PACKAGE glib-2.0)
-  search_dependency(GTK          PACKAGE gtk+-2.0)
-
-  if(APPINDICATOR_FOUND)
-    add_definitions(-DENABLE_SYSTRAY_UNITY_BACKEND=1)
-  endif()
-endif()
-
-if (NOT DEFINED ENABLE_GTK_SYSTRAY)
-  set(ENABLE_GTK_SYSTRAY True)
-endif()
-
-if(${ENABLE_GTK_SYSTRAY})
-  if(NOT GTK_FOUND)
-    search_dependency(GTK       PACKAGE gtk+-2.0         OPTIONAL)
-  endif()
-
-  if(GTK_FOUND)
-    add_definitions(-DENABLE_SYSTRAY_GTK_BACKEND=1)
-  endif()
+if(GTK_FOUND)
+  add_definitions(-DENABLE_SYSTRAY_GTK_BACKEND=1)
 endif()
 
 add_library(${PROJECT_NAME}_static

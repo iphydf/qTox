@@ -68,6 +68,7 @@ public:
     QAction* fullscreenAction;
     QAction* frontAction;
     QMenu* dockMenu;
+#endif
 
 public slots:
     void retranslateUi();
@@ -79,6 +80,7 @@ public slots:
     void toggleFullscreen();
     void bringAllToFront();
 
+#ifdef Q_OS_MAC
 private:
     void updateWindowsArg(QWindow* closedWindow);
 
