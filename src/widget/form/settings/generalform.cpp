@@ -153,7 +153,7 @@ GeneralForm::GeneralForm(SettingsWidget* myParent, Settings& settings_, Style& s
 #endif
 
     eventsInit();
-    Translator::registerHandler(std::bind(&GeneralForm::retranslateUi, this), this);
+    Translator::registerHandler([this] { retranslateUi(); }, this);
 }
 
 GeneralForm::~GeneralForm()
