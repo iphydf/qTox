@@ -127,7 +127,7 @@ GeneralForm::GeneralForm(SettingsWidget* myParent, Settings& settings_, Style& s
 
     bodyUI->cbSpellChecking->setChecked(settings.getSpellCheckingEnabled());
     bodyUI->lightTrayIcon->setChecked(settings.getLightTrayIcon());
-    bool showSystemTray = settings.getShowSystemTray();
+    const bool showSystemTray = settings.getShowSystemTray();
 
     bodyUI->showSystemTray->setChecked(showSystemTray);
     bodyUI->startInTray->setChecked(settings.getAutostartInTray());
@@ -218,7 +218,7 @@ void GeneralForm::on_groupJoinLeaveMessages_stateChanged()
 
 void GeneralForm::on_autoAwaySpinBox_editingFinished()
 {
-    int minutes = bodyUI->autoAwaySpinBox->value();
+    const int minutes = bodyUI->autoAwaySpinBox->value();
     settings.setAutoAwayTime(minutes);
 }
 
@@ -229,7 +229,7 @@ void GeneralForm::on_autoacceptFiles_stateChanged()
 
 void GeneralForm::on_autoSaveFilesDir_clicked()
 {
-    QString previousDir = settings.getGlobalAutoAcceptDir();
+    const QString previousDir = settings.getGlobalAutoAcceptDir();
     QString directory =
         QFileDialog::getExistingDirectory(Q_NULLPTR,
                                           tr("Choose an auto accept directory", "popup title"),
