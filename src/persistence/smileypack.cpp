@@ -8,6 +8,7 @@
 
 #include <QDir>
 #include <QDomElement>
+#include <QMutexLocker>
 #include <QRegularExpression>
 #include <QStandardPaths>
 #include <QStringBuilder>
@@ -95,8 +96,10 @@ SmileyPack::SmileyPack(ISmileySettings& settings_)
     : cleanupTimer{new QTimer(this)}
     , settings{settings_}
 {
-    loadingMutex.lock();
-    QThreadPool::globalInstance()->start([this]() { load(settings.getSmileyPack()); });
+    QMutexLocker<QMutex> locker(&loadingMutex);
+    QThreadPool::globalInstance()->start([this, locker_ = std::move(locker)]() mutable {
+        load(settings.getSmileyPack(), std::move(locker_));
+    });
     settings.connectTo_smileyPackChanged(this, [&](const QString&) { onSmileyPackChanged(); });
     connect(cleanupTimer, &QTimer::timeout, this, &SmileyPack::cleanupIconsCache);
     cleanupTimer->start(CLEANUP_TIMEOUT);
@@ -180,11 +183,10 @@ QList<QPair<QString, QString>> SmileyPack::listSmileyPacks(const QStringList& pa
  * @param filename Filename of smilepack.
  * @return False if cannot open file, true otherwise.
  */
-bool SmileyPack::load(const QString& filename)
+bool SmileyPack::load(const QString& filename, QMutexLocker<QMutex> locker)
 {
     QFile xmlFile(filename);
     if (!xmlFile.exists() || !xmlFile.open(QIODevice::ReadOnly)) {
-        loadingMutex.unlock();
         return false;
     }
 
@@ -234,7 +236,6 @@ bool SmileyPack::load(const QString& filename)
 
     constructRegex();
 
-    loadingMutex.unlock();
     return true;
 }
 
@@ -333,6 +334,8 @@ std::shared_ptr<QIcon> SmileyPack::getAsIcon(const QString& emoticon) const
 
 void SmileyPack::onSmileyPackChanged()
 {
-    loadingMutex.lock();
-    QThreadPool::globalInstance()->start([this]() { load(settings.getSmileyPack()); });
+    QMutexLocker<QMutex> locker(&loadingMutex);
+    QThreadPool::globalInstance()->start([this, locker_ = std::move(locker)]() mutable {
+        load(settings.getSmileyPack(), std::move(locker_));
+    });
 }

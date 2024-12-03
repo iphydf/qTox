@@ -38,7 +38,7 @@ private slots:
     void cleanupIconsCache();
 
 private:
-    bool load(const QString& filename);
+    bool load(const QString& filename, QMutexLocker<QMutex> locker);
     void constructRegex();
 
     mutable std::map<QString, std::shared_ptr<QIcon>> cachedIcon;
