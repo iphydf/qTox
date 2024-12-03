@@ -21,6 +21,7 @@ option(SPELL_CHECK "Enable spellcheck support" ON)
 option(SVGZ_ICON "Compress the SVG icon of qTox" ON)
 option(ASAN "Compile with AddressSanitizer" OFF)
 option(TSAN "Compile with ThreadSanitizer" OFF)
+option(UBSAN "Compile with UndefinedBehaviorSanitizer" OFF)
 option(STRICT_OPTIONS "Error on compile warning, used by CI" OFF)
 option(GUI_TESTS
        "Enable GUI rendering tests, likely tied to a specific Qt version" OFF)
@@ -38,18 +39,32 @@ if(NOT CMAKE_BUILD_TYPE)
             FORCE)
 endif()
 
+if(ASAN
+   OR TSAN
+   OR UBSAN)
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fno-omit-frame-pointer")
+endif()
+
 if(ASAN)
-  set(CMAKE_CXX_FLAGS_DEBUG
-      "${CMAKE_CXX_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
-  set(CMAKE_LINKER_FLAGS_DEBUG
-      "${CMAKE_LINKER_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=address")
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fsanitize=address")
+  set(CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_LINKER_FLAGS_DEBUG} -fsanitize=address")
 endif()
 
 if(TSAN)
+  if(ASAN)
+    message(FATAL_ERROR "ASAN and TSAN cannot be enabled at the same time")
+  endif()
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fsanitize=thread")
+  set(CMAKE_LINKER_FLAGS_DEBUG "${CMAKE_LINKER_FLAGS_DEBUG} -fsanitize=thread")
+endif()
+
+if(UBSAN)
   set(CMAKE_CXX_FLAGS_DEBUG
-      "${CMAKE_CXX_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=thread")
+      "${CMAKE_CXX_FLAGS_DEBUG} -fsanitize=undefined,nullability,local-bounds,float-divide-by-zero"
+  )
   set(CMAKE_LINKER_FLAGS_DEBUG
-      "${CMAKE_LINKER_FLAGS_DEBUG} -fno-omit-frame-pointer -fsanitize=thread")
+      "${CMAKE_LINKER_FLAGS_DEBUG} -fsanitize=undefined,nullability,local-bounds,float-divide-by-zero"
+  )
 endif()
 
 set(ENV{PKG_CONFIG_PATH}
