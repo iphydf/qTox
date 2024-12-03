@@ -9,9 +9,11 @@
 
 #include <QDir>
 #include <QDomElement>
+#include <QMutexLocker>
 #include <QRegularExpression>
 #include <QStandardPaths>
 #include <QStringBuilder>
+#include <QThreadPool>
 #include <QTimer>
 #include <QtConcurrent/QtConcurrentRun>
 
@@ -111,7 +113,7 @@ SmileyPack::SmileyPack(ISmileySettings& settings_)
 {
     load(settings.getSmileyPack());
 
-    settings.connectTo_smileyPackChanged(this, [this](const QString& filename) { load(filename); });
+    settings.connectTo_smileyPackChanged(this, [this](const QString&) { onSmileyPackChanged(); });
     connect(cleanupTimer, &QTimer::timeout, this, &SmileyPack::cleanupIconsCache);
     cleanupTimer->start(CLEANUP_TIMEOUT);
 }
@@ -337,4 +339,9 @@ std::shared_ptr<QIcon> SmileyPack::getAsIcon(const QString& emoticon) const
     auto icon = std::make_shared<QIcon>(iconPath);
     cachedIcon[emoticon] = icon;
     return icon;
+}
+
+void SmileyPack::onSmileyPackChanged()
+{
+    QThreadPool::globalInstance()->start([this]() { load(settings.getSmileyPack()); });
 }

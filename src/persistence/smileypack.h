@@ -34,10 +34,11 @@ public:
     static QString getAsRichText(const QString& key);
 
 private slots:
-    void load(const QString& filename);
     void cleanupIconsCache();
+    void onSmileyPackChanged();
 
 private:
+    void load(const QString& filename);
     void constructRegex();
 
     mutable std::map<QString, std::shared_ptr<QIcon>> cachedIcon;
