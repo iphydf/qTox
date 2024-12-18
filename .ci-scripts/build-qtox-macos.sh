@@ -20,8 +20,10 @@ source "$SCRIPT_DIR/dockerfiles/qtox/build_utils.sh"
 parse_arch --arch macos --supported macos --dep macos
 
 if [ "$1" == "user" ]; then
+  CMAKE=cmake
   PREFIX_PATH="$(brew --prefix qt@6)"
 elif [ "$1" == "dist" ]; then
+  CMAKE="$DEP_PREFIX/qt/bin/qt-cmake"
   PREFIX_PATH="$DEP_PREFIX;$(brew --prefix qt@6)"
 else
   echo "Unknown arg $1"
@@ -31,7 +33,7 @@ fi
 build_qtox() {
   # Explicitly include with -isystem to avoid warnings from system headers.
   # CMake will use -I instead of -isystem, so we need to set it manually.
-  cmake \
+  "$CMAKE" \
     -DCMAKE_CXX_FLAGS="-isystem/usr/local/include" \
     -DUBSAN=ON \
     -DUPDATE_CHECK=ON \

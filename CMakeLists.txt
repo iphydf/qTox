@@ -50,7 +50,7 @@ if(APPLE)
   # The /opt version is needed on arm64, but it doesn't harm on x86_64. The
   # /usr/local version is needed on x86_64, but it doesn't harm on arm64.
   set(ENV{PKG_CONFIG_PATH}
-      /opt/homebrew/opt/openal-soft/lib/pkgconfig:/usr/local/opt/openal-soft/lib/pkgconfig:$ENV{PKG_CONFIG_PATH}
+      $ENV{PKG_CONFIG_PATH}:/opt/homebrew/opt/openal-soft/lib/pkgconfig:/usr/local/opt/openal-soft/lib/pkgconfig
   )
 endif()
 
@@ -673,14 +673,21 @@ set_target_properties(
              QT_ANDROID_PACKAGE_SOURCE_DIR
              "${CMAKE_CURRENT_SOURCE_DIR}/android/${Qt6Core_VERSION}")
 
+if(QT_FEATURE_static)
+  if(APPLE)
+    target_link_libraries(${PROJECT_NAME}
+                          PRIVATE Qt6::QOffscreenIntegrationPlugin)
+  else()
+    target_link_directories(${PROJECT_NAME} PRIVATE
+                            "/sysroot/opt/qt/plugins/platforms")
+    target_link_libraries(
+      ${PROJECT_NAME}
+      PRIVATE Qt6::QLinuxFbIntegrationPlugin Qt6::QOffscreenIntegrationPlugin
+              Qt6::QVncIntegrationPlugin Qt6::QXcbGlxIntegrationPlugin
+              Qt6::QXcbIntegrationPlugin Qt6::QWaylandIntegrationPlugin)
+  endif()
+endif()
 if(FULLY_STATIC)
-  target_link_directories(${PROJECT_NAME} PRIVATE
-                          "/sysroot/opt/qt/plugins/platforms")
-  target_link_libraries(
-    ${PROJECT_NAME}
-    PRIVATE Qt6::QLinuxFbIntegrationPlugin Qt6::QOffscreenIntegrationPlugin
-            Qt6::QVncIntegrationPlugin Qt6::QXcbGlxIntegrationPlugin
-            Qt6::QXcbIntegrationPlugin Qt6::QWaylandIntegrationPlugin)
   target_link_options(${PROJECT_NAME} PRIVATE -static)
 endif()
 
