@@ -12,6 +12,42 @@
 
 #import <AVFoundation/AVFoundation.h>
 
+namespace {
+
+NSArray* getDevices()
+{
+#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 101500
+    NSMutableArray* deviceTypes =
+        [NSMutableArray arrayWithArray:@[ AVCaptureDeviceTypeBuiltInWideAngleCamera ]];
+#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 130000
+    [deviceTypes addObject:AVCaptureDeviceTypeDeskViewCamera];
+#endif
+#if __MAC_OS_X_VERSION_MIN_REQUIRED >= 140000
+    [deviceTypes addObject:AVCaptureDeviceTypeContinuityCamera];
+    [deviceTypes addObject:AVCaptureDeviceTypeExternal];
+#else
+    [deviceTypes addObject:AVCaptureDeviceTypeExternalUnknown];
+#endif
+
+    AVCaptureDeviceDiscoverySession* captureDeviceDiscoverySession = [AVCaptureDeviceDiscoverySession
+        discoverySessionWithDeviceTypes:deviceTypes
+                              mediaType:AVMediaTypeVideo
+                               position:AVCaptureDevicePositionUnspecified];
+    return [captureDeviceDiscoverySession devices];
+#else
+    return [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+#endif
+}
+
+} // namespace
+
+bool avfoundation::isDesktopCapture(QString devName)
+{
+    NSArray* devices = getDevices();
+    const int index = devName.toInt();
+    return index >= [devices count];
+}
+
 QVector<QPair<QString, QString>> avfoundation::getDeviceList()
 {
     QVector<QPair<QString, QString>> result;
@@ -40,14 +76,11 @@ QVector<QPair<QString, QString>> avfoundation::getDeviceList()
     }
 #endif
 
-    AVCaptureDevice* device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    id objects[] = {device};
-    NSUInteger count = sizeof(objects) / sizeof(id);
-    NSArray* devices = [NSArray arrayWithObjects:objects count:count];
+    NSArray* devices = getDevices();
 
     for (AVCaptureDevice* device in devices) {
-        result.append({QString::fromNSString([device uniqueID]),
-                       QString::fromNSString([device localizedName])});
+        int index = [devices indexOfObject:device];
+        result.append({QString::number(index), QString::fromNSString([device localizedName])});
     }
 
     uint32_t numScreens = 0;
@@ -56,8 +89,7 @@ QVector<QPair<QString, QString>> avfoundation::getDeviceList()
         CGDirectDisplayID screens[numScreens];
         CGGetActiveDisplayList(numScreens, screens, &numScreens);
         for (uint32_t i = 0; i < numScreens; i++) {
-            result.append({QString("%1 %2").arg(CAPTURE_SCREEN).arg(i),
-                           QObject::tr("Capture screen %1").arg(i)});
+            result.append({QString::number(result.size()), QObject::tr("Capture screen %1").arg(i)});
         }
     }
 
@@ -67,24 +99,24 @@ QVector<QPair<QString, QString>> avfoundation::getDeviceList()
 QVector<VideoMode> avfoundation::getDeviceModes(QString devName)
 {
     QVector<VideoMode> result;
+    NSArray* devices = getDevices();
+    const int index = devName.toInt();
 
-    if (devName.startsWith(CAPTURE_SCREEN)) {
+    if (index >= [devices count]) {
+        // It's a desktop capture.
         return result;
     } else {
-        NSString* deviceName = [NSString stringWithCString:devName.toUtf8().constData()
-                                                  encoding:NSUTF8StringEncoding];
-        AVCaptureDevice* device = [AVCaptureDevice deviceWithUniqueID:deviceName];
+        AVCaptureDevice* device = [devices objectAtIndex:index];
 
         if (device == nil) {
+            qWarning() << "Device not found:" << devName;
             return result;
         }
 
         for (AVCaptureDeviceFormat* format in [device formats]) {
-            CMFormatDescriptionRef formatDescription;
-            CMVideoDimensions dimensions;
-            formatDescription = static_cast<CMFormatDescriptionRef>(
+            CMFormatDescriptionRef formatDescription = static_cast<CMFormatDescriptionRef>(
                 [format performSelector:@selector(formatDescription)]);
-            dimensions = CMVideoFormatDescriptionGetDimensions(formatDescription);
+            CMVideoDimensions dimensions = CMVideoFormatDescriptionGetDimensions(formatDescription);
 
             for (AVFrameRateRange* range in format.videoSupportedFrameRateRanges) {
                 VideoMode mode;

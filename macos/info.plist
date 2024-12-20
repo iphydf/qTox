@@ -91,6 +91,8 @@
 	<string>qTox needs access to the camera for video calls.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>qTox needs access to the microphone for audio calls.</string>
+        <key>NSCameraUseContinuityCameraDeviceType</key>
+        <true/>
 	<key>UTImportedTypeDeclarations</key>
 	<array>
 		<dict>

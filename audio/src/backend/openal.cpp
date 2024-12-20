@@ -275,11 +275,7 @@ std::unique_ptr<IAudioSource> OpenAL::makeSource()
         return {};
     }
 
-    const auto source = new AlSource(*this);
-    if (source == nullptr) {
-        return {};
-    }
-
+    auto* const source = new AlSource(*this);
     sources.insert(source);
 
     qDebug() << "Subscribed to audio input device [" << sources.size() << "subscriptions ]";

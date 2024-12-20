@@ -185,7 +185,8 @@ CameraDevice* CameraDevice::open(QString devName, VideoMode mode)
         devName += QString("+%1,%2").arg(QString().setNum(mode.x), QString().setNum(mode.y));
 
         av_dict_set(&options, "framerate", framerate.c_str(), 0);
-    } else if (QString::fromUtf8(iformat->name) == QString("video4linux2,v4l2") && mode) {
+    } else if (QString::fromUtf8(iformat->name) == QString("video4linux2,v4l2")
+               && !mode.isUnspecified()) {
         av_dict_set(&options, "video_size", videoSize.c_str(), 0);
         av_dict_set(&options, "framerate", framerate.c_str(), 0);
         const std::string pixelFormatStr = v4l2::getPixelFormatString(mode.pixel_format).toStdString();
@@ -205,26 +206,28 @@ CameraDevice* CameraDevice::open(QString devName, VideoMode mode)
         av_dict_set(&options, "offset_x", offsetX.c_str(), 0);
         av_dict_set(&options, "offset_y", offsetY.c_str(), 0);
         av_dict_set(&options, "video_size", videoSize.c_str(), 0);
-    } else if (QString::fromUtf8(iformat->name) == QString("dshow") && mode) {
+    } else if (QString::fromUtf8(iformat->name) == QString("dshow") && !mode.isUnspecified()) {
         av_dict_set(&options, "video_size", videoSize.c_str(), 0);
         av_dict_set(&options, "framerate", framerate.c_str(), 0);
     }
 #endif
 #ifdef Q_OS_MACOS
     else if (QString::fromUtf8(iformat->name) == QString("avfoundation")) {
-        if (mode) {
-            av_dict_set(&options, "video_size", videoSize.c_str(), 0);
-            av_dict_set(&options, "framerate", framerate.c_str(), 0);
-        } else if (devName.startsWith(avfoundation::CAPTURE_SCREEN)) {
+        if (avfoundation::isDesktopCapture(devName)) {
             av_dict_set(&options, "framerate", framerate.c_str(), 0);
             av_dict_set_int(&options, "capture_cursor", 1, 0);
             av_dict_set_int(&options, "capture_mouse_clicks", 1, 0);
+        } else if (!mode.isUnspecified()) {
+            av_dict_set(&options, "video_size", videoSize.c_str(), 0);
+            av_dict_set(&options, "framerate", framerate.c_str(), 0);
         }
+        av_dict_set(&options, "probesize", "33554432", 0);
+        // TODO(iphydf): Find available pixel formats and select the first one.
+        av_dict_set(&options, "pixel_format", "uyvy422", 0);
     }
 #endif
-    else if (mode) {
+    else if (!mode.isUnspecified()) {
         qWarning().nospace() << "No known options for " << iformat->name << ", using defaults.";
-        std::ignore = mode;
     }
 
     CameraDevice* dev = open(devName, &options);

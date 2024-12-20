@@ -14,8 +14,7 @@
 #endif
 
 namespace avfoundation {
-const QString CAPTURE_SCREEN{"Capture screen"};
-
+bool isDesktopCapture(QString devName);
 QVector<VideoMode> getDeviceModes(QString devName);
 QVector<QPair<QString, QString>> getDeviceList();
 } // namespace avfoundation

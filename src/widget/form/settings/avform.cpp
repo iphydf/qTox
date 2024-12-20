@@ -124,7 +124,9 @@ void AVForm::showEvent(QShowEvent* event)
 
     if (audioSrc == nullptr) {
         audioSrc = audio.makeSource();
-        connect(audioSrc.get(), &IAudioSource::volumeAvailable, this, &AVForm::setVolume);
+        if (audioSrc != nullptr) {
+            connect(audioSrc.get(), &IAudioSource::volumeAvailable, this, &AVForm::setVolume);
+        }
     }
 
     if (audioSink == nullptr) {
@@ -526,7 +528,9 @@ void AVForm::on_inDevCombobox_currentIndexChanged(int deviceIndex)
         audioSettings->setInDev(deviceName);
         audio.reinitInput(deviceName);
         audioSrc = audio.makeSource();
-        connect(audioSrc.get(), &IAudioSource::volumeAvailable, this, &AVForm::setVolume);
+        if (audioSrc != nullptr) {
+            connect(audioSrc.get(), &IAudioSource::volumeAvailable, this, &AVForm::setVolume);
+        }
     }
 
     microphoneSlider->setEnabled(inputEnabled);

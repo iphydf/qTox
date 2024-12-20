@@ -37,7 +37,7 @@ class OpenAL : public IAudioControl
     Q_OBJECT
 
 public:
-    OpenAL(IAudioSettings& _settings);
+    explicit OpenAL(IAudioSettings& _settings);
     virtual ~OpenAL();
 
     qreal maxOutputVolume() const

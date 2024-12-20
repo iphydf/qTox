@@ -15,13 +15,13 @@ struct VideoMode
     float FPS = -1.0f;
     uint32_t pixel_format = 0;
 
-    VideoMode(int width = 0, int height = 0, int x = 0, int y = 0, float FPS = -1.0f);
+    explicit VideoMode(int width = 0, int height = 0, int x = 0, int y = 0, float FPS = -1.0f);
 
     explicit VideoMode(QRect rect);
 
     QRect toRect() const;
 
-    operator bool() const;
+    bool isUnspecified() const;
     bool operator==(const VideoMode& other) const;
     uint32_t norm(const VideoMode& other) const;
     uint32_t tolerance() const;
