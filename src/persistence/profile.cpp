@@ -68,46 +68,43 @@ std::unique_ptr<ToxEncrypt> loadToxData(const QString& password, const QString& 
 
     if (!saveFile.exists()) {
         error = LoadToxDataError::FILE_NOT_FOUND;
-        goto fail;
+        return nullptr;
     }
 
     if (!saveFile.open(QIODevice::ReadOnly)) {
         error = LoadToxDataError::COULD_NOT_READ_FILE;
-        goto fail;
+        return nullptr;
     }
 
     fileSize = saveFile.size();
     if (fileSize <= 0) {
         error = LoadToxDataError::FILE_IS_EMPTY;
-        goto fail;
+        return nullptr;
     }
 
     data = saveFile.readAll();
     if (ToxEncrypt::isEncrypted(data)) {
         if (password.isEmpty()) {
             error = LoadToxDataError::ENCRYPTED_NO_PASSWORD;
-            goto fail;
+            return nullptr;
         }
 
         tmpKey = ToxEncrypt::makeToxEncrypt(password, data);
         if (!tmpKey) {
             error = LoadToxDataError::COULD_NOT_DERIVE_KEY;
-            goto fail;
+            return nullptr;
         }
 
         data = tmpKey->decrypt(data);
         if (data.isEmpty()) {
             error = LoadToxDataError::DECRYPTION_FAILED;
-            goto fail;
+            return nullptr;
         }
     }
 
     saveFile.close();
     error = LoadToxDataError::OK;
     return tmpKey;
-fail:
-    saveFile.close();
-    return nullptr;
 }
 
 /**
@@ -629,7 +626,7 @@ void Profile::loadDatabase(QString password, IMessageBoxManager& messageBoxManag
     // At this point it's too early to load the personal settings (Nexus will do it), so we always
     // load
     // the history, and if it fails we can't change the setting now, but we keep a nullptr
-    database = std::make_shared<RawDatabase>(getDbPath(name, settings.getPaths()), password, salt);
+    database = RawDatabase::open(getDbPath(name, settings.getPaths()), password, salt);
     if (database && database->isOpen()) {
         history.reset(new History(database, settings, messageBoxManager));
     } else {

@@ -52,6 +52,7 @@ qt_moc(
         "net/updatecheck.h",
         "nexus.h",
         "persistence/db/rawdatabase.h",
+        "persistence/db/rawdatabaseimpl.h",
         "persistence/history.h",
         "persistence/offlinemsgengine.h",
         "persistence/profile.h",
