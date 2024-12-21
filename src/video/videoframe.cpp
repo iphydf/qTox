@@ -142,18 +142,21 @@ VideoFrame::VideoFrame(IDType sourceID_, AVFrame* sourceFrame, bool freeSourceFr
 VideoFrame::~VideoFrame()
 {
     {
-        // Release frame
+        // Release frame buffer.
         QWriteLocker frameLockWriteLocker(&frameLock);
         deleteFrameBuffer();
     }
 
-    // Delete tracked reference
+    // Delete tracked reference.
     QReadLocker refsLockReadLocker(&refsLock);
 
-    if (refsMap.count(sourceID) > 0) {
+    auto refsIt = refsMap.find(sourceID);
+    if (refsIt != refsMap.end()) {
         QMutexLocker<QMutex> sourceLocker(&mutexMap[sourceID]);
-
-        refsMap[sourceID].erase(frameID);
+        auto frameIt = refsIt->second.find(frameID);
+        if (frameIt != refsIt->second.end()) {
+            refsIt->second.erase(frameID);
+        }
     }
 }
 
@@ -217,9 +220,15 @@ std::shared_ptr<VideoFrame> VideoFrame::trackFrame()
  */
 void VideoFrame::untrackFrames(const VideoFrame::IDType& sourceID, bool releaseFrames)
 {
+    // Keep the pointers to delete in a separate vector to avoid deadlock in the
+    // VideoFrame destructor, which also acquires a refsLock.
+    std::vector<std::shared_ptr<VideoFrame>> toDelete;
+
+    // Must be created after toDelete to avoid deadlock.
     QWriteLocker refsLockWriteLocker(&refsLock);
 
-    if (refsMap.count(sourceID) == 0) {
+    auto refsIt = refsMap.find(sourceID);
+    if (refsIt == refsMap.end()) {
         // No tracking reference exists for source, simply return
         return;
     }
@@ -227,16 +236,17 @@ void VideoFrame::untrackFrames(const VideoFrame::IDType& sourceID, bool releaseF
     if (releaseFrames) {
         QMutexLocker<QMutex> sourceLocker(&mutexMap[sourceID]);
 
-        for (auto& frameIterator : refsMap[sourceID]) {
+        for (auto& frameIterator : refsIt->second) {
             std::shared_ptr<VideoFrame> frame = frameIterator.second.lock();
 
-            if (frame) {
+            if (frame != nullptr) {
                 frame->releaseFrame();
+                toDelete.push_back(std::move(frame));
             }
         }
     }
 
-    refsMap[sourceID].clear();
+    refsIt->second.clear();
 
     mutexMap.erase(sourceID);
     refsMap.erase(sourceID);
