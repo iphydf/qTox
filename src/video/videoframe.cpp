@@ -29,7 +29,7 @@ extern "C"
  *
  *
  * @class VideoFrame
- * @brief An ownernship and management class for AVFrames.
+ * @brief An ownership and management class for AVFrames.
  *
  * VideoFrame takes ownership of an AVFrame* and allows fast conversions to other formats.
  * Ownership of all video frame buffers is kept by the VideoFrame, even after conversion. All
@@ -289,7 +289,7 @@ const AVFrame* VideoFrame::getAVFrame(QSize frameSize, const int pixelFormat, co
         frameSize = sourceDimensions.size();
     }
 
-    // Since we are retrieving the AVFrame* directly, we merely need to pass the arguement through
+    // Since we are retrieving the AVFrame* directly, we merely need to pass the argument through
     const std::function<AVFrame*(AVFrame* const)> converter = [](AVFrame* const frame) {
         return frame;
     };
@@ -422,7 +422,7 @@ VideoFrame::FrameBufferKey::FrameBufferKey(const int width, const int height, co
  * @brief Comparison operator for FrameBufferKey.
  *
  * @param other instance to compare against.
- * @return true if instances are equivilent, false otherwise.
+ * @return true if instances are equivalent, false otherwise.
  */
 bool VideoFrame::FrameBufferKey::operator==(const FrameBufferKey& other) const
 {
@@ -434,7 +434,7 @@ bool VideoFrame::FrameBufferKey::operator==(const FrameBufferKey& other) const
  * @brief Not equal to operator for FrameBufferKey.
  *
  * @param other instance to compare against
- * @return true if instances are not equivilent, false otherwise.
+ * @return true if instances are not equivalent, false otherwise.
  */
 bool VideoFrame::FrameBufferKey::operator!=(const FrameBufferKey& other) const
 {
@@ -634,7 +634,7 @@ AVFrame* VideoFrame::storeAVFrame(AVFrame* frame, const QSize& dimensions, const
 {
     FrameBufferKey frameKey = getFrameKey(dimensions, pixelFormat, frame->linesize[0]);
 
-    // We check the prescence of the frame in case of double-computation
+    // We check the presence of the frame in case of double-computation
     if (frameBuffer.count(frameKey) > 0) {
         AVFrame* old_ret = frameBuffer[frameKey];
 
