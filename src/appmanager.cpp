@@ -107,6 +107,12 @@ void logMessageHandler(QtMsgType type, const QMessageLogContext& ctxt, const QSt
     const QString file = canonicalLogFilePath(ctxt.file);
     const QString category =
         ctxt.category ? QString::fromUtf8(ctxt.category) : QStringLiteral("default");
+    if ((type == QtDebugMsg && category == QStringLiteral("tox.core")
+         && (file == QStringLiteral("rtp.c") || file == QStringLiteral("video.c")))
+        || (file == QStringLiteral("bwcontroller.c") && msg.contains("update"))) {
+        // Don't log verbose toxav messages.
+        return;
+    }
 
     // Time should be in UTC to save user privacy on log sharing
     QTime time = QDateTime::currentDateTime().toUTC().time();
