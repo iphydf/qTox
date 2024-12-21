@@ -26,14 +26,14 @@ struct MessageMetadata
 {
     MessageMetadataType type;
     // Indicates start position within a Message::content
-    size_t start;
+    size_t start{0};
     // Indicates end position within a Message::content
-    size_t end;
+    size_t end{0};
 };
 
 struct Message
 {
-    bool isAction;
+    bool isAction{false};
     QString content;
     QDateTime timestamp;
     std::vector<MessageMetadata> metadata;

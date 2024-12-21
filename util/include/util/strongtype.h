@@ -102,16 +102,21 @@ struct Orderable : EqualityComparible<T, Underlying>
 };
 
 
-/* This class facilitates creating a named class which wraps underlying POD,
+/**
+ * This class facilitates creating a named class which wraps underlying POD,
  * avoiding implict casts and arithmetic of the underlying data.
  * Usage: Declare named type with arbitrary tag, then hook up Qt metatype for use
  * in signals/slots. For queued connections, registering the metatype is also
  * required before the type is used.
+ *
+ * <code>
  *   using ReceiptNum = NamedType<uint32_t, struct ReceiptNumTag>;
  *   Q_DECLARE_METATYPE(ReceiptNum)
  *   qRegisterMetaType<ReceiptNum>();
+ * </code>
+ *
+ * The value member is always initialized to 0.
  */
-
 template <typename T, typename Tag, template <typename, typename> class... Properties>
 class NamedType : public Properties<NamedType<T, Tag, Properties...>, T>...
 {
@@ -133,7 +138,7 @@ public:
     }
 
 private:
-    T value_;
+    T value_{0};
 };
 
 template <typename T, typename Tag, template <typename, typename> class... Properties>

@@ -29,7 +29,7 @@ struct SearchPos
     ChatLogIdx logIdx;
     // Number of matches we've had. This is always number of matches from the
     // start even if we're searching backwards.
-    size_t numMatches;
+    size_t numMatches{0};
 
     bool operator==(const SearchPos& other) const
     {
@@ -54,10 +54,10 @@ struct SearchPos
 
 struct SearchResult
 {
-    bool found;
+    bool found{false};
     SearchPos pos;
-    size_t start;
-    size_t len;
+    size_t start{0};
+    size_t len{0};
 
     // This is unfortunately needed to shoehorn our API into the highlighting
     // API of above classes. They expect to re-search the same thing we did
