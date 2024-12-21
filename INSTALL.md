@@ -39,18 +39,17 @@
 
 ## Dependencies
 
-| Name          | Version   | Modules                                                  |
-| ------------- | --------- | -------------------------------------------------------- |
-| [Qt]          | >= 5.7.1  | concurrent, core, gui, network, opengl, svg, widget, xml |
-| [GCC]/[MinGW] | >= 4.8    | C++11 enabled                                            |
-| [toxcore]     | >= 0.2.10 | core, av                                                 |
-| [FFmpeg]      | >= 2.6.0  | avformat, avdevice, avcodec, avutil, swscale             |
-| [CMake]       | >= 3.7.2  |                                                          |
-| [OpenAL Soft] | >= 1.16.0 |                                                          |
-| [qrencode]    | >= 3.0.3  |                                                          |
-| [sqlcipher]   | >= 3.2.0  |                                                          |
-| [pkg-config]  | >= 0.28   |                                                          |
-| [libnotify]   | >= 0.7.9  | optional dependency                                      |
+| Name          | Version   | Modules                                          |
+| ------------- | --------- | ------------------------------------------------ |
+| [Qt]          | >= 6.2.0  | concurrent, core, gui, network, svg, widget, xml |
+| [GCC]/[MinGW] | >= 11     | C++17 enabled                                    |
+| [toxcore]     | >= 0.2.20 | core, av                                         |
+| [FFmpeg]      | >= 2.6.0  | avformat, avdevice, avcodec, avutil, swscale     |
+| [CMake]       | >= 3.10   |                                                  |
+| [OpenAL Soft] | >= 1.16.0 |                                                  |
+| [qrencode]    | >= 3.0.3  |                                                  |
+| [sqlcipher]   | >= 3.2.0  |                                                  |
+| [pkg-config]  | >= 0.28   |                                                  |
 
 ## Optional dependencies
 
@@ -59,20 +58,11 @@ building qTox.
 
 If they are missing, qTox is built without support for the functionality.
 
-### Development dependencies
-
-Dependencies needed to run tests / code formatting, etc. Disabled if
-dependencies are missing.
-
-| Name    | Version |
-| ------- | ------- |
-| [Check] | >= 0.9  |
-
 ### Spell checking support
 
 | Name     | Version |
 | -------- | ------- |
-| [sonnet] | >= 5.45 |
+| [sonnet] | >= 6.0  |
 
 Use `-DSPELL_CHECK=OFF` to disable it.
 
@@ -277,7 +267,8 @@ Provided that you have all required dependencies installed, you can simply run:
 ```bash
 git clone https://github.com/TokTok/c-toxcore.git toxcore
 cd toxcore
-# Note: See buildscirpts/download/download_toxcore.sh for which version should be checked out
+# Note: See https://github.com/TokTok/dockerfiles/blob/master/qtox/download/download_toxcore.sh
+# for which version should be checked out.
 cmake -B_build -H. -GNinja -DBOOTSTRAP_DAEMON=OFF
 cmake --build _build
 sudo cmake --install _build
