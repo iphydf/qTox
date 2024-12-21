@@ -109,6 +109,14 @@ private:
         const bool linesizeAligned;
     };
 
+    struct FrameBufferKeyHash
+    {
+        size_t operator()(const FrameBufferKey& key) const
+        {
+            return FrameBufferKey::hash(key);
+        }
+    };
+
 private:
     static FrameBufferKey getFrameKey(const QSize& frameSize, const int pixFmt, const int linesize);
     static FrameBufferKey getFrameKey(const QSize& frameSize, const int pixFmt,
@@ -130,8 +138,7 @@ private:
     const IDType sourceID;
 
     // Main framebuffer store
-    std::unordered_map<FrameBufferKey, AVFrame*, std::function<decltype(FrameBufferKey::hash)>>
-        frameBuffer{3, FrameBufferKey::hash};
+    std::unordered_map<FrameBufferKey, AVFrame*, FrameBufferKeyHash> frameBuffer{3};
 
     // Source frame
     const QRect sourceDimensions;
