@@ -228,6 +228,9 @@ signals:
     void typingNotificationChanged(bool enabled);
     void dbSyncTypeChanged(Db::syncType type);
 
+    // Experimental
+    void experimentalSandboxChanged(bool enabled);
+
 public:
     bool applyCommandLineOptions(const QCommandLineParser& parser);
     static bool verifyProxySettings(const QCommandLineParser& parser);
@@ -473,6 +476,10 @@ public:
     bool getShowConferenceJoinLeaveMessages() const override;
     void setShowConferenceJoinLeaveMessages(bool newValue) override;
     SIGNAL_IMPL(Settings, showConferenceJoinLeaveMessagesChanged, bool show)
+
+    // Experimental
+    bool getExperimentalSandbox() const;
+    void setExperimentalSandbox(bool newValue);
 
     // State
     QByteArray getWindowGeometry() const;
@@ -729,6 +736,9 @@ private:
     QVector<CircleProp> circleLst;
 
     int themeColor;
+
+    // Experimental features/changes
+    bool experimentalSandbox;
 
     static QRecursiveMutex bigLock;
     static const QString globalSettingsFile;
