@@ -606,6 +606,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ⵃⵔⴻⵣ ⴰⴼⴰⵢⵍⵓ</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">ⵜⴰⵏⵙⴰ ⵏ ⴱⵔⵓⴽⵙⵉⵍ ⵓⵔ ⵉⵏⵏⴼⵍⵏ</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">ⴰⵔ ⵜⵜⵔⴰⵔⴰⵏ ⵢⴰⵏ ⵓⵏⵙⴰ ⵏ IP ⵏⵖ ⵢⴰⵏ ⵉⵙⵎ ⵏ ⵓⵎⵙⵏⵓⴱⴳ ⵍⵍⵉ ⵔⴰⴷ ⴽⵏ ⵢⴰⵡⵙ.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

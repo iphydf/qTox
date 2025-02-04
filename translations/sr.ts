@@ -533,6 +533,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Сачувај датотеку</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Неважећа адреса за проки</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Молимо унесите важећу ИП адресу или име хоста за подешавање прокија.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

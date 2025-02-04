@@ -514,6 +514,16 @@ dėl to gali kilti vaizdo skambučių problemų.</translation>
         <source>Save file</source>
         <translation>Įrašyti failą</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Neteisingas tarpinio serverio adresas</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Įveskite galiojantį įgaliotinio nustatymo IP adresą arba pagrindinio kompiuterio vardą.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

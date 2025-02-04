@@ -512,6 +512,16 @@ lo que puede provocar problemas en las videollamadas.</translation>
         <source>Save file</source>
         <translation>Guardar archivo</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Dirección proxy no válida</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ingrese una dirección IP o nombre IP válido para la configuración de proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

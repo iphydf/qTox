@@ -44,6 +44,7 @@ private slots:
     void on_proxyType_currentIndexChanged(int index);
 
 private:
+    bool validateProxyAddr();
     void retranslateUi();
 
 private:

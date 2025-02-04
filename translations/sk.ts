@@ -514,6 +514,16 @@ Rýchlosť vášho pripojenia nemusí byť vždy dostačujúca pre vyššiu kval
         <source>Save file</source>
         <translation>Uložiť súbor</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Neplatná proxy adresa</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Zadajte platnú adresu IP alebo názov hostiteľa pre nastavenie proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

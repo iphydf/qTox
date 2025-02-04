@@ -514,6 +514,16 @@ which may lead to problems with video calls.</source>
         <source>Save file</source>
         <translation>Запазване на файла</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Невалиден прокси адрес</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Моля, въведете валиден IP адрес или име на хост за настройката на прокси.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

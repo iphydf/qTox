@@ -515,6 +515,16 @@ bu da video görüşmelerinde sorunlara yol açabilir.</translation>
         <source>Save file</source>
         <translation>Dosyayı kaydet</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Geçersiz Proxy Adresi</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Proxy ayarı için lütfen geçerli bir IP adresi veya ana bilgisayar adı girin.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

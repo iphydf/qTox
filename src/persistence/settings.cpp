@@ -26,6 +26,7 @@
 #include <QErrorMessage>
 #include <QFile>
 #include <QFont>
+#include <QHostInfo>
 #include <QList>
 #include <QMutexLocker>
 #include <QNetworkProxy>
@@ -300,7 +301,7 @@ bool Settings::verifyProxySettings(const QCommandLineParser& parser)
     const QString LANSettingString = parser.value("L").toLower();
     const QString UDPSettingString = parser.value("U").toLower();
     const QString proxySettingString = parser.value("proxy").toLower();
-    QStringList proxySettingStrings = proxySettingString.split(":");
+    const QStringList proxySettingStrings = proxySettingString.split(":");
 
     const QString SOCKS5 = QStringLiteral("socks5");
     const QString HTTP = QStringLiteral("http");
@@ -371,9 +372,17 @@ bool Settings::verifyProxySettings(const QCommandLineParser& parser)
             return false;
         }
 
-        // TODO(Kriby): Sanity check IPv4/IPv6 addresses/hostnames?
+        const QHostInfo hostInfo = QHostInfo::fromName(proxySettingStrings[1]);
+        if (hostInfo.addresses().isEmpty()) {
+            qCritical() << "Invalid proxy address (DNS resolution failed):" << proxySettingStrings[1];
+            return false;
+        }
 
-        const int portNumber = proxySettingStrings[2].toInt();
+        bool ok;
+        const int portNumber = proxySettingStrings[2].toInt(&ok);
+        if (!ok) {
+            qCritical() << "Invalid port number" << proxySettingStrings[2] << "(must be an integer).";
+        }
         if (portNumber < 1 || portNumber > 65535) {
             qCritical() << "Invalid port number range: was" << portNumber << "but should be 1-65535.";
         }
@@ -393,9 +402,9 @@ bool Settings::applyCommandLineOptions(const QCommandLineParser& parser)
         return false;
     }
 
-    const QString IPv6Setting = parser.value("I").toUpper();
-    const QString LANSetting = parser.value("L").toUpper();
-    const QString UDPSetting = parser.value("U").toUpper();
+    const QString ipv6Setting = parser.value("I").toUpper();
+    const QString lanSetting = parser.value("L").toUpper();
+    const QString udpSetting = parser.value("U").toUpper();
     const QString proxySettingString = parser.value("proxy").toUpper();
     QStringList proxySettings = proxySettingString.split(":");
 
@@ -405,10 +414,9 @@ bool Settings::applyCommandLineOptions(const QCommandLineParser& parser)
     const QString ON = QStringLiteral("ON");
     const QString OFF = QStringLiteral("OFF");
 
-
     if (parser.isSet("I")) {
-        enableIPv6 = IPv6Setting == ON;
-        qDebug() << "Setting IPv6 to" << IPv6Setting;
+        enableIPv6 = ipv6Setting == ON;
+        qDebug() << "Setting IPv6 to" << ipv6Setting;
     }
 
     if (parser.isSet("P")) {
@@ -444,23 +452,23 @@ bool Settings::applyCommandLineOptions(const QCommandLineParser& parser)
     }
 
     if (parser.isSet("U")) {
-        const bool shouldForceTCP = UDPSetting == OFF;
+        const bool shouldForceTCP = udpSetting == OFF;
         if (!shouldForceTCP && proxyType != ICoreSettings::ProxyType::ptNone) {
             qDebug() << "Cannot use UDP with proxy; disable proxy explicitly with '-P none'.";
         } else {
             forceTCP = shouldForceTCP;
-            qDebug() << "Setting UDP" << UDPSetting;
+            qDebug() << "Setting UDP" << udpSetting;
         }
 
         // LANSetting == ON is caught by verifyProxySettings, the OFF check removes needless debug
-        if (shouldForceTCP && !(LANSetting == OFF) && enableLanDiscovery) {
+        if (shouldForceTCP && !(lanSetting == OFF) && enableLanDiscovery) {
             qDebug() << "Cannot perform LAN discovery without UDP; disabling LAN discovery.";
             enableLanDiscovery = false;
         }
     }
 
     if (parser.isSet("L")) {
-        const bool shouldEnableLAN = LANSetting == ON;
+        const bool shouldEnableLAN = lanSetting == ON;
 
         if (shouldEnableLAN && proxyType != ICoreSettings::ProxyType::ptNone) {
             qDebug()
@@ -469,7 +477,7 @@ bool Settings::applyCommandLineOptions(const QCommandLineParser& parser)
             qDebug() << "Cannot use LAN discovery without UDP; enable UDP explicitly with '-U on'.";
         } else {
             enableLanDiscovery = shouldEnableLAN;
-            qDebug() << "Setting LAN Discovery" << LANSetting;
+            qDebug() << "Setting LAN Discovery" << lanSetting;
         }
     }
     return true;

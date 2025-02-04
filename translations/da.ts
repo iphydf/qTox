@@ -560,6 +560,16 @@ hvilket kan føre til problemer med videoopkald.</translation>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Gem fil</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ugyldig proxyadresse</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Indtast en gyldig IP -adresse eller værtsnavn for proxyindstillingen.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

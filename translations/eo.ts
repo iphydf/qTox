@@ -582,6 +582,16 @@ kio povas konduki al problemoj kun videovokoj.</translation>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Konservu dosieron</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Nevalida prokura adreso</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Bonvolu enigi validan IP -adreson aŭ gastiganton por la prokura agordo.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

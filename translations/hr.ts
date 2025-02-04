@@ -533,6 +533,16 @@ Ponekad vaša veza možda nije dovoljno dobra da podnese višu kvalitetu videa,
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Spremi datoteku</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Nevažeća proxy adresa</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Unesite valjanu IP adresu ili ime hosta za postavku proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

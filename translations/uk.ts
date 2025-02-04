@@ -513,6 +513,16 @@ which may lead to problems with video calls.</source>
         <source>Save file</source>
         <translation>Файл збереження</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Недійсна проксі -адреса</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Введіть дійсну IP -адресу або ім&apos;я хоста для налаштування проксі.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

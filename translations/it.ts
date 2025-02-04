@@ -513,6 +513,16 @@ il che può portare a problemi con le videochiamate.</translation>
         <source>Save file</source>
         <translation>Salvare il file</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Indirizzo proxy non valido</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Immettere un indirizzo IP o un nome host valido per l&apos;impostazione proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

@@ -531,6 +531,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ذخیره فایل</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">آدرس پروکسی نامعتبر</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">لطفاً یک آدرس IP معتبر یا نام میزبان را برای تنظیم پروکسی وارد کنید.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

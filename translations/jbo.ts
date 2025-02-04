@@ -616,6 +616,16 @@ so&apos;o roi lo nu do jungau cu na banzu xamgu lo ka zgana lo nu zgana lo vidni
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">vimcu lo sfaile</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">na&apos;e vrici proksi judri</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">.e&apos;o ko setca lo validu IP judri ji lo minji cmene be lo proxy seltcidu</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

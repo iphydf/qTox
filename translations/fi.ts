@@ -513,6 +513,16 @@ mikä voi johtaa ongelmiin videopuheluissa.</translation>
         <source>Save file</source>
         <translation>Tallenna tiedosto</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Virheellinen välityspalvelinosoite</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Anna välityspalvelimen asetusten kelvollinen IP -osoite tai isäntänimi.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

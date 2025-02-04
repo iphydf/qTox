@@ -508,6 +508,14 @@ which may lead to problems with video calls.</source>
         <source>Save file</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

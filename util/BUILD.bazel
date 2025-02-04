@@ -10,5 +10,6 @@ cc_library(
     deps = [
         "//c-toxcore",
         "@qt//:qt_core",
+        "@qt//:qt_network",
     ],
 )

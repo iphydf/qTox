@@ -555,6 +555,16 @@ qTox இல் தாங்கள் சிக்கலோ பாதுகாப
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">கோப்பை சேமிக்கவும்</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">தவறான ப்ராக்ஸி முகவரி</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">ப்ராக்ஸி அமைப்பிற்கு செல்லுபடியாகும் ஐபி முகவரி அல்லது ஹோஸ்ட்பெயரை உள்ளிடவும்.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

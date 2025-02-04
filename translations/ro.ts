@@ -513,6 +513,16 @@ ceea ce poate duce la probleme cu apelurile video.</translation>
         <source>Save file</source>
         <translation>Salvați fișierul</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Adresa proxy nevalide</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Vă rugăm să introduceți o adresă IP sau un nume de gazdă valabil pentru setarea proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

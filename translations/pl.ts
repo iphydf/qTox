@@ -519,6 +519,16 @@ co może powodować problemy z rozmowami wideo.</translation>
         <source>Save file</source>
         <translation>Zapisz plik</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Nieprawidłowy adres proxy</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Wprowadź prawidłowy adres IP lub nazwę hosta dla ustawienia proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

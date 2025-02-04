@@ -626,6 +626,16 @@ ambayo inaweza kusababisha matatizo na simu za video.</translation>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Hifadhi faili</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Anwani ya wakala batili</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Tafadhali ingiza anwani halali ya IP au jina la mwenyeji kwa mpangilio wa wakala.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

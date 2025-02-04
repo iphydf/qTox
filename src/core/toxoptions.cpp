@@ -7,10 +7,12 @@
 
 #include "src/core/icoresettings.h"
 #include "src/core/toxlogger.h"
+#include "util/network.h"
 #include "util/toxcoreerrorparser.h"
 
 #include <QByteArray>
 #include <QDebug>
+#include <QHostInfo>
 
 #include <tox/tox.h>
 #include <utility>
@@ -66,10 +68,28 @@ std::unique_ptr<ToxOptions> ToxOptions::makeToxOptions(const QByteArray& savedat
         return {};
     }
 
-    // need to init proxyAddr here, because we need it to construct ToxOptions
+    // Need to init proxyAddr here, because we need it to construct ToxOptions.
     const QString proxyAddr = s.getProxyAddr();
 
-    auto toxOptions = std::unique_ptr<ToxOptions>(new ToxOptions(tox_opts, proxyAddr.toUtf8()));
+    // We also need to resolve it here, because toxcore possibly can't do DNS resolution.
+    const QHostInfo hostInfo = QHostInfo::fromName(proxyAddr);
+    if (hostInfo.error() != QHostInfo::NoError) {
+        qWarning() << "Failed to resolve proxy address" << proxyAddr
+                   << "Error:" << hostInfo.errorString();
+    }
+
+    const auto addresses = NetworkUtil::ipAddresses(hostInfo, s.getEnableIPv6());
+    if (addresses.isEmpty()) {
+        qWarning() << "No addresses available for current settings (proxy is IPv6 only?):" << proxyAddr;
+    }
+
+    // If we can't resolve it, pass it down to toxcore as is, hoping for the best.
+    const QString proxyAddrResolved = addresses.isEmpty() ? proxyAddr : addresses.first().toString();
+
+    std::unique_ptr<ToxOptions> toxOptions{new ToxOptions{
+        tox_opts,
+        proxyAddrResolved.toUtf8(),
+    }};
     // register log first, to get messages as early as possible
     tox_options_set_log_callback(toxOptions->get(), ToxLogger::onLogMessage);
 

@@ -513,6 +513,16 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
         <source>Save file</source>
         <translation>Enregistrer le fichier</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Adresse proxy non valide</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Veuillez saisir une adresse IP valide ou un nom d&apos;hôte pour le paramètre de proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

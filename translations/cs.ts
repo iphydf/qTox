@@ -514,6 +514,16 @@ může dojít během video hovoru k výpadkům či jiným problémům.</translat
         <source>Save file</source>
         <translation>Uložit soubor</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Neplatná adresa proxy</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Zadejte platnou IP adresu nebo název hostitele pro nastavení proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

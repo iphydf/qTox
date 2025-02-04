@@ -511,6 +511,16 @@ which may lead to problems with video calls.</source>
         <source>Save file</source>
         <translation>保存文件</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">无效的代理地址</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">请为代理设置输入有效的IP地址或主机名。</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

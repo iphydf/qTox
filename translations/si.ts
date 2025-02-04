@@ -624,6 +624,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ගොනුව සුරකින්න</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">අවලංගු ප්රොක්සි ලිපිනය</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">කරුණාකර ප්රොක්සි සැකසුම සඳහා වලංගු IP ලිපිනයක් හෝ ධාරක නාමයක් ඇතුළත් කරන්න.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

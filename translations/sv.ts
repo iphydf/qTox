@@ -513,6 +513,16 @@ vilket kan leda till problem med videosamtal.</translation>
         <source>Save file</source>
         <translation>Spara fil</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ogiltig proxyadress</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ange en giltig IP -adress eller värdnamn för proxyinställningen.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

@@ -545,6 +545,16 @@ kar lahko povzroči težave z video klici.</translation>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Shrani datoteko</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Neveljaven proxy naslov</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Vnesite veljaven IP naslov ali ime gostitelja za nastavitev Proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

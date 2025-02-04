@@ -627,6 +627,16 @@ wat kin leie tot probleme mit videogesprekke.</translation>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Geavanceerd</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ongeldige volmachtadres</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Vuur ‘n geldig IP-adres of hostnaom in veur de proxy-instelling in.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

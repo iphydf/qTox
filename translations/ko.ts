@@ -554,6 +554,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">파일 저장</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">잘못된 프록시 주소</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">프록시 설정에 대한 유효한 IP 주소 또는 호스트 이름을 입력하십시오.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

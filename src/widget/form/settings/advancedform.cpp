@@ -12,11 +12,13 @@
 #include "src/widget/tool/imessageboxmanager.h"
 #include "src/widget/tool/recursivesignalblocker.h"
 #include "src/widget/translator.h"
+#include "util/network.h"
 
 #include <QApplication>
 #include <QClipboard>
 #include <QDir>
 #include <QFileDialog>
+#include <QHostInfo>
 #include <QMessageBox>
 #include <QProcess>
 
@@ -47,6 +49,7 @@ AdvancedForm::AdvancedForm(Settings& settings_, Style& style, IMessageBoxManager
     if (port > 0) {
         bodyUI->proxyPort->setValue(port);
     }
+    validateProxyAddr();
 
     const int index = static_cast<int>(settings.getProxyType());
     bodyUI->proxyType->setCurrentIndex(index);
@@ -168,6 +171,8 @@ void AdvancedForm::on_cbEnableDebug_stateChanged()
 void AdvancedForm::on_cbEnableIPv6_stateChanged()
 {
     settings.setEnableIPv6(bodyUI->cbEnableIPv6->isChecked());
+    // Re-run the proxy address validation to update the IP address label.
+    validateProxyAddr();
 }
 
 void AdvancedForm::on_cbEnableUDP_stateChanged()
@@ -186,12 +191,15 @@ void AdvancedForm::on_cbEnableLanDiscovery_stateChanged()
 
 void AdvancedForm::on_proxyAddr_editingFinished()
 {
-    settings.setProxyAddr(bodyUI->proxyAddr->text());
+    const QString& addr = bodyUI->proxyAddr->text();
+    if (validateProxyAddr()) {
+        settings.setProxyAddr(addr);
+    }
 }
 
 void AdvancedForm::on_proxyPort_valueChanged(int port)
 {
-    settings.setProxyPort(std::max(port, 0));
+    settings.setProxyPort(std::clamp(port, 1, 65535));
 }
 
 void AdvancedForm::on_proxyType_currentIndexChanged(int index)
@@ -206,6 +214,27 @@ void AdvancedForm::on_proxyType_currentIndexChanged(int index)
     bodyUI->cbEnableUDP->setChecked(!proxyEnabled);
 
     settings.setProxyType(proxytype);
+}
+
+bool AdvancedForm::validateProxyAddr()
+{
+    const QString addr = bodyUI->proxyAddr->text();
+    if (addr.isEmpty()) {
+        bodyUI->proxyIpLabel->hide();
+    } else {
+        const auto addresses =
+            NetworkUtil::ipAddresses(QHostInfo::fromName(addr), settings.getEnableIPv6());
+        if (addresses.isEmpty()) {
+            messageBoxManager.showError(tr("Invalid proxy address"),
+                                        tr("Please enter a valid IP address or hostname "
+                                           "for the proxy setting."));
+            return false;
+        }
+        bodyUI->proxyIpLabel->setText(addresses.first().toString());
+        bodyUI->proxyIpLabel->show();
+    }
+
+    return true;
 }
 
 /**

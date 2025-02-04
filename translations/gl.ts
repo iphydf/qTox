@@ -532,6 +532,16 @@ o que pode provocar problemas coas videochamadas.</translation>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Gardar ficheiro</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Enderezo de proxy non válido</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Insira un enderezo IP válido ou nome de host para a configuración do proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

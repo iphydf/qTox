@@ -512,6 +512,16 @@ có thể dẫn đến sự cố với cuộc gọi điện video.</translation>
         <source>Save file</source>
         <translation>Lưu tệp</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Địa chỉ proxy không hợp lệ</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Vui lòng nhập địa chỉ IP hợp lệ hoặc tên máy chủ cho cài đặt proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

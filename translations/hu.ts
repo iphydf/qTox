@@ -531,6 +531,16 @@ ami problémákat okozhat a videohívásokkal kapcsolatban.</translation>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Fájl mentése</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Érvénytelen proxy cím</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Kérjük, írjon be érvényes IP -címet vagy gazdagépnevet a proxy beállításhoz.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

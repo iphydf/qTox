@@ -512,6 +512,16 @@ wat kan leiden tot problemen met videogesprekken.</translation>
         <source>Save file</source>
         <translation>Bestand opslaan</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ongeldig proxy -adres</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Voer een geldig IP -adres of hostnaam in voor de proxy -instelling.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

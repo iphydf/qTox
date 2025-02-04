@@ -621,6 +621,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ফাইল সংরক্ষণ করুন</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">অবৈধ প্রক্সি ঠিকানা</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">প্রক্সি সেটিংয়ের জন্য দয়া করে একটি বৈধ আইপি ঠিকানা বা হোস্টনেম লিখুন।</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

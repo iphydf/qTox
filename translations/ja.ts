@@ -540,6 +540,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation>ファイルの保存</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">無効なプロキシアドレス</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">プロキシ設定には、有効なIPアドレスまたはホスト名を入力してください。</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

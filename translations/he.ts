@@ -606,6 +606,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">שמור קובץ</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">כתובת פרוקסי לא חוקית</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">אנא הזן כתובת IP או שם מארח תקף להגדרת ה- Proxy.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

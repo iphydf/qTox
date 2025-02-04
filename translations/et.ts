@@ -513,6 +513,16 @@ mis võib põhjustada probleeme videokõnedega.</translation>
         <source>Save file</source>
         <translation>Salvesta fail</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Kehtetu puhverserveri aadress</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Sisestage puhverserveri sätte jaoks kehtiv IP -aadress või hostinimi.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

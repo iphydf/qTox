@@ -619,6 +619,16 @@ gjë që mund të çojë në probleme me video thirrjet.</translation>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Ruaj skedarin</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Adresa e pavlefshme e përfaqësuesit</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ju lutemi shkruani një adresë IP të vlefshme ose emrin e hostit për cilësimin e përfaqësuesit.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

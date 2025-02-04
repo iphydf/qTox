@@ -517,6 +517,16 @@ kas var radīt video zvanu problēmas.</translation>
         <source>Save file</source>
         <translation>Saglabāt failu</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Nederīga starpniekservera adrese</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Lūdzu, ievadiet derīgu IP adresi vai resursdatora nosaukumu starpniekservera iestatījumam.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

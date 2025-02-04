@@ -561,6 +561,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">احفظ الملف</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">عنوان الوكيل غير صالح</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">الرجاء إدخال عنوان IP صالح أو اسم مضيف لإعداد الوكيل.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

@@ -600,6 +600,16 @@ which may lead to problems with video calls.</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">فائل محفوظ کریں۔</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">غلط پراکسی ایڈریس</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">براہ کرم پراکسی ترتیب کے لئے ایک درست IP ایڈریس یا میزبان نام درج کریں۔</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>

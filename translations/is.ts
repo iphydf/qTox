@@ -606,6 +606,16 @@ sem getur leitt til vandræða með myndsímtöl.</translation>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Vista skrá</translation>
     </message>
+    <message>
+        <source>Invalid proxy address</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ógilt umboð heimilisfang</translation>
+    </message>
+    <message>
+        <source>Please enter a valid IP address or hostname for the proxy setting.</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Vinsamlegast sláðu inn gilt IP -tölu eða hýsingarheiti fyrir proxy stillinguna.</translation>
+    </message>
 </context>
 <context>
     <name>AdvancedSettings</name>
