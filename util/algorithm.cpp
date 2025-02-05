@@ -2,4 +2,4 @@
  * Copyright © 2024-2025 The TokTok team.
  */
 
-#include "util/algorithm.h" // IWYU pragma: keep
+#include "algorithm.h"

@@ -3,7 +3,7 @@
  * Copyright © 2024-2025 The TokTok team.
  */
 
-#include "util/toxcoreerrorparser.h"
+#include "toxcoreerrorparser.h"
 
 #include <QDebug>
 
