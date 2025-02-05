@@ -2,7 +2,7 @@
  * Copyright © 2025 The TokTok team.
  */
 
-#include "util/network.h"
+#include "network.h"
 
 #include <QHostAddress>
 #include <QHostInfo>

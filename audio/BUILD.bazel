@@ -13,7 +13,7 @@ qt_moc(
     hdrs = glob(["**/*.h"]),
     mocopts = ["-Iqtox/audio/include"],
     tags = ["qt"],
-    deps = ["//qtox/util"],
+    deps = ["//qtox/util:interface"],
 )
 
 qt_rcc(
@@ -58,7 +58,7 @@ cc_library(
     visibility = ["//qtox:__subpackages__"],
     deps = [
         ":audio_res_lib",
-        "//qtox/util",
+        "//qtox/util:interface",
         "@openal",
         "@qt//:qt_core",
     ],
