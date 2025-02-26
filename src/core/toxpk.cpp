@@ -16,6 +16,15 @@
  */
 
 /**
+ * @brief Constructs a ToxPk from bytes.
+ */
+ToxPk::ToxPk(QByteArray rawId)
+    : ChatId(std::move(rawId))
+{
+    assert(rawId.size() == size);
+}
+
+/**
  * @brief The default constructor. Creates an empty Tox key.
  */
 ToxPk::ToxPk()
@@ -28,13 +37,14 @@ ToxPk::ToxPk()
  * @param rawId The bytes to construct the ToxPk from. The length must be exactly
  *              ToxPk::size, else the ToxPk will be empty.
  */
-ToxPk::ToxPk(QByteArray rawId)
-    : ChatId(std::move(rawId))
+std::optional<ToxPk> ToxPk::parse(QByteArray rawId)
 {
-    if (id.length() != size) {
+    if (rawId.length() != size) {
         qCritical("ToxPk constructed with invalid length (%u instead of %d)",
-                  static_cast<uint>(id.length()), size);
+                  static_cast<uint>(rawId.length()), size);
+        return std::nullopt;
     }
+    return ToxPk(std::move(rawId));
 }
 
 /**
@@ -42,9 +52,9 @@ ToxPk::ToxPk(QByteArray rawId)
  * @param rawId The bytes to construct the ToxPk from, will read exactly
  * ToxPk::size from the specified buffer.
  */
-ToxPk::ToxPk(const uint8_t* rawId)
-    : ToxPk(QByteArray(reinterpret_cast<const char*>(rawId), size))
+std::optional<ToxPk> ToxPk::parse(const uint8_t* rawId)
 {
+    return parse(QByteArray(reinterpret_cast<const char*>(rawId), size));
 }
 
 /**
@@ -54,15 +64,14 @@ ToxPk::ToxPk(const uint8_t* rawId)
  *
  * @param pk Tox Pk string to convert to ToxPk object
  */
-ToxPk::ToxPk(const QString& pk)
-    : ToxPk([&pk]() {
-        if (pk.length() != numHexChars) {
-            qCritical("ToxPk constructed with invalid length string (%u instead of %d)",
-                      static_cast<uint>(pk.length()), numHexChars);
-        }
-        return QByteArray::fromHex(pk.toLatin1());
-    }())
+std::optional<ToxPk> ToxPk::parse(const QString& pk)
 {
+    if (pk.length() != numHexChars) {
+        qCritical("ToxPk constructed with invalid length string (%u instead of %d)",
+                  static_cast<uint>(pk.length()), numHexChars);
+        return std::nullopt;
+    }
+    return parse(QByteArray::fromHex(pk.toLatin1()));
 }
 
 /**
