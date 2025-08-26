@@ -191,7 +191,7 @@ o que pode levar a problemas com as videochamadas.</translation>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Esta versão do qTox está sendo mantida pela equipe TokTok após o arquivamento do projeto qTox original.</translation>
+        <translation>Esta versão do qTox está sendo mantida pela equipe TokTok após o arquivamento do projeto qTox original.</translation>
     </message>
 </context>
 <context>
@@ -218,7 +218,7 @@ o que pode levar a problemas com as videochamadas.</translation>
     </message>
     <message>
         <source>Automatically accept conference invitations from this contact if set.</source>
-        <translation type="unfinished">Se marcado, aceita automaticamente os convites de bate-papo em grupo desse contato.</translation>
+        <translation>Se marcado, aceita automaticamente os convites de bate-papo em grupo desse contato.</translation>
     </message>
     <message>
         <source>Remove history (operation can not be undone!)</source>
@@ -270,7 +270,7 @@ o que pode levar a problemas com as videochamadas.</translation>
     </message>
     <message>
         <source>Auto-accept conference invites</source>
-        <translation type="unfinished">Aceitar automaticamente convites de grupos</translation>
+        <translation>Aceitar automaticamente convites de grupos</translation>
     </message>
     <message>
         <source>You can save comments about this contact here.</source>
@@ -435,7 +435,7 @@ o que pode levar a problemas com as videochamadas.</translation>
     </message>
     <message>
         <source>Add friend</source>
-        <translation type="unfinished">Adicionar contato</translation>
+        <translation>Adicionar amigo</translation>
     </message>
 </context>
 <context>
@@ -491,12 +491,12 @@ o que pode levar a problemas com as videochamadas.</translation>
     <message>
         <source>Invalid proxy address</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Endereço de proxy inválido</translation>
+        <translation>Endereço de proxy inválido</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Por favor, insira um endereço IP válido ou nome de host para a configuração de proxy.</translation>
+        <translation>Por favor, insira um endereço IP válido ou nome de host para a configuração de proxy.</translation>
     </message>
 </context>
 <context>
@@ -574,7 +574,7 @@ o que pode levar a problemas com as videochamadas.</translation>
     <message>
         <source>Enable Debug Tools (developers only)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Habilitar ferramentas de depuração (somente desenvolvedores)</translation>
+        <translation>Habilitar ferramentas de depuração (somente desenvolvedores)</translation>
     </message>
 </context>
 <context>
@@ -617,7 +617,7 @@ o que pode levar a problemas com as videochamadas.</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished">Erro</translation>
+        <translation>Erro</translation>
     </message>
     <message>
         <source>Failed to load profile automatically.</source>
@@ -626,18 +626,18 @@ o que pode levar a problemas com as videochamadas.</translation>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Verifica se este programa está executando a versão mais recente do qTox.</translation>
+        <translation>Verifica se este programa está executando a versão mais recente do qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Inicia em modo portátil; carrega o perfil deste diretório.</translation>
+        <translation>Inicia em modo portátil; carrega o perfil deste diretório.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">caminho</translation>
+        <translation>caminho</translation>
     </message>
 </context>
 <context>
@@ -807,12 +807,12 @@ de forma que você possa salvar o arquivo no Windows.</translation>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Localização não gravável</translation>
+        <translation>Localização não gravável</translation>
     </message>
     <message>
         <source>You do not have permission to write to that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation type="unfinished">Você não possui permissão de escrita nesse diretório. Escolha outro ou cancele a operação.</translation>
+        <translation>Você não possui permissão de escrita nesse diretório. Escolha outro ou cancele a operação.</translation>
     </message>
 </context>
 <context>
@@ -836,22 +836,22 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     <message>
         <source>copy peer ID</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">copiar ID do par</translation>
+        <translation>copiar ID do par</translation>
     </message>
 </context>
 <context>
     <name>ConferenceInviteForm</name>
     <message>
         <source>Conferences</source>
-        <translation type="unfinished">Grupos</translation>
+        <translation>Conferências</translation>
     </message>
     <message>
         <source>Create new conference</source>
-        <translation type="unfinished">Criar um novo grupo</translation>
+        <translation>Criar nova conferência</translation>
     </message>
     <message>
         <source>Conference invites</source>
-        <translation type="unfinished">Convites à grupos</translation>
+        <translation>Convites a conferências</translation>
     </message>
 </context>
 <context>
@@ -913,7 +913,7 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     </message>
     <message>
         <source>Conference %1</source>
-        <translation type="unfinished">Bate-papo em grupo %1</translation>
+        <translation>Conferência %1</translation>
     </message>
     <message>
         <source>Invalid Tox ID</source>
@@ -941,17 +941,17 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     <message>
         <source>Debug Log</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Registro de depuração</translation>
+        <translation>Registro de depuração</translation>
     </message>
     <message>
         <source>Auto-reload</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Recarregar automaticamente</translation>
+        <translation>Recarregar automaticamente</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Rolagem automática</translation>
+        <translation>Rolagem automática</translation>
     </message>
 </context>
 <context>
@@ -959,7 +959,7 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     <message>
         <source>Debug Log</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Registro de depuração</translation>
+        <translation>Registro de depuração</translation>
     </message>
 </context>
 <context>
@@ -1092,11 +1092,11 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     </message>
     <message>
         <source>To new conference</source>
-        <translation type="unfinished">Para um novo grupo</translation>
+        <translation>Para nova conferência</translation>
     </message>
     <message>
         <source>Invite to conference &apos;%1&apos;</source>
-        <translation type="unfinished">Convidar ao grupo &apos;%1&apos;</translation>
+        <translation>Convidar à conferência &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Set alias...</source>
@@ -1155,7 +1155,7 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     <message>
         <source>%1 (no fonts)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 (sem fontes)</translation>
+        <translation>%1 (sem fontes)</translation>
     </message>
 </context>
 <context>
@@ -1275,22 +1275,22 @@ ao invés de fechar.</translation>
     </message>
     <message>
         <source>Add a chat message when a user joins or leaves a conference</source>
-        <translation type="unfinished">Adicionar uma mensagem de chat quando um usuário entra ou sai de um grupo</translation>
+        <translation>Adicionar uma mensagem de chat quando um usuário entra ou sai de uma conferência</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Clique aqui se encontrar erros em uma tradução e quiser ajudar a corrigi-los.</translation>
+        <translation>Clique aqui se encontrar erros em uma tradução e quiser ajudar a corrigi-los.</translation>
     </message>
     <message>
         <source>Help translate</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Ajude a traduzir</translation>
+        <translation>Ajude a traduzir</translation>
     </message>
     <message>
         <source> min</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished"> min</translation>
+        <translation> min</translation>
     </message>
 </context>
 <context>
@@ -1502,7 +1502,7 @@ Compartilhe com seus amigos para começar a conversar.</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
-        <translation type="unfinished">Defina a sua mensagem de status que será exibia aos outros</translation>
+        <translation>Defina a sua mensagem de estado que será exibia aos outros</translation>
     </message>
 </context>
 <context>
@@ -1660,17 +1660,17 @@ Certifique-se de que você entrou a mesma senha duas vezes.</translation>
         <source>This optional password is used to encrypt local message data and your profile.
 If you lose this password, there is no way to recover it.
 Press Shift+F1 for more information.</source>
-        <translation type="unfinished">Esta senha opcional é usada para criptografar dados de mensagens locais e seu perfil.
+        <translation>Esta senha opcional é usada para criptografar dados de mensagens locais e seu perfil.
 Se você perder essa senha, não há como recuperá-la.
 Pressione Shift+F1 para obter mais informações.</translation>
     </message>
     <message>
         <source>The password you enter here is optional and encrypts message data and your Tox secret key. It does not encrypt files received. Your profile data is never sent to any servers. This is not a remote login, it&apos;s local to your computer only. qTox developers won&apos;t be able to recover your password if lost.</source>
-        <translation type="unfinished">A senha inserida aqui é opcional e criptografa os dados da mensagem e sua chave secreta Tox. Não criptografa os arquivos recebidos. Os dados do seu perfil nunca são enviados para nenhum servidor. Este não é um login remoto, é apenas local no seu computador. Os desenvolvedores do qTox não serão capazes de recuperar sua senha se perdida.</translation>
+        <translation>A senha inserida aqui é opcional e criptografa os dados da mensagem e sua chave secreta Tox. Não criptografa os arquivos recebidos. Os dados do seu perfil nunca são enviados para nenhum servidor. Este não é um login remoto, é apenas local no seu computador. Os desenvolvedores do qTox não serão capazes de recuperar sua senha se perdida.</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
-        <translation type="unfinished">Campo de entrada da senha, mínimo 6 caracteres</translation>
+        <translation>Campo de entrada da senha, mínimo 6 caracteres</translation>
     </message>
 </context>
 <context>
@@ -1685,7 +1685,7 @@ Pressione Shift+F1 para obter mais informações.</translation>
     </message>
     <message>
         <source>Create a conference</source>
-        <translation type="unfinished">Criar um bate-papo de grupo</translation>
+        <translation>Criar uma conferência</translation>
     </message>
     <message>
         <source>View completed file transfers</source>
@@ -1745,11 +1745,11 @@ Pressione Shift+F1 para obter mais informações.</translation>
     </message>
     <message>
         <source>Conference</source>
-        <translation type="unfinished">Bate-papo em grupo</translation>
+        <translation>Conferência</translation>
     </message>
     <message>
         <source>Open conference management page</source>
-        <translation type="unfinished">Abrir a página de gerenciamento de bate-papo em grupo</translation>
+        <translation>Abrir a página de gerenciamento de conferências</translation>
     </message>
     <message>
         <source>File transfers history</source>
@@ -1770,20 +1770,20 @@ Pressione Shift+F1 para obter mais informações.</translation>
     <message>
         <source>Open internal debugging tools</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Abra ferramentas de depuração interna</translation>
+        <translation>Abra ferramentas de depuração interna</translation>
     </message>
     <message>
         <source>Debug</source>
-        <translation type="unfinished">Depurar</translation>
+        <translation>Depurar</translation>
     </message>
     <message>
         <source>Open Debugger</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Abra o depurador</translation>
+        <translation>Abrir o depurador</translation>
     </message>
     <message>
         <source>Add friend</source>
-        <translation type="unfinished">Adicionar contato</translation>
+        <translation>Adicionar amigo</translation>
     </message>
 </context>
 <context>
@@ -1887,7 +1887,7 @@ Pressione Shift+F1 para obter mais informações.</translation>
     </message>
     <message>
         <source>New conference message</source>
-        <translation type="unfinished">Nova mensagem de grupo</translation>
+        <translation>Nova mensagem de conferência</translation>
     </message>
     <message>
         <source>Incoming file transfer</source>
@@ -1900,11 +1900,11 @@ Pressione Shift+F1 para obter mais informações.</translation>
     </message>
     <message>
         <source>Conference invite received</source>
-        <translation type="unfinished">Convite para grupo recebido</translation>
+        <translation>Convite para conferência recebido</translation>
     </message>
     <message>
         <source>%1 invites you to join a conference.</source>
-        <translation type="unfinished">%1 convida você a participar de um grupo.</translation>
+        <translation>%1 convida você a participar de uma conferência.</translation>
     </message>
     <message>
         <source>Friend request received</source>
@@ -1917,7 +1917,7 @@ Pressione Shift+F1 para obter mais informações.</translation>
     <message>
         <source>Incoming call</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Chamada recebida</translation>
+        <translation>Chamada recebida</translation>
     </message>
 </context>
 <context>
@@ -1968,7 +1968,7 @@ Não será possível lhe adicionar com seu ID antigo, mas você manterá sua lis
     </message>
     <message>
         <source>NoSpam</source>
-        <translation>NoSpam</translation>
+        <translation>Anti-spam</translation>
     </message>
     <message>
         <source>NoSpam is a part of your ID that can be changed at will.
@@ -1997,7 +1997,7 @@ Mudanças no arquivo salvo podem ocorrer, isso pode resultar em perda de dados.<
     </message>
     <message>
         <source>Filter out conference messages by conference members&apos; public keys. Put public keys here, one per line.</source>
-        <translation type="unfinished">Filtrar as mensagens de grupo por chaves públicas dos membros do grupo. Coloque aqui as chaves públicas, uma por linha.</translation>
+        <translation>Filtrar as mensagens de conferências por chaves públicas dos membros do grupo. Coloque aqui as chaves públicas, uma por linha.</translation>
     </message>
 </context>
 <context>
@@ -2283,7 +2283,7 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinza).</translation>
     <message>
         <source>Choose an auto-accept directory</source>
         <comment>popup title</comment>
-        <translation type="unfinished">Escolha um diretório para aceitar arquivos automaticamente</translation>
+        <translation>Escolha um diretório para aceitar arquivos automaticamente</translation>
     </message>
 </context>
 <context>
@@ -2407,11 +2407,11 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinza).</translation>
     </message>
     <message>
         <source>%1 has joined the conference</source>
-        <translation type="unfinished">%1 entrou no grupo</translation>
+        <translation>%1 entrou na conferência</translation>
     </message>
     <message>
         <source>%1 has left the conference</source>
-        <translation type="unfinished">%1 saiu do grupo</translation>
+        <translation>%1 saiu da conferência</translation>
     </message>
     <message>
         <source>%1 is now known as %2</source>
@@ -2513,11 +2513,11 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinza).</translation>
     </message>
     <message>
         <source>You have joined the conference</source>
-        <translation type="unfinished">Você entrou no grupo</translation>
+        <translation>Você entrou na conferência</translation>
     </message>
     <message>
         <source>You have left the conference</source>
-        <translation type="unfinished">Você deixou o grupo</translation>
+        <translation>Você deixou a conferência</translation>
     </message>
     <message>
         <source>Failed to load chat history</source>
@@ -2673,7 +2673,7 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinza).</translation>
     </message>
     <message>
         <source>Set profile password</source>
-        <translation type="unfinished">Definir senha do perfil</translation>
+        <translation>Definir senha do perfil</translation>
     </message>
 </context>
 <context>
@@ -2722,7 +2722,7 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinza).</translation>
     <message>
         <source>Add friend</source>
         <comment>Title of the window to add a friend through Tox URI</comment>
-        <translation type="unfinished">Adicionar contato</translation>
+        <translation>Adicionar amigo</translation>
     </message>
 </context>
 <context>
@@ -2763,7 +2763,18 @@ Show formatting characters:
 Hide formatting characters:
     Apply formatting and don&apos;t show characters.
     E.g. &quot;**text**&quot; will show as &quot;text&quot;, bold.</source>
-        <translation type="unfinished">A preferência de novo estilo de texto pode não ser carregada até o qTox reiniciar.</translation>
+        <translation>A nova preferência de estilo de texto pode não ser carregada no histórico de bate-papo até que o qTox seja reiniciado.
+Ela afetará as novas mensagens imediatamente.
+
+Texto simples:
+    Não aplica nenhuma formatação às mensagens.
+    Por exemplo, “**texto**” será exibido como “**texto**”, sem negrito.
+Mostrar caracteres de formatação:
+    Aplica formatação e mostra caracteres.
+    Por exemplo, “**texto**” será exibido como “**texto**”, em negrito.
+Ocultar caracteres de formatação:
+    Aplica a formatação e não mostra os caracteres.
+    Por exemplo, “**texto**” será exibido como “texto”, em negrito.</translation>
     </message>
     <message>
         <source>Text styling:</source>
@@ -2804,12 +2815,12 @@ Hide formatting characters:
     </message>
     <message>
         <source>Place conferences at top of friend list</source>
-        <translation type="unfinished">Colocar bate-papo em grupo no topo da lista de amigos</translation>
+        <translation>Colocar conferências acima da lista de amigos</translation>
     </message>
     <message>
         <source>Your contact list will be shown in compact mode (small avatars, tabular view).</source>
         <comment>toolTip for compact layout setting</comment>
-        <translation type="unfinished">Sua lista de contatos será exibida em modo compacto.</translation>
+        <translation>Sua lista de contatos será exibida no modo compacto (avatares pequenos, visualização tabular).</translation>
     </message>
     <message>
         <source>Compact contact list</source>
@@ -2866,7 +2877,7 @@ Hide formatting characters:
     <message>
         <source>Show a notification when you receive a new message, call, or friend request and the window is not selected.</source>
         <comment>tooltip for Notify setting</comment>
-        <translation type="unfinished">Mostrar uma notificação quando você receber uma nova mensagem e a janela não estiver selecionada.</translation>
+        <translation>Mostrar uma notificação quando você receber uma nova mensagem, chamada ou pedido de amizade e a janela não estiver selecionada.</translation>
     </message>
     <message>
         <source>Notify</source>
@@ -2874,7 +2885,7 @@ Hide formatting characters:
     </message>
     <message>
         <source>Conferences only notify when mentioned</source>
-        <translation type="unfinished">Somente notificar quando for mencionado em bate-papos de grupo</translation>
+        <translation>Somente notificar quando for mencionado em conferências.</translation>
     </message>
     <message>
         <source>Play sound</source>
@@ -2894,12 +2905,12 @@ Hide formatting characters:
     </message>
     <message>
         <source>Use colored nicknames in conferences</source>
-        <translation type="unfinished">Usar apelidos coloridos em chats de grupo</translation>
+        <translation>Usar apelidos coloridos em conferências</translation>
     </message>
     <message>
         <source>Only notify about new messages in conferences when your nickname is mentioned.</source>
         <comment>toolTip for Conferences only notify when mentioned</comment>
-        <translation type="unfinished">Somente notificar novas mensagens em bate-papos de grupo quando você for mencionado.</translation>
+        <translation>Somente notificar novas mensagens em conferências quando seu apelido for mencionado.</translation>
     </message>
     <message>
         <source>If checked, conferences will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
@@ -2919,111 +2930,104 @@ Hide formatting characters:
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Se desativado, silenciar sons de notificação quando o status for Ocupado (mas ainda mostrar uma notificação)</translation>
+        <translation>Se desativado, silencia sons de notificação quando o estado for Ocupado (mas ainda mostra uma notificação)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Use notificações na área de trabalho, por ex. em uma central de notificação ou na bandeja do sistema. Sem isso, a notificação só ficará visível como um ícone piscando na bandeja.</translation>
+        <translation>Use notificações na área de trabalho, por exemplo, em uma central de notificação ou na bandeja do sistema. Sem isso, a notificação só ficará visível como um ícone piscando na bandeja.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Mostrar apenas &quot;nova mensagem&quot; sem mostrar informações potencialmente secretas nas notificações da área de trabalho.</translation>
+        <translation>Mostrar apenas &quot;nova mensagem&quot; sem mostrar informações potencialmente secretas nas notificações da área de trabalho.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Divida a lista de amigos e a janela de bate-papo em janelas móveis separadas.</translation>
+        <translation>Divide a lista de amigos e a janela de bate-papo em janelas móveis separadas.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Exiba emojis textuais como imagens coloridas em vez de texto ou emojis renderizados em fonte preto/branco.</translation>
+        <translation>Exibe emojis textuais como imagens coloridas em vez de texto ou emojis renderizados em fonte preta/branca.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Selecione qual conjunto de imagens usar ao renderizar emojis.</translation>
+        <translation>Selecione qual conjunto de imagens usar ao renderizar emojis.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Tamanho em pixels de uma imagem emoji. Selecione algo semelhante ao tamanho da fonte base.</translation>
+        <translation>Tamanho em pixels de uma imagem emoji. Selecione algo semelhante ao tamanho da fonte base.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Estilo base a ser usado para a IU. Fusion é recomendado porque funciona melhor com o tema qTox.</translation>
+        <translation>Estilo base a ser usado para a IU. Fusion é recomendado porque funciona melhor com o tema qTox.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Tema de cores da interface do usuário. Use isto para selecionar o modo escuro.</translation>
+        <translation>Tema de cores da interface do usuário. Use isto para selecionar o modo escuro.</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Se desativado, use notificações básicas na bandeja do sistema. Caso contrário, tente usar o back-end de notificação do seu ambiente de área de trabalho. Desative esta opção se observar problemas com notificações na área de trabalho.</translation>
+        <translation>Se desativado, usa notificações básicas na bandeja do sistema. Caso contrário, tenta usar o back-end de notificação do seu ambiente de área de trabalho. Desative esta opção se observar problemas com notificações na área de trabalho.</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Use back-end de notificação específico do sistema, se disponível</translation>
+        <translation>Usa back-end de notificação específico do sistema, se disponível</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Mostre visualizações de imagens enviadas e recebidas em bate-papos. Passe o mouse sobre a visualização embutida para exibir uma visualização maior.</translation>
+        <translation>Mostra visualizações de imagens enviadas e recebidas em bate-papos. Passe o mouse sobre a visualização embutida para exibir uma visualização maior.</translation>
     </message>
     <message>
         <source>Image preview</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Pré-visualização da imagem</translation>
+        <translation>Pré-visualização da imagem</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Número máximo de mensagens (por conversa) carregadas do histórico de
-chat. Diminua isso para melhorar o desempenho. Um número muito baixo aqui
+        <translation>Número máximo de mensagens (por conversa) carregadas do histórico de
+bate-papos. Diminua isso para melhorar o desempenho. Um número muito baixo aqui
 pode fazer com que a barra de rolagem desapareça.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Tamanho máximo de
-visualização do registro
-de bate-papo</translation>
+        <translation>Tamanho máximo de exibição do registro de bate-papo</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Número de mensagens a serem carregadas do histórico de bate-papo ao rolar.
-Um número muito baixo aqui pode fazer com que a barra de rolagem
-desapareça.</translation>
+        <translation>Número de mensagens a serem carregadas do histórico de bate-papo ao rolar.
+Um número muito baixo aqui pode fazer com que a barra de rolagem desapareça.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Tamanho do bloco de
-registro de bate-
-papo</translation>
+        <translation>Tamanho do bloco de registro de bate-papos</translation>
     </message>
     <message>
         <source>Chat log:</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Registro
-de bate-
-papo:</translation>
+        <translation>Registro de bate-papos:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Ocultar sufixo após símbolo nulo</translation>
+        <translation>Ocultar sufixo após símbolo NULO</translation>
     </message>
 </context>
 <context>
@@ -3074,7 +3078,7 @@ papo:</translation>
     </message>
     <message>
         <source>Create new conference...</source>
-        <translation type="unfinished">Criar novo grupo...</translation>
+        <translation>Criar nova conferência...</translation>
     </message>
     <message>
         <source>Create new circle...</source>
@@ -3107,7 +3111,7 @@ papo:</translation>
     </message>
     <message>
         <source>Conferences</source>
-        <translation type="unfinished">Grupos</translation>
+        <translation>Conferências</translation>
     </message>
     <message>
         <source>Search Contacts</source>
@@ -3115,7 +3119,7 @@ papo:</translation>
     </message>
     <message>
         <source>Conference #%1</source>
-        <translation type="unfinished">Bate-papo em grupo #%1</translation>
+        <translation>Conferência #%1</translation>
     </message>
     <message>
         <source>Show</source>
@@ -3169,9 +3173,9 @@ papo:</translation>
     </message>
     <message numerus="yes">
         <source>%n new conference invite(s)</source>
-        <translation type="unfinished">
-            <numerusform>%n novo convite de grupo</numerusform>
-            <numerusform>%n novos convites de grupo</numerusform>
+        <translation>
+            <numerusform>%n novo convite de conferência</numerusform>
+            <numerusform>%n novos convites de conferências</numerusform>
         </translation>
     </message>
     <message>
@@ -3206,7 +3210,7 @@ papo:</translation>
     <message>
         <source>Debug</source>
         <comment>title of the window</comment>
-        <translation type="unfinished">Depurar</translation>
+        <translation>Depurar</translation>
     </message>
 </context>
 </TS>
