@@ -191,7 +191,7 @@ il che può portare a problemi con le videochiamate.</translation>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Questa versione di qTox viene mantenuta dal team TokTok dopo l&apos;archiviazione del progetto qTox originale.</translation>
+        <translation>Questa versione di qTox viene mantenuta dal team TokTok dopo l&apos;archiviazione del progetto qTox originale.</translation>
     </message>
 </context>
 <context>
@@ -435,7 +435,7 @@ il che può portare a problemi con le videochiamate.</translation>
     </message>
     <message>
         <source>Add friend</source>
-        <translation type="unfinished">Aggiungi amico</translation>
+        <translation>Aggiungi amico</translation>
     </message>
 </context>
 <context>
@@ -491,12 +491,12 @@ il che può portare a problemi con le videochiamate.</translation>
     <message>
         <source>Invalid proxy address</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Indirizzo proxy non valido</translation>
+        <translation>Indirizzo proxy non valido</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Immettere un indirizzo IP o un nome host valido per l&apos;impostazione proxy.</translation>
+        <translation>Immettere un indirizzo IP o un nome host valido per l&apos;impostazione proxy.</translation>
     </message>
 </context>
 <context>
@@ -574,7 +574,7 @@ il che può portare a problemi con le videochiamate.</translation>
     <message>
         <source>Enable Debug Tools (developers only)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Abilita strumenti di debug (solo sviluppatori)</translation>
+        <translation>Abilita strumenti di debug (solo sviluppatori)</translation>
     </message>
 </context>
 <context>
@@ -626,18 +626,18 @@ il che può portare a problemi con le videochiamate.</translation>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Controlla se questo programma esegue l&apos;ultima versione di qTox.</translation>
+        <translation>Controlla se questo programma esegue l&apos;ultima versione di qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Si avvia in modalità portatile; carica il profilo da questa directory.</translation>
+        <translation>Si avvia in modalità portatile; carica il profilo da questa directory.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">percorso</translation>
+        <translation>percorso</translation>
     </message>
 </context>
 <context>
@@ -805,12 +805,12 @@ in modo da poter salvare il file su Windows.</translation>
     <message>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
-        <translation type="unfinished">Posizione non scrivibile</translation>
+        <translation>Posizione non scrivibile</translation>
     </message>
     <message>
         <source>You do not have permission to write to that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation type="unfinished">Non hai i permessi per scrivere qui. Scegli un&apos;altra posizione, o smetti di salvare.</translation>
+        <translation>Non hai i permessi per scrivere qui. Scegli un&apos;altra posizione, o smetti di salvare.</translation>
     </message>
 </context>
 <context>
@@ -834,18 +834,18 @@ in modo da poter salvare il file su Windows.</translation>
     <message>
         <source>copy peer ID</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">copiare l&apos;ID peer</translation>
+        <translation>copiare l&apos;ID peer</translation>
     </message>
 </context>
 <context>
     <name>ConferenceInviteForm</name>
     <message>
         <source>Conferences</source>
-        <translation type="unfinished">Gruppi</translation>
+        <translation>Conferenze</translation>
     </message>
     <message>
         <source>Create new conference</source>
-        <translation type="unfinished">Crea un nuovo gruppo</translation>
+        <translation>Creare una nuova conferenza</translation>
     </message>
     <message>
         <source>Conference invites</source>
