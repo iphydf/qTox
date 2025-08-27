@@ -191,7 +191,7 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Cette version de qTox est maintenue par l&apos;équipe TokTok suite à l&apos;archivage du projet qTox original.</translation>
+        <translation>Cette version de qTox est maintenue par l&apos;équipe TokTok suite à l&apos;archivage du projet qTox original.</translation>
     </message>
 </context>
 <context>
@@ -218,7 +218,7 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     </message>
     <message>
         <source>Automatically accept conference invitations from this contact if set.</source>
-        <translation type="unfinished">Si activé, accepte automatiquement les invitations de ce contact à des discussions de groupe.</translation>
+        <translation>Si activé, accepte automatiquement les invitations de ce contact à des conférences..</translation>
     </message>
     <message>
         <source>Remove history (operation can not be undone!)</source>
@@ -270,7 +270,7 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     </message>
     <message>
         <source>Auto-accept conference invites</source>
-        <translation type="unfinished">Accepter automatiquement les invitations de groupe</translation>
+        <translation>Accepter automatiquement les invitations de groupe</translation>
     </message>
     <message>
         <source>You can save comments about this contact here.</source>
@@ -435,7 +435,7 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     </message>
     <message>
         <source>Add friend</source>
-        <translation type="unfinished">Ajouter un contact</translation>
+        <translation>Ajouter un contact</translation>
     </message>
 </context>
 <context>
@@ -491,12 +491,12 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     <message>
         <source>Invalid proxy address</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Adresse proxy non valide</translation>
+        <translation>Adresse proxy non valide</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Veuillez saisir une adresse IP valide ou un nom d&apos;hôte pour le paramètre de proxy.</translation>
+        <translation>Veuillez saisir une adresse IP valide ou un nom d&apos;hôte pour le paramètre de proxy.</translation>
     </message>
 </context>
 <context>
@@ -574,7 +574,7 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     <message>
         <source>Enable Debug Tools (developers only)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Activer les outils de débogage (développeurs uniquement)</translation>
+        <translation>Activer les outils de débogage (développeurs uniquement)</translation>
     </message>
 </context>
 <context>
@@ -617,7 +617,7 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="unfinished">Erreur</translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <source>Failed to load profile automatically.</source>
@@ -626,18 +626,18 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Vérifie si ce programme exécute la dernière version de qTox.</translation>
+        <translation>Vérifie si ce programme exécute la dernière version de qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Démarre en mode portable&#xa0;; charge le profil à partir de ce répertoire.</translation>
+        <translation>Démarre en mode portable&#x202f;; charge le profil à partir de ce répertoire.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Chemin</translation>
+        <translation>Chemin</translation>
     </message>
 </context>
 <context>
@@ -806,12 +806,12 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Emplacement non écrit</translation>
+        <translation>L&apos;emplacement n&apos;est pas accessible en écriture</translation>
     </message>
     <message>
         <source>You do not have permission to write to that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation type="unfinished">Vous ne disposez pas des permissions nécessaires pour écrire à cet emplacement. Choisissez-en un autre ou annulez la boîte de dialogue de sauvegarde.</translation>
+        <translation>Vous ne disposez pas des permissions nécessaires pour écrire à cet emplacement. Choisissez-en un autre ou annulez la boîte de dialogue de sauvegarde.</translation>
     </message>
 </context>
 <context>
@@ -835,22 +835,22 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     <message>
         <source>copy peer ID</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">copier l&apos;ID du pair</translation>
+        <translation>copier l&apos;ID du pair</translation>
     </message>
 </context>
 <context>
     <name>ConferenceInviteForm</name>
     <message>
         <source>Conferences</source>
-        <translation type="unfinished">Groupes</translation>
+        <translation>Conférences</translation>
     </message>
     <message>
         <source>Create new conference</source>
-        <translation type="unfinished">Créer un nouveau groupe</translation>
+        <translation>Créer une nouvelle conférence</translation>
     </message>
     <message>
         <source>Conference invites</source>
-        <translation type="unfinished">Invitations de groupe</translation>
+        <translation>Invitations à conférences</translation>
     </message>
 </context>
 <context>
@@ -912,7 +912,7 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     </message>
     <message>
         <source>Conference %1</source>
-        <translation type="unfinished">Conversation de groupe %1</translation>
+        <translation>Conférence %1</translation>
     </message>
     <message>
         <source>Invalid Tox ID</source>
@@ -940,17 +940,17 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     <message>
         <source>Debug Log</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Journal de débogage</translation>
+        <translation>Journal de débogage</translation>
     </message>
     <message>
         <source>Auto-reload</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Rechargement automatique</translation>
+        <translation>Rechargement automatique</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Défilement automatique</translation>
+        <translation>Défilement automatique</translation>
     </message>
 </context>
 <context>
@@ -958,7 +958,7 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     <message>
         <source>Debug Log</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Journal de débogage</translation>
+        <translation>Journal de débogage</translation>
     </message>
 </context>
 <context>
@@ -1120,11 +1120,11 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     </message>
     <message>
         <source>To new conference</source>
-        <translation type="unfinished">Vers un nouveau groupe</translation>
+        <translation>À la nouvelle conférence</translation>
     </message>
     <message>
         <source>Invite to conference &apos;%1&apos;</source>
-        <translation type="unfinished">Inviter au groupe &apos;%1&apos;</translation>
+        <translation>Inviter à la conférence &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Show details</source>
@@ -1153,7 +1153,7 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     <message>
         <source>%1 (no fonts)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 (pas de polices)</translation>
+        <translation>%1 (pas de polices)</translation>
     </message>
 </context>
 <context>
@@ -1273,22 +1273,22 @@ au lieu de fermer entièrement.</translation>
     </message>
     <message>
         <source>Add a chat message when a user joins or leaves a conference</source>
-        <translation type="unfinished">Afficher un message quand quelqu&apos;un rejoint ou quitte un groupe</translation>
+        <translation>Afficher un message quand quelqu&apos;un rejoint ou quitte une conférence</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Cliquez ici si vous trouvez des erreurs dans une traduction et souhaitez aider à les corriger.</translation>
+        <translation>Cliquez ici si vous trouvez des erreurs dans une traduction et souhaitez aider à les corriger.</translation>
     </message>
     <message>
         <source>Help translate</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Aidez à traduire</translation>
+        <translation>Aidez à traduire</translation>
     </message>
     <message>
         <source> min</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished"> min</translation>
+        <translation> min</translation>
     </message>
 </context>
 <context>
@@ -1500,7 +1500,7 @@ Partagez-le avec vos amis pour commencer à chatter.</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
-        <translation type="unfinished">Renseigner votre message de statut qui sera affiché aux autres</translation>
+        <translation>Renseigner votre message de statut qui sera affiché aux autres</translation>
     </message>
 </context>
 <context>
@@ -1658,17 +1658,17 @@ Veuillez vous assurer d&apos;entrer deux fois le même mot de passe.</translatio
         <source>This optional password is used to encrypt local message data and your profile.
 If you lose this password, there is no way to recover it.
 Press Shift+F1 for more information.</source>
-        <translation type="unfinished">Ce mot de passe facultatif est utilisé pour crypter les données des messages locaux et votre profil.
+        <translation>Ce mot de passe facultatif est utilisé pour crypter les données des messages locaux et votre profil.
 Si vous perdez ce mot de passe, il n&apos;y a aucun moyen de le récupérer.
 Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>The password you enter here is optional and encrypts message data and your Tox secret key. It does not encrypt files received. Your profile data is never sent to any servers. This is not a remote login, it&apos;s local to your computer only. qTox developers won&apos;t be able to recover your password if lost.</source>
-        <translation type="unfinished">Le mot de passe que vous entrez ici est facultatif et crypte les données du message et votre clé secrète Tox. Il ne crypte pas les fichiers reçus. Les données de votre profil ne sont jamais envoyées à aucun serveur. Il ne s&apos;agit pas d&apos;une connexion à distance, elle est locale uniquement sur votre ordinateur. Les développeurs qTox ne pourront pas récupérer votre mot de passe en cas de perte.</translation>
+        <translation>Le mot de passe que vous entrez ici est facultatif et crypte les données du message et votre clé secrète Tox. Il ne crypte pas les fichiers reçus. Les données de votre profil ne sont jamais envoyées à aucun serveur. Il ne s&apos;agit pas d&apos;une connexion à distance, elle est locale uniquement sur votre ordinateur. Les développeurs qTox ne pourront pas récupérer votre mot de passe en cas de perte.</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
-        <translation type="unfinished">Champ de saisie du mot de passe, d&apos;une longueur minimale de 6 caractères</translation>
+        <translation>Champ de saisie du mot de passe, d&apos;une longueur minimale de 6 caractères</translation>
     </message>
 </context>
 <context>
@@ -1683,7 +1683,7 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>Create a conference</source>
-        <translation type="unfinished">Créer un groupe de discussion instantanée</translation>
+        <translation>Créer une conférence</translation>
     </message>
     <message>
         <source>View completed file transfers</source>
@@ -1743,7 +1743,7 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>Conference</source>
-        <translation type="unfinished">Discussion de groupe</translation>
+        <translation>Conférence</translation>
     </message>
     <message>
         <source>Open conference management page</source>
