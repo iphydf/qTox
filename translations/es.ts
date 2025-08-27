@@ -434,7 +434,7 @@ lo que puede provocar problemas en las videollamadas.</translation>
     </message>
     <message>
         <source>Add friend</source>
-        <translation type="unfinished">Agregar amigo</translation>
+        <translation>Agregar amigo</translation>
     </message>
 </context>
 <context>
@@ -490,12 +490,12 @@ lo que puede provocar problemas en las videollamadas.</translation>
     <message>
         <source>Invalid proxy address</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Dirección proxy no válida</translation>
+        <translation>Dirección proxy no válida</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Ingrese una dirección IP o nombre IP válido para la configuración de proxy.</translation>
+        <translation>Ingrese una dirección IP o nombre IP válido para la configuración de proxy.</translation>
     </message>
 </context>
 <context>
@@ -625,18 +625,18 @@ lo que puede provocar problemas en las videollamadas.</translation>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Comprueba si este programa está ejecutando la última versión de qTox.</translation>
+        <translation>Comprueba si este programa está ejecutando la última versión de qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Comienza en modo portátil; carga el perfil desde este directorio.</translation>
+        <translation>Comienza en modo portátil; carga el perfil desde este directorio.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ruta</translation>
+        <translation>ruta</translation>
     </message>
 </context>
 <context>
@@ -804,12 +804,12 @@ para que puedas guardar el archivo en windows.</translation>
     <message>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
-        <translation type="unfinished">Ubicación no escribible</translation>
+        <translation>Ubicación no escribible</translation>
     </message>
     <message>
         <source>You do not have permission to write to that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation type="unfinished">No tienes permiso de escritura. Elige otra ubicación o cancela la operación.</translation>
+        <translation>No tienes permiso de escritura. Elige otra ubicación o cancela la operación.</translation>
     </message>
 </context>
 <context>
@@ -833,7 +833,7 @@ para que puedas guardar el archivo en windows.</translation>
     <message>
         <source>copy peer ID</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">copiar ID de compañero</translation>
+        <translation>copiar ID de compañero</translation>
     </message>
 </context>
 <context>
@@ -1271,17 +1271,17 @@ en lugar de cerrarse por completo.</translation>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Haga clic aquí si encuentra errores en una traducción y le gustaría ayudar a solucionarlo.</translation>
+        <translation>Haga clic aquí si encuentra errores en una traducción y le gustaría ayudar a solucionarlo.</translation>
     </message>
     <message>
         <source>Help translate</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Ayuda a traducir</translation>
+        <translation>Ayuda a traducir</translation>
     </message>
     <message>
         <source> min</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished"> min</translation>
+        <translation> min</translation>
     </message>
 </context>
 <context>
@@ -1493,7 +1493,7 @@ Compártela con tus amigos para empezar a chatear.</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
-        <translation type="unfinished">Establezca su mensaje de estado que se mostrará a los demás</translation>
+        <translation>Establezca su mensaje de estado que se mostrará a los demás</translation>
     </message>
 </context>
 <context>
@@ -1651,17 +1651,17 @@ Verifica que sean la misma en ambos recuadros.</translation>
         <source>This optional password is used to encrypt local message data and your profile.
 If you lose this password, there is no way to recover it.
 Press Shift+F1 for more information.</source>
-        <translation type="unfinished">Esta contraseña opcional se utiliza para cifrar los datos de los mensajes locales y su perfil.
+        <translation>Esta contraseña opcional se utiliza para cifrar los datos de los mensajes locales y su perfil.
 Si pierde esta contraseña, no hay forma de recuperarla.
 Presione Mayús+F1 para obtener más información.</translation>
     </message>
     <message>
         <source>The password you enter here is optional and encrypts message data and your Tox secret key. It does not encrypt files received. Your profile data is never sent to any servers. This is not a remote login, it&apos;s local to your computer only. qTox developers won&apos;t be able to recover your password if lost.</source>
-        <translation type="unfinished">La contraseña que ingresa aquí es opcional y cifra los datos del mensaje y su clave secreta Tox. No cifra los archivos recibidos. Los datos de su perfil nunca se envían a ningún servidor. Este no es un inicio de sesión remoto, es local únicamente en su computadora. Los desarrolladores de qTox no podrán recuperar su contraseña si la pierde.</translation>
+        <translation>La contraseña que ingresa aquí es opcional y cifra los datos del mensaje y su clave secreta Tox. No cifra los archivos recibidos. Los datos de su perfil nunca se envían a ningún servidor. Este no es un inicio de sesión remoto, es local únicamente en su computadora. Los desarrolladores de qTox no podrán recuperar su contraseña si la pierde.</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
-        <translation type="unfinished">Campo para introducir contraseña, con una longitud mínima de 6 caracteres</translation>
+        <translation>Campo para introducir contraseña, con una longitud mínima de 6 caracteres</translation>
     </message>
 </context>
 <context>
@@ -1772,7 +1772,7 @@ Presione Mayús+F1 para obtener más información.</translation>
     </message>
     <message>
         <source>Add friend</source>
-        <translation type="unfinished">Agregar amigo</translation>
+        <translation>Agregar amigo</translation>
     </message>
 </context>
 <context>
@@ -1906,7 +1906,7 @@ Presione Mayús+F1 para obtener más información.</translation>
     <message>
         <source>Incoming call</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Llamada entrante</translation>
+        <translation>Llamada entrante</translation>
     </message>
 </context>
 <context>
@@ -2272,7 +2272,7 @@ Este ID incluye el código NoSpam (en azul), y la suma de comprobación (en gris
     <message>
         <source>Choose an auto-accept directory</source>
         <comment>popup title</comment>
-        <translation type="unfinished">Elige un directorio para descargas automáticas</translation>
+        <translation>Elige un directorio para descargas automáticas</translation>
     </message>
 </context>
 <context>
@@ -2662,7 +2662,7 @@ Este ID incluye el código NoSpam (en azul), y la suma de comprobación (en gris
     </message>
     <message>
         <source>Set profile password</source>
-        <translation type="unfinished">Establecer contraseña del perfil</translation>
+        <translation>Establecer contraseña del perfil</translation>
     </message>
 </context>
 <context>
@@ -2711,7 +2711,7 @@ Este ID incluye el código NoSpam (en azul), y la suma de comprobación (en gris
     <message>
         <source>Add friend</source>
         <comment>Title of the window to add a friend through Tox URI</comment>
-        <translation type="unfinished">Agregar amigo</translation>
+        <translation>Agregar amigo</translation>
     </message>
 </context>
 <context>
@@ -2752,7 +2752,18 @@ Show formatting characters:
 Hide formatting characters:
     Apply formatting and don&apos;t show characters.
     E.g. &quot;**text**&quot; will show as &quot;text&quot;, bold.</source>
-        <translation type="unfinished">Las nuevas preferencias de estilo de texto pueden requerir que reinicies qTox para ser activadas.</translation>
+        <translation>Es posible que la nueva preferencia de estilo de texto no se cargue en el historial de chat hasta que se reinicie qTox.
+Afectará a los nuevos mensajes inmediatamente.
+
+Texto sin formato:
+ No aplica ningún formato a los mensajes.
+    Por ejemplo, «**texto**» se mostrará como «**texto**», sin negrita.
+Mostrar caracteres de formato:
+ Aplica formato y muestra los caracteres.
+    Por ejemplo, «**texto**» se mostrará como «**texto**», en negrita.
+Ocultar caracteres de formato:
+ Aplica formato y no muestra caracteres.
+    Por ejemplo, «**texto**» se mostrará como «texto», en negrita.</translation>
     </message>
     <message>
         <source>Text styling:</source>
@@ -2798,7 +2809,7 @@ Hide formatting characters:
     <message>
         <source>Your contact list will be shown in compact mode (small avatars, tabular view).</source>
         <comment>toolTip for compact layout setting</comment>
-        <translation type="unfinished">Mostrar tu lista de amigos en modo compacto.</translation>
+        <translation>Tu lista de contactos se mostrará en modo compacto (avatares pequeños, vista tabular).</translation>
     </message>
     <message>
         <source>Compact contact list</source>
@@ -2855,7 +2866,7 @@ Hide formatting characters:
     <message>
         <source>Show a notification when you receive a new message, call, or friend request and the window is not selected.</source>
         <comment>tooltip for Notify setting</comment>
-        <translation type="unfinished">Mostrar una notificación cuando reciba un nuevo mensaje y la ventana no esté seleccionada.</translation>
+        <translation>Mostrar una notificación cuando recibas un nuevo mensaje, llamada o solicitud de amistad y la ventana no esté seleccionada.</translation>
     </message>
     <message>
         <source>Notify</source>
@@ -2888,7 +2899,7 @@ Hide formatting characters:
     <message>
         <source>Only notify about new messages in conferences when your nickname is mentioned.</source>
         <comment>toolTip for Conferences only notify when mentioned</comment>
-        <translation type="unfinished">Sólo notificar sobre nuevos mensajes en los chat de grupo cuando seas mencionado.</translation>
+        <translation>Sólo notificar sobre nuevos mensajes en los chat de grupo cuando seas mencionado.</translation>
     </message>
     <message>
         <source>If checked, conferences will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
@@ -2908,47 +2919,47 @@ Hide formatting characters:
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Si está deshabilitado, la notificación silenciada suena cuando el estado es Ocupado (pero aún muestra una notificación)</translation>
+        <translation>Si está deshabilitado, la notificación silenciada suena cuando el estado es Ocupado (pero aún muestra una notificación)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Utilice notificaciones de escritorio, p. en un centro de notificaciones o en la bandeja del sistema. Sin esto, la notificación sólo será visible como un icono de bandeja parpadeante.</translation>
+        <translation>Utilice notificaciones de escritorio, por ejemplo en un centro de notificaciones o en la bandeja del sistema. Sin esto, la notificación sólo será visible como un icono de bandeja parpadeante.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Muestra solo &quot;mensaje nuevo&quot; sin mostrar información potencialmente secreta en las notificaciones de escritorio.</translation>
+        <translation>Muestra solo &quot;mensaje nuevo&quot; sin mostrar información potencialmente secreta en las notificaciones de escritorio.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Divida la lista de amigos y la ventana de chat en ventanas móviles por separado.</translation>
+        <translation>Dividir la lista de amigos y chat ventana en ventanas móviles por separado.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Muestre emojis textuales como imágenes coloridas en lugar de texto o emojis con fuentes en blanco y negro.</translation>
+        <translation>Mostrar emojis textuales como imágenes coloridas en lugar de texto o emojis de fuentes en blanco o negro.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Seleccione qué conjunto de imágenes usar al representar emojis.</translation>
+        <translation>Seleccionar qué conjunto de imágenes utilizar al renderizar emojis.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Tamaño en píxeles de una imagen emoji. Seleccione algo similar al tamaño de fuente base.</translation>
+        <translation>Tamaño en píxeles de una imagen emoji. Seleccione algo similar al tamaño de fuente base.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Estilo base que se utilizará en la interfaz de usuario. Se recomienda Fusion ya que funciona mejor con la temática qTox.</translation>
+        <translation>Estilo base que se utilizará en la interfaz de usuario. Se recomienda Fusion ya que funciona mejor con la temática qTox.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Tema de color de la interfaz de usuario. Úselo para seleccionar el modo oscuro.</translation>
+        <translation>Tema de color de la interfaz de usuario. Úselo para seleccionar el modo oscuro.</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
@@ -2962,55 +2973,49 @@ Hide formatting characters:
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Muestra vistas previas de imágenes enviadas y recibidas en los chats. Pase el cursor sobre la vista previa en línea para mostrar una vista previa más grande.</translation>
+        <translation>Muestra vistas previas de imágenes enviadas y recibidas en los chats. Pase el cursor sobre la vista previa en línea para mostrar una vista previa más grande.</translation>
     </message>
     <message>
         <source>Image preview</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Vista previa de imagen</translation>
+        <translation>Vista previa de imagen</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Número máximo de mensajes (por conversación) cargados desde el historial
-de chat. Disminuya esto para mejorar el rendimiento. Un número demasiado
-bajo aquí puede hacer que desaparezca la barra de desplazamiento.</translation>
+        <translation>Número máximo de mensajes (por conversación) cargados desde el historial de chat.
+Disminuya esto para mejorar el rendimiento. Un número demasiado bajo aquí
+puede hacer que desaparezca la barra de desplazamiento.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Tamaño máximo de
-visualización del registro
-de chat</translation>
+        <translation>Tamaño máximo de visualización del registro de chat</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Número de mensajes a cargar desde el historial de chat al desplazarse. Un
+        <translation>Número de mensajes a cargar desde el historial de chat al desplazarse. Un
 número demasiado bajo aquí puede hacer que desaparezca la barra de
 desplazamiento.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Tamaño del
-fragmento del
-registro de chat</translation>
+        <translation>Tamaño del fragmento del registro de chat</translation>
     </message>
     <message>
         <source>Chat log:</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Registro
-de conver
-saciones:</translation>
+        <translation>Registro de conversaciones:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Ocultar sufijo tras símbolo nulo</translation>
+        <translation>Ocultar sufijo tras símbolo NULO</translation>
     </message>
 </context>
 <context>
