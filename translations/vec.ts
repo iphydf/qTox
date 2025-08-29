@@ -1885,7 +1885,7 @@ Press Shift+F1 par informasion de pì.</translation>
     <name>NetCamView</name>
     <message>
         <source>Tox video</source>
-        <translation>Tox video</translation>
+        <translation>Video Tox</translation>
     </message>
     <message>
         <source>Full Screen</source>
@@ -2072,7 +2072,7 @@ Parsone łe sarà bone da zontarte co&apos;l to vecio ID, mo te tien i to prezen
     </message>
     <message>
         <source>NoSpam</source>
-        <translation>NoSpam</translation>
+        <translation>Niente Spam</translation>
     </message>
     <message>
         <source>NoSpam is a part of your ID that can be changed at will.
@@ -3017,7 +3017,7 @@ Far scondar łe caractere de formatasion:
     </message>
     <message>
         <source>Timestamp format:</source>
-        <translation>Timestamp format:</translation>
+        <translation>Formato data/ora:</translation>
     </message>
     <message>
         <source>Date format:</source>
