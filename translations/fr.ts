@@ -1747,7 +1747,7 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>Open conference management page</source>
-        <translation type="unfinished">Ouvrir la page de gestion du groupe de discussion</translation>
+        <translation>Ouvrir la page de gestion du groupe de discussion</translation>
     </message>
     <message>
         <source>File transfers history</source>
@@ -1768,20 +1768,20 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     <message>
         <source>Open internal debugging tools</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Ouvrir les outils de débogage internes</translation>
+        <translation>Ouvrir les outils de débogage internes</translation>
     </message>
     <message>
         <source>Debug</source>
-        <translation type="unfinished">Déboguer</translation>
+        <translation>Déboguer</translation>
     </message>
     <message>
         <source>Open Debugger</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Ouvrir le débogueur</translation>
+        <translation>Ouvrir le débogueur</translation>
     </message>
     <message>
         <source>Add friend</source>
-        <translation type="unfinished">Ajouter un contact</translation>
+        <translation>Ajouter un ami</translation>
     </message>
 </context>
 <context>
@@ -1885,7 +1885,7 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>New conference message</source>
-        <translation type="unfinished">Nouveau message de groupe</translation>
+        <translation>Nouveau message de conférence</translation>
     </message>
     <message>
         <source>Incoming file transfer</source>
@@ -1898,11 +1898,11 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>Conference invite received</source>
-        <translation type="unfinished">Invitation de groupe reçue</translation>
+        <translation>Invitation à conférence reçue</translation>
     </message>
     <message>
         <source>%1 invites you to join a conference.</source>
-        <translation type="unfinished">%1 vous invite à rejoindre un groupe.</translation>
+        <translation>%1 vous invite à rejoindre une conférence.</translation>
     </message>
     <message>
         <source>Friend request received</source>
@@ -1915,7 +1915,7 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     <message>
         <source>Incoming call</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Appel entrant</translation>
+        <translation>Appel entrant</translation>
     </message>
 </context>
 <context>
@@ -1995,7 +1995,7 @@ Les changements de format de sauvegarde sont possibles, ce qui pourrait entraine
     </message>
     <message>
         <source>Filter out conference messages by conference members&apos; public keys. Put public keys here, one per line.</source>
-        <translation type="unfinished">Filtrer le message de groupe par clé publique du membre du groupe. Mettre la clé publique ici, une par ligne.</translation>
+        <translation>Filtrer les messages de conférences par les clés publiques des membres des conférences. Mettez les clés publiques ici, une par ligne.</translation>
     </message>
 </context>
 <context>
@@ -2281,7 +2281,7 @@ Cet identifiant comprend le code NoSpam (en bleu) et la somme de contrôle (en g
     <message>
         <source>Choose an auto-accept directory</source>
         <comment>popup title</comment>
-        <translation type="unfinished">Sélectionner un répertoire d&apos;acceptation automatique</translation>
+        <translation>Sélectionner un répertoire d&apos;acceptation automatique</translation>
     </message>
 </context>
 <context>
@@ -2405,11 +2405,11 @@ Cet identifiant comprend le code NoSpam (en bleu) et la somme de contrôle (en g
     </message>
     <message>
         <source>%1 has joined the conference</source>
-        <translation type="unfinished">%1 a rejoint le groupe</translation>
+        <translation>%1 a rejoint la conférence</translation>
     </message>
     <message>
         <source>%1 has left the conference</source>
-        <translation type="unfinished">%1 a quitté le groupe</translation>
+        <translation>%1 a quitté la conférence</translation>
     </message>
     <message>
         <source>%1 is now known as %2</source>
@@ -2511,11 +2511,11 @@ Cet identifiant comprend le code NoSpam (en bleu) et la somme de contrôle (en g
     </message>
     <message>
         <source>You have joined the conference</source>
-        <translation type="unfinished">Vous avez rejoint le groupe</translation>
+        <translation>Vous avez rejoint la conférence</translation>
     </message>
     <message>
         <source>You have left the conference</source>
-        <translation type="unfinished">Vous avez quitté le groupe</translation>
+        <translation>Vous avez quitté la conférence</translation>
     </message>
     <message>
         <source>Failed to load chat history</source>
@@ -2671,7 +2671,7 @@ Cet identifiant comprend le code NoSpam (en bleu) et la somme de contrôle (en g
     </message>
     <message>
         <source>Set profile password</source>
-        <translation type="unfinished">Choisir un mot de passe de profil</translation>
+        <translation>Choisir un mot de passe de profil</translation>
     </message>
 </context>
 <context>
@@ -2720,7 +2720,7 @@ Cet identifiant comprend le code NoSpam (en bleu) et la somme de contrôle (en g
     <message>
         <source>Add friend</source>
         <comment>Title of the window to add a friend through Tox URI</comment>
-        <translation type="unfinished">Ajouter un contact</translation>
+        <translation>Ajouter un ami</translation>
     </message>
 </context>
 <context>
@@ -2761,7 +2761,18 @@ Show formatting characters:
 Hide formatting characters:
     Apply formatting and don&apos;t show characters.
     E.g. &quot;**text**&quot; will show as &quot;text&quot;, bold.</source>
-        <translation type="unfinished">Le nouveau choix de style de texte peut ne pas être chargé avant un redémarrage de qTox.</translation>
+        <translation>Les nouvelles préférences de style de texte peuvent ne pas s&apos;afficher dans l&apos;historique des discussions avant le redémarrage de qTox.
+Elles s&apos;appliqueront immédiatement aux nouveaux messages.
+
+Texte brut&#xa0;:
+    N&apos;applique aucun formatage aux messages.
+    Par exemple, « **texte** » s&apos;affichera comme « **texte** », sans gras.
+Afficher les caractères de mise en forme&#xa0;:
+    Applique la mise en forme et affiche les caractères.
+    Par exemple, « **texte** » s&apos;affichera en gras « **texte** ».
+Masquer les caractères de mise en forme&#xa0;:
+    Applique la mise en forme et ne masque pas les caractères.
+    Par exemple, « **texte** » s&apos;affichera en gras « texte ».</translation>
     </message>
     <message>
         <source>Text styling:</source>
@@ -2802,12 +2813,12 @@ Hide formatting characters:
     </message>
     <message>
         <source>Place conferences at top of friend list</source>
-        <translation type="unfinished">Positionner les groupes de discussions en haut de la liste des contacts</translation>
+        <translation>Positionner les conférences en haut de la liste des contacts</translation>
     </message>
     <message>
         <source>Your contact list will be shown in compact mode (small avatars, tabular view).</source>
         <comment>toolTip for compact layout setting</comment>
-        <translation type="unfinished">Votre liste de contacts sera affichée en mode compact.</translation>
+        <translation>Votre liste de contacts s&apos;affichera en mode compact (petits avatars, affichage sous forme de tableau).</translation>
     </message>
     <message>
         <source>Compact contact list</source>
@@ -2864,7 +2875,7 @@ Hide formatting characters:
     <message>
         <source>Show a notification when you receive a new message, call, or friend request and the window is not selected.</source>
         <comment>tooltip for Notify setting</comment>
-        <translation type="unfinished">Afficher une notification lorsque vous recevez un nouveau message et que la fenêtre n&apos;est pas sélectionnée.</translation>
+        <translation>Afficher une notification lorsque vous recevez un nouveau message, appel entrant ou demande d&apos;amitié et que la fenêtre n&apos;est pas sélectionnée.</translation>
     </message>
     <message>
         <source>Notify</source>
@@ -2872,7 +2883,7 @@ Hide formatting characters:
     </message>
     <message>
         <source>Conferences only notify when mentioned</source>
-        <translation type="unfinished">Ne notifier des discussions de groupe que lorsque vous êtes mentionné</translation>
+        <translation>Ne notifier des conférences que lorsque vous êtes mentionné</translation>
     </message>
     <message>
         <source>Play sound</source>
@@ -2892,12 +2903,12 @@ Hide formatting characters:
     </message>
     <message>
         <source>Use colored nicknames in conferences</source>
-        <translation type="unfinished">Utiliser des pseudonymes colorés dans les chats de groupe</translation>
+        <translation>Utiliser des pseudonymes colorés dans les conférences</translation>
     </message>
     <message>
         <source>Only notify about new messages in conferences when your nickname is mentioned.</source>
         <comment>toolTip for Conferences only notify when mentioned</comment>
-        <translation type="unfinished">Notifier des nouveaux messages dans les discussions de groupe uniquement lorsque vous êtes mentionné.</translation>
+        <translation>Notifier des nouveaux messages dans les conférences uniquement lorsque vous êtes mentionné.</translation>
     </message>
     <message>
         <source>If checked, conferences will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
@@ -2917,112 +2928,104 @@ Hide formatting characters:
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Si désactivé, la notification muette retentit lorsque l&apos;état est Occupé (mais affiche toujours une notification)</translation>
+        <translation>Si désactivé, la notification muette retentit lorsque l&apos;état est Occupé (mais affiche toujours une notification)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Utilisez les notifications du bureau, par ex. dans un centre de notification ou dans la barre d&apos;état système. Sans cela, la notification ne sera visible que sous la forme d&apos;une icône clignotante dans la barre d&apos;état.</translation>
+        <translation>Utilise les notifications du bureau, par ex. dans un centre de notification ou dans la barre d&apos;état système. Sans cela, la notification ne sera visible que sous la forme d&apos;une icône clignotante dans la barre d&apos;état.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Afficher uniquement «&#xa0;nouveau message&#xa0;» sans afficher d&apos;informations potentiellement secrètes dans les notifications du bureau.</translation>
+        <translation>Afficher uniquement «&#xa0;nouveau message&#xa0;» sans afficher d&apos;informations potentiellement secrètes dans les notifications du bureau.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Divisez la liste d&apos;amis et la fenêtre de discussion en fenêtres mobiles séparément.</translation>
+        <translation>Divisez la liste d&apos;amis et la fenêtre de discussion en fenêtres mobiles séparément.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Affichez les émojis textuels sous forme d’images colorées au lieu de texte ou d’émojis rendus en police noir/blanc.</translation>
+        <translation>Affiche les émojis textuels sous forme d’images colorées au lieu de texte ou d’émojis rendus en police noir/blanc.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Sélectionnez l&apos;ensemble d&apos;images à utiliser lors du rendu des emojis.</translation>
+        <translation>Sélectionne l&apos;ensemble d&apos;images à utiliser lors du rendu des emojis.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Taille en pixels d&apos;une image emoji. Sélectionnez quelque chose de similaire à votre taille de police de base.</translation>
+        <translation>Taille en pixels d&apos;une image emoji. Sélectionnez quelque chose de similaire à votre taille de police de base.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Style de base à utiliser pour l’interface utilisateur. La fusion est recommandée car elle fonctionne mieux avec la thématique qTox.</translation>
+        <translation>Style de base à utiliser pour l’interface utilisateur. Fusion est recommandé car il fonctionne mieux avec la thématique qTox.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Thème de couleur de l&apos;interface utilisateur. Utilisez-le pour sélectionner le mode sombre.</translation>
+        <translation>Thème de couleur de l&apos;interface utilisateur. Utilisez-le pour sélectionner le mode sombre.</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">S&apos;il est désactivé, utilisez les notifications de base de la barre d&apos;état système. Sinon, essayez d&apos;utiliser le backend de notification de votre environnement de bureau. Désactivez cette option si vous observez des problèmes avec les notifications du bureau.</translation>
+        <translation>S&apos;il est désactivé, utilisez les notifications de base de la barre d&apos;état système. Sinon, essayez d&apos;utiliser le backend de notification de votre environnement de bureau. Désactivez cette option si vous observez des problèmes avec les notifications du bureau.</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Utiliser le backend de notification spécifique au système si disponible</translation>
+        <translation>Utiliser le backend de notification spécifique au système si disponible</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Afficher des aperçus des images envoyées et reçues dans les discussions. Passez la souris sur l&apos;aperçu en ligne pour afficher un aperçu plus grand.</translation>
+        <translation>Afficher des aperçus des images envoyées et reçues dans les discussions. Passez la souris sur l&apos;aperçu en ligne pour afficher un aperçu plus grand.</translation>
     </message>
     <message>
         <source>Image preview</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Aperçu de l&apos;image</translation>
+        <translation>Aperçu de l&apos;image</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Nombre maximum de messages (par conversation) chargés à partir de
-l&apos;historique des discussions. Diminuez-le pour améliorer les
-performances. Un nombre trop faible ici peut entraîner la disparition de
-la barre de défilement.</translation>
+        <translation>Nombre maximum de messages (par conversation) chargés à partir de l&apos;historique des discussions.
+Diminuez-le pour améliorer les performances. Un nombre trop faible ici peut entraîner
+ la disparition de la barre de défilement.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Taille maximale
-d&apos;affichage du journal de
-discussion</translation>
+        <translation>Taille maximale d&apos;affichage du journal de discussion</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Nombre de messages à charger à partir de l&apos;historique des discussions lors
-du défilement. Un nombre trop faible ici peut entraîner la disparition de
-la barre de défilement.</translation>
+        <translation>Nombre de messages à charger à partir de l&apos;historique des discussions lors du défilement.
+Un nombre trop faible ici peut entraîner la disparition de la barre de défilement.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Taille du segment
-du journal de
-discussion</translation>
+        <translation>Taille du segment du journal de discussion</translation>
     </message>
     <message>
         <source>Chat log:</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Journal
-de discus
-sion&#xa0;:</translation>
+        <translation>Journal de discussion&#xa0;:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Masquer le suffixe après le symbole nul</translation>
+        <translation>Masquer le suffixe après le symbole NUL</translation>
     </message>
 </context>
 <context>
@@ -3096,7 +3099,7 @@ sion&#xa0;:</translation>
     </message>
     <message>
         <source>Conferences</source>
-        <translation type="unfinished">Groupes</translation>
+        <translation>Conférences</translation>
     </message>
     <message>
         <source>Search Contacts</source>
@@ -3109,11 +3112,11 @@ sion&#xa0;:</translation>
     </message>
     <message>
         <source>Conference #%1</source>
-        <translation type="unfinished">Groupe de discussion #%1</translation>
+        <translation>conférence #%1</translation>
     </message>
     <message>
         <source>Create new conference...</source>
-        <translation type="unfinished">Créer un nouveau groupe...</translation>
+        <translation>Créer une nouvelle conférence...</translation>
     </message>
     <message>
         <source>Show</source>
@@ -3167,9 +3170,9 @@ sion&#xa0;:</translation>
     </message>
     <message numerus="yes">
         <source>%n new conference invite(s)</source>
-        <translation type="unfinished">
-            <numerusform>%n nouvelle invitation à un groupe</numerusform>
-            <numerusform>%n nouvelles invitations à un groupe</numerusform>
+        <translation>
+            <numerusform>%n nouvelle invitation à une conférence</numerusform>
+            <numerusform>%n nouvelles invitations à des conférences</numerusform>
         </translation>
     </message>
     <message>
@@ -3204,7 +3207,7 @@ sion&#xa0;:</translation>
     <message>
         <source>Debug</source>
         <comment>title of the window</comment>
-        <translation type="unfinished">Déboguer</translation>
+        <translation>Déboguer</translation>
     </message>
 </context>
 </TS>
