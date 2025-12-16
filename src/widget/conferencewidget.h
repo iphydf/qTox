@@ -37,6 +37,8 @@ public:
     bool isConference() const final;
     QString getNameItem() const final;
     bool isOnline() const final;
+    void startCall() final;
+    void stopCall() final;
     bool widgetIsVisible() const final;
     QDateTime getLastActivity() const final;
     QWidget* getWidget() final;
@@ -61,6 +63,7 @@ private slots:
 
 private:
     std::shared_ptr<ConferenceRoom> chatroom;
+    bool hasActiveCallSession;
 
 public:
     ConferenceId conferenceId;

@@ -30,6 +30,7 @@ ConferenceWidget::ConferenceWidget(std::shared_ptr<ConferenceRoom> chatroom_, bo
                                    Settings& settings_, Style& style_, QWidget* parent)
     : GenericChatroomWidget(compact_, settings_, style_, parent)
     , chatroom{std::move(chatroom_)}
+    , hasActiveCallSession(false)
     , conferenceId{chatroom->getConference()->getPersistentId()}
 {
     avatar->setPixmap(Style::scaleSvgImage(":img/conference.svg", avatar->width(), avatar->height()));
@@ -153,12 +154,34 @@ void ConferenceWidget::setAsInactiveChatroom()
     avatar->setPixmap(Style::scaleSvgImage(":img/conference.svg", avatar->width(), avatar->height()));
 }
 
+/*
+ * @brief ConferenceWidget::startCall light up the on call indicator.
+ */
+void ConferenceWidget::startCall()
+{
+    hasActiveCallSession = true;
+    updateStatusLight();
+}
+
+/*
+ * @brief ConferenceWidget::stopCall shut down the on call indicator.
+ */
+void ConferenceWidget::stopCall()
+{
+    hasActiveCallSession = false;
+    updateStatusLight();
+}
+
 void ConferenceWidget::updateStatusLight()
 {
     Conference* c = chatroom->getConference();
 
     const bool event = c->getEventFlag();
-    statusPic.setPixmap(QPixmap(Status::getIconPath(Status::Status::Online, event)));
+    if (hasActiveCallSession) {
+        statusPic.setPixmap(QPixmap(":/img/status/on_call.svg"));
+    } else {
+        statusPic.setPixmap(QPixmap(Status::getIconPath(Status::Status::Online, event)));
+    }
     statusPic.setMargin(event ? 1 : 3);
 }
 

@@ -234,9 +234,12 @@ private slots:
     void friendRequestsUpdate();
     void conferenceInvitesUpdate();
     void conferenceInvitesClear();
+    void onStartConferenceCall(uint32_t conferenceId);
+    void onEndConferenceCall(uint32_t conferenceId);
     void onDialogShown(GenericChatroomWidget* widget);
     void outgoingNotification();
-    void onCallEnd();
+    void onCallStart(uint32_t friendId);
+    void onCallEnd(uint32_t friendId);
     void incomingNotification(uint32_t friendNum);
     void onRejectCall(uint32_t friendId);
     void onStopNotification();

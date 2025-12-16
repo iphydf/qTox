@@ -8,4 +8,6 @@ restylers:
       enabled: false
   - pyment:
       enabled: false
+  - clazy:
+      enabled: false
   - "*"

@@ -61,7 +61,8 @@ signals:
     void incomingNotification(uint32_t friendId);
     void outgoingNotification();
     void stopNotification();
-    void endCallNotification();
+    void startCallNotification(uint32_t friendId);
+    void endCallNotification(uint32_t friendId);
     void rejectCall(uint32_t friendId);
     void acceptCall(uint32_t friendId);
     void updateFriendActivity(Friend& frnd);

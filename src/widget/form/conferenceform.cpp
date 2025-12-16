@@ -460,6 +460,7 @@ void ConferenceForm::joinConferenceCall()
     audioInputFlag = true;
     audioOutputFlag = true;
     inCall = true;
+    emit startConferenceCallNotification(conference->getId());
 }
 
 void ConferenceForm::leaveConferenceCall()
@@ -469,4 +470,5 @@ void ConferenceForm::leaveConferenceCall()
     audioInputFlag = false;
     audioOutputFlag = false;
     inCall = false;
+    emit endConferenceCallNotification(conference->getId());
 }

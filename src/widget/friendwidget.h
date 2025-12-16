@@ -41,6 +41,8 @@ public:
     bool isFriend() const final;
     bool isConference() const final;
     bool isOnline() const final;
+    void startCall() final;
+    void stopCall() final;
     bool widgetIsVisible() const final;
     QString getNameItem() const final;
     QDateTime getLastActivity() const final;
@@ -82,4 +84,7 @@ public:
     Style& style;
     IMessageBoxManager& messageBoxManager;
     Profile& profile;
+
+private:
+    bool hasActiveCallSession;
 };

@@ -1095,9 +1095,65 @@ void Widget::outgoingNotification()
     playNotificationSound(IAudioSink::Sound::OutgoingCall, true);
 }
 
-void Widget::onCallEnd()
+void Widget::onStartConferenceCall(uint32_t conferenceId)
+{
+    const ConferenceId& confId = conferenceList->id2Key(conferenceId);
+    Conference* c = conferenceList->findConference(confId);
+    // Check if we have such conference in the list
+    // as confId can be a default value.
+    if (c == nullptr) {
+        return;
+    }
+    if (conferenceWidgets.contains(confId)) {
+        ConferenceWidget* widget = conferenceWidgets[confId];
+        widget->startCall();
+    }
+}
+
+void Widget::onEndConferenceCall(uint32_t conferenceId)
+{
+    const ConferenceId& confId = conferenceList->id2Key(conferenceId);
+    Conference* c = conferenceList->findConference(confId);
+    // Check if we have such conference in the list
+    // as confId can be a default value.
+    if (c == nullptr) {
+        return;
+    }
+    if (conferenceWidgets.contains(confId)) {
+        ConferenceWidget* widget = conferenceWidgets[confId];
+        widget->stopCall();
+    }
+}
+
+void Widget::onCallStart(uint32_t friendId)
+{
+    const ToxPk& toxPk = friendList->id2Key(friendId);
+    // Check if we have such friend in the list
+    // as toxPk can be a default value.
+    Friend* f = friendList->findFriend(toxPk);
+    if (f == nullptr) {
+        return;
+    }
+    if (friendWidgets.contains(toxPk)) {
+        FriendWidget* widget = friendWidgets[toxPk];
+        widget->startCall();
+    }
+}
+
+void Widget::onCallEnd(uint32_t friendId)
 {
     playNotificationSound(IAudioSink::Sound::CallEnd);
+    const ToxPk& toxPk = friendList->id2Key(friendId);
+    // Check if we have such friend in the list
+    // as toxPk can be a default value.
+    Friend* f = friendList->findFriend(toxPk);
+    if (f == nullptr) {
+        return;
+    }
+    if (friendWidgets.contains(toxPk)) {
+        FriendWidget* widget = friendWidgets[toxPk];
+        widget->stopCall();
+    }
 }
 
 /**
@@ -1230,6 +1286,7 @@ void Widget::addFriend(uint32_t friendId, const ToxPk& friendPk)
     connect(friendForm, &ChatForm::incomingNotification, this, &Widget::incomingNotification);
     connect(friendForm, &ChatForm::outgoingNotification, this, &Widget::outgoingNotification);
     connect(friendForm, &ChatForm::stopNotification, this, &Widget::onStopNotification);
+    connect(friendForm, &ChatForm::startCallNotification, this, &Widget::onCallStart);
     connect(friendForm, &ChatForm::endCallNotification, this, &Widget::onCallEnd);
     connect(friendForm, &ChatForm::rejectCall, this, &Widget::onRejectCall);
 
@@ -2183,6 +2240,10 @@ Conference* Widget::createConference(uint32_t conferencenumber, const Conference
     connect(widget, &ConferenceWidget::chatroomWidgetClicked, form, &GenericChatForm::focusInput);
     connect(newConference, &Conference::titleChangedByUser, this, &Widget::titleChangedByUser);
     connect(core, &Core::usernameSet, newConference, &Conference::setSelfName);
+
+    connect(form, &ConferenceForm::startConferenceCallNotification, this,
+            &Widget::onStartConferenceCall);
+    connect(form, &ConferenceForm::endConferenceCallNotification, this, &Widget::onEndConferenceCall);
 
     return newConference;
 }

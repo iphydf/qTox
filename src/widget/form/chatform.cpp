@@ -339,6 +339,7 @@ void ChatForm::onAvStart(uint32_t friendId, bool video)
     }
 
     emit stopNotification();
+    emit startCallNotification(friendId);
     updateCallButtons();
     startCounter();
 }
@@ -356,7 +357,7 @@ void ChatForm::onAvEnd(uint32_t friendId, bool error)
     }
 
     emit stopNotification();
-    emit endCallNotification();
+    emit endCallNotification(friendId);
     updateCallButtons();
     stopCounter(error);
     hideNetcam();

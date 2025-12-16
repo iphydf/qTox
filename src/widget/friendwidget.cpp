@@ -52,6 +52,7 @@ FriendWidget::FriendWidget(std::shared_ptr<FriendChatroom> chatroom_, bool compa
     , style{style_}
     , messageBoxManager{messageBoxManager_}
     , profile{profile_}
+    , hasActiveCallSession(false)
 {
     avatar->setPixmap(QPixmap(":/img/contact.svg"));
     statusPic.setPixmap(QPixmap(Status::getIconPath(Status::Status::Offline)));
@@ -302,11 +303,33 @@ void FriendWidget::setActive(bool active_)
     }
 }
 
+/*
+ * @brief FriendWidget::startCall light up the on call indicator.
+ */
+void FriendWidget::startCall()
+{
+    hasActiveCallSession = true;
+    updateStatusLight();
+}
+
+/*
+ * @brief FriendWidget::stopCall shut down the on call indicator.
+ */
+void FriendWidget::stopCall()
+{
+    hasActiveCallSession = false;
+    updateStatusLight();
+}
+
 void FriendWidget::updateStatusLight()
 {
     auto* const frnd = chatroom->getFriend();
     const bool event = frnd->getEventFlag();
-    statusPic.setPixmap(QPixmap(Status::getIconPath(frnd->getStatus(), event)));
+    if (hasActiveCallSession) {
+        statusPic.setPixmap(QPixmap(":/img/status/on_call.svg"));
+    } else {
+        statusPic.setPixmap(QPixmap(Status::getIconPath(frnd->getStatus(), event)));
+    }
 
     if (event) {
         const Settings& s = settings;

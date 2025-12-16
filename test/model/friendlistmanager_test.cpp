@@ -42,6 +42,8 @@ public:
     {
         return online;
     }
+    void startCall() override {}
+    void stopCall() override {}
     bool widgetIsVisible() const override
     {
         return visible;
@@ -101,6 +103,8 @@ public:
     {
         return true;
     }
+    void startCall() override {}
+    void stopCall() override {}
     bool widgetIsVisible() const override
     {
         return visible;

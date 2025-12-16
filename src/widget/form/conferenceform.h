@@ -42,6 +42,10 @@ public:
 
     void peerAudioPlaying(ToxPk peerPk);
 
+signals:
+    void startConferenceCallNotification(uint32_t conferenceId);
+    void endConferenceCallNotification(uint32_t conferenceId);
+
 private slots:
     void onScreenshotClicked() override;
     void onAttachClicked() override;

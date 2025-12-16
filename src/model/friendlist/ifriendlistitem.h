@@ -22,6 +22,8 @@ public:
     virtual bool isFriend() const = 0;
     virtual bool isConference() const = 0;
     virtual bool isOnline() const = 0;
+    virtual void startCall() = 0;
+    virtual void stopCall() = 0;
     virtual bool widgetIsVisible() const = 0;
     virtual QString getNameItem() const = 0;
     virtual QDateTime getLastActivity() const = 0;
