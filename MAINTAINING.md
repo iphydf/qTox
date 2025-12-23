@@ -136,9 +136,22 @@ apply the normal rating process.
 
 Weblate provides an easy way for people to translate qTox.
 
-New translatable strings need to be generated into a form Weblate can consume
-using `./tools/update-translation-files.sh ALL` and committing the result. This
-should be done as soon as strings are available since weblate follows our
+New translatable strings need to be generated into a form Weblate can consume.
+The tools needed to generate the translations are locared in the `tools` folder
+of [ci-tools repository](https://github.com/TokTok/ci-tools.git).
+To generate the translations, please follow the next steps:
+
+- Clone the [repository](https://github.com/TokTok/ci-tools.git).
+- Make sure that you have the `lupdate` utility in the `$PATH`.
+  **Note:** `lupdate` is a part of `qt6-linguist` (Fedora) or `qt6-tools-dev` (Ubuntu) packages.
+  The executable may be called `lupdate-qt6`, in this case crteate the symbolic link to `lupdate`
+  `ln -s /usr/bin/lupdate-qt6 /usr/bin/lupdate`
+- Run the utility `ci-tools/tools/translate.py`. During the first run it will parse all literals in the source
+  code and will generate the templates for consequent translation.
+- Run `ci-tools/tools/translate.py` for the second time to generate the actual translations using
+  Baidu translate API.
+
+This should be done as soon as strings are available since weblate follows our
 branch, so is checked for in CI.
 
 Weblate will make PRs to get translations into qTox, but if that fails, you can
