@@ -2417,6 +2417,10 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished">Bericht kon niet verstuurd worden</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation type="unfinished"></translation>
     </message>

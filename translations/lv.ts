@@ -2499,6 +2499,11 @@ Kopīgojiet to ar draugiem, lai sāktu tērzēšanu.
         <translation type="unfinished">Ziņojumu neizdevās nosūtīt</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 zvanīšanas mēģinājuma laikā pārgāja bezsaistē</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Inicializēšana</translation>

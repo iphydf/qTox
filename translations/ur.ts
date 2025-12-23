@@ -2918,6 +2918,10 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished">پیغام بھیجنے میں ناکام</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translation type="unfinished">کال کی کوشش کے دوران %1 آف لائن گیا&apos;</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">شروع کر رہا ہے۔</translation>

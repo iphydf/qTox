@@ -2541,6 +2541,11 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>メッセージの送信に失敗</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 は通話試行中にオフラインになりました</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation>初期化中</translation>

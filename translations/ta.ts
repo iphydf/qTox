@@ -2711,6 +2711,11 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>செய்தி அனுப்பத் தவறிவிட்டது</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">அழைப்பு முயற்சியின் போது %1 ஆஃப்லைனில் சென்றார்</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation>துவக்குதல்</translation>

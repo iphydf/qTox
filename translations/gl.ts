@@ -2506,6 +2506,11 @@ Este ID inclúe o código NoSpam (en azul) e a suma de verificación (en gris).<
         <translation type="unfinished">Non se puido enviar a mensaxe</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 quedou sen conexión durante o intento de chamada</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Inicialización</translation>

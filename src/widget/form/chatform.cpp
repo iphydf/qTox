@@ -456,6 +456,14 @@ void ChatForm::onFriendStatusChanged(const ToxPk& friendPk, Status::Status statu
     if (!Status::isOnline(f->getStatus())) {
         // Hide the "is typing" message when a friend goes offline
         setFriendTyping(false);
+        // Handle the edge case when we are calling friend, who is going offline.
+        CoreAV* av = core.getAv();
+        if (av->isCallStarted(f)) {
+            av->cancelCall(f->getId());
+            emit stopNotification();
+            addSystemInfoMessage(QDateTime::currentDateTime(), SystemMessageType::userWentOffline,
+                                 {f->getDisplayedName()});
+        }
     }
 
     updateCallButtons();

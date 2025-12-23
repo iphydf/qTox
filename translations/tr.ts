@@ -2449,6 +2449,11 @@ Bu kimlik NoSpam kodunu (mavi) ve sağlama toplamını (gri) içerir.</translati
         <translation>İleti gönderilemedi</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 arama girişimi sırasında çevrimdışı oldu</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Başlatılıyor</translation>
     </message>

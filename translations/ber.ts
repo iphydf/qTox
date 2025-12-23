@@ -2897,6 +2897,11 @@ IDa ⵢⴻⵙⵄⴰ ⴰⴽⴰⵔⴰⵎ ⵏ NoSpam (ⵙ ⵜⴼⴻⵍⵡⵉⵜ), �
         <translation type="unfinished">ⵜⴻⴵⴵⵉⴹ ⴰⵙⴰⵔⴰⴳ</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 ⴼⴼⵖⵏ ⴱⵕⵕⴰ ⴳ ⵓⵣⵎⵣ ⵏ ⵓⵔⵣⵣⵓ ⵏ ⵜⵖⵓⵔⵉ</translation>
+    </message>
+    <message>
         <source>Failed to load chat history</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ⵓⵔ ⵢⴻⵣⵎⵉⵔ ⴰⵔⴰ ⴰⴷ ⵢⴻⵔⵥⴻⵎ ⴰⵎⴻⵣⵔⵓⵢ ⵏ ⵜⵎⴻⵙⵍⵉⵡⵜ</translation>

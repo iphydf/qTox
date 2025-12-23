@@ -343,6 +343,7 @@ QDateTime GenericChatForm::getLatestTime() const
         case SystemMessageType::messageSendFailed:
         case SystemMessageType::selfJoinedConference:
         case SystemMessageType::selfLeftConference:
+        case SystemMessageType::userWentOffline:
             return false;
         }
 

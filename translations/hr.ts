@@ -2508,6 +2508,11 @@ Ovaj ID uključuje NoSpam kod (plavo) i kontrolni zbroj (sivo).</translation>
         <translation type="unfinished">Poruka nije uspješno poslana</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 je bio izvan mreže tijekom pokušaja poziva</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Inicijaliziranje</translation>

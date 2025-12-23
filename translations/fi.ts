@@ -2450,6 +2450,11 @@ Tämä ID sisältää spammin estävän koodin(joka on sinisellä), ja tarkistus
         <translation type="unfinished">Viestin lähetys epäonnistui</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 siirtyi offline-tilaan soittoyrityksen aikana</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Alustus</translation>

@@ -2442,6 +2442,11 @@ Diese ID enthält den NoSpam-Code (in blau) und die Prüfsumme (in grau).</trans
         <translation>Nachricht konnte nicht gesendet werden</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 ist während des Anrufversuchs offline gegangen</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Initialisierung</translation>
     </message>

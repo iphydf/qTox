@@ -2762,6 +2762,11 @@ Dette ID inkluderer NoSpam-koden (i blåt) og kontrolsummen (i gråt).</translat
         <translation type="unfinished">Meddelelse kunne ikke afsendes</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 gik offline under opkaldsforsøget</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Initialiserer</translation>

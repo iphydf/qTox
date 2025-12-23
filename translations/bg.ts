@@ -2450,6 +2450,11 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Съобщението не е изпратено</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 излезе офлайн по време на опита за обаждане</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Подготвяне</translation>
     </message>

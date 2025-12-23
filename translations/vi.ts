@@ -2446,6 +2446,11 @@ ID này bao gồm mã NoSpam (màu xanh lam) và checksum (màu xám).</translat
         <translation>Không thể gửi tin nhắn</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 ngoại tuyến trong khi thử cuộc gọi</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Khởi tạo</translation>
     </message>

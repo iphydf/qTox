@@ -2447,6 +2447,11 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation>Не удалось отправить сообщение</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 вышел из сети во время попытки звонка</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Подготовка к работе</translation>
     </message>

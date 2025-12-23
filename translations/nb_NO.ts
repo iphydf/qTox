@@ -2451,6 +2451,11 @@ Denne ID-en inkluderer NoSpam-koden (i blått), og sjekksummen (i grått).</tran
         <translation type="unfinished">Mislyktes å sende melding</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 gikk frakoblet under oppringingsforsøket</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation type="unfinished">Igangsetter</translation>
     </message>

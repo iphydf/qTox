@@ -2937,6 +2937,11 @@ Ky ID përfshin kodin NoSpam (në blu) dhe kontrollin (në gri).</translation>
         <translation type="unfinished">Dërgimi i mesazhit dështoi</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 doli jashtë linje gjatë përpjekjes së telefonatës</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Duke inicializuar</translation>

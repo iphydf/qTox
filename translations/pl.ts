@@ -2479,6 +2479,11 @@ To ID zawiera kod NoSpam (w kolorze niebieskim) oraz sumę kontrolną (w kolorze
         <translation>Nie udało się wysłać wiadomości</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 przeszedł w tryb offline podczas próby połączenia</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Inicjowanie</translation>
     </message>

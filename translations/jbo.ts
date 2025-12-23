@@ -2911,6 +2911,11 @@ le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray<
         <translation type="unfinished">do ba&apos;o cliva le nunji&apos;i</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">la&apos;oi %1. jorne pu cliva va va&apos;o lo nu fonjorne troci</translation>
+    </message>
+    <message>
         <source>Failed to load chat history</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">pu fliba lo nu kargau lo casnu citri</translation>

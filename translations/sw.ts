@@ -2944,6 +2944,11 @@ Kitambulisho hiki kinajumuisha msimbo wa NoSpam (wa bluu), na hundi (ya kijivu).
         <translation type="unfinished">Ujumbe umeshindwa kutumwa</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 aliondoka mtandaoni wakati wa jaribio la kupiga simu</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Kuanzisha</translation>

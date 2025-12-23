@@ -2776,6 +2776,11 @@ Kunhavigu ĝin kun viaj amikoj por komenci babili.
         <translation type="unfinished">Mesaĝo fiaskis dum sendado</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 malkonektas dum la vokoprovo</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Inicializante</translation>

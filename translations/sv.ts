@@ -2454,6 +2454,11 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
         <translation type="unfinished">Misslyckades att skicka meddelande</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 gick offline under samtalsförsöket</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Initierar</translation>

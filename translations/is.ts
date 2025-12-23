@@ -2914,6 +2914,11 @@ Deildu því með vinum þínum til að byrja að spjalla.
         <translation type="unfinished">Ekki tókst að senda skilaboð</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 fór án nettengingar meðan á símtalstilrauninni stóð</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Frumstillir</translation>

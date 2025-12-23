@@ -2929,6 +2929,11 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished">ಸಂದೇಶವನ್ನು ಕಳುಹಿಸಲು ವಿಫಲವಾಗಿದೆ</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">ಕರೆ ಪ್ರಯತ್ನದ ಸಮಯದಲ್ಲಿ %1 ಆಫ್‌ಲೈನ್‌ಗೆ ಹೋಗಿದೆ</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ</translation>

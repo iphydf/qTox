@@ -2440,6 +2440,11 @@ Este ID incluye el código NoSpam (en azul), y la suma de comprobación (en gris
         <translation>Falla en el envío del mensaje</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 se desconectó durante el intento de llamada</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Inicializando</translation>
     </message>

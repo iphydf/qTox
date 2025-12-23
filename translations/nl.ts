@@ -2439,6 +2439,11 @@ Deze ID bevat de NoSpam-code (in het blauw) en de checksum (in het grijs).</tran
         <translation>Bericht kon niet verstuurd worden</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 ging offline tijdens de oproeppoging</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Initialiseren</translation>
     </message>

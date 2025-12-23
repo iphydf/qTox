@@ -2452,6 +2452,11 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
         <translation>Не вдалося надіслати повідомлення</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 вийшов із мережі під час спроби виклику</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Підготовка до роботи</translation>
     </message>

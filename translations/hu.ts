@@ -2502,6 +2502,11 @@ Ez az azonosító tartalmazza a NoSpam kódot (kék színnel) és az ellenőrző
         <translation type="unfinished">Üzenet küldése sikertelen</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 offline állapotba került a hívási kísérlet során</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Inicializálás</translation>

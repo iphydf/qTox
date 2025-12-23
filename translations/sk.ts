@@ -2455,6 +2455,11 @@ Toto ID obsahuje kód NoSpam (modrou) a kontrolný súčet (šedou).</translatio
         <translation>Správu sa nepodarilo odoslať</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 prešlo počas pokusu o volanie do režimu offline</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translation>Inicializácia</translation>
     </message>

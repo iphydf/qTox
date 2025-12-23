@@ -2942,6 +2942,11 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <translation type="unfinished">පණිවිඩය යැවීමට අසමත් විය</translation>
     </message>
     <message>
+        <source>%1 went offline during the call attempt</source>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">ඇමතුම් උත්සාහයේදී %1 නොබැඳි විය</translation>
+    </message>
+    <message>
         <source>Initializing</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ආරම්භ කිරීම</translation>
