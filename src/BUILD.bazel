@@ -206,8 +206,6 @@ cc_library(
     hdrs = ["platform/stacktrace.h"],
     copts = COPTS + [
         "-DQTOX_USE_LIBUNWIND",
-        "-Iexternal/libunwind/include",
-        "-I$(GENDIR)/external/libunwind/include",
     ],
     tags = ["qt"],
     visibility = ["//qtox:__subpackages__"],

@@ -290,7 +290,7 @@ bool Core::checkConnection()
 {
     ASSERT_CORE_THREAD;
     auto selfConnection = tox_self_get_connection_status(tox.get());
-    const char* connectionName;
+    const char* connectionName = "unknown";
     bool toxConnected = false;
     switch (selfConnection) {
     case TOX_CONNECTION_NONE:

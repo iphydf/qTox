@@ -473,7 +473,10 @@ void OpenAL::playMono16Sound(AlSink& sink, const IAudioSink::Sound& sound)
         return;
     }
 
-    sndFile.open(QIODevice::ReadOnly);
+    if (!sndFile.open(QIODevice::ReadOnly)) {
+        qCDebug(logcat::audio) << "Failed to open sound file";
+        return;
+    }
     const QByteArray data{sndFile.readAll()};
     if (data.isEmpty()) {
         qCDebug(logcat::audio) << "Sound file contained no data";

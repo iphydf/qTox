@@ -17,6 +17,7 @@
 #include <QDebug>
 #include <QDir>
 #include <QFile>
+#include <QFileInfo>
 #include <QRegularExpression>
 #include <QThread>
 
@@ -132,7 +133,7 @@ void CoreFile::sendFile(uint32_t friendId, QString filename, QString filePath, l
         emit fileSendFailed(friendId, fileName.getQString());
         return;
     }
-    qDebug("sendFile: Created file sender %d with friend %d", fileNum, friendId);
+    qDebug("sendFile: Created file sender %u with friend %u", fileNum, friendId);
 
     ToxFile file{fileNum,
                  friendId,
@@ -310,7 +311,10 @@ void CoreFile::removeFile(uint32_t friendId, uint32_t fileId)
 
 QString CoreFile::getCleanFileName(QString filename)
 {
-    const QRegularExpression regex{QStringLiteral(R"([<>:"/\\|?])")};
+    // First, strip any path information from the filename to prevent path traversal
+    filename = QFileInfo(filename).fileName();
+    // Now, replace characters that are invalid in filenames on some systems
+    const QRegularExpression regex{QStringLiteral(R"([<>:"/\\|?*])")};
     filename.replace(regex, "_");
 
     return filename;
@@ -327,7 +331,7 @@ void CoreFile::onFileReceiveCallback(Tox* tox, uint32_t friendId, uint32_t fileI
 
     if (kind == TOX_FILE_KIND_AVATAR) {
         if (filesize == 0u) {
-            qDebug("Received empty avatar request %d:%d", friendId, fileId);
+            qDebug("Received empty avatar request %u:%u", friendId, fileId);
             // Avatars of size 0 means explicitly no avatar
             Tox_Err_File_Control err;
             tox_file_control(tox, friendId, fileId, TOX_FILE_CONTROL_CANCEL, &err);
@@ -336,7 +340,7 @@ void CoreFile::onFileReceiveCallback(Tox* tox, uint32_t friendId, uint32_t fileI
             return;
         }
         if (!ToxClientStandards::IsValidAvatarSize(filesize)) {
-            qWarning("Received avatar request from %d with size %lu."
+            qWarning("Received avatar request from %u with size %lu."
                      " The max size allowed for avatars is %lu. Cancelling transfer.",
                      friendId, static_cast<unsigned long>(filesize),
                      static_cast<unsigned long>(ToxClientStandards::MaxAvatarSize));
@@ -357,17 +361,13 @@ void CoreFile::onFileReceiveCallback(Tox* tox, uint32_t friendId, uint32_t fileI
         emit core->fileAvatarOfferReceived(friendId, fileId, avatarBytes, filesize);
         return;
     }
-#ifdef Q_OS_WIN
     const auto cleanFileName = CoreFile::getCleanFileName(filename.getQString());
     if (cleanFileName != filename.getQString()) {
-        qDebug() << "Cleaned filename";
+        qDebug() << "Cleaned invalid incoming filename";
         filename = ToxString(cleanFileName);
         emit coreFile->fileNameChanged(friendPk);
-    } else {
-        qDebug() << "filename already clean";
     }
-#endif
-    qDebug("Received file request %d:%d kind %d", friendId, fileId, kind);
+    qDebug("Received file request %u:%u kind %u", friendId, fileId, kind);
 
     ToxFile file{fileId, friendId, filename.getQString(), "", filesize, ToxFile::RECEIVING};
     file.fileKind = kind;
@@ -389,7 +389,7 @@ void CoreFile::handleAvatarOffer(uint32_t friendId, uint32_t fileId, bool accept
 {
     if (!accept) {
         // If it's an avatar but we already have it cached, cancel
-        qDebug("Received avatar request %d:%d. Rejected since it is in cache.", friendId, fileId);
+        qDebug("Received avatar request %u:%u. Rejected since it is in cache.", friendId, fileId);
         Tox_Err_File_Control err;
         tox_file_control(tox, friendId, fileId, TOX_FILE_CONTROL_CANCEL, &err);
         PARSE_ERR(err);
@@ -402,7 +402,7 @@ void CoreFile::handleAvatarOffer(uint32_t friendId, uint32_t fileId, bool accept
         return;
     }
     // It's an avatar and we don't have it, autoaccept the transfer
-    qDebug("Received avatar request %d:%d. Accepted.", friendId, fileId);
+    qDebug("Received avatar request %u:%u. Accepted.", friendId, fileId);
 
     ToxFile file{fileId, friendId, "<avatar>", "", filesize, ToxFile::RECEIVING};
     file.fileKind = TOX_FILE_KIND_AVATAR;

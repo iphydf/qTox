@@ -194,7 +194,10 @@ void createExampleBootstrapNodesFile(const Paths& paths)
     auto serializedNodes = serialize(buildInNodes);
 
     QFile outFile(paths.getExampleNodesFilePath());
-    outFile.open(QIODevice::WriteOnly | QIODevice::Text);
+    if (!outFile.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        qWarning() << "createExampleBootstrapNodesFile: Can't open file";
+        return;
+    }
     outFile.write(serializedNodes.data(), serializedNodes.size());
     outFile.close();
 }

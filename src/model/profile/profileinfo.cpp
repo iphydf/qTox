@@ -284,8 +284,7 @@ IProfileInfo::SetAvatarResult ProfileInfo::setAvatar(const QString& path)
     }
 
     QFile file(path);
-    file.open(QIODevice::ReadOnly);
-    if (!file.isOpen()) {
+    if (!file.open(QIODevice::ReadOnly)) {
         return SetAvatarResult::CanNotOpen;
     }
     QByteArray avatar;

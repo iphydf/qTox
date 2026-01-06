@@ -81,6 +81,7 @@ private:
     static void onFileRecvChunkCallback(Tox* tox, uint32_t friendId, uint32_t fileId, uint64_t position,
                                         const uint8_t* data, size_t length, void* vCore);
 
+public:
     static QString getCleanFileName(QString filename);
 
 private slots:
