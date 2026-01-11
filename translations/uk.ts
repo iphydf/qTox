@@ -2454,7 +2454,7 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
     <message>
         <source>%1 went offline during the call attempt</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 вийшов із мережі під час спроби виклику</translation>
+        <translation>%1 вийшов з мережі під час спроби дзвінка</translation>
     </message>
     <message>
         <source>Initializing</source>
