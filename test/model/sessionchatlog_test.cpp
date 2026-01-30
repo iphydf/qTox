@@ -57,6 +57,8 @@ private slots:
     void init();
 
     void testSanity();
+    void testMessageStatus();
+    void testFileTransferStatus();
 
 private:
     MockCoreIdHandler idHandler;
@@ -73,6 +75,59 @@ void TestSessionChatLog::init()
     friendList = std::make_unique<FriendList>();
     conferenceList = std::make_unique<ConferenceList>();
     chatLog = std::make_unique<SessionChatLog>(idHandler, *friendList, *conferenceList);
+}
+
+/**
+ * @brief Tests basic message status transitions (pending -> complete/broken)
+ */
+void TestSessionChatLog::testMessageStatus()
+{
+    const DispatchedMessageId id(42);
+    chatLog->onMessageSent(id, createMessage("status test"));
+
+    const ChatLogIdx idx(0);
+    QCOMPARE(chatLog->getNextIdx(), ChatLogIdx(1));
+    const auto& item = chatLog->at(idx);
+    QVERIFY(item.getContentType() == ChatLogItem::ContentType::message);
+    QCOMPARE(item.getContentAsMessage().state, MessageState::pending);
+
+    // Complete the message
+    chatLog->onMessageComplete(id);
+    QCOMPARE(chatLog->at(idx).getContentAsMessage().state, MessageState::complete);
+
+    // Test broken status
+    const DispatchedMessageId id2(43);
+    chatLog->onMessageSent(id2, createMessage("broken test"));
+    const ChatLogIdx idx2(1);
+    QCOMPARE(chatLog->at(idx2).getContentAsMessage().state, MessageState::pending);
+
+    chatLog->onMessageBroken(id2, BrokenMessageReason::unknown);
+    QCOMPARE(chatLog->at(idx2).getContentAsMessage().state, MessageState::broken);
+}
+
+/**
+ * @brief Tests file transfer status updates
+ */
+void TestSessionChatLog::testFileTransferStatus()
+{
+    ToxFile file;
+    file.fileNum = 123;
+    file.fileName = "test.txt";
+    file.status = ToxFile::INITIALIZING;
+
+    chatLog->onFileUpdated(ToxPk(), file);
+    const ChatLogIdx idx(0);
+    QVERIFY(chatLog->at(idx).getContentType() == ChatLogItem::ContentType::fileTransfer);
+    QCOMPARE(chatLog->at(idx).getContentAsFile().file.status, ToxFile::INITIALIZING);
+
+    // Update status
+    file.status = ToxFile::TRANSMITTING;
+    chatLog->onFileUpdated(ToxPk(), file);
+    QCOMPARE(chatLog->at(idx).getContentAsFile().file.status, ToxFile::TRANSMITTING);
+
+    file.status = ToxFile::PAUSED;
+    chatLog->onFileUpdated(ToxPk(), file);
+    QCOMPARE(chatLog->at(idx).getContentAsFile().file.status, ToxFile::PAUSED);
 }
 
 /**

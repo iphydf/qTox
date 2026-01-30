@@ -324,7 +324,7 @@ void TestNotificationGenerator::testConferenceInviteUncounted()
 
 void TestNotificationGenerator::testFriendRequest()
 {
-    ToxPk sender(QByteArray(32, 0));
+    const ToxPk sender(QByteArray(32, 0));
 
     auto notificationData = notificationGenerator->friendRequestNotification(sender, "request");
 
@@ -338,7 +338,7 @@ void TestNotificationGenerator::testFriendRequestUncounted()
 {
     Friend f(0, ToxPk());
     f.setName("friend");
-    ToxPk sender(QByteArray(32, 0));
+    const ToxPk sender(QByteArray(32, 0));
 
     notificationGenerator->friendMessageNotification(&f, "test");
     notificationGenerator->friendRequestNotification(sender, "request");
@@ -390,7 +390,7 @@ void TestNotificationGenerator::testSimpleConferenceMessage()
 
 void TestNotificationGenerator::testSimpleFriendRequest()
 {
-    ToxPk sender(QByteArray(32, 0));
+    const ToxPk sender(QByteArray(32, 0));
 
     notificationSettings->setNotifyHide(true);
 

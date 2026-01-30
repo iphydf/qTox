@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+import multiprocessing
+import os
+import subprocess
+import sys
+from concurrent.futures import ProcessPoolExecutor
+
+# Project Configuration
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+INCLUDES = [
+    # keep-sorted start
+    "-I.",
+    "-Iaudio/include",
+    "-Iutil/include",
+    "-Itest/mock/include",
+    "-I../bazel-bin/qtox/src",
+    "-isystem../bazel-bin/c-toxcore",
+    "-isystem../bazel-bin/external/+non_module_deps+libexif",
+    "-isystem../bazel-bin/external/+non_module_deps+sqlcipher/include",
+    "-isystem../external/+non_module_deps+ffmpeg",
+    "-isystem../external/+non_module_deps+libexif",
+    "-isystem../external/+non_module_deps+libqrencode",
+    "-isystem../external/+non_module_deps+openal/include",
+    "-isystem../external/+non_module_deps+qt6.qtbase/include",
+    "-isystem../external/+non_module_deps+qt6.qtbase/include/QtCore",
+    "-isystem../external/+non_module_deps+qt6.qtbase/include/QtDBus",
+    "-isystem../external/+non_module_deps+qt6.qtbase/include/QtGui",
+    "-isystem../external/+non_module_deps+qt6.qtbase/include/QtNetwork",
+    "-isystem../external/+non_module_deps+qt6.qtbase/include/QtSql",
+    "-isystem../external/+non_module_deps+qt6.qtbase/include/QtTest",
+    "-isystem../external/+non_module_deps+qt6.qtbase/include/QtWidgets",
+    "-isystem../external/+non_module_deps+qt6.qtbase/include/QtXml",
+    "-isystem../external/+non_module_deps+qt6.qtsvg/include",
+    "-isystem../external/+non_module_deps+qt6.qtsvg/include/QtSvg",
+    # keep-sorted end
+]
+
+# Add all directories containing .moc files from bazel-bin
+bazel_bin_qtox = os.path.join(PROJECT_ROOT, "../bazel-bin/qtox")
+if os.path.exists(bazel_bin_qtox):
+    for root, dirs, filenames in os.walk(bazel_bin_qtox):
+        if any(
+                f.endswith(".moc") or (
+                    f.startswith("moc_") and f.endswith(".cpp"))
+                for f in filenames):
+            INCLUDES.append(f"-I{os.path.relpath(root, PROJECT_ROOT)}")
+
+CXX_FLAGS = ["-std=c++20"]
+CLANG_TIDY_ARGS = [
+    "--quiet", "--header-filter=^(audio|platform|src|util|test)/.*"
+]
+
+
+def run_tidy_on_file(file_path: str) -> str | None:
+    """Worker function to run clang-tidy on a single file."""
+    cmd = ([
+        "clang-tidy",
+        file_path,
+    ] + CLANG_TIDY_ARGS + [
+        "--",
+    ] + INCLUDES + CXX_FLAGS)
+
+    try:
+        # Run clang-tidy and capture output
+        result = subprocess.run(cmd,
+                                cwd=PROJECT_ROOT,
+                                capture_output=True,
+                                text=True)
+        if result.stdout:
+            return f"--- {file_path} ---\n{result.stdout.strip()}"
+        return None
+    except Exception as e:
+        return f"Error processing {file_path}: {e}"
+
+
+def main() -> None:
+    os.chdir(PROJECT_ROOT)
+
+    print(">>> Building dependencies with Bazel...")
+    subprocess.run(["bazel", "build", "//qtox/..."], check=True)
+
+    print(">>> Collecting source files...")
+    files = []
+    if len(sys.argv) > 1:
+        files = sys.argv[1:]
+    else:
+        for root, _, filenames in os.walk("."):
+            # Skip nested build directories if any
+            if "qtox" in root and root != ".":
+                continue
+            for filename in filenames:
+                if filename.endswith(".cpp"):
+                    files.append(
+                        os.path.relpath(os.path.join(root, filename),
+                                        PROJECT_ROOT))
+
+    print(
+        f">>> Running clang-tidy on {len(files)} files using {multiprocessing.cpu_count()} cores..."
+    )
+
+    # Use 64 cores (or whatever is available)
+    with ProcessPoolExecutor(
+            max_workers=multiprocessing.cpu_count()) as executor:
+        results = list(executor.map(run_tidy_on_file, files))
+
+    # Print results
+    found_issues = False
+    for res in results:
+        if res:
+            print(res)
+            found_issues = True
+
+    if not found_issues:
+        print(">>> No issues found!")
+    else:
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

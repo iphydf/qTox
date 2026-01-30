@@ -25,9 +25,9 @@ constexpr int TIMEOUT = 2;
 
 void TestPosixSignalNotifier::checkUsrSignalHandling()
 {
-    PosixSignalNotifier& psn = PosixSignalNotifier::globalInstance();
+    const PosixSignalNotifier& psn = PosixSignalNotifier::globalInstance();
     PosixSignalNotifier::watchUsrSignals();
-    QSignalSpy spy(&psn, &PosixSignalNotifier::usrSignal);
+    const QSignalSpy spy(&psn, &PosixSignalNotifier::usrSignal);
     kill(getpid(), SIGUSR1);
 
     for (int i = 0; i < TIMEOUT && spy.count() != 1; ++i) {
@@ -50,9 +50,9 @@ void sighandler(int sig)
 
 void TestPosixSignalNotifier::checkIgnoreExtraSignals()
 {
-    PosixSignalNotifier& psn = PosixSignalNotifier::globalInstance();
+    const PosixSignalNotifier& psn = PosixSignalNotifier::globalInstance();
     PosixSignalNotifier::watchSignal(SIGUSR1);
-    QSignalSpy spy(&psn, &PosixSignalNotifier::terminatingSignal);
+    const QSignalSpy spy(&psn, &PosixSignalNotifier::terminatingSignal);
 
     // To avoid killing
     signal(SIGUSR2, sighandler);
@@ -68,12 +68,12 @@ void TestPosixSignalNotifier::checkIgnoreExtraSignals()
 
 void TestPosixSignalNotifier::checkTermSignalsHandling()
 {
-    PosixSignalNotifier& psn = PosixSignalNotifier::globalInstance();
+    const PosixSignalNotifier& psn = PosixSignalNotifier::globalInstance();
     PosixSignalNotifier::watchCommonTerminatingSignals();
-    QSignalSpy spy(&psn, &PosixSignalNotifier::terminatingSignal);
+    const QSignalSpy spy(&psn, &PosixSignalNotifier::terminatingSignal);
 
     const std::initializer_list<int> termSignals = {SIGHUP, SIGINT, SIGQUIT, SIGTERM};
-    for (int signal : termSignals) {
+    for (const int signal : termSignals) {
         QCoreApplication::processEvents();
         kill(getpid(), signal);
         sleep(1);
@@ -88,7 +88,7 @@ void TestPosixSignalNotifier::checkTermSignalsHandling()
 
     for (size_t i = 0; i < termSignals.size(); ++i) {
         const QList<QVariant>& args = spy.at(static_cast<int>(i));
-        int signal = *(termSignals.begin() + i);
+        const int signal = *(termSignals.begin() + i);
         QCOMPARE(args.first().toInt(), signal);
     }
 }

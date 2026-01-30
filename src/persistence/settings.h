@@ -719,6 +719,7 @@ private:
 
     struct CircleProp
     {
+        CircleProp();
         QString name;
         bool expanded;
     };

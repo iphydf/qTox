@@ -35,31 +35,36 @@ add_subdirectory(test/dbutility)
 
 set(TEST_RESOURCES test/resources/test_data.qrc ${${BINARY_NAME}_RESOURCES})
 
-auto_test(core core "${${BINARY_NAME}_RESOURCES}" "mock_library")
+# keep-sorted start
+auto_test(chatlog chatlinestorage "" "")
+auto_test(chatlog textformatter "" "")
 auto_test(core chatid "" "")
+auto_test(core core "${${BINARY_NAME}_RESOURCES}" "mock_library")
+auto_test(core fileprogress "" "")
+auto_test(core toxfile "" "")
 auto_test(core toxid "" "")
 auto_test(core toxstring "" "")
-auto_test(core fileprogress "" "")
-auto_test(chatlog textformatter "" "")
+auto_test(model chathistory "" "")
+auto_test(model conferencemessagedispatcher "" "mock_library")
+auto_test(model exiftransform "" "")
+auto_test(model friendlistmanager "" "")
+auto_test(model friendmessagedispatcher "" "")
+auto_test(model messageprocessor "" "")
+auto_test(model notificationgenerator "" "mock_library")
+auto_test(model sessionchatlog "" "")
 auto_test(net bsu "${${BINARY_NAME}_RESOURCES}" "") # needs nodes list
-auto_test(chatlog chatlinestorage "" "")
-auto_test(persistence paths "" "")
 auto_test(persistence dbschema "" "dbutility_library")
 auto_test(persistence/dbupgrade dbTo11 "" "dbutility_library")
 auto_test(persistence offlinemsgengine "" "")
+auto_test(persistence paths "" "")
 if("EmojiOne" IN_LIST SMILEY_PACKS)
   auto_test(persistence smileypack "${SMILEY_RESOURCES}" "") # needs emojione
 endif()
-auto_test(model friendlistmanager "" "")
-auto_test(model friendmessagedispatcher "" "")
-auto_test(model conferencemessagedispatcher "" "mock_library")
-auto_test(model messageprocessor "" "")
-auto_test(model sessionchatlog "" "")
-auto_test(model exiftransform "" "")
-auto_test(model notificationgenerator "" "mock_library")
+auto_test(video videomode "" "")
 auto_test(widget filesform "" "")
 auto_test(widget/form/settings generalform "" "")
 auto_test(widget/tool identicon "" "")
+# keep-sorted end
 
 # GUI tests, run only when requested using the offscreen platform.
 # These are heavily dependent on specific Qt versions to be pixel-perfect, so

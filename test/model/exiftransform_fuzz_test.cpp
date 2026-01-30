@@ -8,7 +8,7 @@ namespace {
 
 void test_getOrientation(const uint8_t* data, size_t size)
 {
-    ExifTransform::Orientation orientation =
+    const ExifTransform::Orientation orientation =
         ExifTransform::getOrientation(QByteArray(reinterpret_cast<const char*>(data), size));
     assert(orientation >= ExifTransform::Orientation::TopLeft
            && orientation <= ExifTransform::Orientation::LeftBottom);

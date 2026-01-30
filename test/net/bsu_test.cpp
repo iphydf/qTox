@@ -36,7 +36,7 @@ TestBootstrapNodesUpdater::TestBootstrapNodesUpdater()
 
 void TestBootstrapNodesUpdater::testOnline()
 {
-    QNetworkProxy proxy{QNetworkProxy::ProxyType::NoProxy};
+    const QNetworkProxy proxy{QNetworkProxy::ProxyType::NoProxy};
     Paths paths{Paths::Portable::NonPortable};
 
     BootstrapNodeUpdater updater{proxy, paths};
@@ -52,7 +52,7 @@ void TestBootstrapNodesUpdater::testOnline()
 
 void TestBootstrapNodesUpdater::testLocal()
 {
-    QList<DhtServer> defaultNodes = BootstrapNodeUpdater::loadDefaultBootstrapNodes();
+    const QList<DhtServer> defaultNodes = BootstrapNodeUpdater::loadDefaultBootstrapNodes();
     QVERIFY(!defaultNodes.empty());
 }
 

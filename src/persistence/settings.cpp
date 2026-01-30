@@ -89,10 +89,97 @@ static constexpr int GLOBAL_SETTINGS_VERSION = 1;
 static constexpr int PERSONAL_SETTINGS_VERSION = 1;
 
 Settings::Settings(IMessageBoxManager& messageBoxManager_)
-    : loaded(false)
+    : loaded{false}
     , useCustomDhtList{false}
-    , currentProfileId(0)
+    , dhtServerId{-1}
+    , dontShowDhtDialog{false}
+    , autoLogin{false}
+    , compactLayout{true}
+    , sortingMode{FriendListSortingMode::Name}
+    , conferencePosition{true}
+    , separateWindow{false}
+    , dontGroupWindows{false}
+    , showIdenticons{true}
+    , enableIPv6{true}
+    , translation{"en"}
+    , autostartInTray{false}
+    , closeToTray{true}
+    , minimizeToTray{false}
+    , lightTrayIcon{false}
+    , useEmoticons{true}
+    , checkUpdates{true}
+    , notify{true}
+    , desktopNotify{true}
+    , notifySystemBackend{true}
+    , showWindow{true}
+    , notifySound{true}
+    , notifyHide{false}
+    , busySound{false}
+    , conferenceAlwaysNotify{true}
+    , nameColors{false}
+    , imagePreview{true}
+    , chatMaxWindowSize{100}
+    , chatWindowChunkSize{50}
+    , forceTCP{false}
+    , enableLanDiscovery{true}
+    , proxyType{ICoreSettings::ProxyType::ptNone}
+    , proxyAddr{}
+    , proxyPort{0}
+    , currentProfile{}
+    , currentProfileId{0}
+    , enableLogging{true}
+    , autoAwayTime{10}
+    , enableDebug{false}
+    , widgetSettings{}
+    , autoAccept{}
+    , autoSaveEnabled{false}
+    , globalAutoAcceptDir{}
+    , autoAcceptMaxSize{20 << 20}
+    , friendRequests{}
+    , smileyPack{":/smileys/EmojiOne/emoticons.xml"}
+    , emojiFontPointSize{24}
+    , minimizeOnClose{false}
+    , windowGeometry{}
+    , windowState{}
+    , splitterState{}
+    , dialogGeometry{}
+    , dialogSplitterState{}
+    , dialogSettingsGeometry{}
+    , style{}
+    , showSystemTray{true}
+    , chatMessageFont{Style::getFont(Style::Font::Big)}
+    , stylePreference{StyleType::WITH_CHARS}
+    , firstColumnHandlePos{50}
+    , secondColumnHandlePosFromRight{50}
+    , timestampFormat{"hh:mm:ss"}
+    , dateFormat{"yyyy-MM-dd"}
+    , statusChangeNotificationEnabled{false}
+    , showConferenceJoinLeaveMessages{false}
+    , spellCheckingEnabled{true}
+    , hidePostNullSuffix{false}
+    , typingNotification{true}
+    , dbSyncType{static_cast<Db::syncType>(0)}
+    , blockList{}
+    , inDev{}
+    , audioInDevEnabled{true}
+    , audioInGainDecibel{0}
+    , audioThreshold{0}
+    , outDev{}
+    , audioOutDevEnabled{true}
+    , outVolume{100}
+    , audioBitrate{64}
+    , enableTestSound{true}
+    , videoDev{}
+    , camVideoRes{}
+    , screenRegion{}
+    , screenGrabbed{false}
+    , camVideoFPS{0}
+    , themeColor{0}
+    , paths{}
+    , globalSettingsVersion{0}
+    , personalSettingsVersion{0}
     , messageBoxManager{messageBoxManager_}
+    , loadedProfile{nullptr}
 {
     settingsThread = new QThread();
     settingsThread->setObjectName("qTox Settings");
@@ -152,41 +239,42 @@ void Settings::loadGlobal()
     globalSettingsVersion = GLOBAL_SETTINGS_VERSION;
 
     inGroup(s, "Login", [this, &s] { //
-        autoLogin = s.value("autoLogin", false).toBool();
+        autoLogin = s.value("autoLogin", autoLogin).toBool();
     });
 
     inGroup(s, "General", [this, &s] {
-        translation = s.value("translation", "en").toString();
-        showSystemTray = s.value("showSystemTray", true).toBool();
-        autostartInTray = s.value("autostartInTray", false).toBool();
-        closeToTray = s.value("closeToTray", true).toBool();
+        translation = s.value("translation", translation).toString();
+        showSystemTray = s.value("showSystemTray", showSystemTray).toBool();
+        autostartInTray = s.value("autostartInTray", autostartInTray).toBool();
+        closeToTray = s.value("closeToTray", closeToTray).toBool();
         if (currentProfile.isEmpty()) {
             currentProfile = s.value("currentProfile", "").toString();
             currentProfileId = makeProfileId(currentProfile);
         }
-        autoAwayTime = s.value("autoAwayTime", 10).toInt();
-        checkUpdates = s.value("checkUpdates", true).toBool();
+        autoAwayTime = s.value("autoAwayTime", autoAwayTime).toInt();
+        checkUpdates = s.value("checkUpdates", checkUpdates).toBool();
         // note: notifySound and busySound UI elements are now under UI settings
         // page, but kept under General in settings file to be backwards compatible
-        notifySound = s.value("notifySound", true).toBool();
-        notifyHide = s.value("notifyHide", false).toBool();
-        busySound = s.value("busySound", false).toBool();
-        autoSaveEnabled = s.value("autoSaveEnabled", false).toBool();
+        notifySound = s.value("notifySound", notifySound).toBool();
+        notifyHide = s.value("notifyHide", notifyHide).toBool();
+        busySound = s.value("busySound", busySound).toBool();
+        autoSaveEnabled = s.value("autoSaveEnabled", autoSaveEnabled).toBool();
         globalAutoAcceptDir = s.value("globalAutoAcceptDir",
                                       QStandardPaths::locate(QStandardPaths::HomeLocation, QString(),
                                                              QStandardPaths::LocateDirectory))
                                   .toString();
-        autoAcceptMaxSize =
-            static_cast<size_t>(s.value("autoAcceptMaxSize", 20 << 20 /*20 MB*/).toLongLong());
-        stylePreference = static_cast<StyleType>(s.value("stylePreference", 1).toInt());
+        autoAcceptMaxSize = static_cast<size_t>(
+            s.value("autoAcceptMaxSize", static_cast<qlonglong>(autoAcceptMaxSize)).toLongLong());
+        stylePreference = static_cast<StyleType>(
+            s.value("stylePreference", static_cast<int>(stylePreference)).toInt());
     });
 
     inGroup(s, "Advanced", [this, &s] {
-        paths.setPortable(s.value("makeToxPortable", false).toBool());
-        enableIPv6 = s.value("enableIPv6", true).toBool();
-        forceTCP = s.value("forceTCP", false).toBool();
-        enableLanDiscovery = s.value("enableLanDiscovery", true).toBool();
-        enableDebug = s.value("enableDebug", false).toBool();
+        paths.setPortable(s.value("makeToxPortable", paths.isPortable()).toBool());
+        enableIPv6 = s.value("enableIPv6", enableIPv6).toBool();
+        forceTCP = s.value("forceTCP", forceTCP).toBool();
+        enableLanDiscovery = s.value("enableLanDiscovery", enableLanDiscovery).toBool();
+        enableDebug = s.value("enableDebug", enableDebug).toBool();
     });
 
     inGroup(s, "Widgets", [this, &s] {
@@ -196,20 +284,19 @@ void Settings::loadGlobal()
     });
 
     inGroup(s, "GUI", [this, &s] {
-        showWindow = s.value("showWindow", true).toBool();
-        notify = s.value("notify", true).toBool();
-        desktopNotify = s.value("desktopNotify", true).toBool();
-        notifySystemBackend = s.value("notifySystemBackend", true).toBool();
-        conferenceAlwaysNotify = s.value("conferenceAlwaysNotify", true).toBool();
-        conferencePosition = s.value("conferencePosition", true).toBool();
-        separateWindow = s.value("separateWindow", false).toBool();
-        dontGroupWindows = s.value("dontGroupWindows", false).toBool();
-        showIdenticons = s.value("showIdenticons", true).toBool();
+        showWindow = s.value("showWindow", showWindow).toBool();
+        notify = s.value("notify", notify).toBool();
+        desktopNotify = s.value("desktopNotify", desktopNotify).toBool();
+        notifySystemBackend = s.value("notifySystemBackend", notifySystemBackend).toBool();
+        conferenceAlwaysNotify = s.value("conferenceAlwaysNotify", conferenceAlwaysNotify).toBool();
+        conferencePosition = s.value("conferencePosition", conferencePosition).toBool();
+        separateWindow = s.value("separateWindow", separateWindow).toBool();
+        dontGroupWindows = s.value("dontGroupWindows", dontGroupWindows).toBool();
+        showIdenticons = s.value("showIdenticons", showIdenticons).toBool();
 
-        const QString DEFAULT_SMILEYS = ":/smileys/EmojiOne/emoticons.xml";
-        smileyPack = s.value("smileyPack", DEFAULT_SMILEYS).toString();
+        smileyPack = s.value("smileyPack", smileyPack).toString();
         if (!QFile::exists(smileyPack)) {
-            smileyPack = DEFAULT_SMILEYS;
+            smileyPack = ":/smileys/EmojiOne/emoticons.xml";
         }
 
         const Style::MainTheme systemTheme =
@@ -222,20 +309,23 @@ void Settings::loadGlobal()
                 : Style::MainTheme::Light;
         qDebug() << "System theme:" << systemTheme;
 
-        emojiFontPointSize = s.value("emojiFontPointSize", 24).toInt();
-        firstColumnHandlePos = s.value("firstColumnHandlePos", 50).toInt();
-        secondColumnHandlePosFromRight = s.value("secondColumnHandlePosFromRight", 50).toInt();
-        timestampFormat = s.value("timestampFormat", "hh:mm:ss").toString();
-        dateFormat = s.value("dateFormat", "yyyy-MM-dd").toString();
-        minimizeOnClose = s.value("minimizeOnClose", false).toBool();
-        minimizeToTray = s.value("minimizeToTray", false).toBool();
+        emojiFontPointSize = s.value("emojiFontPointSize", emojiFontPointSize).toInt();
+        firstColumnHandlePos = s.value("firstColumnHandlePos", firstColumnHandlePos).toInt();
+        secondColumnHandlePosFromRight =
+            s.value("secondColumnHandlePosFromRight", secondColumnHandlePosFromRight).toInt();
+        timestampFormat = s.value("timestampFormat", timestampFormat).toString();
+        dateFormat = s.value("dateFormat", dateFormat).toString();
+        minimizeOnClose = s.value("minimizeOnClose", minimizeOnClose).toBool();
+        minimizeToTray = s.value("minimizeToTray", minimizeToTray).toBool();
         lightTrayIcon = s.value("lightTrayIcon", systemTheme == Style::MainTheme::Dark).toBool();
-        useEmoticons = s.value("useEmoticons", true).toBool();
-        statusChangeNotificationEnabled = s.value("statusChangeNotificationEnabled", false).toBool();
-        showConferenceJoinLeaveMessages = s.value("showConferenceJoinLeaveMessages", false).toBool();
-        spellCheckingEnabled = s.value("spellCheckingEnabled", true).toBool();
+        useEmoticons = s.value("useEmoticons", useEmoticons).toBool();
+        statusChangeNotificationEnabled =
+            s.value("statusChangeNotificationEnabled", statusChangeNotificationEnabled).toBool();
+        showConferenceJoinLeaveMessages =
+            s.value("showConferenceJoinLeaveMessages", showConferenceJoinLeaveMessages).toBool();
+        spellCheckingEnabled = s.value("spellCheckingEnabled", spellCheckingEnabled).toBool();
         themeColor = s.value("themeColor", Style::defaultThemeColor(systemTheme)).toInt();
-        style = s.value("style", "").toString();
+        style = s.value("style", style).toString();
         if (style == "") // Default to Fusion if available, otherwise no style
         {
             if (QStyleFactory::keys().contains("Fusion"))
@@ -243,44 +333,46 @@ void Settings::loadGlobal()
             else
                 style = "None";
         }
-        nameColors = s.value("nameColors", false).toBool();
-        imagePreview = s.value("imagePreview", true).toBool();
-        chatMaxWindowSize = s.value("chatMaxWindowSize", 100).toInt();
-        chatWindowChunkSize = s.value("chatWindowChunkSize", 50).toInt();
-        hidePostNullSuffix = s.value("hidePostNullSuffix", false).toBool();
+        nameColors = s.value("nameColors", nameColors).toBool();
+        imagePreview = s.value("imagePreview", imagePreview).toBool();
+        chatMaxWindowSize = s.value("chatMaxWindowSize", chatMaxWindowSize).toInt();
+        chatWindowChunkSize = s.value("chatWindowChunkSize", chatWindowChunkSize).toInt();
+        hidePostNullSuffix = s.value("hidePostNullSuffix", hidePostNullSuffix).toBool();
     });
 
     inGroup(s, "Chat", [this, &s] {
-        chatMessageFont = s.value("chatMessageFont", Style::getFont(Style::Font::Big)).value<QFont>();
+        chatMessageFont = s.value("chatMessageFont", chatMessageFont).value<QFont>();
     });
 
     inGroup(s, "State", [this, &s] {
-        windowGeometry = s.value("windowGeometry", QByteArray()).toByteArray();
-        windowState = s.value("windowState", QByteArray()).toByteArray();
-        splitterState = s.value("splitterState", QByteArray()).toByteArray();
-        dialogGeometry = s.value("dialogGeometry", QByteArray()).toByteArray();
-        dialogSplitterState = s.value("dialogSplitterState", QByteArray()).toByteArray();
-        dialogSettingsGeometry = s.value("dialogSettingsGeometry", QByteArray()).toByteArray();
+        windowGeometry = s.value("windowGeometry", windowGeometry).toByteArray();
+        windowState = s.value("windowState", windowState).toByteArray();
+        splitterState = s.value("splitterState", splitterState).toByteArray();
+        dialogGeometry = s.value("dialogGeometry", dialogGeometry).toByteArray();
+        dialogSplitterState = s.value("dialogSplitterState", dialogSplitterState).toByteArray();
+        dialogSettingsGeometry =
+            s.value("dialogSettingsGeometry", dialogSettingsGeometry).toByteArray();
     });
 
     inGroup(s, "Audio", [this, &s] {
-        inDev = s.value("inDev", "").toString();
-        audioInDevEnabled = s.value("audioInDevEnabled", true).toBool();
-        outDev = s.value("outDev", "").toString();
-        audioOutDevEnabled = s.value("audioOutDevEnabled", true).toBool();
-        audioInGainDecibel = s.value("inGain", 0).toReal();
-        audioThreshold = s.value("audioThreshold", 0).toReal();
-        outVolume = s.value("outVolume", 100).toInt();
-        enableTestSound = s.value("enableTestSound", true).toBool();
-        audioBitrate = s.value("audioBitrate", 64).toInt();
+        inDev = s.value("inDev", inDev).toString();
+        audioInDevEnabled = s.value("audioInDevEnabled", audioInDevEnabled).toBool();
+        outDev = s.value("outDev", outDev).toString();
+        audioOutDevEnabled = s.value("audioOutDevEnabled", audioOutDevEnabled).toBool();
+        audioInGainDecibel = s.value("inGain", audioInGainDecibel).toReal();
+        audioThreshold = s.value("audioThreshold", audioThreshold).toReal();
+        outVolume = s.value("outVolume", outVolume).toInt();
+        enableTestSound = s.value("enableTestSound", enableTestSound).toBool();
+        audioBitrate = s.value("audioBitrate", audioBitrate).toInt();
     });
 
     inGroup(s, "Video", [this, &s] {
-        videoDev = s.value("videoDev", "").toString();
-        camVideoRes = s.value("camVideoRes", QRect()).toRect();
-        screenRegion = s.value("screenRegion", QRect()).toRect();
-        screenGrabbed = s.value("screenGrabbed", false).toBool();
-        camVideoFPS = static_cast<quint16>(s.value("camVideoFPS", 0).toUInt());
+        videoDev = s.value("videoDev", videoDev).toString();
+        camVideoRes = s.value("camVideoRes", camVideoRes).toRect();
+        screenRegion = s.value("screenRegion", screenRegion).toRect();
+        screenGrabbed = s.value("screenGrabbed", screenGrabbed).toBool();
+        camVideoFPS =
+            static_cast<float>(s.value("camVideoFPS", static_cast<double>(camVideoFPS)).toReal());
     });
 
     loaded = true;
@@ -529,8 +621,8 @@ void Settings::loadPersonal(const Profile& profile, bool newProfile)
     personalSettingsVersion = PERSONAL_SETTINGS_VERSION;
 
     inGroup(ps, "Privacy", [this, &ps] {
-        typingNotification = ps.value("typingNotification", true).toBool();
-        enableLogging = ps.value("enableLogging", true).toBool();
+        typingNotification = ps.value("typingNotification", typingNotification).toBool();
+        enableLogging = ps.value("enableLogging", enableLogging).toBool();
         blockList = ps.value("blackList").toString().split('\n');
     });
 
@@ -566,13 +658,13 @@ void Settings::loadPersonal(const Profile& profile, bool newProfile)
     });
 
     inGroup(ps, "GUI", [this, &ps] {
-        compactLayout = ps.value("compactLayout", true).toBool();
+        compactLayout = ps.value("compactLayout", compactLayout).toBool();
         sortingMode = static_cast<FriendListSortingMode>(
-            ps.value("friendSortingMethod", static_cast<int>(FriendListSortingMode::Name)).toInt());
+            ps.value("friendSortingMethod", static_cast<int>(sortingMode)).toInt());
     });
 
     inGroup(ps, "Proxy", [this, &ps] {
-        proxyType = static_cast<ProxyType>(ps.value("proxyType", 0 /* ProxyType::None */).toInt());
+        proxyType = static_cast<ProxyType>(ps.value("proxyType", static_cast<int>(proxyType)).toInt());
         proxyType = fixInvalidProxyType(proxyType);
         proxyAddr = ps.value("proxyAddr", proxyAddr).toString();
         proxyPort = static_cast<quint16>(ps.value("proxyPort", proxyPort).toUInt());
@@ -582,7 +674,7 @@ void Settings::loadPersonal(const Profile& profile, bool newProfile)
         inArray(ps, "Circle", &circleLst, [this, &ps] {
             CircleProp cp;
             cp.name = ps.value("name").toString();
-            cp.expanded = ps.value("expanded", true).toBool();
+            cp.expanded = ps.value("expanded", cp.expanded).toBool();
             circleLst.push_back(cp);
         });
     });
@@ -2282,6 +2374,12 @@ Settings::FriendProp& Settings::getOrInsertFriendPropRef(const ToxPk& id)
     }
 
     return *friendLst.insert(id.getByteArray(), FriendProp{id.toString()});
+}
+
+Settings::CircleProp::CircleProp()
+    : name{}
+    , expanded{true}
+{
 }
 
 ICoreSettings::ProxyType Settings::fixInvalidProxyType(ICoreSettings::ProxyType proxyType)

@@ -102,6 +102,11 @@ bool shouldProcessFileKind(uint8_t inKind)
 
     switch (kind) {
     case TOX_FILE_KIND_DATA:
+#if TOX_VERSION_IS_API_COMPATIBLE(0, 2, 22)
+    case TOX_FILE_KIND_STICKER:
+    case TOX_FILE_KIND_SHA1:
+    case TOX_FILE_KIND_SHA256:
+#endif
         return true;
     // Avatar sharing should be seamless, the user does not need to see
     // these in their file transfer list.

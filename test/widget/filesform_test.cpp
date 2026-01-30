@@ -30,6 +30,7 @@ private slots:
     void testStatus();
     void testControl();
     void testAvatarIgnored();
+    void testNewKindsProcessed();
     void testMultipleFiles();
     void testFileRemoval();
 
@@ -195,6 +196,29 @@ void TestFileTransferList::testAvatarIgnored()
     model->onFileUpdated(file);
 
     QCOMPARE(model->rowCount(), 0);
+}
+
+void TestFileTransferList::testNewKindsProcessed()
+{
+    ToxFile file;
+    file.status = ToxFile::TRANSMITTING;
+
+#if TOX_VERSION_IS_API_COMPATIBLE(0, 2, 22)
+    file.fileKind = TOX_FILE_KIND_STICKER;
+    file.resumeFileId = QByteArray("sticker");
+    model->onFileUpdated(file);
+    QCOMPARE(model->rowCount(), 1);
+
+    file.fileKind = TOX_FILE_KIND_SHA1;
+    file.resumeFileId = QByteArray("sha1");
+    model->onFileUpdated(file);
+    QCOMPARE(model->rowCount(), 2);
+
+    file.fileKind = TOX_FILE_KIND_SHA256;
+    file.resumeFileId = QByteArray("sha256");
+    model->onFileUpdated(file);
+    QCOMPARE(model->rowCount(), 3);
+#endif
 }
 
 void TestFileTransferList::testMultipleFiles()

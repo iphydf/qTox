@@ -29,6 +29,7 @@ public:
 
 private slots:
     void testSelfMention();
+    void testMultipleMentions();
     void testOutgoingMessage();
     void testIncomingMessage();
 };
@@ -104,6 +105,33 @@ void TestMessageProcessor::testSelfMention()
         processedMessage = messageProcessor.processIncomingCoreMessage(false, "a");
         QVERIFY(!messageHasSelfMention(processedMessage));
     }
+}
+
+/**
+ * @brief Tests detection of multiple mentions (currently it only catches the first one)
+ */
+void TestMessageProcessor::testMultipleMentions()
+{
+    MessageProcessor::SharedParams sharedParams(tox_max_message_length());
+    const QString userName = "Alice";
+    const QString pk = "0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF";
+    sharedParams.onUserNameSet(userName);
+    sharedParams.setPublicKey(pk);
+
+    auto messageProcessor = MessageProcessor(sharedParams);
+    messageProcessor.enableMentions();
+
+    // Both name and PK mentioned
+    auto msg = messageProcessor.processIncomingCoreMessage(false, userName + " says my key is " + pk);
+    // Current implementation stops after the first mention type found
+    QCOMPARE(msg.metadata.size(), 1u);
+    QCOMPARE(msg.metadata[0].start, 0u);
+    QCOMPARE(msg.metadata[0].end, static_cast<size_t>(userName.length()));
+
+    // Repeated name
+    msg = messageProcessor.processIncomingCoreMessage(false, userName + " " + userName);
+    // Current implementation stops after the first match of a mention type
+    QCOMPARE(msg.metadata.size(), 1u);
 }
 
 /**
