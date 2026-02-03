@@ -13,6 +13,7 @@ INCLUDES = [
     "-Iaudio/include",
     "-Iutil/include",
     "-Itest/mock/include",
+    "-Itest/dbutility/include",
     "-I../bazel-bin/qtox/src",
     "-isystem../bazel-bin/c-toxcore",
     "-isystem../bazel-bin/external/+non_module_deps+libexif",
@@ -34,16 +35,6 @@ INCLUDES = [
     "-isystem../external/+non_module_deps+qt6.qtsvg/include/QtSvg",
     # keep-sorted end
 ]
-
-# Add all directories containing .moc files from bazel-bin
-bazel_bin_qtox = os.path.join(PROJECT_ROOT, "../bazel-bin/qtox")
-if os.path.exists(bazel_bin_qtox):
-    for root, dirs, filenames in os.walk(bazel_bin_qtox):
-        if any(
-                f.endswith(".moc") or (
-                    f.startswith("moc_") and f.endswith(".cpp"))
-                for f in filenames):
-            INCLUDES.append(f"-I{os.path.relpath(root, PROJECT_ROOT)}")
 
 CXX_FLAGS = ["-std=c++20"]
 CLANG_TIDY_ARGS = [
@@ -78,6 +69,16 @@ def main() -> None:
 
     print(">>> Building dependencies with Bazel...")
     subprocess.run(["bazel", "build", "//qtox/..."], check=True)
+
+    # Add all directories containing .moc files from bazel-bin
+    bazel_bin_qtox = os.path.join(PROJECT_ROOT, "../bazel-bin/qtox")
+    if os.path.exists(bazel_bin_qtox):
+        for root, dirs, filenames in os.walk(bazel_bin_qtox):
+            if any(
+                    f.endswith(".moc") or (
+                        f.startswith("moc_") and f.endswith(".cpp"))
+                    for f in filenames):
+                INCLUDES.append(f"-I{os.path.relpath(root, PROJECT_ROOT)}")
 
     print(">>> Collecting source files...")
     files = []

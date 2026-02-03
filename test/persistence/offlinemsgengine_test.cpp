@@ -30,7 +30,7 @@ void TestOfflineMsgEngine::testReceiptBeforeMessage()
 {
     OfflineMsgEngine offlineMsgEngine;
 
-    Message msg{false, QString(), QDateTime(), {}};
+    const Message msg{false, QString(), QDateTime(), {}};
 
     const auto receipt = ReceiptNum(0);
     offlineMsgEngine.onReceiptReceived(receipt);
@@ -124,7 +124,7 @@ void TestOfflineMsgEngine::testCallback()
 
     size_t numCallbacks = 0;
     auto callback = [&numCallbacks](bool) { numCallbacks++; };
-    Message msg{false, QString(), QDateTime(), {}};
+    const Message msg{false, QString(), QDateTime(), {}};
 
     offlineMsgEngine.addSentCoreMessage(ReceiptNum(1), Message(), callback);
     offlineMsgEngine.addSentCoreMessage(ReceiptNum(2), Message(), callback);

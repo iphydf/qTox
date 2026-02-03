@@ -18,8 +18,8 @@
 namespace {
 bool insertFileId(RawDatabase& db, int row, bool valid)
 {
-    QByteArray validResumeId(32, 1);
-    QByteArray invalidResumeId;
+    const QByteArray validResumeId(32, 1);
+    const QByteArray invalidResumeId;
 
     QByteArray resumeId;
     if (valid) {
@@ -152,7 +152,7 @@ void TestDbSchema::cleanup()
 
 void TestDbSchema::testCreation()
 {
-    QVector<RawDatabase::Query> queries;
+    const QVector<RawDatabase::Query> queries;
     auto db = RawDatabase::open(testDatabaseFile->fileName(), {}, {});
     QVERIFY(DbUpgrader::createCurrentSchema(*db));
     DbUtility::verifyDb(db, DbUtility::schema11);
@@ -176,11 +176,11 @@ void TestDbSchema::testNewerDb()
 {
     auto db = RawDatabase::open(testDatabaseFile->fileName(), {}, {});
     createSchemaAtVersion(db, DbUtility::schema0);
-    int futureSchemaVersion = 1000000;
+    const int futureSchemaVersion = 1000000;
     db->execNow(
         RawDatabase::Query(QStringLiteral("PRAGMA user_version = %1").arg(futureSchemaVersion)));
     MockMessageBoxManager messageBoxManager;
-    bool success = DbUpgrader::dbSchemaUpgrade(db, messageBoxManager);
+    const bool success = DbUpgrader::dbSchemaUpgrade(db, messageBoxManager);
     QVERIFY(success == false);
     QVERIFY(messageBoxManager.getErrorsShown() == 1);
 }

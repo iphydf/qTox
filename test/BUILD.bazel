@@ -130,6 +130,19 @@ qt_test(
     ],
 )
 
+qt_test(
+    name = "dbschema_test",
+    size = "small",
+    src = "persistence/dbschema_test.cpp",
+    copts = COPTS,
+    mocopts = ["-Iqtox"],
+    deps = [
+        ":dbutility",
+        "//qtox/src",
+        "@qt//:qt_core",
+    ],
+)
+
 cc_fuzz_test(
     name = "exiftransform_fuzz_test",
     size = "small",

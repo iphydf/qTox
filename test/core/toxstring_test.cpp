@@ -253,7 +253,7 @@ void TestToxString::localesTest()
     const QStringList& locales = GeneralForm::getLocales();
     for (const QString& locale : locales) {
         const QString lang = QLocale(locale).nativeLanguageName();
-        ToxString test(lang);
+        const ToxString test(lang);
         const QString test_string = test.getQString();
         QCOMPARE(lang, test_string);
     }

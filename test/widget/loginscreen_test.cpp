@@ -8,19 +8,21 @@
 #include <QProcessEnvironment>
 #include <QPushButton>
 #include <QTest>
+#include <QtTest/QtTest>
 
 namespace {
-std::pair<QPixmap, QPixmap> compareScreenshot(QWidget* widget, const QString& path)
+std::pair<QImage, QImage> compareScreenshot(QWidget* widget, const QString& path)
 {
-    QPixmap actual = widget->grab();
+    const QPixmap actualPixmap = widget->grab();
     const auto env = QProcessEnvironment::systemEnvironment();
     if (env.contains("BUILD_WORKSPACE_DIRECTORY")) {
         const QString actualPath = QStringLiteral("%1/qtox/test/resources/images/%2")
                                        .arg(env.value("BUILD_WORKSPACE_DIRECTORY"), path);
         qDebug() << "Saving actual image to" << actualPath;
-        actual.save(actualPath);
+        actualPixmap.save(actualPath);
     }
-    QPixmap expected = QPixmap(QStringLiteral(":/test/images/%1").arg(path));
+    QImage actual = actualPixmap.toImage();
+    QImage expected = QPixmap(QStringLiteral(":/test/images/%1").arg(path)).toImage();
     return {std::move(actual), std::move(expected)};
 }
 
@@ -51,7 +53,7 @@ private:
 
 void TestLoginScreen::testLoginScreen()
 {
-    LoginScreen loginScreen(paths, style, themeColor, profileName);
+    LoginScreen loginScreen(paths, style, themeColor, profileName); // NOLINT(misc-const-correctness)
 
     COMPARE_GRAB(&loginScreen, "loginscreen_empty.png");
 }
@@ -90,8 +92,7 @@ void TestLoginScreen::testCreateProfileBadPassword()
     loginScreen.findChild<QLineEdit*>("newUsername")->setText("test-user");
     loginScreen.findChild<QLineEdit*>("newPass")->setText("password");
     loginScreen.findChild<QLineEdit*>("newPassConfirm")->setText("password2");
-    QTest::mouseClick(loginScreen.findChild<QPushButton*>("createAccountButton"),
-                      Qt::MouseButton::LeftButton);
+    loginScreen.findChild<QPushButton*>("createAccountButton")->click();
 
     QVERIFY(!created);
     QVERIFY(error.contains("different"));
