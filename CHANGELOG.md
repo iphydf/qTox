@@ -19,17 +19,6 @@ an issue.
 #### Bug Fixes
 
 - Use correct bug template in report bug button. ([d2842696](https://github.com/TokTok/qTox/commit/d2842696399fbe26474655175a5221d960055606))
-
-<a name="v1.18.3-rc.1"></a>
-
-## v1.18.3-rc.1 (2025-02-20)
-
-### Release notes
-
-Release candidate. We'll write proper release notes in the production release.
-
-#### Bug Fixes
-
 - **About:** Retranslate the important message when changing language. ([3b6b821c](https://github.com/TokTok/qTox/commit/3b6b821c83ae95a956dde710dfe3db8392ef147c))
 - **Clipboard:** Improve "copy link to clipboard" on Linux. ([8b1ac36a](https://github.com/TokTok/qTox/commit/8b1ac36adc9a838b26d67975fb1f53875b74beb5))
 - **Notify:**
@@ -70,14 +59,6 @@ This is a security-focussed release that also comes with some bugfixes.
 - We've added a setting to disable automatic image previews in chat. If you're very security-conscious and you have friends you don't trust, you may want to disable image previews. In the future, we'll add a per-friend setting for this.
 - We've fixed some bugs that caused multi-line messages to be received as a single line. This was caused by our defense-in-depth security measures that were a little too strict.
 
-<a name="v1.18.2-rc.1"></a>
-
-## v1.18.2-rc.1 (2025-01-12)
-
-### Release notes
-
-Getting ready for a release. Here's a release candidate.
-
 #### Bug Fixes
 
 - cmake `AUTORCC_OPTIONS` global setting ([80f7cbb8](https://github.com/TokTok/qTox/commit/80f7cbb8a003413d0df04d467a5560aaac61b0e6))
@@ -113,53 +94,23 @@ Besides that, here are some highlights:
 
 Finally, we have tightened the security of qTox by avoiding any DNS lookups in the Tox bootstrap path. This means qTox will work properly even if you have no DNS server, and importantly, you will not leak access to the Tox network to any DNS servers. The only place where we still do DNS lookups is in the update check (which connects to the GitHub API), but you can disable that.
 
-<a name="v1.18.1-rc.3"></a>
-
-## v1.18.1-rc.3 (2025-01-05)
-
-### Release notes
-
-Release candidate 3.
-
 #### Bug Fixes
 
 - Update check is now working on Windows and AppImage ([5b3a3478](https://github.com/TokTok/qTox/commit/5b3a3478298be6e75c2adf2b8e4eb70d2ab0d504))
 - **Audio:** Notifications sounds are no longer cut off. ([1624d3a9](https://github.com/TokTok/qTox/commit/1624d3a95af68ef18c87435a8057301f0426fdfe))
+- **Languages:** Recover the long lost Pirate translation. ([d10ccdc8](https://github.com/TokTok/qTox/commit/d10ccdc80fa3ee83b27216234029b016fc3ebb61))
 
 #### Features
 
 - Add a command line option to run the update-check. ([4d5f9f94](https://github.com/TokTok/qTox/commit/4d5f9f9496028a78163e7912708976cc0ce81635))
-- **Security:** Never perform DNS lookups for tox node connections. ([e0cd0b75](https://github.com/TokTok/qTox/commit/e0cd0b75cf20dc468c601352ce929d8f1c31660d))
-
-<a name="v1.18.1-rc.2"></a>
-
-## v1.18.1-rc.2 (2025-01-03)
-
-### Release notes
-
-Release candidate 2. RC1 didn't have binaries because the CI scripts were broken.
-
-<a name="v1.18.1-rc.1"></a>
-
-## v1.18.1-rc.1 (2025-01-03)
-
-### Release notes
-
-Release Candidate 1.
-
-#### Features
-
 - **Languages:**
   - Add a weblate link to the settings. ([7024d02c](https://github.com/TokTok/qTox/commit/7024d02cc3ef047c9b98444ff3959b2dcadfb89d))
   - Translate all of qTox to Pirate English. ([715caf13](https://github.com/TokTok/qTox/commit/715caf13cf2906727bffe7c4b6e964455d1c6bc5))
   - Add Limburgish translation. ([607ba4d2](https://github.com/TokTok/qTox/commit/607ba4d2cc19de4dba7cab9e783a0ae6821208fc))
   - Fully translate every supported language. ([779cdb39](https://github.com/TokTok/qTox/commit/779cdb3958a006e02c6c8131c878626a8c0aa2c0))
 - **Login:** Add a tooltip and WhatsThis for the password field. ([04efcf82](https://github.com/TokTok/qTox/commit/04efcf82099c216cd401eb28bc332d86df9b843c), closes [#299](https://github.com/TokTok/qTox/issues/299))
+- **Security:** Never perform DNS lookups for tox node connections. ([e0cd0b75](https://github.com/TokTok/qTox/commit/e0cd0b75cf20dc468c601352ce929d8f1c31660d))
 - **UI:** Better integration with system dark modes. ([ff2a252d](https://github.com/TokTok/qTox/commit/ff2a252d5faee60554d2c64cdc8e45d7f445b2e9))
-
-#### Bug Fixes
-
-- **Languages:** Recover the long lost Pirate translation. ([d10ccdc8](https://github.com/TokTok/qTox/commit/d10ccdc80fa3ee83b27216234029b016fc3ebb61))
 
 #### Performance
 
@@ -190,68 +141,15 @@ As always, report any bugs or issues you find or features you'd like to see to o
 #### Bug Fixes
 
 - Avoid occasional crash when changing video devices or closing qTox. ([2bd629fe](https://github.com/TokTok/qTox/commit/2bd629fe5a0fc320fe78da7cddcd19965b7128dd))
-- **Security:** Harden the persistence/serialization functions. ([e4735668](https://github.com/TokTok/qTox/commit/e47356681c126dffe9f07fbfa4ee9d441446c230))
-
-<a name="v1.18.0-rc.4"></a>
-
-## v1.18.0-rc.4 (2024-12-31)
-
-### Release notes
-
-One more release candidate before our final release.
-
-#### Features
-
-- add appimage back to ci ([8f13b826](https://github.com/TokTok/qTox/commit/8f13b8261e199821cb79c7f02c9ff01cab7e838e))
-
-#### Bug Fixes
-
 - Fix uninitialised read in contact circle widget. ([afe24fbe](https://github.com/TokTok/qTox/commit/afe24fbe3ebf1ea395849a8012a031b1705bfe76))
 - Don't crash when closing the app after logout. ([b4b0d8c9](https://github.com/TokTok/qTox/commit/b4b0d8c9203a4937424a3d00c8ad86dca47553fe))
 - Don't crash on logout. ([b244e206](https://github.com/TokTok/qTox/commit/b244e2062845c1a03798bc2ff4af629b54d8f907))
 - Avoid hanging when capture device permissions denied on macOS. ([9e4b17b8](https://github.com/TokTok/qTox/commit/9e4b17b8605dd8c21db6ed6cfad7fca2331897da))
-
-#### Performance
-
-- Improve performance of video frame buffering. ([ffcef564](https://github.com/TokTok/qTox/commit/ffcef56404f2d8797edc730ebd222726119c74cc))
-
-<a name="v1.18.0-rc.3"></a>
-
-## v1.18.0-rc.3 (2024-12-23)
-
-### Release notes
-
-qTox version 1.18.0 release candidate 3
-
-#### Performance
-
-- Don't log verbose toxav messages. ([349b6101](https://github.com/TokTok/qTox/commit/349b6101976add3a0a3d71df8dc33d539e8d024e))
-
-#### Bug Fixes
-
 - Fix occasional deadlock in ending a video call. ([73c253d7](https://github.com/TokTok/qTox/commit/73c253d70d14048e1a2711ba798aa9e72b861c03))
 - Disable video device selection box during call. ([527c9096](https://github.com/TokTok/qTox/commit/527c90969eabbb9416666106091d75729d952983))
 - Make sure camera access is gained on macOS before calling. ([3ebea6e9](https://github.com/TokTok/qTox/commit/3ebea6e962889c313c15b01ddcb6e6a4e6a3512e))
 - Make camera input work again on macOS. ([a5d0bcc4](https://github.com/TokTok/qTox/commit/a5d0bcc4e3a787f3e226f0e368b0d9e10f1c87fd))
 - Don't crash on quit during AV call. ([ffd7b4e1](https://github.com/TokTok/qTox/commit/ffd7b4e15f03c1464edff48c2a1b9385da7ce31e))
-
-#### Features
-
-- Add many missing emojis from the smiley packs. ([2897ee56](https://github.com/TokTok/qTox/commit/2897ee564fae480e31f62dad5270801e54dd2cfb))
-- Add DBus desktop notification support. ([fb4df420](https://github.com/TokTok/qTox/commit/fb4df420d8821fe60e9982dfb119d7eb32f39e7c))
-
-<a name="v1.18.0-rc.2"></a>
-
-## v1.18.0-rc.2 (2024-12-15)
-
-### Release notes
-
-#### Performance
-
-- Delay debug log loading to show time. ([7525725b](https://github.com/TokTok/qTox/commit/7525725b76210bbebb10624c10555415859b3c48))
-
-#### Bug Fixes
-
 - Use the _last_ `/src/` to find the source root. ([62c093a9](https://github.com/TokTok/qTox/commit/62c093a9f1d9e3ba58c1b769b5d56baa0a8bb62f))
 - Show actual smileys in the smileypack selector. ([97bc8fcd](https://github.com/TokTok/qTox/commit/97bc8fcd06d4a71fdd4fa937d5704aef360b1d85))
 - cmake file dependencies ([de7c4909](https://github.com/TokTok/qTox/commit/de7c4909aac1d363638a626043358491d55b93ff))
@@ -261,22 +159,6 @@ qTox version 1.18.0 release candidate 3
 - Allow building qtox without update check. ([55ec9119](https://github.com/TokTok/qTox/commit/55ec9119999f21aeed5b37cd726f8fe32bedca31))
 - memory error on exit ([3721ad0d](https://github.com/TokTok/qTox/commit/3721ad0ded993f10763d2b4c7ba10ae8297ec788))
 - Correct the tab completion regex so it works with Qt6. ([1680064e](https://github.com/TokTok/qTox/commit/1680064e71bb5e677f4d4c703273c45251d619e9))
-- **security:** Only allow printable characters in incoming messages. ([18df99a3](https://github.com/TokTok/qTox/commit/18df99a392cbf46efd3b44f64643026f0f4889a7))
-
-#### Features
-
-- Add caps-lock indicator in password edit on macOS. ([70344bad](https://github.com/TokTok/qTox/commit/70344bad6732d5cbb0151848ceb77dc80cde71ae))
-- Add a Qt object tree view in the debug widget. ([a3828eca](https://github.com/TokTok/qTox/commit/a3828ecaea05d25cc9a1f3abe5f76a1b0f01a490))
-- Add system tray notification support. ([cfbd2bff](https://github.com/TokTok/qTox/commit/cfbd2bffa1b05709556fc60593c833ade95d6a57))
-
-<a name="v1.18.0-rc.1"></a>
-
-## v1.18.0-rc.1 (2024-11-23)
-
-### Release notes
-
-#### Bug Fixes
-
 - Fix use-after-free bug in desktop notifications. ([34526c8e](https://github.com/TokTok/qTox/commit/34526c8e65628d15df27d5171318d4e6fd52871a))
 - Add Caucasian Albanian Script writing system mapping. ([42b0bc15](https://github.com/TokTok/qTox/commit/42b0bc152c394e6770cc23d0c5bbc4786b325fa9))
 - remove extra newline in log ([8fe87f17](https://github.com/TokTok/qTox/commit/8fe87f17f6e3b0a4fee3f53d0771ee27d5072eca))
@@ -324,6 +206,10 @@ qTox version 1.18.0 release candidate 3
 - **Paths:**
   - Track portable state in Paths to updates paths correctly ([0eb56fb9](https://github.com/qTox/qTox/commit/0eb56fb9bb61d953215e1531022a6460deb2a009), closes [#6443](https://github.com/qTox/qTox/issues/6443))
   - Default to auto paths detection mode ([d0c120e0](https://github.com/qTox/qTox/commit/d0c120e0a8f4802cd03bd1fb305ade45c46799be))
+- **Security:**
+  - Harden the persistence/serialization functions. ([e4735668](https://github.com/TokTok/qTox/commit/e47356681c126dffe9f07fbfa4ee9d441446c230))
+  - Only allow printable characters in incoming messages. ([18df99a3](https://github.com/TokTok/qTox/commit/18df99a392cbf46efd3b44f64643026f0f4889a7))
+  - Do a better job of anonymising the log output. ([ac999816](https://github.com/TokTok/qTox/commit/ac999816e6e76db73b9dd947bf7baa167d50ea7e))
 - **UI:**
   - Centre message boxes on main window ([c5fdb786](https://github.com/qTox/qTox/commit/c5fdb786764540358d255d32a9cc2d3d31614542))
   - Pass NetCamView's parent pointer to base QWidget ([809c6957](https://github.com/qTox/qTox/commit/809c69571829df3aeee4e93c54c15da2ffebc637))
@@ -446,7 +332,6 @@ qTox version 1.18.0 release candidate 3
 - **profile:**
   - load settings before starting Core ([bb26d4a0](https://github.com/qTox/qTox/commit/bb26d4a08623981b5f423e2d217d45d3672e1939))
   - write .tox file immediately on creation ([49c8f9b9](https://github.com/qTox/qTox/commit/49c8f9b9b5dc3d364aa4ef13e22d199673ed68c3))
-- **security:** Do a better job of anonymising the log output. ([ac999816](https://github.com/TokTok/qTox/commit/ac999816e6e76db73b9dd947bf7baa167d50ea7e))
 - **settings:**
   - Heal invalid ToxPk saved to Personal Settings ([dd952408](https://github.com/qTox/qTox/commit/dd9524085fdc11ab39bdb7d44419959cc45e1790), closes [#6506](https://github.com/qTox/qTox/issues/6506))
   - Initialize gain slider to correct position ([ce1ecb42](https://github.com/qTox/qTox/commit/ce1ecb4234444090bd290a4796109783dffc555a), closes [#6285](https://github.com/qTox/qTox/issues/6285))
@@ -478,6 +363,12 @@ qTox version 1.18.0 release candidate 3
 
 #### Features
 
+- add appimage back to ci ([8f13b826](https://github.com/TokTok/qTox/commit/8f13b8261e199821cb79c7f02c9ff01cab7e838e))
+- Add many missing emojis from the smiley packs. ([2897ee56](https://github.com/TokTok/qTox/commit/2897ee564fae480e31f62dad5270801e54dd2cfb))
+- Add DBus desktop notification support. ([fb4df420](https://github.com/TokTok/qTox/commit/fb4df420d8821fe60e9982dfb119d7eb32f39e7c))
+- Add caps-lock indicator in password edit on macOS. ([70344bad](https://github.com/TokTok/qTox/commit/70344bad6732d5cbb0151848ceb77dc80cde71ae))
+- Add a Qt object tree view in the debug widget. ([a3828eca](https://github.com/TokTok/qTox/commit/a3828ecaea05d25cc9a1f3abe5f76a1b0f01a490))
+- Add system tray notification support. ([cfbd2bff](https://github.com/TokTok/qTox/commit/cfbd2bffa1b05709556fc60593c833ade95d6a57))
 - Add desktop notifications support on Linux. ([edbbee9b](https://github.com/TokTok/qTox/commit/edbbee9b2ca865026e5d1be16114dcccfda9d9d7))
 - Add debug log view. ([bd07e0ff](https://github.com/TokTok/qTox/commit/bd07e0ffa871af2fe06c1ead0d0d922b59dba244))
 - Add new translations: Bengali, Latvian, Flemish, Vietnamese. ([3423eb59](https://github.com/TokTok/qTox/commit/3423eb597b72441901ec9f94849d98d57d9755d2))
@@ -592,6 +483,9 @@ qTox version 1.18.0 release candidate 3
 
 #### Performance
 
+- Improve performance of video frame buffering. ([ffcef564](https://github.com/TokTok/qTox/commit/ffcef56404f2d8797edc730ebd222726119c74cc))
+- Don't log verbose toxav messages. ([349b6101](https://github.com/TokTok/qTox/commit/349b6101976add3a0a3d71df8dc33d539e8d024e))
+- Delay debug log loading to show time. ([7525725b](https://github.com/TokTok/qTox/commit/7525725b76210bbebb10624c10555415859b3c48))
 - reduce repainting in animations ([3c58b992](https://github.com/qTox/qTox/commit/3c58b992c63f598c9b0e4f703c30ffa177c9e5dd))
 - **Settings:** Make personal settings saving consistently async ([a1f7c71f](https://github.com/qTox/qTox/commit/a1f7c71feb6a79dae75ce76a28f415cb8c12dbf5))
 
