@@ -53,6 +53,7 @@ auto_test(model messageprocessor "" "")
 auto_test(model notificationgenerator "" "mock_library")
 auto_test(model sessionchatlog "" "")
 auto_test(net bsu "${${BINARY_NAME}_RESOURCES}" "") # needs nodes list
+auto_test(net updateversion "" "")
 auto_test(persistence dbschema "" "dbutility_library")
 auto_test(persistence/dbupgrade dbTo11 "" "dbutility_library")
 auto_test(persistence offlinemsgengine "" "")

@@ -398,6 +398,8 @@ set(${BINARY_NAME}_SOURCES
     src/net/toxuri.h
     src/net/updatecheck.cpp
     src/net/updatecheck.h
+    src/net/updateversion.cpp
+    src/net/updateversion.h
     src/persistence/db/rawdatabase.cpp
     src/persistence/db/rawdatabase.h
     src/persistence/db/rawdatabaseimpl.cpp
