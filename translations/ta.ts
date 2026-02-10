@@ -81,37 +81,30 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>High (64 kBps)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உயர் (64 கே.பி.பி.எச்)</translation>
     </message>
     <message>
         <source>Medium (32 kBps)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நடுத்தர (32 கி.பி.பி.எச்)</translation>
     </message>
     <message>
         <source>Low (16 kBps)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>குறைந்த (16 kbps)</translation>
     </message>
     <message>
         <source>Very low (8 kBps)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மிகக் குறைந்த (8 kbps)</translation>
     </message>
     <message>
         <source>Threshold</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வாசல்</translation>
     </message>
     <message>
         <source>Use slider to set the volume of your speakers.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் பேச்சாளர்களின் அளவை அமைக்க ச்லைடரைப் பயன்படுத்தவும்.</translation>
     </message>
     <message>
         <source>Transmitted audio quality. Lower this setting if your bandwidth is not high enough or if you want to reduce bandwidth usage.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடத்தப்பட்ட ஆடியோ தகுதி. உங்கள் அலைவரிசை போதுமானதாக இல்லாவிட்டால் அல்லது அலைவரிசை பயன்பாட்டைக் குறைக்க விரும்பினால் இந்த அமைப்பைக் குறைக்கவும்.</translation>
     </message>
     <message>
@@ -120,7 +113,6 @@ The higher values, the better video quality your friends may get.
 Note that with better video quality, you use more bandwidth.
 Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் கேமராவின் தெளிவுத்திறனை அமைக்கவும்.
  அதிக மதிப்புகள், உங்கள் நண்பர்கள் பெறக்கூடிய சிறந்த வீடியோ தரம்.
  சிறந்த வீடியோ தரத்துடன், நீங்கள் அதிக அலைவரிசையைப் பயன்படுத்துகிறீர்கள் என்பதை நினைவில் கொள்க.
@@ -129,17 +121,14 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Play a test sound while changing the output volume.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வெளியீட்டு அளவை மாற்றும்போது சோதனை ஒலியை இயக்கவும்.</translation>
     </message>
     <message>
         <source>Use slider to set the gain of your input device ranging from %1dB to %2dB.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1dB முதல் %2db வரையிலான உங்கள் உள்ளீட்டு சாதனத்தின் ஆதாயத்தை அமைக்க ச்லைடரைப் பயன்படுத்தவும்.</translation>
     </message>
     <message>
         <source>Use slider to set the activation volume for your input device.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் உள்ளீட்டு சாதனத்திற்கான செயல்படுத்தும் அளவை அமைக்க ச்லைடரைப் பயன்படுத்தவும்.</translation>
     </message>
 </context>
@@ -201,7 +190,6 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>QTOX இன் இந்த பதிப்பை அசல் QTOX திட்டத்தின் காப்பகத்தைத் தொடர்ந்து TOKTOK குழுவால் பராமரிக்கப்படுகிறது.</translation>
     </message>
 </context>
@@ -249,52 +237,42 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>This is the public key of your friend, use it to verify their identity via another channel. You can not send this to other people so they can add this contact.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இது உங்கள் நண்பரின் பொது திறவுகோல், மற்றொரு சேனல் வழியாக அவர்களின் அடையாளத்தை சரிபார்க்க இதைப் பயன்படுத்தவும். இதை நீங்கள் மற்றவர்களிடம் அனுப்ப முடியாது, எனவே அவர்கள் இந்த தொடர்பைச் சேர்க்கலாம்.</translation>
     </message>
     <message>
         <source>Public key (not ToxID):</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பொது விசை (நச்சுத்தன்மையல்ல):</translation>
     </message>
     <message>
         <source>Confirmation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உறுதிப்படுத்தல்</translation>
     </message>
     <message>
         <source>Are you sure to remove %1 chat history?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 அரட்டை வரலாற்றை அகற்றுவது உறுதி?</translation>
     </message>
     <message>
         <source>Failed to remove chat history with %1!</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டை வரலாற்றை %1 உடன் அகற்றுவதில் தோல்வி!</translation>
     </message>
     <message>
         <source>Auto-accept files</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தானாக ஏற்றுக்கொள்ளும் கோப்புகள்</translation>
     </message>
     <message>
         <source>Auto-accept for this contact is disabled</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த தொடர்புக்கு தானாக ஏற்றுக்கொள்ளப்பட்டால் முடக்கப்பட்டுள்ளது</translation>
     </message>
     <message>
         <source>Auto-accept call:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தானாக ஏற்றுக்கொள்ளும் அழைப்பு:</translation>
     </message>
     <message>
         <source>Auto-accept conference invites</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தானாக ஏற்றுக்கொள்ளும் மாநாடு அழைக்கிறது</translation>
     </message>
     <message>
         <source>You can save comments about this contact here.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த தொடர்பு குறித்த கருத்துகளை இங்கே சேமிக்கலாம்.</translation>
     </message>
 </context>
@@ -318,22 +296,18 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Open update download link</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதுப்பிப்பு பதிவிறக்க இணைப்பைத் திறக்கவும்</translation>
     </message>
     <message>
         <source>Update available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதுப்பிப்பு கிடைக்கிறது</translation>
     </message>
     <message>
         <source>qTox is up to date ✓</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Qtox புதுப்பித்த நிலையில் உள்ளது</translation>
     </message>
     <message>
         <source>Currently running an untested/unstable version of qTox</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தற்போது QTOX இன் சோதிக்கப்படாத/நிலையற்ற பதிப்பை இயக்குகிறது</translation>
     </message>
 </context>
@@ -386,28 +360,23 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Open contact list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்பு பட்டியல் திறந்த</translation>
     </message>
     <message>
         <source>Couldn&apos;t open file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்பைத் திறக்க முடியவில்லை</translation>
     </message>
     <message>
         <source>Couldn&apos;t open the contact file</source>
         <extracomment>Error message when trying to open a contact list file to import</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்பு கோப்பைத் திறக்க முடியவில்லை</translation>
     </message>
     <message>
         <source>Invalid file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தவறான கோப்பு</translation>
     </message>
     <message>
         <source>We couldn&apos;t find any contacts to import in this file!</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த கோப்பில் இறக்குமதி செய்ய எந்த தொடர்புகளையும் எங்களால் கண்டுபிடிக்க முடியவில்லை!</translation>
     </message>
     <message>
@@ -423,12 +392,10 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Open</source>
         <extracomment>Button to choose a file with a list of contacts to import</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>திற</translation>
     </message>
     <message>
         <source>Send friend requests</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பர் கோரிக்கைகளை அனுப்புங்கள்</translation>
     </message>
     <message>
@@ -438,7 +405,6 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Import a list of contacts, one Tox ID per line</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்புகளின் பட்டியலை இறக்குமதி செய்யுங்கள், ஒரு வரிக்கு ஒரு நச்சு ஐடி</translation>
     </message>
     <message numerus="yes">
@@ -450,24 +416,20 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Import contacts</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்புகளை இறக்குமதி செய்யுங்கள்</translation>
     </message>
     <message>
         <source>Tox ID, 76 hexadecimal characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டாக்ச் ஐடி, 76 எக்சாடெசிமல் எழுத்துக்கள்</translation>
     </message>
     <message>
         <source>%1 Tox ID is invalid</source>
         <comment>Tox address error</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 டக்ச் ஐடி தவறானது</translation>
     </message>
     <message>
         <source>76 hexadecimal characters</source>
         <extracomment>Tox ID format description</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>76 எக்சாடெசிமல் எழுத்துக்கள்</translation>
     </message>
     <message>
@@ -515,27 +477,22 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நீங்கள் என்ன செய்கிறீர்கள் என்று %1 தெரியாவிட்டால், தயவுசெய்து %2 ஐ இங்கே மாற்றவும். இங்கே செய்யப்பட்ட மாற்றங்கள் QTOX உடனான சிக்கல்களுக்கு வழிவகுக்கும், மேலும் உங்கள் தரவின் இழப்புக்கு கூட வழிவகுக்கும், எ.கா. வரலாறு.%3</translation>
     </message>
     <message>
         <source>Changes here are applied only after restarting qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>QTOX ஐ மறுதொடக்கம் செய்த பின்னரே இங்கே மாற்றங்கள் பயன்படுத்தப்படுகின்றன.</translation>
     </message>
     <message>
         <source>Save file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்பை சேமி</translation>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தவறான பதிலாள் முகவரி</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பதிலாள் அமைப்பிற்கு செல்லுபடியாகும் ஐபி முகவரி அல்லது ஓச்ட்பெயரை உள்ளிடவும்.</translation>
     </message>
 </context>
@@ -600,23 +557,19 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Enable LAN discovery</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>லேன் கண்டுபிடிப்பை இயக்கவும்</translation>
     </message>
     <message>
         <source>Connection settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இணைப்பு அமைப்புகள்</translation>
     </message>
     <message>
         <source>Disabling this allows, e.g., Tox over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
         <extracomment>force tcp checkbox tooltip</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இதை முடக்குவது, எ.கா., டோர் மீது டாக்ச் அனுமதிக்கிறது. இருப்பினும் இது டாக்ச் நெட்வொர்க்கில் சுமை சேர்க்கிறது, எனவே தேவைப்படும்போது மட்டுமே தேர்வு செய்யவும்.</translation>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பிழைத்திருத்த கருவிகளை இயக்கவும் (டெவலப்பர்கள் மட்டும்)</translation>
     </message>
 </context>
@@ -624,72 +577,59 @@ which may lead to problems with video calls.</source>
     <name>AppManager</name>
     <message>
         <source>Tox URI to parse</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பாகுபடுத்த டக்ச் யூரி</translation>
     </message>
     <message>
         <source>Starts new instance and loads specified profile.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய நிகழ்வைத் தொடங்குகிறது மற்றும் குறிப்பிட்ட சுயவிவரத்தை ஏற்றுகிறது.</translation>
     </message>
     <message>
         <source>profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரம்</translation>
     </message>
     <message>
         <source>Starts new instance and opens the login screen.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய நிகழ்வைத் தொடங்கி உள்நுழைவுத் திரையைத் திறக்கிறது.</translation>
     </message>
     <message>
         <source>Sets IPv6 &lt;on&gt;/&lt;off&gt;. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>IPv6 &lt;ins&gt;/&lt;off&gt; ஐ அமைக்கிறது. இயல்புநிலை இயக்கத்தில் உள்ளது.</translation>
     </message>
     <message>
         <source>Sets UDP &lt;on&gt;/&lt;off&gt;. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>யுடிபி &lt;ஆன்&gt;/&lt;off&gt; ஐ அமைக்கிறது. இயல்புநிலை இயக்கத்தில் உள்ளது.</translation>
     </message>
     <message>
         <source>Sets LAN discovery &lt;on&gt;/&lt;off&gt;. UDP off overrides. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>லேன் டிச்கவரி &lt;ஆன்&gt;/&lt;off&gt; ஐ அமைக்கிறது. UDP அணை மேலெழுகிறது. இயல்புநிலை இயக்கத்தில் உள்ளது.</translation>
     </message>
     <message>
         <source>Sets proxy settings. Default is NONE.</source>
         <comment>NONE should not be translated, it is a flag value</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பதிலாள் அமைப்புகளை அமைக்கிறது. இயல்புநிலை எதுவுமில்லை.</translation>
     </message>
     <message>
         <source>Error</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பிழை</translation>
     </message>
     <message>
         <source>Failed to load profile automatically.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்தை தானாக ஏற்றுவதில் தோல்வி.</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த நிரல் அண்மைக் கால QTOX பதிப்பை இயக்குகிறதா என்பதை சரிபார்க்கிறது.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>போர்ட்டபிள் பயன்முறையில் தொடங்குகிறது; இந்த கோப்பகத்திலிருந்து சுயவிவரத்தை ஏற்றுகிறது.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பாதை</translation>
     </message>
 </context>
@@ -735,13 +675,11 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Filename contained illegal characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்பு பெயரில் சட்டவிரோத கதாபாத்திரங்கள் இருந்தன</translation>
     </message>
     <message>
         <source>Illegal characters have been changed to _
 so you can save the file on Windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சட்டவிரோத எழுத்துக்கள் _ என மாற்றப்பட்டுள்ளன
  எனவே நீங்கள் சாளரங்களில் கோப்பைச் சேமிக்கலாம்.</translation>
     </message>
@@ -778,7 +716,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>End video call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முடிவு வீடியோ அழைப்பு</translation>
     </message>
     <message>
@@ -882,17 +819,14 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>mute</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முடக்கு</translation>
     </message>
     <message>
         <source>unmute</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஊன்</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பியர் ஐடியை நகலெடுக்கவும்</translation>
     </message>
 </context>
@@ -970,7 +904,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Conference %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மாநாடு %1</translation>
     </message>
     <message>
@@ -998,17 +931,14 @@ so you can save the file on Windows.</source>
     <name>DebugLog</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பிழைத்திருத்த பதிவு</translation>
     </message>
     <message>
         <source>Auto-reload</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தானாக மறு ஏற்றுதல்</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஆட்டோ-ச்க்ரோல்</translation>
     </message>
 </context>
@@ -1016,7 +946,6 @@ so you can save the file on Windows.</source>
     <name>DebugLogForm</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பிழைத்திருத்த பதிவு</translation>
     </message>
 </context>
@@ -1074,7 +1003,6 @@ so you can save the file on Windows.</source>
     <message>
         <source>Remote paused</source>
         <comment>file transfer widget</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொலைநிலை இடைநிறுத்தப்பட்டது</translation>
     </message>
 </context>
@@ -1091,7 +1019,6 @@ so you can save the file on Windows.</source>
     <message>
         <source>Transferred files</source>
         <comment>&quot;Headline&quot; of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மாற்றப்பட்ட கோப்புகள்</translation>
     </message>
 </context>
@@ -1119,7 +1046,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Older than 6 months</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>6 மாதங்களுக்கு மேல் பழையது</translation>
     </message>
 </context>
@@ -1195,7 +1121,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Move to circle &quot;%1&quot;</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>&quot;%1&quot; வட்டத்திற்கு நகர்த்தவும்</translation>
     </message>
     <message>
@@ -1205,7 +1130,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Blocked</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தடுக்கப்பட்டது</translation>
     </message>
 </context>
@@ -1217,7 +1141,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>%1 (no fonts)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 (எழுத்துருக்கள் இல்லை)</translation>
     </message>
     <message>
@@ -1308,29 +1231,24 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Check for updates</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதுப்பிப்புகளை சரிபார்க்கவும்</translation>
     </message>
     <message>
         <source>Spell checking</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எழுத்துப்பிழை சோதனை</translation>
     </message>
     <message>
         <source>Max autoaccept file size (0 to disable):</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அதிகபட்ச ஆட்டோஆக்செப்ட் கோப்பு அளவு (முடக்க 0):</translation>
     </message>
     <message>
         <source> MB</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> எம்பி</translation>
     </message>
     <message>
         <source>After pressing minimize (_) qTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>குறைத்த பிறகு (_) Qtox தட்டில் குறையும்,
  கணினி பணிப்பட்டிக்கு பதிலாக.</translation>
     </message>
@@ -1338,34 +1256,28 @@ instead of system taskbar.</source>
         <source>After pressing close (X) qTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நெருக்கமான (x) Qtox தட்டுக்கு மூடப்பட்ட பிறகு,
  முழுவதுமாக மூடுவதற்கு பதிலாக.</translation>
     </message>
     <message>
         <source>You can set this on a per-friend basis by right clicking individual friends.</source>
         <comment>autoaccept cb tooltip</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தனிப்பட்ட நண்பர்களை வலது சொடுக்கு செய்வதன் மூலம் இதை ஒரு நட்பு அடிப்படையில் அமைக்கலாம்.</translation>
     </message>
     <message>
         <source>Add a chat message when a user joins or leaves a conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஒரு பயனர் சேரும்போது அல்லது ஒரு மாநாட்டை விட்டு வெளியேறும்போது அரட்டை செய்தியைச் சேர்க்கவும்</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மொழிபெயர்ப்பில் பிழைகள் இருப்பதைக் கண்டால் இங்கே சொடுக்கு செய்க, அதை சரிசெய்ய உதவ விரும்பினால்.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மொழிபெயர்க்க உதவுங்கள்</translation>
     </message>
     <message>
         <source> min</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> மணித்துளி</translation>
     </message>
 </context>
@@ -1405,17 +1317,14 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Confirmation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உறுதிப்படுத்தல்</translation>
     </message>
     <message>
         <source>Search in text</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உரையில் தேடுங்கள்</translation>
     </message>
     <message>
         <source>Go to current date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தற்போதைய தேதிக்குச் செல்லுங்கள்</translation>
     </message>
     <message>
@@ -1428,7 +1337,6 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Are you sure that you want to clear all displayed messages?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>காண்பிக்கப்படும் அனைத்து செய்திகளையும் அழிக்க விரும்புகிறீர்கள் என்பதில் உறுதியாக இருக்கிறீர்களா?</translation>
     </message>
 </context>
@@ -1515,37 +1423,30 @@ Profile does not contain your history.</source>
     <message>
         <source>Remove your password and encryption from your profile.</source>
         <comment>Tooltip for the `Remove password` button.</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் சுயவிவரத்திலிருந்து உங்கள் கடவுச்சொல் மற்றும் குறியாக்கத்தை அகற்றவும்.</translation>
     </message>
     <message>
         <source>Name input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பெயர் உள்ளீடு</translation>
     </message>
     <message>
         <source>Name visible to contacts</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்புகளுக்கு பெயர் தெரியும்</translation>
     </message>
     <message>
         <source>Status message input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நிலை செய்தி உள்ளீடு</translation>
     </message>
     <message>
         <source>Your Tox ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் டாக்ச் ஐடி</translation>
     </message>
     <message>
         <source>Save QR image as file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>QR படத்தை கோப்பாக சேமிக்கவும்</translation>
     </message>
     <message>
         <source>Copy QR image to clipboard</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>QR படத்தை இடைநிலைப்பலகைக்கு நகலெடுக்கவும்</translation>
     </message>
     <message>
@@ -1558,39 +1459,32 @@ Profile does not contain your history.</source>
     </message>
     <message>
         <source>Export profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஏற்றுமதி சுயவிவரம்</translation>
     </message>
     <message>
         <source>Remove password from profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்திலிருந்து கடவுச்சொல்லை அகற்று</translation>
     </message>
     <message>
         <source>Change profile password</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவர கடவுச்சொல்லை மாற்றவும்</translation>
     </message>
     <message>
         <source>My name:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>என் பெயர்:</translation>
     </message>
     <message>
         <source>My status:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எனது நிலை:</translation>
     </message>
     <message>
         <source>My profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எனது சுயவிவரம்</translation>
     </message>
     <message>
         <source>This ID allows other Tox users to add and contact you.
 Share it with your friends to begin chatting.</source>
         <comment>Tox ID tooltip</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த ஐடி மற்ற டக்ச் பயனர்களை உங்களைச் சேர்க்கவும் தொடர்பு கொள்ளவும் அனுமதிக்கிறது.
  அரட்டையடிக்கத் தொடங்க அதை உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளுங்கள்.</translation>
     </message>
@@ -1603,12 +1497,10 @@ Share it with your friends to begin chatting.</source>
     <name>LoadHistoryDialog</name>
     <message>
         <source>Load history dialog</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வரலாற்று உரையாடலை ஏற்றவும்</translation>
     </message>
     <message>
         <source>Load history from:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வரலாற்றை ஏற்றவும்:</translation>
     </message>
 </context>
@@ -1616,172 +1508,139 @@ Share it with your friends to begin chatting.</source>
     <name>LoginScreen</name>
     <message>
         <source>Username:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பயனர்பெயர்:</translation>
     </message>
     <message>
         <source>Password:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல்:</translation>
     </message>
     <message>
         <source>Confirm:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உறுதிப்படுத்தவும்:</translation>
     </message>
     <message>
         <source>Password strength: %p%</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் வலிமை: %p %</translation>
     </message>
     <message>
         <source>Create Profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்தை உருவாக்கவும்</translation>
     </message>
     <message>
         <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்தில் கடவுச்சொல் இல்லையென்றால், QTOX உள்நுழைவுத் திரையைத் தவிர்க்கலாம்</translation>
     </message>
     <message>
         <source>Load automatically</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தானாக ஏற்றவும்</translation>
     </message>
     <message>
         <source>Load</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுமை</translation>
     </message>
     <message>
         <source>Load Profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்தை ஏற்றவும்</translation>
     </message>
     <message>
         <source>New Profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய சுயவிவரம்</translation>
     </message>
     <message>
         <source>Couldn&apos;t create a new profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய சுயவிவரத்தை உருவாக்க முடியவில்லை</translation>
     </message>
     <message>
         <source>The username must not be empty.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பயனர்பெயர் காலியாக இருக்கக்கூடாது.</translation>
     </message>
     <message>
         <source>The password must be at least 6 characters long.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் குறைந்தது 6 எழுத்துக்கள் நீளமாக இருக்க வேண்டும்.</translation>
     </message>
     <message>
         <source>A profile with this name already exists.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த பெயருடன் ஒரு சுயவிவரம் ஏற்கனவே உள்ளது.</translation>
     </message>
     <message>
         <source>Password protected profiles can&apos;t be automatically loaded.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் பாதுகாக்கப்பட்ட சுயவிவரங்களை தானாக ஏற்ற முடியாது.</translation>
     </message>
     <message>
         <source>There is no selected profile.
 
 You may want to create one.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தேர்ந்தெடுக்கப்பட்ட சுயவிவரம் இல்லை.
 
  நீங்கள் ஒன்றை உருவாக்க விரும்பலாம்.</translation>
     </message>
     <message>
         <source>Couldn&apos;t load this profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த சுயவிவரத்தை ஏற்ற முடியவில்லை</translation>
     </message>
     <message>
         <source>This profile is already in use.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த சுயவிவரம் ஏற்கனவே பயன்பாட்டில் உள்ளது.</translation>
     </message>
     <message>
         <source>Wrong password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தவறான கடவுச்சொல்.</translation>
     </message>
     <message>
         <source>Import</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இறக்குமதி</translation>
     </message>
     <message>
         <source>Username input field</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பயனர்பெயர் உள்ளீட்டு புலம்</translation>
     </message>
     <message>
         <source>Password input field, you can leave it empty (no password), or type at least 6 characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் உள்ளீட்டு புலம், நீங்கள் அதை காலியாக விடலாம் (கடவுச்சொல் இல்லை) அல்லது குறைந்தது 6 எழுத்துக்களைத் தட்டச்சு செய்யலாம்</translation>
     </message>
     <message>
         <source>Password confirmation field</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் உறுதிப்படுத்தல் புலம்</translation>
     </message>
     <message>
         <source>Create a new profile button</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய சுயவிவர பொத்தானை உருவாக்கவும்</translation>
     </message>
     <message>
         <source>Profile list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவர பட்டியல்</translation>
     </message>
     <message>
         <source>List of profiles</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரங்களின் பட்டியல்</translation>
     </message>
     <message>
         <source>Password input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் உள்ளீடு</translation>
     </message>
     <message>
         <source>Load automatically checkbox</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தானாகவே தேர்வுப்பெட்டியை ஏற்றவும்</translation>
     </message>
     <message>
         <source>Import profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்தை இறக்குமதி செய்யுங்கள்</translation>
     </message>
     <message>
         <source>Load selected profile button</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தேர்ந்தெடுக்கப்பட்ட சுயவிவர பொத்தானை ஏற்றவும்</translation>
     </message>
     <message>
         <source>New profile creation page</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய சுயவிவர உருவாக்கம் பக்கம்</translation>
     </message>
     <message>
         <source>Loading existing profile page</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இருக்கும் சுயவிவரப் பக்கத்தை ஏற்றுகிறது</translation>
     </message>
     <message>
         <source>The passwords you&apos;ve entered are different.
 Please make sure to enter the same password twice.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நீங்கள் உள்ளிட்ட கடவுச்சொற்கள் வேறுபட்டவை.
  அதே கடவுச்சொல்லை இரண்டு முறை உள்ளிடவும்.</translation>
     </message>
@@ -1806,122 +1665,98 @@ Press Shift+F1 for more information.</source>
     <name>MainWindow</name>
     <message>
         <source>Your name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் பெயர்</translation>
     </message>
     <message>
         <source>Your status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் நிலை</translation>
     </message>
     <message>
         <source>Create a conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஒரு மாநாட்டை உருவாக்கவும்</translation>
     </message>
     <message>
         <source>View completed file transfers</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நிறைவு செய்யப்பட்ட கோப்பு இடமாற்றங்களைக் காண்க</translation>
     </message>
     <message>
         <source>Change your settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் அமைப்புகளை மாற்றவும்</translation>
     </message>
     <message>
         <source>Close</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மூடு</translation>
     </message>
     <message>
         <source>Open profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>திறந்த சுயவிவரம்</translation>
     </message>
     <message>
         <source>Open profile page when clicked</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சொடுக்கு செய்யும் போது சுயவிவரப் பக்கத்தைத் திறக்கவும்</translation>
     </message>
     <message>
         <source>Status message input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நிலை செய்தி உள்ளீடு</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மற்றவர்களுக்கு காண்பிக்கப்படும் உங்கள் நிலை செய்தியை அமைக்கவும்</translation>
     </message>
     <message>
         <source>Status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நிலை</translation>
     </message>
     <message>
         <source>Set availability status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கிடைக்கும் நிலையை அமைக்கவும்</translation>
     </message>
     <message>
         <source>Contact search</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்பு தேடல்</translation>
     </message>
     <message>
         <source>Contact search input for known friends</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அறியப்பட்ட நண்பர்களுக்கான தேடல் உள்ளீட்டைத் தொடர்பு கொள்ளுங்கள்</translation>
     </message>
     <message>
         <source>Sorting and visibility</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வரிசையாக்கம் மற்றும் தெரிவுநிலை</translation>
     </message>
     <message>
         <source>Set friends sorting and visibility</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பர்களை வரிசைப்படுத்துதல் மற்றும் தெரிவுநிலையை அமைக்கவும்</translation>
     </message>
     <message>
         <source>Open Add friends page</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பர்களின் பக்கத்தைத் திறக்கவும்</translation>
     </message>
     <message>
         <source>Conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மாநாடு</translation>
     </message>
     <message>
         <source>Open conference management page</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மாநாட்டு மேலாண்மை பக்கத்தைத் திறக்கவும்</translation>
     </message>
     <message>
         <source>File transfers history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்பு இடமாற்றம் வரலாறு</translation>
     </message>
     <message>
         <source>Open File transfers history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>திறந்த கோப்பு இடமாற்றம் வரலாறு</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அமைப்புகள்</translation>
     </message>
     <message>
         <source>Open Settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>திறந்த அமைப்புகள்</translation>
     </message>
     <message>
         <source>Open internal debugging tools</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உள் பிழைத்திருத்த கருவிகளைத் திறக்கவும்</translation>
     </message>
     <message>
@@ -1930,7 +1765,6 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Open Debugger</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>திறந்த பிழைத்திருத்தம்</translation>
     </message>
     <message>
@@ -1943,13 +1777,11 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>Executable file</source>
         <comment>popup title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இயங்கக்கூடிய கோப்பு</translation>
     </message>
     <message>
         <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இயங்கக்கூடிய கோப்பைத் திறக்க QTOX ஐ கேட்டுள்ளீர்கள். இயங்கக்கூடிய கோப்புகள் உங்கள் கணினியை சேதப்படுத்தும். இந்த கோப்பை நீங்கள் நிச்சயமாக திறக்க விரும்புகிறீர்களா?</translation>
     </message>
 </context>
@@ -1961,17 +1793,14 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Full Screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முழுத் திரை</translation>
     </message>
     <message>
         <source>Toggle video preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வீடியோ முன்னோட்டத்தை மாற்றவும்</translation>
     </message>
     <message>
         <source>Mute audio</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முடக்கு ஆடியோ</translation>
     </message>
     <message>
@@ -1980,22 +1809,18 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>End video call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முடிவு வீடியோ அழைப்பு</translation>
     </message>
     <message>
         <source>Exit full screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முழுத் திரையில் வெளியேறவும்</translation>
     </message>
     <message>
         <source>Hide messages</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>செய்திகளை மறைக்கவும்</translation>
     </message>
     <message>
         <source>Show messages</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>செய்திகளைக் காட்டு</translation>
     </message>
 </context>
@@ -2004,35 +1829,29 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>View</source>
         <comment>macOS Menu bar</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பார்வை</translation>
     </message>
     <message>
         <source>Window</source>
         <comment>macOS Menu bar</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சாளரம்</translation>
     </message>
     <message>
         <source>Minimize</source>
         <comment>macOS Menu bar</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>குறைக்கவும்</translation>
     </message>
     <message>
         <source>Bring All to Front</source>
         <comment>macOS Menu bar</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அனைத்தையும் முன்னால் கொண்டு வாருங்கள்</translation>
     </message>
     <message>
         <source>Exit Full Screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முழுத் திரையில் வெளியேறவும்</translation>
     </message>
     <message>
         <source>Enter Full Screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முழுத் திரையை உள்ளிடவும்</translation>
     </message>
 </context>
@@ -2054,43 +1873,35 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>New conference message</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய மாநாட்டு செய்தி</translation>
     </message>
     <message>
         <source>Incoming file transfer</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உள்வரும் கோப்பு பரிமாற்றம்</translation>
     </message>
     <message>
         <source>%1 - file transfer</source>
         <extracomment>e.g. Bob - file transfer</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 - கோப்பு பரிமாற்றம்</translation>
     </message>
     <message>
         <source>Conference invite received</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மாநாட்டு அழைப்பு பெறப்பட்டது</translation>
     </message>
     <message>
         <source>%1 invites you to join a conference.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 ஒரு மாநாட்டில் சேர உங்களை அழைக்கிறது.</translation>
     </message>
     <message>
         <source>Friend request received</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பர் கோரிக்கை பெறப்பட்டது</translation>
     </message>
     <message>
         <source>Friend request received from %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பர் கோரிக்கை %1 இலிருந்து பெறப்பட்டது</translation>
     </message>
     <message>
         <source>Incoming call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உள்வரும் அழைப்பு</translation>
     </message>
 </context>
@@ -2098,7 +1909,6 @@ Press Shift+F1 for more information.</source>
     <name>PasswordEdit</name>
     <message>
         <source>Caps-lock enabled</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கேப்ச்-லாக் இயக்கப்பட்டது</translation>
     </message>
 </context>
@@ -2106,17 +1916,14 @@ Press Shift+F1 for more information.</source>
     <name>PrivacyForm</name>
     <message>
         <source>Privacy</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தனியுரிமை</translation>
     </message>
     <message>
         <source>Confirmation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உறுதிப்படுத்தல்</translation>
     </message>
     <message>
         <source>Do you want to permanently delete all chat history?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எல்லா அரட்டை வரலாற்றையும் நிரந்தரமாக நீக்க விரும்புகிறீர்களா?</translation>
     </message>
 </context>
@@ -2125,17 +1932,14 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>Your friends will be able to see when you are typing.</source>
         <comment>tooltip for typing notifications setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நீங்கள் தட்டச்சு செய்யும் போது உங்கள் நண்பர்கள் பார்க்க முடியும்.</translation>
     </message>
     <message>
         <source>Send typing notifications</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தட்டச்சு அறிவிப்புகளை அனுப்பவும்</translation>
     </message>
     <message>
         <source>Keep chat history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டை வரலாற்றை வைத்திருங்கள்</translation>
     </message>
     <message>
@@ -2143,49 +1947,41 @@ Press Shift+F1 for more information.</source>
 If you are being spammed with friend requests, you should change your NoSpam.
 People will be unable to add you with your old ID, but you will keep your current friends.</source>
         <comment>toolTip for nospam</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நோச்பாம் உங்கள் நச்சு ஐடியின் ஒரு பகுதியாகும்.
  நண்பர் கோரிக்கைகளுடன் நீங்கள் ச்பேம் செய்யப்பட்டால், உங்கள் நோச்பாம் மாற்ற வேண்டும்.
  உங்கள் பழைய ஐடியை மக்கள் சேர்க்க முடியாது, ஆனால் உங்கள் தற்போதைய நண்பர்களை நீங்கள் வைத்திருப்பீர்கள்.</translation>
     </message>
     <message>
         <source>NoSpam</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நோச்பாம்</translation>
     </message>
     <message>
         <source>NoSpam is a part of your ID that can be changed at will.
 If you are getting spammed with friend requests, change the NoSpam.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நோச்பாம் உங்கள் ஐடியின் ஒரு பகுதியாகும், இது விருப்பப்படி மாற்றப்படலாம்.
  நண்பர் கோரிக்கைகளுடன் நீங்கள் ச்பேம் பெறுகிறீர்கள் என்றால், நோச்பாம் மாற்றவும்.</translation>
     </message>
     <message>
         <source>Generate random NoSpam</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சீரற்ற நோச்பாம் உருவாக்கு</translation>
     </message>
     <message>
         <source>Chat history keeping is still in development.
 Save format changes are possible, which may result in data loss.</source>
         <comment>toolTip for Keep History setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டை வரலாறு வைத்திருப்பது இன்னும் வளர்ச்சியில் உள்ளது.
  வடிவமைப்பு மாற்றங்களைச் சேமிக்கவும் சாத்தியமாகும், இது தரவு இழப்பை ஏற்படுத்தக்கூடும்.</translation>
     </message>
     <message>
         <source>Privacy</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தனியுரிமை</translation>
     </message>
     <message>
         <source>Conference block list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மாநாட்டு தொகுதி பட்டியல்</translation>
     </message>
     <message>
         <source>Filter out conference messages by conference members&apos; public keys. Put public keys here, one per line.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மாநாட்டு உறுப்பினர்களின் பொது விசைகள் மாநாட்டு செய்திகளை வடிகட்டவும். பொது விசைகளை இங்கே வைக்கவும், ஒரு வரிக்கு ஒன்று.</translation>
     </message>
 </context>
@@ -2193,7 +1989,6 @@ Save format changes are possible, which may result in data loss.</source>
     <name>Profile</name>
     <message>
         <source>Failed to derive key from password, the profile won&apos;t use the new password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல்லிலிருந்து விசையைப் பெறுவதில் தோல்வி, சுயவிவரம் புதிய கடவுச்சொல்லைப் பயன்படுத்தாது.</translation>
     </message>
     <message>
@@ -2202,7 +1997,6 @@ Save format changes are possible, which may result in data loss.</source>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தரவுத்தள கடவுச்சொல்லை மாற்ற முடியவில்லை, அது சிதைக்கப்படலாம் அல்லது பழைய கடவுச்சொல்லைப் பயன்படுத்தலாம்.</translation>
     </message>
 </context>
@@ -2210,89 +2004,73 @@ Save format changes are possible, which may result in data loss.</source>
     <name>ProfileForm</name>
     <message>
         <source>Choose a profile picture</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரப் படத்தைத் தேர்வுசெய்க</translation>
     </message>
     <message>
         <source>Error</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பிழை</translation>
     </message>
     <message>
         <source>Rename &quot;%1&quot;</source>
         <comment>renaming a profile</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>&quot;%1&quot; என மறுபெயரிடுங்கள்</translation>
     </message>
     <message>
         <source>Unable to open this file.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த கோப்பைத் திறக்க முடியவில்லை.</translation>
     </message>
     <message>
         <source>Current profile: </source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தற்போதைய சுயவிவரம்: </translation>
     </message>
     <message>
         <source>Remove</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அகற்று</translation>
     </message>
     <message>
         <source>Unable to read this image.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த படத்தைப் படிக்க முடியவில்லை.</translation>
     </message>
     <message>
         <source>The supplied image is too large.
 Please use another image.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வழங்கப்பட்ட படம் மிகப் பெரியது.
  மற்றொரு படத்தைப் பயன்படுத்தவும்.</translation>
     </message>
     <message>
         <source>Couldn&apos;t rename the profile to &quot;%1&quot;</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்தை &quot;%1&quot; என்று மறுபெயரிட முடியவில்லை</translation>
     </message>
     <message>
         <source>Nothing to remove</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அகற்ற எதுவும் இல்லை</translation>
     </message>
     <message>
         <source>Your profile does not have a password!</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் சுயவிவரத்தில் கடவுச்சொல் இல்லை!</translation>
     </message>
     <message>
         <source>Please enter a new password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய கடவுச்சொல்லை உள்ளிடவும்.</translation>
     </message>
     <message>
         <source>Are you sure you want to delete this profile?</source>
         <comment>deletion confirmation text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த சுயவிவரத்தை நீக்க விரும்புகிறீர்களா?</translation>
     </message>
     <message>
         <source>Save</source>
         <comment>save qr image</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சேமி</translation>
     </message>
     <message>
         <source>Save QrCode (*.png)</source>
         <comment>save dialog filter</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Qrcode (*.png) ஐ சேமிக்கவும்</translation>
     </message>
     <message>
         <source>Files could not be deleted!</source>
         <comment>deletion failed title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்புகளை நீக்க முடியவில்லை!</translation>
     </message>
     <message>
@@ -2303,113 +2081,92 @@ Please use another image.</source>
     <message>
         <source>Set profile password</source>
         <comment>button text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவர கடவுச்சொல்லை அமைக்கவும்</translation>
     </message>
     <message>
         <source>Current profile location: %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தற்போதைய சுயவிவர இடம்: %1</translation>
     </message>
     <message>
         <source>Couldn&apos;t change password</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல்லை மாற்ற முடியவில்லை</translation>
     </message>
     <message>
         <source>Empty path is unavailable</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வெற்று பாதை கிடைக்கவில்லை</translation>
     </message>
     <message>
         <source>Failed to rename</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மறுபெயரிடுவதில் தோல்வி</translation>
     </message>
     <message>
         <source>Profile already exists</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரம் ஏற்கனவே உள்ளது</translation>
     </message>
     <message>
         <source>A profile named &quot;%1&quot; already exists.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>&quot;%1&quot; என்ற சுயவிவரம் ஏற்கனவே உள்ளது.</translation>
     </message>
     <message>
         <source>Empty name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வெற்று பெயர்</translation>
     </message>
     <message>
         <source>Empty name is unavailable</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வெற்று பெயர் கிடைக்கவில்லை</translation>
     </message>
     <message>
         <source>Empty path</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வெற்று பாதை</translation>
     </message>
     <message>
         <source>Export profile</source>
         <extracomment>save dialog title</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஏற்றுமதி சுயவிவரம்</translation>
     </message>
     <message>
         <source>Tox save file (*.tox)</source>
         <extracomment>save dialog filter</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டாக்ச் சேமி கோப்பு (*.tox)</translation>
     </message>
     <message>
         <source>The following files could not be deleted:</source>
         <extracomment>deletion failed text part 1</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பின்வரும் கோப்புகளை நீக்க முடியவில்லை:</translation>
     </message>
     <message>
         <source>Please manually remove them.</source>
         <extracomment>deletion failed text part 2</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தயவுசெய்து அவற்றை கைமுறையாக அகற்றவும்.</translation>
     </message>
     <message>
         <source>Images (%1)</source>
         <comment>filetype filter</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>படங்கள் (%1)</translation>
     </message>
     <message>
         <source>Failed to save file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்பைச் சேமிப்பதில் தோல்வி</translation>
     </message>
     <message>
         <source>The file you chose could not be saved.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நீங்கள் தேர்ந்தெடுத்த கோப்பை சேமிக்க முடியாது.</translation>
     </message>
     <message>
         <source>Empty path is unavailable.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வெற்று பாதை கிடைக்கவில்லை.</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தரவுத்தள கடவுச்சொல்லை மாற்ற முடியவில்லை, அது சிதைக்கப்படலாம் அல்லது பழைய கடவுச்சொல்லைப் பயன்படுத்தலாம்.</translation>
     </message>
     <message>
         <source>Tox user names cannot exceed %1 characters.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டக்ச் பயனர் பெயர்கள் %1 எழுத்துக்களைத் தாண்டக்கூடாது.</translation>
     </message>
     <message>
         <source>Delete profile</source>
         <comment>deletion confirmation title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்தை நீக்கு</translation>
     </message>
     <message>
@@ -2420,7 +2177,6 @@ Please use another image.</source>
     <message>
         <source>Are you sure you want to remove your password?</source>
         <extracomment>deletion confirmation text</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் கடவுச்சொல்லை அகற்ற விரும்புகிறீர்களா?</translation>
     </message>
     <message>
@@ -2428,7 +2184,6 @@ Please use another image.</source>
 Share it with your friends to begin chatting.
 
 This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இந்த ஐடி மற்ற டக்ச் பயனர்களை உங்களைச் சேர்க்கவும் தொடர்பு கொள்ளவும் அனுமதிக்கிறது.
  அரட்டையடிக்கத் தொடங்க அதை உங்கள் நண்பர்களுடன் பகிர்ந்து கொள்ளுங்கள்.
 
@@ -2440,57 +2195,47 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Import profile</source>
         <comment>import dialog title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்தை இறக்குமதி செய்யுங்கள்</translation>
     </message>
     <message>
         <source>Tox save file (*.tox)</source>
         <comment>import dialog filter</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டாக்ச் சேமி கோப்பு (*.tox)</translation>
     </message>
     <message>
         <source>Ignoring non-Tox file</source>
         <comment>popup title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டாக்ச் அல்லாத கோப்பை புறக்கணித்தல்</translation>
     </message>
     <message>
         <source>Warning: You have chosen a file that is not a Tox save file; ignoring.</source>
         <comment>popup text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எச்சரிக்கை: ஒரு டாக்ச் சேமிக்கும் கோப்பு இல்லாத கோப்பை நீங்கள் தேர்ந்தெடுத்துள்ளீர்கள்; புறக்கணித்தல்.</translation>
     </message>
     <message>
         <source>Profile already exists</source>
         <comment>import confirm title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரம் ஏற்கனவே உள்ளது</translation>
     </message>
     <message>
         <source>A profile named &quot;%1&quot; already exists. Do you want to erase it?</source>
         <comment>import confirm text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>&quot;%1&quot; என்ற சுயவிவரம் ஏற்கனவே உள்ளது. நீங்கள் அதை அழிக்க விரும்புகிறீர்களா?</translation>
     </message>
     <message>
         <source>File doesn&apos;t exist</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்பு இல்லை</translation>
     </message>
     <message>
         <source>Profile doesn&apos;t exist</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரம் இல்லை</translation>
     </message>
     <message>
         <source>Profile imported</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரம் இறக்குமதி செய்யப்பட்டது</translation>
     </message>
     <message>
         <source>%1.tox was successfully imported</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1. டாக்ச் வெற்றிகரமாக இறக்குமதி செய்யப்பட்டது</translation>
     </message>
 </context>
@@ -2498,12 +2243,10 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>QApplication</name>
     <message>
         <source>Ok</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சரி</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ரத்துசெய்</translation>
     </message>
     <message>
@@ -2541,7 +2284,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>%1 is not a valid Tox address.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 என்பது செல்லுபடியாகும் நச்சு முகவரி அல்ல.</translation>
     </message>
 </context>
@@ -2549,32 +2291,26 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>QObject</name>
     <message>
         <source>Default</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இயல்புநிலை</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நீலம்</translation>
     </message>
     <message>
         <source>Olive</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஆலிவ்</translation>
     </message>
     <message>
         <source>Red</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சிவப்பு</translation>
     </message>
     <message>
         <source>Violet</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கத்தரி</translation>
     </message>
     <message>
         <source>Incoming call...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உள்வரும் அழைப்பு ...</translation>
     </message>
     <message>
@@ -2590,42 +2326,34 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Desktop</source>
         <comment>Desktop as a camera input for screen sharing</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டெச்க்டாப்</translation>
     </message>
     <message>
         <source>Error</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பிழை</translation>
     </message>
     <message>
         <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Qtox உங்கள் அரட்டை பதிவுகளைத் திறக்க முடியவில்லை, அவை முடக்கப்படும்.</translation>
     </message>
     <message>
         <source>Dark</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இருண்ட</translation>
     </message>
     <message>
         <source>Dark blue</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அடர் நீலம்</translation>
     </message>
     <message>
         <source>Dark olive</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இருண்ட ஆலிவ்</translation>
     </message>
     <message>
         <source>Dark red</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இருண்ட சிவப்பு</translation>
     </message>
     <message>
         <source>Dark violet</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இருண்ட வயலட்</translation>
     </message>
     <message>
@@ -2651,13 +2379,11 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>blocked</source>
         <comment>contact status</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தடுக்கப்பட்டது</translation>
     </message>
     <message>
         <source>Reformatting text...</source>
         <comment>Waiting for text to be reformatted</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உரை மறுவடிவமைப்பு ...</translation>
     </message>
     <message>
@@ -2666,22 +2392,18 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>%1 has joined the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 மாநாட்டில் சேர்ந்துள்ளது</translation>
     </message>
     <message>
         <source>%1 has left the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 மாநாட்டை விட்டு வெளியேறுகிறது</translation>
     </message>
     <message>
         <source>%1 is now known as %2</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 இப்போது %2 என அழைக்கப்படுகிறது</translation>
     </message>
     <message>
         <source>%1 has set the title to %2</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 தலைப்பை %2 ஆக அமைத்துள்ளது</translation>
     </message>
     <message>
@@ -2690,7 +2412,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Call with %1 ended unexpectedly. %2</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 உடன் அழைப்பு எதிர்பாராத விதமாக முடிந்தது. %2</translation>
     </message>
     <message>
@@ -2712,7 +2433,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Message failed to send</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>செய்தி அனுப்பத் தவறிவிட்டது</translation>
     </message>
     <message>
@@ -2722,27 +2442,22 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Initializing</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>துவக்குதல்</translation>
     </message>
     <message>
         <source>Transmitting</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடத்துதல்</translation>
     </message>
     <message>
         <source>Finished</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முடிந்தது</translation>
     </message>
     <message>
         <source>Broken</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உடைந்த</translation>
     </message>
     <message>
         <source>Canceled</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ரத்து செய்யப்பட்டது</translation>
     </message>
     <message>
@@ -2751,62 +2466,50 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Remote paused</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொலைநிலை இடைநிறுத்தப்பட்டது</translation>
     </message>
     <message>
         <source>File Name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்பு பெயர்</translation>
     </message>
     <message>
         <source>Contact</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்பு</translation>
     </message>
     <message>
         <source>Progress</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முன்னேற்றம்</translation>
     </message>
     <message>
         <source>Size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அளவு</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வேகம்</translation>
     </message>
     <message>
         <source>Status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நிலை</translation>
     </message>
     <message>
         <source>Control</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கட்டுப்பாடு</translation>
     </message>
     <message>
         <source>You have joined the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நீங்கள் மாநாட்டில் சேர்ந்துள்ளீர்கள்</translation>
     </message>
     <message>
         <source>You have left the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நீங்கள் மாநாட்டை விட்டு வெளியேறிவிட்டீர்கள்</translation>
     </message>
     <message>
         <source>Failed to load chat history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டை வரலாற்றை ஏற்றுவதில் தோல்வி</translation>
     </message>
     <message>
         <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தரவுத்தள பதிப்பு (%1) நாம் தற்போது ஆதரிப்பதை விட புதியது (%2). Qtox ஐ மேம்படுத்தவும்.</translation>
     </message>
 </context>
@@ -2818,22 +2521,18 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Remove all chat history with the friend if set</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அமைக்கப்பட்டால் அனைத்து அரட்டை வரலாற்றையும் நண்பருடன் அகற்றவும்</translation>
     </message>
     <message>
         <source>Also remove chat history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டை வரலாற்றையும் அகற்றவும்</translation>
     </message>
     <message>
         <source>Are you sure you want to remove %1 from your contacts list?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் தொடர்புகள் பட்டியலிலிருந்து %1 ஐ அகற்ற விரும்புகிறீர்களா?</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அகற்று</translation>
     </message>
 </context>
@@ -2842,31 +2541,26 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஒரு பகுதியைத் தேர்ந்தெடுக்க சொடுக்கு செய்து இழுக்கவும். QTOX சாளரத்தை மறைக்க/காட்ட %1 ஐ அழுத்தவும் அல்லது ரத்து செய்ய %2 ஐ அழுத்தவும்.</translation>
     </message>
     <message>
         <source>Space</source>
         <comment>[Space] key on the keyboard</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இடைவெளி</translation>
     </message>
     <message>
         <source>Escape</source>
         <comment>[Escape] key on the keyboard</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தப்பிக்கும்</translation>
     </message>
     <message>
         <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தேர்வின் திரை சாட்டை அனுப்ப %1 ஐ அழுத்தவும், QTOX சாளரத்தை மறைக்க/காட்ட %2 அல்லது ரத்து செய்ய %3 ஐ அழுத்தவும்.</translation>
     </message>
     <message>
         <source>Enter</source>
         <comment>[Enter] key on the keyboard</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உள்ளிடவும்</translation>
     </message>
 </context>
@@ -2874,12 +2568,10 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>SearchForm</name>
     <message>
         <source>The text could not be found.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உரையைக் கண்டுபிடிக்க முடியவில்லை.</translation>
     </message>
     <message>
         <source>Start</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடங்கு</translation>
     </message>
 </context>
@@ -2887,52 +2579,42 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>SearchSettingsForm</name>
     <message>
         <source>Start search:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தேடலைத் தொடங்கு:</translation>
     </message>
     <message>
         <source>from the end</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இறுதியில் இருந்து</translation>
     </message>
     <message>
         <source>from the beginning</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஆரம்பத்தில் இருந்தே</translation>
     </message>
     <message>
         <source>after date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தேதிக்குப் பிறகு</translation>
     </message>
     <message>
         <source>before date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தேதிக்கு முன்</translation>
     </message>
     <message>
         <source>Case sensitive</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வழக்கு உணர்திறன்</translation>
     </message>
     <message>
         <source>Whole words only</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முழு வார்த்தைகளும் மட்டுமே</translation>
     </message>
     <message>
         <source>Use regular expressions</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வழக்கமான வெளிப்பாடுகளைப் பயன்படுத்துங்கள்</translation>
     </message>
     <message>
         <source>Select Date Dialog</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தேதி உரையாடலைத் தேர்ந்தெடுக்கவும்</translation>
     </message>
     <message>
         <source>Select a date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தேதியைத் தேர்ந்தெடுக்கவும்</translation>
     </message>
 </context>
@@ -2940,47 +2622,38 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>SetPasswordDialog</name>
     <message>
         <source>Confirm:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உறுதிப்படுத்தவும்:</translation>
     </message>
     <message>
         <source>Password:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல்:</translation>
     </message>
     <message>
         <source>Password strength: %p%</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் வலிமை: %p %</translation>
     </message>
     <message>
         <source>The password doesn&apos;t match.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் பொருந்தவில்லை.</translation>
     </message>
     <message>
         <source>Confirm password</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல்லை உறுதிப்படுத்தவும்</translation>
     </message>
     <message>
         <source>Confirm password input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் உள்ளீட்டை உறுதிப்படுத்தவும்</translation>
     </message>
     <message>
         <source>Password input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் உள்ளீடு</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் உள்ளீட்டு புலம், குறைந்தபட்சம் 6 எழுத்துக்கள் நீளம்</translation>
     </message>
     <message>
         <source>The password is too short.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கடவுச்சொல் மிகக் குறைவு.</translation>
     </message>
     <message>
@@ -2992,22 +2665,18 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>Settings</name>
     <message>
         <source>Circle #%1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வட்டம் #%1</translation>
     </message>
     <message>
         <source>Failed to load personal settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தனிப்பட்ட அமைப்புகளை ஏற்றுவதில் தோல்வி</translation>
     </message>
     <message>
         <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பதிப்பு %1 முதல் பதிப்பு %2 வரை அமைப்புகளை மேம்படுத்த முடியவில்லை. Qtox ஐத் தொடங்க முடியாது.</translation>
     </message>
     <message>
         <source>Failed to load global settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உலகளாவிய அமைப்புகளை ஏற்றுவதில் தோல்வி</translation>
     </message>
 </context>
@@ -3015,7 +2684,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>ToxURIDialog</name>
     <message>
         <source>Do you want to add %1 as a friend?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பராக %1 ஐ சேர்க்க விரும்புகிறீர்களா?</translation>
     </message>
     <message>
@@ -3029,13 +2697,11 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Send</source>
         <comment>Send a friend request</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அனுப்பு</translation>
     </message>
     <message>
         <source>Cancel</source>
         <comment>Don&apos;t send a friend request</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ரத்துசெய்</translation>
     </message>
     <message>
@@ -3052,7 +2718,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>User Interface</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பயனர் இடைமுகம்</translation>
     </message>
 </context>
@@ -3060,17 +2725,14 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>UserInterfaceSettings</name>
     <message>
         <source>Chat</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டை</translation>
     </message>
     <message>
         <source>Base font:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அடிப்படை எழுத்துரு:</translation>
     </message>
     <message>
         <source>Size: </source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அளவு: </translation>
     </message>
     <message>
@@ -3086,7 +2748,6 @@ Show formatting characters:
 Hide formatting characters:
     Apply formatting and don&apos;t show characters.
     E.g. &quot;**text**&quot; will show as &quot;text&quot;, bold.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>QTOX மறுதொடக்கம் செய்யும் வரை புதிய உரை ச்டைலிங் விருப்பம் அரட்டை வரலாற்றில் ஏற்றப்படாது.
 இது உடனடியாகப் புதிய செய்திகளைப் பாதிக்கும்.
 
@@ -3102,27 +2763,22 @@ Hide formatting characters:
     </message>
     <message>
         <source>Text styling:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உரை ச்டைலிங்:</translation>
     </message>
     <message>
         <source>Select text styling preference.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உரை ச்டைலிங் விருப்பத்தைத் தேர்ந்தெடுக்கவும்.</translation>
     </message>
     <message>
         <source>Plaintext</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எளிய உரை</translation>
     </message>
     <message>
         <source>Show formatting characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வடிவமைப்பு எழுத்துக்களைக் காட்டு</translation>
     </message>
     <message>
         <source>Hide formatting characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வடிவமைப்பு எழுத்துக்களை மறைக்கவும்</translation>
     </message>
     <message>
@@ -3132,109 +2788,88 @@ Hide formatting characters:
     <message>
         <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நீங்கள் ஒரு புதிய செய்தியைப் பெறும்போது QTOX இன் சாளரத்தைத் திறக்கவும், சாளரமும் இன்னும் திறக்கப்படவில்லை.</translation>
     </message>
     <message>
         <source>Open window</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>திறந்த சாளரம்</translation>
     </message>
     <message>
         <source>Contact list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்பு பட்டியல்</translation>
     </message>
     <message>
         <source>Place conferences at top of friend list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பர் பட்டியலில் முதலிடத்தில் மாநாடுகளை வைக்கவும்</translation>
     </message>
     <message>
         <source>Your contact list will be shown in compact mode (small avatars, tabular view).</source>
         <comment>toolTip for compact layout setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் தொடர்பு பட்டியல் சிறிய பயன்முறையில் (சிறிய அவதாரங்கள், அட்டவணை பார்வை) காண்பிக்கப்படும்.</translation>
     </message>
     <message>
         <source>Compact contact list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சிறிய தொடர்பு பட்டியல்</translation>
     </message>
     <message>
         <source>Multiple windows mode</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பல சாளரங்கள் பயன்முறை</translation>
     </message>
     <message>
         <source>Open each chat in an individual window</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஒவ்வொரு அரட்டையையும் ஒரு தனிப்பட்ட சாளரத்தில் திறக்கவும்</translation>
     </message>
     <message>
         <source>Emoticons</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எமோடிகான்கள்</translation>
     </message>
     <message>
         <source>Use emoticons</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எமோடிகான்களைப் பயன்படுத்துங்கள்</translation>
     </message>
     <message>
         <source>Emoticon size:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எமோடிகான் அளவு:</translation>
     </message>
     <message>
         <source> px</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> பி.எக்ச்</translation>
     </message>
     <message>
         <source>Theme</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கருப்பொருள்</translation>
     </message>
     <message>
         <source>Style:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ச்டைல்:</translation>
     </message>
     <message>
         <source>Theme color:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கருப்பொருள் நிறம்:</translation>
     </message>
     <message>
         <source>Timestamp format:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நேர முத்திரை வடிவம்:</translation>
     </message>
     <message>
         <source>Date format:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தேதி வடிவம்:</translation>
     </message>
     <message>
         <source>Use identicons instead of empty avatars</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வெற்று அவதாரங்களுக்கு பதிலாக அடையாளங்களை பயன்படுத்தவும்</translation>
     </message>
     <message>
         <source>Show a notification when you receive a new message, call, or friend request and the window is not selected.</source>
         <comment>tooltip for Notify setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நீங்கள் ஒரு புதிய செய்தி, அழைப்பு அல்லது நண்பர் கோரிக்கையைப் பெறும்போது அறிவிப்பைக் காட்டுங்கள், சாளரம் தேர்ந்தெடுக்கப்படவில்லை.</translation>
     </message>
     <message>
         <source>Notify</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அறிவிக்கவும்</translation>
     </message>
     <message>
         <source>Conferences only notify when mentioned</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>குறிப்பிடப்படும்போது மட்டுமே மாநாடுகள் அறிவிக்கின்றன</translation>
     </message>
     <message>
@@ -3247,143 +2882,117 @@ Hide formatting characters:
     </message>
     <message>
         <source>Notify via desktop notifications</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டெச்க்டாப் அறிவிப்புகள் வழியாக அறிவிக்கவும்</translation>
     </message>
     <message>
         <source>Hide message sender and contents</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>செய்தி அனுப்புநர் மற்றும் உள்ளடக்கங்களை மறைக்கவும்</translation>
     </message>
     <message>
         <source>Use colored nicknames in conferences</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மாநாடுகளில் வண்ண புனைப்பெயர்களைப் பயன்படுத்துங்கள்</translation>
     </message>
     <message>
         <source>Only notify about new messages in conferences when your nickname is mentioned.</source>
         <comment>toolTip for Conferences only notify when mentioned</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் புனைப்பெயர் குறிப்பிடப்படும்போது மாநாடுகளில் புதிய செய்திகளைப் பற்றி மட்டுமே அறிவிக்கவும்.</translation>
     </message>
     <message>
         <source>If checked, conferences will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
         <comment>toolTip for conference positioning</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சரிபார்க்கப்பட்டால், மாநாடுகள் நண்பர்கள் பட்டியலில் முதலிடத்தில் வைக்கப்படும், இல்லையெனில், அவை நிகழ்நிலை நண்பர்களுக்கு கீழே வைக்கப்படும்.</translation>
     </message>
     <message>
         <source>If enabled, every contact without an avatar will have a generated icon based on their Tox ID instead of the default picture. Requires restart to apply.</source>
         <comment>toolTip for show identicons</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இயக்கப்பட்டால், அவதாரம் இல்லாத ஒவ்வொரு தொடர்பும் இயல்புநிலை படத்திற்கு பதிலாக அவர்களின் நச்சு ஐடியின் அடிப்படையில் உருவாக்கப்பட்ட ஐகானைக் கொண்டிருக்கும். விண்ணப்பிக்க மறுதொடக்கம் தேவை.</translation>
     </message>
     <message>
         <source>Smiley pack:</source>
         <extracomment>Text on smiley pack label</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ச்மைலி பேக்:</translation>
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முடக்கப்பட்டால், நிலை பிசியாக இருக்கும்போது முடக்கு அறிவிப்பு ஒலிக்கிறது (ஆனால் இன்னும் ஒரு அறிவிப்பைக் காட்டுங்கள்)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டெச்க்டாப் அறிவிப்புகளைப் பயன்படுத்தவும், எ.கா. ஒரு அறிவிப்பு மையத்தில் அல்லது கணினி தட்டில். இது இல்லாமல், அறிவிப்பு ஒளிரும் தட்டு ஐகானாக மட்டுமே தெரியும்.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டெச்க்டாப் அறிவிப்புகளில் ரகசிய தகவல்களைக் காட்டாமல் &quot;புதிய செய்தியை&quot; மட்டுமே காட்டுங்கள்.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பர் பட்டியல் மற்றும் அரட்டை சாளரத்தை தனித்தனியாக நகரக்கூடிய சாளரங்களாக பிரிக்கவும்.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உரை அல்லது கருப்பு/வெள்ளை எழுத்துரு-வழங்கப்பட்ட ஈமோசிகளுக்கு பதிலாக வண்ணமயமான படங்களாக உரை ஈமோசிகளைக் காண்பி.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஈமோசிகளை வழங்கும்போது எந்த படங்களின் தொகுப்பைப் பயன்படுத்த வேண்டும் என்பதைத் தேர்ந்தெடுக்கவும்.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ஒரு ஈமோசி படத்தின் பிக்சல்களில் அளவு. உங்கள் அடிப்படை எழுத்துரு அளவைப் போன்ற ஒன்றைத் தேர்ந்தெடுக்கவும்.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இடைமுகம் க்கு பயன்படுத்த அடிப்படை நடை. QTOX THEMING உடன் சிறப்பாக செயல்படுவதால் இணைவு பரிந்துரைக்கப்படுகிறது.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>இடைமுகம் வண்ண கருப்பொருள். இருண்ட பயன்முறையைத் தேர்ந்தெடுக்க இதைப் பயன்படுத்தவும்.</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முடக்கப்பட்டால், அடிப்படை கணினி தட்டு அறிவிப்புகளைப் பயன்படுத்தவும். இல்லையெனில், உங்கள் டெச்க்டாப் சூழலின் அறிவிப்பு பின்தளத்தில் பயன்படுத்த முயற்சிக்கவும். டெச்க்டாப் அறிவிப்புகளுடன் சிக்கல்களைக் கவனித்தால் இதை முடக்கு.</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கிடைத்தால் கணினி-குறிப்பிட்ட அறிவிப்பு பின்தளத்தில் பயன்படுத்தவும்</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டைகளில் அனுப்பப்பட்ட மற்றும் பெறப்பட்ட படங்களுக்கான முன்னோட்டங்களைக் காண்பி. ஒரு பெரிய முன்னோட்டத்தைக் காண்பிக்க இன்லைன் முன்னோட்டத்தில் வட்டமிடுங்கள்.</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பட முன்னோட்டம்</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டை வரலாற்றிலிருந்து ஏற்றப்பட்ட அதிகபட்ச செய்திகள் (உரையாடலுக்கு).
  செயல்திறனை மேம்படுத்த இதைக் குறைக்கவும். இங்கே மிகக் குறைந்த எண்ணிக்கையானது காரணமாக இருக்கலாம்
  மறைந்து போக உருள்.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அதிகபட்ச அரட்டை பதிவு பார்வை அளவு</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ச்க்ரோலிங் செய்யும் போது அரட்டை வரலாற்றிலிருந்து ஏற்ற வேண்டிய செய்திகளின் எண்ணிக்கை. மிகக் குறைவு
  இங்கே எண் உருள் பட்டி மறைந்துவிடும்.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டை பதிவு துண்டின் அளவு</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அரட்டை பதிவு:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுழிய சின்னத்திற்குப் பிறகு பின்னொட்டு மறைக்கவும்</translation>
     </message>
 </context>
@@ -3406,12 +3015,10 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>File</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்பு</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொகு</translation>
     </message>
     <message>
@@ -3421,47 +3028,38 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Filter...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வடிகட்டி ...</translation>
     </message>
     <message>
         <source>Contacts</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்புகள்</translation>
     </message>
     <message>
         <source>Status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நிலை</translation>
     </message>
     <message>
         <source>Your name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் பெயர்</translation>
     </message>
     <message>
         <source>Create new conference...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய மாநாட்டை உருவாக்கவும் ...</translation>
     </message>
     <message>
         <source>Create new circle...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>புதிய வட்டத்தைச் சேர்க்கவும் ...</translation>
     </message>
     <message>
         <source>By Name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>பெயரால்</translation>
     </message>
     <message>
         <source>By Activity</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>செயல்பாட்டின் மூலம்</translation>
     </message>
     <message>
         <source>All</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அனைத்தும்</translation>
     </message>
     <message>
@@ -3475,7 +3073,6 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Friends</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பர்கள்</translation>
     </message>
     <message>
@@ -3484,24 +3081,20 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Search Contacts</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்புகளைத் தேடுங்கள்</translation>
     </message>
     <message>
         <source>Conference #%1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>மாநாடு #%1</translation>
     </message>
     <message>
         <source>Show</source>
         <comment>Tray action menu to show qTox window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>காட்டு</translation>
     </message>
     <message>
         <source>Add friend</source>
         <comment>title of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பரைச் சேர்க்கவும்</translation>
     </message>
     <message>
@@ -3512,35 +3105,29 @@ number here may cause the scroll bar to disappear.</source>
     <message>
         <source>File transfers</source>
         <comment>title of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>கோப்பு இடமாற்றங்கள்</translation>
     </message>
     <message>
         <source>Settings</source>
         <comment>title of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அமைப்புகள்</translation>
     </message>
     <message>
         <source>My profile</source>
         <comment>title of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>எனது சுயவிவரம்</translation>
     </message>
     <message>
         <source>Toxcore failed to start, the application will terminate after you close this message.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>டோக்சோர் தொடங்கத் தவறிவிட்டது, இந்த செய்தியை நீங்கள் மூடிய பிறகு பயன்பாடு நிறுத்தப்படும்.</translation>
     </message>
     <message>
         <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>உங்கள் பதிலாள் அமைப்புகளுடன் தொடங்க டாக்ச்கோர் தோல்வியுற்றது. QTOX ஐ இயக்க முடியாது; தயவுசெய்து உங்கள் அமைப்புகளை மாற்றியமைத்து மறுதொடக்கம் செய்யுங்கள்.</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நண்பர் கோரிக்கையை அனுப்ப முடியவில்லை</translation>
     </message>
     <message numerus="yes">
@@ -3560,17 +3147,14 @@ number here may cause the scroll bar to disappear.</source>
     <message>
         <source>Exit</source>
         <comment>Tray action menu to exit Tox</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>வெளியேறு</translation>
     </message>
     <message>
         <source>Change status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>நிலையை மாற்றவும்</translation>
     </message>
     <message>
         <source>Edit profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>சுயவிவரத்தைத் திருத்து</translation>
     </message>
     <message>
@@ -3579,17 +3163,14 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Add contact...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>தொடர்பைச் சேர்க்கவும் ...</translation>
     </message>
     <message>
         <source>Next conversation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>அடுத்த உரையாடல்</translation>
     </message>
     <message>
         <source>Previous conversation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>முந்தைய உரையாடல்</translation>
     </message>
     <message>

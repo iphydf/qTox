@@ -190,7 +190,6 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Cette version de qTox est maintenue par l&apos;équipe TokTok suite à l&apos;archivage du projet qTox original.</translation>
     </message>
 </context>
@@ -490,12 +489,10 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Adresse proxy non valide</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Veuillez saisir une adresse IP valide ou un nom d&apos;hôte pour le paramètre de proxy.</translation>
     </message>
 </context>
@@ -573,7 +570,6 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Activer les outils de débogage (développeurs uniquement)</translation>
     </message>
 </context>
@@ -625,18 +621,15 @@ ce qui peut entraîner des problèmes lors des appels vidéo.</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Vérifie si ce programme exécute la dernière version de qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Démarre en mode portable&#x202f;; charge le profil à partir de ce répertoire.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Chemin</translation>
     </message>
 </context>
@@ -805,7 +798,6 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     <message>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>L&apos;emplacement n&apos;est pas accessible en écriture</translation>
     </message>
     <message>
@@ -834,7 +826,6 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>copier l&apos;ID du pair</translation>
     </message>
 </context>
@@ -939,17 +930,14 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     <name>DebugLog</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Journal de débogage</translation>
     </message>
     <message>
         <source>Auto-reload</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Rechargement automatique</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Défilement automatique</translation>
     </message>
 </context>
@@ -957,7 +945,6 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     <name>DebugLogForm</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Journal de débogage</translation>
     </message>
 </context>
@@ -1152,7 +1139,6 @@ afin que vous puissiez enregistrer le fichier sur windows.</translation>
     </message>
     <message>
         <source>%1 (no fonts)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 (pas de polices)</translation>
     </message>
     <message>
@@ -1282,17 +1268,14 @@ au lieu de fermer entièrement.</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Cliquez ici si vous trouvez des erreurs dans une traduction et souhaitez aider à les corriger.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Aidez à traduire</translation>
     </message>
     <message>
         <source> min</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> min</translation>
     </message>
 </context>
@@ -1772,7 +1755,6 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>Open internal debugging tools</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ouvrir les outils de débogage internes</translation>
     </message>
     <message>
@@ -1781,7 +1763,6 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>Open Debugger</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ouvrir le débogueur</translation>
     </message>
     <message>
@@ -1919,7 +1900,6 @@ Appuyez sur Maj+F1 pour plus d&apos;informations.</translation>
     </message>
     <message>
         <source>Incoming call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Appel entrant</translation>
     </message>
 </context>
@@ -2932,104 +2912,85 @@ Masquer les caractères de mise en forme&#xa0;:
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Si désactivé, la notification muette retentit lorsque l&apos;état est Occupé (mais affiche toujours une notification)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Utilise les notifications du bureau, par ex. dans un centre de notification ou dans la barre d&apos;état système. Sans cela, la notification ne sera visible que sous la forme d&apos;une icône clignotante dans la barre d&apos;état.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Afficher uniquement «&#xa0;nouveau message&#xa0;» sans afficher d&apos;informations potentiellement secrètes dans les notifications du bureau.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Divisez la liste d&apos;amis et la fenêtre de discussion en fenêtres mobiles séparément.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Affiche les émojis textuels sous forme d’images colorées au lieu de texte ou d’émojis rendus en police noir/blanc.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Sélectionne l&apos;ensemble d&apos;images à utiliser lors du rendu des emojis.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Taille en pixels d&apos;une image emoji. Sélectionnez quelque chose de similaire à votre taille de police de base.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Style de base à utiliser pour l’interface utilisateur. Fusion est recommandé car il fonctionne mieux avec la thématique qTox.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Thème de couleur de l&apos;interface utilisateur. Utilisez-le pour sélectionner le mode sombre.</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>S&apos;il est désactivé, utilisez les notifications de base de la barre d&apos;état système. Sinon, essayez d&apos;utiliser le backend de notification de votre environnement de bureau. Désactivez cette option si vous observez des problèmes avec les notifications du bureau.</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Utiliser le backend de notification spécifique au système si disponible</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Afficher des aperçus des images envoyées et reçues dans les discussions. Passez la souris sur l&apos;aperçu en ligne pour afficher un aperçu plus grand.</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Aperçu de l&apos;image</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Nombre maximum de messages (par conversation) chargés à partir de l&apos;historique des discussions.
 Diminuez-le pour améliorer les performances. Un nombre trop faible ici peut entraîner
  la disparition de la barre de défilement.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Taille maximale d&apos;affichage du journal de discussion</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Nombre de messages à charger à partir de l&apos;historique des discussions lors du défilement.
 Un nombre trop faible ici peut entraîner la disparition de la barre de défilement.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Taille du segment du journal de discussion</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Journal de discussion&#xa0;:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Masquer le suffixe après le symbole NUL</translation>
     </message>
 </context>

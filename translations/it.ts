@@ -190,7 +190,6 @@ il che può portare a problemi con le videochiamate.</translation>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Questa versione di qTox viene mantenuta dal team TokTok dopo l&apos;archiviazione del progetto qTox originale.</translation>
     </message>
 </context>
@@ -490,12 +489,10 @@ il che può portare a problemi con le videochiamate.</translation>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Indirizzo proxy non valido</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Immettere un indirizzo IP o un nome host valido per l&apos;impostazione proxy.</translation>
     </message>
 </context>
@@ -573,7 +570,6 @@ il che può portare a problemi con le videochiamate.</translation>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Abilita strumenti di debug (solo sviluppatori)</translation>
     </message>
 </context>
@@ -625,18 +621,15 @@ il che può portare a problemi con le videochiamate.</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Controlla se questo programma esegue l&apos;ultima versione di qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Si avvia in modalità portatile; carica il profilo da questa directory.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>percorso</translation>
     </message>
 </context>
@@ -833,7 +826,6 @@ in modo da poter salvare il file su Windows.</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>copiare l&apos;ID peer</translation>
     </message>
 </context>

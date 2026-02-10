@@ -490,12 +490,10 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Неправильна адреса проксі</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Будь ласка, введіть дійсну IP адресу або ім&apos;я хоста в налаштуваннях проксі.</translation>
     </message>
 </context>
@@ -624,18 +622,15 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Перевіряє, чи використовується остання версія qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Запускається в портативному режимі; завантажує профіль із цього каталогу.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>шлях</translation>
     </message>
 </context>
@@ -833,7 +828,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>скопіювати ідентифікатор вузла</translation>
     </message>
 </context>
@@ -1277,17 +1271,14 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Натисніть сюди, якщо ви виявили помилки в перекладі та хочете допомогти їх виправити.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Допомогти перекласти</translation>
     </message>
     <message>
         <source> min</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> хв</translation>
     </message>
 </context>
@@ -1919,7 +1910,6 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Incoming call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Вхідний дзвінок</translation>
     </message>
 </context>
@@ -2458,7 +2448,6 @@ It&apos;s difficult to translate &quot;Tox me maybe&quot; because in Ukrainian n
     </message>
     <message>
         <source>%1 went offline during the call attempt</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 вийшов з мережі під час спроби дзвінка</translation>
     </message>
     <message>
@@ -2980,48 +2969,40 @@ Hide formatting characters:
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Показувати попередній перегляд відправлених і отриманих зображень у чатах. Наведіть вказівник миші на вбудований попередній перегляд, щоб відобразити попередній перегляд більшого розміру.</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Попередній перегляд зображення</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Максимальна кількість повідомлень (на діалог), завантажених з історії чату.
 Зменшіть це значення, щоб поліпшити продуктивність.
 Занадто низьке значення може призвести до зникнення смуги прокрутки.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Максимальний розмір журналу чату</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Кількість повідомлень для завантаження з історії чату під час гортання.
 Занадто низьке значення може призвести до зникнення смуги прокрутки.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Розмір фрагмента журналу чату</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Журнал чату:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Сховати суфікс після нульового символу</translation>
     </message>
 </context>

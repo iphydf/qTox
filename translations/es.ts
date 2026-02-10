@@ -489,12 +489,10 @@ lo que puede provocar problemas en las videollamadas.</translation>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Dirección proxy no válida</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ingrese una dirección IP o nombre IP válido para la configuración de proxy.</translation>
     </message>
 </context>
@@ -624,18 +622,15 @@ lo que puede provocar problemas en las videollamadas.</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Comprueba si este programa está ejecutando la última versión de qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Comienza en modo portátil; carga el perfil desde este directorio.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ruta</translation>
     </message>
 </context>
@@ -832,7 +827,6 @@ para que puedas guardar el archivo en windows.</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>copiar ID de compañero</translation>
     </message>
 </context>
@@ -1275,17 +1269,14 @@ en lugar de cerrarse por completo.</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Haga clic aquí si encuentra errores en una traducción y le gustaría ayudar a solucionarlo.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ayuda a traducir</translation>
     </message>
     <message>
         <source> min</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> min</translation>
     </message>
 </context>
@@ -1910,7 +1901,6 @@ Presione Mayús+F1 para obtener más información.</translation>
     </message>
     <message>
         <source>Incoming call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Llamada entrante</translation>
     </message>
 </context>
@@ -2923,47 +2913,38 @@ Ocultar caracteres de formato:
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Si está deshabilitado, la notificación silenciada suena cuando el estado es Ocupado (pero aún muestra una notificación)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Utilice notificaciones de escritorio, por ejemplo en un centro de notificaciones o en la bandeja del sistema. Sin esto, la notificación sólo será visible como un icono de bandeja parpadeante.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Muestra solo &quot;mensaje nuevo&quot; sin mostrar información potencialmente secreta en las notificaciones de escritorio.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Dividir la lista de amigos y chat ventana en ventanas móviles por separado.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Mostrar emojis textuales como imágenes coloridas en lugar de texto o emojis de fuentes en blanco o negro.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Seleccionar qué conjunto de imágenes utilizar al renderizar emojis.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tamaño en píxeles de una imagen emoji. Seleccione algo similar al tamaño de fuente base.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Estilo base que se utilizará en la interfaz de usuario. Se recomienda Fusion ya que funciona mejor con la temática qTox.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tema de color de la interfaz de usuario. Úselo para seleccionar el modo oscuro.</translation>
     </message>
     <message>
@@ -2977,49 +2958,41 @@ Ocultar caracteres de formato:
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Muestra vistas previas de imágenes enviadas y recibidas en los chats. Pase el cursor sobre la vista previa en línea para mostrar una vista previa más grande.</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Vista previa de imagen</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Número máximo de mensajes (por conversación) cargados desde el historial de chat.
 Disminuya esto para mejorar el rendimiento. Un número demasiado bajo aquí
 puede hacer que desaparezca la barra de desplazamiento.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tamaño máximo de visualización del registro de chat</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Número de mensajes a cargar desde el historial de chat al desplazarse. Un
 número demasiado bajo aquí puede hacer que desaparezca la barra de
 desplazamiento.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tamaño del fragmento del registro de chat</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Registro de conversaciones:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ocultar sufijo tras símbolo NULO</translation>
     </message>
 </context>

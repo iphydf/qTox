@@ -190,7 +190,6 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Това издание на qTox, след архивиране на оригиналния проект, се поддържа от екипа на TokTok.</translation>
     </message>
 </context>
@@ -491,12 +490,10 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Неправилен адрес на прокси</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>В настройката за прокси въведете действителен адрес на IP или име на хост.</translation>
     </message>
 </context>
@@ -574,7 +571,6 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Инструменти за отстраняване на дефекти (за разработчици)</translation>
     </message>
 </context>
@@ -626,18 +622,15 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Проверява дали qTox е последно издание.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Стартира в преносим режим; зарежда профил от указаната папка.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>папка</translation>
     </message>
 </context>
@@ -834,7 +827,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>копиране идентификатора на възела</translation>
     </message>
 </context>
@@ -939,17 +931,14 @@ so you can save the file on Windows.</source>
     <name>DebugLog</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Дневник за отстраняване на дефекти</translation>
     </message>
     <message>
         <source>Auto-reload</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Автоматично презареждане</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Автоматично прелистване</translation>
     </message>
 </context>
@@ -957,7 +946,6 @@ so you can save the file on Windows.</source>
     <name>DebugLogForm</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Дневник за отстраняване на дефекти</translation>
     </message>
 </context>
@@ -1152,12 +1140,10 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>%1 (no fonts)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 (няма шрифтове)</translation>
     </message>
     <message>
         <source>Auto select</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Автоматичен избор</translation>
     </message>
 </context>
@@ -1282,17 +1268,14 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Натиснете тук ако откриете грешка в превода и искате да помогнете за поправката ѝ.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Помощ с превода</translation>
     </message>
     <message>
         <source> min</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> мин</translation>
     </message>
 </context>
@@ -1773,7 +1756,6 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Open internal debugging tools</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Отваряне на инструментите за отстраняване на дефекти за разработчици</translation>
     </message>
     <message>
@@ -1782,7 +1764,6 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Open Debugger</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Отваря отстраняване на дефекти</translation>
     </message>
     <message>
@@ -1920,7 +1901,6 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Incoming call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Входящо обаждане</translation>
     </message>
 </context>
@@ -2456,7 +2436,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>%1 went offline during the call attempt</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 е без мрежа по време на опита за обаждане</translation>
     </message>
     <message>
@@ -2933,105 +2912,86 @@ Hide formatting characters:
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Когато не е отметнато и състоянието ви е „Зает“ известията не са съпроводени със звук, но все пак се показват</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Използва известия на работния плот, например център за известия или областта за известия. Когато не е отметнато известието ще се вижда само като мигане в областта за известия.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Известията на работния плот ще съдържат само текста „Ново съобщение“, без да бъде показвана друга, вероятно тайна информация.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Разделяне на списъка с контакти и прозореца за разговори в отделни самостоятелни прозорци.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Показване на текстовите емоции като цветни изображения вместо текст или черно-бели усмивки.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Изберете набора от изображения, с които да бъдат показвани емоциите.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Размер в пиксели на изображението. Изберете размер близък до размера на основния шрифт.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Основен стил на потребителския интерфейс. Препоръчва се „Fusion“, тъй като работи най-добре с темите на qTox.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Цветна тема на потребителския интерфейс. От тук можете да изберете тъмен режим.</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Когато е отметнато ще бъде използван механизма за известия на работната среда. В противен случай ще бъдат използвани обикновените известия в областта за известия . Изключете ако наблюдавате проблеми с известията на работния плот.</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Използване на системния механизъм за известия, ако има такъв</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Показване на миниатюри на изпратените и получените изображения в разговора.
 Задръжте показалеца на мишката върху прегледа, за да бъде показан по-голям размер.</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Миниатюра на изображенията в разговора</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ограничение (по разговор) на броя съобщения, заредени от хронологията на
 кореспонденцията. Намалете стойността, за да бъде подобрена производителността.
 Твърде малък брой може да доведе до изчезване на плъзгача.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ограничение на хронологията</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Броят на съобщенията, които да бъдат заредени от хронологията при прелистване.
 Твърде малък брой може да доведе до изчезване на плъзгача.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Порция от хронологията</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Разговори:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Скриване на съдържанието след нулев символ</translation>
     </message>
 </context>

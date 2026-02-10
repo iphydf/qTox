@@ -101,12 +101,10 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Use slider to set the volume of your speakers.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>スライダーを使用してスピーカーの音量を設定します。</translation>
     </message>
     <message>
         <source>Transmitted audio quality. Lower this setting if your bandwidth is not high enough or if you want to reduce bandwidth usage.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>送信されるオーディオ品質。帯域幅が十分に高くない場合、または帯域幅の使用量を減らしたい場合は、この設定を下げます。</translation>
     </message>
     <message>
@@ -115,7 +113,6 @@ The higher values, the better video quality your friends may get.
 Note that with better video quality, you use more bandwidth.
 Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>カメラの解像度を設定します。
 値が大きいほど、友達が得られるビデオ品質は向上します。
 ビデオ品質が向上すると、より多くの帯域幅が使用されることに注意してください。
@@ -124,17 +121,14 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Play a test sound while changing the output volume.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>出力音量を変えながらテスト音を鳴らします。</translation>
     </message>
     <message>
         <source>Use slider to set the gain of your input device ranging from %1dB to %2dB.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>スライダーを使用して、入力デバイスのゲインを %1dB ～ %2dB の範囲で設定します。</translation>
     </message>
     <message>
         <source>Use slider to set the activation volume for your input device.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>スライダーを使用して、入力デバイスのアクティブ化音量を設定します。</translation>
     </message>
 </context>
@@ -196,7 +190,6 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>このバージョンの qTox は、元の qTox プロジェクトのアーカイブ後、TokTok チームによって保守されています。</translation>
     </message>
 </context>
@@ -244,12 +237,10 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>This is the public key of your friend, use it to verify their identity via another channel. You can not send this to other people so they can add this contact.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>これは友人の公開キーです。別のチャネルで友人の身元を確認するために使用します。これを他の人に送信して、他の人がこの連絡先を追加することはできません。</translation>
     </message>
     <message>
         <source>Public key (not ToxID):</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>公開キー (ToxID ではありません):</translation>
     </message>
     <message>
@@ -258,37 +249,30 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Are you sure to remove %1 chat history?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 のチャット履歴を削除してもよろしいですか?</translation>
     </message>
     <message>
         <source>Failed to remove chat history with %1!</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 とのチャット履歴を削除できませんでした!</translation>
     </message>
     <message>
         <source>Auto-accept files</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ファイルの自動受け入れ</translation>
     </message>
     <message>
         <source>Auto-accept for this contact is disabled</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>この連絡先の自動受信は無効になっています</translation>
     </message>
     <message>
         <source>Auto-accept call:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>通話の自動応答:</translation>
     </message>
     <message>
         <source>Auto-accept conference invites</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>グループへの招待を自動承認する</translation>
     </message>
     <message>
         <source>You can save comments about this contact here.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>この連絡先に関するコメントをここに保存できます。</translation>
     </message>
 </context>
@@ -312,22 +296,18 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Open update download link</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>アップデートのダウンロードリンクを開く</translation>
     </message>
     <message>
         <source>Update available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>利用可能なアップデート</translation>
     </message>
     <message>
         <source>qTox is up to date ✓</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>qTox は最新です ✓</translation>
     </message>
     <message>
         <source>Currently running an untested/unstable version of qTox</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>現在、テストされていないかもしくは不安定なバージョンの qTox を実行しています</translation>
     </message>
 </context>
@@ -439,19 +419,16 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Tox ID, 76 hexadecimal characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tox ID、16 進数の76文字</translation>
     </message>
     <message>
         <source>%1 Tox ID is invalid</source>
         <comment>Tox address error</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 Tox ID が無効です</translation>
     </message>
     <message>
         <source>76 hexadecimal characters</source>
         <extracomment>Tox ID format description</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>16 進数 76 文字</translation>
     </message>
     <message>
@@ -467,12 +444,10 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>really</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>本当に</translation>
     </message>
     <message>
         <source>not</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ない</translation>
     </message>
     <message>
@@ -501,17 +476,14 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 が何をしているのかわからない場合は、ここで何かを %2 変更してください。ここで行われた変更は、qTox に問題を引き起こす可能性があり、さらにはデータの損失につながる可能性があります。例えば履歴など.%3</translation>
     </message>
     <message>
         <source>Changes here are applied only after restarting qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ここでの変更は、qTox を再起動した後にのみ適用されます。</translation>
     </message>
     <message>
         <source>Save file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ファイルの保存</translation>
     </message>
     <message>
@@ -586,23 +558,19 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Enable LAN discovery</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>LAN 検出を有効にする</translation>
     </message>
     <message>
         <source>Connection settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>接続設定</translation>
     </message>
     <message>
         <source>Disabling this allows, e.g., Tox over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
         <extracomment>force tcp checkbox tooltip</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>これを無効にすると、たとえば Tox over Tor が可能になります。ただし、Tox ネットワークに負荷がかかるため、必要な場合にのみチェックを外してください。</translation>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>デバッグツールを有効にする (開発者のみ)</translation>
     </message>
 </context>
@@ -627,25 +595,21 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Sets IPv6 &lt;on&gt;/&lt;off&gt;. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>IPv6のオンオフを設定します。デフォルトはオンです。</translation>
     </message>
     <message>
         <source>Sets UDP &lt;on&gt;/&lt;off&gt;. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>UDPの&lt;オン&gt;/&lt;オフ&gt;を設定します。デフォルトはオンです。</translation>
     </message>
     <message>
         <source>Sets LAN discovery &lt;on&gt;/&lt;off&gt;. UDP off overrides. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>LAN検出の&lt;on&gt;/&lt;off&gt;を設定します。 UDP オフのオーバーライド。デフォルトはオンです。</translation>
     </message>
     <message>
         <source>Sets proxy settings. Default is NONE.</source>
         <comment>NONE should not be translated, it is a flag value</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>プロキシ設定を行います。デフォルトは「なし」です。</translation>
     </message>
     <message>
@@ -654,17 +618,14 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Failed to load profile automatically.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>プロファイルの自動読み込みに失敗しました。</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>このソフトウェアが最新の qTox バージョンかどうかを確認します。</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ポータブル モードで起動します。このディレクトリからプロファイルをロードします。</translation>
     </message>
     <message>
@@ -711,18 +672,15 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>You&apos;re trying to send a sequential file, which is not going to work!</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>シーケンシャル ファイルを送信しようとしていますが、うまくいきません。</translation>
     </message>
     <message>
         <source>Filename contained illegal characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ファイル名に使用できない文字が含まれています</translation>
     </message>
     <message>
         <source>Illegal characters have been changed to _
 so you can save the file on Windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>使用できない文字は _ に変更されました
 Windows にファイルを保存できるようになります。</translation>
     </message>
@@ -856,19 +814,16 @@ Windows にファイルを保存できるようになります。</translation>
     <message numerus="yes">
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>
             <numerusform>%n 人のユーザーがチャット中</numerusform>
         </translation>
     </message>
     <message>
         <source>mute</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ミュート</translation>
     </message>
     <message>
         <source>unmute</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ミュート解除</translation>
     </message>
     <message>
@@ -929,7 +884,6 @@ Windows にファイルを保存できるようになります。</translation>
     <message numerus="yes">
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>
             <numerusform>%n 人のユーザーがチャット中</numerusform>
         </translation>
@@ -951,7 +905,6 @@ Windows にファイルを保存できるようになります。</translation>
     </message>
     <message>
         <source>Conference %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>グループ %1</translation>
     </message>
     <message>
@@ -979,17 +932,14 @@ Windows にファイルを保存できるようになります。</translation>
     <name>DebugLog</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>デバッグログ</translation>
     </message>
     <message>
         <source>Auto-reload</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>自動リロード</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>自動スクロール</translation>
     </message>
 </context>
@@ -997,7 +947,6 @@ Windows にファイルを保存できるようになります。</translation>
     <name>DebugLogForm</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>デバッグログ</translation>
     </message>
 </context>
@@ -1055,7 +1004,6 @@ Windows にファイルを保存できるようになります。</translation>
     <message>
         <source>Remote paused</source>
         <comment>file transfer widget</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>リモート停止中</translation>
     </message>
 </context>
@@ -1072,7 +1020,6 @@ Windows にファイルを保存できるようになります。</translation>
     <message>
         <source>Transferred files</source>
         <comment>&quot;Headline&quot; of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>転送されたファイル</translation>
     </message>
 </context>
@@ -1100,7 +1047,6 @@ Windows にファイルを保存できるようになります。</translation>
     </message>
     <message>
         <source>Older than 6 months</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>6か月以上古い</translation>
     </message>
 </context>
@@ -1175,7 +1121,6 @@ Windows にファイルを保存できるようになります。</translation>
     </message>
     <message>
         <source>Move to circle &quot;%1&quot;</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>サークル「%1」に移動</translation>
     </message>
     <message>
@@ -1185,7 +1130,6 @@ Windows にファイルを保存できるようになります。</translation>
     </message>
     <message>
         <source>Blocked</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ブロックされました</translation>
     </message>
 </context>
@@ -1197,7 +1141,6 @@ Windows にファイルを保存できるようになります。</translation>
     </message>
     <message>
         <source>%1 (no fonts)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 (フォントなし)</translation>
     </message>
     <message>
@@ -1288,29 +1231,24 @@ Windows にファイルを保存できるようになります。</translation>
     </message>
     <message>
         <source>Check for updates</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>アップデートをチェックする</translation>
     </message>
     <message>
         <source>Spell checking</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>スペルチェック</translation>
     </message>
     <message>
         <source>Max autoaccept file size (0 to disable):</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>自動受け入れファイルの最大サイズ (無効にする場合は 0):</translation>
     </message>
     <message>
         <source> MB</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> MB</translation>
     </message>
     <message>
         <source>After pressing minimize (_) qTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>最小化 (_) を押すと、qTox がトレイに最小化されます。
 システムタスクバーの代わりに。</translation>
     </message>
@@ -1318,29 +1256,24 @@ instead of system taskbar.</source>
         <source>After pressing close (X) qTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>閉じる (X) を押すと、qTox がトレイに最小化されます。
 完全に閉じるのではなく。</translation>
     </message>
     <message>
         <source>You can set this on a per-friend basis by right clicking individual friends.</source>
         <comment>autoaccept cb tooltip</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>個々の友達を右クリックして、友達ごとにこれを設定できます。</translation>
     </message>
     <message>
         <source>Add a chat message when a user joins or leaves a conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ユーザーがグループに参加またはグループから退出したときにチャット メッセージを追加する</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>翻訳に誤りを見つけて修正を希望される場合は、ここをクリックしてください。</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>翻訳を手伝ってください</translation>
     </message>
     <message>
@@ -1389,12 +1322,10 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Search in text</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>テキスト内検索</translation>
     </message>
     <message>
         <source>Go to current date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>現在の日付に移動</translation>
     </message>
     <message>
@@ -1407,7 +1338,6 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Are you sure that you want to clear all displayed messages?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>表示されているメッセージをすべて消去してもよろしいですか?</translation>
     </message>
 </context>
@@ -1555,7 +1485,6 @@ Profile does not contain your history.</source>
         <source>This ID allows other Tox users to add and contact you.
 Share it with your friends to begin chatting.</source>
         <comment>Tox ID tooltip</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>この ID を使用すると、他の Tox ユーザーがあなたを追加して連絡できるようになります。
 友達と共有してチャットを始めましょう。</translation>
     </message>
@@ -1568,12 +1497,10 @@ Share it with your friends to begin chatting.</source>
     <name>LoadHistoryDialog</name>
     <message>
         <source>Load history dialog</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>履歴ダイアログの読み込み</translation>
     </message>
     <message>
         <source>Load history from:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>履歴のロード元:</translation>
     </message>
 </context>
@@ -1714,7 +1641,6 @@ You may want to create one.</source>
     <message>
         <source>The passwords you&apos;ve entered are different.
 Please make sure to enter the same password twice.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>入力したパスワードが異なります。
 必ず同じパスワードを2回入力してください。</translation>
     </message>
@@ -1831,7 +1757,6 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Open internal debugging tools</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>内部デバッグツールを開く</translation>
     </message>
     <message>
@@ -1840,7 +1765,6 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Open Debugger</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>デバッガーを開く</translation>
     </message>
     <message>
@@ -1869,17 +1793,14 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Full Screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>全画面表示</translation>
     </message>
     <message>
         <source>Toggle video preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ビデオプレビューの切り替え</translation>
     </message>
     <message>
         <source>Mute audio</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>音声をミュート</translation>
     </message>
     <message>
@@ -1892,17 +1813,14 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Exit full screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>全画面表示を終了する</translation>
     </message>
     <message>
         <source>Hide messages</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>メッセージを非表示にする</translation>
     </message>
     <message>
         <source>Show messages</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>メッセージを表示する</translation>
     </message>
 </context>
@@ -1954,38 +1872,31 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>New conference message</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>新しいグループメッセージ</translation>
     </message>
     <message>
         <source>Incoming file transfer</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>受信ファイル転送</translation>
     </message>
     <message>
         <source>%1 - file transfer</source>
         <extracomment>e.g. Bob - file transfer</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 - ファイル転送</translation>
     </message>
     <message>
         <source>Conference invite received</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>グループの招待を受けました</translation>
     </message>
     <message>
         <source>%1 invites you to join a conference.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 があなたをグループに招待しています。</translation>
     </message>
     <message>
         <source>Friend request received</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>フレンドリクエストを受け取りました</translation>
     </message>
     <message>
         <source>Friend request received from %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 から友達リクエストが来ています</translation>
     </message>
     <message>
@@ -2071,7 +1982,6 @@ If you are getting spammed with friend requests, change the NoSpam.</source>
     </message>
     <message>
         <source>Filter out conference messages by conference members&apos; public keys. Put public keys here, one per line.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>グループメンバーの公開鍵によってグループメッセージをフィルターで除外します。ここに公開キーを 1 行に 1 つずつ入力します。</translation>
     </message>
 </context>
@@ -2087,7 +1997,6 @@ If you are getting spammed with friend requests, change the NoSpam.</source>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>データベースのパスワードを変更できませんでした。破損しているか、古いパスワードが使用されている可能性があります。</translation>
     </message>
 </context>
@@ -2237,33 +2146,27 @@ Please use another image.</source>
     </message>
     <message>
         <source>Failed to save file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ファイルの保存に失敗しました</translation>
     </message>
     <message>
         <source>The file you chose could not be saved.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>選択したファイルは保存できませんでした。</translation>
     </message>
     <message>
         <source>Empty path is unavailable.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>空のパスは使用できません。</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>データベースのパスワードを変更できませんでした。破損しているか、古いパスワードが使用されている可能性があります。</translation>
     </message>
     <message>
         <source>Tox user names cannot exceed %1 characters.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tox ユーザー名は %1 文字を超えることはできません。</translation>
     </message>
     <message>
         <source>Delete profile</source>
         <comment>deletion confirmation title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>プロフィールの削除</translation>
     </message>
     <message>
@@ -2274,7 +2177,6 @@ Please use another image.</source>
     <message>
         <source>Are you sure you want to remove your password?</source>
         <extracomment>deletion confirmation text</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>パスワードを削除してもよろしいですか?</translation>
     </message>
     <message>
@@ -2282,7 +2184,6 @@ Please use another image.</source>
 Share it with your friends to begin chatting.
 
 This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>この ID を使用すると、他の Tox ユーザーがあなたを追加して連絡できるようになります。
 友達と共有してチャットを始めましょう。
 
@@ -2383,7 +2284,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>%1 is not a valid Tox address.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 は有効な Tox アドレスではありません。</translation>
     </message>
 </context>
@@ -2438,27 +2338,22 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Dark</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ダーク</translation>
     </message>
     <message>
         <source>Dark blue</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ダークブルー</translation>
     </message>
     <message>
         <source>Dark olive</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ダークオリーブ</translation>
     </message>
     <message>
         <source>Dark red</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ダークレッド</translation>
     </message>
     <message>
         <source>Dark violet</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ダークバイオレット</translation>
     </message>
     <message>
@@ -2484,13 +2379,11 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>blocked</source>
         <comment>contact status</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ブロックされています</translation>
     </message>
     <message>
         <source>Reformatting text...</source>
         <comment>Waiting for text to be reformatted</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>テキストのフォーマットを再設定しています...</translation>
     </message>
     <message>
@@ -2499,17 +2392,14 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>%1 has joined the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 がグループに参加しました</translation>
     </message>
     <message>
         <source>%1 has left the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 がグループから離脱しました</translation>
     </message>
     <message>
         <source>%1 is now known as %2</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 は %2 として知られるようになりました</translation>
     </message>
     <message>
@@ -2552,27 +2442,22 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Initializing</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>初期化中</translation>
     </message>
     <message>
         <source>Transmitting</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>送信中</translation>
     </message>
     <message>
         <source>Finished</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>終了</translation>
     </message>
     <message>
         <source>Broken</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>壊れた</translation>
     </message>
     <message>
         <source>Canceled</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>キャンセル</translation>
     </message>
     <message>
@@ -2581,32 +2466,26 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Remote paused</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>リモート一時停止中</translation>
     </message>
     <message>
         <source>File Name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ファイル名</translation>
     </message>
     <message>
         <source>Contact</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>コンタクト</translation>
     </message>
     <message>
         <source>Progress</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>進捗</translation>
     </message>
     <message>
         <source>Size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>サイズ</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>スピード</translation>
     </message>
     <message>
@@ -2615,27 +2494,22 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Control</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>コントロール</translation>
     </message>
     <message>
         <source>You have joined the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>グループに参加しました</translation>
     </message>
     <message>
         <source>You have left the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>グループから退席しました</translation>
     </message>
     <message>
         <source>Failed to load chat history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>チャット履歴の読み込みに失敗しました</translation>
     </message>
     <message>
         <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>データベースのバージョン (%1) は、現在サポートされているバージョン (%2) よりも新しいです。 qTox を更新してください。</translation>
     </message>
 </context>
@@ -2694,12 +2568,10 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>SearchForm</name>
     <message>
         <source>The text could not be found.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>テキストが見つかりませんでした。</translation>
     </message>
     <message>
         <source>Start</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>開始</translation>
     </message>
 </context>
@@ -2707,27 +2579,22 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>SearchSettingsForm</name>
     <message>
         <source>Start search:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>検索を開始:</translation>
     </message>
     <message>
         <source>from the end</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>後ろから</translation>
     </message>
     <message>
         <source>from the beginning</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>最初から</translation>
     </message>
     <message>
         <source>after date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>日付より後</translation>
     </message>
     <message>
         <source>before date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>日付より前</translation>
     </message>
     <message>
@@ -2737,22 +2604,18 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Whole words only</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>単語全体のみ</translation>
     </message>
     <message>
         <source>Use regular expressions</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>正規表現を使用する</translation>
     </message>
     <message>
         <source>Select Date Dialog</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>日付の選択ダイアログ</translation>
     </message>
     <message>
         <source>Select a date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>日付を選択してください</translation>
     </message>
 </context>
@@ -2792,7 +2655,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>The password is too short.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>パスワードが短すぎます。</translation>
     </message>
     <message>
@@ -2808,17 +2670,14 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Failed to load personal settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>個人設定のロードに失敗しました</translation>
     </message>
     <message>
         <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>設定をバージョン %1 からバージョン %2 にアップグレードできません。 qTox を開始できません。</translation>
     </message>
     <message>
         <source>Failed to load global settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>グローバル設定のロードに失敗しました</translation>
     </message>
 </context>
@@ -3003,17 +2862,14 @@ Hide formatting characters:
     <message>
         <source>Show a notification when you receive a new message, call, or friend request and the window is not selected.</source>
         <comment>tooltip for Notify setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>新しいメッセージ、通話、友達リクエストを受信し、ウィンドウが選択されていないときに通知を表示します。</translation>
     </message>
     <message>
         <source>Notify</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>通知する</translation>
     </message>
     <message>
         <source>Conferences only notify when mentioned</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>グループはメンションされた場合にのみ通知します</translation>
     </message>
     <message>
@@ -3026,51 +2882,42 @@ Hide formatting characters:
     </message>
     <message>
         <source>Notify via desktop notifications</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>デスクトップ通知経由で通知する</translation>
     </message>
     <message>
         <source>Hide message sender and contents</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>メッセージの送信者と内容を非表示にする</translation>
     </message>
     <message>
         <source>Use colored nicknames in conferences</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>グループでは色付きのニックネームを使用する</translation>
     </message>
     <message>
         <source>Only notify about new messages in conferences when your nickname is mentioned.</source>
         <comment>toolTip for Conferences only notify when mentioned</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>会議内で自分のニックネームが言及された場合にのみ、新しいメッセージについて通知する。</translation>
     </message>
     <message>
         <source>If checked, conferences will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
         <comment>toolTip for conference positioning</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>オンにすると、グループは友達リストの一番上に配置され、そうでない場合は、オンラインの友達の下に配置されます。</translation>
     </message>
     <message>
         <source>If enabled, every contact without an avatar will have a generated icon based on their Tox ID instead of the default picture. Requires restart to apply.</source>
         <comment>toolTip for show identicons</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>有効にすると、アバターのないすべての連絡先に、デフォルトの画像の代わりに Tox ID に基づいて生成されたアイコンが表示されます。適用するには再起動が必要です。</translation>
     </message>
     <message>
         <source>Smiley pack:</source>
         <extracomment>Text on smiley pack label</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>スマイリーパック:</translation>
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>無効にすると、ステータスが多忙のときに通知音がミュートされます (ただし、通知は表示されます)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>デスクトップ通知を使用します。例:通知センターまたはシステム トレイで。これを行わないと、通知は点滅するトレイ アイコンとしてのみ表示されます。</translation>
     </message>
     <message>
@@ -3080,53 +2927,43 @@ Hide formatting characters:
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>フレンドリストとチャットウィンドウを別々に移動可能なウィンドウに分割します。</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>テキスト絵文字や白黒フォントでレンダリングされた絵文字の代わりに、テキスト絵文字をカラフルな画像として表示します。</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>絵文字をレンダリングするときに使用する画像のセットを選択します。</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>絵文字のピクセル単位のサイズ。基本のフォント サイズに近いものを選択します。</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>UI に使用する基本スタイル。 qTox テーマと最適に機能するため Fusion が推奨されます。</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>UIのカラーテーマ。ダークモードを選択します。</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>無効にすると、基本的なシステム トレイ通知が使用されます。普通の場合は、デスクトップ通知を使用してみてください。デスクトップ通知に問題がある場合は、これを無効にしてください。</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>利用可能な場合はシステム固有の通知バックエンドを使用する</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>チャットで送受信した画像のプレビューを表示します。インライン プレビューの上にマウスを移動すると、プレビューが拡大表示されます。</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>画像プレビュー</translation>
     </message>
     <message>
@@ -3286,30 +3123,25 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Toxcore failed to start, the application will terminate after you close this message.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Toxcore の起動に失敗しました。このメッセージを閉じるとアプリケーションは終了します。</translation>
     </message>
     <message>
         <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>プロキシ設定で Toxcore を起動できませんでした。 qTox は実行できません。設定を変更して再起動してください。</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>友達リクエストを送信できませんでした</translation>
     </message>
     <message numerus="yes">
         <source>%n new friend request(s)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>
             <numerusform>%n 件の新しい友達リクエスト</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n new conference invite(s)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>
             <numerusform>%n 件の新しいグループへの招待</numerusform>
         </translation>
@@ -3321,12 +3153,10 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Change status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>ステータス変更</translation>
     </message>
     <message>
         <source>Edit profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>プロフィールの編集</translation>
     </message>
     <message>
@@ -3335,17 +3165,14 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Add contact...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>連絡先を追加...</translation>
     </message>
     <message>
         <source>Next conversation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>次の会話</translation>
     </message>
     <message>
         <source>Previous conversation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>前の会話</translation>
     </message>
     <message>

@@ -105,7 +105,6 @@ kas var radīt videozvanu problēmas.</translation>
     </message>
     <message>
         <source>Transmitted audio quality. Lower this setting if your bandwidth is not high enough or if you want to reduce bandwidth usage.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Pārraidītās skaņas kvalitāte. Samaziniet šo vērtību, ja jūsu interneta joslas platums nav pietiekami liels, vai arī vēlaties samazināt tā lietojumu.</translation>
     </message>
     <message>
@@ -634,7 +633,6 @@ kas var radīt videozvanu problēmas.</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Pārbauda, vai tiek izmantota jaunākā qTox versija.</translation>
     </message>
     <message>
@@ -1537,7 +1535,6 @@ Kopīgojiet to ar draugiem, lai sāktu tērzēšanu.</translation>
     </message>
     <message>
         <source>Load history from:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ielādēt vēsturi no:</translation>
     </message>
 </context>
@@ -1678,7 +1675,6 @@ Jūs varat izveidot jaunu.</translation>
     <message>
         <source>The passwords you&apos;ve entered are different.
 Please make sure to enter the same password twice.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Jūsu ievadītās paroles nesakrīt.
 Lūdzu, pārbaudiet, ka divreiz ievadījāt to pašu paroli.</translation>
     </message>
@@ -3094,7 +3090,6 @@ izraisīt ritjoslas pazušanu.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Maksimālais tērzēšanas žurnāla lielums</translation>
     </message>
     <message>
@@ -3111,7 +3106,6 @@ mazs skaitlis var izraisīt ritjoslas pazušanu.</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tērzēšanas žurnāls:</translation>
     </message>
     <message>

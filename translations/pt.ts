@@ -1516,7 +1516,6 @@ Partilhe-o com os seus amigos para começar a conversar.</translation>
     </message>
     <message>
         <source>Load history from:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Carregar histórico de:</translation>
     </message>
 </context>
@@ -2461,27 +2460,22 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinzento).</translatio
     </message>
     <message>
         <source>Initializing</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>A inicializar</translation>
     </message>
     <message>
         <source>Transmitting</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Transmitindo</translation>
     </message>
     <message>
         <source>Finished</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Terminado</translation>
     </message>
     <message>
         <source>Broken</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Rompido</translation>
     </message>
     <message>
         <source>Canceled</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Cancelado</translation>
     </message>
     <message>
@@ -2494,27 +2488,22 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinzento).</translatio
     </message>
     <message>
         <source>File Name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Nome do Ficheiro</translation>
     </message>
     <message>
         <source>Contact</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Contacto</translation>
     </message>
     <message>
         <source>Progress</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Progresso</translation>
     </message>
     <message>
         <source>Size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tamanho</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Velocidade</translation>
     </message>
     <message>
@@ -2523,27 +2512,22 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinzento).</translatio
     </message>
     <message>
         <source>Control</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Controlo</translation>
     </message>
     <message>
         <source>You have joined the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Entrou na conferência</translation>
     </message>
     <message>
         <source>You have left the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Saiu da conferência</translation>
     </message>
     <message>
         <source>Failed to load chat history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Falha ao carregar o histórico de bate-papos</translation>
     </message>
     <message>
         <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>A versão da base de dados (%1) é mais recente do que a que suportamos atualmente (%2). Favor atualizar o qTox.</translation>
     </message>
 </context>
@@ -2645,7 +2629,6 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinzento).</translatio
     </message>
     <message>
         <source>Select Date Dialog</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Caixa de diálogo Selecionar data</translation>
     </message>
     <message>
@@ -2704,17 +2687,14 @@ Este ID inclui o código NoSpam (em azul) e o checkum (em cinzento).</translatio
     </message>
     <message>
         <source>Failed to load personal settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Falha no carregamento de configurações pessoais</translation>
     </message>
     <message>
         <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Não foi possível atualizar as configurações da versão %1 para a versão %2. Não é possível iniciar o qTox.</translation>
     </message>
     <message>
         <source>Failed to load global settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Falha ao carregar configurações globais</translation>
     </message>
 </context>

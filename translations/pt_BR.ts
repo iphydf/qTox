@@ -190,7 +190,6 @@ o que pode levar a problemas com as videochamadas.</translation>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Esta versão do qTox está sendo mantida pela equipe TokTok após o arquivamento do projeto qTox original.</translation>
     </message>
 </context>
@@ -490,12 +489,10 @@ o que pode levar a problemas com as videochamadas.</translation>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Endereço de proxy inválido</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Por favor, insira um endereço IP válido ou nome de host para a configuração de proxy.</translation>
     </message>
 </context>
@@ -573,7 +570,6 @@ o que pode levar a problemas com as videochamadas.</translation>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Habilitar ferramentas de depuração (somente desenvolvedores)</translation>
     </message>
 </context>
@@ -625,18 +621,15 @@ o que pode levar a problemas com as videochamadas.</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Verifica se este programa está executando a versão mais recente do qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Inicia em modo portátil; carrega o perfil deste diretório.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>caminho</translation>
     </message>
 </context>
@@ -806,7 +799,6 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     <message>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Localização não gravável</translation>
     </message>
     <message>
@@ -835,7 +827,6 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>copiar ID do par</translation>
     </message>
 </context>
@@ -940,17 +931,14 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     <name>DebugLog</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Registro de depuração</translation>
     </message>
     <message>
         <source>Auto-reload</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Recarregar automaticamente</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Rolagem automática</translation>
     </message>
 </context>
@@ -958,7 +946,6 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     <name>DebugLogForm</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Registro de depuração</translation>
     </message>
 </context>
@@ -1154,7 +1141,6 @@ de forma que você possa salvar o arquivo no Windows.</translation>
     </message>
     <message>
         <source>%1 (no fonts)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 (sem fontes)</translation>
     </message>
     <message>
@@ -1284,17 +1270,14 @@ ao invés de fechar.</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Clique aqui se encontrar erros em uma tradução e quiser ajudar a corrigi-los.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ajude a traduzir</translation>
     </message>
     <message>
         <source> min</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> min</translation>
     </message>
 </context>
@@ -1774,7 +1757,6 @@ Pressione Shift+F1 para obter mais informações.</translation>
     </message>
     <message>
         <source>Open internal debugging tools</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Abra ferramentas de depuração interna</translation>
     </message>
     <message>
@@ -1783,7 +1765,6 @@ Pressione Shift+F1 para obter mais informações.</translation>
     </message>
     <message>
         <source>Open Debugger</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Abrir o depurador</translation>
     </message>
     <message>
@@ -1921,7 +1902,6 @@ Pressione Shift+F1 para obter mais informações.</translation>
     </message>
     <message>
         <source>Incoming call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Chamada recebida</translation>
     </message>
 </context>
@@ -2934,104 +2914,85 @@ Ocultar caracteres de formatação:
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Se desativado, silencia sons de notificação quando o estado for Ocupado (mas ainda mostra uma notificação)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Use notificações na área de trabalho, por exemplo, em uma central de notificação ou na bandeja do sistema. Sem isso, a notificação só ficará visível como um ícone piscando na bandeja.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Mostrar apenas &quot;nova mensagem&quot; sem mostrar informações potencialmente secretas nas notificações da área de trabalho.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Divide a lista de amigos e a janela de bate-papo em janelas móveis separadas.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Exibe emojis textuais como imagens coloridas em vez de texto ou emojis renderizados em fonte preta/branca.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Selecione qual conjunto de imagens usar ao renderizar emojis.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tamanho em pixels de uma imagem emoji. Selecione algo semelhante ao tamanho da fonte base.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Estilo base a ser usado para a IU. Fusion é recomendado porque funciona melhor com o tema qTox.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tema de cores da interface do usuário. Use isto para selecionar o modo escuro.</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Se desativado, usa notificações básicas na bandeja do sistema. Caso contrário, tenta usar o back-end de notificação do seu ambiente de área de trabalho. Desative esta opção se observar problemas com notificações na área de trabalho.</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Usa back-end de notificação específico do sistema, se disponível</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Mostra visualizações de imagens enviadas e recebidas em bate-papos. Passe o mouse sobre a visualização embutida para exibir uma visualização maior.</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Pré-visualização da imagem</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Número máximo de mensagens (por conversa) carregadas do histórico de
 bate-papos. Diminua isso para melhorar o desempenho. Um número muito baixo aqui
 pode fazer com que a barra de rolagem desapareça.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tamanho máximo de exibição do registro de bate-papo</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Número de mensagens a serem carregadas do histórico de bate-papo ao rolar.
 Um número muito baixo aqui pode fazer com que a barra de rolagem desapareça.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Tamanho do bloco de registro de bate-papos</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Registro de bate-papos:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ocultar sufixo após símbolo NULO</translation>
     </message>
 </context>

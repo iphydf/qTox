@@ -178,7 +178,6 @@ which may lead to problems with video calls.</source>
     <message>
         <source>See a full list of %1 at Github</source>
         <comment>`%1` is replaced with translation of word `contributors`</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>在 Github 上查看 %1 的完整列表</translation>
     </message>
     <message>
@@ -189,7 +188,6 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Writing Useful Bug Reports</source>
         <comment>Replaces `%2` in the `A list of all known…`</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>撰寫有用的錯誤報告</translation>
     </message>
     <message>
@@ -199,7 +197,6 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>此版本的 qTox 由 TokTok 團隊維護，原始 qTox 專案已被封存。</translation>
     </message>
 </context>
@@ -207,7 +204,6 @@ which may lead to problems with video calls.</source>
     <name>AboutFriendForm</name>
     <message>
         <source>Automatically accept files from contact if set</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>如果啟用，自動接受聯絡人發送的檔案</translation>
     </message>
     <message>
@@ -440,7 +436,6 @@ which may lead to problems with video calls.</source>
     <message>
         <source>%1 here! Tox me maybe?</source>
         <extracomment>Default message in friend requests if the field is left blank. Write something appropriate!</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 在這裡！要不要 Tox 我一下？</translation>
     </message>
     <message>
@@ -1319,23 +1314,19 @@ so you can save the file on Windows.</source>
     <message>
         <source>Enable light tray icon.</source>
         <comment>toolTip for light icon setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>啟用亮色圖示。</translation>
     </message>
     <message>
         <source>Light icon</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>亮色圖示</translation>
     </message>
     <message>
         <source>qTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>qTox 將在啟動時最小化至系統匣。</translation>
     </message>
     <message>
         <source>Start in tray</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>啟動時最小化到系統匣</translation>
     </message>
     <message>
@@ -1345,7 +1336,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Minimize to tray</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>最小化到系統匣</translation>
     </message>
     <message>
@@ -1416,7 +1406,6 @@ so you can save the file on Windows.</source>
         <source>After pressing minimize (_) qTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>按最小化(_)按鈕後， qTox 將最小化到系統匣，
 而不是系統工作列。</translation>
     </message>
@@ -1424,7 +1413,6 @@ instead of system taskbar.</source>
         <source>After pressing close (X) qTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>按下關閉（X）按鈕後，qTox 將最小化至系統匣，
 而不是完全關閉。</translation>
     </message>
@@ -2685,7 +2673,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>%1 here! Tox me maybe?</source>
         <comment>Default message in Tox URI friend requests. Write something appropriate!</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 在這裡！要不要 Tox 我一下？</translation>
     </message>
     <message>

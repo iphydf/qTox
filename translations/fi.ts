@@ -2951,7 +2951,6 @@ Hide formatting characters:
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Näytä vain &quot;uusi viesti&quot; näyttämättä mahdollisesti salaisia tietoja työpöytäilmoituksissa.</translation>
     </message>
     <message>

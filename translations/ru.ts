@@ -491,12 +491,10 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Неверный адрес прокси</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Пожалуйста, введите действительный IP адрес или имя хоста в настройках прокси.</translation>
     </message>
 </context>
@@ -625,18 +623,15 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Проверяет, используется ли последняя версия qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Запускается в портативном режиме; загружает профиль из этого каталога.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>путь</translation>
     </message>
 </context>
@@ -806,7 +801,6 @@ so you can save the file on Windows.</source>
     <message>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Место недоступно для записи</translation>
     </message>
     <message>
@@ -836,7 +830,6 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>скопировать идентификатор узла</translation>
     </message>
 </context>
@@ -1281,17 +1274,14 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Нажмите сюда, если вы обнаружили ошибки в переводе и хотите помочь их исправить.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Помочь перевести</translation>
     </message>
     <message>
         <source> min</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> мин</translation>
     </message>
 </context>
@@ -1917,7 +1907,6 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Incoming call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Входящий звонок</translation>
     </message>
 </context>
@@ -2453,7 +2442,6 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>%1 went offline during the call attempt</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 вышел из сети во время попытки звонка</translation>
     </message>
     <message>
@@ -2975,48 +2963,40 @@ Hide formatting characters:
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Показывать предварительный просмотр отправленных и полученных изображений в чатах. Наведите указатель мыши на встроенный предварительный просмотр, чтобы отобразить предварительный просмотр большего размера.</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Предварительный просмотр изображения</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Максимальное количество сообщений (на диалог), загруженных из истории чата.
 Уменьшите это значение, чтобы улучшить производительность.
 Слишком низкое значение может привести к исчезновению полосы прокрутки.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Максимальный размер журнала чата</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Количество сообщений для загрузки из истории чата при пролистывании.
 Слишком низкое значение может привести к исчезновению полосы прокрутки.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Размер фрагмента журнала чата</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Журнал чата:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Скрыть суффикс после нулевого символа</translation>
     </message>
 </context>

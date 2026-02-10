@@ -192,7 +192,6 @@ co może powodować problemy z rozmowami wideo.</translation>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ta wersja qTox jest utrzymywana przez zespół TokTok po archiwizacji oryginalnego projektu qTox.</translation>
     </message>
 </context>
@@ -496,12 +495,10 @@ co może powodować problemy z rozmowami wideo.</translation>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Nieprawidłowy adres proxy</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Wprowadź prawidłowy adres IP lub nazwę hosta dla ustawienia proxy.</translation>
     </message>
 </context>
@@ -580,7 +577,6 @@ co może powodować problemy z rozmowami wideo.</translation>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Włącz narzędzia debugowania (tylko programiści)</translation>
     </message>
 </context>
@@ -632,18 +628,15 @@ co może powodować problemy z rozmowami wideo.</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Sprawdza, czy na tym programie działa najnowsza wersja qTox.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Uruchamia się w trybie przenośnym; ładuje profil z tego katalogu.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ścieżka</translation>
     </message>
 </context>
@@ -843,7 +836,6 @@ więc możesz zapisać ten plik na systemie Windows.</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>skopiuj identyfikator partnera</translation>
     </message>
 </context>
@@ -950,17 +942,14 @@ więc możesz zapisać ten plik na systemie Windows.</translation>
     <name>DebugLog</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Dziennik debugowania</translation>
     </message>
     <message>
         <source>Auto-reload</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Automatyczne przeładowanie</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Automatyczne przewijanie</translation>
     </message>
 </context>
@@ -968,7 +957,6 @@ więc możesz zapisać ten plik na systemie Windows.</translation>
     <name>DebugLogForm</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Dziennik debugowania</translation>
     </message>
 </context>
@@ -1164,12 +1152,10 @@ więc możesz zapisać ten plik na systemie Windows.</translation>
     </message>
     <message>
         <source>%1 (no fonts)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 (bez czcionek)</translation>
     </message>
     <message>
         <source>Auto select</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Wybór automatyczny</translation>
     </message>
 </context>
@@ -1296,17 +1282,14 @@ zamiast zostać całkowicie zamknięty.</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Kliknij tutaj, jeśli znajdziesz błędy w tłumaczeniu i chcesz pomóc je naprawić.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Pomóż przetłumaczyć</translation>
     </message>
     <message>
         <source> min</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation> ‐min</translation>
     </message>
 </context>
@@ -1791,7 +1774,6 @@ Naciśnij Shift+F1, aby uzyskać więcej informacji.</translation>
     </message>
     <message>
         <source>Open internal debugging tools</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Otwórz wewnętrzne narzędzia do debugowania</translation>
     </message>
     <message>
@@ -1800,7 +1782,6 @@ Naciśnij Shift+F1, aby uzyskać więcej informacji.</translation>
     </message>
     <message>
         <source>Open Debugger</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Otwórz debuger</translation>
     </message>
     <message>
@@ -1941,7 +1922,6 @@ Naciśnij Shift+F1, aby uzyskać więcej informacji.</translation>
     </message>
     <message>
         <source>Incoming call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Połączenie przychodzące</translation>
     </message>
 </context>
@@ -2485,7 +2465,6 @@ To ID zawiera kod NoSpam (w kolorze niebieskim) oraz sumę kontrolną (w kolorze
     </message>
     <message>
         <source>%1 went offline during the call attempt</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>%1 przeszedł w tryb offline podczas próby połączenia</translation>
     </message>
     <message>
@@ -2554,12 +2533,10 @@ To ID zawiera kod NoSpam (w kolorze niebieskim) oraz sumę kontrolną (w kolorze
     </message>
     <message>
         <source>Failed to load chat history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Nie udało się załadować historii czatów</translation>
     </message>
     <message>
         <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Wersja bazy danych (%1) jest nowsza niż obecnie obsługiwana (%2). Proszę zaktualizować qTox.</translation>
     </message>
 </context>
@@ -2953,75 +2930,61 @@ Hide formatting characters:
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Jeśli wyłączone, wycisz powiadomienie, gdy stan to Zajęty (ale nadal wyświetlaj powiadomienie)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Korzystaj z powiadomień na pulpicie, np. w centrum powiadomień lub na pasku zadań. Bez tego powiadomienie będzie widoczne jedynie jako migająca ikona w zasobniku.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Pokazuj tylko „nową wiadomość”, bez pokazywania potencjalnie tajnych informacji w powiadomieniach na pulpicie.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Podziel listę znajomych i okno czatu na oddzielnie ruchome okna.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Wyświetlaj emoji tekstowe w postaci kolorowych obrazów zamiast tekstu lub emoji renderowanych za pomocą czarno-białej czcionki.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Wybierz zestaw obrazów, który ma zostać użyty podczas renderowania emoji.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Rozmiar obrazu emoji w pikselach. Wybierz coś podobnego do podstawowego rozmiaru czcionki.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Styl podstawowy do użycia w interfejsie użytkownika. Zalecana jest Fuzja, ponieważ najlepiej działa z motywem qTox.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Motyw kolorystyczny interfejsu użytkownika. Użyj tego, aby wybrać tryb ciemny.</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Jeśli wyłączone, używaj podstawowych powiadomień w zasobniku systemowym. W przeciwnym razie spróbuj użyć zaplecza powiadomień w środowisku graficznym. Wyłącz tę opcję, jeśli zaobserwujesz problemy z powiadomieniami na pulpicie.</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Jeśli jest dostępny, użyj systemu powiadomień specyficznego dla systemu</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Pokaż podglądy wysłanych i odebranych obrazów na czatach. Najedź kursorem na podgląd wbudowany, aby wyświetlić większy podgląd.</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Podgląd obrazu</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Maksymalna liczba wiadomości (na rozmowę) załadowanych z historii czatów.
 Zmniejsz tę wartość, aby poprawić wydajność. Zbyt mała liczba może
 spowodować zniknięcie paska przewijania.</translation>
@@ -3035,23 +2998,19 @@ widoku dziennika czatu</translation>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Liczba wiadomości do załadowania z historii czatów podczas przewijania.
 Zbyt mała liczba może spowodować zniknięcie paska przewijania.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Rozmiar fragmentu dziennika czatu</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Dziennik czatu:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation>Ukryj sufiks po zerowym symbolu</translation>
     </message>
 </context>
