@@ -12,6 +12,7 @@ qt6_add_translation(
   be.ts
   bg.ts
   bn.ts
+  ca.ts
   cs.ts
   da.ts
   de.ts

@@ -29,6 +29,7 @@ const QStringList locales = {
     "ber",     // Berber
     "bg",      // Bulgarian
     "bn",      // Bengali
+    "ca",      // Catalan
     "cs",      // Czech
     "da",      // Danish
     "de",      // German
