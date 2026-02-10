@@ -1122,8 +1122,7 @@ um sie in Windows speichern zu können.</translation>
     </message>
     <message>
         <source>Offline</source>
-        <translatorcomment>Ausgelassen</translatorcomment>
-        <translation></translation>
+        <translation>Offline</translation>
     </message>
     <message>
         <source>Move to circle &quot;%1&quot;</source>
@@ -3089,8 +3088,7 @@ Bildlaufleiste verschwindet.</translation>
     </message>
     <message>
         <source>Offline</source>
-        <translatorcomment>Ausgelassen</translatorcomment>
-        <translation></translation>
+        <translation>Offline</translation>
     </message>
     <message>
         <source>Friends</source>

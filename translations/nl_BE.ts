@@ -41,7 +41,8 @@
     </message>
     <message>
         <source>Volume</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Volume</translation>
     </message>
     <message>
         <source>Video Settings</source>
@@ -113,19 +114,27 @@ The higher values, the better video quality your friends may get.
 Note that with better video quality, you use more bandwidth.
 Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Stel de resolutie van uw camera in.
+Hoe hoger de waarden, hoe beter de videokwaliteit die uw vrienden te zien krijgen.
+Houd er rekening mee dat ge met een betere videokwaliteit meer bandbreedte gebruikt.
+Soms is uw verbinding niet goed genoeg om een hogere videokwaliteit aan te kunnen,
+wat tot problemen met videogesprekken kan leiden.</translation>
     </message>
     <message>
         <source>Play a test sound while changing the output volume.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Speel een testgeluid af terwijl ge het uitgangsvolume wijzigt.</translation>
     </message>
     <message>
         <source>Use slider to set the gain of your input device ranging from %1dB to %2dB.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Gebruik de schuifregelaar om de versterking van uw invoerapparaat in te stellen tussen %1dB en %2dB.</translation>
     </message>
     <message>
         <source>Use slider to set the activation volume for your input device.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Gebruik de schuifregelaar om het activeringsvolume voor uw invoerapparaat in te stellen.</translation>
     </message>
 </context>
 <context>
@@ -158,7 +167,7 @@ which may lead to problems with video calls.</source>
         <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Ne lijst met gekende problemen kunt g vinden op onzen %1 op GitHub. Als ge een probleem of beveiligingsfout in qTox tegenkomt, gelieve deze dan te melden volgens de richtlijnen in ons wiki-artikel %2.</translation>
+        <translation>Een lijst met gekende problemen kunt g vinden op onzen %1 op GitHub. Als ge een probleem of beveiligingsfout in qTox tegenkomt, gelieve deze dan te melden volgens de richtlijnen in ons wiki-artikel %2.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
@@ -167,7 +176,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>See a full list of %1 at Github</source>
         <comment>`%1` is replaced with translation of word `contributors`</comment>
-        <translation>Bekijk ne volledige lijst op %1 op GitHub</translation>
+        <translation>Bekijk een volledige lijst op %1 op GitHub</translation>
     </message>
     <message>
         <source>bug-tracker</source>
@@ -186,7 +195,8 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Deze versie van qTox wordt onderhouden door het TokTok-team na het archiveren van het oorspronkelijke qTox-project.</translation>
     </message>
 </context>
 <context>
@@ -205,7 +215,8 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Audio</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Audio</translation>
     </message>
     <message>
         <source>Audio + Video</source>
@@ -233,11 +244,13 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>This is the public key of your friend, use it to verify their identity via another channel. You can not send this to other people so they can add this contact.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Dit is de publieke sleutel van uw vriend, gebruik deze voor de identiteit te verifiëren via een ander kanaal. Ge kunt dit niet naar anderen sturen voor dit contact toe te voegen.</translation>
     </message>
     <message>
         <source>Public key (not ToxID):</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Publieke sleutel (geen ToxID):</translation>
     </message>
     <message>
         <source>Confirmation</source>
@@ -245,31 +258,38 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Are you sure to remove %1 chat history?</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Zijt ge zeker dat ge de chatgeschiedenis van %1 wilt verwijderen?</translation>
     </message>
     <message>
         <source>Failed to remove chat history with %1!</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Het is niet gelukt voor de chatgeschiedenis met %1 te verwijderen!</translation>
     </message>
     <message>
         <source>Auto-accept files</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Bestanden automatisch aanvaarden</translation>
     </message>
     <message>
         <source>Auto-accept for this contact is disabled</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Automatisch aanvaarden voor dit contact is uitgeschakeld</translation>
     </message>
     <message>
         <source>Auto-accept call:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Oproep automatisch aanvaarden:</translation>
     </message>
     <message>
         <source>Auto-accept conference invites</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Groepsuitnodigingen automatisch aanvaarden</translation>
     </message>
     <message>
         <source>You can save comments about this contact here.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ge kunt hier opmerkingen over dit contact opslaan.</translation>
     </message>
 </context>
 <context>
@@ -292,19 +312,23 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Open update download link</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Update-downloadlink openen</translation>
     </message>
     <message>
         <source>Update available</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Update beschikbaar</translation>
     </message>
     <message>
         <source>qTox is up to date ✓</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">qTox is up-to-date ✓</translation>
     </message>
     <message>
         <source>Currently running an untested/unstable version of qTox</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ge draait momenteel een ongeteste/onstabiele versie van qTox</translation>
     </message>
 </context>
 <context>
@@ -401,7 +425,7 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Import a list of contacts, one Tox ID per line</source>
-        <translation>Importeer ne lijst met contacten, enen Tox-ID per regel</translation>
+        <translation>Importeer een lijst met contacten, enen Tox-ID per regel</translation>
     </message>
     <message numerus="yes">
         <source>Ready to import %n contact(s), click send to confirm</source>
@@ -416,17 +440,20 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Tox ID, 76 hexadecimal characters</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Tox-ID, 76 hexadecimale tekens</translation>
     </message>
     <message>
         <source>%1 Tox ID is invalid</source>
         <comment>Tox address error</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 Tox-ID is ongeldig</translation>
     </message>
     <message>
         <source>76 hexadecimal characters</source>
         <extracomment>Tox ID format description</extracomment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">76 hexadecimale tekens</translation>
     </message>
     <message>
         <source>Add friend</source>
@@ -445,11 +472,11 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>not</source>
-        <translation>niks</translation>
+        <translation>vooral</translation>
     </message>
     <message>
         <source>IMPORTANT NOTE</source>
-        <translation>BELANGRIJKEN OPMERKING</translation>
+        <translation>BELANGRIJKE OPMERKING</translation>
     </message>
     <message>
         <source>Reset settings</source>
@@ -473,23 +500,28 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Tenzij ge %1 weet wat ge aan het doen zijt, gelieve hier %2 niets te wijzigen. Wijzigingen die hier worden aangebracht, kunnen leiden tot problemen met qTox, en zelfs tot verlies van uw gegevens, b.v. geschiedenis.%3</translation>
     </message>
     <message>
         <source>Changes here are applied only after restarting qTox.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Wijzigingen hier worden pas toegepast na het herstarten van qTox.</translation>
     </message>
     <message>
         <source>Save file</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Bestand opslaan</translation>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ongeldig proxy-adres</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Voer een geldig IP-adres of hostnaam in voor de proxy-instelling.</translation>
     </message>
 </context>
 <context>
@@ -541,7 +573,8 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Debug</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Debug</translation>
     </message>
     <message>
         <source>Export Debug Log</source>
@@ -553,20 +586,24 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Enable LAN discovery</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">LAN-detectie inschakelen</translation>
     </message>
     <message>
         <source>Connection settings</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Verbindingsinstellingen</translation>
     </message>
     <message>
         <source>Disabling this allows, e.g., Tox over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
         <extracomment>force tcp checkbox tooltip</extracomment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Het uitschakelen hiervan maakt b.v. Tox over Tor mogelijk. Het voegt echter belasting toe aan het Tox-netwerk, dus schakel dit alleen uit indien nodig.</translation>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Debug-tools inschakelen (enkel voor ontwikkelaars)</translation>
     </message>
 </context>
 <context>
@@ -590,43 +627,52 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Sets IPv6 &lt;on&gt;/&lt;off&gt;. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Stelt IPv6 in op &lt;on&gt;/&lt;off&gt;. Standaard is ON.</translation>
     </message>
     <message>
         <source>Sets UDP &lt;on&gt;/&lt;off&gt;. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Stelt UDP in op &lt;on&gt;/&lt;off&gt;. Standaard is ON.</translation>
     </message>
     <message>
         <source>Sets LAN discovery &lt;on&gt;/&lt;off&gt;. UDP off overrides. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Stelt LAN-detectie in op &lt;on&gt;/&lt;off&gt;. UDP uit overschrijft dit. Standaard is ON.</translation>
     </message>
     <message>
         <source>Sets proxy settings. Default is NONE.</source>
         <comment>NONE should not be translated, it is a flag value</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Stelt proxy-instellingen in. Standaard is NONE.</translation>
     </message>
     <message>
         <source>Error</source>
+        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Fout</translation>
     </message>
     <message>
         <source>Failed to load profile automatically.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Het is niet gelukt voor het profiel automatisch te laden.</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Controleert of dit programma de nieuwste qTox-versie draait.</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Start in portable-modus; laadt profiel uit deze map.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">pad</translation>
     </message>
 </context>
 <context>
@@ -671,12 +717,15 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Filename contained illegal characters</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Bestandsnaam bevat verboden tekens</translation>
     </message>
     <message>
         <source>Illegal characters have been changed to _
 so you can save the file on Windows.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Verboden tekens zijn veranderd in _
+zodat ge het bestand op Windows kunt opslaan.</translation>
     </message>
 </context>
 <context>
@@ -799,7 +848,8 @@ so you can save the file on Windows.</source>
     <message>
         <source>You do not have permission to write to that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ge hebt geen toestemming voor in die map te schrijven. Kies een andere map of annuleer het opslaan.</translation>
     </message>
 </context>
 <context>
@@ -807,33 +857,37 @@ so you can save the file on Windows.</source>
     <message numerus="yes">
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
+        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n gebruiker in gesprek</numerusform>
+            <numerusform>%n gebruikers in gesprek</numerusform>
         </translation>
     </message>
     <message>
         <source>mute</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">dempen</translation>
     </message>
     <message>
         <source>unmute</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">niet meer dempen</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">peer-ID kopiëren</translation>
     </message>
 </context>
 <context>
     <name>ConferenceInviteForm</name>
     <message>
         <source>Conferences</source>
-        <translation type="unfinished">Groepen</translation>
+        <translation type="unfinished">Groepsgesprekken</translation>
     </message>
     <message>
         <source>Create new conference</source>
-        <translation type="unfinished">Nieuwe groep aanmaken</translation>
+        <translation type="unfinished">Nieuw groepsgesprek aanmaken</translation>
     </message>
     <message>
         <source>Conference invites</source>
@@ -844,7 +898,7 @@ so you can save the file on Windows.</source>
     <name>ConferenceInviteWidget</name>
     <message>
         <source>Invited by %1 on %2 at %3.</source>
-        <translation>Uitgenodigd in %1, door %2, om %3.</translation>
+        <translation>Uitgenodigd door %1 op %2 om %3.</translation>
     </message>
     <message>
         <source>Join</source>
@@ -877,18 +931,21 @@ so you can save the file on Windows.</source>
     <message numerus="yes">
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
+        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n gebruiker in gesprek</numerusform>
+            <numerusform>%n gebruikers in gesprek</numerusform>
         </translation>
     </message>
     <message>
         <source>New message</source>
+        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">Nieuw bericht</translation>
     </message>
     <message>
         <source>Online</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Online</translation>
     </message>
 </context>
 <context>
@@ -899,7 +956,8 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Conference %1</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Groepsgesprek %1</translation>
     </message>
     <message>
         <source>Invalid Tox ID</source>
@@ -926,22 +984,26 @@ so you can save the file on Windows.</source>
     <name>DebugLog</name>
     <message>
         <source>Debug Log</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Debuglogboek</translation>
     </message>
     <message>
         <source>Auto-reload</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Automatisch herladen</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Automatisch scrollen</translation>
     </message>
 </context>
 <context>
     <name>DebugLogForm</name>
     <message>
         <source>Debug Log</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Debuglogboek</translation>
     </message>
 </context>
 <context>
@@ -998,23 +1060,25 @@ so you can save the file on Windows.</source>
     <message>
         <source>Remote paused</source>
         <comment>file transfer widget</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Gepauzeerd door tegenpartij</translation>
     </message>
 </context>
 <context>
     <name>FilesForm</name>
     <message>
         <source>Downloads</source>
-        <translation></translation>
+        <translation>Downloads</translation>
     </message>
     <message>
         <source>Uploads</source>
-        <translation></translation>
+        <translation>Uploads</translation>
     </message>
     <message>
         <source>Transferred files</source>
         <comment>&quot;Headline&quot; of the window</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Overgedragen bestanden</translation>
     </message>
 </context>
 <context>
@@ -1041,7 +1105,8 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Older than 6 months</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ouder dan 6 maanden</translation>
     </message>
 </context>
 <context>
@@ -1049,7 +1114,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Invite to conference</source>
         <comment>Menu to invite a friend to a conference</comment>
-        <translation>Uitnodigen in groep</translation>
+        <translation>Uitnodigen in groepsgesprek</translation>
     </message>
     <message>
         <source>Move to circle...</source>
@@ -1074,11 +1139,11 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>To new conference</source>
-        <translation type="unfinished">Naar nieuwe groep</translation>
+        <translation type="unfinished">Naar nieuw groepsgesprek</translation>
     </message>
     <message>
         <source>Invite to conference &apos;%1&apos;</source>
-        <translation type="unfinished">Uitnodigen in groep ‘%1’</translation>
+        <translation type="unfinished">Uitnodigen in groepsgesprek ‘%1’</translation>
     </message>
     <message>
         <source>Set alias...</source>
@@ -1099,7 +1164,8 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Online</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Online</translation>
     </message>
     <message>
         <source>Away</source>
@@ -1112,11 +1178,12 @@ so you can save the file on Windows.</source>
     <message>
         <source>Offline</source>
         <translatorcomment>Ausgelassen</translatorcomment>
-        <translation></translation>
+        <translation type="unfinished">Offline</translation>
     </message>
     <message>
         <source>Move to circle &quot;%1&quot;</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Verplaatsen naar cirkel &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Remove friend</source>
@@ -1125,7 +1192,8 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Blocked</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Geblokkeerd</translation>
     </message>
 </context>
 <context>
@@ -1136,11 +1204,13 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>%1 (no fonts)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 (geen lettertypen)</translation>
     </message>
     <message>
         <source>Auto select</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Automatische selectie</translation>
     </message>
 </context>
 <context>
@@ -1225,52 +1295,65 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Controleren op updates</translation>
     </message>
     <message>
         <source>Spell checking</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Spellingcontrole</translation>
     </message>
     <message>
         <source>Max autoaccept file size (0 to disable):</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Maximale grootte voor automatisch aanvaarden (0 voor uit te schakelen):</translation>
     </message>
     <message>
         <source> MB</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished"> MB</translation>
     </message>
     <message>
         <source>After pressing minimize (_) qTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Na het drukken op minimaliseren (_) zal qTox minimaliseren naar het systeemvak,
+in plaats van naar de taakbalk.</translation>
     </message>
     <message>
         <source>After pressing close (X) qTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Na het drukken op sluiten (X) zal qTox sluiten naar het systeemvak,
+in plaats van volledig af te sluiten.</translation>
     </message>
     <message>
         <source>You can set this on a per-friend basis by right clicking individual friends.</source>
         <comment>autoaccept cb tooltip</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ge kunt dit per vriend instellen door met de rechtermuisknop op individuele vrienden te klikken.</translation>
     </message>
     <message>
         <source>Add a chat message when a user joins or leaves a conference</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Voeg een bericht toe wanneer een gebruiker een groepsgesprek binnengaat of verlaat</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Klik hier als ge fouten vindt in een vertaling en wilt helpen deze te verbeteren.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Help mee met vertalen</translation>
     </message>
     <message>
         <source> min</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished"> min</translation>
     </message>
 </context>
 <context>
@@ -1281,7 +1364,8 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Smileys</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Smileys</translation>
     </message>
     <message>
         <source>Send file(s)</source>
@@ -1313,11 +1397,13 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Search in text</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Zoeken in tekst</translation>
     </message>
     <message>
         <source>Go to current date</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Naar huidige datum gaan</translation>
     </message>
     <message>
         <source>Load chat history...</source>
@@ -1329,7 +1415,8 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Are you sure that you want to clear all displayed messages?</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Zijt ge zeker dat ge alle getoonde berichten wilt wissen?</translation>
     </message>
 </context>
 <context>
@@ -1477,7 +1564,9 @@ Dit bestand bevat geen chatgeschiedenis.</translation>
         <source>This ID allows other Tox users to add and contact you.
 Share it with your friends to begin chatting.</source>
         <comment>Tox ID tooltip</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Met deze ID kunnen andere Tox-gebruikers u toevoegen en contact met u opnemen.
+Deel hem met uw vrienden voor te beginnen chatten.</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
@@ -1488,11 +1577,13 @@ Share it with your friends to begin chatting.</source>
     <name>LoadHistoryDialog</name>
     <message>
         <source>Load history dialog</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Geschiedenis laad-dialoogvenster</translation>
     </message>
     <message>
         <source>Load history from:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Geschiedenis laden van:</translation>
     </message>
 </context>
 <context>
@@ -1632,17 +1723,23 @@ Ge kunt der een aanmaken.</translation>
     <message>
         <source>The passwords you&apos;ve entered are different.
 Please make sure to enter the same password twice.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">De wachtwoorden die ge hebt ingevoerd zijn verschillend.
+Zorg ervoor dat ge hetzelfde wachtwoord twee keer invoert.</translation>
     </message>
     <message>
         <source>This optional password is used to encrypt local message data and your profile.
 If you lose this password, there is no way to recover it.
 Press Shift+F1 for more information.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Dit optionele wachtwoord wordt gebruikt voor lokale berichtgegevens en uw profiel te versleutelen.
+Als ge dit wachtwoord verliest, is er geen manier voor dit te herstellen.
+Druk op Shift+F1 voor meer informatie.</translation>
     </message>
     <message>
         <source>The password you enter here is optional and encrypts message data and your Tox secret key. It does not encrypt files received. Your profile data is never sent to any servers. This is not a remote login, it&apos;s local to your computer only. qTox developers won&apos;t be able to recover your password if lost.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Het wachtwoord dat ge hier invoert is optioneel en versleutelt berichtgegevens en uw Tox-geheime sleutel. Het versleutelt geen ontvangen bestanden. Uw profielgegevens worden nooit naar servers verzonden. Dit is geen externe login, het is alleen lokaal op uwen computer. qTox-ontwikkelaars kunnen uw wachtwoord niet herstellen als ge het verliest.</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
@@ -1693,7 +1790,8 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Status</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Status</translation>
     </message>
     <message>
         <source>Set availability status</source>
@@ -1745,15 +1843,18 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Open internal debugging tools</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Interne debug-tools openen</translation>
     </message>
     <message>
         <source>Debug</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Debug</translation>
     </message>
     <message>
         <source>Open Debugger</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Debugger openen</translation>
     </message>
     <message>
         <source>Add friend</source>
@@ -1781,15 +1882,18 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Full Screen</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Volledig scherm</translation>
     </message>
     <message>
         <source>Toggle video preview</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Videovoorvertoning aan/uit</translation>
     </message>
     <message>
         <source>Mute audio</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Audio dempen</translation>
     </message>
     <message>
         <source>Mute microphone</source>
@@ -1801,15 +1905,18 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Exit full screen</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Volledig scherm verlaten</translation>
     </message>
     <message>
         <source>Hide messages</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Berichten verbergen</translation>
     </message>
     <message>
         <source>Show messages</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Berichten tonen</translation>
     </message>
 </context>
 <context>
@@ -1861,36 +1968,44 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>New conference message</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Nieuw groepsgespreksbericht</translation>
     </message>
     <message>
         <source>Incoming file transfer</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Inkomende bestandsoverdracht</translation>
     </message>
     <message>
         <source>%1 - file transfer</source>
         <extracomment>e.g. Bob - file transfer</extracomment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 - bestandsoverdracht</translation>
     </message>
     <message>
         <source>Conference invite received</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Groepsgespreksuitnodiging ontvangen</translation>
     </message>
     <message>
         <source>%1 invites you to join a conference.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 nodigt u uit voor deel te nemen aan een groepsgesprek.</translation>
     </message>
     <message>
         <source>Friend request received</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Vriendschapsverzoek ontvangen</translation>
     </message>
     <message>
         <source>Friend request received from %1</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Vriendschapsverzoek ontvangen van %1</translation>
     </message>
     <message>
         <source>Incoming call</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Inkomende oproep</translation>
     </message>
 </context>
 <context>
@@ -1904,7 +2019,8 @@ Press Shift+F1 for more information.</source>
     <name>PrivacyForm</name>
     <message>
         <source>Privacy</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Privacy</translation>
     </message>
     <message>
         <source>Confirmation</source>
@@ -1941,7 +2057,8 @@ Mensen die uwen ouden Tox-ID hebben kunnen u dan niet meer toevoegen, maar uwen 
     </message>
     <message>
         <source>NoSpam</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">NoSpam</translation>
     </message>
     <message>
         <source>NoSpam is a part of your ID that can be changed at will.
@@ -1962,7 +2079,8 @@ Het is mogelijk dat er zich veranderingen in het formaat voordoen, wat kan leide
     </message>
     <message>
         <source>Privacy</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Privacy</translation>
     </message>
     <message>
         <source>Conference block list</source>
@@ -1970,7 +2088,8 @@ Het is mogelijk dat er zich veranderingen in het formaat voordoen, wat kan leide
     </message>
     <message>
         <source>Filter out conference messages by conference members&apos; public keys. Put public keys here, one per line.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Filter groepsberichten op basis van de publieke sleutels van de groepsleden. Voer hier publieke sleutels in, één per regel.</translation>
     </message>
 </context>
 <context>
@@ -1985,7 +2104,8 @@ Het is mogelijk dat er zich veranderingen in het formaat voordoen, wat kan leide
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Kon het database-wachtwoord niet wijzigen; het is mogelijk beschadigd of gebruikt nog het oude wachtwoord.</translation>
     </message>
 </context>
 <context>
@@ -2134,28 +2254,34 @@ Gebruik een andere afbeelding.</translation>
     </message>
     <message>
         <source>Failed to save file</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Bestand opslaan mislukt</translation>
     </message>
     <message>
         <source>The file you chose could not be saved.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Het gekozen bestand kon niet worden opgeslagen.</translation>
     </message>
     <message>
         <source>Empty path is unavailable.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Leeg pad is niet beschikbaar.</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Kon databasepaswoord niet wijzigen; het is mogelijk beschadigd of gebruikt nog het oude paswoord.</translation>
     </message>
     <message>
         <source>Tox user names cannot exceed %1 characters.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Tox-gebruikersnamen mogen niet langer zijn dan %1 tekens.</translation>
     </message>
     <message>
         <source>Delete profile</source>
         <comment>deletion confirmation title</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Profiel verwijderen</translation>
     </message>
     <message>
         <source>Remove password</source>
@@ -2165,14 +2291,19 @@ Gebruik een andere afbeelding.</translation>
     <message>
         <source>Are you sure you want to remove your password?</source>
         <extracomment>deletion confirmation text</extracomment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Zijt ge zeker dat ge uw paswoord wilt verwijderen?</translation>
     </message>
     <message>
         <source>This ID allows other Tox users to add and contact you.
 Share it with your friends to begin chatting.
 
 This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Met deze ID kunnen andere Tox-gebruikers u toevoegen en contact met u opnemen.
+Deel hem met uw vrienden voor te beginnen chatten.
+
+Deze ID bevat de NoSpam-code (in het blauw) en de checksum (in het grijs).</translation>
     </message>
 </context>
 <context>
@@ -2245,7 +2376,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>LTR</source>
         <comment>DO NOT TRANSLATE. Instead, set this string to &apos;RTL&apos; in right-to-left languages (for example Hebrew and Arabic) to get proper widget layout. This string should only ever be &apos;LTR&apos; or &apos;RTL&apos;.</comment>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">LTR</translation>
     </message>
 </context>
 <context>
@@ -2253,7 +2385,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Choose an auto-accept directory</source>
         <comment>popup title</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Kies een map voor automatisch te aanvaarden</translation>
     </message>
 </context>
 <context>
@@ -2269,7 +2402,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>%1 is not a valid Tox address.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 is geen geldig Tox-adres.</translation>
     </message>
 </context>
 <context>
@@ -2292,7 +2426,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Violet</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Violet</translation>
     </message>
     <message>
         <source>Incoming call...</source>
@@ -2323,28 +2458,34 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Donker</translation>
     </message>
     <message>
         <source>Dark blue</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Donkerblauw</translation>
     </message>
     <message>
         <source>Dark olive</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Donkerolijfgroen</translation>
     </message>
     <message>
         <source>Dark red</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Donkerrood</translation>
     </message>
     <message>
         <source>Dark violet</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Donkerviolet</translation>
     </message>
     <message>
         <source>online</source>
         <comment>contact status</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">online</translation>
     </message>
     <message>
         <source>away</source>
@@ -2359,17 +2500,20 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>offline</source>
         <comment>contact status</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">offline</translation>
     </message>
     <message>
         <source>blocked</source>
         <comment>contact status</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">geblokkeerd</translation>
     </message>
     <message>
         <source>Reformatting text...</source>
         <comment>Waiting for text to be reformatted</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Tekst opnieuw aan het formatteren…</translation>
     </message>
     <message>
         <source>Failed to send file &quot;%1&quot;</source>
@@ -2377,15 +2521,18 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>%1 has joined the conference</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 neemt nu deel aan het groepsgesprek</translation>
     </message>
     <message>
         <source>%1 has left the conference</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 heeft het groepsgesprek verlaten</translation>
     </message>
     <message>
         <source>%1 is now known as %2</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 staat nu bekend als %2</translation>
     </message>
     <message>
         <source>%1 has set the title to %2</source>
@@ -2422,27 +2569,33 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>%1 went offline during the call attempt</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">%1 ging offline tijdens de oproeppoging</translation>
     </message>
     <message>
         <source>Initializing</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Initialiseren</translation>
     </message>
     <message>
         <source>Transmitting</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Verzenden</translation>
     </message>
     <message>
         <source>Finished</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Voltooid</translation>
     </message>
     <message>
         <source>Broken</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Gebroken</translation>
     </message>
     <message>
         <source>Canceled</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Geannuleerd</translation>
     </message>
     <message>
         <source>Paused</source>
@@ -2450,51 +2603,63 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Remote paused</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Gepauzeerd door tegenpartij</translation>
     </message>
     <message>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Bestandsnaam</translation>
     </message>
     <message>
         <source>Contact</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Contact</translation>
     </message>
     <message>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Voortgang</translation>
     </message>
     <message>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Grootte</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Snelheid</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Status</translation>
     </message>
     <message>
         <source>Control</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Controle</translation>
     </message>
     <message>
         <source>You have joined the conference</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ge zijt deel van het groepsgesprek geworden</translation>
     </message>
     <message>
         <source>You have left the conference</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Ge hebt het groepsgesprek verlaten</translation>
     </message>
     <message>
         <source>Failed to load chat history</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Laden van chatgeschiedenis mislukt</translation>
     </message>
     <message>
         <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Databaseversie (%1) is nieuwer dan we momenteel ondersteunen (%2). Gelieve qTox bij te werken.</translation>
     </message>
 </context>
 <context>
@@ -2535,7 +2700,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Escape</source>
         <comment>[Escape] key on the keyboard</comment>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Escape</translation>
     </message>
     <message>
         <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
@@ -2545,61 +2711,74 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Enter</source>
         <comment>[Enter] key on the keyboard</comment>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Enter</translation>
     </message>
 </context>
 <context>
     <name>SearchForm</name>
     <message>
         <source>The text could not be found.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">De tekst kon niet worden gevonden.</translation>
     </message>
     <message>
         <source>Start</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Start</translation>
     </message>
 </context>
 <context>
     <name>SearchSettingsForm</name>
     <message>
         <source>Start search:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Zoekopdracht starten:</translation>
     </message>
     <message>
         <source>from the end</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">vanaf het einde</translation>
     </message>
     <message>
         <source>from the beginning</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">vanaf het begin</translation>
     </message>
     <message>
         <source>after date</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">na datum</translation>
     </message>
     <message>
         <source>before date</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">vóór datum</translation>
     </message>
     <message>
         <source>Case sensitive</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Hoofdlettergevoelig</translation>
     </message>
     <message>
         <source>Whole words only</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Enkel hele woorden</translation>
     </message>
     <message>
         <source>Use regular expressions</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Reguliere expressies gebruiken</translation>
     </message>
     <message>
         <source>Select Date Dialog</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Datumselectie-dialoogvenster</translation>
     </message>
     <message>
         <source>Select a date</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Selecteer een datum</translation>
     </message>
 </context>
 <context>
@@ -2638,7 +2817,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>The password is too short.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Het wachtwoord is te kort.</translation>
     </message>
     <message>
         <source>Set profile password</source>
@@ -2653,15 +2833,18 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     </message>
     <message>
         <source>Failed to load personal settings</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Laden van persoonlijke instellingen mislukt</translation>
     </message>
     <message>
         <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Kon instellingen niet bijwerken van versie %1 naar versie %2. qTox kan niet worden gestart.</translation>
     </message>
     <message>
         <source>Failed to load global settings</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Laden van globale instellingen mislukt</translation>
     </message>
 </context>
 <context>
@@ -2709,7 +2892,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <name>UserInterfaceSettings</name>
     <message>
         <source>Chat</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Chat</translation>
     </message>
     <message>
         <source>Base font:</source>
@@ -2732,7 +2916,18 @@ Show formatting characters:
 Hide formatting characters:
     Apply formatting and don&apos;t show characters.
     E.g. &quot;**text**&quot; will show as &quot;text&quot;, bold.</source>
-        <translation type="unfinished">qTox moet mogelijk herstarten voor de nieuwe tekststijlvoorkeur van kracht te laten gaan.</translation>
+        <translation type="unfinished">Nieuwe tekststijlvoorkeuren worden mogelijk pas geladen in de chatgeschiedenis nadat qTox is herstart.
+Het heeft onmiddellijk effect op nieuwe berichten.
+
+Platte tekst:
+    Pas geen enkele opmaak toe op berichten.
+    Bv. &quot;**tekst**&quot; zal getoond worden als &quot;**tekst**&quot;, niet in het vet.
+Opmaaktekens tonen:
+    Pas opmaak toe en toon de tekens.
+    Bv. &quot;**tekst**&quot; zal getoond worden als &quot;**tekst**&quot;, in het vet.
+Opmaaktekens verbergen:
+    Pas opmaak toe en toon de tekens niet.
+    Bv. &quot;**tekst**&quot; zal getoond worden als &quot;tekst&quot;, in het vet.</translation>
     </message>
     <message>
         <source>Text styling:</source>
@@ -2794,7 +2989,8 @@ Hide formatting characters:
     </message>
     <message>
         <source>Emoticons</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Emoticons</translation>
     </message>
     <message>
         <source>Use emoticons</source>
@@ -2806,7 +3002,8 @@ Hide formatting characters:
     </message>
     <message>
         <source> px</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished"> px</translation>
     </message>
     <message>
         <source>Theme</source>
@@ -2835,15 +3032,18 @@ Hide formatting characters:
     <message>
         <source>Show a notification when you receive a new message, call, or friend request and the window is not selected.</source>
         <comment>tooltip for Notify setting</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Toon een melding wanneer ge een nieuw bericht, oproep of vriendschapsverzoek ontvangt en het venster niet geselecteerd is.</translation>
     </message>
     <message>
         <source>Notify</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Melden</translation>
     </message>
     <message>
         <source>Conferences only notify when mentioned</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Groepsgesprekken melden enkel wanneer g vermeld wordt</translation>
     </message>
     <message>
         <source>Play sound</source>
@@ -2855,115 +3055,141 @@ Hide formatting characters:
     </message>
     <message>
         <source>Notify via desktop notifications</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Melden via bureaubladmeldingen</translation>
     </message>
     <message>
         <source>Hide message sender and contents</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Verberg afzender en inhoud van het bericht</translation>
     </message>
     <message>
         <source>Use colored nicknames in conferences</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Gebruik gekleurde bijnamen in groepsgesprekken</translation>
     </message>
     <message>
         <source>Only notify about new messages in conferences when your nickname is mentioned.</source>
         <comment>toolTip for Conferences only notify when mentioned</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Meld enkel nieuwe berichten in groepsgesprekken wanneer uw bijnaam vermeld wordt.</translation>
     </message>
     <message>
         <source>If checked, conferences will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
         <comment>toolTip for conference positioning</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Indien aangevinkt worden groepsgesprekken bovenaan de vriendenlijst geplaatst, anders worden ze onder de online vrienden geplaatst.</translation>
     </message>
     <message>
         <source>If enabled, every contact without an avatar will have a generated icon based on their Tox ID instead of the default picture. Requires restart to apply.</source>
         <comment>toolTip for show identicons</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Indien ingeschakeld krijgt elk contact zonder avatar een gegenereerd pictogram gebaseerd op hun Tox-ID in plaats van de standaardafbeelding. Vereist herstart voor toe te passen.</translation>
     </message>
     <message>
         <source>Smiley pack:</source>
         <extracomment>Text on smiley pack label</extracomment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Smiley-pakket:</translation>
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Indien uitgeschakeld, demp meldingsgeluiden wanneer de status Bezet is (maar toon nog wel een melding)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Gebruik bureaubladmeldingen, b.v. in een meldingencentrum of in het systeemvak. Zonder dit zal de melding enkel zichtbaar zijn als een knipperend systeemvakpictogram.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Toon enkel &quot;nieuw bericht&quot; zonder potentieel geheime informatie te tonen in bureaubladmeldingen.</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Splits de vriendenlijst en het chatvenster in afzonderlijk beweegbare vensters.</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Toon tekstuele emoji&apos;s als gekleurde afbeeldingen in plaats van tekst of in zwart-wit door het lettertype gerenderde emoji&apos;s.</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Selecteer welke set afbeeldingen moet worden gebruikt bij het renderen van emoji&apos;s.</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Grootte in pixels van een emoji-afbeelding. Selecteer iets dat vergelijkbaar is met uw basislettergrootte.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Basisstijl voor de UI. Fusion wordt aanbevolen omdat het het beste werkt met qTox-thema&apos;s.</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">UI-kleurenthema. Gebruik dit voor de donkere modus te selecteren.</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Indien uitgeschakeld, gebruik standaard systeemvakmeldingen. Probeer anders de meldings-backend van uw bureaubladomgeving te gebruiken. Schakel dit uit als ge problemen ervaart met bureaubladmeldingen.</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Systeemspecifieke meldings-backend gebruiken indien beschikbaar</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Toon voorvertoningen voor verzonden en ontvangen afbeeldingen in chats. Beweeg de muis over de inline voorvertoning voor een grotere voorvertoning te tonen.</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Afbeelding-voorvertoning</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Maximum aantal berichten (per gesprek) geladen uit de chatgeschiedenis. Verlaag dit voor de prestaties te verbeteren. Een te laag getal kan ervoor zorgen dat de schuifbalk verdwijnt.</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Maximale grootte van chatlogweergave</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Aantal berichten voor te laden uit de chatgeschiedenis tijdens het scrollen. Een te laag getal kan ervoor zorgen dat de schuifbalk verdwijnt.</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Grootte van chatlog-brokken</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Chatlog:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Suffix verbergen na NULL-symbool</translation>
     </message>
 </context>
 <context>
@@ -2971,7 +3197,8 @@ number here may cause the scroll bar to disappear.</source>
     <message>
         <source>Online</source>
         <comment>Button to set your status to &apos;Online&apos;</comment>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Online</translation>
     </message>
     <message>
         <source>Away</source>
@@ -3006,7 +3233,8 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Status</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Status</translation>
     </message>
     <message>
         <source>Your name</source>
@@ -3014,7 +3242,7 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Create new conference...</source>
-        <translation type="unfinished">Nieuwe groep aanmaken…</translation>
+        <translation type="unfinished">Nieuw groepsgesprek aanmaken…</translation>
     </message>
     <message>
         <source>Create new circle...</source>
@@ -3034,12 +3262,13 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Online</source>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Online</translation>
     </message>
     <message>
         <source>Offline</source>
-        <translatorcomment>Ausgelassen</translatorcomment>
-        <translation></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Offline</translation>
     </message>
     <message>
         <source>Friends</source>
@@ -3047,7 +3276,7 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Conferences</source>
-        <translation type="unfinished">Groepen</translation>
+        <translation type="unfinished">Groepsgesprekken</translation>
     </message>
     <message>
         <source>Search Contacts</source>
@@ -3089,29 +3318,34 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Toxcore failed to start, the application will terminate after you close this message.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Toxcore kon niet starten; de applicatie zal sluiten nadat g dit bericht hebt gesloten.</translation>
     </message>
     <message>
         <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Toxcore kon niet starten met uw proxy-instellingen. qTox kan niet draaien; gelieve uw instellingen te wijzigen en qTox te herstarten.</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Kon vriendschapsverzoek niet verzenden</translation>
     </message>
     <message numerus="yes">
         <source>%n new friend request(s)</source>
+        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n nieuw vriendschapsverzoek</numerusform>
+            <numerusform>%n nieuwe vriendschapsverzoeken</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n new conference invite(s)</source>
+        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+            <numerusform>%n nieuwe groepsuitnodiging</numerusform>
+            <numerusform>%n nieuwe groepsuitnodigingen</numerusform>
         </translation>
     </message>
     <message>
@@ -3121,11 +3355,13 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Change status</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Status wijzigen</translation>
     </message>
     <message>
         <source>Edit profile</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Profiel bewerken</translation>
     </message>
     <message>
         <source>Logout</source>
@@ -3133,20 +3369,24 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Add contact...</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Contact toevoegen…</translation>
     </message>
     <message>
         <source>Next conversation</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Volgend gesprek</translation>
     </message>
     <message>
         <source>Previous conversation</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Vorig gesprek</translation>
     </message>
     <message>
         <source>Debug</source>
         <comment>title of the window</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">Debug</translation>
     </message>
 </context>
 </TS>

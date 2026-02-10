@@ -2582,7 +2582,8 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>LTR</source>
         <comment>DO NOT TRANSLATE. Instead, set this string to &apos;RTL&apos; in right-to-left languages (for example Hebrew and Arabic) to get proper widget layout. This string should only ever be &apos;LTR&apos; or &apos;RTL&apos;.</comment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Automated translation.</translatorcomment>
+        <translation type="unfinished">LTR</translation>
     </message>
 </context>
 <context>
