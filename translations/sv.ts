@@ -206,7 +206,7 @@ vilket kan leda till problem med videosamtal.</translation>
     </message>
     <message>
         <source>Manual</source>
-        <translation>Handbok</translation>
+        <translation>Manuell</translation>
     </message>
     <message>
         <source>Audio</source>
@@ -769,7 +769,7 @@ så att du kan spara filen i Windows.</translation>
     <name>ChatWidget</name>
     <message>
         <source>pending</source>
-        <translation type="unfinished">avvaktar</translation>
+        <translation>väntar</translation>
     </message>
     <message>
         <source>%1 is typing</source>
@@ -2523,7 +2523,7 @@ ID:t innehåller NoSpam-koden (i blått) och kontrollsumman (i grått).</transla
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished">Status</translation>
+        <translation>Status</translation>
     </message>
     <message>
         <source>Control</source>
@@ -3221,7 +3221,7 @@ för lågt nummer här kan göra att rullningslisten försvinner.</translation>
     </message>
     <message>
         <source>Logout</source>
-        <translation type="unfinished">Logga ut</translation>
+        <translation>Logga ut</translation>
     </message>
     <message>
         <source>Add contact...</source>
