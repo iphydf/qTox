@@ -57,11 +57,11 @@ The higher values, the better video quality your friends may get.
 Note though that with better video quality there is needed better internet connection.
 Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
-        <translation>設定相機畫質。
-畫質設定越高，影像品質越佳。
-請注意，越高畫質的影像會要求更快的網路連線。
-若有時候您的網路連線不足以應付高畫質的影像，
-將會影響視訊品質。</translation>
+        <translation>設定相機解析度。
+數值越高，您的朋友看到的視訊品質就越好。
+請注意，較高的視訊品質需要較好的網路連線。
+有時您的連線可能不足以處理較高的視訊品質，
+這可能會導致視訊通話出現問題。</translation>
     </message>
     <message>
         <source>Resolution</source>
@@ -225,7 +225,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Automatically accept conference invitations from this contact if set.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">如果設置，請自動接受來自該聯絡人的會議邀請。</translation>
+        <translation type="unfinished">如果設定，請自動接受來自該聯絡人的群組聊天邀請。</translation>
     </message>
     <message>
         <source>Remove history (operation can not be undone!)</source>
@@ -248,7 +248,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>This is the public key of your friend, use it to verify their identity via another channel. You can not send this to other people so they can add this contact.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">這是您朋友的公鑰，用它透過另一個管道驗證他們的身份。您無法將此資訊傳送給其他人，以便他們可以新增此聯絡人。</translation>
+        <translation type="unfinished">這是您朋友的公鑰，請透過其他途徑用它來驗證朋友的身分。您無法將此金鑰傳送給其他人來讓他們新增此聯絡人。</translation>
     </message>
     <message>
         <source>Public key (not ToxID):</source>
@@ -273,7 +273,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Auto-accept files</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">自動接受文件</translation>
+        <translation type="unfinished">自動接受檔案</translation>
     </message>
     <message>
         <source>Auto-accept for this contact is disabled</source>
@@ -288,7 +288,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Auto-accept conference invites</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">自動接受會議邀請</translation>
+        <translation type="unfinished">自動接受群組聊天邀請</translation>
     </message>
     <message>
         <source>You can save comments about this contact here.</source>
@@ -348,11 +348,11 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Send friend request</source>
-        <translation>傳送朋友請求</translation>
+        <translation>傳送好友邀請</translation>
     </message>
     <message>
         <source>Friend requests</source>
-        <translation>朋友請求</translation>
+        <translation>好友邀請</translation>
     </message>
     <message>
         <source>Accept</source>
@@ -373,7 +373,7 @@ which may lead to problems with video calls.</source>
     </message>
     <message>
         <source>Friend request message</source>
-        <translation>朋友請求訊息</translation>
+        <translation>好友邀請訊息</translation>
     </message>
     <message>
         <source>Type message to send with the friend request or leave empty to send a default message</source>
@@ -394,23 +394,23 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Couldn&apos;t open file</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">無法開啟文件</translation>
+        <translation type="unfinished">無法開啟檔案</translation>
     </message>
     <message>
         <source>Couldn&apos;t open the contact file</source>
         <extracomment>Error message when trying to open a contact list file to import</extracomment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">無法開啟聯絡人文件</translation>
+        <translation type="unfinished">無法開啟聯絡人檔案</translation>
     </message>
     <message>
         <source>Invalid file</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">文件無效</translation>
+        <translation type="unfinished">檔案無效</translation>
     </message>
     <message>
         <source>We couldn&apos;t find any contacts to import in this file!</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">我們在此文件中找不到任何要匯入的聯絡人！</translation>
+        <translation type="unfinished">我們在此檔案中找不到任何要匯入的聯絡人！</translation>
     </message>
     <message>
         <source>Tox ID</source>
@@ -458,13 +458,13 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Tox ID, 76 hexadecimal characters</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">毒物 ID，76 個十六進位字符</translation>
+        <translation type="unfinished">Tox ID，76 個十六進位字符</translation>
     </message>
     <message>
         <source>%1 Tox ID is invalid</source>
         <comment>Tox address error</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 毒素 ID 無效</translation>
+        <translation type="unfinished">%1 Tox ID 無效</translation>
     </message>
     <message>
         <source>76 hexadecimal characters</source>
@@ -523,7 +523,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">除非您%1知道自己在做什麼，否則請%2更改此處的任何內容。此處所做的變更可能會導致 qTox 出現問題，甚至導致資料遺失，例如歷史。%3</translation>
+        <translation type="unfinished">除非您 %1 知道自己在做什麼，否則請 %2 不要更改此處的任何內容。此處所做的變更可能會導致 qTox 出現問題，甚至導致資料遺失，例如聊天記錄遺失。%3</translation>
     </message>
     <message>
         <source>Changes here are applied only after restarting qTox.</source>
@@ -538,12 +538,12 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Invalid proxy address</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">無效的代理地址</translation>
+        <translation type="unfinished">無效的代理伺服器地址</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">請為代理設置輸入有效的IP地址或主機名。</translation>
+        <translation type="unfinished">請為代理伺服器設定輸入有效的IP地址或主機名。</translation>
     </message>
 </context>
 <context>
@@ -583,7 +583,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Proxy type:</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">代理類型：</translation>
+        <translation type="unfinished">代理伺服器類型：</translation>
     </message>
     <message>
         <source>Address:</source>
@@ -595,7 +595,7 @@ which may lead to problems with video calls.</source>
         <source>Port:</source>
         <extracomment>Text on proxy port label</extracomment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">港口：</translation>
+        <translation type="unfinished">連接埠：</translation>
     </message>
     <message>
         <source>None</source>
@@ -650,7 +650,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>profile</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">輪廓</translation>
+        <translation type="unfinished">個人設定檔</translation>
     </message>
     <message>
         <source>Starts new instance and opens the login screen.</source>
@@ -679,7 +679,7 @@ which may lead to problems with video calls.</source>
         <source>Sets proxy settings. Default is NONE.</source>
         <comment>NONE should not be translated, it is a flag value</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">設定代理設定。預設值為“無”。</translation>
+        <translation type="unfinished">設定代理伺服器設定。預設值為“無”。</translation>
     </message>
     <message>
         <source>Error</source>
@@ -732,7 +732,7 @@ which may lead to problems with video calls.</source>
         <source>Failed to open temporary file</source>
         <comment>Temporary file for screenshot</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">無法開啟臨時文件</translation>
+        <translation type="unfinished">無法開啟臨時檔案</translation>
     </message>
     <message>
         <source>qTox wasn&apos;t able to save the screenshot</source>
@@ -751,7 +751,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>You&apos;re trying to send a sequential file, which is not going to work!</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">您正在嘗試發送連續文件，但這是行不通的！</translation>
+        <translation type="unfinished">您正在嘗試發送連續檔案，但這是行不通的！</translation>
     </message>
     <message>
         <source>Filename contained illegal characters</source>
@@ -859,7 +859,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>pending</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">待辦的</translation>
+        <translation type="unfinished">待處理</translation>
     </message>
     <message>
         <source>%1 is typing</source>
@@ -922,7 +922,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>mute</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">沉默的</translation>
+        <translation type="unfinished">靜音</translation>
     </message>
     <message>
         <source>unmute</source>
@@ -944,7 +944,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Create new conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">建立新會議</translation>
+        <translation type="unfinished">建立新群組聊天</translation>
     </message>
     <message>
         <source>Conference invites</source>
@@ -966,7 +966,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Decline</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">衰退</translation>
+        <translation type="unfinished">拒絕</translation>
     </message>
 </context>
 <context>
@@ -990,7 +990,7 @@ so you can save the file on Windows.</source>
         <source>Quit conference</source>
         <comment>Menu to quit a conference</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">退出會議</translation>
+        <translation type="unfinished">退出群組聊天</translation>
     </message>
     <message numerus="yes">
         <source>%n user(s) in chat</source>
@@ -1019,7 +1019,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Conference %1</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">會議%1</translation>
+        <translation type="unfinished">群組聊天%1</translation>
     </message>
     <message>
         <source>Invalid Tox ID</source>
@@ -1143,7 +1143,7 @@ so you can save the file on Windows.</source>
         <source>Transferred files</source>
         <comment>&quot;Headline&quot; of the window</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">傳輸的文件</translation>
+        <translation type="unfinished">傳輸的檔案</translation>
     </message>
 </context>
 <context>
@@ -1183,7 +1183,7 @@ so you can save the file on Windows.</source>
         <source>Invite to conference</source>
         <comment>Menu to invite a friend to a conference</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">邀請參加會議</translation>
+        <translation type="unfinished">邀請參加群組聊天</translation>
     </message>
     <message>
         <source>Move to circle...</source>
@@ -1214,12 +1214,12 @@ so you can save the file on Windows.</source>
     <message>
         <source>To new conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">前往新會議</translation>
+        <translation type="unfinished">前往新群組聊天</translation>
     </message>
     <message>
         <source>Invite to conference &apos;%1&apos;</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">邀請參加會議“%1”</translation>
+        <translation type="unfinished">邀請參加群組聊天“%1”</translation>
     </message>
     <message>
         <source>Set alias...</source>
@@ -1230,7 +1230,7 @@ so you can save the file on Windows.</source>
         <source>Auto accept files from this friend</source>
         <comment>context menu entry</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">自動接受該朋友的文件</translation>
+        <translation type="unfinished">自動接受該朋友的檔案</translation>
     </message>
     <message>
         <source>Show details</source>
@@ -1272,7 +1272,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Blocked</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">被阻止</translation>
+        <translation type="unfinished">已封鎖</translation>
     </message>
 </context>
 <context>
@@ -1346,12 +1346,12 @@ so you can save the file on Windows.</source>
     <message>
         <source>Set where files will be saved.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">設定文件的儲存位置。</translation>
+        <translation type="unfinished">設定檔案的儲存位置。</translation>
     </message>
     <message>
         <source>Autoaccept files</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">自動接受文件</translation>
+        <translation type="unfinished">自動接受檔案</translation>
     </message>
     <message>
         <source>Set to 0 to disable</source>
@@ -1425,7 +1425,7 @@ instead of closing entirely.</source>
     <message>
         <source>Add a chat message when a user joins or leaves a conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">當用戶加入或離開會議時添加聊天訊息</translation>
+        <translation type="unfinished">當用戶加入或離開群組聊天時添加聊天訊息</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
@@ -1458,7 +1458,7 @@ instead of closing entirely.</source>
     <message>
         <source>Send file(s)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">傳送文件</translation>
+        <translation type="unfinished">傳送檔案</translation>
     </message>
     <message>
         <source>Send a screenshot</source>
@@ -1506,7 +1506,7 @@ instead of closing entirely.</source>
     <message>
         <source>Export to file</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">匯出到文件</translation>
+        <translation type="unfinished">匯出到檔案</translation>
     </message>
     <message>
         <source>Are you sure that you want to clear all displayed messages?</source>
@@ -1533,7 +1533,7 @@ instead of closing entirely.</source>
     <message>
         <source>Profile</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">輪廓</translation>
+        <translation type="unfinished">個人設定檔</translation>
     </message>
     <message>
         <source>Rename profile.</source>
@@ -1601,7 +1601,7 @@ Profile does not contain your history.</source>
         <source>Export</source>
         <comment>export profile button</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">出口</translation>
+        <translation type="unfinished">匯出</translation>
     </message>
     <message>
         <source>Delete</source>
@@ -1633,12 +1633,12 @@ Profile does not contain your history.</source>
     <message>
         <source>Your Tox ID</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">您的毒物 ID</translation>
+        <translation type="unfinished">您的Tox ID</translation>
     </message>
     <message>
         <source>Save QR image as file</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">將 QR 影像儲存為文件</translation>
+        <translation type="unfinished">將 QR 影像儲存為檔案</translation>
     </message>
     <message>
         <source>Copy QR image to clipboard</source>
@@ -1755,7 +1755,7 @@ Share it with your friends to begin chatting.</source>
     <message>
         <source>Load Profile</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">負載曲線</translation>
+        <translation type="unfinished">載入設定檔</translation>
     </message>
     <message>
         <source>New Profile</source>
@@ -1814,7 +1814,7 @@ You may want to create one.</source>
     <message>
         <source>Import</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">進口</translation>
+        <translation type="unfinished">匯入</translation>
     </message>
     <message>
         <source>Username input field</source>
@@ -1893,7 +1893,7 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>The password you enter here is optional and encrypts message data and your Tox secret key. It does not encrypt files received. Your profile data is never sent to any servers. This is not a remote login, it&apos;s local to your computer only. qTox developers won&apos;t be able to recover your password if lost.</source>
-        <translation type="unfinished">您在此輸入的密碼是可選的，它會對訊息資料和您的 Tox 金鑰進行加密。它不會加密收到的文件。您的個人資料資料永遠不會發送到任何伺服器。這不是遠端登錄，它僅適用於您的電腦本機。如果您的密碼遺失，qTox 開發人員將無法恢復。</translation>
+        <translation type="unfinished">您在此輸入的密碼是可選的，它會對訊息資料和您的 Tox 金鑰進行加密。它不會加密收到的檔案。您的個人資料資料永遠不會發送到任何伺服器。這不是遠端登錄，它僅適用於您的電腦本機。如果您的密碼遺失，qTox 開發人員將無法恢復。</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
@@ -1913,12 +1913,12 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>Create a conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">創建會議</translation>
+        <translation type="unfinished">創建群組聊天</translation>
     </message>
     <message>
         <source>View completed file transfers</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">查看已完成的文件傳輸</translation>
+        <translation type="unfinished">查看已完成的檔案傳輸</translation>
     </message>
     <message>
         <source>Change your settings</source>
@@ -1987,17 +1987,17 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>Conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">會議</translation>
+        <translation type="unfinished">群組聊天</translation>
     </message>
     <message>
         <source>Open conference management page</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">開啟會議管理頁面</translation>
+        <translation type="unfinished">開啟群組聊天管理頁面</translation>
     </message>
     <message>
         <source>File transfers history</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">文件傳輸歷史記錄</translation>
+        <translation type="unfinished">檔案傳輸歷史記錄</translation>
     </message>
     <message>
         <source>Open File transfers history</source>
@@ -2043,7 +2043,7 @@ Press Shift+F1 for more information.</source>
         <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">您已要求 qTox 開啟可執行檔。可執行檔可能會損壞您的電腦。您確定要開啟該文件嗎？</translation>
+        <translation type="unfinished">您已要求 qTox 開啟可執行檔。可執行檔可能會損壞您的電腦。您確定要開啟該檔案嗎？</translation>
     </message>
 </context>
 <context>
@@ -2079,7 +2079,7 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>Exit full screen</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">退出全螢幕</translation>
+        <translation type="unfinished">離開全螢幕</translation>
     </message>
     <message>
         <source>Hide messages</source>
@@ -2098,13 +2098,13 @@ Press Shift+F1 for more information.</source>
         <source>View</source>
         <comment>macOS Menu bar</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">看法</translation>
+        <translation type="unfinished">檢視</translation>
     </message>
     <message>
         <source>Window</source>
         <comment>macOS Menu bar</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">窗戶</translation>
+        <translation type="unfinished">視窗</translation>
     </message>
     <message>
         <source>Minimize</source>
@@ -2116,12 +2116,12 @@ Press Shift+F1 for more information.</source>
         <source>Bring All to Front</source>
         <comment>macOS Menu bar</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">將所有內容放在前面</translation>
+        <translation type="unfinished">將此程式所有視窗移至最前</translation>
     </message>
     <message>
         <source>Exit Full Screen</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">退出全螢幕</translation>
+        <translation type="unfinished">離開全螢幕</translation>
     </message>
     <message>
         <source>Enter Full Screen</source>
@@ -2148,7 +2148,7 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>New conference message</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">新的會議消息</translation>
+        <translation type="unfinished">新的群組聊天消息</translation>
     </message>
     <message>
         <source>Incoming file transfer</source>
@@ -2159,17 +2159,17 @@ Press Shift+F1 for more information.</source>
         <source>%1 - file transfer</source>
         <extracomment>e.g. Bob - file transfer</extracomment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 - 文件傳輸</translation>
+        <translation type="unfinished">%1 - 檔案傳輸</translation>
     </message>
     <message>
         <source>Conference invite received</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">收到會議邀請</translation>
+        <translation type="unfinished">收到群組聊天邀請</translation>
     </message>
     <message>
         <source>%1 invites you to join a conference.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 邀請您加入會議。</translation>
+        <translation type="unfinished">%1 邀請您加入群組聊天。</translation>
     </message>
     <message>
         <source>Friend request received</source>
@@ -2274,12 +2274,12 @@ Save format changes are possible, which may result in data loss.</source>
     <message>
         <source>Conference block list</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">會議阻止列表</translation>
+        <translation type="unfinished">群組聊天阻止列表</translation>
     </message>
     <message>
         <source>Filter out conference messages by conference members&apos; public keys. Put public keys here, one per line.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">透過會議成員的公鑰過濾會議訊息。將公鑰放在這裡，每行一個。</translation>
+        <translation type="unfinished">透過群組聊天成員的公鑰過濾群組聊天訊息。將公鑰放在這裡，每行一個。</translation>
     </message>
 </context>
 <context>
@@ -2292,7 +2292,7 @@ Save format changes are possible, which may result in data loss.</source>
     <message>
         <source>Toxing on qTox</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">qTox 中毒</translation>
+        <translation type="unfinished">qTox 中毒中</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2383,7 +2383,7 @@ Please use another image.</source>
         <source>Files could not be deleted!</source>
         <comment>deletion failed title</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">文件無法刪除！</translation>
+        <translation type="unfinished">檔案無法刪除！</translation>
     </message>
     <message>
         <source>Change password</source>
@@ -2545,7 +2545,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <source>Ignoring non-Tox file</source>
         <comment>popup title</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">忽略非 Tox 文件</translation>
+        <translation type="unfinished">忽略非 Tox 檔案</translation>
     </message>
     <message>
         <source>Warning: You have chosen a file that is not a Tox save file; ignoring.</source>
@@ -2568,7 +2568,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>File doesn&apos;t exist</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">文件不存在</translation>
+        <translation type="unfinished">檔案不存在</translation>
     </message>
     <message>
         <source>Profile doesn&apos;t exist</source>
@@ -2724,7 +2724,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <source>online</source>
         <comment>contact status</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">在線的</translation>
+        <translation type="unfinished">線上</translation>
     </message>
     <message>
         <source>away</source>
@@ -2736,7 +2736,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <source>busy</source>
         <comment>contact status</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">忙碌的</translation>
+        <translation type="unfinished">忙碌</translation>
     </message>
     <message>
         <source>offline</source>
@@ -2748,7 +2748,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <source>blocked</source>
         <comment>contact status</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">被阻止</translation>
+        <translation type="unfinished">已封鎖</translation>
     </message>
     <message>
         <source>Reformatting text...</source>
@@ -2764,12 +2764,12 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>%1 has joined the conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 已加入會議</translation>
+        <translation type="unfinished">%1 已加入群組聊天</translation>
     </message>
     <message>
         <source>%1 has left the conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 已離開會議</translation>
+        <translation type="unfinished">%1 已離開群組聊天</translation>
     </message>
     <message>
         <source>%1 is now known as %2</source>
@@ -2828,17 +2828,17 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Transmitting</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">發射</translation>
+        <translation type="unfinished">傳輸中</translation>
     </message>
     <message>
         <source>Finished</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">完成的</translation>
+        <translation type="unfinished">已完成</translation>
     </message>
     <message>
         <source>Broken</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">破碎的</translation>
+        <translation type="unfinished">損壞</translation>
     </message>
     <message>
         <source>Canceled</source>
@@ -2862,17 +2862,17 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Contact</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">接觸</translation>
+        <translation type="unfinished">聯絡人</translation>
     </message>
     <message>
         <source>Progress</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">進步</translation>
+        <translation type="unfinished">進度</translation>
     </message>
     <message>
         <source>Size</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">尺寸</translation>
+        <translation type="unfinished">大小</translation>
     </message>
     <message>
         <source>Speed</source>
@@ -2886,17 +2886,17 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Control</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">控制</translation>
+        <translation type="unfinished">操作</translation>
     </message>
     <message>
         <source>You have joined the conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">您已加入會議</translation>
+        <translation type="unfinished">您已加入群組聊天</translation>
     </message>
     <message>
         <source>You have left the conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">您已離開會議</translation>
+        <translation type="unfinished">您已離開群組聊天</translation>
     </message>
     <message>
         <source>Failed to load chat history</source>
@@ -2948,13 +2948,13 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <source>Space</source>
         <comment>[Space] key on the keyboard</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">空間</translation>
+        <translation type="unfinished">空白鍵</translation>
     </message>
     <message>
         <source>Escape</source>
         <comment>[Escape] key on the keyboard</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">逃脫</translation>
+        <translation type="unfinished">Esc 鍵</translation>
     </message>
     <message>
         <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
@@ -2966,7 +2966,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <source>Enter</source>
         <comment>[Enter] key on the keyboard</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">進入</translation>
+        <translation type="unfinished">Enter 鍵</translation>
     </message>
 </context>
 <context>
@@ -3172,7 +3172,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>Size: </source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">尺寸：</translation>
+        <translation type="unfinished">大小：</translation>
     </message>
     <message>
         <source>New text styling preference may not load on chat history until qTox restarts.
@@ -3249,7 +3249,7 @@ Hide formatting characters:
     <message>
         <source>Place conferences at top of friend list</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">將會議置於好友清單頂部</translation>
+        <translation type="unfinished">將群組聊天置於好友清單頂部</translation>
     </message>
     <message>
         <source>Your contact list will be shown in compact mode (small avatars, tabular view).</source>
@@ -3285,7 +3285,7 @@ Hide formatting characters:
     <message>
         <source>Emoticon size:</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">表情符號尺寸：</translation>
+        <translation type="unfinished">表情符號大小：</translation>
     </message>
     <message>
         <source> px</source>
@@ -3335,7 +3335,7 @@ Hide formatting characters:
     <message>
         <source>Conferences only notify when mentioned</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">會議僅在提及時通知</translation>
+        <translation type="unfinished">群組聊天僅在提及時通知</translation>
     </message>
     <message>
         <source>Play sound</source>
@@ -3360,19 +3360,19 @@ Hide formatting characters:
     <message>
         <source>Use colored nicknames in conferences</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">在會議中使用彩色暱稱</translation>
+        <translation type="unfinished">在群組聊天中使用彩色暱稱</translation>
     </message>
     <message>
         <source>Only notify about new messages in conferences when your nickname is mentioned.</source>
         <comment>toolTip for Conferences only notify when mentioned</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">僅在會議中提及您的暱稱時通知新訊息。</translation>
+        <translation type="unfinished">僅在群組聊天中提及您的暱稱時通知新訊息。</translation>
     </message>
     <message>
         <source>If checked, conferences will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
         <comment>toolTip for conference positioning</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">如果選中，會議將被放置在好友清單的頂部，否則，它們將被放置在線上好友的下方。</translation>
+        <translation type="unfinished">如果選中，群組聊天將被放置在好友清單的頂部，否則，它們將被放置在線上好友的下方。</translation>
     </message>
     <message>
         <source>If enabled, every contact without an avatar will have a generated icon based on their Tox ID instead of the default picture. Requires restart to apply.</source>
@@ -3618,7 +3618,7 @@ number here may cause the scroll bar to disappear.</source>
         <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Toxcore 無法使用您的代理設定啟動。 qTox無法運作；請修改您的設定並重新啟動。</translation>
+        <translation type="unfinished">Toxcore 無法使用您的代理伺服器設定啟動。 qTox無法運作；請修改您的設定並重新啟動。</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>
@@ -3636,7 +3636,7 @@ number here may cause the scroll bar to disappear.</source>
         <source>%n new conference invite(s)</source>
         <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform>%n 個新會議邀請</numerusform>
+            <numerusform>%n 個新群組聊天邀請</numerusform>
         </translation>
     </message>
     <message>
