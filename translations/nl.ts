@@ -197,11 +197,11 @@ wat kan leiden tot problemen met videogesprekken.</translation>
     <name>AboutFriendForm</name>
     <message>
         <source>Automatically accept files from contact if set</source>
-        <translation>Indien ingesteld automatisch bestanden van dit contact aanvaarden</translation>
+        <translation>Indien ingesteld automatisch bestanden van dit contact accepteren</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
-        <translation>Standaardlocatie om bestanden op te slaan:</translation>
+        <translation>Standaardmap om bestanden op te slaan:</translation>
     </message>
     <message>
         <source>Manual</source>
@@ -217,7 +217,7 @@ wat kan leiden tot problemen met videogesprekken.</translation>
     </message>
     <message>
         <source>Automatically accept conference invitations from this contact if set.</source>
-        <translation>Indien ingesteld conferentie-uitnodigingen van dit contact automatisch aanvaarden.</translation>
+        <translation>Indien ingesteld conferentie-uitnodigingen van dit contact automatisch accepteren.</translation>
     </message>
     <message>
         <source>Remove history (operation can not be undone!)</source>
@@ -477,7 +477,7 @@ wat kan leiden tot problemen met videogesprekken.</translation>
     </message>
     <message>
         <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translation>Tenzij je %1 weet wat je doet, %2 verander dan niets hier. Wijzigingen die hier worden aangebracht, kunnen leiden tot problemen met qTox en zelfs tot verlies van je gegevens, bijvoorbeeld geschiedenis.%3</translation>
+        <translation>Tenzij je %1 weet wat je doet, verander hier dan %2. Wijzigingen die hier worden aangebracht, kunnen leiden tot problemen met qTox en zelfs tot verlies van je gegevens, bijvoorbeeld geschiedenis.%3</translation>
     </message>
     <message>
         <source>Changes here are applied only after restarting qTox.</source>
@@ -503,7 +503,7 @@ wat kan leiden tot problemen met videogesprekken.</translation>
     <message>
         <source>Save settings to the working directory instead of the usual conf dir</source>
         <extracomment>describes makeToxPortable checkbox</extracomment>
-        <translation>Sla instellingen op in de map waarin qTox draait in plaats van de normale configuratielocatie</translation>
+        <translation>Sla instellingen op in de map waarin qTox draait in plaats van de normale configuratiemap</translation>
     </message>
     <message>
         <source>Make Tox portable</source>
@@ -708,7 +708,7 @@ zodat u het bestand op Windows kunt opslaan.</translation>
     </message>
     <message>
         <source>Accept audio call</source>
-        <translation>Audiogesprek aanvaarden</translation>
+        <translation>Audiogesprek accepteren</translation>
     </message>
     <message>
         <source>Can&apos;t start video call</source>
@@ -728,7 +728,7 @@ zodat u het bestand op Windows kunt opslaan.</translation>
     </message>
     <message>
         <source>Accept video call</source>
-        <translation>Videogesprek aanvaarden</translation>
+        <translation>Videogesprek accepteren</translation>
     </message>
     <message>
         <source>Sound can be disabled only during a call</source>
@@ -808,7 +808,7 @@ zodat u het bestand op Windows kunt opslaan.</translation>
     <message>
         <source>You do not have permission to write to that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation type="unfinished">Je hebt geen toestemming om naar die locatie te schrijven. Kies een andere locatie of annuleer het dialoogvenster Opslaan.</translation>
+        <translation type="unfinished">Je hebt geen toestemming om naar die map te schrijven. Kies een andere map of annuleer het dialoogvenster Opslaan.</translation>
     </message>
 </context>
 <context>
@@ -998,7 +998,7 @@ zodat u het bestand op Windows kunt opslaan.</translation>
     </message>
     <message>
         <source>Accept transfer</source>
-        <translation>Bestandsoverdracht aanvaarden</translation>
+        <translation>Bestandsoverdracht accepteren</translation>
     </message>
     <message>
         <source>Save a file</source>
@@ -1081,7 +1081,7 @@ zodat u het bestand op Windows kunt opslaan.</translation>
     <message>
         <source>Auto accept files from this friend</source>
         <comment>context menu entry</comment>
-        <translation>Bestanden van deze vriend automatisch aanvaarden</translation>
+        <translation>Bestanden van deze vriend automatisch accepteren</translation>
     </message>
     <message>
         <source>New message</source>
@@ -1203,7 +1203,7 @@ zodat u het bestand op Windows kunt opslaan.</translation>
     </message>
     <message>
         <source>Autoaccept files</source>
-        <translation>Bestanden automatisch aanvaarden</translation>
+        <translation>Bestanden automatisch accepteren</translation>
     </message>
     <message>
         <source>Set to 0 to disable</source>
@@ -2093,7 +2093,7 @@ Gebruik een andere afbeelding.</translation>
     </message>
     <message>
         <source>Current profile location: %1</source>
-        <translation>Huidige profiellocatie: %1</translation>
+        <translation>Huidige profielmap: %1</translation>
     </message>
     <message>
         <source>Couldn&apos;t change password</source>
