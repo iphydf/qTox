@@ -5,55 +5,50 @@
     <name>AVForm</name>
     <message>
         <source>Audio/Video</source>
-        <translation>sance ja jvinu</translation>
+        <translation type="unfinished">sance jo&apos;u vidni</translation>
     </message>
     <message>
         <source>Default resolution</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fadni nunselzu&apos;e</translation>
+        <translation type="unfinished">fadni nitcila</translation>
     </message>
     <message>
         <source>Disabled</source>
-        <translation>na tolpo&apos;u</translation>
+        <translation>tolakti</translation>
     </message>
     <message>
         <source>Select region</source>
-        <translation>ko cuxna fi lo&apos;i tutra</translation>
+        <translation type="unfinished">cuxna lo tutra</translation>
     </message>
     <message>
         <source>Screen %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">vidni %1</translation>
     </message>
     <message>
         <source>Audio Settings</source>
-        <translation>lo sance jitro</translation>
+        <translation type="unfinished">sance tercu&apos;e</translation>
     </message>
     <message>
         <source>Gain</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lu canci</translation>
+        <translation type="unfinished">nilcladu zengau</translation>
     </message>
     <message>
         <source>Playback device</source>
-        <translation>lo selsnapra</translation>
+        <translation type="unfinished">selsnapra samtci</translation>
     </message>
     <message>
         <source>Capture device</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">srana samtci</translation>
+        <translation type="unfinished">selcpacu samtci</translation>
     </message>
     <message>
         <source>Volume</source>
-        <translation>kamcladu</translation>
+        <translation type="unfinished">kamcladu</translation>
     </message>
     <message>
         <source>Video Settings</source>
-        <translation>jvinu jitro</translation>
+        <translation type="unfinished">vidni tercu&apos;e</translation>
     </message>
     <message>
         <source>Video device</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">vidni samtci</translation>
     </message>
     <message>
@@ -62,67 +57,55 @@ The higher values, the better video quality your friends may get.
 Note though that with better video quality there is needed better internet connection.
 Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko setca lo do kacma
-lo ka zmadu zmadu fa lo ka se zmadu vau lo ka samtci lo ka se ckaji lo do pendo cu cumki
-ko jundi lo du&apos;u lo xagmau vidni ckaji cu nitcu lo xagmau be lo kibro nunjungau
-so&apos;o roi lo nu do jungau cu na banzu xamgu lo ka zgana lo nu zgana lo vidni ckaji
-.i ka&apos;e rinka lo nu nabmi lo vidni fonjorne</translation>
+        <translation type="unfinished">ko setca lo nitcila be lo do kacma
+lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pendo cu cpacu
+.i ku&apos;i lo xagmau vidni ckaji cu nitcu lo xagmau kibro nunjorne
+.i so&apos;o roi lo do nunjorne cu na banzu lo xagmau vidni ckaji
+.i la&apos;edi&apos;u ka&apos;e rinka lo nu nabmi lo vidni fonjorne</translation>
     </message>
     <message>
         <source>Resolution</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">se janli</translation>
+        <translation type="unfinished">nitcila</translation>
     </message>
     <message>
         <source>Rescan devices</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lu refskami loi samtci</translation>
+        <translation type="unfinished">refsisku loi samtci</translation>
     </message>
     <message>
         <source>Test Sound</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cipra lo sance</translation>
+        <translation type="unfinished">cipra lo sance</translation>
     </message>
     <message>
         <source>Audio quality</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">me&apos;o samtci</translation>
+        <translation type="unfinished">sance ckaji</translation>
     </message>
     <message>
         <source>High (64 kBps)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">galtu (64 kbps)</translation>
     </message>
     <message>
         <source>Medium (32 kBps)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">no&apos;e frili (32 kbit)</translation>
+        <translation type="unfinished">midju (32 kbps)</translation>
     </message>
     <message>
         <source>Low (16 kBps)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">cmalu (16 kbps)</translation>
     </message>
     <message>
         <source>Very low (8 kBps)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">mutce cmalu (8 kbps)</translation>
     </message>
     <message>
         <source>Threshold</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished"> </translation>
+        <translation type="unfinished">le ni banzu</translation>
     </message>
     <message>
         <source>Use slider to set the volume of your speakers.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko pilno lo slajdera tezu&apos;e lo nu pilno lo ka jitro be lo do tavla</translation>
+        <translation type="unfinished">ko pilno lo sakli samtci lo nu setca lo kamcladu be lo do sance samtci</translation>
     </message>
     <message>
         <source>Transmitted audio quality. Lower this setting if your bandwidth is not high enough or if you want to reduce bandwidth usage.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">le nu benji lo sance ckaji .i ko basti le se tercu&apos;e fau lo nu lo do banxa clani cu banzu</translation>
+        <translation type="unfinished">le ckaji be lo selbenji sance .i ko jdika lo vi tercu&apos;e fau lo nu lo do datni benji nilsutra cu na banzu ja lo nu do djica lo nu jdika lo nu pilno lo datni benji nilsutra</translation>
     </message>
     <message>
         <source>Set resolution of your camera.
@@ -130,392 +113,323 @@ The higher values, the better video quality your friends may get.
 Note that with better video quality, you use more bandwidth.
 Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko setca lo do kacma
-lo ka zmadu zmadu fa lo ka se zmadu vau lo ka samtci lo ka se ckaji lo do pendo cu cumki
-ko jundi lo du&apos;u lo xagmau be lo veltivni cu ckaji lo ka pilno lo banli clani
-so&apos;o roi lo nu do jungau cu na banzu xamgu lo ka zgana lo nu zgana lo vidni ckaji
-.i ka&apos;e rinka lo nu nabmi lo vidni fonjorne</translation>
+        <translation type="unfinished">ko setca lo nitcila be lo do kacma
+lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pendo cu cpacu
+.i ku&apos;i lo xagmau vidni ckaji cu pilno lo xagmau datni benji nilsutra
+.i so&apos;o roi lo do nunjorne cu na banzu lo xagmau vidni ckaji
+.i la&apos;edi&apos;u ka&apos;e rinka lo nu nabmi lo vidni fonjorne</translation>
     </message>
     <message>
         <source>Play a test sound while changing the output volume.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jungau lo cipra sance ca lo nu tikygau lo se snada jamna</translation>
+        <translation type="unfinished">ko zgipli lo cipra sance ca lo nu galfi lo selbe&apos;i kamcladu</translation>
     </message>
     <message>
         <source>Use slider to set the gain of your input device ranging from %1dB to %2dB.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko pilno lo samcpana mu&apos;i lo nu terbi&apos;a fi lo do nerkla sazri kei lo me %1dB ku la %2dB</translation>
+        <translation type="unfinished">ko pilno lo sakli samtci lo nu setca lo nilcladu zengau be lo do nerkla samtci be li %1dB bi&apos;i li %2dB</translation>
     </message>
     <message>
         <source>Use slider to set the activation volume for your input device.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko pilno lo samselkei mu&apos;i lo nu pilno lo nu aktigau jamna kei lo nu pilno lo do nerkla samtci</translation>
+        <translation type="unfinished">ko pilno lo sakli samtci lo nu setca lo akti kamcladu be lo do nerkla samtci</translation>
     </message>
 </context>
 <context>
     <name>AboutForm</name>
     <message>
         <source>About</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">mi&apos;a</translation>
+        <translation type="unfinished">ve skicu</translation>
     </message>
     <message>
         <source>Original author: %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la samtci finti:%1</translation>
+        <translation type="unfinished">le pamoi finti: %1</translation>
     </message>
     <message>
         <source>You are using qTox version %1.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">do ca pilno la qTox poi seltci la%1</translation>
+        <translation type="unfinished">do pilno la&apos;oi qTox verzi %1</translation>
     </message>
     <message>
         <source>Commit hash: %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">:%1</translation>
+        <translation type="unfinished">le sinxa be lo pu&apos;u vreji: %1</translation>
     </message>
     <message>
         <source>toxcore version: %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">batkyselcmi verzi:%1</translation>
+        <translation type="unfinished">la&apos;oi Toxcore verzi: %1</translation>
     </message>
     <message>
         <source>Qt version: %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">me la Qt verzi:%1</translation>
+        <translation type="unfinished">la&apos;oi Qt verzi: %1</translation>
     </message>
     <message>
         <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo liste be ro se slabu nabmi cu cumki fa lo nu facki bu&apos;u la %1 be mi&apos;a bu&apos;u la Github. jaginai do facki tu&apos;a lo cfila ji lo selckape ka&apos;e ranji ne&apos;i la qTox .e&apos;o ko skicu te jarco lo stidi be lo ma&apos;a moi be la %2 viki cmene</translation>
+        <translation type="unfinished">le liste be ro se djuno nabmi cu se facki vi le ma&apos;a %1 vi la Github .i ko zgana lo nabmi ja lo snura nabmi be vi la&apos;oi qTox ta&apos;i le velsku vi le ma&apos;a %2 viki papri</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko ti klika tezu&apos;e lo ka zgana lo samcfi</translation>
+        <translation type="unfinished">ko klika ti lo nu jarco lo nabmi</translation>
     </message>
     <message>
         <source>See a full list of %1 at Github</source>
         <comment>`%1` is replaced with translation of word `contributors`</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">viska lo mulno liste pe %1 bu&apos;u la Github</translation>
+        <translation type="unfinished">viska lo mulno liste be lo %1 vi la Github</translation>
     </message>
     <message>
         <source>bug-tracker</source>
         <comment>Replaces `%1` in the `A list of all known…`</comment>
-        <translation type="unfinished">le buga tracker</translation>
+        <translation type="unfinished">le nabmi selsisku</translation>
     </message>
     <message>
         <source>Writing Useful Bug Reports</source>
         <comment>Replaces `%2` in the `A list of all known…`</comment>
-        <translation type="unfinished">ki&apos;u ciska lo plixau ke nunsregau</translation>
+        <translation type="unfinished">le nu ciska lo plixau nabmi skicu</translation>
     </message>
     <message>
         <source>contributors</source>
         <comment>Replaces `%1` in `See a full list of…`</comment>
-        <translation type="unfinished">minji</translation>
+        <translation type="unfinished">loi sidju finti</translation>
     </message>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ti poi verzi be la .toktoks. cu selxabju la .toktok. kei ba&apos;o cpacu lo cfipu be le gungunma be la .qTox.</translation>
+        <translation type="unfinished">ti verzi be la&apos;oi qTox cu se kurji la&apos;oi TokTok ba lo nu le pamoi la&apos;oi qTox gunma cu sisti</translation>
     </message>
 </context>
 <context>
     <name>AboutFriendForm</name>
     <message>
         <source>Automatically accept files from contact if set</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jaginai ciska</translation>
+        <translation type="unfinished">zmiku nu zanru lo loi datnyve&apos;i be fi lo vi jikca</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">:uecai</translation>
+        <translation type="unfinished">fadni stuzi be lo nu vrejgau lo loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Manual</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">xance</translation>
+        <translation type="unfinished">xance nu akti</translation>
     </message>
     <message>
         <source>Audio</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">sance</translation>
     </message>
     <message>
         <source>Audio + Video</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">me&apos;o selsance jo&apos;u vidni</translation>
+        <translation type="unfinished">sance jo&apos;u vidni</translation>
     </message>
     <message>
         <source>Automatically accept conference invitations from this contact if set.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jaginai ko samterci&apos;e lo nunvitke nunvitke fi lo vi cuntu</translation>
+        <translation type="unfinished">zmiku nu zanru lo loi nungirzu vitcpe be fi lo vi jikca</translation>
     </message>
     <message>
         <source>Remove history (operation can not be undone!)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vimcu lo citri</translation>
+        <translation type="unfinished">vimcu lo citri (loi nu binxo cu na kakne lo nu tolyzu&apos;e)</translation>
     </message>
     <message>
         <source>Notes</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">notci</translation>
+        <translation type="unfinished">loi notci</translation>
     </message>
     <message>
         <source>Input field for notes about the contact</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ni&apos;o ni&apos;o ni&apos;o sei casnu be lo cmima sinxa</translation>
+        <translation type="unfinished">nu ciska lo loi notci be lo vi jikca</translation>
     </message>
     <message>
         <source>History removed</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lu citri pu vimcu</translation>
+        <translation type="unfinished">lo citri cu se vimcu</translation>
     </message>
     <message>
         <source>This is the public key of your friend, use it to verify their identity via another channel. You can not send this to other people so they can add this contact.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ti me lo javni ckiku pe lo pendo be do gi&apos;e pilno lo nu jundi lo selcmi be vo&apos;a va&apos;o lo drata kanali do na kakne lo nu benji ti lo drata prenu mu&apos;i lo nu ko&apos;a kakne lo nu jmina lo vi cuntu.</translation>
+        <translation type="unfinished">ti gubni ckiku be lo do pendo .i ko pilno ti lo nu birti lo ka du ta&apos;i lo drata porsi .i do na kakne lo nu benji ti lo drata prenu mu&apos;i lo nu ko&apos;a jmina lo vi jikca</translation>
     </message>
     <message>
         <source>Public key (not ToxID):</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">sambijyjbama ckiku (na me zoxID):</translation>
+        <translation type="unfinished">gubni ckiku (na la&apos;oi Tox judri):</translation>
     </message>
     <message>
         <source>Confirmation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ju&apos;ipei</translation>
+        <translation type="unfinished">nu birti</translation>
     </message>
     <message>
         <source>Are you sure to remove %1 chat history?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">xu do birti lo nu vimcu la%1. casnu citri</translation>
+        <translation type="unfinished">xu do birti lo nu vimcu lo casnu citri be la&apos;oi %1</translation>
     </message>
     <message>
         <source>Failed to remove chat history with %1!</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo nu vimcu lo casnu citri ku joi la %1. cu fliba</translation>
+        <translation type="unfinished">fliba lo nu vimcu lo casnu citri be la&apos;oi %1</translation>
     </message>
     <message>
         <source>Auto-accept files</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko samterci&apos;egau loi sfaile</translation>
+        <translation type="unfinished">zmiku nu zanru lo loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Auto-accept for this contact is disabled</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">to_BAR_</translation>
+        <translation type="unfinished">lo zmiku nu zanru be lo vi jikca cu tolakti</translation>
     </message>
     <message>
         <source>Auto-accept call:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">samterci&apos;i lo nu samcpe lo fonjorne:</translation>
+        <translation type="unfinished">zmiku nu zanru lo nu fonjorne:</translation>
     </message>
     <message>
         <source>Auto-accept conference invites</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">zilkanpe lo nunvitke nunvitke</translation>
+        <translation type="unfinished">zmiku nu zanru lo loi nungirzu vitcpe</translation>
     </message>
     <message>
         <source>You can save comments about this contact here.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">do ka&apos;e nurxru lo pinka be lo vi cuntu</translation>
+        <translation type="unfinished">do kakne lo nu vrejgau lo loi pinka be lo vi jikca vi ti</translation>
     </message>
 </context>
 <context>
     <name>AboutSettings</name>
     <message>
         <source>Version</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lutci</translation>
+        <translation type="unfinished">lo verzi</translation>
     </message>
     <message>
         <source>License</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lupyvla</translation>
+        <translation type="unfinished">lo curmyvla</translation>
     </message>
     <message>
         <source>Authors</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">loi finti</translation>
     </message>
     <message>
         <source>Known Issues</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">djuno nabmi</translation>
+        <translation type="unfinished">loi djuno nabmi</translation>
     </message>
     <message>
         <source>Open update download link</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">kibycpa lo nu nuzba cpacu lo kibycpa sinxa</translation>
+        <translation type="unfinished">kalri lo nu nuzba cpacu judri</translation>
     </message>
     <message>
         <source>Update available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ninyninga&apos;igau selpla</translation>
+        <translation type="unfinished">lo cnino verzi cu zasti</translation>
     </message>
     <message>
         <source>qTox is up to date ✓</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la&apos;o gy.qtoks.gy. co&apos;u zasti</translation>
+        <translation type="unfinished">la&apos;oi qTox traji cnino verzi ✓</translation>
     </message>
     <message>
         <source>Currently running an untested/unstable version of qTox</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la&apos;o gy.qTox.gy. ca&apos;o bajra lo nalseltcidu je nalstabi verzi be la&apos;o gy.gy.</translation>
+        <translation type="unfinished">ca&apos;o bajra lo nalseltcidu ja nalstabi verzi be la&apos;oi qTox</translation>
     </message>
 </context>
 <context>
     <name>AddFriendForm</name>
     <message>
         <source>Add Friends</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jmina pendo</translation>
+        <translation type="unfinished">jmina lo pendo</translation>
     </message>
     <message>
         <source>Invalid Tox ID format</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na&apos;e valid Tox ID format</translation>
+        <translation type="unfinished">lo tarmi be la&apos;oi Tox judri cu naldra</translation>
     </message>
     <message>
         <source>Send friend request</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko benji lo pendo cpedu</translation>
+        <translation type="unfinished">benji lo nu cpedu lo nu pendo</translation>
     </message>
     <message>
         <source>Friend requests</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">pendo cpedu</translation>
+        <translation type="unfinished">loi nu cpedu lo nu pendo</translation>
     </message>
     <message>
         <source>Accept</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko zanru</translation>
+        <translation type="unfinished">zanru</translation>
     </message>
     <message>
         <source>Reject</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko toldicra</translation>
+        <translation type="unfinished">tolzanru</translation>
     </message>
     <message>
         <source>Couldn&apos;t add friend</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na ka&apos;e jmina lo pendo</translation>
+        <translation type="unfinished">fliba lo nu jmina lo pendo</translation>
     </message>
     <message>
         <source>Type in Tox ID of your friend</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko ciska lo samselcmima be lo do pendo be la toks</translation>
+        <translation type="unfinished">ko ciska lo la&apos;oi Tox judri be lo do pendo</translation>
     </message>
     <message>
         <source>Friend request message</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">pendo cpedu notci</translation>
+        <translation type="unfinished">notci be lo nu cpedu lo nu pendo</translation>
     </message>
     <message>
         <source>Type message to send with the friend request or leave empty to send a default message</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko ciska lo notci poi te benji lo pendo cpedu gi&apos;o nalxa&apos;o lo nu benji lo standari notci</translation>
+        <translation type="unfinished">ko ciska lo notci poi te benji lo nu cpedu lo nu pendo ja kunti lo nu benji lo fadni notci</translation>
     </message>
     <message>
         <source>You can&apos;t add yourself as a friend!</source>
         <extracomment>When trying to add your own Tox ID as friend</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">do na ka&apos;e jmina lo do pendo</translation>
+        <translation type="unfinished">do na kakne lo nu jmina lo do sevzi lo pendo</translation>
     </message>
     <message>
         <source>Open contact list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo samtci liste</translation>
+        <translation type="unfinished">kalri lo jikca liste</translation>
     </message>
     <message>
         <source>Couldn&apos;t open file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">pu na kakne lo nu kargau lo sfaile</translation>
+        <translation type="unfinished">fliba lo nu kalri lo datnyve&apos;i</translation>
     </message>
     <message>
         <source>Couldn&apos;t open the contact file</source>
         <extracomment>Error message when trying to open a contact list file to import</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko na ka&apos;e kargau lo nu samtci sfaile</translation>
+        <translation type="unfinished">fliba lo nu kalri lo jikca datnyve&apos;i</translation>
     </message>
     <message>
         <source>Invalid file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na&apos;e drani sfaile</translation>
+        <translation type="unfinished">naldra datnyve&apos;i</translation>
     </message>
     <message>
         <source>We couldn&apos;t find any contacts to import in this file!</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">mi&apos;ai na pu tolcri da poi samtci lo nu mi&apos;o binxo lo vi sfaile</translation>
+        <translation type="unfinished">mi&apos;o na facki lo jikca poi nu jmina lo vi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Tox ID</source>
         <extracomment>Tox ID of the person you&apos;re sending a friend request to</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">me la toks. ID</translation>
+        <translation type="unfinished">la&apos;oi Tox judri</translation>
     </message>
     <message>
         <source>Message</source>
         <extracomment>The message you send in friend requests</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">notci</translation>
     </message>
     <message>
         <source>Open</source>
         <extracomment>Button to choose a file with a list of contacts to import</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau</translation>
+        <translation type="unfinished">kalri</translation>
     </message>
     <message>
         <source>Send friend requests</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko benji lo pendo cpedu</translation>
+        <translation type="unfinished">benji lo nu cpedu lo nu pendo</translation>
     </message>
     <message>
         <source>%1 here! Tox me maybe?</source>
         <extracomment>Default message in friend requests if the field is left blank. Write something appropriate!</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 vi xu cumki fa lo nu dasni mi</translation>
+        <translation type="unfinished">ni&apos;o mi&apos;e %1 .i xu do djica lo nu casnu</translation>
     </message>
     <message>
         <source>Import a list of contacts, one Tox ID per line</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">import a list of contacts, one Tox ID per line</translation>
+        <translation type="unfinished">ko nerjmina lo liste be loi prufile .i pa la&apos;oi Tox judri ro linji</translation>
     </message>
     <message numerus="yes">
         <source>Ready to import %n contact(s), click send to confirm</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform>pare lo nu samterci&apos;egau %n benji</numerusform>
+            <numerusform>mi bredi lo nu nerjmina loi %n jikca .i ko catke lo nu benji lo nu birti</numerusform>
         </translation>
     </message>
     <message>
         <source>Import contacts</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Source</translation>
+        <translation type="unfinished">ko nerjmina loi jikca</translation>
     </message>
     <message>
         <source>Tox ID, 76 hexadecimal characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jacke&apos;u xa</translation>
+        <translation type="unfinished">la&apos;oi Tox judri poi lerfu be li ze xa poi pa xa ju&apos;u</translation>
     </message>
     <message>
         <source>%1 Tox ID is invalid</source>
         <comment>Tox address error</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 jox ID is invalid</translation>
+        <translation type="unfinished">la&apos;oi %1 la&apos;oi Tox judri cu naldra</translation>
     </message>
     <message>
         <source>76 hexadecimal characters</source>
         <extracomment>Tox ID format description</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ju&apos;u xa</translation>
+        <translation type="unfinished">lerfu be li ze xa poi pa xa ju&apos;u</translation>
     </message>
     <message>
         <source>Add friend</source>
@@ -526,73 +440,59 @@ so&apos;o roi lo nu do jungau cu na banzu xamgu lo ka zgana lo nu zgana lo vidni
     <name>AdvancedForm</name>
     <message>
         <source>Advanced</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">pluja</translation>
     </message>
     <message>
         <source>really</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">je&apos;a</translation>
     </message>
     <message>
         <source>not</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">na</translation>
     </message>
     <message>
         <source>IMPORTANT NOTE</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vajni pinci</translation>
+        <translation type="unfinished">vajni pinka</translation>
     </message>
     <message>
         <source>Reset settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">reseta lo selcu&apos;i</translation>
+        <translation type="unfinished">refsetca lo loi tercu&apos;e</translation>
     </message>
     <message>
         <source>All settings will be reset to default. Are you sure?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ro selcu&apos;i ba reseta lo vanbi xu do birti</translation>
+        <translation type="unfinished">ro loi tercu&apos;e ba se refsetca lo fadni .i xu do birti</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">go&apos;i</translation>
     </message>
     <message>
         <source>No</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">na go&apos;i</translation>
     </message>
     <message>
         <source>Logs (*.log)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">logji (*.log)</translation>
+        <translation type="unfinished">vreji (*.log)</translation>
     </message>
     <message>
         <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fau lo nu do %1 djuno lo du&apos;u do zukte ma kau e&apos;o %2 galfi da vi .i lo nu tikygau ti cu rinka lo nu nabmi la .qtoks. gi lo nu cirko lo datni ji mu&apos;a lo citri cu rinka .%3</translation>
+        <translation type="unfinished">fau lo nu do %1 na djuno lo du&apos;u do zukte ma kau kei .e&apos;o ko %2 galfi da vi .i lo nu galfi da vi cu cumki lo nu rinka lo nu nabmi la&apos;oi qTox gi&apos;e rinka lo nu cirko lo do datni .i mu&apos;a lo citri cu se cirko .%3</translation>
     </message>
     <message>
         <source>Changes here are applied only after restarting qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu vi galfi cu se prami po&apos;o ba lo nu re&apos;u cfari la&apos;oi qTox</translation>
+        <translation type="unfinished">lo nu galfi da vi cu se pilno ba lo nu la&apos;oi qTox refsamcfa po&apos;o</translation>
     </message>
     <message>
         <source>Save file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vimcu lo sfaile</translation>
+        <translation type="unfinished">vrejgau lo datnyve&apos;i</translation>
     </message>
     <message>
         <source>Invalid proxy address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na&apos;e vrici proksi judri</translation>
+        <translation type="unfinished">naldra proksi judri</translation>
     </message>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.e&apos;o ko setca lo validu IP judri ji lo minji cmene be lo proxy seltcidu</translation>
+        <translation type="unfinished">.e&apos;o ko ciska lo drani la&apos;oi IP judri ja lo skami cmene lo proksi tercu&apos;e</translation>
     </message>
 </context>
 <context>
@@ -600,136 +500,115 @@ so&apos;o roi lo nu do jungau cu na banzu xamgu lo ka zgana lo nu zgana lo vidni
     <message>
         <source>Save settings to the working directory instead of the usual conf dir</source>
         <extracomment>describes makeToxPortable checkbox</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko stogau lo selcu&apos;i be lo gunka datni kei mu&apos;i lo du&apos;u la .conf. datnycimdytcana</translation>
+        <translation type="unfinished">vrejgau lo loi tercu&apos;e vi lo gunka stuzi gi&apos;e na vrejgau vi lo fadni .conf. stuzi</translation>
     </message>
     <message>
         <source>Make Tox portable</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko zbasu lo nu samcpana la toks</translation>
+        <translation type="unfinished">binxo lo ka bevri la&apos;oi Tox</translation>
     </message>
     <message>
         <source>Reset to default settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">tool-options-action</translation>
+        <translation type="unfinished">refsetca lo fadni tercu&apos;e</translation>
     </message>
     <message>
         <source>Portable</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vrici</translation>
+        <translation type="unfinished">bevri</translation>
     </message>
     <message>
         <source>Enable IPv6 (recommended)</source>
         <extracomment>Text on a checkbox to enable IPv6</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">pilno IPv6 (cusku)</translation>
+        <translation type="unfinished">akti lo IPv6 (se stidi)</translation>
     </message>
     <message>
         <source>Enable UDP (recommended)</source>
         <extracomment>Text on checkbox to disable UDP</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">gafygau lo UDP (cusku)</translation>
+        <translation type="unfinished">akti lo UDP (se stidi)</translation>
     </message>
     <message>
         <source>Proxy type:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">proxy klesi:</translation>
+        <translation type="unfinished">lo proksi klesi:</translation>
     </message>
     <message>
         <source>Address:</source>
         <extracomment>Text on proxy addr label</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">judri:</translation>
     </message>
     <message>
         <source>Port:</source>
         <extracomment>Text on proxy port label</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">verji:</translation>
+        <translation type="unfinished">seljorne:</translation>
     </message>
     <message>
         <source>None</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">no da</translation>
     </message>
     <message>
         <source>Debug</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nuncfagau</translation>
+        <translation type="unfinished">nunfagau</translation>
     </message>
     <message>
         <source>Export Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">gasnu lo nu cfila la debug log</translation>
+        <translation type="unfinished">benji lo cfagau vreji</translation>
     </message>
     <message>
         <source>Copy Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko koppi la debug kalci</translation>
+        <translation type="unfinished">fukpi lo cfagau vreji</translation>
     </message>
     <message>
         <source>Enable LAN discovery</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">pofygau la&apos;oi LAN nu facki</translation>
+        <translation type="unfinished">akti lo nu facki vi la&apos;oi LAN</translation>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko pilno lo samcfa tutci (favgau po&apos;o)</translation>
+        <translation type="unfinished">akti lo loi nunfagau tutci (loi favgau po&apos;o)</translation>
     </message>
     <message>
         <source>Connection settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nunjajgau selcu&apos;e</translation>
+        <translation type="unfinished">lo nu jorne tercu&apos;e</translation>
     </message>
     <message>
         <source>Disabling this allows, e.g., Tox over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
         <extracomment>force tcp checkbox tooltip</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fau na akti ti cumki e&apos;u la toks pe la tort ki&apos;u nai ko&apos;a jmina lo kargu be la toks. net gi&apos;e ku&apos;i toljundi ca lo nu sarcu</translation>
+        <translation type="unfinished">lo nu ti tolakti cu curmi lo nu la&apos;oi Tox bajra ta&apos;i la&apos;oi Tor .i ku&apos;i la&apos;edi&apos;u jmina lo nu kargu be lo la&apos;oi Tox nunji&apos;i gi&apos;e sarcu lo nu toljundi ca lo nu sarcu po&apos;o</translation>
     </message>
 </context>
 <context>
     <name>AppManager</name>
     <message>
         <source>Tox URI to parse</source>
-        <translation type="unfinished">la .toks. URI. noi jai gau parse</translation>
+        <translation type="unfinished">la&apos;oi Tox .URI. poi jai se .parse.</translation>
     </message>
     <message>
         <source>Starts new instance and loads specified profile.</source>
-        <translation type="unfinished">ko cfari lo cnino saske gi&apos;e kargau lo se reisku benji</translation>
+        <translation type="unfinished">cfari lo cnino samtci gi&apos;e nerkla lo se detri prufile</translation>
     </message>
     <message>
         <source>profile</source>
-        <translation type="unfinished">profil</translation>
+        <translation type="unfinished">prufile</translation>
     </message>
     <message>
         <source>Starts new instance and opens the login screen.</source>
-        <translation type="unfinished">ko cfari lo cnino fasnu gi&apos;e kargau lo logji samtci</translation>
+        <translation type="unfinished">cfari lo cnino samtci gi&apos;e kalri lo nu nerkla papri</translation>
     </message>
     <message>
         <source>Sets IPv6 &lt;on&gt;/&lt;off&gt;. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">&lt;on&gt;/&lt;off&gt;. lo&apos;e fadni cu akti</translation>
+        <translation type="unfinished">setca lo IPv6 fi la&apos;oi &lt;on&gt; ja la&apos;oi &lt;off&gt; .i la&apos;oi ON cu fadni</translation>
     </message>
     <message>
         <source>Sets UDP &lt;on&gt;/&lt;off&gt;. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">&lt;on&gt;/&lt;off&gt;. lo&apos;e fadni cu akti</translation>
+        <translation type="unfinished">setca lo UDP fi la&apos;oi &lt;on&gt; ja la&apos;oi &lt;off&gt; .i la&apos;oi ON cu fadni</translation>
     </message>
     <message>
         <source>Sets LAN discovery &lt;on&gt;/&lt;off&gt;. UDP off overrides. Default is ON.</source>
         <comment>&apos;on&apos; and &apos;off&apos; should not be translated, they are flag values</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">&lt;on&gt;/&lt;off&gt;. sets LAN discovery UDP mo&apos;u gasnu lo ka sisti lo&apos;e fadni cu akti</translation>
+        <translation type="unfinished">setca lo nu facki vi la&apos;oi LAN fi la&apos;oi &lt;on&gt; ja la&apos;oi &lt;off&gt; .i la&apos;oi UDP &lt;off&gt; cu tcini&apos;iga&apos;u .i la&apos;oi ON cu fadni</translation>
     </message>
     <message>
         <source>Sets proxy settings. Default is NONE.</source>
         <comment>NONE should not be translated, it is a flag value</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i tercu&apos;e lo proxy selcu&apos;i la&apos;oi NONE. se cuntu</translation>
+        <translation type="unfinished">setca lo proksi tercu&apos;e .i la&apos;oi NONE cu fadni</translation>
     </message>
     <message>
         <source>Error</source>
@@ -737,22 +616,19 @@ so&apos;o roi lo nu do jungau cu na banzu xamgu lo ka zgana lo nu zgana lo vidni
     </message>
     <message>
         <source>Failed to load profile automatically.</source>
-        <translation type="unfinished">Failed to load profile automatically</translation>
+        <translation type="unfinished">fliba lo nu zmiku nu nerkla lo prufile</translation>
     </message>
     <message>
         <source>Checks whether this program is running the latest qTox version.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jundi lo du&apos;u xu le sampla ca&apos;o bajra le cnino qTox moi</translation>
+        <translation type="unfinished">sisku lo nu xu ti bajra lo traji nu nuzba verzi be la&apos;oi qTox</translation>
     </message>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">cfari lo ka se bevri sazycimdytcini; cfari kibycpa lo nu samterci&apos;e lo vi karce</translation>
+        <translation type="unfinished">cfari ta&apos;i lo nu bevri .i nerkla lo prufile fi ti poi stuzi</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">pluta</translation>
     </message>
 </context>
@@ -760,151 +636,122 @@ so&apos;o roi lo nu do jungau cu na banzu xamgu lo ka zgana lo nu zgana lo vidni
     <name>ChatForm</name>
     <message>
         <source>Send a file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko benji lo sfaile</translation>
+        <translation type="unfinished">benji lo datnyve&apos;i</translation>
     </message>
     <message>
         <source>qTox wasn&apos;t able to open %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la .qTox. pu na kakne lo nu kargau lo%1</translation>
+        <translation type="unfinished">la&apos;oi qTox na kakne lo nu kalri la&apos;oi %1</translation>
     </message>
     <message>
         <source>Unable to open</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na ka&apos;e kalri</translation>
+        <translation type="unfinished">na kakne lo nu kalri</translation>
     </message>
     <message>
         <source>Bad idea</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">xlali sidbo</translation>
     </message>
     <message>
         <source>Failed to open temporary file</source>
         <comment>Temporary file for screenshot</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu kalri lo tcidu sfaile cu fliba</translation>
+        <translation type="unfinished">fliba lo nu kalri lo zasni datnyve&apos;i</translation>
     </message>
     <message>
         <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translatorcomment>laut Duden ist Screenshot schon deutsch</translatorcomment>
-        <translation type="unfinished">la .qTox. pu na kakne lo nu nurxruvgau lo samcfila</translation>
+        <translation type="unfinished">la&apos;oi qTox na kakne lo nu vrejgau lo vidni pixra</translation>
     </message>
     <message>
         <source>Call duration: </source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fonjorne</translation>
+        <translation type="unfinished">lo nu fonjorne temci: </translation>
     </message>
     <message>
         <source>Copy</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">fukpi</translation>
     </message>
     <message>
         <source>You&apos;re trying to send a sequential file, which is not going to work!</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">do troci lo ka benji lo se javni sfaile poi na ka&apos;e gunka</translation>
+        <translation type="unfinished">do troci lo nu benji lo porsi datnyve&apos;i poi na ba gunka</translation>
     </message>
     <message>
         <source>Filename contained illegal characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo sfailcmene cu se cmima lo tolcru lerci</translation>
+        <translation type="unfinished">lo cmene be lo datnyve&apos;i cu se cmima lo naldra lerfu</translation>
     </message>
     <message>
         <source>Illegal characters have been changed to _
 so you can save the file on Windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo toldra xatra pu ba&apos;o se fanva
-e&apos;u do ka&apos;e sfaile lo nu sfaile bu&apos;u la .Windows.zoi ke&apos;a nurxrugau</translation>
+        <translation type="unfinished">lo naldra lerfu cu binxo la&apos;oi _ .i la&apos;edi&apos;u curmi lo nu vrejgau lo datnyve&apos;i vi la&apos;oi Windows.</translation>
     </message>
 </context>
 <context>
     <name>ChatFormHeader</name>
     <message>
         <source>Can&apos;t start audio call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko na kakne lo nu cfari lo me&apos;o sance fonjorne</translation>
+        <translation type="unfinished">na kakne lo nu cfari lo sance fonjorne</translation>
     </message>
     <message>
         <source>Start audio call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cfari lo se zgana fonjorne</translation>
+        <translation type="unfinished">cfari lo sance fonjorne</translation>
     </message>
     <message>
         <source>End audio call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko sisti lo skami fonta&apos;a</translation>
+        <translation type="unfinished">sisti lo sance fonjorne</translation>
     </message>
     <message>
         <source>Cancel audio call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko sisti lo se zgana fonjorne</translation>
+        <translation type="unfinished">nu sisti lo sance fonjorne</translation>
     </message>
     <message>
         <source>Accept audio call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cpacu lo se zgana fonjorne</translation>
+        <translation type="unfinished">zanru lo sance fonjorne</translation>
     </message>
     <message>
         <source>Can&apos;t start video call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko na kakne lo nu cfari lo vidni fonjorne</translation>
+        <translation type="unfinished">na kakne lo nu cfari lo vidni fonjorne</translation>
     </message>
     <message>
         <source>Start video call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cfari lo vidni fonxa</translation>
+        <translation type="unfinished">cfari lo vidni fonjorne</translation>
     </message>
     <message>
         <source>End video call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko sisti lo vidni fonxa</translation>
+        <translation type="unfinished">sisti lo vidni fonjorne</translation>
     </message>
     <message>
         <source>Cancel video call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko sisti lo velvei fonjorne</translation>
+        <translation type="unfinished">nu sisti lo vidni fonjorne</translation>
     </message>
     <message>
         <source>Accept video call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cpacu lo vidni fonjorne</translation>
+        <translation type="unfinished">zanru lo vidni fonjorne</translation>
     </message>
     <message>
         <source>Sound can be disabled only during a call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo sance ka&apos;e na akti ca lo nu fonjorne ku po&apos;o</translation>
+        <translation type="unfinished">lo sance ka&apos;e tolakti ca lo nu fonjorne po&apos;o</translation>
     </message>
     <message>
         <source>Unmute call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko sisti lo nu fonta&apos;a</translation>
+        <translation type="unfinished">tolsmaji lo fonjorne</translation>
     </message>
     <message>
         <source>Mute call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko smaji fonta&apos;a</translation>
+        <translation type="unfinished">smaji lo fonjorne</translation>
     </message>
     <message>
         <source>Microphone can be muted only during a call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo mikrofonxa ka&apos;e smaji ca lo nu fonxa ku po&apos;o</translation>
+        <translation type="unfinished">lo snatci ka&apos;e smaji ca lo nu fonjorne po&apos;o</translation>
     </message>
     <message>
         <source>Unmute microphone</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko samtci mikrofonxa</translation>
+        <translation type="unfinished">tolsmaji lo snatci</translation>
     </message>
     <message>
         <source>Mute microphone</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">smaji mikrofonxa</translation>
+        <translation type="unfinished">smaji lo snatci</translation>
     </message>
 </context>
 <context>
     <name>ChatTextEdit</name>
     <message>
         <source>Type your message here...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ko ciska lo do notci ti</translation>
     </message>
 </context>
@@ -912,12 +759,11 @@ e&apos;u do ka&apos;e sfaile lo nu sfaile bu&apos;u la .Windows.zoi ke&apos;a nu
     <name>ChatWidget</name>
     <message>
         <source>pending</source>
-        <translation type="unfinished">denpa</translation>
+        <translation type="unfinished">ca&apos;o denpa</translation>
     </message>
     <message>
         <source>%1 is typing</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 ciska</translation>
+        <translation type="unfinished">la&apos;oi %1 cu ca&apos;o ciska</translation>
     </message>
     <message>
         <source>Copy</source>
@@ -925,7 +771,7 @@ e&apos;u do ka&apos;e sfaile lo nu sfaile bu&apos;u la .Windows.zoi ke&apos;a nu
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished">ko selcu&apos;a ro</translation>
+        <translation type="unfinished">cuxna ro da</translation>
     </message>
 </context>
 <context>
@@ -933,19 +779,16 @@ e&apos;u do ka&apos;e sfaile lo nu sfaile bu&apos;u la .Windows.zoi ke&apos;a nu
     <message>
         <source>Rename circle</source>
         <comment>Menu for renaming a circle</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cmene lo dikla</translation>
+        <translation type="unfinished">refcmene lo cukla</translation>
     </message>
     <message>
         <source>Remove circle</source>
         <comment>Menu for removing a circle</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko vimcu lo ka grusi</translation>
+        <translation type="unfinished">vimcu lo cukla</translation>
     </message>
     <message>
         <source>Open all in new window</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau ro lo cnino canko</translation>
+        <translation type="unfinished">kalri ro da vi lo cnino canko</translation>
     </message>
 </context>
 <context>
@@ -953,12 +796,12 @@ e&apos;u do ka&apos;e sfaile lo nu sfaile bu&apos;u la .Windows.zoi ke&apos;a nu
     <message>
         <source>Location not writable</source>
         <comment>Title of permissions popup</comment>
-        <translation type="unfinished">lo tcini na ka&apos;e ciska</translation>
+        <translation type="unfinished">lo stuzi na se curmi lo nu ciska ri</translation>
     </message>
     <message>
         <source>You do not have permission to write to that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation type="unfinished">do na jai se curmi fai lo nu ciska lo va stuzi ko drata gi&apos;onai sisti lo nu nurxrugau</translation>
+        <translation type="unfinished">do na se curmi lo nu ciska vi lo vi stuzi .i ko cuxna lo drata ja lo nu nu sisti lo nu vrejgau canko</translation>
     </message>
 </context>
 <context>
@@ -966,119 +809,102 @@ e&apos;u do ka&apos;e sfaile lo nu sfaile bu&apos;u la .Windows.zoi ke&apos;a nu
     <message numerus="yes">
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform>%n pilno (bu&apos;u/ne&apos;i) lo nu casnu</numerusform>
+            <numerusform>%n pilno vi lo nu casnu</numerusform>
         </translation>
     </message>
     <message>
         <source>mute</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">mute mute</translation>
+        <translation type="unfinished">smaji</translation>
     </message>
     <message>
         <source>unmute</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">no drata</translation>
+        <translation type="unfinished">tolsmaji</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fukpi sampyvla sampyvla</translation>
+        <translation type="unfinished">fukpi lo judri be lo casnu cmima</translation>
     </message>
 </context>
 <context>
     <name>ConferenceInviteForm</name>
     <message>
         <source>Conferences</source>
-        <translation type="unfinished">girzu</translation>
+        <translation type="unfinished">loi nungirzu</translation>
     </message>
     <message>
         <source>Create new conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko finti lo cnino nunvri</translation>
+        <translation type="unfinished">finti lo cnino nungirzu</translation>
     </message>
     <message>
         <source>Conference invites</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nunvitke</translation>
+        <translation type="unfinished">loi nungirzu vitcpe</translation>
     </message>
 </context>
 <context>
     <name>ConferenceInviteWidget</name>
     <message>
         <source>Invited by %1 on %2 at %3.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vi&apos;ecpe fi la%1 by %2 at %3</translation>
+        <translation type="unfinished">la&apos;oi %1 cu vitcpe ca la&apos;oi %2 ti&apos;u la&apos;oi %3</translation>
     </message>
     <message>
         <source>Join</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cmibi&apos;o</translation>
+        <translation type="unfinished">cmibi&apos;o</translation>
     </message>
     <message>
         <source>Decline</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na go&apos;i</translation>
+        <translation type="unfinished">tolzanru</translation>
     </message>
 </context>
 <context>
     <name>ConferenceWidget</name>
     <message>
         <source>Set title...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko ciska lo cmene...</translation>
+        <translation type="unfinished">setca lo cmene...</translation>
     </message>
     <message>
         <source>Open chat in new window</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo nu casnu ne&apos;i lo cnino canko</translation>
+        <translation type="unfinished">kalri lo nu casnu vi lo cnino canko</translation>
     </message>
     <message>
         <source>Remove chat from this window</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko vimcu lo nu casnu fi lo vi canko</translation>
+        <translation type="unfinished">vimcu lo nu casnu fi lo vi canko</translation>
     </message>
     <message>
         <source>Quit conference</source>
         <comment>Menu to quit a conference</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko sisti lo nu jungau</translation>
+        <translation type="unfinished">cliva lo nungirzu</translation>
     </message>
     <message numerus="yes">
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform>%n pilno (bu&apos;u/ne&apos;i) lo nu casnu</numerusform>
+            <numerusform>%n pilno vi lo nu casnu</numerusform>
         </translation>
     </message>
     <message>
         <source>New message</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">notci notci</translation>
+        <translation type="unfinished">cnino notci</translation>
     </message>
     <message>
         <source>Online</source>
-        <translation type="unfinished">.tox. pilno ca</translation>
+        <translation type="unfinished">samjo&apos;e</translation>
     </message>
 </context>
 <context>
     <name>Core</name>
     <message>
         <source>/me offers friendship, &quot;%1&quot;</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">mi frica lo ka pendo - %1</translation>
+        <translation type="unfinished">mi cpedu lo nu pendo .i «%1»</translation>
     </message>
     <message>
         <source>Conference %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ni&apos;o ni&apos;o sei casnu be lo nunfagri be %1</translation>
+        <translation type="unfinished">nungirzu %1</translation>
     </message>
     <message>
         <source>Invalid Tox ID</source>
         <comment>Error while sending friend request</comment>
-        <translation type="unfinished">blowing&quot; &quot;shallow&quot; &quot;partial</translation>
+        <translation type="unfinished">naldra la&apos;oi Tox judri</translation>
     </message>
     <message>
         <source>You need to write a message with your request</source>
@@ -1100,26 +926,22 @@ e&apos;u do ka&apos;e sfaile lo nu sfaile bu&apos;u la .Windows.zoi ke&apos;a nu
     <name>DebugLog</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nuncfagau nuncfagau</translation>
+        <translation type="unfinished">nunfagau vreji</translation>
     </message>
     <message>
         <source>Auto-reload</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">zi&apos;u samcfa&apos;egau</translation>
+        <translation type="unfinished">zmiku nu refcfari</translation>
     </message>
     <message>
         <source>Auto-scroll</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ni&apos;o samterci&apos;egau</translation>
+        <translation type="unfinished">zmiku nu gunro</translation>
     </message>
 </context>
 <context>
     <name>DebugLogForm</name>
     <message>
         <source>Debug Log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nuncfagau nuncfagau</translation>
+        <translation type="unfinished">nunfagau vreji</translation>
     </message>
 </context>
 <context>
@@ -1127,120 +949,99 @@ e&apos;u do ka&apos;e sfaile lo nu sfaile bu&apos;u la .Windows.zoi ke&apos;a nu
     <message>
         <source>Waiting to send...</source>
         <comment>file transfer widget</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">denpa lo nu benji</translation>
     </message>
     <message>
         <source>Accept to receive this file</source>
         <comment>file transfer widget</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko zanru lo nu terbe le sfaile</translation>
+        <translation type="unfinished">zanru lo nu cpacu ti poi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Resuming...</source>
         <comment>file transfer widget</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ca&apos;o refusi</translation>
+        <translation type="unfinished">ca&apos;o refcfari</translation>
     </message>
     <message>
         <source>Cancel transfer</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko sisti lo nu selgau</translation>
+        <translation type="unfinished">nu sisti lo nu benji</translation>
     </message>
     <message>
         <source>Pause transfer</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">denpa lo nuncurmi</translation>
+        <translation type="unfinished">de&apos;a lo nu benji</translation>
     </message>
     <message>
         <source>Paused</source>
         <comment>file transfer widget</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">denpa</translation>
+        <translation type="unfinished">ca&apos;o de&apos;a</translation>
     </message>
     <message>
         <source>Open file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo sfaile</translation>
+        <translation type="unfinished">kalri lo datnyve&apos;i</translation>
     </message>
     <message>
         <source>Open file directory</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo sfaile</translation>
+        <translation type="unfinished">kalri lo datnyve&apos;i stuzi</translation>
     </message>
     <message>
         <source>Resume transfer</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cfari lo nundatni</translation>
+        <translation type="unfinished">refcfari lo nu benji</translation>
     </message>
     <message>
         <source>Accept transfer</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko tinbe lo nunjampla</translation>
+        <translation type="unfinished">zanru lo nu benji</translation>
     </message>
     <message>
         <source>Save a file</source>
         <comment>Title of the file saving dialog</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko gasnu lo nu sfaile</translation>
+        <translation type="unfinished">vrejgau lo datnyve&apos;i</translation>
     </message>
     <message>
         <source>Remote paused</source>
         <comment>file transfer widget</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">de&apos;a</translation>
+        <translation type="unfinished">lo darno cu ca&apos;o de&apos;a</translation>
     </message>
 </context>
 <context>
     <name>FilesForm</name>
     <message>
         <source>Downloads</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">za&apos;u kibycpa</translation>
+        <translation type="unfinished">loi se cpacu</translation>
     </message>
     <message>
         <source>Uploads</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">za&apos;u kibycpa</translation>
+        <translation type="unfinished">loi se benji</translation>
     </message>
     <message>
         <source>Transferred files</source>
         <comment>&quot;Headline&quot; of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">pu benji loi sfaile</translation>
+        <translation type="unfinished">loi se benji datnyve&apos;i</translation>
     </message>
 </context>
 <context>
     <name>FriendListWidget</name>
     <message>
         <source>Today</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ca lo cabdei</translation>
     </message>
     <message>
         <source>Yesterday</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ca lo prulamdei</translation>
     </message>
     <message>
         <source>Last 7 days</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ca lo prulamdei be li ze</translation>
+        <translation type="unfinished">lo prulamdei be li ze</translation>
     </message>
     <message>
         <source>This month</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ca lo zi masti</translation>
+        <translation type="unfinished">vi lo ca masti</translation>
     </message>
     <message>
         <source>Never</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">noroi</translation>
     </message>
     <message>
         <source>Older than 6 months</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo masti be li xa cu zmadu</translation>
+        <translation type="unfinished">pu lo masti be li xa</translation>
     </message>
 </context>
 <context>
@@ -1248,534 +1049,436 @@ e&apos;u do ka&apos;e sfaile lo nu sfaile bu&apos;u la .Windows.zoi ke&apos;a nu
     <message>
         <source>Invite to conference</source>
         <comment>Menu to invite a friend to a conference</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nu vitke fi lo nu cunso</translation>
+        <translation type="unfinished">vitcpe fi lo nungirzu</translation>
     </message>
     <message>
         <source>Move to circle...</source>
         <comment>Menu to move a friend into a different circle</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko pagre lo se dikla...</translation>
+        <translation type="unfinished">muvdu lo cukla...</translation>
     </message>
     <message>
         <source>To new circle</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo cnino dinju</translation>
+        <translation type="unfinished">fi lo cnino cukla</translation>
     </message>
     <message>
         <source>Remove from circle &apos;%1&apos;</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko vimcu lo se dikla be &apos;%1&apos;</translation>
+        <translation type="unfinished">vimcu fi lo cukla poi se cmene la&apos;oi &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Open chat in new window</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo nu casnu ne&apos;i lo cnino canko</translation>
+        <translation type="unfinished">kalri lo nu casnu vi lo cnino canko</translation>
     </message>
     <message>
         <source>Remove chat from this window</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko vimcu lo nu casnu fi lo vi canko</translation>
+        <translation type="unfinished">vimcu lo nu casnu fi lo vi canko</translation>
     </message>
     <message>
         <source>To new conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ne&apos;i lo cnino nunji&apos;e</translation>
+        <translation type="unfinished">fi lo cnino nungirzu</translation>
     </message>
     <message>
         <source>Invite to conference &apos;%1&apos;</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko vitke fi lo nunji&apos;e be «%1 »</translation>
+        <translation type="unfinished">vitcpe fi lo nungirzu be la&apos;oi &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Set alias...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">tool-options-action</translation>
+        <translation type="unfinished">setca lo drata cmene...</translation>
     </message>
     <message>
         <source>Auto accept files from this friend</source>
         <comment>context menu entry</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">zi&apos;o ko cpacu lo sfaile lo vi pendo</translation>
+        <translation type="unfinished">zmiku nu zanru lo loi datnyve&apos;i be fi lo vi pendo</translation>
     </message>
     <message>
         <source>Show details</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jarco lo ctila</translation>
+        <translation type="unfinished">jarco lo loi tcila</translation>
     </message>
     <message>
         <source>New message</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">notci notci</translation>
+        <translation type="unfinished">cnino notci</translation>
     </message>
     <message>
         <source>Online</source>
-        <translation type="unfinished">.tox. pilno ca</translation>
+        <translation type="unfinished">samjo&apos;e</translation>
     </message>
     <message>
         <source>Away</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">to&apos;o</translation>
     </message>
     <message>
         <source>Busy</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">tolcando</translation>
+        <translation type="unfinished">tolzi&apos;e</translation>
     </message>
     <message>
         <source>Offline</source>
-        <translatorcomment>Ausgelassen</translatorcomment>
-        <translation type="unfinished">.tox. pilno na ca</translation>
+        <translation type="unfinished">na samjo&apos;e</translation>
     </message>
     <message>
         <source>Move to circle &quot;%1&quot;</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko muvdu lo ka se krinu be la «%1 »</translation>
+        <translation type="unfinished">muvdu lo cukla poi se cmene la&apos;oi &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Remove friend</source>
         <comment>Menu to remove the friend from the friend list</comment>
-        <translation type="unfinished">ko vimcu lo pendo</translation>
+        <translation type="unfinished">vimcu lo pendo</translation>
     </message>
     <message>
         <source>Blocked</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Block</translation>
+        <translation type="unfinished">se zunti</translation>
     </message>
 </context>
 <context>
     <name>GeneralForm</name>
     <message>
         <source>General</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">cnima</translation>
+        <translation type="unfinished">jicmu</translation>
     </message>
     <message>
         <source>%1 (no fonts)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 (no fonta)</translation>
+        <translation type="unfinished">la&apos;oi %1 (no lerfu klesi)</translation>
     </message>
     <message>
         <source>Auto select</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">samtci selcuxna</translation>
+        <translation type="unfinished">zmiku nu cuxna</translation>
     </message>
 </context>
 <context>
     <name>GeneralSettings</name>
     <message>
         <source>General Settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">roda selcu&apos;i</translation>
+        <translation type="unfinished">jicmu tercu&apos;e</translation>
     </message>
     <message>
         <source>The translation may not load until qTox restarts.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo xe fanva ka&apos;e na kargau pu lo nu co&apos;a cpacu la&apos;oi qTox. cfari</translation>
+        <translation type="unfinished">le nu fanva cu cumki lo nu na nerkla pu lo nu la&apos;oi qTox refsamcfa</translation>
     </message>
     <message>
         <source>Language:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">bau:</translation>
     </message>
     <message>
         <source>Show system tray icon</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">gafygau lo ciste samtci samtci</translation>
+        <translation type="unfinished">jarco lo ciste samtci sinxa</translation>
     </message>
     <message>
         <source>Enable light tray icon.</source>
         <comment>toolTip for light icon setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko curmi lo nu gusni samtci</translation>
+        <translation type="unfinished">akti lo gusni ciste samtci sinxa</translation>
     </message>
     <message>
         <source>Light icon</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">gusni simsa</translation>
+        <translation type="unfinished">gusni sinxa</translation>
     </message>
     <message>
         <source>qTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la&apos;o gy.qTox.gy. ba cfari lo ka cmarai lo cmarai tcini</translation>
+        <translation type="unfinished">la&apos;oi qTox ba cfari lo ka cmara&apos;i vi lo ciste samtci stuzi</translation>
     </message>
     <message>
         <source>Start in tray</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cfari ne&apos;i lo fasnu</translation>
+        <translation type="unfinished">cfari vi lo ciste samtci stuzi</translation>
     </message>
     <message>
         <source>Close to tray</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko ganlygau lo tsina</translation>
+        <translation type="unfinished">ganlo vi lo ciste samtci stuzi</translation>
     </message>
     <message>
         <source>Minimize to tray</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jdika lo&apos;e lerseltcidu</translation>
+        <translation type="unfinished">cmara&apos;i vi lo ciste samtci stuzi</translation>
     </message>
     <message>
         <source>Autostart</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">samcfa</translation>
+        <translation type="unfinished">zmiku nu cfari</translation>
     </message>
     <message>
         <source>Set where files will be saved.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko setca lo se srana be lo sfaile</translation>
+        <translation type="unfinished">setca lo stuzi poi lo loi datnyve&apos;i cu se vrejgau ke&apos;a</translation>
     </message>
     <message>
         <source>Autoaccept files</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">zi&apos;o ko samterci&apos;a loi sfaile</translation>
+        <translation type="unfinished">zmiku nu zanru lo loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Set to 0 to disable</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">to disable</translation>
+        <translation type="unfinished">li no lo nu tolakti</translation>
     </message>
     <message>
         <source>Your status is changed to Away after set period of inactivity.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo do tcini cu se galfi lo nu Away ba lo nu na akti</translation>
+        <translation type="unfinished">lo do tcini cu binxo lo ka to&apos;o ba lo nu do na akti lo se detri temci</translation>
     </message>
     <message>
         <source>Auto away after (0 to disable):</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">gafygau to&apos;e darno ba (0 to&apos;e akti):</translation>
+        <translation type="unfinished">zmiku nu binxo lo ka to&apos;o ba (li no lo nu tolakti):</translation>
     </message>
     <message>
         <source>Show contacts&apos; status changes</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko viska ca lo nu lo tcidu tcini be lo pendo cu galfi</translation>
+        <translation type="unfinished">jarco lo nu lo jikca tcini cu binxo</translation>
     </message>
     <message>
         <source>Start qTox on operating system startup (current profile).</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cfari la&apos;o gy.qTox.gy. lo nu samcfa&apos;a cu cfari</translation>
+        <translation type="unfinished">cfari la&apos;oi qTox ca lo nu lo samciste cu cfari (lo ca prufile)</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">:uecai</translation>
+        <translation type="unfinished">fadni stuzi be lo nu vrejgau lo loi datnyve&apos;i:</translation>
     </message>
     <message>
         <source>Check for updates</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jundi tu&apos;a lo za&apos;u nuzba</translation>
+        <translation type="unfinished">sisku lo nu cnino verzi</translation>
     </message>
     <message>
         <source>Spell checking</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">menu item title</translation>
+        <translation type="unfinished">nu gundi lo lerfu ciske</translation>
     </message>
     <message>
         <source>Max autoaccept file size (0 to disable):</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo&apos;e makfa selcmi lo nu samterci&apos;egau lo sfaile lo ka barda (no mu&apos;i lo nu samterci&apos;egau):</translation>
+        <translation type="unfinished">lo traji nilcla be lo loi datnyve&apos;i poi zmiku nu zanru (li no lo nu tolakti):</translation>
     </message>
     <message>
         <source> MB</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished"> MB</translation>
     </message>
     <message>
         <source>After pressing minimize (_) qTox will minimize to tray,
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ba lo nu basti co cmarai () qTox ba cmarai cmarai lo fasnu
-e&apos;u nai lo ciste taskbar</translation>
+        <translation type="unfinished">ba lo nu catke lo nu cmara&apos;i (_) la&apos;oi qTox ba cmara&apos;i vi lo ciste samtci stuzi
+.i na cmara&apos;i vi lo ciste tanxe</translation>
     </message>
     <message>
         <source>After pressing close (X) qTox will close to tray,
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ba lo nu ga&apos;orgau ga&apos;o ganlo me la&apos;o gy.X.gy. qTox. ba jibni lo fasnu
-mu&apos;i nai lo nu mulno ganlo</translation>
+        <translation type="unfinished">ba lo nu catke lo nu ganlo (X) la&apos;oi qTox ba ganlo vi lo ciste samtci stuzi
+.i na ganlo ro da</translation>
     </message>
     <message>
         <source>Add a chat message when a user joins or leaves a conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jmina lo casnu notci ca lo nu pilno klama gi&apos;o cliva lo nu cunso</translation>
+        <translation type="unfinished">jmina lo casnu notci ca lo nu lo pilno cu cmibi&apos;o ja cliva lo nungirzu</translation>
     </message>
     <message>
         <source>You can set this on a per-friend basis by right clicking individual friends.</source>
         <comment>autoaccept cb tooltip</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">do ka&apos;e terzu&apos;e da bi&apos;unai lo pritu klika lo pendo</translation>
+        <translation type="unfinished">do kakne lo nu setca ti lo pendo pa&apos;i pa ca lo nu pritu klika lo pendo</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko ti klika fau lo nu do facki lo selfanva be do vau gi&apos;e djica lo nu sidju lo cikre</translation>
+        <translation type="unfinished">ko klika ti fau lo nu do facki lo nabmi be lo nu fanva gi&apos;e djica lo nu sidju lo nu cikre</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ko sidju lo ka fanva</translation>
     </message>
     <message>
         <source> min</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished"> mentu be li</translation>
+        <translation type="unfinished"> mentu</translation>
     </message>
 </context>
 <context>
     <name>GenericChatForm</name>
     <message>
         <source>Send message</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">benji lo notci</translation>
     </message>
     <message>
         <source>Smileys</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lu cisma</translation>
+        <translation type="unfinished">loi cinmo pixra</translation>
     </message>
     <message>
         <source>Send file(s)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">benji lo sfaile</translation>
+        <translation type="unfinished">benji lo loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Send a screenshot</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko benji lo samcpana kacma</translation>
+        <translation type="unfinished">benji lo vidni pixra</translation>
     </message>
     <message>
         <source>Save chat log</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko salci lo xotli casnu</translation>
+        <translation type="unfinished">vrejgau lo casnu vreji</translation>
     </message>
     <message>
         <source>Clear displayed messages</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko ciska lo se viska notci</translation>
+        <translation type="unfinished">vimcu lo loi se jarco notci</translation>
     </message>
     <message>
         <source>Quote selected text</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ReplyForward</translation>
+        <translation type="unfinished">sitna lo se cuxna lerseltcidu</translation>
     </message>
     <message>
         <source>Copy link address</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko koppi lo judri</translation>
+        <translation type="unfinished">fukpi lo judri</translation>
     </message>
     <message>
         <source>Confirmation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ju&apos;ipei</translation>
+        <translation type="unfinished">nu birti</translation>
     </message>
     <message>
         <source>Search in text</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">sisku tu&apos;a lo lerseltcidu</translation>
+        <translation type="unfinished">sisku vi lo lerseltcidu</translation>
     </message>
     <message>
         <source>Go to current date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko klama lo ca&apos;o nunzvati detri</translation>
+        <translation type="unfinished">klama lo ca detri</translation>
     </message>
     <message>
         <source>Load chat history...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">kibycpa lo casnu citri</translation>
+        <translation type="unfinished">nerkla lo casnu citri...</translation>
     </message>
     <message>
         <source>Export to file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">benji lo sfaile</translation>
+        <translation type="unfinished">benji lo datnyve&apos;i</translation>
     </message>
     <message>
         <source>Are you sure that you want to clear all displayed messages?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">xu do birti lo du&apos;u do djica lo ka vimcu ro se viska notci</translation>
+        <translation type="unfinished">xu do birti lo nu do djica lo nu vimcu ro loi se jarco notci</translation>
     </message>
 </context>
 <context>
     <name>IdentitySettings</name>
     <message>
         <source>Public Information</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">samtci datni</translation>
+        <translation type="unfinished">gubni datni</translation>
     </message>
     <message>
         <source>Tox ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">me la toks. ID</translation>
+        <translation type="unfinished">la&apos;oi Tox judri</translation>
     </message>
     <message>
         <source>Your Tox ID (click to copy)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">samselcmi fi do la toks. bei (klika tezu&apos;e lo nu fukpi)</translation>
+        <translation type="unfinished">lo do la&apos;oi Tox judri (ko klika lo nu fukpi)</translation>
     </message>
     <message>
         <source>Profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Profile</translation>
+        <translation type="unfinished">prufile</translation>
     </message>
     <message>
         <source>Rename profile.</source>
         <comment>tooltip for renaming profile button</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cmene lo fanva</translation>
+        <translation type="unfinished">refcmene lo prufile</translation>
     </message>
     <message>
         <source>Go back to the login screen</source>
         <comment>tooltip for logout button</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko se&apos;ixru lo nenri samtci</translation>
+        <translation type="unfinished">xru lo nu nerkla papri</translation>
     </message>
     <message>
         <source>Logout</source>
         <comment>import profile button</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">logout</translation>
+        <translation type="unfinished">nu co&apos;u jikca</translation>
     </message>
     <message>
         <source>Remove password</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vimcu lo japyvla</translation>
+        <translation type="unfinished">vimcu lo mipyvla</translation>
     </message>
     <message>
         <source>Change password</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">galfi lo japyvla</translation>
+        <translation type="unfinished">galfi lo mipyvla</translation>
     </message>
     <message>
         <source>This QR code contains your Tox ID. You may share this with your friends as well.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo vi QR kodji cu se cmima lo do .toks. me la&apos;o do pendo ji&apos;a</translation>
+        <translation type="unfinished">lo vi QR kodji cu se cmima lo do la&apos;oi Tox judri .i do kakne lo nu snatci ti lo do loi pendo</translation>
     </message>
     <message>
         <source>Save image</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">file-action</translation>
+        <translation type="unfinished">vrejgau lo pixra</translation>
     </message>
     <message>
         <source>Copy image</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko koppi lo pixra</translation>
+        <translation type="unfinished">fukpi lo pixra</translation>
     </message>
     <message>
         <source>Rename</source>
         <comment>rename profile button</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cmene</translation>
+        <translation type="unfinished">refcmene</translation>
     </message>
     <message>
         <source>Delete profile.</source>
         <comment>delete profile button tooltip</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vimcu lo fanva</translation>
+        <translation type="unfinished">vimcu lo prufile</translation>
     </message>
     <message>
         <source>Allows you to export your Tox profile to a file.
 Profile does not contain your history.</source>
         <comment>tooltip for profile exporting button</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko curmi lo nu benji lo do .toks. xrula lo sfaile
-lo tcima cu na cmima lo do citri</translation>
+        <translation type="unfinished">curmi lo nu benji lo do la&apos;oi Tox prufile lo datnyve&apos;i .i lo prufile na se cmima lo do citri</translation>
     </message>
     <message>
         <source>Export</source>
         <comment>export profile button</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">gasnu</translation>
+        <translation type="unfinished">benji</translation>
     </message>
     <message>
         <source>Delete</source>
         <comment>delete profile button</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">vimcu</translation>
     </message>
     <message>
         <source>Remove your password and encryption from your profile.</source>
         <comment>Tooltip for the `Remove password` button.</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko vimcu lo do japyvla gi&apos;e benji lo do samymri&apos;a</translation>
+        <translation type="unfinished">vimcu lo do mipyvla gi&apos;e tolakti lo nu mipri be lo do prufile</translation>
     </message>
     <message>
         <source>Name input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">le cmene be inverse</translation>
+        <translation type="unfinished">nu ciska lo cmene</translation>
     </message>
     <message>
         <source>Name visible to contacts</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">me&apos;e viska lo cmene be lo cmene</translation>
+        <translation type="unfinished">cmene poi lo loi jikca cu kakne lo ka viska ke&apos;a</translation>
     </message>
     <message>
         <source>Status message input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">tab-style</translation>
+        <translation type="unfinished">nu ciska lo tcini notci</translation>
     </message>
     <message>
         <source>Your Tox ID</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">samselpla do .toks.</translation>
+        <translation type="unfinished">lo do la&apos;oi Tox judri</translation>
     </message>
     <message>
         <source>Save QR image as file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">bolci lo me la .QR. mynd ku simsa lo ka sfaile</translation>
+        <translation type="unfinished">vrejgau lo QR pixra lo datnyve&apos;i</translation>
     </message>
     <message>
         <source>Copy QR image to clipboard</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">edit-action</translation>
+        <translation type="unfinished">fukpi lo QR pixra</translation>
     </message>
     <message>
         <source>Rename profile.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cmene lo fanva</translation>
+        <translation type="unfinished">refcmene lo prufile</translation>
     </message>
     <message>
         <source>Delete profile.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vimcu lo fanva</translation>
+        <translation type="unfinished">vimcu lo prufile</translation>
     </message>
     <message>
         <source>Export profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">benji lo craftu</translation>
+        <translation type="unfinished">benji lo prufile</translation>
     </message>
     <message>
         <source>Remove password from profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vimcu lo japyvla fi lo profli</translation>
+        <translation type="unfinished">vimcu lo mipyvla fi lo prufile</translation>
     </message>
     <message>
         <source>Change profile password</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">galfi lo nu japyvla seljapyvla</translation>
+        <translation type="unfinished">galfi lo mipyvla be lo prufile</translation>
     </message>
     <message>
         <source>My name:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">mi cmene:</translation>
     </message>
     <message>
         <source>My status:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">tcini be mi:</translation>
     </message>
     <message>
         <source>My profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo mi profila</translation>
+        <translation type="unfinished">lo mi prufile</translation>
     </message>
     <message>
         <source>This ID allows other Tox users to add and contact you.
 Share it with your friends to begin chatting.</source>
         <comment>Tox ID tooltip</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ti poi samselcmi cu curmi lo nu drata samselcmi gi&apos;e penmi do
-ko tavla lo do pendo ko lo nu co&apos;a casnu</translation>
+ko snatci lo do pendo ko lo nu co&apos;a casnu</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
@@ -1786,341 +1489,276 @@ ko tavla lo do pendo ko lo nu co&apos;a casnu</translation>
     <name>LoadHistoryDialog</name>
     <message>
         <source>Load history dialog</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">documents-action</translation>
+        <translation type="unfinished">lo nu nerkla lo citri canko</translation>
     </message>
     <message>
         <source>Load history from:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">kibycpa tu&apos;a lo citri</translation>
+        <translation type="unfinished">nerkla lo citri fi: </translation>
     </message>
 </context>
 <context>
     <name>LoginScreen</name>
     <message>
         <source>Username:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">cmene:</translation>
+        <translation type="unfinished">lo plicme:</translation>
     </message>
     <message>
         <source>Password:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla:</translation>
+        <translation type="unfinished">lo mipyvla:</translation>
     </message>
     <message>
         <source>Confirm:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jetnu:</translation>
+        <translation type="unfinished">nu birti:</translation>
     </message>
     <message>
         <source>Password strength: %p%</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Password strength</translation>
+        <translation type="unfinished">le ni lo mipyvla cu tsali: %p%</translation>
     </message>
     <message>
         <source>Create Profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko finti lo benji</translation>
+        <translation type="unfinished">finti lo prufile</translation>
     </message>
     <message>
         <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jaginai lo samseltci na ponse lo japyvla kei la .qTox. ka&apos;e sfeti lo nu samselcmi vidnyvelvei</translation>
+        <translation type="unfinished">fau lo nu lo prufile na se mipyvla kei la&apos;oi qTox kakne lo nu na nerkla</translation>
     </message>
     <message>
         <source>Load automatically</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">samterci&apos;egau</translation>
+        <translation type="unfinished">zmiku nu nerkla</translation>
     </message>
     <message>
         <source>Load</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">kibycpa</translation>
+        <translation type="unfinished">nerkla</translation>
     </message>
     <message>
         <source>Load Profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">cfila lo nu samterci&apos;egau</translation>
+        <translation type="unfinished">nerkla lo prufile</translation>
     </message>
     <message>
         <source>New Profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">cnino benji</translation>
+        <translation type="unfinished">cnino prufile</translation>
     </message>
     <message>
         <source>Couldn&apos;t create a new profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko na kakne lo nu finti lo cnino profila</translation>
+        <translation type="unfinished">fliba lo nu finti lo cnino prufile</translation>
     </message>
     <message>
         <source>The username must not be empty.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo cmene cmene na bilga lo nu kunti</translation>
+        <translation type="unfinished">lo plicme na bilga lo nu kunti</translation>
     </message>
     <message>
         <source>The password must be at least 6 characters long.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla bilga lo nu ze&apos;a xa lerfu</translation>
+        <translation type="unfinished">lo mipyvla na bilga lo nu nilcla lo lerfu be li xa ja zmadu</translation>
     </message>
     <message>
         <source>A profile with this name already exists.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo xrani poi ke&apos;a se cmene cu xa&apos;o zasti</translation>
+        <translation type="unfinished">lo prufile poi se cmene ti cu xa&apos;o zasti</translation>
     </message>
     <message>
         <source>Password protected profiles can&apos;t be automatically loaded.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo japyvla cu ckaji lo ka sarji tu&apos;a lo samymi&apos;e ku na ka&apos;e samterci&apos;egau</translation>
+        <translation type="unfinished">lo loi prufile poi se mipyvla cu na kakne lo nu zmiku nu nerkla</translation>
     </message>
     <message>
         <source>There is no selected profile.
 
 You may want to create one.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">no da se cuxna lo crafta
+        <translation type="unfinished">no da prufile poi se cuxna ke&apos;a
 
-.e&apos;a do finti pa</translation>
+.i do cumki lo nu djica lo nu finti pa</translation>
     </message>
     <message>
         <source>Couldn&apos;t load this profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%s: bu cpedu lo nu samterci&apos;egau</translation>
+        <translation type="unfinished">fliba lo nu nerkla lo vi prufile</translation>
     </message>
     <message>
         <source>This profile is already in use.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo vi profila ca&apos;o pilno</translation>
+        <translation type="unfinished">lo vi prufile cu ca&apos;o se pilno</translation>
     </message>
     <message>
         <source>Wrong password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla</translation>
+        <translation type="unfinished">naldra mipyvla</translation>
     </message>
     <message>
         <source>Import</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nu jamna</translation>
+        <translation type="unfinished">nerjmina</translation>
     </message>
     <message>
         <source>Username input field</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo cmene be lo&apos;i cmene be lo&apos;i cmene selcu&apos;e</translation>
+        <translation type="unfinished">plicme nerkla stuzi</translation>
     </message>
     <message>
         <source>Password input field, you can leave it empty (no password), or type at least 6 characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla seltcidu gi do kakne lo nu nalxa&apos;a</translation>
+        <translation type="unfinished">mipyvla nerkla stuzi .i do kakne lo nu kunti ti (no mipyvla) ja lo nu ciska lo lerfu be li xa ja zmadu</translation>
     </message>
     <message>
         <source>Password confirmation field</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla jarco</translation>
+        <translation type="unfinished">mipyvla nu birti stuzi</translation>
     </message>
     <message>
         <source>Create a new profile button</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko finti lo cnino crafta batke</translation>
+        <translation type="unfinished">finti lo cnino prufile batke</translation>
     </message>
     <message>
         <source>Profile list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nunjymu&apos;e liste</translation>
+        <translation type="unfinished">loi prufile liste</translation>
     </message>
     <message>
         <source>List of profiles</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo liste be loi samtci</translation>
+        <translation type="unfinished">loi prufile liste</translation>
     </message>
     <message>
         <source>Password input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla seltcidu</translation>
+        <translation type="unfinished">mipyvla nerkla</translation>
     </message>
     <message>
         <source>Load automatically checkbox</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">checkbox</translation>
+        <translation type="unfinished">zmiku nu nerkla nu cuxna</translation>
     </message>
     <message>
         <source>Import profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nilymri lo craftu</translation>
+        <translation type="unfinished">nerjmina lo prufile</translation>
     </message>
     <message>
         <source>Load selected profile button</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">verb in a column header displaying group names</translation>
+        <translation type="unfinished">nerkla lo se cuxna prufile batke</translation>
     </message>
     <message>
         <source>New profile creation page</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo ka zbasu lo cnino benji pagbu</translation>
+        <translation type="unfinished">finti lo cnino prufile papri</translation>
     </message>
     <message>
         <source>Loading existing profile page</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">user profileSpanish</translation>
+        <translation type="unfinished">nerkla lo zasti prufile papri</translation>
     </message>
     <message>
         <source>The passwords you&apos;ve entered are different.
 Please make sure to enter the same password twice.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo valsi poi do pu nerkla ke&apos;a cu drata
-.e&apos;o ko birti lo du&apos;u do nerkla lo mintu japyvla re roi</translation>
+        <translation type="unfinished">lo loi mipyvla poi do pu ciska ke&apos;a cu frica .i .e&apos;o ko birti lo nu do ciska lo mintu mipyvla re roi</translation>
     </message>
     <message>
         <source>This optional password is used to encrypt local message data and your profile.
 If you lose this password, there is no way to recover it.
 Press Shift+F1 for more information.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo se cuxna japyvla cu se pilno lo nu benji lo te tcidu datni .e lo do perfil
-ganai do cirko lo vi japyvla gi na&apos;e cumki fi lo ka rinka
-ko danre la bastyfygau+F1 tezu&apos;e lo ka datni zenba</translation>
+        <translation type="unfinished">lo vi se cuxna mipyvla cu se pilno lo nu mipri lo loi vi notci datni .e lo do prufile .i fau lo nu do cirko lo vi mipyvla kei no da ka&apos;e rinka lo nu tolyzu&apos;e ri .i ko catke lo me .Shift.+F1 lo nu zenba lo datni</translation>
     </message>
     <message>
         <source>The password you enter here is optional and encrypts message data and your Tox secret key. It does not encrypt files received. Your profile data is never sent to any servers. This is not a remote login, it&apos;s local to your computer only. qTox developers won&apos;t be able to recover your password if lost.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo japyvla poi do vi punji ke&apos;a cu tercu&apos;i gi&apos;e zifre lo notci datni .e lo do samselmipri ckiku pe la .toks. na benji lo sfaile poi selbenji lo do seltcidu cu noroi benji fi su&apos;o seltcidu ti na darno selcmene gi&apos;e diklo lo do skami po&apos;o la .qTox. fau lo nu fau lo nu fau lo nu fau lo nu fau lo nu fau lo nu fau lo nu facki lo japyvla na ka&apos;e rinka</translation>
+        <translation type="unfinished">lo mipyvla poi do ciska ke&apos;a vi cu se cuxna gi&apos;e mipri lo loi notci datni .e lo do la&apos;oi Tox mipri ckiku .i na mipri lo loi se cpacu datnyve&apos;i .i lo do prufile datni cu noroi se benji lo loi samselcmi .i ti na nu darno nerkla .i ti ne&apos;i lo do skami po&apos;o .i lo loi finti be la&apos;oi qTox na kakne lo nu tolyzu&apos;e lo do mipyvla fau lo nu do cirko ri</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
-        <translation type="unfinished">japyvla seltce gi&apos;e xa lerfu clani</translation>
+        <translation type="unfinished">mipyvla nerkla stuzi poi nilcla lo lerfu be li xa ja zmadu</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>Your name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">do cmene</translation>
     </message>
     <message>
         <source>Your status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">do niltca</translation>
+        <translation type="unfinished">do tcini</translation>
     </message>
     <message>
         <source>Create a conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko finti</translation>
+        <translation type="unfinished">finti lo nungirzu</translation>
     </message>
     <message>
         <source>View completed file transfers</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko viska lo mulgau sfailselgau</translation>
+        <translation type="unfinished">jarco lo loi mulno datnyve&apos;i benji</translation>
     </message>
     <message>
         <source>Change your settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">galfi lo do selcu&apos;e</translation>
+        <translation type="unfinished">galfi lo do tercu&apos;e</translation>
     </message>
     <message>
         <source>Close</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ga&apos;orgau</translation>
+        <translation type="unfinished">ganlo</translation>
     </message>
     <message>
         <source>Open profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo craftu</translation>
+        <translation type="unfinished">kalri lo prufile</translation>
     </message>
     <message>
         <source>Open profile page when clicked</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo crafta pagbu ca lo nu kliki</translation>
+        <translation type="unfinished">kalri lo prufile papri ca lo nu klika</translation>
     </message>
     <message>
         <source>Status message input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">tab-style</translation>
+        <translation type="unfinished">nu ciska lo tcini notci</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko setca lo se ctuca be do noi ba jarco lo drata</translation>
+        <translation type="unfinished">setca lo do tcini notci poi ba se jarco lo drata</translation>
     </message>
     <message>
         <source>Status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">kadni</translation>
+        <translation type="unfinished">tcini</translation>
     </message>
     <message>
         <source>Set availability status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Disponibi seltcu</translation>
+        <translation type="unfinished">setca lo ka zvati tcini</translation>
     </message>
     <message>
         <source>Contact search</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko samtci</translation>
+        <translation type="unfinished">nu sisku lo loi jikca</translation>
     </message>
     <message>
         <source>Contact search input for known friends</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko penmi lo nu sisku lo nu sisku lo misno pendo</translation>
+        <translation type="unfinished">jikca nu sisku nerkla be lo loi djuno pendo</translation>
     </message>
     <message>
         <source>Sorting and visibility</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">porsi je se viska</translation>
+        <translation type="unfinished">nu porsi e lo ka se viska</translation>
     </message>
     <message>
         <source>Set friends sorting and visibility</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko tercikre lo ka mitce je lo ka viska kei lo pendo</translation>
+        <translation type="unfinished">setca lo loi pendo nu porsi e lo ka se viska</translation>
     </message>
     <message>
         <source>Open Add friends page</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo pendo pagbu</translation>
+        <translation type="unfinished">kalri lo nu jmina lo pendo papri</translation>
     </message>
     <message>
         <source>Conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nunvilnu</translation>
+        <translation type="unfinished">nungirzu</translation>
     </message>
     <message>
         <source>Open conference management page</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko kargau lo nu jikca jitro pagbu</translation>
+        <translation type="unfinished">kalri lo nungirzu jitro papri</translation>
     </message>
     <message>
         <source>File transfers history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu sfaile troci citri</translation>
+        <translation type="unfinished">lo loi datnyve&apos;i benji citri</translation>
     </message>
     <message>
         <source>Open File transfers history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo citri be lo sfaile troci</translation>
+        <translation type="unfinished">kalri lo loi datnyve&apos;i benji citri</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">selcu&apos;e</translation>
+        <translation type="unfinished">tercu&apos;e</translation>
     </message>
     <message>
         <source>Open Settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">gau ko kalri selcu&apos;a</translation>
+        <translation type="unfinished">kalri lo loi tercu&apos;e</translation>
     </message>
     <message>
         <source>Open internal debugging tools</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">@ info</translation>
+        <translation type="unfinished">kalri lo loi nenri nunfagau tutci</translation>
     </message>
     <message>
         <source>Debug</source>
-        <translation type="unfinished">nuncfagau</translation>
+        <translation type="unfinished">nunfagau</translation>
     </message>
     <message>
         <source>Open Debugger</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo samcfa pe&apos;a</translation>
+        <translation type="unfinished">kalri lo nunfagau vreji</translation>
     </message>
     <message>
         <source>Add friend</source>
-        <translation type="unfinished">jmina pendo</translation>
+        <translation type="unfinished">jmina lo pendo</translation>
     </message>
 </context>
 <context>
@@ -2128,39 +1766,39 @@ ko danre la bastyfygau+F1 tezu&apos;e lo ka datni zenba</translation>
     <message>
         <source>Executable file</source>
         <comment>popup title</comment>
-        <translation type="unfinished">samterci&apos;egau sfaile</translation>
+        <translation type="unfinished">samru&apos;e datnyve&apos;i</translation>
     </message>
     <message>
         <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">do cpedu lo nu la .qTox. cu kargau lo ka samterci&apos;egau sfaile lo ka se jitro ka&apos;e xrani lo do skami xu do birti lo nu kargau ti noi sfaile</translation>
+        <translation type="unfinished">do pu cpedu lo nu la&apos;oi qTox cu kalri lo samru&apos;e datnyve&apos;i .i lo loi samru&apos;e datnyve&apos;i cu cumki lo nu xrani lo do skami .i xu do birti lo nu djica lo nu kalri ti poi datnyve&apos;i</translation>
     </message>
 </context>
 <context>
     <name>NetCamView</name>
     <message>
         <source>Tox video</source>
-        <translation type="unfinished">samxa&apos;i vidni</translation>
+        <translation type="unfinished">la&apos;oi Tox vidni</translation>
     </message>
     <message>
         <source>Full Screen</source>
-        <translation type="unfinished">culno vidni</translation>
+        <translation type="unfinished">le culno vidni</translation>
     </message>
     <message>
         <source>Toggle video preview</source>
-        <translation type="unfinished">comma</translation>
+        <translation type="unfinished">ca&apos;arcau lo vidni vitke</translation>
     </message>
     <message>
         <source>Mute audio</source>
-        <translation type="unfinished">sazgau lo sance</translation>
+        <translation type="unfinished">smaji lo sance</translation>
     </message>
     <message>
         <source>Mute microphone</source>
-        <translation type="unfinished">smaji mikrofonxa</translation>
+        <translation type="unfinished">smaji lo snatci</translation>
     </message>
     <message>
         <source>End video call</source>
-        <translation type="unfinished">ko sisti lo vidni fonxa</translation>
+        <translation type="unfinished">sisti lo vidni fonjorne</translation>
     </message>
     <message>
         <source>Exit full screen</source>
@@ -2168,13 +1806,11 @@ ko danre la bastyfygau+F1 tezu&apos;e lo ka datni zenba</translation>
     </message>
     <message>
         <source>Hide messages</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">mipri lo se notci</translation>
+        <translation type="unfinished">mipri lo loi notci</translation>
     </message>
     <message>
         <source>Show messages</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jarco lo notci</translation>
+        <translation type="unfinished">jarco lo loi notci</translation>
     </message>
 </context>
 <context>
@@ -2182,45 +1818,38 @@ ko danre la bastyfygau+F1 tezu&apos;e lo ka datni zenba</translation>
     <message>
         <source>View</source>
         <comment>macOS Menu bar</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">catlu</translation>
+        <translation type="unfinished">nu jarco</translation>
     </message>
     <message>
         <source>Window</source>
         <comment>macOS Menu bar</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">canko</translation>
+        <translation type="unfinished">loi canko</translation>
     </message>
     <message>
         <source>Minimize</source>
         <comment>macOS Menu bar</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jdika</translation>
+        <translation type="unfinished">cmara&apos;i</translation>
     </message>
     <message>
         <source>Bring All to Front</source>
         <comment>macOS Menu bar</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko bevri ro da</translation>
+        <translation type="unfinished">bevri ro da vi lo crane</translation>
     </message>
     <message>
         <source>Exit Full Screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">cliva lo culno vidni</translation>
     </message>
     <message>
         <source>Enter Full Screen</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko setca lo culno vidni</translation>
+        <translation type="unfinished">nerkla lo culno vidni</translation>
     </message>
 </context>
 <context>
     <name>NotificationEdgeWidget</name>
     <message numerus="yes">
         <source>Unread message(s)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform>nalseltcidu notci</numerusform>
+            <numerusform>loi nalseltcidu notci</numerusform>
         </translation>
     </message>
 </context>
@@ -2228,43 +1857,39 @@ ko danre la bastyfygau+F1 tezu&apos;e lo ka datni zenba</translation>
     <name>NotificationGenerator</name>
     <message>
         <source>New message</source>
-        <translation type="unfinished">notci notci</translation>
+        <translation type="unfinished">cnino notci</translation>
     </message>
     <message>
         <source>New conference message</source>
-        <translation type="unfinished">cnino nunfermi notci</translation>
+        <translation type="unfinished">cnino nungirzu notci</translation>
     </message>
     <message>
         <source>Incoming file transfer</source>
-        <translation type="unfinished">nu sfaile troci</translation>
+        <translation type="unfinished">lo nu nerkla datnyve&apos;i benji</translation>
     </message>
     <message>
         <source>%1 - file transfer</source>
         <extracomment>e.g. Bob - file transfer</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 - file transfer</translation>
+        <translation type="unfinished">%1 - nu benji lo datnyve&apos;i</translation>
     </message>
     <message>
         <source>Conference invite received</source>
-        <translation type="unfinished">nu selvi&apos;e</translation>
+        <translation type="unfinished">nu cpacu lo nungirzu vitcpe</translation>
     </message>
     <message>
         <source>%1 invites you to join a conference.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1. do vi&apos;ecpe lo nu kansa</translation>
+        <translation type="unfinished">la&apos;oi %1 cu vitcpe do lo nu cmibi&apos;o lo nungirzu</translation>
     </message>
     <message>
         <source>Friend request received</source>
-        <translation type="unfinished">lo pendo cpedu be fi&apos;o cpacu</translation>
+        <translation type="unfinished">nu cpacu lo nu cpedu lo nu pendo</translation>
     </message>
     <message>
         <source>Friend request received from %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fe lo pendo cpedu be fi la %1</translation>
+        <translation type="unfinished">nu cpacu lo nu cpedu lo nu pendo fi la&apos;oi %1</translation>
     </message>
     <message>
         <source>Incoming call</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">lo nu te cmene fonjorne</translation>
     </message>
 </context>
@@ -2272,25 +1897,21 @@ ko danre la bastyfygau+F1 tezu&apos;e lo ka datni zenba</translation>
     <name>PasswordEdit</name>
     <message>
         <source>Caps-lock enabled</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Caps-lock akti</translation>
+        <translation type="unfinished">lo barda lerfu nu jorgau cu akti</translation>
     </message>
 </context>
 <context>
     <name>PrivacyForm</name>
     <message>
         <source>Privacy</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ne&apos;i</translation>
+        <translation type="unfinished">lo sivni</translation>
     </message>
     <message>
         <source>Confirmation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ju&apos;ipei</translation>
+        <translation type="unfinished">nu jengau</translation>
     </message>
     <message>
         <source>Do you want to permanently delete all chat history?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">xu do djica lo nu ze&apos;e vimcu lo ro casnu citri</translation>
     </message>
 </context>
@@ -2299,316 +1920,257 @@ ko danre la bastyfygau+F1 tezu&apos;e lo ka datni zenba</translation>
     <message>
         <source>Your friends will be able to see when you are typing.</source>
         <comment>tooltip for typing notifications setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo do pendo ba kakne lo ka viska ca lo nu do ciska</translation>
+        <translation type="unfinished">lo do loi pendo ba kakne lo ka viska ca lo nu do ciska</translation>
     </message>
     <message>
         <source>Send typing notifications</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">benji lo ciska notci</translation>
+        <translation type="unfinished">benji lo nu ciska notci</translation>
     </message>
     <message>
         <source>Keep chat history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko gasnu lo nu casnu citri</translation>
+        <translation type="unfinished">vrejgau lo casnu citri</translation>
     </message>
     <message>
         <source>NoSpam is part of your Tox ID.
 If you are being spammed with friend requests, you should change your NoSpam.
 People will be unable to add you with your old ID, but you will keep your current friends.</source>
         <comment>toolTip for nospam</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la&apos;o zoi gy.NoSpam.gy. cmima lo do zoi gy. toks. ID
-va&apos;o lo nu do se cmila lo pendo kei do bilga lo nu galfi lo do nospam
-lo prenu ba na kakne lo nu jmina do joi lo do laldo ID .i ku&apos;i do ba ralte lo do ca pendo</translation>
+        <translation type="unfinished">la&apos;oi NoSpam pagbu lo do la&apos;oi Tox judri .i fau lo nu do se cpedu lo nu pendo ta&apos;i lo nu cnispa kei do bilga lo nu galfi lo do la&apos;oi NoSpam .i lo loi prenu ba na kakne lo nu jmina do ta&apos;i lo do laldo judri .i ku&apos;i do ba ralte lo ca pendo</translation>
     </message>
     <message>
         <source>NoSpam</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na spam</translation>
+        <translation type="unfinished">la&apos;oi NoSpam</translation>
     </message>
     <message>
         <source>NoSpam is a part of your ID that can be changed at will.
 If you are getting spammed with friend requests, change the NoSpam.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la&apos;o gy.NoSpam.gy. me lo ID pe do poi ka&apos;e se galfi ke&apos;a
-va&apos;o lo nu do se cpedu lo pendo kei do galfi lo nu cnispa</translation>
+        <translation type="unfinished">la&apos;oi NoSpam pagbu lo do judri poi ka&apos;e se galfi .i fau lo nu do se cpedu lo nu pendo ta&apos;i lo nu cnispa kei ko galfi lo do la&apos;oi NoSpam</translation>
     </message>
     <message>
         <source>Generate random NoSpam</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko finti lo cunso nospam</translation>
+        <translation type="unfinished">finti lo cunso la&apos;oi NoSpam</translation>
     </message>
     <message>
         <source>Chat history keeping is still in development.
 Save format changes are possible, which may result in data loss.</source>
         <comment>toolTip for Keep History setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu stogau lo nu casnu citri cu ca&apos;o farvi
-.i lo nu renvi lo tcidu cu ka&apos;e se galfi gi&apos;e se jalge lo nu damgau lo datni</translation>
+        <translation type="unfinished">lo nu vrejgau lo casnu citri cu ca&apos;o farvi .i lo nu binxo be lo nu vrejgau tarmi cu cumki .i la&apos;edi&apos;u ka&apos;e rinka lo nu cirko lo datni</translation>
     </message>
     <message>
         <source>Privacy</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ne&apos;i</translation>
+        <translation type="unfinished">kamsivni</translation>
     </message>
     <message>
         <source>Conference block list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nunvilselkei bliku liste</translation>
+        <translation type="unfinished">loi nungirzu zunti liste</translation>
     </message>
     <message>
         <source>Filter out conference messages by conference members&apos; public keys. Put public keys here, one per line.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko filtro lo nunjungau notci lo nu cunso cunso ckiku ko ti punji lo javni ckiku pe ro lerfu</translation>
+        <translation type="unfinished">filtra lo nungirzu notci ta&apos;i lo loi nungirzu cmima gubni ckiku .i ko punji lo gubni ckiku pa vi ro linji</translation>
     </message>
 </context>
 <context>
     <name>Profile</name>
     <message>
         <source>Failed to derive key from password, the profile won&apos;t use the new password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo nu facki fi lo japyvla cu fliba lo nu facki fi lo ckiku kei lo nu pilno lo cnino japyvla</translation>
+        <translation type="unfinished">.i lo nu cpacu lo ckiku lo mipyvla cu fliba .i lo prufile na ba pilno lo cnino mipyvla</translation>
     </message>
     <message>
         <source>Toxing on qTox</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">la&apos;oi qTox selzu&apos;e</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo datni jupyvla cu na ka&apos;e tikygau lo nu jarco lo datni jupyvla .i ja&apos;a bangu gi&apos;a pilno lo laldo japyvla</translation>
+        <translation type="unfinished">.i lo nu galfi lo mipyvla be lo datnyvau cu fliba .i cumki lo nu spofu ja pilno lo laldo mipyvla</translation>
     </message>
 </context>
 <context>
     <name>ProfileForm</name>
     <message>
         <source>Choose a profile picture</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cuxna lo xrani pixra</translation>
+        <translation type="unfinished">cuxna lo prufile pixra</translation>
     </message>
     <message>
         <source>Error</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">nunsre</translation>
     </message>
     <message>
         <source>Rename &quot;%1&quot;</source>
         <comment>renaming a profile</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cmene la «%1 »</translation>
+        <translation type="unfinished">refcmene la «%1 »</translation>
     </message>
     <message>
         <source>Unable to open this file.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko na ka&apos;e kargau ti noi sfaile</translation>
+        <translation type="unfinished">fliba lo nu kalri lo vi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Current profile: </source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ca&apos;o ni&apos;o ni&apos;o ni&apos;o ni&apos;o ni&apos;o sei casnu be lo nu fukyzifli</translation>
+        <translation type="unfinished">lo ca prufile: </translation>
     </message>
     <message>
         <source>Remove</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vimcu</translation>
+        <translation type="unfinished">nu vimcu</translation>
     </message>
     <message>
         <source>Unable to read this image.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko na kakne lo nu tcidu lo vi pixra</translation>
+        <translation type="unfinished">fliba lo nu tcidu lo vi pixra</translation>
     </message>
     <message>
         <source>The supplied image is too large.
 Please use another image.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">le selcru pixra cu dukse barda
-e&apos;o ko pilno lo drata pixra</translation>
+        <translation type="unfinished">le se be&apos;i pixra cu dukse barda .i ko pilno lo drata pixra</translation>
     </message>
     <message>
         <source>Couldn&apos;t rename the profile to &quot;%1&quot;</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na ka&apos;e renvi lo nu benji lo profila be &quot;%1&quot;</translation>
+        <translation type="unfinished">fliba lo nu refcmene lo prufile la&apos;oi %1</translation>
     </message>
     <message>
         <source>Nothing to remove</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">no da poi nu vimcu</translation>
     </message>
     <message>
         <source>Your profile does not have a password!</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo do gunma cu na ponse lo japyvla</translation>
+        <translation type="unfinished">lo do prufile cu na ponse lo mipyvla</translation>
     </message>
     <message>
         <source>Please enter a new password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.e&apos;o ko setca lo cnino japyvla</translation>
+        <translation type="unfinished">ko ciska lo cnino mipyvla</translation>
     </message>
     <message>
         <source>Are you sure you want to delete this profile?</source>
         <comment>deletion confirmation text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">xu do birti lo ka djica lo ka vimcu ti noi tcima</translation>
+        <translation type="unfinished">xu do birti lo nu vimcu lo vi prufile</translation>
     </message>
     <message>
         <source>Save</source>
         <comment>save qr image</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">file-action</translation>
+        <translation type="unfinished">nu vrejgau</translation>
     </message>
     <message>
         <source>Save QrCode (*.png)</source>
         <comment>save dialog filter</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">QrCode (*.png)</translation>
+        <translation type="unfinished">vrejgau lo QR kodji (*.png)</translation>
     </message>
     <message>
         <source>Files could not be deleted!</source>
         <comment>deletion failed title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo sfaile pu na ka&apos;e vimcu</translation>
+        <translation type="unfinished">fliba lo nu vimcu lo loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Change password</source>
         <comment>button text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">galfi lo japyvla</translation>
+        <translation type="unfinished">nu galfi lo mipyvla</translation>
     </message>
     <message>
         <source>Set profile password</source>
         <comment>button text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla</translation>
+        <translation type="unfinished">nu setca lo mipyvla be lo prufile</translation>
     </message>
     <message>
         <source>Current profile location: %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1</translation>
+        <translation type="unfinished">ca prufile stuzi: %1</translation>
     </message>
     <message>
         <source>Couldn&apos;t change password</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.ie nai ka&apos;e galfi lo japyvla</translation>
+        <translation type="unfinished">na ka&apos;e galfi lo mipyvla</translation>
     </message>
     <message>
         <source>Empty path is unavailable</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo vacri pluta na seltcidu</translation>
+        <translation type="unfinished">lo kunti pluta na seltcidu</translation>
     </message>
     <message>
         <source>Failed to rename</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">lo nu cmene ko&apos;a fliba</translation>
     </message>
     <message>
         <source>Profile already exists</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">lo nu benji cu xa&apos;o zasti</translation>
     </message>
     <message>
         <source>A profile named &quot;%1&quot; already exists.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo cmene be zo &quot;%1&quot; ku xa&apos;o zasti</translation>
+        <translation type="unfinished">lo prufile be me&apos;e la&apos;oi %1 xa&apos;o zasti</translation>
     </message>
     <message>
         <source>Empty name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ledo cmene</translation>
+        <translation type="unfinished">kunti cmene</translation>
     </message>
     <message>
         <source>Empty name is unavailable</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo vacri cmene na seltcidu</translation>
+        <translation type="unfinished">lo kunti cmene na seltcidu</translation>
     </message>
     <message>
         <source>Empty path</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">(Empty path)</translation>
+        <translation type="unfinished">lo kunti pluta</translation>
     </message>
     <message>
         <source>Export profile</source>
         <extracomment>save dialog title</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">benji lo craftu</translation>
+        <translation type="unfinished">benji lo prufile</translation>
     </message>
     <message>
         <source>Tox save file (*.tox)</source>
         <extracomment>save dialog filter</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">save file (*.tox)</translation>
+        <translation type="unfinished">lo la&apos;oi Tox vrejgau datnyve&apos;i (*.tox)</translation>
     </message>
     <message>
         <source>The following files could not be deleted:</source>
         <extracomment>deletion failed text part 1</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo se jdima be le za&apos;u sfaile pu na ka&apos;e vimcu</translation>
+        <translation type="unfinished">.i lo se jdima be le za&apos;u datnyve&apos;i pu na ka&apos;e vimcu</translation>
     </message>
     <message>
         <source>Please manually remove them.</source>
         <extracomment>deletion failed text part 2</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">e&apos;o do xance vimcu za&apos;u ra</translation>
     </message>
     <message>
         <source>Images (%1)</source>
         <comment>filetype filter</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">pixra (%1)</translation>
     </message>
     <message>
         <source>Failed to save file</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu stogau lo sfaile ku fliba</translation>
+        <translation type="unfinished">lo nu stogau lo datnyve&apos;i ku fliba</translation>
     </message>
     <message>
         <source>The file you chose could not be saved.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo sfaile poi do cuxna pu na ka&apos;e se rejgau</translation>
+        <translation type="unfinished">.i lo datnyve&apos;i poi do cuxna pu na ka&apos;e se vrejgau</translation>
     </message>
     <message>
         <source>Empty path is unavailable.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo vacri pluta na ka&apos;e se pluta</translation>
+        <translation type="unfinished">lo kunti pluta na ka&apos;e se pluta</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo datni jupyvla cu na ka&apos;e tikygau lo nu jarco lo datni jupyvla .i ja&apos;a bangu gi&apos;a pilno lo laldo japyvla</translation>
+        <translation type="unfinished">.i lo nu galfi lo mipyvla be lo datnyvau cu fliba .i cumki lo nu spofu ja pilno lo laldo mipyvla</translation>
     </message>
     <message>
         <source>Tox user names cannot exceed %1 characters.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">zoi gy. toks. cmene gy. na kakne lo nu zmadu lo%1 te ckule</translation>
+        <translation type="unfinished">lo la&apos;oi Tox cmene na kakne lo nu zmadu lo %1 lerfu</translation>
     </message>
     <message>
         <source>Delete profile</source>
         <comment>deletion confirmation title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vimcu lo crafta</translation>
+        <translation type="unfinished">vimcu lo prufile</translation>
     </message>
     <message>
         <source>Remove password</source>
         <comment>deletion confirmation title</comment>
-        <translation type="unfinished">vimcu lo japyvla</translation>
+        <translation type="unfinished">vimcu lo mipyvla</translation>
     </message>
     <message>
         <source>Are you sure you want to remove your password?</source>
         <extracomment>deletion confirmation text</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">xu do birti lo nu vimcu lo do japyvla</translation>
+        <translation type="unfinished">xu do birti lo nu vimcu lo do mipyvla</translation>
     </message>
     <message>
         <source>This ID allows other Tox users to add and contact you.
 Share it with your friends to begin chatting.
 
 This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ti poi samselcmi cu curmi lo nu drata samselcmi gi&apos;e penmi do
-ko tavla lo do pendo ko lo nu co&apos;a casnu
+ko snatci lo do pendo ko lo nu co&apos;a casnu
 
-le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray</translation>
+.i le samselcmi cu se cmima la&apos;oi NoSpam poi blanu .e le kanrsumji poi grusi</translation>
     </message>
 </context>
 <context>
@@ -2616,86 +2178,72 @@ le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray<
     <message>
         <source>Import profile</source>
         <comment>import dialog title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nilymri lo craftu</translation>
+        <translation type="unfinished">nerjmina lo prufile</translation>
     </message>
     <message>
         <source>Tox save file (*.tox)</source>
         <comment>import dialog filter</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">save file (*.tox)</translation>
+        <translation type="unfinished">lo la&apos;oi Tox vrejgau datnyve&apos;i (*.tox)</translation>
     </message>
     <message>
         <source>Ignoring non-Tox file</source>
         <comment>popup title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na jundi lo nu na&apos;e samtci sfaile</translation>
+        <translation type="unfinished">tolju&apos;i lo na la&apos;oi Tox datnyve&apos;i</translation>
     </message>
     <message>
         <source>Warning: You have chosen a file that is not a Tox save file; ignoring.</source>
         <comment>popup text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">kajde .i do pu cuxna lo sfaile poi na du la toks. sfaile tolju&apos;i</translation>
+        <translation type="unfinished">nunkajde: do pu cuxna lo datnyve&apos;i poi na du lo la&apos;oi Tox vrejgau datnyve&apos;i .i tolju&apos;i ri</translation>
     </message>
     <message>
         <source>Profile already exists</source>
         <comment>import confirm title</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu benji cu xa&apos;o zasti</translation>
+        <translation type="unfinished">lo prufile cu xa&apos;o zasti</translation>
     </message>
     <message>
         <source>A profile named &quot;%1&quot; already exists. Do you want to erase it?</source>
         <comment>import confirm text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu se cmene zo&apos;oi &quot;%1&quot; ku xa&apos;o zasti xu do djica lo ka vimcu ra</translation>
+        <translation type="unfinished">lo prufile poi se cmene la&apos;oi &quot;%1&quot; cu xa&apos;o zasti .i xu do djica lo nu vimcu ri</translation>
     </message>
     <message>
         <source>File doesn&apos;t exist</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo sfaile na zasti</translation>
+        <translation type="unfinished">lo datnyve&apos;i na zasti</translation>
     </message>
     <message>
         <source>Profile doesn&apos;t exist</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo selbenji na zasti</translation>
+        <translation type="unfinished">lo prufile na zasti</translation>
     </message>
     <message>
         <source>Profile imported</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Profile imported</translation>
+        <translation type="unfinished">lo prufile cu ba&apos;o se nerjmina</translation>
     </message>
     <message>
         <source>%1.tox was successfully imported</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1.tox. pu snada sisku</translation>
+        <translation type="unfinished">la&apos;oi %1.tox cu snada nu se nerjmina</translation>
     </message>
 </context>
 <context>
     <name>QApplication</name>
     <message>
         <source>Ok</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">je&apos;e</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">sisti</translation>
+        <translation type="unfinished">nu sisti</translation>
     </message>
     <message>
         <source>Yes</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">go&apos;i</translation>
     </message>
     <message>
         <source>No</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">na go&apos;i</translation>
     </message>
     <message>
         <source>LTR</source>
         <comment>DO NOT TRANSLATE. Instead, set this string to &apos;RTL&apos; in right-to-left languages (for example Hebrew and Arabic) to get proper widget layout. This string should only ever be &apos;LTR&apos; or &apos;RTL&apos;.</comment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">LTR</translation>
     </message>
 </context>
 <context>
@@ -2703,173 +2251,143 @@ le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray<
     <message>
         <source>Choose an auto-accept directory</source>
         <comment>popup title</comment>
-        <translation type="unfinished">ko cuxna lo ka tolcmi lo karce</translation>
+        <translation type="unfinished">cuxna lo zmiku nu zanru stuzi</translation>
     </message>
 </context>
 <context>
     <name>QMessageBox</name>
     <message>
         <source>Couldn&apos;t add friend</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">na ka&apos;e jmina lo pendo</translation>
+        <translation type="unfinished">fliba lo nu jmina lo pendo</translation>
     </message>
     <message>
         <source>You can&apos;t add yourself as a friend!</source>
         <comment>When trying to add your own Tox ID as friend</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">do na ka&apos;e jmina lo do pendo</translation>
+        <translation type="unfinished">do na kakne lo nu jmina lo do sevzi lo pendo</translation>
     </message>
     <message>
         <source>%1 is not a valid Tox address.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 na ponse la toks judri</translation>
+        <translation type="unfinished">la&apos;oi %1 na drani la&apos;oi Tox judri</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Default</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">fadni</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lu blanu</translation>
+        <translation type="unfinished">blanu</translation>
     </message>
     <message>
         <source>Olive</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lu Olive</translation>
+        <translation type="unfinished">pelri&apos;o</translation>
     </message>
     <message>
         <source>Red</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lu xunre</translation>
+        <translation type="unfinished">xunre</translation>
     </message>
     <message>
         <source>Violet</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Violet</translation>
+        <translation type="unfinished">zirpu</translation>
     </message>
     <message>
         <source>Incoming call...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">vi&apos;o</translation>
     </message>
     <message>
         <source>%1 here! Tox me maybe?</source>
         <comment>Default message in Tox URI friend requests. Write something appropriate!</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 vi xu cumki fa lo nu dasni mi</translation>
+        <translation type="unfinished">ni&apos;o mi&apos;e %1 .i xu do djica lo nu casnu</translation>
     </message>
     <message>
         <source>None</source>
         <comment>No camera device set</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">no da</translation>
     </message>
     <message>
         <source>Desktop</source>
         <comment>Desktop as a camera input for screen sharing</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">sambijyjbama</translation>
+        <translation type="unfinished">vidni</translation>
     </message>
     <message>
         <source>Error</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">nunsre</translation>
     </message>
     <message>
         <source>qTox couldn&apos;t open your chat logs, they will be disabled.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la .qTox. pu na kakne lo nu kargau lo do casnu logji ije ba tolakti</translation>
+        <translation type="unfinished">la&apos;oi qTox na kakne lo nu kalri lo do casnu vreji .i ja&apos;e bo ke&apos;a ba se tolakti</translation>
     </message>
     <message>
         <source>Dark</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">manku</translation>
     </message>
     <message>
         <source>Dark blue</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">manku blanu</translation>
     </message>
     <message>
         <source>Dark olive</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">manku oljubre</translation>
+        <translation type="unfinished">manku pelri&apos;o</translation>
     </message>
     <message>
         <source>Dark red</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">manku xunre</translation>
     </message>
     <message>
         <source>Dark violet</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">manku violeti</translation>
+        <translation type="unfinished">manku zirpu</translation>
     </message>
     <message>
         <source>online</source>
         <comment>contact status</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">kibycpa</translation>
+        <translation type="unfinished">samjo&apos;e</translation>
     </message>
     <message>
         <source>away</source>
         <comment>contact status</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">to&apos;o</translation>
     </message>
     <message>
         <source>busy</source>
         <comment>contact status</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">tolcando</translation>
+        <translation type="unfinished">tolzi&apos;e</translation>
     </message>
     <message>
         <source>offline</source>
         <comment>contact status</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">presence</translation>
+        <translation type="unfinished">na samjo&apos;e</translation>
     </message>
     <message>
         <source>blocked</source>
         <comment>contact status</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">denpa</translation>
+        <translation type="unfinished">zunti</translation>
     </message>
     <message>
         <source>Reformatting text...</source>
         <comment>Waiting for text to be reformatted</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">fanva lo lerseltcidu...</translation>
     </message>
     <message>
         <source>Failed to send file &quot;%1&quot;</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo nu benji lo sfaile &quot;%1&quot; ku fliba</translation>
+        <translation type="unfinished">.i lo nu benji lo datnyve&apos;i &quot;%1&quot; ku fliba</translation>
     </message>
     <message>
         <source>%1 has joined the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la %1 pu cmibi&apos;o</translation>
+        <translation type="unfinished">la&apos;oi %1 pu cmibi&apos;o</translation>
     </message>
     <message>
         <source>%1 has left the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la %1 pu cliva lo nu jamna</translation>
+        <translation type="unfinished">la&apos;oi %1 pu cliva lo nungirzu</translation>
     </message>
     <message>
         <source>%1 is now known as %2</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 is now known as%2</translation>
+        <translation type="unfinished">la&apos;oi %1 ca se cmene la&apos;oi %2</translation>
     </message>
     <message>
         <source>%1 has set the title to %2</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 has set the title to %2</translation>
+        <translation type="unfinished">la&apos;oi %1 pu setca lo cmene fi la&apos;oi %2</translation>
     </message>
     <message>
         <source>Cleared</source>
@@ -2877,29 +2395,24 @@ le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray<
     </message>
     <message>
         <source>Call with %1 ended unexpectedly. %2</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu fonta&apos;a la %1 cu tolkanpe la %2.</translation>
+        <translation type="unfinished">lo nu fonta&apos;a la&apos;oi %1 cu tolkanpe la&apos;oi %2.</translation>
     </message>
     <message>
         <source>Call with %1 ended. %2</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu fonjorne jo&apos;u la %1 cu mulno la %2.</translation>
+        <translation type="unfinished">lo nu fonjorne jo&apos;u la&apos;oi %1 cu mulno la&apos;oi %2.</translation>
     </message>
     <message>
         <source>%1 is now %2</source>
         <comment>e.g. &quot;Dubslow is now online&quot;</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">%1 is now%2</translation>
+        <translation type="unfinished">la&apos;oi %1 ca %2</translation>
     </message>
     <message>
         <source>Calling %1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fonjorne la%1</translation>
+        <translation type="unfinished">ca&apos;o fonjorne la&apos;oi %1</translation>
     </message>
     <message>
         <source>%1 calling</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">la %1 nu fonjorne</translation>
+        <translation type="unfinished">la&apos;oi %1 nu fonjorne</translation>
     </message>
     <message>
         <source>Message failed to send</source>
@@ -2907,95 +2420,78 @@ le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray<
     </message>
     <message>
         <source>You have joined the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">do pu cmibi&apos;o le nu jamna</translation>
+        <translation type="unfinished">do pu cmibi&apos;o lo nungirzu</translation>
     </message>
     <message>
         <source>You have left the conference</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">do ba&apos;o cliva le nunji&apos;i</translation>
     </message>
     <message>
         <source>%1 went offline during the call attempt</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">la&apos;oi %1. jorne pu cliva va va&apos;o lo nu fonjorne troci</translation>
     </message>
     <message>
         <source>Failed to load chat history</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">pu fliba lo nu kargau lo casnu citri</translation>
     </message>
     <message>
         <source>Database version (%1) is newer than we currently support (%2). Please upgrade qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">mi&apos;o ca&apos;o sidju lo datni seltcidu be lo ka cnino (%1) (%2). e&apos;o ko gasnu lo nu galfi la&apos;oi qTox</translation>
     </message>
     <message>
         <source>Initializing</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ca&apos;o cfari</translation>
+        <translation type="unfinished">cfari</translation>
     </message>
     <message>
         <source>Transmitting</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nu benji</translation>
+        <translation type="unfinished">benji</translation>
     </message>
     <message>
         <source>Finished</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">print operation status</translation>
+        <translation type="unfinished">mulno</translation>
     </message>
     <message>
         <source>Broken</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">co&apos;a morsi</translation>
+        <translation type="unfinished">spofu</translation>
     </message>
     <message>
         <source>Canceled</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">sisti</translation>
+        <translation type="unfinished">nu sisti</translation>
     </message>
     <message>
         <source>Paused</source>
-        <translation type="unfinished">denpa</translation>
-    </message>
-    <message>
-        <source>Remote paused</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">de&apos;a</translation>
     </message>
     <message>
+        <source>Remote paused</source>
+        <translation type="unfinished">lo darno cu ca&apos;o de&apos;a</translation>
+    </message>
+    <message>
         <source>File Name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">cmene be le sfaile</translation>
+        <translation type="unfinished">cmene be lo datnyve&apos;i</translation>
     </message>
     <message>
         <source>Contact</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nu cuntu</translation>
+        <translation type="unfinished">jikca</translation>
     </message>
     <message>
         <source>Progress</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">nilfarvi</translation>
     </message>
     <message>
         <source>Size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">progress</translation>
+        <translation type="unfinished">nilcla</translation>
     </message>
     <message>
         <source>Speed</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">nilsutra</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished">kadni</translation>
+        <translation type="unfinished">tcini</translation>
     </message>
     <message>
         <source>Control</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">jitro</translation>
     </message>
 </context>
@@ -3003,20 +2499,19 @@ le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray<
     <name>RemoveChatDialog</name>
     <message>
         <source>Remove friend</source>
-        <translation type="unfinished">ko vimcu lo pendo</translation>
+        <translation type="unfinished">vimcu lo pendo</translation>
     </message>
     <message>
         <source>Remove all chat history with the friend if set</source>
-        <translation type="unfinished">jaginai ko vimcu lo ro casnu citri be lo pendo</translation>
+        <translation type="unfinished">vimcu ro lo casnu citri be lo pendo fau lo nu se setca</translation>
     </message>
     <message>
         <source>Also remove chat history</source>
-        <translation type="unfinished">vo&apos;a vimcu lo casnu citri</translation>
+        <translation type="unfinished">ji&apos;a vimcu lo casnu citri</translation>
     </message>
     <message>
         <source>Are you sure you want to remove %1 from your contacts list?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">xu do birti lo du&apos;u do djica lo ka vimcu la %1 lo do cmima liste</translation>
+        <translation type="unfinished">xu do birti lo nu djica lo nu vimcu la&apos;oi %1 lo do jikca liste</translation>
     </message>
     <message>
         <source>Remove</source>
@@ -3028,31 +2523,26 @@ le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray<
     <message>
         <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko klika gi&apos;e tirna tezu&apos;e lo nu cuxna cmana ko danre %1 mu&apos;i lo nu mipri/zgana la qTox canko gi&apos;onai %2 mu&apos;i lo nu sisti</translation>
+        <translation type="unfinished">ko klika gi&apos;e lacpu lo nu cuxna lo tutra .i ko catke la&apos;oi %1 lo nu mipri ja jarco lo la&apos;oi qTox canko .i ko catke la&apos;oi %2 lo nu nu sisti</translation>
     </message>
     <message>
         <source>Space</source>
         <comment>[Space] key on the keyboard</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">keyboard label</translation>
+        <translation type="unfinished">lo kunti batke</translation>
     </message>
     <message>
         <source>Escape</source>
         <comment>[Escape] key on the keyboard</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">keyboard label</translation>
+        <translation type="unfinished">lo cliva</translation>
     </message>
     <message>
         <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko danre la %1 lo nu benji lo samcpana be lo selcuxna .i la %2 lo nu mipri/jarco lo nu zgana la qtoks canko .ije la %3 lo nu sisti</translation>
+        <translation type="unfinished">.i ko catke la&apos;oi %1 lo nu benji lo vidni pixra be lo selcuxna .i la&apos;oi %2 lo nu mipri/jarco la&apos;oi qTox canko .ije la&apos;oi %3 lo nu sisti</translation>
     </message>
     <message>
         <source>Enter</source>
         <comment>[Enter] key on the keyboard</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">nerkla</translation>
     </message>
 </context>
@@ -3060,12 +2550,10 @@ le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray<
     <name>SearchForm</name>
     <message>
         <source>The text could not be found.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo lerseltcidu pu na se tolcri</translation>
+        <translation type="unfinished">lo lerseltcidu na se facki</translation>
     </message>
     <message>
         <source>Start</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">cfari</translation>
     </message>
 </context>
@@ -3073,192 +2561,161 @@ le samselcmi cu mapti le blanu zoi gy. NoSpam .gy. joi le checksum zoi gy. gray<
     <name>SearchSettingsForm</name>
     <message>
         <source>Start search:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cfari lo nu sisku:</translation>
+        <translation type="unfinished">nu cfari nu sisku:</translation>
     </message>
     <message>
         <source>from the end</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo fanmo</translation>
+        <translation type="unfinished">ta&apos;i lo fanmo</translation>
     </message>
     <message>
         <source>from the beginning</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">InsertInsert&quot; [Entry] &quot;at the end</translation>
+        <translation type="unfinished">ta&apos;i lo cfari</translation>
     </message>
     <message>
         <source>after date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ba detri</translation>
+        <translation type="unfinished">ba lo detri</translation>
     </message>
     <message>
         <source>before date</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">in the last&quot; &quot;7 days</translation>
+        <translation type="unfinished">pu lo detri</translation>
     </message>
     <message>
         <source>Case sensitive</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">junta</translation>
+        <translation type="unfinished">lerfu klesi frica</translation>
     </message>
     <message>
         <source>Whole words only</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ro valsi po&apos;o</translation>
+        <translation type="unfinished">loi mulno valsi po&apos;o</translation>
     </message>
     <message>
         <source>Use regular expressions</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">pilno lo fadni sinxa</translation>
+        <translation type="unfinished">pilno lo loi fadni sinxa</translation>
     </message>
     <message>
         <source>Select Date Dialog</source>
-        <translation type="unfinished">.i ko cuxna lo djedi dialogu</translation>
+        <translation type="unfinished">detri nu cuxna canko</translation>
     </message>
     <message>
         <source>Select a date</source>
-        <translation type="unfinished">ko cuxna lo djedi</translation>
+        <translation type="unfinished">cuxna lo detri</translation>
     </message>
 </context>
 <context>
     <name>SetPasswordDialog</name>
     <message>
         <source>Confirm:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jetnu:</translation>
+        <translation type="unfinished">nu birti:</translation>
     </message>
     <message>
         <source>Password:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla:</translation>
+        <translation type="unfinished">lo mipyvla:</translation>
     </message>
     <message>
         <source>Password strength: %p%</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Password strength</translation>
+        <translation type="unfinished">le ni lo mipyvla cu tsali: %p%</translation>
     </message>
     <message>
         <source>The password doesn&apos;t match.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla na cmima</translation>
+        <translation type="unfinished">lo loi mipyvla na mintu</translation>
     </message>
     <message>
         <source>Confirm password</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla</translation>
+        <translation type="unfinished">birti lo mipyvla</translation>
     </message>
     <message>
         <source>Confirm password input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla lo nu jarco lo japyvla</translation>
+        <translation type="unfinished">birti lo nu ciska lo mipyvla</translation>
     </message>
     <message>
         <source>Password input</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla seltcidu</translation>
+        <translation type="unfinished">mipyvla nu nerkla</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla seltce gi&apos;e xa lerfu clani</translation>
+        <translation type="unfinished">mipyvla nu nerkla stuzi poi nilcla lo lerfu be li xa ja zmadu</translation>
     </message>
     <message>
         <source>The password is too short.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">japyvla dukse tordu</translation>
+        <translation type="unfinished">mipyvla dukse tordu</translation>
     </message>
     <message>
         <source>Set profile password</source>
-        <translation type="unfinished">japyvla</translation>
+        <translation type="unfinished">mipyvla</translation>
     </message>
 </context>
 <context>
     <name>Settings</name>
     <message>
         <source>Circle #%1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">dinju #%1</translation>
+        <translation type="unfinished">cukla #%1</translation>
     </message>
     <message>
         <source>Failed to load global settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i lo nu cfagau lo nu tolcru selcu&apos;a cu fliba</translation>
+        <translation type="unfinished">fliba lo nu nerkla lo munje tercu&apos;e</translation>
     </message>
     <message>
         <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko na kakne lo nu jarco lo selcu&apos;a be fi la&apos;o gy.%1.gy. ku na&apos;e cpacu fi la&apos;o gy.%2.gy. ko na kakne lo nu cfari la&apos;oi qTox</translation>
+        <translation type="unfinished">na kakne lo nu galfi lo tercu&apos;e fi lo verzi be li %1 lo verzi be li %2 .i na kakne lo nu cfari la&apos;oi qTox</translation>
     </message>
     <message>
         <source>Failed to load personal settings</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Failed to load personal settings</translation>
+        <translation type="unfinished">fliba lo nu nerkla lo sevzi tercu&apos;e</translation>
     </message>
 </context>
 <context>
     <name>ToxURIDialog</name>
     <message>
         <source>Do you want to add %1 as a friend?</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">xu do djica lo nu jmina la%1 lo pendo</translation>
+        <translation type="unfinished">xu do djica lo nu jmina la&apos;oi %1 lo pendo</translation>
     </message>
     <message>
         <source>User ID:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">DN</translation>
+        <translation type="unfinished">plicme judri:</translation>
     </message>
     <message>
         <source>Friend request message:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fi&apos;o pendo cpedu lo notci:</translation>
+        <translation type="unfinished">notci be lo nu cpedu lo nu pendo:</translation>
     </message>
     <message>
         <source>Send</source>
         <comment>Send a friend request</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">benji</translation>
     </message>
     <message>
         <source>Cancel</source>
         <comment>Don&apos;t send a friend request</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">sisti</translation>
+        <translation type="unfinished">nu sisti</translation>
     </message>
     <message>
         <source>Add friend</source>
         <comment>Title of the window to add a friend through Tox URI</comment>
-        <translation type="unfinished">jmina pendo</translation>
+        <translation type="unfinished">jmina lo pendo</translation>
     </message>
 </context>
 <context>
     <name>UserInterfaceForm</name>
     <message>
         <source>None</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">no da</translation>
     </message>
     <message>
         <source>User Interface</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">pilno samterfli</translation>
+        <translation type="unfinished">samselpli</translation>
     </message>
 </context>
 <context>
     <name>UserInterfaceSettings</name>
     <message>
         <source>Chat</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">nu casnu</translation>
     </message>
     <message>
         <source>Base font:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fi&apos;o te ga&apos;i samterci&apos;e</translation>
+        <translation type="unfinished">jicmu lerfu:</translation>
     </message>
     <message>
         <source>Size: </source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">progress:</translation>
+        <translation type="unfinished">nilcla: </translation>
     </message>
     <message>
         <source>New text styling preference may not load on chat history until qTox restarts.
@@ -3273,308 +2730,248 @@ Show formatting characters:
 Hide formatting characters:
     Apply formatting and don&apos;t show characters.
     E.g. &quot;**text**&quot; will show as &quot;text&quot;, bold.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo cnino lerseltcidu selcu&apos;e cu cumki lo nu na cpedu lo casnu citri co&apos;u lo nu qTox refsamcfa
-ba zi galfi lo cnino notci
+        <translation type="unfinished">lo cnino lerseltcidu selcu&apos;e cu cumki lo nu na nerkla fi lo casnu citri pu lo nu la&apos;oi qTox refsamcfa .i ku&apos;i ba zi gunka lo cnino notci
 
-ju&apos;o
-ko na samterci&apos;egau lo se ciska be fi lo notci
-E.g. &quot;**text**&quot; will show as &quot;**text**&quot;, not bold.
-ko jarco lo pe&apos;a tarmi caractu:
-ko pilno lo nunformate gi&apos;e jarco lo lerfu
-E.g. &quot;**text**&quot; will show as &quot;**text**&quot;, bold.
-:i ko mipri lo ka sfasa lerfu
-ko pilno lo nunformata gi&apos;e na jarco lo lerfu
-e.g. &quot;**text**&quot; will show as &quot;text&quot;, bold.</translation>
+lo nalseltcidu:
+    ko na galfi lo lerseltcidu be lo notci
+    mu&apos;a la&apos;oi &quot;**text**&quot; ba se jarco fi&apos;o na gundi
+lo jarco lerseltcidu sinxa:
+    ko galfi lo lerseltcidu gi&apos;e jarco lo sinxa
+    mu&apos;a la&apos;oi &quot;**text**&quot; ba se jarco fi&apos;o gundi
+lo mipri lerseltcidu sinxa:
+    ko galfi lo lerseltcidu gi&apos;e na jarco lo sinxa
+    mu&apos;a la&apos;oi &quot;**text**&quot; ba se jarco la&apos;oi &quot;text&quot; fi&apos;o gundi</translation>
     </message>
     <message>
         <source>Text styling:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">lerselcmi:</translation>
     </message>
     <message>
         <source>Select text styling preference.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ko cuxna lo lerseltcidu selcu&apos;e</translation>
     </message>
     <message>
         <source>Plaintext</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ju&apos;o</translation>
+        <translation type="unfinished">nalseltcidu</translation>
     </message>
     <message>
         <source>Show formatting characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jarco tu&apos;a lo formati</translation>
+        <translation type="unfinished">jarco lo lerseltcidu sinxa</translation>
     </message>
     <message>
         <source>Hide formatting characters</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">mipri lo ka sfasa lerfu</translation>
+        <translation type="unfinished">mipri lo lerseltcidu sinxa</translation>
     </message>
     <message>
         <source>New message</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">notci notci</translation>
+        <translation type="unfinished">cnino notci</translation>
     </message>
     <message>
         <source>Open qTox&apos;s window when you receive a new message and no window is open yet.</source>
         <comment>tooltip for Show window setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko kargau lo canko pe la .qtoks. ca lo nu do cpacu lo cnino notci gi&apos;e no canko ca&apos;o kalri</translation>
+        <translation type="unfinished">ko kargau lo canko pe la&apos;oi qTox ca lo nu do cpacu lo cnino notci gi&apos;e no canko ca&apos;o kalri</translation>
     </message>
     <message>
         <source>Open window</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ko kargau lo canko</translation>
     </message>
     <message>
         <source>Contact list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">kontaktliste</translation>
+        <translation type="unfinished">jikca liste</translation>
     </message>
     <message>
         <source>If checked, conferences will be placed at the top of the friends list, otherwise, they&apos;ll be placed below online friends.</source>
         <comment>toolTip for conference positioning</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jaginai catlu gi&apos;e jibni lo nunjungau cu jipno lo pendo liste .i je ku&apos;i kibyselzu&apos;e ba se jibni lo nu kibro pendo</translation>
+        <translation type="unfinished">.i jaginai catlu gi&apos;e jibni lo nungirzu cu jipno lo pendo liste .i je ku&apos;i kibyselzu&apos;e ba se jibni lo nu kibro pendo</translation>
     </message>
     <message>
         <source>Place conferences at top of friend list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko curmi lo nunjungau lo pendo liste</translation>
+        <translation type="unfinished">ko curmi lo nungirzu lo pendo liste</translation>
     </message>
     <message>
         <source>Your contact list will be shown in compact mode (small avatars, tabular view).</source>
         <comment>toolTip for compact layout setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo do cuntu lisycte ba se jarco fi&apos;o ne&apos;i lo plita tcini (cmalu avatars i lerselzga gi&apos;e akti jvinu)</translation>
+        <translation type="unfinished">lo do jikca lisycte ba se jarco fi&apos;o ne&apos;i lo plita tcini (cmalu avatars i lerselzga gi&apos;e akti jvinu)</translation>
     </message>
     <message>
         <source>Compact contact list</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nunjamgau samtci liste</translation>
+        <translation type="unfinished">nunjarkygau jikca liste</translation>
     </message>
     <message>
         <source>Multiple windows mode</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">so&apos;i canko tcini</translation>
     </message>
     <message>
         <source>Open each chat in an individual window</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">ko kargau ro casnu be lo pa canko</translation>
     </message>
     <message>
         <source>Emoticons</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">minji</translation>
+        <translation type="unfinished">cinmo pixra</translation>
     </message>
     <message>
         <source>Use emoticons</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko pilno lo simsa</translation>
+        <translation type="unfinished">pilno lo cinmo pixra</translation>
     </message>
     <message>
         <source>Emoticon size:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nelci cmalu:</translation>
+        <translation type="unfinished">le nilcla be lo cinmo pixra:</translation>
     </message>
     <message>
         <source> px</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished"> px</translation>
     </message>
     <message>
         <source>Theme</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">temci</translation>
+        <translation type="unfinished">tcila stili</translation>
     </message>
     <message>
         <source>Style:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">stili:</translation>
     </message>
     <message>
         <source>Theme color:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo temci skari:</translation>
+        <translation type="unfinished">le tcila skari:</translation>
     </message>
     <message>
         <source>Timestamp format:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">tcika samtci tcima:</translation>
+        <translation type="unfinished">le nu tcika ciska ta&apos;i:</translation>
     </message>
     <message>
         <source>Date format:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">de&apos;i tcima:</translation>
+        <translation type="unfinished">le nu detri ciska ta&apos;i:</translation>
     </message>
     <message>
         <source>Use identicons instead of empty avatars</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko pilno lo&apos;e samcmi gi nai lo kunti avatars</translation>
+        <translation type="unfinished">pilno lo loi .identicon. sinxa lo nu kunti .avatar.</translation>
     </message>
     <message>
         <source>Show a notification when you receive a new message, call, or friend request and the window is not selected.</source>
         <comment>tooltip for Notify setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jarco lo nu notci ca lo nu do cpacu lo cnino notci .e lo nu fonxa .e lo pendo cpedu gi&apos;e lo canko na selcuxna</translation>
+        <translation type="unfinished">jarco lo nu notci ca lo nu do cpacu lo cnino notci ja lo fonjorne ja lo nu cpedu lo nu pendo kei ca lo nu lo canko na se cuxna</translation>
     </message>
     <message>
         <source>Notify</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Notify</translation>
+        <translation type="unfinished">nu notci</translation>
     </message>
     <message>
         <source>Conferences only notify when mentioned</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo nu krinu facki po&apos;o ca lo nu cusku</translation>
+        <translation type="unfinished">lo loi nungirzu cu notci ca lo nu do se cmene po&apos;o</translation>
     </message>
     <message>
         <source>Play sound</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Play sound</translation>
+        <translation type="unfinished">zgipli lo sance</translation>
     </message>
     <message>
         <source>Play sound while Busy</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko zgipli lo sance ca lo nu tolcando</translation>
+        <translation type="unfinished">zgipli lo sance ca lo nu do tolzi&apos;e</translation>
     </message>
     <message>
         <source>Notify via desktop notifications</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Name</translation>
+        <translation type="unfinished">notci ta&apos;i lo loi skami notci</translation>
     </message>
     <message>
         <source>Hide message sender and contents</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">mipri lo se mrilu benji e lo se cmima</translation>
+        <translation type="unfinished">mipri lo benji e lo se cmima be lo notci</translation>
     </message>
     <message>
         <source>Use colored nicknames in conferences</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">pilno lo skari samcmi pe&apos;a</translation>
+        <translation type="unfinished">pilno lo loi skari samcmi vi lo loi nungirzu</translation>
     </message>
     <message>
         <source>Only notify about new messages in conferences when your nickname is mentioned.</source>
         <comment>toolTip for Conferences only notify when mentioned</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jungau lo cnino selbenji po&apos;o ca lo nu cusku lo do se cmene</translation>
+        <translation type="unfinished">notci lo loi cnino notci vi lo loi nungirzu ca lo nu do se cmene po&apos;o</translation>
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jaginai sazycimdytcini lo ka sazycimdytcini ca lo nu tolcando</translation>
+        <translation type="unfinished">fau lo nu tolakti kei smaji lo loi notci sance ca lo nu do tolzi&apos;e (ije ku&apos;i jarco lo nu notci)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko pilno lo datnycimdytcana .i ta&apos;a mu&apos;i lo nu notci cmana ja lo datnycimdytcana fau lo nu jungau kei lo nu favgau kei ka&apos;e viska po&apos;o lo nu favgau lo titspi samtci</translation>
+        <translation type="unfinished">pilno lo loi skami notci .i fau lo nu na pilno kei lo nu notci cu se jarco ta&apos;i lo nu lo ciste samtci sinxa cu gusni carmi po&apos;o</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jaginai na akti gi ko pilno lo jicmu ciste samtci nu jungau .inaja&apos;o troci lo nu pilno lo notci lerseltcidu be lo do samcmi tcidu .i ko na akti fau lo nu zgana lo nabmi be lo samseltci</translation>
+        <translation type="unfinished">fau lo nu tolakti kei pilno lo loi jicmu ciste samtci notci .i fau lo nu drata kei troci lo nu pilno lo loi skami notci be lo do skami vanbi .i ko tolakti ti fau lo nu do facki lo nabmi vi lo loi skami notci</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jaginai samtci</translation>
+        <translation type="unfinished">pilno lo loi ciste notci tercu&apos;e fau lo nu zasti</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">mi jarco lo cnino notci po&apos;o fau lo nu jarco lo nu samselmipri datni ne&apos;i lo skami notci</translation>
+        <translation type="unfinished">jarco lo lerfu poi «cnino notci» po&apos;o gi&apos;e na jarco lo loi sivni datni vi lo loi skami notci</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko sepi&apos;o lo pendo liste gi&apos;e casnu canko lo ka sepi&apos;o muvdu canko</translation>
+        <translation type="unfinished">fendi lo loi pendo liste e lo loi casnu canko lo loi frica canko poi ka&apos;e se muvdu</translation>
     </message>
     <message>
         <source>If enabled, every contact without an avatar will have a generated icon based on their Tox ID instead of the default picture. Requires restart to apply.</source>
         <comment>toolTip for show identicons</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">gajanai akti gi ro da poi samtci secau lo avatar cu se jinvi lo samtci poi se jinvi lo ra me la toks. ID. ja&apos;e nai lo cfari pixra .i nitcu lo nu refsamcfa kei lo nu samcfa</translation>
+        <translation type="unfinished">fau lo nu akti kei ro jikca poi na se .avatar. cu se sinxa lo se finti sinxa poi se rinka lo lo ra la&apos;oi Tox judri .i na se sinxa lo fadni pixra .i sarcu lo nu refsamcfa lo nu ti binxo lo ka pilno</translation>
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko viska lo teksta emojis lo skari pixra .i mu&apos;i lo lerseltcidu gi lo xekri ji lo blabi lerfa emojis</translation>
+        <translation type="unfinished">jarco lo loi lerseltcidu cinmo pixra ta&apos;i lo loi skari pixra gi&apos;e na jarco ke&apos;a ta&apos;i lo lerseltcidu ja lo loi xekri ja blabi lerfu cinmo pixra</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cuxna lo pixra poi te pilno ca lo nu renderu lo emojis</translation>
+        <translation type="unfinished">cuxna lo nu loi pixra klesi ma kau cu se pilno ca lo nu jarco lo loi cinmo pixra</translation>
     </message>
     <message>
         <source>Smiley pack:</source>
         <extracomment>Text on smiley pack label</extracomment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lu cisma pakke:</translation>
+        <translation type="unfinished">loi cinmo pixra bakfu:</translation>
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo pixra be lo pixra be lo pixra be lo simji pixra ko cuxna lo simsa be lo do jicmu fonxa cmalu</translation>
+        <translation type="unfinished">lo nilcla vi lo loi .pixel. be lo cinmo pixra .i ko cuxna lo simsa be lo do jicmu lerfu nilcla</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ji&apos;u lo ka pilno fi lo me la&apos;oi UI cu samtci .i lo nu fukyzifli cu se curmi lo nu xagrai lo nu pilno fi la .qTox. sfasa</translation>
+        <translation type="unfinished">lo jicmu stili poi se pilno vi lo samselpli .i la&apos;oi Fusion stili cu se stidi ki&apos;u lo nu xagrai lo nu gunka joi lo la&apos;oi qTox tcila stili</translation>
     </message>
     <message>
         <source>UI color theme. Use this to select dark mode.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">samtci skari temci .i ko pilno ti tezu&apos;e lo nu cuxna lo manku tcini</translation>
+        <translation type="unfinished">le skari tcila stili be lo samselpli .i ko pilno ti lo nu cuxna lo manku tcini</translation>
     </message>
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">.i ko viska lo se viska be lo se benji gi&apos;e cpacu lo pixra ne&apos;i lo nu casnu ko virnu lo nenri viska tezu&apos;e lo nu jarco lo barda se viska</translation>
+        <translation type="unfinished">jarco lo loi vitke be lo loi se benji ja se cpacu pixra vi lo loi casnu .i fau lo nu lo mause cu se stuzi ga&apos;u lo vi vitke kei jarco lo barda vitke</translation>
     </message>
     <message>
         <source>Image preview</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">pixra vitke</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">so&apos;i notci pe&apos;a fe lo nuncasnu
-ko jdika lo nu xamgu lo nunselpla dukse cmalu vi ka&apos;e rinka lo nu
-lo rokci bajra ku canci</translation>
+        <translation type="unfinished">lo traji nilcla be lo loi notci (pa&apos;i pa lo loi nuncasnu) poi se nerkla fi lo casnu citri .i ko jdika ti lo nu xagmau lo nu samtci gunka .i fau lo nu lo ni vi dukse cmalu kei lo nu bajra porsi cu cumki lo nu canci</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ni&apos;o ni&apos;o ni&apos;o ni&apos;o ni&apos;o sei casnu be lo xokau casnu</translation>
+        <translation type="unfinished">lo traji nilcla be lo nu jarco lo casnu vreji</translation>
     </message>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">loi notci poi jai se cpedu fai lo nu cfagau fi lo nu casnu citri dukse cmalu
-lo nu vi cmima cu rinka lo nu lo rokci bajra cu canci</translation>
+        <translation type="unfinished">lo loi notci poi se nerkla fi lo casnu citri ca lo nu bajra .i fau lo nu lo ni vi dukse cmalu kei lo nu bajra porsi cu cumki lo nu canci</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ni&apos;o ni&apos;o ni&apos;o ni&apos;o ni&apos;o ni&apos;o ni&apos;o sei casnu be lo xotli cukta</translation>
+        <translation type="unfinished">lo nilcla be lo loi casnu vreji pagbu</translation>
     </message>
     <message>
         <source>Chat log:</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fi&apos;o casnu log:</translation>
+        <translation type="unfinished">lo casnu vreji:</translation>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">zoi gy</translation>
+        <translation type="unfinished">mipri lo loi lerfu poi se porsi lo la&apos;oi NULL sinxa</translation>
     </message>
 </context>
 <context>
@@ -3582,176 +2979,149 @@ lo nu vi cmima cu rinka lo nu lo rokci bajra cu canci</translation>
     <message>
         <source>Online</source>
         <comment>Button to set your status to &apos;Online&apos;</comment>
-        <translation type="unfinished">.tox. pilno ca</translation>
+        <translation type="unfinished">samjo&apos;e</translation>
     </message>
     <message>
         <source>Away</source>
         <comment>Button to set your status to &apos;Away&apos;</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">to&apos;o</translation>
     </message>
     <message>
         <source>Busy</source>
         <comment>Button to set your status to &apos;Busy&apos;</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">tolcando</translation>
+        <translation type="unfinished">tolzi&apos;e</translation>
     </message>
     <message>
         <source>File</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">sfaile</translation>
+        <translation type="unfinished">datnyve&apos;i</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">vecnu</translation>
+        <translation type="unfinished">galfi</translation>
     </message>
     <message>
         <source>Logout</source>
         <comment>Tray action menu to logout user</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">logout</translation>
+        <translation type="unfinished">nu co&apos;u jikca</translation>
     </message>
     <message>
         <source>Filter...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko filta...</translation>
+        <translation type="unfinished">filtra...</translation>
     </message>
     <message>
         <source>Contacts</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">cmima</translation>
+        <translation type="unfinished">loi jikca</translation>
     </message>
     <message>
         <source>Status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">kadni</translation>
+        <translation type="unfinished">tcini</translation>
     </message>
     <message>
         <source>Your name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">do cmene</translation>
     </message>
     <message>
         <source>Create new conference...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko finti lo cnino nunfermi</translation>
+        <translation type="unfinished">finti lo cnino nungirzu...</translation>
     </message>
     <message>
         <source>Create new circle...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jmina lo cnino dinju</translation>
+        <translation type="unfinished">finti lo cnino cukla...</translation>
     </message>
     <message>
         <source>By Name</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">be&apos;o cmene</translation>
+        <translation type="unfinished">ta&apos;i lo cmene</translation>
     </message>
     <message>
         <source>By Activity</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nu akti</translation>
+        <translation type="unfinished">ta&apos;i lo nu akti</translation>
     </message>
     <message>
         <source>All</source>
-        <translation>ro</translation>
+        <translation>ro da</translation>
     </message>
     <message>
         <source>Online</source>
-        <translation>.tox. pilno ca</translation>
+        <translation>samjo&apos;e</translation>
     </message>
     <message>
         <source>Offline</source>
-        <translatorcomment>Ausgelassen</translatorcomment>
-        <translation>.tox. pilno na ca</translation>
+        <translation>na samjo&apos;e</translation>
     </message>
     <message>
         <source>Friends</source>
-        <translation>pendo</translation>
+        <translation>loi pendo</translation>
     </message>
     <message>
         <source>Conferences</source>
-        <translation type="unfinished">girzu</translation>
+        <translation type="unfinished">loi nungirzu</translation>
     </message>
     <message>
         <source>Search Contacts</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">sosci tu&apos;a lo samtci</translation>
+        <translation type="unfinished">sisku lo loi jikca</translation>
     </message>
     <message>
         <source>Conference #%1</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nunvilnu&apos;e #%1</translation>
+        <translation type="unfinished">nungirzu #%1</translation>
     </message>
     <message>
         <source>Show</source>
         <comment>Tray action menu to show qTox window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko jarco</translation>
+        <translation type="unfinished">jarco</translation>
     </message>
     <message>
         <source>Add friend</source>
         <comment>title of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">jmina pendo</translation>
+        <translation type="unfinished">jmina lo pendo</translation>
     </message>
     <message>
         <source>Conference invites</source>
         <comment>title of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">nunvitke</translation>
+        <translation type="unfinished">loi nungirzu vitcpe</translation>
     </message>
     <message>
         <source>File transfers</source>
         <comment>title of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">fi&apos;o sfaile troci</translation>
+        <translation type="unfinished">loi datnyve&apos;i benji</translation>
     </message>
     <message>
         <source>Settings</source>
         <comment>title of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">selcu&apos;e</translation>
+        <translation type="unfinished">tercu&apos;e</translation>
     </message>
     <message>
         <source>My profile</source>
         <comment>title of the window</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">lo mi profila</translation>
+        <translation type="unfinished">lo mi prufile</translation>
     </message>
     <message>
         <source>Toxcore failed to start, the application will terminate after you close this message.</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">@ info</translation>
+        <translation type="unfinished">la&apos;oi Toxcore pu fliba lo nu cfari .i le samselpli ba sisti ba lo nu do ganlo lo vi notci</translation>
     </message>
     <message>
         <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Name la&apos;oi qTox na ka&apos;e bajra e&apos;o ko galfi lo do selcu&apos;e gi&apos;e refsamcfa</translation>
+        <translation type="unfinished">la&apos;oi Toxcore pu fliba lo nu cfari ta&apos;i lo do proksi tercu&apos;e .i la&apos;oi qTox na kakne lo nu bajra .i ko galfi lo do tercu&apos;e gi&apos;e refsamcfa</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko na kakne lo nu benji lo pendo cpedu</translation>
+        <translation type="unfinished">fliba lo nu benji lo pendo cpedu</translation>
     </message>
     <message>
         <source>Debug</source>
         <comment>title of the window</comment>
-        <translation type="unfinished">nuncfagau</translation>
+        <translation type="unfinished">nunfagau</translation>
     </message>
     <message numerus="yes">
         <source>%n new friend request(s)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform>pa %n cnino pendo (cu) cpedu</numerusform>
+            <numerusform>%n cnino pendo cpedu</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <source>%n new conference invite(s)</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">
-            <numerusform>ne&apos;i %n cnino nunvitke</numerusform>
+            <numerusform>%n cnino nungirzu vitcpe</numerusform>
         </translation>
     </message>
     <message>
@@ -3761,31 +3131,26 @@ lo nu vi cmima cu rinka lo nu lo rokci bajra cu canci</translation>
     </message>
     <message>
         <source>Change status</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko galfi lo kadri</translation>
+        <translation type="unfinished">galfi lo tcini</translation>
     </message>
     <message>
         <source>Edit profile</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">gafygau lo craftu</translation>
+        <translation type="unfinished">galfi lo prufile</translation>
     </message>
     <message>
         <source>Logout</source>
-        <translation type="unfinished">logout</translation>
+        <translation type="unfinished">nu co&apos;u jikca</translation>
     </message>
     <message>
         <source>Add contact...</source>
-        <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">ko cmima</translation>
+        <translation type="unfinished">jmina lo jikca...</translation>
     </message>
     <message>
         <source>Next conversation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">lamji nuncasnu</translation>
     </message>
     <message>
         <source>Previous conversation</source>
-        <translatorcomment>Automated translation.</translatorcomment>
         <translation type="unfinished">lidne casnu</translation>
     </message>
 </context>
