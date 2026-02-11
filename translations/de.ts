@@ -201,7 +201,7 @@ dadurch kann es zu Problemen bei Videoanrufen kommen.</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
-        <translation>Standardordner für das Speichern von Dateien:</translation>
+        <translation>Standardordner für Dateien:</translation>
     </message>
     <message>
         <source>Manual</source>
@@ -241,7 +241,7 @@ dadurch kann es zu Problemen bei Videoanrufen kommen.</translation>
     </message>
     <message>
         <source>Public key (not ToxID):</source>
-        <translation>Öffentlicher Schlüssel (nicht ToxID):</translation>
+        <translation>Öffentlicher Schlüssel (nicht Tox-ID):</translation>
     </message>
     <message>
         <source>Confirmation</source>
@@ -382,7 +382,7 @@ dadurch kann es zu Problemen bei Videoanrufen kommen.</translation>
     <message>
         <source>Tox ID</source>
         <extracomment>Tox ID of the person you&apos;re sending a friend request to</extracomment>
-        <translation>ToxID</translation>
+        <translation>Tox-ID</translation>
     </message>
     <message>
         <source>Message</source>
@@ -401,7 +401,7 @@ dadurch kann es zu Problemen bei Videoanrufen kommen.</translation>
     <message>
         <source>%1 here! Tox me maybe?</source>
         <extracomment>Default message in friend requests if the field is left blank. Write something appropriate!</extracomment>
-        <translation>Hier ist %1! Lust sich mit mir zu unterhalten?</translation>
+        <translation>Hier ist %1! Lust dich mit mir zu unterhalten?</translation>
     </message>
     <message>
         <source>Import a list of contacts, one Tox ID per line</source>
@@ -1379,7 +1379,7 @@ anstatt ganz zu schließen.</translation>
     <message>
         <source>Logout</source>
         <comment>import profile button</comment>
-        <translation>Ausloggen</translation>
+        <translation>Abmelden</translation>
     </message>
     <message>
         <source>Remove password</source>
@@ -1443,7 +1443,7 @@ Das Profil beinhaltet keine Gesprächsverläufe.</translation>
     </message>
     <message>
         <source>Status message input</source>
-        <translation>Eingabe für Statusmeldungen</translation>
+        <translation>Eingabefeld für die Statusnachricht</translation>
     </message>
     <message>
         <source>Your Tox ID</source>
@@ -1705,7 +1705,7 @@ Drücken Sie Umschalt+F1, um weitere Informationen zu erhalten.</translation>
     </message>
     <message>
         <source>Status message input</source>
-        <translation>Eingabefeld für deine Statusnachricht</translation>
+        <translation>Eingabefeld für die Statusnachricht</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
@@ -1984,7 +1984,7 @@ Die Sicherung des Verlaufs ist noch in Entwicklung. Formatierungsänderungen bei
     </message>
     <message>
         <source>Privacy</source>
-        <translation>Datenschutz</translation>
+        <translation>Privatsphäre</translation>
     </message>
     <message>
         <source>Conference block list</source>
@@ -2137,7 +2137,7 @@ Bitte verwende ein anderes.</translation>
     <message>
         <source>Tox save file (*.tox)</source>
         <extracomment>save dialog filter</extracomment>
-        <translation>Tox-Datei (*.tox) speichern</translation>
+        <translation>Tox-Datei (*.tox)</translation>
     </message>
     <message>
         <source>The following files could not be deleted:</source>
@@ -3044,7 +3044,7 @@ Bildlaufleiste verschwindet.</translation>
     <message>
         <source>Logout</source>
         <comment>Tray action menu to logout user</comment>
-        <translation>Ausloggen</translation>
+        <translation>Abmelden</translation>
     </message>
     <message>
         <source>Filter...</source>
@@ -3119,7 +3119,7 @@ Bildlaufleiste verschwindet.</translation>
     <message>
         <source>Conference invites</source>
         <comment>title of the window</comment>
-        <translation>Gruppeneinladungen</translation>
+        <translation>Konferenzeinladungen</translation>
     </message>
     <message>
         <source>File transfers</source>
