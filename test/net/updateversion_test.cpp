@@ -30,10 +30,10 @@ void TestUpdateVersion::testTagToVersion()
 
 void TestUpdateVersion::testIsUpdateAvailable()
 {
-    Version v123{1, 2, 3};
-    Version v124{1, 2, 4};
-    Version v130{1, 3, 0};
-    Version v200{2, 0, 0};
+    const Version v123{1, 2, 3};
+    const Version v124{1, 2, 4};
+    const Version v130{1, 3, 0};
+    const Version v200{2, 0, 0};
 
     QVERIFY(isUpdateAvailable(v123, v124));
     QVERIFY(isUpdateAvailable(v123, v130));

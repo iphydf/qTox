@@ -279,8 +279,12 @@ void VideoFrame::releaseFrame()
  */
 QImage VideoFrame::toQImage(QSize frameSize)
 {
-    if (!frameSize.isValid()) {
+    if (frameSize.isEmpty()) {
         frameSize = sourceDimensions.size();
+    }
+
+    if (frameSize.isEmpty()) {
+        return {};
     }
 
     // Returns an empty constructed QImage in case of invalid generation
@@ -311,6 +315,10 @@ QImage VideoFrame::toQImage(QSize frameSize)
 std::pair<ToxYUVFrame, ReadWriteLocker> VideoFrame::toToxYUVFrame()
 {
     const QSize frameSize = sourceDimensions.size();
+
+    if (frameSize.isEmpty()) {
+        return {ToxYUVFrame{}, ReadWriteLocker()};
+    }
 
     return toGenericObject(frameSize, AV_PIX_FMT_YUV420P, true, [frameSize](AVFrame* const frame) {
         // Converter function (constructs ToxAVFrame out of AVFrame*)
@@ -592,6 +600,10 @@ AVFrame* VideoFrame::generateAVFrame(const QSize& dimensions, const int pixelFor
  */
 AVFrame* VideoFrame::storeAVFrame(AVFrame* frame, const QSize& dimensions, const int pixelFormat)
 {
+    if (frame == nullptr) {
+        return nullptr;
+    }
+
     const FrameBufferKey frameKey = getFrameKey(dimensions, pixelFormat, frame->linesize[0]);
 
     // We check the presence of the frame in case of double-computation
@@ -700,8 +712,12 @@ VideoFrame::toGenericObject(const QSize& dimensions, int pixelFormat, bool requi
      */
     {
         ReadWriteLocker frameWriteLock(&frameLock, ReadWriteLocker::WriteLock);
-        return {objectConstructor(storeAVFrame(frame, dimensions, pixelFormat)),
-                std::move(frameWriteLock)};
+        AVFrame* storedFrame = storeAVFrame(frame, dimensions, pixelFormat);
+        if (storedFrame == nullptr) {
+            return {ReturnType{}, ReadWriteLocker()};
+        }
+
+        return {objectConstructor(storedFrame), std::move(frameWriteLock)};
     }
 }
 

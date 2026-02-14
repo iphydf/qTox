@@ -4,9 +4,7 @@
 
 #include "src/chatlog/chatwidget.h"
 
-#include "src/chatlog/chatlinestorage.h"
 #include "src/chatlog/documentcache.h"
-#include "src/chatlog/pixmapcache.h"
 #include "src/core/icoreidhandler.h"
 #include "src/model/ichatlog.h"
 #include "src/persistence/settings.h"

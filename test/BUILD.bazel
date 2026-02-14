@@ -91,9 +91,23 @@ UI_TESTS = ["loginscreen_test"]
         "model/exiftransform_test.cpp",
         "persistence/dbschema_test.cpp",
         "platform/stacktrace_test.cpp",
+        "video/videoframe_test.cpp",
         "**/*_fuzz_test.cpp",
     ],
 )]
+
+qt_test(
+    name = "videoframe_test",
+    size = "small",
+    src = "video/videoframe_test.cpp",
+    copts = COPTS,
+    mocopts = ["-Iqtox"],
+    deps = [
+        "//qtox/src",
+        "@ffmpeg",
+        "@qt//:qt_core",
+    ],
+)
 
 cc_fuzz_test(
     name = "serialize_fuzz_test",

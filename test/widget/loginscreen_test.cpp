@@ -53,15 +53,14 @@ private:
 
 void TestLoginScreen::testLoginScreen()
 {
-    // NOLINTNEXTLINE(misc-const-correctness)
-    LoginScreen loginScreen(paths, style, themeColor, profileName);
+    LoginScreen loginScreen(paths, style, themeColor, profileName); // NOLINT(misc-const-correctness)
 
     COMPARE_GRAB(&loginScreen, "loginscreen_empty.png");
 }
 
 void TestLoginScreen::testCreateProfile()
 {
-    LoginScreen loginScreen(paths, style, themeColor, profileName);
+    LoginScreen loginScreen(paths, style, themeColor, profileName); // NOLINT(misc-const-correctness)
 
     bool created = false;
     QObject::connect(&loginScreen, &LoginScreen::createNewProfile, this,
@@ -78,7 +77,7 @@ void TestLoginScreen::testCreateProfile()
 
 void TestLoginScreen::testCreateProfileBadPassword()
 {
-    LoginScreen loginScreen(paths, style, themeColor, profileName);
+    LoginScreen loginScreen(paths, style, themeColor, profileName); // NOLINT(misc-const-correctness)
 
     bool created = false;
     connect(&loginScreen, &LoginScreen::createNewProfile, this, [&created]() { created = true; });
