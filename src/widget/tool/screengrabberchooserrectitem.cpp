@@ -281,17 +281,15 @@ bool ScreenGrabberChooserRectItem::sceneEventFilter(QGraphicsItem* watched, QEve
 
 void ScreenGrabberChooserRectItem::forwardMainRectEvent(QEvent* event)
 {
-    auto* mouseEvent = static_cast<QGraphicsSceneMouseEvent*>(event);
-
     switch (event->type()) {
     case QEvent::GraphicsSceneMousePress:
-        return mousePress(mouseEvent);
+        return mousePress(static_cast<QGraphicsSceneMouseEvent*>(event));
     case QEvent::GraphicsSceneMouseMove:
-        return mouseMove(mouseEvent);
+        return mouseMove(static_cast<QGraphicsSceneMouseEvent*>(event));
     case QEvent::GraphicsSceneMouseRelease:
-        return mouseRelease(mouseEvent);
+        return mouseRelease(static_cast<QGraphicsSceneMouseEvent*>(event));
     case QEvent::GraphicsSceneMouseDoubleClick:
-        return mouseDoubleClick(mouseEvent);
+        return mouseDoubleClick(static_cast<QGraphicsSceneMouseEvent*>(event));
     default:
         return;
     }
@@ -299,7 +297,6 @@ void ScreenGrabberChooserRectItem::forwardMainRectEvent(QEvent* event)
 
 void ScreenGrabberChooserRectItem::forwardHandleEvent(QGraphicsItem* watched, QEvent* event)
 {
-    auto* mouseEvent = static_cast<QGraphicsSceneMouseEvent*>(event);
     const QPoint multiplier = getHandleMultiplier(watched);
 
     if (multiplier.isNull())
@@ -307,11 +304,14 @@ void ScreenGrabberChooserRectItem::forwardHandleEvent(QGraphicsItem* watched, QE
 
     switch (event->type()) {
     case QEvent::GraphicsSceneMousePress:
-        return mousePressHandle(multiplier.x(), multiplier.y(), mouseEvent);
+        return mousePressHandle(multiplier.x(), multiplier.y(),
+                                static_cast<QGraphicsSceneMouseEvent*>(event));
     case QEvent::GraphicsSceneMouseMove:
-        return mouseMoveHandle(multiplier.x(), multiplier.y(), mouseEvent);
+        return mouseMoveHandle(multiplier.x(), multiplier.y(),
+                               static_cast<QGraphicsSceneMouseEvent*>(event));
     case QEvent::GraphicsSceneMouseRelease:
-        return mouseReleaseHandle(multiplier.x(), multiplier.y(), mouseEvent);
+        return mouseReleaseHandle(multiplier.x(), multiplier.y(),
+                                  static_cast<QGraphicsSceneMouseEvent*>(event));
     default:
         return;
     }
