@@ -92,9 +92,28 @@ UI_TESTS = ["loginscreen_test"]
         "persistence/dbschema_test.cpp",
         "platform/stacktrace_test.cpp",
         "video/videoframe_test.cpp",
+        "chatlog/text_test.cpp",
         "**/*_fuzz_test.cpp",
     ],
 )]
+
+qt_test(
+    name = "text_test",
+    size = "small",
+    src = "chatlog/text_test.cpp",
+    copts = COPTS,
+    mocopts = ["-Iqtox"],
+    deps = [
+        ":dbutility",
+        ":mock",
+        "//qtox:res_lib",
+        "//qtox/src",
+        "//qtox/util",
+        "@qt//:qt_core",
+        "@qt//:qt_gui",
+        "@qt//:qt_widgets",
+    ],
+)
 
 qt_test(
     name = "videoframe_test",

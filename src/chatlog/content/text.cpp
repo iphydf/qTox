@@ -303,6 +303,10 @@ QString Text::getText() const
  */
 QString Text::getLinkAt(QPointF scenePos) const
 {
+    if (doc == nullptr) {
+        return {};
+    }
+
     QTextCursor cursor(doc);
     cursor.setPosition(cursorFromPos(scenePos));
     return cursor.charFormat().anchorHref();
@@ -437,6 +441,10 @@ QString Text::extractSanitizedText(int from, int to) const
 
 QString Text::extractImgTooltip(int pos) const
 {
+    if (doc == nullptr) {
+        return {};
+    }
+
     for (QTextBlock::Iterator itr = doc->firstBlock().begin(); itr != doc->firstBlock().end(); ++itr) {
         if (itr.fragment().contains(pos) && itr.fragment().charFormat().isImageFormat()) {
             const QTextImageFormat imgFmt = itr.fragment().charFormat().toImageFormat();
