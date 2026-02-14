@@ -1,0 +1,84 @@
+name: "CodeQL"
+
+on:
+  push:
+    branches: ["master"]
+  schedule:
+    - cron: "39 10 * * 0"
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-24.04
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ["cpp"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            build-essential \
+            cmake \
+            libavcodec-dev \
+            libavdevice-dev \
+            libavformat-dev \
+            libavutil-dev \
+            libconfig-dev \
+            libexif-dev \
+            libgl-dev \
+            libopenal-dev \
+            libopus-dev \
+            libqrencode-dev \
+            libsodium-dev \
+            libsqlcipher-dev \
+            libswscale-dev \
+            libunwind-dev \
+            libv4l-dev \
+            libvpx-dev \
+            libxss-dev \
+            ninja-build \
+            pkg-config \
+            qt6-base-dev \
+            qt6-l10n-tools \
+            qt6-svg-dev \
+            qt6-tools-dev \
+            qt6-tools-dev-tools
+
+      - name: Build toxcore
+        run: |
+          git clone --depth=1 --recursive https://github.com/TokTok/c-toxcore.git toxcore
+          cmake -B toxcore/_build -S toxcore -GNinja -DBOOTSTRAP_DAEMON=OFF
+          cmake --build toxcore/_build
+          sudo cmake --install toxcore/_build
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          queries: security-and-quality
+
+      - name: Build
+        run: |
+          cmake -GNinja -B _build -S . \
+            -DUPDATE_CHECK=OFF \
+            -DSPELL_CHECK=OFF \
+            -DSTRICT_OPTIONS=ON
+          cmake --build _build --parallel $(nproc)
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: "/language:${{ matrix.language }}"
