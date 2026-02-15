@@ -480,7 +480,7 @@ VideoFrame::FrameBufferKey VideoFrame::getFrameKey(const QSize& frameSize, const
  * found.
  */
 AVFrame* VideoFrame::retrieveAVFrame(const QSize& dimensions, const int pixelFormat,
-                                     const bool requireAligned)
+                                     const bool requireAligned) const
 {
     if (!requireAligned) {
         /*
@@ -489,16 +489,19 @@ AVFrame* VideoFrame::retrieveAVFrame(const QSize& dimensions, const int pixelFor
          */
         const FrameBufferKey frameKey = getFrameKey(dimensions, pixelFormat, false);
 
-        if (frameBuffer.contains(frameKey)) {
-            return frameBuffer[frameKey];
+        auto it = frameBuffer.find(frameKey);
+        if (it != frameBuffer.end()) {
+            return it->second;
         }
     }
 
     const FrameBufferKey frameKey = getFrameKey(dimensions, pixelFormat, true);
 
-    if (frameBuffer.contains(frameKey)) {
-        return frameBuffer[frameKey];
+    auto it = frameBuffer.find(frameKey);
+    if (it != frameBuffer.end()) {
+        return it->second;
     }
+
     return nullptr;
 }
 
@@ -513,7 +516,7 @@ AVFrame* VideoFrame::retrieveAVFrame(const QSize& dimensions, const int pixelFor
  * @return an AVFrame with the given specifications.
  */
 AVFrame* VideoFrame::generateAVFrame(const QSize& dimensions, const int pixelFormat,
-                                     const bool requireAligned)
+                                     const bool requireAligned) const
 {
     AVFrame* ret = av_frame_alloc();
 
@@ -567,7 +570,18 @@ AVFrame* VideoFrame::generateAVFrame(const QSize& dimensions, const int pixelFor
         return nullptr;
     }
 
-    AVFrame* source = frameBuffer[sourceFrameKey];
+    auto it = frameBuffer.find(sourceFrameKey);
+    if (it == frameBuffer.end() || it->second == nullptr) {
+        sws_freeContext(swsCtx);
+        av_freep(&ret->data[0]);
+#if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(57, 48, 101)
+        av_frame_unref(ret);
+#endif
+        av_frame_free(&ret);
+        return nullptr;
+    }
+
+    AVFrame* source = it->second;
 
     sws_scale(swsCtx, source->data, source->linesize, 0, sourceDimensions.height(), ret->data,
               ret->linesize);
@@ -607,8 +621,9 @@ AVFrame* VideoFrame::storeAVFrame(AVFrame* frame, const QSize& dimensions, const
     const FrameBufferKey frameKey = getFrameKey(dimensions, pixelFormat, frame->linesize[0]);
 
     // We check the presence of the frame in case of double-computation
-    if (frameBuffer.contains(frameKey)) {
-        AVFrame* old_ret = frameBuffer[frameKey];
+    auto it = frameBuffer.find(frameKey);
+    if (it != frameBuffer.end()) {
+        AVFrame* old_ret = it->second;
 
         // Free new frame
         av_freep(&frame->data[0]);
@@ -616,11 +631,10 @@ AVFrame* VideoFrame::storeAVFrame(AVFrame* frame, const QSize& dimensions, const
         av_frame_unref(frame);
 #endif
         av_frame_free(&frame);
-
         return old_ret;
     }
-    frameBuffer[frameKey] = frame;
 
+    frameBuffer[frameKey] = frame;
     return frame;
 }
 

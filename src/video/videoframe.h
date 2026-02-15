@@ -178,8 +178,8 @@ private:
     static FrameBufferKey getFrameKey(const QSize& frameSize, int pixFmt, int linesize);
     static FrameBufferKey getFrameKey(const QSize& frameSize, int pixFmt, bool frameAligned);
 
-    AVFrame* retrieveAVFrame(const QSize& dimensions, int pixelFormat, bool requireAligned);
-    AVFrame* generateAVFrame(const QSize& dimensions, int pixelFormat, bool requireAligned);
+    AVFrame* retrieveAVFrame(const QSize& dimensions, int pixelFormat, bool requireAligned) const;
+    AVFrame* generateAVFrame(const QSize& dimensions, int pixelFormat, bool requireAligned) const;
     AVFrame* storeAVFrame(AVFrame* frame, const QSize& dimensions, int pixelFormat);
 
     void deleteFrameBuffer();

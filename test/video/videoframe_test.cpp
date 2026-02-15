@@ -13,6 +13,8 @@ extern "C"
 #include <libavutil/imgutils.h>
 }
 
+#include <QtConcurrent/QtConcurrent>
+
 class TestVideoFrame : public QObject
 {
     Q_OBJECT
@@ -21,7 +23,36 @@ private slots:
     void testToQImageEmptySize();
     void testToQImageEmptySource();
     void testToToxYUVFrameEmptySource();
+    void testConcurrency();
 };
+
+void TestVideoFrame::testConcurrency()
+{
+    for (int j = 0; j < 5; ++j) {
+        AVFrame* frame = av_frame_alloc();
+        frame->width = 100;
+        frame->height = 100;
+        frame->format = AV_PIX_FMT_YUV420P;
+        av_image_alloc(frame->data, frame->linesize, 100, 100, AV_PIX_FMT_YUV420P, 1);
+
+        auto videoFrame = VideoFrame::fromAVFrameUntracked(1, frame, true);
+
+        QList<QFuture<void>> futures;
+        for (int i = 0; i < 200; ++i) {
+            futures.append(QtConcurrent::run([videoFrame]() {
+                for (int k = 0; k < 100; ++k) {
+                    QSize size = (k % 2 == 0) ? QSize(50, 50) : QSize(80, 80);
+                    const QImage img = videoFrame->toQImage(size);
+                    Q_UNUSED(img);
+                }
+            }));
+        }
+
+        for (auto& future : futures) {
+            future.waitForFinished();
+        }
+    }
+}
 
 void TestVideoFrame::testToQImageEmptySize()
 {

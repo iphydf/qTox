@@ -124,6 +124,7 @@ qt_test(
     deps = [
         "//qtox/src",
         "@ffmpeg",
+        "@qt//:qt_concurrent",
         "@qt//:qt_core",
     ],
 )
