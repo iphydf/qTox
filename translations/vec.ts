@@ -21,23 +21,23 @@
     </message>
     <message>
         <source>Screen %1</source>
-        <translation>Schermo %1</translation>
+        <translation>Viero %1</translation>
     </message>
     <message>
         <source>Audio Settings</source>
-        <translation>Inpostasion Audio</translation>
+        <translation>Audio Inpostasion</translation>
     </message>
     <message>
         <source>Gain</source>
-        <translation>Davanjo</translation>
+        <translation>Vadanjo</translation>
     </message>
     <message>
         <source>Playback device</source>
-        <translation>Dispozidivo de riprodusion</translation>
+        <translation>Despozidivo de reprodusion</translation>
     </message>
     <message>
         <source>Capture device</source>
-        <translation>Dispozidivo de acuizision</translation>
+        <translation>Despozidivo de audio</translation>
     </message>
     <message>
         <source>Volume</source>
@@ -45,11 +45,11 @@
     </message>
     <message>
         <source>Video Settings</source>
-        <translation>Inpostasion Video</translation>
+        <translation>Video Inpostasion</translation>
     </message>
     <message>
         <source>Video device</source>
-        <translation>Video dispozidivo</translation>
+        <translation>Video despozidivo</translation>
     </message>
     <message>
         <source>Set resolution of your camera.
@@ -61,7 +61,7 @@ which may lead to problems with video calls.</source>
 Co i alti inporti, ła sarà meja ła cuałità de&apos;l video par i to amighi.
 Varda, anca, par na meja cuałità de&apos;l video, A te bezonja de na conecsion pì bona.
 Altre &apos;olte ła to conecsion podarìa no èsar bona par manezar na alta cuałità de&apos;l video,
-el che el pol portar a problemi co łe to video ciamade.</translation>
+el che&apos;l pol tenjer problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Resolution</source>
@@ -69,11 +69,11 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Rescan devices</source>
-        <translation>Peretarghe dispozidivi</translation>
+        <translation>Peretar despozidivi</translation>
     </message>
     <message>
         <source>Test Sound</source>
-        <translation>Intestar Son</translation>
+        <translation>Provar Son</translation>
     </message>
     <message>
         <source>Audio quality</source>
@@ -88,7 +88,7 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Medium (32 kBps)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Mezo (32 kBps)</translation>
+        <translation>Medan (32 kBps)</translation>
     </message>
     <message>
         <source>Low (16 kBps)</source>
@@ -103,16 +103,16 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Threshold</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Soja</translation>
+        <translation>Łivel</translation>
     </message>
     <message>
         <source>Use slider to set the volume of your speakers.</source>
-        <translation>Dopara i controłi par inpostar el vołume de łe to case.</translation>
+        <translation>Doparar i controłi par inpostar el vołume de i to parladori.</translation>
     </message>
     <message>
         <source>Transmitted audio quality. Lower this setting if your bandwidth is not high enough or if you want to reduce bandwidth usage.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Cuałità de&apos;l audio trames. Basàrteghe &apos;sta inpostasion se ła so larghesa l&apos;è mìa alta o se A te vol far bas ła larghesa.</translation>
+        <translation>Cuałità de&apos;l audio trasmetà. Basàrteghe &apos;sta inpostasion se ła so bandwidth no l&apos;è mìa alta o se A te vol far bas ła costumansa de ła bandwidth.</translation>
     </message>
     <message>
         <source>Set resolution of your camera.
@@ -122,23 +122,23 @@ Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
         <translation>Inpostar ła rezołusion de ła to tełecàmera.
 Co i alti inporti, ła sarà meja ła cuałità de&apos;l video par i to amighi.
-Varda che co na meja cuałità de&apos;l video, ti te dopari pì larghesa.
+Varda che co na meja cuałità de&apos;l video, ti te dopari pì bandwidth.
 Altre &apos;olte ła to conecsion podarìa no èsar bona par manezar na alta cuałità de&apos;l video,
-el che el pol portar a problemi co łe to video ciamade.</translation>
+el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Play a test sound while changing the output volume.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Sonar na prova sona intanto el ze drio canbiar el vołume de insida.</translation>
+        <translation>Sonar na prova de son intanto el ze drio canbiar el vołume de insida.</translation>
     </message>
     <message>
         <source>Use slider to set the gain of your input device ranging from %1dB to %2dB.</source>
-        <translation>Dopara i controłi par inpostar el goadagno de&apos;l to dispozidivo de intrada, tra %1dB e %2dB.</translation>
+        <translation>Dopara i controłi par inpostar el vadanjo de&apos;l to despozidivo de intrada, intra %1dB e %2dB.</translation>
     </message>
     <message>
         <source>Use slider to set the activation volume for your input device.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Doparàrteghe i controłi par inpisar el vołume par el to dispozidivi de intrada.</translation>
+        <translation>Doparàrteghe i controłi par inpisar el vołume par i to despozidivi de intrada.</translation>
     </message>
 </context>
 <context>
@@ -161,7 +161,7 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>toxcore version: %1</source>
-        <translation>toxtors version: %1</translation>
+        <translation>ła toxcore version: %1</translation>
     </message>
     <message>
         <source>Qt version: %1</source>
@@ -171,26 +171,26 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
         <source>A list of all known issues may be found at our %1 at Github. If you discover a bug or security vulnerability within qTox, please report it according to the guidelines in our %2 wiki article.</source>
         <comment>`%1` is replaced by translation of `bug tracker`
 `%2` is replaced by translation of `Writing Useful Bug Reports`</comment>
-        <translation>Ła łista de i problemi conjosùi ła se pol catar su&apos;l nostro %1 Github. Se te cati un bug o un problema de seguransa in qTox, par piaser rapórtane el tuto drio łe guide nte&apos;l nostro %2 wiki artìgoło.</translation>
+        <translation>Ła łista de łe ronje conjosue ła se pol catar su&apos;l nostro %1 Github. Se ti cati un bug o na ronja de seguransa in qTox, par piazer raportar tuto drio łe guidelines te&apos;l nostro %2 wiki artìgoło.</translation>
     </message>
     <message>
         <source>Click here to report a bug.</source>
-        <translation>Zogar cuà par reportar un bug.</translation>
+        <translation>Click cuà par reportar un bug.</translation>
     </message>
     <message>
         <source>See a full list of %1 at Github</source>
         <comment>`%1` is replaced with translation of word `contributors`</comment>
-        <translation>Vardar el rol de i %1 nte&apos;l Github</translation>
+        <translation>Vardar ła łista piena de i %1 nte&apos;l Github</translation>
     </message>
     <message>
         <source>bug-tracker</source>
         <comment>Replaces `%1` in the `A list of all known…`</comment>
-        <translation>traciador de bug</translation>
+        <translation>el bug-tracker</translation>
     </message>
     <message>
         <source>Writing Useful Bug Reports</source>
         <comment>Replaces `%2` in the `A list of all known…`</comment>
-        <translation>Scrìvar raporti de bug ùtiłi</translation>
+        <translation>Drio Scrivar Ùtiłi Raporti de Bug</translation>
     </message>
     <message>
         <source>contributors</source>
@@ -200,18 +200,18 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>This version of qTox is being maintained by the TokTok team following the archiving of the original qTox project.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>&apos;Sta version de&apos;l qTox ła ze drio sostentar co łe man de&apos;l sciapo de&apos;l TokTok dopo ła interusion de&apos;l prozet orizinal de&apos;l qTox.</translation>
+        <translation>&apos;Sta version de&apos;l qTox ła ze drio tenjer co łe man de&apos;l sciapo de&apos;l TokTok dopo ła interusion de&apos;l prozet orizinal de&apos;l qTox.</translation>
     </message>
 </context>
 <context>
     <name>AboutFriendForm</name>
     <message>
         <source>Automatically accept files from contact if set</source>
-        <translation>Aceta in automàtego i file da&apos;l contato, se inpostà</translation>
+        <translation>Asetar automàtego i arcivi da&apos;l contato, se inpostà</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
-        <translation>Predefinìa cartèła par salvar i arcivi:</translation>
+        <translation>Predefinìa directory par salvar i arcivi:</translation>
     </message>
     <message>
         <source>Manual</source>
@@ -227,11 +227,11 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Automatically accept conference invitations from this contact if set.</source>
-        <translation>Aceta in automàtego i inviti a łe conferense da &apos;sto contato, se inpostà.</translation>
+        <translation>Aseta automàtego i inviti de łe conferense da &apos;sto contato, se inpostà.</translation>
     </message>
     <message>
         <source>Remove history (operation can not be undone!)</source>
-        <translation>Ełimenar ła cronołozìa (l&apos;operasion no ła pol èsar anułà!)</translation>
+        <translation>Butar via ła cronołozìa (l&apos;operasion ła no pol mìa èsar anułà!)</translation>
     </message>
     <message>
         <source>Notes</source>
@@ -243,7 +243,7 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>History removed</source>
-        <translation>Cronołozìa ełimenà</translation>
+        <translation>Cronołozìa ła ga butà via</translation>
     </message>
     <message>
         <source>This is the public key of your friend, use it to verify their identity via another channel. You can not send this to other people so they can add this contact.</source>
@@ -262,12 +262,12 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Are you sure to remove %1 chat history?</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Sito ti segur da ełimenar %1 cronołozìa de&apos;l chat?</translation>
+        <translation>Sito ti segur da butar via %1 cronołozìa de&apos;l chat?</translation>
     </message>
     <message>
         <source>Failed to remove chat history with %1!</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Fałìo da ełimenar ła cronołozìa de&apos;l chat co %1!</translation>
+        <translation>Fałìo da butar via ła cronołozìa de&apos;l chat co %1!</translation>
     </message>
     <message>
         <source>Auto-accept files</source>
@@ -277,22 +277,22 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Auto-accept for this contact is disabled</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Auto-asetar par &apos;sto contat l&apos;è dezabiłità</translation>
+        <translation>El auto-asetar par &apos;sto contat l&apos;è dezabiłità</translation>
     </message>
     <message>
         <source>Auto-accept call:</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Auto-aseta ciamada:</translation>
+        <translation>Auto-asetar ciamada:</translation>
     </message>
     <message>
         <source>Auto-accept conference invites</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Auto-asetar inviti a łe conferense</translation>
+        <translation>Auto-asetar inviti par łe conferense</translation>
     </message>
     <message>
         <source>You can save comments about this contact here.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Ti A te pol salvarte note so &apos;sto contat cuà.</translation>
+        <translation>Ti A te pol salvar note so &apos;sto contat cuà.</translation>
     </message>
 </context>
 <context>
@@ -311,27 +311,27 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Known Issues</source>
-        <translation>Problemi Conjosùi</translation>
+        <translation>Ronje Conjosùe</translation>
     </message>
     <message>
         <source>Open update download link</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Verzar el łigo de download par azornar</translation>
+        <translation>Verzar el łigo de download par metarse in dì</translation>
     </message>
     <message>
         <source>Update available</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Azornamento disponibiłe</translation>
+        <translation>Metarse in dì disponibiłe</translation>
     </message>
     <message>
         <source>qTox is up to date ✓</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>qTox l&apos;è azornà ✓</translation>
+        <translation>qTox el meta in dì ✓</translation>
     </message>
     <message>
         <source>Currently running an untested/unstable version of qTox</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Deso doparando na version mìa testada o instàbiłe de&apos;l qTox</translation>
+        <translation>Drio doparar deso na version untested/unstable de&apos;l qTox</translation>
     </message>
 </context>
 <context>
@@ -342,7 +342,7 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Invalid Tox ID format</source>
-        <translation>No l&apos;è segur el Tox ID formato</translation>
+        <translation>No l&apos;è justo el Tox ID formato</translation>
     </message>
     <message>
         <source>Add Friends</source>
@@ -384,7 +384,7 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Open contact list</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Verzar łista de contat</translation>
+        <translation>Verzar ła łista de contat</translation>
     </message>
     <message>
         <source>Couldn&apos;t open file</source>
@@ -405,7 +405,7 @@ el che el pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>We couldn&apos;t find any contacts to import in this file!</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Nuantri podem mìa catar fóra contati par inportar nte&apos;l &apos;sto arcivo!</translation>
+        <translation>Nuantri no podon mìa catar fóra calche contati par inportar nte&apos;l &apos;sto arcivo!</translation>
     </message>
     <message>
         <source>Tox ID</source>
