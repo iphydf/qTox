@@ -197,11 +197,11 @@ lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pend
     <name>AboutFriendForm</name>
     <message>
         <source>Automatically accept files from contact if set</source>
-        <translation type="unfinished">zmiku nu zanru lo loi datnyve&apos;i be fi lo vi jikca</translation>
+        <translation type="unfinished">zmiku nu zanru loi datnyve&apos;i be fi lo vi jikca</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
-        <translation type="unfinished">fadni stuzi be lo nu vrejgau lo loi datnyve&apos;i</translation>
+        <translation type="unfinished">fadni stuzi be lo nu vrejgau loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Manual</source>
@@ -217,7 +217,7 @@ lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pend
     </message>
     <message>
         <source>Automatically accept conference invitations from this contact if set.</source>
-        <translation type="unfinished">zmiku nu zanru lo loi nungirzu vitcpe be fi lo vi jikca</translation>
+        <translation type="unfinished">zmiku nu zanru loi nungirzu vitcpe be fi lo vi jikca</translation>
     </message>
     <message>
         <source>Remove history (operation can not be undone!)</source>
@@ -229,7 +229,7 @@ lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pend
     </message>
     <message>
         <source>Input field for notes about the contact</source>
-        <translation type="unfinished">nu ciska lo loi notci be lo vi jikca</translation>
+        <translation type="unfinished">nu ciska loi notci be lo vi jikca</translation>
     </message>
     <message>
         <source>History removed</source>
@@ -245,7 +245,7 @@ lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pend
     </message>
     <message>
         <source>Confirmation</source>
-        <translation type="unfinished">nu birti</translation>
+        <translation type="unfinished">birti</translation>
     </message>
     <message>
         <source>Are you sure to remove %1 chat history?</source>
@@ -257,7 +257,7 @@ lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pend
     </message>
     <message>
         <source>Auto-accept files</source>
-        <translation type="unfinished">zmiku nu zanru lo loi datnyve&apos;i</translation>
+        <translation type="unfinished">zmiku nu zanru loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Auto-accept for this contact is disabled</source>
@@ -269,11 +269,11 @@ lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pend
     </message>
     <message>
         <source>Auto-accept conference invites</source>
-        <translation type="unfinished">zmiku nu zanru lo loi nungirzu vitcpe</translation>
+        <translation type="unfinished">zmiku nu zanru loi nungirzu vitcpe</translation>
     </message>
     <message>
         <source>You can save comments about this contact here.</source>
-        <translation type="unfinished">do kakne lo nu vrejgau lo loi pinka be lo vi jikca vi ti</translation>
+        <translation type="unfinished">do kakne lo nu vrejgau loi pinka be lo vi jikca vi ti</translation>
     </message>
 </context>
 <context>
@@ -456,7 +456,7 @@ lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pend
     </message>
     <message>
         <source>Reset settings</source>
-        <translation type="unfinished">refsetca lo loi tercu&apos;e</translation>
+        <translation type="unfinished">refsetca loi tercu&apos;e</translation>
     </message>
     <message>
         <source>All settings will be reset to default. Are you sure?</source>
@@ -500,7 +500,7 @@ lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pend
     <message>
         <source>Save settings to the working directory instead of the usual conf dir</source>
         <extracomment>describes makeToxPortable checkbox</extracomment>
-        <translation type="unfinished">vrejgau lo loi tercu&apos;e vi lo gunka stuzi gi&apos;e na vrejgau vi lo fadni .conf. stuzi</translation>
+        <translation type="unfinished">vrejgau loi tercu&apos;e vi lo gunka stuzi gi&apos;e na vrejgau vi lo fadni .conf. stuzi</translation>
     </message>
     <message>
         <source>Make Tox portable</source>
@@ -560,7 +560,7 @@ lo ka zmadu be lo nitcila cu rinka lo ka xagmau fa lo vidni ckaji poi lo do pend
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
-        <translation type="unfinished">akti lo loi nunfagau tutci (loi favgau po&apos;o)</translation>
+        <translation type="unfinished">akti loi nunfagau tutci (loi favgau po&apos;o)</translation>
     </message>
     <message>
         <source>Connection settings</source>
@@ -697,7 +697,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Cancel audio call</source>
-        <translation type="unfinished">nu sisti lo sance fonjorne</translation>
+        <translation type="unfinished">sisti lo sance fonjorne</translation>
     </message>
     <message>
         <source>Accept audio call</source>
@@ -717,7 +717,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Cancel video call</source>
-        <translation type="unfinished">nu sisti lo vidni fonjorne</translation>
+        <translation type="unfinished">sisti lo vidni fonjorne</translation>
     </message>
     <message>
         <source>Accept video call</source>
@@ -963,7 +963,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Cancel transfer</source>
-        <translation type="unfinished">nu sisti lo nu benji</translation>
+        <translation type="unfinished">sisti lo nu benji</translation>
     </message>
     <message>
         <source>Pause transfer</source>
@@ -1087,11 +1087,11 @@ so you can save the file on Windows.</source>
     <message>
         <source>Auto accept files from this friend</source>
         <comment>context menu entry</comment>
-        <translation type="unfinished">zmiku nu zanru lo loi datnyve&apos;i be fi lo vi pendo</translation>
+        <translation type="unfinished">zmiku nu zanru loi datnyve&apos;i be fi lo vi pendo</translation>
     </message>
     <message>
         <source>Show details</source>
-        <translation type="unfinished">jarco lo loi tcila</translation>
+        <translation type="unfinished">jarco loi tcila</translation>
     </message>
     <message>
         <source>New message</source>
@@ -1192,11 +1192,11 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Set where files will be saved.</source>
-        <translation type="unfinished">setca lo stuzi poi lo loi datnyve&apos;i cu se vrejgau ke&apos;a</translation>
+        <translation type="unfinished">setca lo stuzi poi loi datnyve&apos;i cu se vrejgau ke&apos;a</translation>
     </message>
     <message>
         <source>Autoaccept files</source>
-        <translation type="unfinished">zmiku nu zanru lo loi datnyve&apos;i</translation>
+        <translation type="unfinished">zmiku nu zanru loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Set to 0 to disable</source>
@@ -1220,7 +1220,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Default directory to save files:</source>
-        <translation type="unfinished">fadni stuzi be lo nu vrejgau lo loi datnyve&apos;i:</translation>
+        <translation type="unfinished">fadni stuzi be lo nu vrejgau loi datnyve&apos;i:</translation>
     </message>
     <message>
         <source>Check for updates</source>
@@ -1232,7 +1232,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Max autoaccept file size (0 to disable):</source>
-        <translation type="unfinished">lo traji nilcla be lo loi datnyve&apos;i poi zmiku nu zanru (li no lo nu tolakti):</translation>
+        <translation type="unfinished">lo traji nilcla be loi datnyve&apos;i poi zmiku nu zanru (li no lo nu tolakti):</translation>
     </message>
     <message>
         <source> MB</source>
@@ -1286,7 +1286,7 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Send file(s)</source>
-        <translation type="unfinished">benji lo loi datnyve&apos;i</translation>
+        <translation type="unfinished">benji loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Send a screenshot</source>
@@ -1298,7 +1298,7 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Clear displayed messages</source>
-        <translation type="unfinished">vimcu lo loi se jarco notci</translation>
+        <translation type="unfinished">vimcu loi se jarco notci</translation>
     </message>
     <message>
         <source>Quote selected text</source>
@@ -1310,7 +1310,7 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Confirmation</source>
-        <translation type="unfinished">nu birti</translation>
+        <translation type="unfinished">birti</translation>
     </message>
     <message>
         <source>Search in text</source>
@@ -1364,7 +1364,7 @@ instead of closing entirely.</source>
     <message>
         <source>Logout</source>
         <comment>import profile button</comment>
-        <translation type="unfinished">nu co&apos;u jikca</translation>
+        <translation type="unfinished">co&apos;u jikca</translation>
     </message>
     <message>
         <source>Remove password</source>
@@ -1376,7 +1376,7 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>This QR code contains your Tox ID. You may share this with your friends as well.</source>
-        <translation type="unfinished">lo vi QR kodji cu se cmima lo do la&apos;oi Tox judri .i do kakne lo nu snatci ti lo do loi pendo</translation>
+        <translation type="unfinished">lo vi QR kodji cu se cmima lo do la&apos;oi Tox judri .i do kakne lo nu snatci ti lo do pendo</translation>
     </message>
     <message>
         <source>Save image</source>
@@ -1423,7 +1423,7 @@ Profile does not contain your history.</source>
     </message>
     <message>
         <source>Name visible to contacts</source>
-        <translation type="unfinished">cmene poi lo loi jikca cu kakne lo ka viska ke&apos;a</translation>
+        <translation type="unfinished">cmene poi loi jikca cu kakne lo ka viska ke&apos;a</translation>
     </message>
     <message>
         <source>Status message input</source>
@@ -1508,7 +1508,7 @@ ko snatci lo do pendo ko lo nu co&apos;a casnu</translation>
     </message>
     <message>
         <source>Confirm:</source>
-        <translation type="unfinished">nu birti:</translation>
+        <translation type="unfinished">birti:</translation>
     </message>
     <message>
         <source>Password strength: %p%</source>
@@ -1556,7 +1556,7 @@ ko snatci lo do pendo ko lo nu co&apos;a casnu</translation>
     </message>
     <message>
         <source>Password protected profiles can&apos;t be automatically loaded.</source>
-        <translation type="unfinished">lo loi prufile poi se mipyvla cu na kakne lo nu zmiku nu nerkla</translation>
+        <translation type="unfinished">loi prufile poi se mipyvla cu na kakne lo nu zmiku nu nerkla</translation>
     </message>
     <message>
         <source>There is no selected profile.
@@ -1633,17 +1633,17 @@ You may want to create one.</source>
     <message>
         <source>The passwords you&apos;ve entered are different.
 Please make sure to enter the same password twice.</source>
-        <translation type="unfinished">lo loi mipyvla poi do pu ciska ke&apos;a cu frica .i .e&apos;o ko birti lo nu do ciska lo mintu mipyvla re roi</translation>
+        <translation type="unfinished">loi mipyvla poi do pu ciska ke&apos;a cu frica .i .e&apos;o ko birti lo nu do ciska lo mintu mipyvla re roi</translation>
     </message>
     <message>
         <source>This optional password is used to encrypt local message data and your profile.
 If you lose this password, there is no way to recover it.
 Press Shift+F1 for more information.</source>
-        <translation type="unfinished">lo vi se cuxna mipyvla cu se pilno lo nu mipri lo loi vi notci datni .e lo do prufile .i fau lo nu do cirko lo vi mipyvla kei no da ka&apos;e rinka lo nu tolyzu&apos;e ri .i ko catke lo me .Shift.+F1 lo nu zenba lo datni</translation>
+        <translation type="unfinished">lo vi se cuxna mipyvla cu se pilno lo nu mipri loi vi notci datni .e lo do prufile .i fau lo nu do cirko lo vi mipyvla kei no da ka&apos;e rinka lo nu tolyzu&apos;e ri .i ko catke lo me .Shift.+F1 lo nu zenba lo datni</translation>
     </message>
     <message>
         <source>The password you enter here is optional and encrypts message data and your Tox secret key. It does not encrypt files received. Your profile data is never sent to any servers. This is not a remote login, it&apos;s local to your computer only. qTox developers won&apos;t be able to recover your password if lost.</source>
-        <translation type="unfinished">lo mipyvla poi do ciska ke&apos;a vi cu se cuxna gi&apos;e mipri lo loi notci datni .e lo do la&apos;oi Tox mipri ckiku .i na mipri lo loi se cpacu datnyve&apos;i .i lo do prufile datni cu noroi se benji lo loi samselcmi .i ti na nu darno nerkla .i ti ne&apos;i lo do skami po&apos;o .i lo loi finti be la&apos;oi qTox na kakne lo nu tolyzu&apos;e lo do mipyvla fau lo nu do cirko ri</translation>
+        <translation type="unfinished">lo mipyvla poi do ciska ke&apos;a vi cu se cuxna gi&apos;e mipri loi notci datni .e lo do la&apos;oi Tox mipri ckiku .i na mipri loi se cpacu datnyve&apos;i .i lo do prufile datni cu noroi se benji loi samselcmi .i ti na nu darno nerkla .i ti ne&apos;i lo do skami po&apos;o .i loi finti be la&apos;oi qTox na kakne lo nu tolyzu&apos;e lo do mipyvla fau lo nu do cirko ri</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
@@ -1666,7 +1666,7 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>View completed file transfers</source>
-        <translation type="unfinished">jarco lo loi mulno datnyve&apos;i benji</translation>
+        <translation type="unfinished">jarco loi mulno datnyve&apos;i benji</translation>
     </message>
     <message>
         <source>Change your settings</source>
@@ -1702,11 +1702,11 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Contact search</source>
-        <translation type="unfinished">nu sisku lo loi jikca</translation>
+        <translation type="unfinished">nu sisku loi jikca</translation>
     </message>
     <message>
         <source>Contact search input for known friends</source>
-        <translation type="unfinished">jikca nu sisku nerkla be lo loi djuno pendo</translation>
+        <translation type="unfinished">jikca nu sisku nerkla be loi djuno pendo</translation>
     </message>
     <message>
         <source>Sorting and visibility</source>
@@ -1714,7 +1714,7 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Set friends sorting and visibility</source>
-        <translation type="unfinished">setca lo loi pendo nu porsi e lo ka se viska</translation>
+        <translation type="unfinished">setca loi pendo nu porsi e lo ka se viska</translation>
     </message>
     <message>
         <source>Open Add friends page</source>
@@ -1730,11 +1730,11 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>File transfers history</source>
-        <translation type="unfinished">lo loi datnyve&apos;i benji citri</translation>
+        <translation type="unfinished">loi datnyve&apos;i benji citri</translation>
     </message>
     <message>
         <source>Open File transfers history</source>
-        <translation type="unfinished">kalri lo loi datnyve&apos;i benji citri</translation>
+        <translation type="unfinished">kalri loi datnyve&apos;i benji citri</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -1742,11 +1742,11 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Open Settings</source>
-        <translation type="unfinished">kalri lo loi tercu&apos;e</translation>
+        <translation type="unfinished">kalri loi tercu&apos;e</translation>
     </message>
     <message>
         <source>Open internal debugging tools</source>
-        <translation type="unfinished">kalri lo loi nenri nunfagau tutci</translation>
+        <translation type="unfinished">kalri loi nenri nunfagau tutci</translation>
     </message>
     <message>
         <source>Debug</source>
@@ -1771,7 +1771,7 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>You have asked qTox to open an executable file. Executable files can potentially damage your computer. Are you sure want to open this file?</source>
         <comment>popup text</comment>
-        <translation type="unfinished">do pu cpedu lo nu la&apos;oi qTox cu kalri lo samru&apos;e datnyve&apos;i .i lo loi samru&apos;e datnyve&apos;i cu cumki lo nu xrani lo do skami .i xu do birti lo nu djica lo nu kalri ti poi datnyve&apos;i</translation>
+        <translation type="unfinished">do pu cpedu lo nu la&apos;oi qTox cu kalri lo samru&apos;e datnyve&apos;i .i loi samru&apos;e datnyve&apos;i cu cumki lo nu xrani lo do skami .i xu do birti lo nu djica lo nu kalri ti poi datnyve&apos;i</translation>
     </message>
 </context>
 <context>
@@ -1806,11 +1806,11 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>Hide messages</source>
-        <translation type="unfinished">mipri lo loi notci</translation>
+        <translation type="unfinished">mipri loi notci</translation>
     </message>
     <message>
         <source>Show messages</source>
-        <translation type="unfinished">jarco lo loi notci</translation>
+        <translation type="unfinished">jarco loi notci</translation>
     </message>
 </context>
 <context>
@@ -1920,7 +1920,7 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>Your friends will be able to see when you are typing.</source>
         <comment>tooltip for typing notifications setting</comment>
-        <translation type="unfinished">lo do loi pendo ba kakne lo ka viska ca lo nu do ciska</translation>
+        <translation type="unfinished">lo do pendo ba kakne lo ka viska ca lo nu do ciska</translation>
     </message>
     <message>
         <source>Send typing notifications</source>
@@ -1935,7 +1935,7 @@ Press Shift+F1 for more information.</source>
 If you are being spammed with friend requests, you should change your NoSpam.
 People will be unable to add you with your old ID, but you will keep your current friends.</source>
         <comment>toolTip for nospam</comment>
-        <translation type="unfinished">la&apos;oi NoSpam pagbu lo do la&apos;oi Tox judri .i fau lo nu do se cpedu lo nu pendo ta&apos;i lo nu cnispa kei do bilga lo nu galfi lo do la&apos;oi NoSpam .i lo loi prenu ba na kakne lo nu jmina do ta&apos;i lo do laldo judri .i ku&apos;i do ba ralte lo ca pendo</translation>
+        <translation type="unfinished">la&apos;oi NoSpam pagbu lo do la&apos;oi Tox judri .i fau lo nu do se cpedu lo nu pendo ta&apos;i lo nu cnispa kei do bilga lo nu galfi lo do la&apos;oi NoSpam .i loi prenu ba na kakne lo nu jmina do ta&apos;i lo do laldo judri .i ku&apos;i do ba ralte lo ca pendo</translation>
     </message>
     <message>
         <source>NoSpam</source>
@@ -1966,7 +1966,7 @@ Save format changes are possible, which may result in data loss.</source>
     </message>
     <message>
         <source>Filter out conference messages by conference members&apos; public keys. Put public keys here, one per line.</source>
-        <translation type="unfinished">filtra lo nungirzu notci ta&apos;i lo loi nungirzu cmima gubni ckiku .i ko punji lo gubni ckiku pa vi ro linji</translation>
+        <translation type="unfinished">filtra lo nungirzu notci ta&apos;i loi nungirzu cmima gubni ckiku .i ko punji lo gubni ckiku pa vi ro linji</translation>
     </message>
 </context>
 <context>
@@ -2009,7 +2009,7 @@ Save format changes are possible, which may result in data loss.</source>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished">nu vimcu</translation>
+        <translation type="unfinished">vimcu</translation>
     </message>
     <message>
         <source>Unable to read this image.</source>
@@ -2044,7 +2044,7 @@ Please use another image.</source>
     <message>
         <source>Save</source>
         <comment>save qr image</comment>
-        <translation type="unfinished">nu vrejgau</translation>
+        <translation type="unfinished">vrejgau</translation>
     </message>
     <message>
         <source>Save QrCode (*.png)</source>
@@ -2054,17 +2054,17 @@ Please use another image.</source>
     <message>
         <source>Files could not be deleted!</source>
         <comment>deletion failed title</comment>
-        <translation type="unfinished">fliba lo nu vimcu lo loi datnyve&apos;i</translation>
+        <translation type="unfinished">fliba lo nu vimcu loi datnyve&apos;i</translation>
     </message>
     <message>
         <source>Change password</source>
         <comment>button text</comment>
-        <translation type="unfinished">nu galfi lo mipyvla</translation>
+        <translation type="unfinished">galfi lo mipyvla</translation>
     </message>
     <message>
         <source>Set profile password</source>
         <comment>button text</comment>
-        <translation type="unfinished">nu setca lo mipyvla be lo prufile</translation>
+        <translation type="unfinished">setca lo mipyvla be lo prufile</translation>
     </message>
     <message>
         <source>Current profile location: %1</source>
@@ -2230,7 +2230,7 @@ ko snatci lo do pendo ko lo nu co&apos;a casnu
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">nu sisti</translation>
+        <translation type="unfinished">sisti</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -2456,7 +2456,7 @@ ko snatci lo do pendo ko lo nu co&apos;a casnu
     </message>
     <message>
         <source>Canceled</source>
-        <translation type="unfinished">nu sisti</translation>
+        <translation type="unfinished">sisti</translation>
     </message>
     <message>
         <source>Paused</source>
@@ -2589,7 +2589,7 @@ ko snatci lo do pendo ko lo nu co&apos;a casnu
     </message>
     <message>
         <source>Use regular expressions</source>
-        <translation type="unfinished">pilno lo loi fadni sinxa</translation>
+        <translation type="unfinished">pilno loi fadni sinxa</translation>
     </message>
     <message>
         <source>Select Date Dialog</source>
@@ -2604,7 +2604,7 @@ ko snatci lo do pendo ko lo nu co&apos;a casnu
     <name>SetPasswordDialog</name>
     <message>
         <source>Confirm:</source>
-        <translation type="unfinished">nu birti:</translation>
+        <translation type="unfinished">birti:</translation>
     </message>
     <message>
         <source>Password:</source>
@@ -2616,7 +2616,7 @@ ko snatci lo do pendo ko lo nu co&apos;a casnu
     </message>
     <message>
         <source>The password doesn&apos;t match.</source>
-        <translation type="unfinished">lo loi mipyvla na mintu</translation>
+        <translation type="unfinished">loi mipyvla na mintu</translation>
     </message>
     <message>
         <source>Confirm password</source>
@@ -2684,7 +2684,7 @@ ko snatci lo do pendo ko lo nu co&apos;a casnu
     <message>
         <source>Cancel</source>
         <comment>Don&apos;t send a friend request</comment>
-        <translation type="unfinished">nu sisti</translation>
+        <translation type="unfinished">sisti</translation>
     </message>
     <message>
         <source>Add friend</source>
@@ -2843,7 +2843,7 @@ lo mipri lerseltcidu sinxa:
     </message>
     <message>
         <source>Use identicons instead of empty avatars</source>
-        <translation type="unfinished">pilno lo loi .identicon. sinxa lo nu kunti .avatar.</translation>
+        <translation type="unfinished">pilno loi .identicon. sinxa lo nu kunti .avatar.</translation>
     </message>
     <message>
         <source>Show a notification when you receive a new message, call, or friend request and the window is not selected.</source>
@@ -2856,7 +2856,7 @@ lo mipri lerseltcidu sinxa:
     </message>
     <message>
         <source>Conferences only notify when mentioned</source>
-        <translation type="unfinished">lo loi nungirzu cu notci ca lo nu do se cmene po&apos;o</translation>
+        <translation type="unfinished">loi nungirzu cu notci ca lo nu do se cmene po&apos;o</translation>
     </message>
     <message>
         <source>Play sound</source>
@@ -2868,7 +2868,7 @@ lo mipri lerseltcidu sinxa:
     </message>
     <message>
         <source>Notify via desktop notifications</source>
-        <translation type="unfinished">notci ta&apos;i lo loi skami notci</translation>
+        <translation type="unfinished">notci ta&apos;i loi skami notci</translation>
     </message>
     <message>
         <source>Hide message sender and contents</source>
@@ -2876,36 +2876,36 @@ lo mipri lerseltcidu sinxa:
     </message>
     <message>
         <source>Use colored nicknames in conferences</source>
-        <translation type="unfinished">pilno lo loi skari samcmi vi lo loi nungirzu</translation>
+        <translation type="unfinished">pilno loi skari samcmi vi loi nungirzu</translation>
     </message>
     <message>
         <source>Only notify about new messages in conferences when your nickname is mentioned.</source>
         <comment>toolTip for Conferences only notify when mentioned</comment>
-        <translation type="unfinished">notci lo loi cnino notci vi lo loi nungirzu ca lo nu do se cmene po&apos;o</translation>
+        <translation type="unfinished">notci loi cnino notci vi loi nungirzu ca lo nu do se cmene po&apos;o</translation>
     </message>
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
-        <translation type="unfinished">fau lo nu tolakti kei smaji lo loi notci sance ca lo nu do tolzi&apos;e (ije ku&apos;i jarco lo nu notci)</translation>
+        <translation type="unfinished">fau lo nu tolakti kei smaji loi notci sance ca lo nu do tolzi&apos;e (ije ku&apos;i jarco lo nu notci)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
-        <translation type="unfinished">pilno lo loi skami notci .i fau lo nu na pilno kei lo nu notci cu se jarco ta&apos;i lo nu lo ciste samtci sinxa cu gusni carmi po&apos;o</translation>
+        <translation type="unfinished">pilno loi skami notci .i fau lo nu na pilno kei lo nu notci cu se jarco ta&apos;i lo nu lo ciste samtci sinxa cu gusni carmi po&apos;o</translation>
     </message>
     <message>
         <source>If disabled, use basic system tray notifications. Otherwise, try to use the notification backend of your desktop environment. Disable this if you observe issues with desktop notifications.</source>
-        <translation type="unfinished">fau lo nu tolakti kei pilno lo loi jicmu ciste samtci notci .i fau lo nu drata kei troci lo nu pilno lo loi skami notci be lo do skami vanbi .i ko tolakti ti fau lo nu do facki lo nabmi vi lo loi skami notci</translation>
+        <translation type="unfinished">fau lo nu tolakti kei pilno loi jicmu ciste samtci notci .i fau lo nu drata kei troci lo nu pilno loi skami notci be lo do skami vanbi .i ko tolakti ti fau lo nu do facki lo nabmi vi loi skami notci</translation>
     </message>
     <message>
         <source>Use system-specific notification backend if available</source>
-        <translation type="unfinished">pilno lo loi ciste notci tercu&apos;e fau lo nu zasti</translation>
+        <translation type="unfinished">pilno loi ciste notci tercu&apos;e fau lo nu zasti</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
-        <translation type="unfinished">jarco lo lerfu poi «cnino notci» po&apos;o gi&apos;e na jarco lo loi sivni datni vi lo loi skami notci</translation>
+        <translation type="unfinished">jarco lo lerfu poi «cnino notci» po&apos;o gi&apos;e na jarco loi sivni datni vi loi skami notci</translation>
     </message>
     <message>
         <source>Split friend list and chat window into separately moveable windows.</source>
-        <translation type="unfinished">fendi lo loi pendo liste e lo loi casnu canko lo loi frica canko poi ka&apos;e se muvdu</translation>
+        <translation type="unfinished">fendi loi pendo liste e loi casnu canko loi frica canko poi ka&apos;e se muvdu</translation>
     </message>
     <message>
         <source>If enabled, every contact without an avatar will have a generated icon based on their Tox ID instead of the default picture. Requires restart to apply.</source>
@@ -2914,11 +2914,11 @@ lo mipri lerseltcidu sinxa:
     </message>
     <message>
         <source>Display textual emojis as colorful pictures instead of text or black/white font-rendered emojis.</source>
-        <translation type="unfinished">jarco lo loi lerseltcidu cinmo pixra ta&apos;i lo loi skari pixra gi&apos;e na jarco ke&apos;a ta&apos;i lo lerseltcidu ja lo loi xekri ja blabi lerfu cinmo pixra</translation>
+        <translation type="unfinished">jarco loi lerseltcidu cinmo pixra ta&apos;i loi skari pixra gi&apos;e na jarco ke&apos;a ta&apos;i lo lerseltcidu ja loi xekri ja blabi lerfu cinmo pixra</translation>
     </message>
     <message>
         <source>Select which set of pictures to use when rendering emojis.</source>
-        <translation type="unfinished">cuxna lo nu loi pixra klesi ma kau cu se pilno ca lo nu jarco lo loi cinmo pixra</translation>
+        <translation type="unfinished">cuxna lo nu loi pixra klesi ma kau cu se pilno ca lo nu jarco loi cinmo pixra</translation>
     </message>
     <message>
         <source>Smiley pack:</source>
@@ -2927,7 +2927,7 @@ lo mipri lerseltcidu sinxa:
     </message>
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
-        <translation type="unfinished">lo nilcla vi lo loi .pixel. be lo cinmo pixra .i ko cuxna lo simsa be lo do jicmu lerfu nilcla</translation>
+        <translation type="unfinished">lo nilcla vi loi .pixel. be lo cinmo pixra .i ko cuxna lo simsa be lo do jicmu lerfu nilcla</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
@@ -2940,7 +2940,7 @@ lo mipri lerseltcidu sinxa:
     <message>
         <source>Show previews for sent and received images in chats. Hover over the inline preview to display a larger preview.</source>
         <comment>tooltip for Image preview setting</comment>
-        <translation type="unfinished">jarco lo loi vitke be lo loi se benji ja se cpacu pixra vi lo loi casnu .i fau lo nu lo mause cu se stuzi ga&apos;u lo vi vitke kei jarco lo barda vitke</translation>
+        <translation type="unfinished">jarco loi vitke be loi se benji ja se cpacu pixra vi loi casnu .i fau lo nu lo mause cu se stuzi ga&apos;u lo vi vitke kei jarco lo barda vitke</translation>
     </message>
     <message>
         <source>Image preview</source>
@@ -2950,7 +2950,7 @@ lo mipri lerseltcidu sinxa:
         <source>Maximum number of messages (per conversation) loaded from chat history.
 Decrease this to improve performance. A too low number here may cause the
 scroll bar to disappear.</source>
-        <translation type="unfinished">lo traji nilcla be lo loi notci (pa&apos;i pa lo loi nuncasnu) poi se nerkla fi lo casnu citri .i ko jdika ti lo nu xagmau lo nu samtci gunka .i fau lo nu lo ni vi dukse cmalu kei lo nu bajra porsi cu cumki lo nu canci</translation>
+        <translation type="unfinished">lo traji nilcla be loi notci (pa&apos;i pa loi nuncasnu) poi se nerkla fi lo casnu citri .i ko jdika ti lo nu xagmau lo nu samtci gunka .i fau lo nu lo ni vi dukse cmalu kei lo nu bajra porsi cu cumki lo nu canci</translation>
     </message>
     <message>
         <source>Maximum chat log view size</source>
@@ -2959,11 +2959,11 @@ scroll bar to disappear.</source>
     <message>
         <source>Number of messages to load from the chat history when scrolling. A too low
 number here may cause the scroll bar to disappear.</source>
-        <translation type="unfinished">lo loi notci poi se nerkla fi lo casnu citri ca lo nu bajra .i fau lo nu lo ni vi dukse cmalu kei lo nu bajra porsi cu cumki lo nu canci</translation>
+        <translation type="unfinished">loi notci poi se nerkla fi lo casnu citri ca lo nu bajra .i fau lo nu lo ni vi dukse cmalu kei lo nu bajra porsi cu cumki lo nu canci</translation>
     </message>
     <message>
         <source>Chat log chunk size</source>
-        <translation type="unfinished">lo nilcla be lo loi casnu vreji pagbu</translation>
+        <translation type="unfinished">lo nilcla be loi casnu vreji pagbu</translation>
     </message>
     <message>
         <source>Chat log:</source>
@@ -2971,7 +2971,7 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Hide suffix after NULL symbol</source>
-        <translation type="unfinished">mipri lo loi lerfu poi se porsi lo la&apos;oi NULL sinxa</translation>
+        <translation type="unfinished">mipri loi lerfu poi se porsi lo la&apos;oi NULL sinxa</translation>
     </message>
 </context>
 <context>
@@ -3002,7 +3002,7 @@ number here may cause the scroll bar to disappear.</source>
     <message>
         <source>Logout</source>
         <comment>Tray action menu to logout user</comment>
-        <translation type="unfinished">nu co&apos;u jikca</translation>
+        <translation type="unfinished">co&apos;u jikca</translation>
     </message>
     <message>
         <source>Filter...</source>
@@ -3058,7 +3058,7 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Search Contacts</source>
-        <translation type="unfinished">sisku lo loi jikca</translation>
+        <translation type="unfinished">sisku loi jikca</translation>
     </message>
     <message>
         <source>Conference #%1</source>
@@ -3139,7 +3139,7 @@ number here may cause the scroll bar to disappear.</source>
     </message>
     <message>
         <source>Logout</source>
-        <translation type="unfinished">nu co&apos;u jikca</translation>
+        <translation type="unfinished">co&apos;u jikca</translation>
     </message>
     <message>
         <source>Add contact...</source>
