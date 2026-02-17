@@ -25,7 +25,7 @@
     </message>
     <message>
         <source>Audio Settings</source>
-        <translation>Audio Inpostasion</translation>
+        <translation>Inpostasion de Audio</translation>
     </message>
     <message>
         <source>Gain</source>
@@ -45,7 +45,7 @@
     </message>
     <message>
         <source>Video Settings</source>
-        <translation>Video Inpostasion</translation>
+        <translation>Inpostasion Gràfeghe</translation>
     </message>
     <message>
         <source>Video device</source>
@@ -58,10 +58,10 @@ Note though that with better video quality there is needed better internet conne
 Sometimes your connection may not be good enough to handle higher video quality,
 which may lead to problems with video calls.</source>
         <translation>Inpostar rezołusion de ła to tełecàmera.
-Co i alti inporti, ła sarà meja ła cuałità de&apos;l video par i to amighi.
-Varda, anca, par na meja cuałità de&apos;l video, A te bezonja de na conecsion pì bona.
-Altre &apos;olte ła to conecsion podarìa no èsar bona par manezar na alta cuałità de&apos;l video,
-el che&apos;l pol tenjer problemi co łe to video ciamade.</translation>
+Co i alti łivełi, ła sarà meja ła cuałità de&apos;l video par i to amighi.
+Vardè, anca, par na meja cuałità de&apos;l video, A te bezonja de na conesion pì bona.
+Altre &apos;olte ła to conesion podarìa no èsar bona par manezar na alta cuałità de&apos;l video,
+el che&apos;l pol tenjer ronje co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Resolution</source>
@@ -103,7 +103,7 @@ el che&apos;l pol tenjer problemi co łe to video ciamade.</translation>
     <message>
         <source>Threshold</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Łivel</translation>
+        <translation>El threshold</translation>
     </message>
     <message>
         <source>Use slider to set the volume of your speakers.</source>
@@ -112,7 +112,7 @@ el che&apos;l pol tenjer problemi co łe to video ciamade.</translation>
     <message>
         <source>Transmitted audio quality. Lower this setting if your bandwidth is not high enough or if you want to reduce bandwidth usage.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Cuałità de&apos;l audio trasmetà. Basàrteghe &apos;sta inpostasion se ła so bandwidth no l&apos;è mìa alta o se A te vol far bas ła costumansa de ła bandwidth.</translation>
+        <translation>Cuałità de&apos;l audio trames. Basàrteghe &apos;sta inpostasion se ła so bandwidth no l&apos;è mìa alta o se A te vol doperar ła bandwidth de manco.</translation>
     </message>
     <message>
         <source>Set resolution of your camera.
@@ -123,8 +123,8 @@ which may lead to problems with video calls.</source>
         <translation>Inpostar ła rezołusion de ła to tełecàmera.
 Co i alti inporti, ła sarà meja ła cuałità de&apos;l video par i to amighi.
 Varda che co na meja cuałità de&apos;l video, ti te dopari pì bandwidth.
-Altre &apos;olte ła to conecsion podarìa no èsar bona par manezar na alta cuałità de&apos;l video,
-el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
+Altre &apos;olte ła to conesion podarìa no èsar bona par manezar na alta cuałità de&apos;l video,
+el che&apos;l pol portar ronje co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Play a test sound while changing the output volume.</source>
@@ -190,7 +190,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Writing Useful Bug Reports</source>
         <comment>Replaces `%2` in the `A list of all known…`</comment>
-        <translation>Drio Scrivar Ùtiłi Raporti de Bug</translation>
+        <translation>Scrivar Ùtiłi Raporti de Bug</translation>
     </message>
     <message>
         <source>contributors</source>
@@ -243,7 +243,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>History removed</source>
-        <translation>Cronołozìa ła ga butà via</translation>
+        <translation>Cronołozìa butà via</translation>
     </message>
     <message>
         <source>This is the public key of your friend, use it to verify their identity via another channel. You can not send this to other people so they can add this contact.</source>
@@ -257,7 +257,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Confirmation</source>
-        <translation>Confermasion</translation>
+        <translation>Łaudo</translation>
     </message>
     <message>
         <source>Are you sure to remove %1 chat history?</source>
@@ -292,7 +292,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>You can save comments about this contact here.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Ti A te pol salvar note so &apos;sto contat cuà.</translation>
+        <translation>Ti A te pol salvar node sora &apos;sto contat cuà.</translation>
     </message>
 </context>
 <context>
@@ -326,7 +326,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>qTox is up to date ✓</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>qTox el meta in dì ✓</translation>
+        <translation>qTox meta in dì ✓</translation>
     </message>
     <message>
         <source>Currently running an untested/unstable version of qTox</source>
@@ -342,7 +342,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Invalid Tox ID format</source>
-        <translation>No l&apos;è justo el Tox ID formato</translation>
+        <translation>No l&apos;è justa ła sorta de&apos;l Tox ID</translation>
     </message>
     <message>
         <source>Add Friends</source>
@@ -431,7 +431,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>%1 here! Tox me maybe?</source>
         <extracomment>Default message in friend requests if the field is left blank. Write something appropriate!</extracomment>
-        <translation>%1 cuà! Tox me fursi?</translation>
+        <translation>%1 cuà! Tox mi fursi?</translation>
     </message>
     <message>
         <source>Import a list of contacts, one Tox ID per line</source>
@@ -441,20 +441,20 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message numerus="yes">
         <source>Ready to import %n contact(s), click send to confirm</source>
         <translation>
-            <numerusform>Pronto par inportar %n contato, clìca invia par confermar</numerusform>
-            <numerusform>Pronto par inportar %n contati, clìca invia par confermar</numerusform>
-            <numerusform>Pronto par inportar %n contati, clìca invia par confermar</numerusform>
+            <numerusform>Pronto par import %n contato, clica mandar par łaudar</numerusform>
+            <numerusform>Pronto par import %n contati, clica mandar par łaudar</numerusform>
+            <numerusform>Pronto par import %n contati, clica mandar par łaudar</numerusform>
         </translation>
     </message>
     <message>
         <source>Import contacts</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Inportar contati</translation>
+        <translation>Import contati</translation>
     </message>
     <message>
         <source>Tox ID, 76 hexadecimal characters</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Tox ID, 76 hexadecimal caracteri</translation>
+        <translation>Tox ID, 76 hexadecimal caractere</translation>
     </message>
     <message>
         <source>%1 Tox ID is invalid</source>
@@ -466,7 +466,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
         <source>76 hexadecimal characters</source>
         <extracomment>Tox ID format description</extracomment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>76 hexadecimal caracteri</translation>
+        <translation>76 hexadecimal caractere</translation>
     </message>
     <message>
         <source>Add friend</source>
@@ -485,7 +485,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>not</source>
-        <translation>no</translation>
+        <translation>nò</translation>
     </message>
     <message>
         <source>IMPORTANT NOTE</source>
@@ -493,11 +493,11 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Reset settings</source>
-        <translation>Reset inpostasioni</translation>
+        <translation>Reset inpostasion</translation>
     </message>
     <message>
         <source>All settings will be reset to default. Are you sure?</source>
-        <translation>Tuti i inpostasioni i sarà reset par predefinìo. Sito ti segur?</translation>
+        <translation>Tute łe inpostasion łe sarà reset par predefinìa. Sito ti segur?</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -509,22 +509,22 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Logs (*.log)</source>
-        <translation>Logs (*.log)</translation>
+        <translation>Łogs (*.log)</translation>
     </message>
     <message>
         <source>Unless you %1 know what you are doing, please do %2 change anything here. Changes made here may lead to problems with qTox, and even to loss of your data, e.g. history.%3</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Se no te sa %1 cosa che te si drio far, par piaser %2 sta canbiar gnente cuà. Łe modìfeghe fate cuà łe pol dar de łe scaronje co&apos;l qTox, e anca ła pàrdia de i to dati, par eznpio ła cronołozìa.%3</translation>
+        <translation>Se no te sa %1 cosa che te si drio far, par piazer %2 canbiè njente cuà. Łe modìfeghe fate cuà łe pol èsar rue co&apos;l qTox, e anca el perdùo de&apos;l to data, par ez. cronołozìa.%3</translation>
     </message>
     <message>
         <source>Changes here are applied only after restarting qTox.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Łe canbiade cuà łe sarà aplicà solche dopo restart qTox.</translation>
+        <translation>Łe muanse cuà łe sarà aplegà soło dopo el restart de&apos;l qTox.</translation>
     </message>
     <message>
         <source>Save file</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Salvar file</translation>
+        <translation>Salvar arcivo</translation>
     </message>
     <message>
         <source>Invalid proxy address</source>
@@ -534,7 +534,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Please enter a valid IP address or hostname for the proxy setting.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Par faor scrìvar un justo indiriso de&apos;l IP o un nome de paron par inpostar el proxy.</translation>
+        <translation>Par faor scrivè un justo indiriso de&apos;l IP o un nome de paron par inpostar el proxy.</translation>
     </message>
 </context>
 <context>
@@ -542,7 +542,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Save settings to the working directory instead of the usual conf dir</source>
         <extracomment>describes makeToxPortable checkbox</extracomment>
-        <translation>Salvar inpostasion par ła cartèła de łaoro inpè de ła sołita conf dir</translation>
+        <translation>Salvar inpostasion par ła working directory inpè de ła sòłita conf dir</translation>
     </message>
     <message>
         <source>Make Tox portable</source>
@@ -550,7 +550,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Reset to default settings</source>
-        <translation>Reset par predefenìo inpostasion</translation>
+        <translation>Reset par predefenìe inpostasion</translation>
     </message>
     <message>
         <source>Portable</source>
@@ -559,16 +559,16 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Enable IPv6 (recommended)</source>
         <extracomment>Text on a checkbox to enable IPv6</extracomment>
-        <translation>Far sù IPv6 (sołito)</translation>
+        <translation>Far sù IPv6 (recommended)</translation>
     </message>
     <message>
         <source>Enable UDP (recommended)</source>
         <extracomment>Text on checkbox to disable UDP</extracomment>
-        <translation>Far sù UDP (sołito)</translation>
+        <translation>Far sù UDP (recommended)</translation>
     </message>
     <message>
         <source>Proxy type:</source>
-        <translation>Sorto de&apos;l Proxy:</translation>
+        <translation>Sorta de&apos;l Proxy:</translation>
     </message>
     <message>
         <source>Address:</source>
@@ -578,7 +578,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Port:</source>
         <extracomment>Text on proxy port label</extracomment>
-        <translation>Portadura:</translation>
+        <translation>Porto:</translation>
     </message>
     <message>
         <source>None</source>
@@ -604,13 +604,13 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Connection settings</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Conecsion inpostasion</translation>
+        <translation>Inpostasion de conesion</translation>
     </message>
     <message>
         <source>Disabling this allows, e.g., Tox over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
         <extracomment>force tcp checkbox tooltip</extracomment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Dezabiłità &apos;sta opsion dà parmes, e.z., Tox so el Tor. Intanto, &apos;sto farà sù Tox network, łora revezar solche co ch&apos;A te bezonja.</translation>
+        <translation>Dezabiłità &apos;sta opsion dà parmes, e.z., Tox so el Tor. Intanto, &apos;sto farà sù Tox network, łora revezar soło co ch&apos;A te bezonja.</translation>
     </message>
     <message>
         <source>Enable Debug Tools (developers only)</source>
@@ -635,7 +635,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Starts new instance and opens the login screen.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Scumisia na niova instance e verza el login scherm.</translation>
+        <translation>Scumisia na niova instance e verza el viero de login.</translation>
     </message>
     <message>
         <source>Sets IPv6 &lt;on&gt;/&lt;off&gt;. Default is ON.</source>
@@ -678,20 +678,20 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     <message>
         <source>Starts in portable mode; loads profile from this directory.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Scumisia in mùo portàbiłe; carga el profil da &apos;sta cartèła.</translation>
+        <translation>Scumisia in mùo portàbiłe; carga el profil da&apos;l &apos;sto directory.</translation>
     </message>
     <message>
         <source>path</source>
         <comment>directory in file system</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>trozo</translation>
+        <translation>el path</translation>
     </message>
 </context>
 <context>
     <name>ChatForm</name>
     <message>
         <source>Send a file</source>
-        <translation>Mandar un file</translation>
+        <translation>Mandar n&apos;arcivo</translation>
     </message>
     <message>
         <source>Unable to open</source>
@@ -703,16 +703,16 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>Bad idea</source>
-        <translation>Bruta idea</translation>
+        <translation>Rua idea</translation>
     </message>
     <message>
         <source>Failed to open temporary file</source>
         <comment>Temporary file for screenshot</comment>
-        <translation>Fałìo da verzar provizorio file</translation>
+        <translation>Fałìo da verzar arcivo provizorio</translation>
     </message>
     <message>
         <source>qTox wasn&apos;t able to save the screenshot</source>
-        <translation>qTox no l&apos;è mìa bon da salvar ła imàzene de&apos;l schermo</translation>
+        <translation>qTox no l&apos;è mìa bon da salvar ła someja de&apos;l viero</translation>
     </message>
     <message>
         <source>Call duration: </source>
@@ -724,7 +724,7 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
     </message>
     <message>
         <source>You&apos;re trying to send a sequential file, which is not going to work!</source>
-        <translation>A te si drio proar da mandar un sequential file, coal no łaora mìa!</translation>
+        <translation>A te si drio proar da mandar un sequential file, coel no łaora mìa!</translation>
     </message>
     <message>
         <source>Filename contained illegal characters</source>
@@ -735,8 +735,8 @@ el che&apos;l pol portar a problemi co łe to video ciamade.</translation>
         <source>Illegal characters have been changed to _
 so you can save the file on Windows.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Brute caractere łe ze deso _
-łora A te pol salvar el file in Windows.</translation>
+        <translation>Brute caractere deso canbià par _
+łora A te pol salvar el arcivo su Windows.</translation>
     </message>
 </context>
 <context>
@@ -757,7 +757,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Cancel audio call</source>
-        <translation>Deznotar ła audio ciamada</translation>
+        <translation>Scancełar ła audio ciamada</translation>
     </message>
     <message>
         <source>Accept audio call</source>
@@ -774,11 +774,11 @@ so you can save the file on Windows.</source>
     <message>
         <source>End video call</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Fernir ła video ciamada</translation>
+        <translation>Fenir ła video ciamada</translation>
     </message>
     <message>
         <source>Cancel video call</source>
-        <translation>Deznotar ła video ciamada</translation>
+        <translation>Scancełar ła video ciamada</translation>
     </message>
     <message>
         <source>Accept video call</source>
@@ -786,7 +786,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Sound can be disabled only during a call</source>
-        <translation>Son pol da zmorsar solche drio na ciamada</translation>
+        <translation>El son pol da zmorsar soło drio na ciamada</translation>
     </message>
     <message>
         <source>Unmute call</source>
@@ -799,7 +799,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Microphone can be muted only during a call</source>
-        <translation>Microfon pol da èsar sordin solche drio na ciamada</translation>
+        <translation>Microfon pol da èsar sordin soło drio na ciamada</translation>
     </message>
     <message>
         <source>Unmute microphone</source>
@@ -834,7 +834,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Select all</source>
-        <translation>Sernir tuto</translation>
+        <translation>Sfiorar tuto</translation>
     </message>
 </context>
 <context>
@@ -842,12 +842,12 @@ so you can save the file on Windows.</source>
     <message>
         <source>Rename circle</source>
         <comment>Menu for renaming a circle</comment>
-        <translation>Intitołar danovo el sircol</translation>
+        <translation>Intitołar danovo el sercol</translation>
     </message>
     <message>
         <source>Remove circle</source>
         <comment>Menu for removing a circle</comment>
-        <translation>Dezontar el sircol</translation>
+        <translation>Butar via el sercol</translation>
     </message>
     <message>
         <source>Open all in new window</source>
@@ -864,7 +864,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>You do not have permission to write to that location. Choose another, or cancel the save dialog.</source>
         <comment>text of permissions popup</comment>
-        <translation>A no te pol scrìvar nte&apos;l &apos;sto local. Sernir altro o dezonotar el testo par salvar.</translation>
+        <translation>A no te pol scrìvar nte&apos;l &apos;sto local. Sernir altro o scanceła el testo par salvar.</translation>
     </message>
 </context>
 <context>
@@ -873,9 +873,9 @@ so you can save the file on Windows.</source>
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
         <translation>
-            <numerusform>%n utente nte ła chat</numerusform>
-            <numerusform>%n utenti nte ła chat</numerusform>
-            <numerusform>%n utenti nte ła chat</numerusform>
+            <numerusform>%n user nte ła chat</numerusform>
+            <numerusform>%n users nte ła chat</numerusform>
+            <numerusform>%n users nte ła chat</numerusform>
         </translation>
     </message>
     <message>
@@ -891,7 +891,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>copy peer ID</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>recavar isteso ID</translation>
+        <translation>recavar par ID</translation>
     </message>
 </context>
 <context>
@@ -906,14 +906,14 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Conference invites</source>
-        <translation>Inviti a łe conferense</translation>
+        <translation>Inviti de łe conferense</translation>
     </message>
 </context>
 <context>
     <name>ConferenceInviteWidget</name>
     <message>
         <source>Invited by %1 on %2 at %3.</source>
-        <translation>Invità da %1 el %2 a łe %3.</translation>
+        <translation>Invità da&apos;l %1 te&apos;l %2 in %3.</translation>
     </message>
     <message>
         <source>Join</source>
@@ -932,24 +932,24 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Remove chat from this window</source>
-        <translation>Cavar el chat da &apos;sta fenestra</translation>
+        <translation>Cavar el chat da&apos;l fenestra</translation>
     </message>
     <message>
         <source>Set title...</source>
-        <translation>Setar tìtoło...</translation>
+        <translation>Métar tìtoło...</translation>
     </message>
     <message>
         <source>Quit conference</source>
         <comment>Menu to quit a conference</comment>
-        <translation>Sbandonar ła conferensa</translation>
+        <translation>Zbandonar ła conferensa</translation>
     </message>
     <message numerus="yes">
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
         <translation>
-            <numerusform>%n utente nte ła chat</numerusform>
-            <numerusform>%n utenti nte ła chat</numerusform>
-            <numerusform>%n utenti nte ła chat</numerusform>
+            <numerusform>%n user nte&apos;l chat</numerusform>
+            <numerusform>%n users nte&apos;l chat</numerusform>
+            <numerusform>%n users nte&apos;l chat</numerusform>
         </translation>
     </message>
     <message>
@@ -965,7 +965,7 @@ so you can save the file on Windows.</source>
     <name>Core</name>
     <message>
         <source>/me offers friendship, &quot;%1&quot;</source>
-        <translation>/me el vol deventar amigo, &quot;%1&quot;</translation>
+        <translation>/me vol domandarghe come amigo, &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Conference %1</source>
@@ -985,7 +985,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Your message is too long!</source>
         <comment>Error while sending friend request</comment>
-        <translation>El to mesajo l&apos;è masa longo!</translation>
+        <translation>El to mesajo l&apos;è masa gran!</translation>
     </message>
     <message>
         <source>Friend is already added</source>
@@ -1029,7 +1029,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Accept to receive this file</source>
         <comment>file transfer widget</comment>
-        <translation>Asetar par risevar &apos;sto file</translation>
+        <translation>Asetar par risevar &apos;sto arcivo</translation>
     </message>
     <message>
         <source>Paused</source>
@@ -1043,11 +1043,11 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Open file</source>
-        <translation>Verzar file</translation>
+        <translation>Verzar arcivo</translation>
     </message>
     <message>
         <source>Open file directory</source>
-        <translation>Verzar cartèła de i arcivi</translation>
+        <translation>Verzar file directory</translation>
     </message>
     <message>
         <source>Pause transfer</source>
@@ -1055,7 +1055,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Cancel transfer</source>
-        <translation>Dezontar traslocasion</translation>
+        <translation>Scancełar traslocasion</translation>
     </message>
     <message>
         <source>Resume transfer</source>
@@ -1068,7 +1068,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Save a file</source>
         <comment>Title of the file saving dialog</comment>
-        <translation>Salvar un file</translation>
+        <translation>Salvar n&apos;arcivo</translation>
     </message>
     <message>
         <source>Remote paused</source>
@@ -1081,24 +1081,24 @@ so you can save the file on Windows.</source>
     <name>FilesForm</name>
     <message>
         <source>Downloads</source>
-        <translation>Scargamenti</translation>
+        <translation>I download</translation>
     </message>
     <message>
         <source>Uploads</source>
-        <translation>Cargamenti</translation>
+        <translation>I upload</translation>
     </message>
     <message>
         <source>Transferred files</source>
         <comment>&quot;Headline&quot; of the window</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Traslocà files</translation>
+        <translation>Arcivi traslocà</translation>
     </message>
 </context>
 <context>
     <name>FriendListWidget</name>
     <message>
         <source>Today</source>
-        <translation>Ncòi</translation>
+        <translation>Ncói</translation>
     </message>
     <message>
         <source>Yesterday</source>
@@ -1106,7 +1106,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Last 7 days</source>
-        <translation>Ultimi 7 dì</translation>
+        <translation>Ùltimi 7 dì</translation>
     </message>
     <message>
         <source>This month</source>
@@ -1131,34 +1131,34 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Remove chat from this window</source>
-        <translation>Dezontar chat da &apos;sta fenestra</translation>
+        <translation>Dezontar chat da&apos;l fenestra</translation>
     </message>
     <message>
         <source>Invite to conference</source>
         <comment>Menu to invite a friend to a conference</comment>
-        <translation>Invitar a na conferensa</translation>
+        <translation>Invitar par ła conferensa</translation>
     </message>
     <message>
         <source>Move to circle...</source>
         <comment>Menu to move a friend into a different circle</comment>
-        <translation>Spostar nte&apos;l sircoło...</translation>
+        <translation>Móvar nte&apos;l sercol...</translation>
     </message>
     <message>
         <source>To new circle</source>
-        <translation>Par novo sircol</translation>
+        <translation>Par novo sercol</translation>
     </message>
     <message>
         <source>Remove from circle &apos;%1&apos;</source>
-        <translation>Deznotar da sircol &apos;%1&apos;</translation>
+        <translation>Deznotar da&apos;l sercol &apos;%1&apos;</translation>
     </message>
     <message>
         <source>Set alias...</source>
-        <translation>Setar nome...</translation>
+        <translation>Métar nome...</translation>
     </message>
     <message>
         <source>Auto accept files from this friend</source>
         <comment>context menu entry</comment>
-        <translation>Auto asetar file da &apos;sto amigo</translation>
+        <translation>Auto asetar arcivo da&apos;l amigo</translation>
     </message>
     <message>
         <source>Show details</source>
@@ -1178,7 +1178,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Busy</source>
-        <translation>Inpegnà</translation>
+        <translation>Ocupà</translation>
     </message>
     <message>
         <source>Offline</source>
@@ -1186,7 +1186,7 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>To new conference</source>
-        <translation>Nte na nova conferensa</translation>
+        <translation>Par ła nova conferensa</translation>
     </message>
     <message>
         <source>Invite to conference &apos;%1&apos;</source>
@@ -1195,17 +1195,17 @@ so you can save the file on Windows.</source>
     <message>
         <source>Move to circle &quot;%1&quot;</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Movar nte&apos;l sircol &quot;%1&quot;</translation>
+        <translation>Móvar nte&apos;l sercol &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Remove friend</source>
         <comment>Menu to remove the friend from the friend list</comment>
-        <translation>Cava via de i amighi</translation>
+        <translation>Cavar via de i amighi</translation>
     </message>
     <message>
         <source>Blocked</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Bloca utente</translation>
+        <translation>User blocà</translation>
     </message>
 </context>
 <context>
@@ -1217,7 +1217,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>%1 (no fonts)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>%1 (sensa fonti)</translation>
+        <translation>%1 (sensa fónteghi)</translation>
     </message>
 </context>
 <context>
@@ -1245,7 +1245,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Enable light tray icon.</source>
         <comment>toolTip for light icon setting</comment>
-        <translation>Zmorsar ła ciara vantiera de&apos;l icon.</translation>
+        <translation>Inpisar ła ciara tray icon.</translation>
     </message>
     <message>
         <source>Light icon</source>
@@ -1253,24 +1253,24 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Show system tray icon</source>
-        <translation>Far vedar el ciaro icon de&apos;l sistema</translation>
+        <translation>Far védar el ciaro icon de&apos;l sistema</translation>
     </message>
     <message>
         <source>qTox will start minimized in tray.</source>
         <comment>toolTip for Start in tray setting</comment>
-        <translation>qTox el scumisiarà picol nte ła vantiera.</translation>
+        <translation>qTox el scumisiarà picol nte&apos;l tray.</translation>
     </message>
     <message>
         <source>Start in tray</source>
-        <translation>Scumisiar in vantiera</translation>
+        <translation>Scumisiar in tray</translation>
     </message>
     <message>
         <source>Minimize to tray</source>
-        <translation>Łasar nte ła vantiera</translation>
+        <translation>Minimize par el tray</translation>
     </message>
     <message>
         <source>Close to tray</source>
-        <translation>Sarar nte ła vantiera</translation>
+        <translation>Sarar sù nte&apos;l tray</translation>
     </message>
     <message>
         <source>Your status is changed to Away after set period of inactivity.</source>
@@ -1286,23 +1286,23 @@ so you can save the file on Windows.</source>
     </message>
     <message>
         <source>Set where files will be saved.</source>
-        <translation>Inposta dove che i file i sarà salvà.</translation>
+        <translation>Inposta ndóe che i arcivi i sarà salvài.</translation>
     </message>
     <message>
         <source>Default directory to save files:</source>
-        <translation>Predefinìa cartèła par salvar i arcivi:</translation>
+        <translation>Predefinìo directory par salvar i arcivi:</translation>
     </message>
     <message>
         <source>Autoaccept files</source>
-        <translation>Autoasetar files</translation>
+        <translation>Autoasetar arcivi</translation>
     </message>
     <message>
         <source>Show contacts&apos; status changes</source>
-        <translation>Far vèdar el status de i contati canbiar</translation>
+        <translation>Far védar el status de i contati canbiar</translation>
     </message>
     <message>
         <source>Check for updates</source>
-        <translation>Controłar se gh&apos;è azornamenti</translation>
+        <translation>Check se gh&apos;è metarse in dì</translation>
     </message>
     <message>
         <source>Spell checking</source>
@@ -1312,7 +1312,7 @@ so you can save the file on Windows.</source>
     <message>
         <source>Max autoaccept file size (0 to disable):</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Max autoasetar file size (0 par dezabiłitar):</translation>
+        <translation>Max autoasetar arcivo size (0 par dezabiłitar):</translation>
     </message>
     <message>
         <source> MB</source>
@@ -1324,7 +1324,7 @@ so you can save the file on Windows.</source>
 instead of system taskbar.</source>
         <comment>toolTip for minimize to tray setting</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Dopo calcar minimize (_) qTox sarà minimize nte ła vantiera,
+        <translation>Dopo calcar minimize (_) qTox sarà minimize nte&apos;l tray,
 invese de&apos;l taskbar de&apos;l sistema.</translation>
     </message>
     <message>
@@ -1332,28 +1332,28 @@ invese de&apos;l taskbar de&apos;l sistema.</translation>
 instead of closing entirely.</source>
         <comment>toolTip for close to tray setting</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Dopo calcar serar(X) qTox sarà serar nte ła vantiera 
-invese de ła sarada tuta.</translation>
+        <translation>Dopo calcar serar(X) qTox sarà serar nte&apos;l tray 
+invese de sarar sù tuta.</translation>
     </message>
     <message>
         <source>You can set this on a per-friend basis by right clicking individual friends.</source>
         <comment>autoaccept cb tooltip</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>A te pol setar &apos;sto par onji amigo clìcando col tasto drito so i singołi amighi.</translation>
+        <translation>A te pol setar &apos;sto par onji amigo clicando col drito click su i singołi amighi.</translation>
     </message>
     <message>
         <source>Add a chat message when a user joins or leaves a conference</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Zontar un mesajo de chat co&apos; che un utente el zonta o el łasa na conferensa</translation>
+        <translation>Zontar un mesajo de chat co&apos; che n&apos;user el zonta o el łasa na conferensa</translation>
     </message>
     <message>
         <source>Click here if you find errors in a translation and would like to help fix it.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Clìca cuà se A te cati erori nte ła tradusion e se te vołesi dar na man a ranjarla.</translation>
+        <translation>Clica cuà se catar fóra ronje co łe volte e se vołè dar na man par rangiarla.</translation>
     </message>
     <message>
         <source>Help translate</source>
-        <translation>Azùtane co łe tradusion</translation>
+        <translation>Dar na man co ła volta</translation>
     </message>
     <message>
         <source> min</source>
@@ -1365,7 +1365,7 @@ invese de ła sarada tuta.</translation>
     <name>GenericChatForm</name>
     <message>
         <source>Save chat log</source>
-        <translation>Salvar ła cronołozìa chat</translation>
+        <translation>Salvar el chat log</translation>
     </message>
     <message>
         <source>Send message</source>
@@ -1377,15 +1377,15 @@ invese de ła sarada tuta.</translation>
     </message>
     <message>
         <source>Send file(s)</source>
-        <translation>Mandar file(s)</translation>
+        <translation>Mandar arcivo(i)</translation>
     </message>
     <message>
         <source>Send a screenshot</source>
-        <translation>Mandar na imàzene de&apos;l schermo</translation>
+        <translation>Mandar na someja de&apos;l viero</translation>
     </message>
     <message>
         <source>Clear displayed messages</source>
-        <translation>Ełimenar i mesaji mostrà</translation>
+        <translation>Deznotar i mesaji mostrà</translation>
     </message>
     <message>
         <source>Quote selected text</source>
@@ -1393,7 +1393,7 @@ invese de ła sarada tuta.</translation>
     </message>
     <message>
         <source>Copy link address</source>
-        <translation>Recavar indiriso link</translation>
+        <translation>Recavar indiriso de&apos;l łigo</translation>
     </message>
     <message>
         <source>Confirmation</source>
@@ -1411,28 +1411,28 @@ invese de ła sarada tuta.</translation>
     </message>
     <message>
         <source>Load chat history...</source>
-        <translation>Cargar cronołozìa chat...</translation>
+        <translation>Cargar ła chat cronołozìa...</translation>
     </message>
     <message>
         <source>Export to file</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Estrazer par file</translation>
+        <translation>Estrazer par el arcivo</translation>
     </message>
     <message>
         <source>Are you sure that you want to clear all displayed messages?</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Sito ti segur ch&apos;A te vol ełimenar tuti i mesaji?</translation>
+        <translation>Sito ti segur ch&apos;A te vol deznotar tuti i mesaji?</translation>
     </message>
 </context>
 <context>
     <name>IdentitySettings</name>
     <message>
         <source>Public Information</source>
-        <translation>Informasion pùblega</translation>
+        <translation>Informasion Pùblega</translation>
     </message>
     <message>
         <source>Tox ID</source>
-        <translation>Tox ID</translation>
+        <translation>El Tox ID</translation>
     </message>
     <message>
         <source>Your Tox ID (click to copy)</source>
@@ -1440,15 +1440,15 @@ invese de ła sarada tuta.</translation>
     </message>
     <message>
         <source>This QR code contains your Tox ID. You may share this with your friends as well.</source>
-        <translation>&apos;Sto QR code el tenja el to Tox ID. A te pol sconpartir &apos;sto co i so amighi anca.</translation>
+        <translation>&apos;Sto QR code el tien el to Tox ID. A te pol sconpartir &apos;sto co i amighi tui anca.</translation>
     </message>
     <message>
         <source>Save image</source>
-        <translation>Salvar imàzene</translation>
+        <translation>Salvar someja</translation>
     </message>
     <message>
         <source>Copy image</source>
-        <translation>Recavar imàzene</translation>
+        <translation>Recavar someja</translation>
     </message>
     <message>
         <source>Profile</source>
@@ -1457,29 +1457,29 @@ invese de ła sarada tuta.</translation>
     <message>
         <source>Rename profile.</source>
         <comment>tooltip for renaming profile button</comment>
-        <translation>Modìfegar el nome de&apos;l profiło.</translation>
+        <translation>Modifegar el nome de&apos;l profiło.</translation>
     </message>
     <message>
         <source>Rename</source>
         <comment>rename profile button</comment>
-        <translation>Modìefegar el nome</translation>
+        <translation>Modifegar el nome</translation>
     </message>
     <message>
         <source>Delete profile.</source>
         <comment>delete profile button tooltip</comment>
-        <translation>Ełimina profiło.</translation>
+        <translation>Butar via el profiło.</translation>
     </message>
     <message>
         <source>Delete</source>
         <comment>delete profile button</comment>
-        <translation>Ełimina</translation>
+        <translation>Butar via</translation>
     </message>
     <message>
         <source>Allows you to export your Tox profile to a file.
 Profile does not contain your history.</source>
         <comment>tooltip for profile exporting button</comment>
-        <translation>Darghe parmes par estrazer el to Tox profiło nte un file.
-Profiło tien mìa ła só cornołozìa.</translation>
+        <translation>Dar parmes par estrazer el to Tox profiło nte n&apos;arcivo.
+Profiło tien mìa ła cornołozìa tua.</translation>
     </message>
     <message>
         <source>Export</source>
@@ -1489,7 +1489,7 @@ Profiło tien mìa ła só cornołozìa.</translation>
     <message>
         <source>Go back to the login screen</source>
         <comment>tooltip for logout button</comment>
-        <translation>Ndar nte&apos;l login schermo</translation>
+        <translation>Ndar nte&apos;l viero de&apos;l login</translation>
     </message>
     <message>
         <source>Logout</source>
@@ -1498,16 +1498,16 @@ Profiło tien mìa ła só cornołozìa.</translation>
     </message>
     <message>
         <source>Remove password</source>
-        <translation>Ełimenar password</translation>
+        <translation>Butar via ła password</translation>
     </message>
     <message>
         <source>Change password</source>
-        <translation>Canbiar password</translation>
+        <translation>Canbiar ła password</translation>
     </message>
     <message>
         <source>Remove your password and encryption from your profile.</source>
         <comment>Tooltip for the `Remove password` button.</comment>
-        <translation>Ełimenar el to password e encryption da&apos;l to profiło.</translation>
+        <translation>Butar via ła to password e encryption da&apos;l to profiło.</translation>
     </message>
     <message>
         <source>Name input</source>
@@ -1515,7 +1515,7 @@ Profiło tien mìa ła só cornołozìa.</translation>
     </message>
     <message>
         <source>Name visible to contacts</source>
-        <translation>Far vèdar el to nome par i altri contati</translation>
+        <translation>Far védar el to nome par i altri contati</translation>
     </message>
     <message>
         <source>Status message input</source>
@@ -1527,19 +1527,19 @@ Profiło tien mìa ła só cornołozìa.</translation>
     </message>
     <message>
         <source>Save QR image as file</source>
-        <translation>Salvar QR imàzine come file</translation>
+        <translation>Salvar QR someja come n&apos;arcivo</translation>
     </message>
     <message>
         <source>Copy QR image to clipboard</source>
-        <translation>Copiar QR imàzine nte&apos;l clipboard</translation>
+        <translation>Recavar ła QR someja nte&apos;l clipboard</translation>
     </message>
     <message>
         <source>Rename profile.</source>
-        <translation>Modìfegar el nome de&apos;l profiło.</translation>
+        <translation>Modifegar el nome de&apos;l profiło.</translation>
     </message>
     <message>
         <source>Delete profile.</source>
-        <translation>Ełimenar profiło.</translation>
+        <translation>Butar via el profiło.</translation>
     </message>
     <message>
         <source>Export profile</source>
@@ -1547,11 +1547,11 @@ Profiło tien mìa ła só cornołozìa.</translation>
     </message>
     <message>
         <source>Remove password from profile</source>
-        <translation>Ełimenar password da&apos;l profiło</translation>
+        <translation>Butar via ła password da&apos;l profiło</translation>
     </message>
     <message>
         <source>Change profile password</source>
-        <translation>Canbiar el password de&apos;l profiło</translation>
+        <translation>Canbiar ła password de&apos;l profiło</translation>
     </message>
     <message>
         <source>My name:</source>
@@ -1570,12 +1570,12 @@ Profiło tien mìa ła só cornołozìa.</translation>
 Share it with your friends to begin chatting.</source>
         <comment>Tox ID tooltip</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>&apos;Sto ID dà parmes par altri Tox uzuari da zontar e mandarte mesaji.
-Sconpartir &apos;sto co i to amighi par scumisiar ciacołar.</translation>
+        <translation>&apos;Sto ID dà parmes par altri Tox users da zontar e mandarte mesaji.
+Sconpartè &apos;sto co i to amighi par scumisiar a ciacołar.</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
-        <translation>Inposta el to mesajo de status che&apos;l vegnarà mostrà ai altri</translation>
+        <translation>Inposta el to mesajo de status che&apos;l farà védar par i altri</translation>
     </message>
 </context>
 <context>
@@ -1583,7 +1583,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar ciacołar.</translation>
     <message>
         <source>Load history dialog</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Cargar ła cronołozìa ciacołar</translation>
+        <translation>Cargar ła cronołozìa de ciàcoła</translation>
     </message>
     <message>
         <source>Load history from:</source>
@@ -1599,7 +1599,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar ciacołar.</translation>
     </message>
     <message>
         <source>Password:</source>
-        <translation>Password:</translation>
+        <translation>Ła password:</translation>
     </message>
     <message>
         <source>Confirm:</source>
@@ -1607,7 +1607,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar ciacołar.</translation>
     </message>
     <message>
         <source>Password strength: %p%</source>
-        <translation>Forsa de&apos;l password: %p%</translation>
+        <translation>Forsa de ła password: %p%</translation>
     </message>
     <message>
         <source>Create Profile</source>
@@ -1615,7 +1615,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar ciacołar.</translation>
     </message>
     <message>
         <source>If the profile does not have a password, qTox can skip the login screen</source>
-        <translation>Se el profiło ga mìa un password, qTox pol saltusar el monitor de&apos;l login</translation>
+        <translation>Se el profiło ga mìa na password, qTox pol saltusar el viero de&apos;l login</translation>
     </message>
     <message>
         <source>Load automatically</source>
@@ -1643,7 +1643,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar ciacołar.</translation>
     </message>
     <message>
         <source>The password must be at least 6 characters long.</source>
-        <translation>El password toca de gaver 6 pì caractere.</translation>
+        <translation>Ła password toca de gaver 6 pì caractere.</translation>
     </message>
     <message>
         <source>A profile with this name already exists.</source>
@@ -1653,9 +1653,9 @@ Sconpartir &apos;sto co i to amighi par scumisiar ciacołar.</translation>
         <source>There is no selected profile.
 
 You may want to create one.</source>
-        <translation>Gh&apos;è mìa profiło selected.
+        <translation>Gh&apos;è mìa profiło sfiorà.
 
-A te pol vołer far sù.</translation>
+A te bezonja da vołer far sù.</translation>
     </message>
     <message>
         <source>Couldn&apos;t load this profile</source>
@@ -1667,15 +1667,15 @@ A te pol vołer far sù.</translation>
     </message>
     <message>
         <source>Wrong password.</source>
-        <translation>Zbałià password.</translation>
+        <translation>Ła password l&apos;è zbałià.</translation>
     </message>
     <message>
         <source>Import</source>
-        <translation>Inportar</translation>
+        <translation>Far import</translation>
     </message>
     <message>
         <source>Password protected profiles can&apos;t be automatically loaded.</source>
-        <translation>Password protega profiłi da no èsar mìa auto carga.</translation>
+        <translation>Ła password proteza i profiłi da no èsar mìa auto carga.</translation>
     </message>
     <message>
         <source>Username input field</source>
@@ -1711,11 +1711,11 @@ A te pol vołer far sù.</translation>
     </message>
     <message>
         <source>Import profile</source>
-        <translation>Inportar profiło</translation>
+        <translation>Far import un profiło</translation>
     </message>
     <message>
         <source>Load selected profile button</source>
-        <translation>Cargar selected buton profiło</translation>
+        <translation>Cargar el buton de&apos;l profiło sfiorà</translation>
     </message>
     <message>
         <source>New profile creation page</source>
@@ -1723,7 +1723,7 @@ A te pol vołer far sù.</translation>
     </message>
     <message>
         <source>Loading existing profile page</source>
-        <translation>Cargando pàzena de&apos;l profiło</translation>
+        <translation>Drio cargar na pàzena de&apos;l profiło</translation>
     </message>
     <message>
         <source>The passwords you&apos;ve entered are different.
@@ -1742,7 +1742,7 @@ Press Shift+F1 par informasion de pì.</translation>
     </message>
     <message>
         <source>The password you enter here is optional and encrypts message data and your Tox secret key. It does not encrypt files received. Your profile data is never sent to any servers. This is not a remote login, it&apos;s local to your computer only. qTox developers won&apos;t be able to recover your password if lost.</source>
-        <translation>Ła password che A te ga scrivesto cuà l&apos;è opsional e encrypts mesajo data e ła to Tox secreta ciave. &apos;Sto encrypts mìa files riservà. El to profiło data l&apos;è mìa mandar nesun servers. &apos;Sto no&apos;l ze mìa un remote login, &apos;sto el ze local par el to conputador soło. qTox developer i no sarà mìa boni da catar fóra ła to password se A te parderla.</translation>
+        <translation>Ła password che A te ga scrivesto cuà l&apos;è opsional e encrypts mesajo data e ła to Tox ciave secreta. &apos;Sto encrypts mìa arcivi riservà. El to profiło data l&apos;è mìa mandar nesun servers. &apos;Sto no&apos;l ze mìa un remote login, &apos;sto el ze local par el to conputador, soło. qTox developer i no sarà mìa boni da catar fóra ła to password se A te parderla.</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
@@ -1765,7 +1765,7 @@ Press Shift+F1 par informasion de pì.</translation>
     </message>
     <message>
         <source>View completed file transfers</source>
-        <translation>Far vèdar i traslocà fati arcivi</translation>
+        <translation>Far védar i traslocà fati arcivi</translation>
     </message>
     <message>
         <source>Change your settings</source>
@@ -1773,7 +1773,7 @@ Press Shift+F1 par informasion de pì.</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation>Serar</translation>
+        <translation>Sarar sù</translation>
     </message>
     <message>
         <source>Open profile</source>
@@ -1781,7 +1781,7 @@ Press Shift+F1 par informasion de pì.</translation>
     </message>
     <message>
         <source>Open profile page when clicked</source>
-        <translation>Verzar pàzena de&apos;l profiło co&apos; clicà</translation>
+        <translation>Verzar ła pàzena de&apos;l profiło co&apos; clicà</translation>
     </message>
     <message>
         <source>Status message input</source>
@@ -1789,7 +1789,7 @@ Press Shift+F1 par informasion de pì.</translation>
     </message>
     <message>
         <source>Set your status message that will be shown to others</source>
-        <translation>Inposta el to mesajo de status che&apos;l vegnarà mostrà ai altri</translation>
+        <translation>Inposta el to mesajo de status che&apos;l farà védar par i altri</translation>
     </message>
     <message>
         <source>Status</source>
@@ -1797,7 +1797,7 @@ Press Shift+F1 par informasion de pì.</translation>
     </message>
     <message>
         <source>Set availability status</source>
-        <translation>Inposta el status de disponibiłità</translation>
+        <translation>Métar el status de disponibiłità</translation>
     </message>
     <message>
         <source>Contact search</source>
@@ -1809,15 +1809,15 @@ Press Shift+F1 par informasion de pì.</translation>
     </message>
     <message>
         <source>Sorting and visibility</source>
-        <translation>Sorti e vizibiłità</translation>
+        <translation>Sorte e vizibiłità</translation>
     </message>
     <message>
         <source>Set friends sorting and visibility</source>
-        <translation>Inposta l&apos;ordinamento e ła vizibiłità dei amighi</translation>
+        <translation>Métar l&apos;ordinamento e ła vizibiłità de i amighi</translation>
     </message>
     <message>
         <source>Open Add friends page</source>
-        <translation>Verzar Zontar amighi pàzena</translation>
+        <translation>Verzar ła pàzena de Zontar amighi</translation>
     </message>
     <message>
         <source>Conference</source>
@@ -1829,11 +1829,11 @@ Press Shift+F1 par informasion de pì.</translation>
     </message>
     <message>
         <source>File transfers history</source>
-        <translation>File traslocà cronołozìa</translation>
+        <translation>Cronołozìa de arcivo traslocà</translation>
     </message>
     <message>
         <source>Open File transfers history</source>
-        <translation>Verzar File traslocà cronołozìa</translation>
+        <translation>Verzar ła cronołozìa de Arcivo traslocà</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -1884,7 +1884,7 @@ Press Shift+F1 par informasion de pì.</translation>
     <message>
         <source>Full Screen</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Tuto Schermo</translation>
+        <translation>Viero Pieno</translation>
     </message>
     <message>
         <source>Toggle video preview</source>
@@ -1903,17 +1903,17 @@ Press Shift+F1 par informasion de pì.</translation>
     <message>
         <source>End video call</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Fenir video ciamada</translation>
+        <translation>Fenir ła video ciamada</translation>
     </message>
     <message>
         <source>Exit full screen</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Ndar fóra Tuto Schermo</translation>
+        <translation>Ndar fóra Viero Pieno</translation>
     </message>
     <message>
         <source>Hide messages</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Scondar mesaji</translation>
+        <translation>Scóndar mesaji</translation>
     </message>
     <message>
         <source>Show messages</source>
@@ -1941,15 +1941,15 @@ Press Shift+F1 par informasion de pì.</translation>
     <message>
         <source>Bring All to Front</source>
         <comment>macOS Menu bar</comment>
-        <translation>Menar Tuti Vanti</translation>
+        <translation>Menar Tuti par Vanti</translation>
     </message>
     <message>
         <source>Exit Full Screen</source>
-        <translation>Ndar fóra Tuto Schermo</translation>
+        <translation>Insir Viero Pieno</translation>
     </message>
     <message>
         <source>Enter Full Screen</source>
-        <translation>Intrar Tuto Schermo</translation>
+        <translation>Intrar Viero Pieno</translation>
     </message>
 </context>
 <context>
@@ -1972,7 +1972,7 @@ Press Shift+F1 par informasion de pì.</translation>
     <message>
         <source>New conference message</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Novo conferensa mesajo</translation>
+        <translation>Novo mesajo de conferensa</translation>
     </message>
     <message>
         <source>Incoming file transfer</source>
@@ -1983,7 +1983,7 @@ Press Shift+F1 par informasion de pì.</translation>
         <source>%1 - file transfer</source>
         <extracomment>e.g. Bob - file transfer</extracomment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>%1 - arcivo traslocà</translation>
+        <translation>%1 - arcivi traslocà</translation>
     </message>
     <message>
         <source>Conference invite received</source>
@@ -2008,14 +2008,14 @@ Press Shift+F1 par informasion de pì.</translation>
     <message>
         <source>Incoming call</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Ciamada in arrivo</translation>
+        <translation>Drio risever na ciamada</translation>
     </message>
 </context>
 <context>
     <name>PasswordEdit</name>
     <message>
         <source>Caps-lock enabled</source>
-        <translation>Caps-lock far vèdar</translation>
+        <translation>Caps-lock abiłità</translation>
     </message>
 </context>
 <context>
@@ -2048,8 +2048,8 @@ Press Shift+F1 par informasion de pì.</translation>
         <source>Chat history keeping is still in development.
 Save format changes are possible, which may result in data loss.</source>
         <comment>toolTip for Keep History setting</comment>
-        <translation>Tenjer ła cronołozìa chat el ze drio far sù ncora.
-Salvar el formato canbià i ze posibiłi, ma i pol da rezultar in data loss.</translation>
+        <translation>Tenjer ła chat cronołozìa el ze drio far sù ncora.
+Salvar ła sorta canbiàe łe ze posibiłe, ma łe pol da rezultar in data loss.</translation>
     </message>
     <message>
         <source>Keep chat history</source>
@@ -2090,7 +2090,7 @@ Se A te si drio spammed co inviti de amighi, te bezonja da canbiar el to NoSpam.
     <message>
         <source>Filter out conference messages by conference members&apos; public keys. Put public keys here, one per line.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Pasar i mesaji de łe ciave pùbleghe de i menbri de ła conferensa. Metar pùbleghe ciave cuà, una par łinja.</translation>
+        <translation>Pasar i mesaji de łe ciave pùbleghe de i menbri de ła conferensa. Métar pùbleghe ciave cuà, na par łinja.</translation>
     </message>
 </context>
 <context>
@@ -2134,13 +2134,13 @@ Se A te si drio spammed co inviti de amighi, te bezonja da canbiar el to NoSpam.
     </message>
     <message>
         <source>Unable to read this image.</source>
-        <translation>L&apos;è mìa bon da łèzar &apos;sta imàzine.</translation>
+        <translation>L&apos;è mìa bon da łèzar &apos;sta someja.</translation>
     </message>
     <message>
         <source>The supplied image is too large.
 Please use another image.</source>
         <translation>El fornìo mesajo l&apos;è stra gran.
-Par faor doparar altra imàzine.</translation>
+Par faor doparar altra someja.</translation>
     </message>
     <message>
         <source>Rename &quot;%1&quot;</source>
@@ -2181,7 +2181,7 @@ Par faor doparar altra imàzine.</translation>
     <message>
         <source>Files could not be deleted!</source>
         <comment>deletion failed title</comment>
-        <translation>Arcivi pol mìa èsar butà via!</translation>
+        <translation>Arcivi pol mìa èsar butài via!</translation>
     </message>
     <message>
         <source>Change password</source>
@@ -2191,11 +2191,11 @@ Par faor doparar altra imàzine.</translation>
     <message>
         <source>Set profile password</source>
         <comment>button text</comment>
-        <translation>Inposta ła password de&apos;l profiło</translation>
+        <translation>Métar ła password de&apos;l profiło</translation>
     </message>
     <message>
         <source>Current profile location: %1</source>
-        <translation>Local prezente de&apos;l profiło: %1</translation>
+        <translation>Prezente posto de&apos;l profiło: %1</translation>
     </message>
     <message>
         <source>Couldn&apos;t change password</source>
@@ -2205,7 +2205,7 @@ Par faor doparar altra imàzine.</translation>
     <message>
         <source>Empty path is unavailable</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Zvodo trozo no l&apos;è mìa bon</translation>
+        <translation>Zvodo path no l&apos;è mìa bon</translation>
     </message>
     <message>
         <source>Failed to rename</source>
@@ -2232,7 +2232,7 @@ Par faor doparar altra imàzine.</translation>
     <message>
         <source>Empty path</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Zvodo trozo</translation>
+        <translation>Zvodo path</translation>
     </message>
     <message>
         <source>Export profile</source>
@@ -2242,12 +2242,12 @@ Par faor doparar altra imàzine.</translation>
     <message>
         <source>Tox save file (*.tox)</source>
         <extracomment>save dialog filter</extracomment>
-        <translation>Tox salvar arcivo (*.tox)</translation>
+        <translation>Tox save arcivo (*.tox)</translation>
     </message>
     <message>
         <source>The following files could not be deleted:</source>
         <extracomment>deletion failed text part 1</extracomment>
-        <translation>&apos;Sti arcivi pol mìa èsar butà via:</translation>
+        <translation>&apos;Sti arcivi pol mìa èsar butài via:</translation>
     </message>
     <message>
         <source>Please manually remove them.</source>
@@ -2257,7 +2257,7 @@ Par faor doparar altra imàzine.</translation>
     <message>
         <source>Images (%1)</source>
         <comment>filetype filter</comment>
-        <translation>Imàzine (%1)</translation>
+        <translation>Someje (%1)</translation>
     </message>
     <message>
         <source>Failed to save file</source>
@@ -2272,7 +2272,7 @@ Par faor doparar altra imàzine.</translation>
     <message>
         <source>Empty path is unavailable.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Zvodo trozo l&apos;è mìa bon.</translation>
+        <translation>Zvodo path l&apos;è mìa bon.</translation>
     </message>
     <message>
         <source>Couldn&apos;t change database password, it may be corrupted or use the old password.</source>
@@ -2318,12 +2318,12 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     <message>
         <source>Import profile</source>
         <comment>import dialog title</comment>
-        <translation>Inportar profiło</translation>
+        <translation>Far import profiło</translation>
     </message>
     <message>
         <source>Tox save file (*.tox)</source>
         <comment>import dialog filter</comment>
-        <translation>Tox salvar arcivo (*.tox)</translation>
+        <translation>Tox save arcivo (*.tox)</translation>
     </message>
     <message>
         <source>Ignoring non-Tox file</source>
@@ -2333,7 +2333,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     <message>
         <source>Warning: You have chosen a file that is not a Tox save file; ignoring.</source>
         <comment>popup text</comment>
-        <translation>Darghe n&apos;ocio: Te ghè sernà un arcivo che&apos;l no l&apos;è un Tox save file; rifudando.</translation>
+        <translation>Darghe n&apos;ocio: Te ghè sernà n&apos;arcivo che&apos;l no l&apos;è un Tox save file; rifudando.</translation>
     </message>
     <message>
         <source>Profile already exists</source>
@@ -2355,11 +2355,11 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     </message>
     <message>
         <source>Profile imported</source>
-        <translation>Profiło inportà</translation>
+        <translation>Profiło imported</translation>
     </message>
     <message>
         <source>%1.tox was successfully imported</source>
-        <translation>%1.tox inportà</translation>
+        <translation>%1.tox imported, stiłente</translation>
     </message>
 </context>
 <context>
@@ -2371,7 +2371,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     </message>
     <message>
         <source>Ok</source>
-        <translation>Va ben</translation>
+        <translation>Pułito</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -2391,7 +2391,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     <message>
         <source>Choose an auto-accept directory</source>
         <comment>popup title</comment>
-        <translation>Sernar na cartèła de auto-asetar</translation>
+        <translation>Sernar un directory de auto-asetar</translation>
     </message>
 </context>
 <context>
@@ -2416,7 +2416,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     <message>
         <source>%1 here! Tox me maybe?</source>
         <comment>Default message in Tox URI friend requests. Write something appropriate!</comment>
-        <translation>%1 cuà! Tox me fursi?</translation>
+        <translation>%1 cuà! Tox mi fursi?</translation>
     </message>
     <message>
         <source>Error</source>
@@ -2458,7 +2458,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     </message>
     <message>
         <source>Incoming call...</source>
-        <translation>Ciamada in arrivo...</translation>
+        <translation>Drio riserver na ciamada...</translation>
     </message>
     <message>
         <source>Dark</source>
@@ -2498,7 +2498,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     <message>
         <source>busy</source>
         <comment>contact status</comment>
-        <translation>inpegnà</translation>
+        <translation>ocupà</translation>
     </message>
     <message>
         <source>offline</source>
@@ -2607,7 +2607,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     <message>
         <source>File Name</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Nome de&apos;l arcivo</translation>
+        <translation>Nome de l&apos;arcivo</translation>
     </message>
     <message>
         <source>Contact</source>
@@ -2667,7 +2667,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     </message>
     <message>
         <source>Remove all chat history with the friend if set</source>
-        <translation>Butar via tuta ła cronołozìa de&apos;l chat co&apos;l amigo, se A te set</translation>
+        <translation>Butar via tuta ła cronołozìa de&apos;l chat co&apos;l amigo, se A te métar</translation>
     </message>
     <message>
         <source>Also remove chat history</source>
@@ -2687,7 +2687,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     <message>
         <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
-        <translation>Click e drag par sernar un local. Press %1 par far scondar/vèdar qTox fenestra, o %2 par scansełar.</translation>
+        <translation>Click e drag par sernar un local. Press %1 par far scondar/védar qTox fenestra, o %2 par scansełar.</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2702,7 +2702,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     <message>
         <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
-        <translation>Press %1 par mandar na imàzine de&apos;l monitor sernà, %2 par far scondar/vèdar qTox fenestra, o %3 par scansełar.</translation>
+        <translation>Press %1 par mandar na someja de&apos;l viero sfiorà, %2 par far scondar/védar qTox fenestra, o %3 par scansełar.</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -2753,12 +2753,12 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     <message>
         <source>Case sensitive</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Sensibiłe case</translation>
+        <translation>Cazo sensìbil</translation>
     </message>
     <message>
         <source>Whole words only</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Intiere parołe solche</translation>
+        <translation>Parołe piene soło</translation>
     </message>
     <message>
         <source>Use regular expressions</source>
@@ -2808,7 +2808,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
-        <translation>Canpo de ła intrada de ła password, minimum 6 carectere</translation>
+        <translation>Canpo de ła intrada de ła password, minimum 6 caractere</translation>
     </message>
     <message>
         <source>The password is too short.</source>
@@ -2817,24 +2817,24 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     </message>
     <message>
         <source>Set profile password</source>
-        <translation>Inposta ła password de&apos;l profiło</translation>
+        <translation>Métar ła password de&apos;l profiło</translation>
     </message>
 </context>
 <context>
     <name>Settings</name>
     <message>
         <source>Circle #%1</source>
-        <translation>Sircol #%1</translation>
+        <translation>Sercol #%1</translation>
     </message>
     <message>
         <source>Failed to load personal settings</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Fałìo da cargar parsonal inpostasion</translation>
+        <translation>Fałìo da cargar parsonałe inpostasion</translation>
     </message>
     <message>
         <source>Unable to upgrade settings from version %1 to version %2. Cannot start qTox.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>L&apos;è mìa bon da metarse in dì da&apos;l version %1 par version %2. Pol mìa zmorsar qTox.</translation>
+        <translation>L&apos;è mìa bon da metarse in dì da&apos;l version %1 par version %2. Pol mìa scumisiar el qTox.</translation>
     </message>
     <message>
         <source>Failed to load global settings</source>
@@ -2880,7 +2880,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     </message>
     <message>
         <source>User Interface</source>
-        <translation>User Intramuzo</translation>
+        <translation>Ła User Interface</translation>
     </message>
 </context>
 <context>
@@ -2891,7 +2891,7 @@ Sconpartir &apos;sto co i to amighi par scumisiar a ciacołar.
     </message>
     <message>
         <source>Base font:</source>
-        <translation>Base fòntego:</translation>
+        <translation>Radize de&apos;l fóntego:</translation>
     </message>
     <message>
         <source>Size: </source>
@@ -2937,11 +2937,11 @@ Far scondar łe caractere de formatasion:
     </message>
     <message>
         <source>Show formatting characters</source>
-        <translation>Far vèdar caractere formtasion</translation>
+        <translation>Far védar ła formatasion de caractere</translation>
     </message>
     <message>
         <source>Hide formatting characters</source>
-        <translation>Far scondar caractere formatasion</translation>
+        <translation>Far scondar ła formatasion de caractere</translation>
     </message>
     <message>
         <source>New message</source>
@@ -2999,7 +2999,7 @@ Far scondar łe caractere de formatasion:
     </message>
     <message>
         <source>Theme</source>
-        <translation>Theme</translation>
+        <translation>Tema</translation>
     </message>
     <message>
         <source>Style:</source>
@@ -3007,7 +3007,7 @@ Far scondar łe caractere de formatasion:
     </message>
     <message>
         <source>Theme color:</source>
-        <translation>Theme cołor:</translation>
+        <translation>Tema cołor:</translation>
     </message>
     <message>
         <source>Timestamp format:</source>
@@ -3044,7 +3044,7 @@ Far scondar łe caractere de formatasion:
     </message>
     <message>
         <source>Play sound while Busy</source>
-        <translation>Sonar son intanto Inpegnà</translation>
+        <translation>Sonar son intanto Ocupà</translation>
     </message>
     <message>
         <source>Notify via desktop notifications</source>
@@ -3088,12 +3088,12 @@ Far scondar łe caractere de formatasion:
     <message>
         <source>If disabled, mute notification sounds when status is Busy (but still show a notification)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Se dezabiłità, far tàzar son de notifegasion co&apos; che&apos;l status l&apos;è Inpegnà (ma ncora far vèdar na notifegasion)</translation>
+        <translation>Se dezabiłità, far tazar son de notifegasion co&apos; che&apos;l status l&apos;è Ocupà (ma ncora far vèdar na notifegasion)</translation>
     </message>
     <message>
         <source>Use desktop notifications, e.g. in a notification center or at the system tray. Without this, the notification will only be visible as a flashing tray icon.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Doparar dispozidif notifegasion, e.z. nte&apos;l sentro de notifegasion o nte ła vantiera de&apos;l sistema. Sensa &apos;sto, ła notifegasion sarà vardà soła come un łanpizada icon.</translation>
+        <translation>Doparar notifegasion de dispozidivo, e.z. nte&apos;l sentro de notifegasion o nte&apos;l tray de&apos;l sistema. Sensa &apos;sto, ła notifegasion sarà vardà soła come un łanpizada icon.</translation>
     </message>
     <message>
         <source>Only show &quot;new message&quot; without showing potentially secret information in desktop notifications.</source>
@@ -3118,7 +3118,7 @@ Far scondar łe caractere de formatasion:
     <message>
         <source>Size in pixels of an emoji picture. Select something similar to your base font size.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Grosesa in pixels de na someja de emoji. Sfiora calcosa simiłe come el groses de ła to base font size.</translation>
+        <translation>Size in pixels de na someja de emoji. Sfiora calcosa simiłe come el groses de ła to base font size.</translation>
     </message>
     <message>
         <source>Base style to use for the UI. Fusion is recommended as it works best with qTox theming.</source>
@@ -3149,7 +3149,7 @@ Far scondar łe caractere de formatasion:
     <message>
         <source>Image preview</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Imàzine preview</translation>
+        <translation>Someja preview</translation>
     </message>
     <message>
         <source>Maximum number of messages (per conversation) loaded from chat history.
@@ -3200,7 +3200,7 @@ nùmaro cuà pol far el scroll bar sfantar.</translation>
     </message>
     <message>
         <source>Create new circle...</source>
-        <translation>Far sù un novo sircol...</translation>
+        <translation>Far sù un novo sercol...</translation>
     </message>
     <message>
         <source>By Name</source>
@@ -3247,7 +3247,7 @@ nùmaro cuà pol far el scroll bar sfantar.</translation>
     <message>
         <source>Busy</source>
         <comment>Button to set your status to &apos;Busy&apos;</comment>
-        <translation>Inpegnà</translation>
+        <translation>Ocupà</translation>
     </message>
     <message>
         <source>Logout</source>
@@ -3264,7 +3264,7 @@ nùmaro cuà pol far el scroll bar sfantar.</translation>
     </message>
     <message>
         <source>Edit</source>
-        <translation>Modìfegar</translation>
+        <translation>Modifegar</translation>
     </message>
     <message>
         <source>Contacts</source>
@@ -3311,13 +3311,13 @@ nùmaro cuà pol far el scroll bar sfantar.</translation>
     <message>
         <source>Toxcore failed to start, the application will terminate after you close this message.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Toxcore no l&apos;è stà mìa bon da scumisiar, ła aplegasion se fenìa dopo che te serar &apos;sto mesajo.</translation>
+        <translation>Toxcore no l&apos;è stà mìa bon da scumisiar, l&apos;aplegasion se fenìa dopo che te serar &apos;sto mesajo.</translation>
     </message>
     <message>
         <source>Toxcore failed to start with your proxy settings. qTox cannot run; please modify your settings and restart.</source>
         <comment>popup text</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Toxcore no l&apos;è stà mìa bon da scumisiar co łe inpostasion de&apos;l to proxy. qTox l&apos;è mìa bon da łaorar; par faor modìfegar łe to inpostasion e scumisiar da novo.</translation>
+        <translation>Toxcore no l&apos;è stà mìa bon da scumisiar co łe inpostasion de&apos;l to proxy. qTox l&apos;è mìa bon da łaorar; par faor modifegar łe to inpostasion e scumisiar da novo.</translation>
     </message>
     <message>
         <source>Couldn&apos;t send friend request</source>
@@ -3335,9 +3335,9 @@ nùmaro cuà pol far el scroll bar sfantar.</translation>
     <message numerus="yes">
         <source>%n new conference invite(s)</source>
         <translation>
-            <numerusform>%n novo invito a na conferensa</numerusform>
-            <numerusform>%n novi inviti a conferense</numerusform>
-            <numerusform>%n novi inviti a conferense</numerusform>
+            <numerusform>%n novo invito par na conferensa</numerusform>
+            <numerusform>%n novi inviti par conferense</numerusform>
+            <numerusform>%n novi inviti par conferense</numerusform>
         </translation>
     </message>
     <message>
@@ -3353,7 +3353,7 @@ nùmaro cuà pol far el scroll bar sfantar.</translation>
     <message>
         <source>Edit profile</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Modìfegar profiło</translation>
+        <translation>Modifegar profiło</translation>
     </message>
     <message>
         <source>Logout</source>
@@ -3367,12 +3367,12 @@ nùmaro cuà pol far el scroll bar sfantar.</translation>
     <message>
         <source>Next conversation</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Prosima convarsasion</translation>
+        <translation>Ciàcoła drioman</translation>
     </message>
     <message>
         <source>Previous conversation</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation>Anteata convarsasion</translation>
+        <translation>Prima ciàcoła</translation>
     </message>
     <message>
         <source>Debug</source>
