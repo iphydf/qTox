@@ -120,7 +120,7 @@ which may lead to problems with video calls.</source>
         <translation type="unfinished">設定相機的解析度。
 數值越高，您的朋友獲得的影片品質就越好。
 請注意，視訊品質越好，您使用的頻寬就越多。
-有時您的連接可能不夠好，無法處理更高的視訊質量，
+有時您的連線可能不夠好，無法處理更高的視訊品質，
 這可能會導致視訊通話出現問題。</translation>
     </message>
     <message>
@@ -230,7 +230,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Remove history (operation can not be undone!)</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">刪除歷史記錄（操作無法撤銷！）</translation>
+        <translation type="unfinished">刪除歷史記錄（操作無法還原！）</translation>
     </message>
     <message>
         <source>Notes</source>
@@ -293,7 +293,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>You can save comments about this contact here.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">您可以在此處保存有關此聯絡人的評論。</translation>
+        <translation type="unfinished">您可以在此處儲存有關此聯絡人的評論。</translation>
     </message>
 </context>
 <context>
@@ -317,7 +317,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Open update download link</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">開啟更新下載鏈接</translation>
+        <translation type="unfinished">開啟更新下載連結</translation>
     </message>
     <message>
         <source>Update available</source>
@@ -389,7 +389,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Open contact list</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">打開聯絡人列表</translation>
+        <translation type="unfinished">開啟聯絡人名單</translation>
     </message>
     <message>
         <source>Couldn&apos;t open file</source>
@@ -426,7 +426,7 @@ which may lead to problems with video calls.</source>
         <source>Open</source>
         <extracomment>Button to choose a file with a list of contacts to import</extracomment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">打開</translation>
+        <translation type="unfinished">開啟</translation>
     </message>
     <message>
         <source>Send friend requests</source>
@@ -552,7 +552,7 @@ which may lead to problems with video calls.</source>
         <source>Save settings to the working directory instead of the usual conf dir</source>
         <extracomment>describes makeToxPortable checkbox</extracomment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">將設定保存到工作目錄而不是通常的conf目錄</translation>
+        <translation type="unfinished">將設定儲存到工作目錄而不是通常的conf目錄</translation>
     </message>
     <message>
         <source>Make Tox portable</source>
@@ -621,7 +621,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Connection settings</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">連接設定</translation>
+        <translation type="unfinished">連線設定</translation>
     </message>
     <message>
         <source>Disabling this allows, e.g., Tox over Tor. It adds load to the Tox network however, so uncheck only when necessary.</source>
@@ -721,7 +721,7 @@ which may lead to problems with video calls.</source>
     <message>
         <source>Unable to open</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">無法打開</translation>
+        <translation type="unfinished">無法開啟</translation>
     </message>
     <message>
         <source>Bad idea</source>
@@ -882,7 +882,7 @@ so you can save the file on Windows.</source>
         <source>Rename circle</source>
         <comment>Menu for renaming a circle</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">重命名圓圈</translation>
+        <translation type="unfinished">重新命名圓圈</translation>
     </message>
     <message>
         <source>Remove circle</source>
@@ -1468,7 +1468,7 @@ instead of closing entirely.</source>
     <message>
         <source>Save chat log</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">保存聊天記錄</translation>
+        <translation type="unfinished">儲存聊天記錄</translation>
     </message>
     <message>
         <source>Clear displayed messages</source>
@@ -1539,7 +1539,7 @@ instead of closing entirely.</source>
         <source>Rename profile.</source>
         <comment>tooltip for renaming profile button</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">重命名設定檔。</translation>
+        <translation type="unfinished">重新命名設定檔。</translation>
     </message>
     <message>
         <source>Go back to the login screen</source>
@@ -1648,7 +1648,7 @@ Profile does not contain your history.</source>
     <message>
         <source>Rename profile.</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">重命名設定檔。</translation>
+        <translation type="unfinished">重新命名設定檔。</translation>
     </message>
     <message>
         <source>Delete profile.</source>
@@ -1893,7 +1893,7 @@ Press Shift+F1 for more information.</source>
     </message>
     <message>
         <source>The password you enter here is optional and encrypts message data and your Tox secret key. It does not encrypt files received. Your profile data is never sent to any servers. This is not a remote login, it&apos;s local to your computer only. qTox developers won&apos;t be able to recover your password if lost.</source>
-        <translation type="unfinished">您在此輸入的密碼是可選的，它會對訊息資料和您的 Tox 金鑰進行加密。它不會加密收到的檔案。您的個人資料資料永遠不會發送到任何伺服器。這不是遠端登錄，它僅適用於您的電腦本機。如果您的密碼遺失，qTox 開發人員將無法恢復。</translation>
+        <translation type="unfinished">您在此輸入的密碼是可選的，它會對訊息資料和您的 Tox 金鑰進行加密。它不會加密收到的檔案。您的個人資料資料永遠不會發送到任何伺服器。這不是遠端登入，它僅適用於您的電腦本機。如果您的密碼遺失，qTox 開發人員將無法恢復。</translation>
     </message>
     <message>
         <source>Password input field, minimum 6 characters long</source>
@@ -1933,7 +1933,7 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>Open profile</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">打開個人資料</translation>
+        <translation type="unfinished">開啟個人資料</translation>
     </message>
     <message>
         <source>Open profile page when clicked</source>
@@ -2025,7 +2025,7 @@ Press Shift+F1 for more information.</source>
     <message>
         <source>Open Debugger</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">打開偵錯工具</translation>
+        <translation type="unfinished">開啟偵錯工具</translation>
     </message>
     <message>
         <source>Add friend</source>
@@ -2263,8 +2263,8 @@ If you are getting spammed with friend requests, change the NoSpam.</source>
 Save format changes are possible, which may result in data loss.</source>
         <comment>toolTip for Keep History setting</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">聊天記錄保存仍在開發中。
-保存格式可能會發生更改，這可能會導致資料遺失。</translation>
+        <translation type="unfinished">聊天記錄儲存仍在開發中。
+儲存格式可能會發生更改，這可能會導致資料遺失。</translation>
     </message>
     <message>
         <source>Privacy</source>
@@ -2344,7 +2344,7 @@ Please use another image.</source>
     <message>
         <source>Couldn&apos;t rename the profile to &quot;%1&quot;</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">無法將設定檔重命名為“%1”</translation>
+        <translation type="unfinished">無法將設定檔重新命名為“%1”</translation>
     </message>
     <message>
         <source>Nothing to remove</source>
@@ -2942,7 +2942,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <source>Click and drag to select a region. Press %1 to hide/show qTox window, or %2 to cancel.</source>
         <comment>Help text shown when no region has been selected yet</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">按一下並拖曳以選擇一個區域。按 %1 隱藏/顯示 qTox 窗口，或按 %2 取消。</translation>
+        <translation type="unfinished">按一下並拖曳以選擇一個區域。按 %1 隱藏/顯示 qTox 視窗，或按 %2 取消。</translation>
     </message>
     <message>
         <source>Space</source>
@@ -2960,7 +2960,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
         <source>Press %1 to send a screenshot of the selection, %2 to hide/show qTox window, or %3 to cancel.</source>
         <comment>Help text shown when a region has been selected</comment>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">按 %1 發送所選內容的螢幕截圖，按 %2 隱藏/顯示 qTox 窗口，或按 %3 取消。</translation>
+        <translation type="unfinished">按 %1 發送所選內容的螢幕截圖，按 %2 隱藏/顯示 qTox 視窗，或按 %3 取消。</translation>
     </message>
     <message>
         <source>Enter</source>
@@ -3239,7 +3239,7 @@ Hide formatting characters:
     <message>
         <source>Open window</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">打開窗戶</translation>
+        <translation type="unfinished">開啟視窗</translation>
     </message>
     <message>
         <source>Contact list</source>
