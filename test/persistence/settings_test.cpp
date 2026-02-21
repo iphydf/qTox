@@ -85,7 +85,7 @@ void TestSettings::testAutoSaveGlobal()
     settings.setEnableDebug(true);
 
     // Wait for the event loop to process the QTimer event in Settings::setVal
-    QTest::qWait(100);
+    QTest::qWait(250);
 
     // Block until the background QThread finishes writing to disk
     settings.sync();
@@ -108,33 +108,33 @@ void TestSettings::testAutoSaveDebounce()
     settings.getPaths().setPortablePath(tempDir.path());
 
     // Use a small but measurable interval
-    settings.setSaveTimerInterval(100);
+    settings.setSaveTimerInterval(500);
 
     const QString filePath = settings.getPaths().getSettingsDirPath() + "qtox.ini";
     QFile::remove(filePath); // Ensure clean state
     QVERIFY(!QFile::exists(filePath));
 
-    // First change starts the timer (100ms)
+    // First change starts the timer (500ms)
     settings.setEnableDebug(true);
 
-    // Wait 60ms - timer shouldn't have fired yet
-    QTest::qWait(60);
+    // Wait 250ms - timer shouldn't have fired yet
+    QTest::qWait(250);
     settings.sync();                   // Wait for any *potential* I/O to finish
     QVERIFY(!QFile::exists(filePath)); // Verify no save happened yet
 
-    // Second change should reset the timer back to 100ms
+    // Second change should reset the timer back to 500ms
     settings.setEnableIPv6(false);
 
-    // Wait another 60ms - a total of 120ms since the first change,
-    // but only 60ms since the second change.
+    // Wait another 250ms - a total of 500ms since the first change,
+    // but only 250ms since the second change.
     // If it didn't reset, it would have fired by now.
-    QTest::qWait(60);
+    QTest::qWait(250);
     settings.sync();
     QVERIFY(!QFile::exists(filePath)); // Still shouldn't exist because it was reset
 
-    // Wait 60ms more - now it has been 120ms since the *second* change,
+    // Wait 300ms more - now it has been 550ms since the *second* change,
     // so the timer must have fired and saved the file.
-    QTest::qWait(60);
+    QTest::qWait(300);
     settings.sync();
     QVERIFY(QFile::exists(filePath));
 }

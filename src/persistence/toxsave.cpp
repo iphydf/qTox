@@ -13,6 +13,7 @@
 
 #include <QCoreApplication>
 #include <QString>
+#include <QTimer>
 
 const QString ToxSave::eventHandlerKey = QStringLiteral("save");
 
@@ -36,7 +37,8 @@ bool ToxSave::toxSaveEventHandler(const QByteArray& eventData, void* userData)
         return false;
     }
 
-    toxSave->handleToxSave(QString::fromUtf8(eventData));
+    const QString path = QString::fromUtf8(eventData);
+    QTimer::singleShot(0, toxSave->parent, [toxSave, path]() { toxSave->handleToxSave(path); });
     return true;
 }
 
