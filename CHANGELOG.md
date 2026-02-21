@@ -1,3 +1,11 @@
+<a name="v1.18.4-rc.2"></a>
+
+## v1.18.4-rc.2 (2026-02-21)
+
+### Release notes
+
+Quick second release candidate. There should be no changes for the user in comparison to the first, but we had issues during the release of rc1 and this release candidate is here to test the resolution.
+
 <a name="v1.18.4-rc.1"></a>
 
 ## v1.18.4-rc.1 (2026-02-21)
