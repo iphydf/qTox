@@ -95,7 +95,6 @@ void UpdateCheck::handleResponse(QNetworkReply* reply)
     if (!isCurrentVersionStable()) {
         qWarning() << "Currently running an untested/unstable version of qTox";
         emit versionIsUnstable();
-        reply->deleteLater();
     }
 
     const auto currentVer = tagToVersion(VersionInfo::gitDescribe());
