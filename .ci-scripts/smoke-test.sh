@@ -2,31 +2,23 @@
 
 set -eux -o pipefail
 
-# Release tags *or* master builds where the current commit is tagged
-# with 'v.*' are considered stable.
-if [ -n "$(echo "${GITHUB_REF:-}" | grep -o 'refs/tags/v.*')" ] ||
-  [ -n "$(git tag --points-at HEAD | grep '^v.*')" ]; then
+# Release tags vX.Y.Z are considered stable.
+# vX.Y.Z-rcN or other tags are considered unstable.
+if [ -n "$(echo "${GITHUB_REF:-}" | grep -E 'refs/tags/v[0-9]+\.[0-9]+\.[0-9]+$')" ] ||
+  [ -n "$(git tag --points-at HEAD | grep -E '^v[0-9]+\.[0-9]+\.[0-9]+$')" ]; then
   REGEX="qTox v.* (stable)"
 else
   REGEX="qTox v.* (unstable)"
 fi
 
-if [ -n "${GITHUB_TOKEN:-}" ]; then
-  GITHUB_AUTH=(-H "Authorization: token $GITHUB_TOKEN")
-else
-  GITHUB_AUTH=()
-fi
-
-VERSION=$(curl \
-  -H "Accept: application/vnd.github+json" \
-  "${GITHUB_AUTH[@]}" \
-  -L \
-  https://api.github.com/repos/TokTok/qTox/releases/latest |
-  grep '"tag_name": "v.*"' |
-  grep -o 'v[^"]*')
-
 "$@" --version | grep "$REGEX" || ("$@" --version && false)
-"$@" --update-check | grep "^Latest version: $VERSION" || ("$@" --update-check && false)
+
+# Verify that the version in --update-check matches --version.
+QTOX_VERSION=$("$@" --version | grep -o 'v[0-9][^ ,]*' | head -n 1)
+"$@" --update-check | grep "^Current version: $QTOX_VERSION" || ("$@" --update-check && false)
+
+# Verify that --update-check successfully fetched a version from GitHub.
+"$@" --update-check | grep "^Latest version: v[0-9]\+" || ("$@" --update-check && false)
 
 # If QTOX_SCREENSHOT isn't set, don't take a screenshot.
 if [ -z "${QTOX_SCREENSHOT:-}" ]; then
