@@ -2,7 +2,7 @@
  * Copyright © 2000,2001 Fabrice Bellard
  * Copyright © 2006 Luca Abeni
  * Copyright © 2015-2019 by The qTox Project Contributors
- * Copyright © 2024-2025 The TokTok team.
+ * Copyright © 2024-2026 The TokTok team.
  */
 
 

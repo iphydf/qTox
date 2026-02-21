@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  * Copyright © 2006 by Richard Laager
  * Copyright © 2014-2019 by The qTox Project Contributors
- * Copyright © 2024-2025 The TokTok team.
+ * Copyright © 2024-2026 The TokTok team.
  *
  * Pidgin is the legal property of its developers, whose names are too numerous
  * to list here.  Please refer to the COPYRIGHT file distributed with this

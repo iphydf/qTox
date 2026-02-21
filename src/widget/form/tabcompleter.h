@@ -1,7 +1,7 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later
  * Copyright © 2005-2014 by the Quassel Project <devel@quassel-irc.org>
  * Copyright © 2014-2019 by The qTox Project Contributors
- * Copyright © 2024-2025 The TokTok team.
+ * Copyright © 2024-2026 The TokTok team.
  */
 
 #pragma once
