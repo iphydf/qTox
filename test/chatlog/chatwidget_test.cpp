@@ -4,6 +4,7 @@
 
 #include "src/chatlog/chatwidget.h"
 
+#include "src/chatlog/chatlinestorage.h"
 #include "src/chatlog/documentcache.h"
 #include "src/core/icoreidhandler.h"
 #include "src/model/ichatlog.h"
@@ -266,6 +267,7 @@ private slots:
     void testScrollStress();
     void testResizeAndInterrupt();
     void testClearPreservesFileTransfers();
+    void testHideAndShowRestoresVisibility();
 
 private:
     std::unique_ptr<QTemporaryDir> tempHome;
@@ -695,6 +697,56 @@ void TestChatWidget::testClearPreservesFileTransfers()
 
     // Now it should be empty
     QVERIFY(chatWidget->isEmpty());
+}
+
+void TestChatWidget::testHideAndShowRestoresVisibility()
+{
+    QSignalSpy spy(chatWidget.get(), &ChatWidget::renderFinished);
+    QSignalSpy visibilitySpy(chatWidget.get(), &ChatWidget::firstVisibleLineChanged);
+
+    // 1. Scroll up to fetch older messages, causing storage to exceed maxWindowSize (50)
+    QScrollBar* vScroll = chatWidget->verticalScrollBar();
+    vScroll->setValue(vScroll->minimum());
+    waitForRender(spy);
+
+    // Verify lines are rendered (implying the storage holds them)
+    QVERIFY(chatWidget->getRenderedEndIdx() > chatWidget->getRenderedStartIdx());
+    QVERIFY(visibilitySpy.count() > 0);
+    visibilitySpy.clear();
+
+    // Record the starting index before hiding.
+    // In our mock, chunk size is 20, max window size is 50.
+    // Scrolling up loaded 20 more messages, plus date lines.
+    // The off-by-one bug will cause it to prune 1 more message than intended.
+    const size_t oldStartIdx = chatWidget->getRenderedStartIdx().get();
+
+    // 2. Hide the widget (e.g. switching to Settings view or system tray)
+    // We do not resize it, as tab switching doesn't necessarily change the geometry width.
+    chatWidget->hide();
+
+    // Wait for the resize worker to finish its background job
+    waitForRender(spy);
+
+    // Calculate how many messages were pruned.
+    const size_t newStartIdx = chatWidget->getRenderedStartIdx().get();
+    const size_t prunedCount = newStartIdx - oldStartIdx;
+
+    // We expect exactly 5 messages to be pruned (55 total items - 50 maxWindowSize).
+    // The off-by-one bug would prune 6 messages.
+    QCOMPARE(prunedCount, 5);
+
+    // Because the view is hidden, the background worker's layout evaluation of getVisibleRect()
+    // results in no lines intersecting the viewport, effectively clearing visibleLines.
+    // We expect the subsequent show() to trigger a visibility restore via checkVisibility().
+    visibilitySpy.clear();
+
+    // 3. Show the widget again (e.g. switching back to Chat view)
+    chatWidget->show();
+    QTest::qWait(100);
+
+    // The messages should be restored to visibility and re-rendered,
+    // which triggers the firstVisibleLineChanged signal.
+    QVERIFY(visibilitySpy.count() > 0);
 }
 
 QTEST_MAIN(TestChatWidget)

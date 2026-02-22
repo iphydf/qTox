@@ -1015,7 +1015,7 @@ void ChatWidget::removeLines(ChatLogIdx begin, ChatLogIdx end)
     }
 
     begin = std::clamp<ChatLogIdx>(begin, chatLineStorage->firstIdx(), chatLineStorage->lastIdx());
-    end = std::clamp<ChatLogIdx>(end, chatLineStorage->firstIdx(), chatLineStorage->lastIdx()) + 1;
+    end = std::clamp<ChatLogIdx>(end, chatLineStorage->firstIdx(), chatLineStorage->lastIdx() + 1);
 
     // NOTE: Optimization potential if this find proves to be too expensive.
     // Batching all our erases into one call would be more efficient
@@ -1336,9 +1336,13 @@ void ChatWidget::handleMultiClickEvent()
 void ChatWidget::showEvent(QShowEvent* event)
 {
     std::ignore = event;
-    // Empty.
     // The default implementation calls centerOn - for some reason - causing
     // the scrollbar to move.
+
+    // When the widget was hidden, its layout might have been compressed to 0x0,
+    // which caused all lines to be marked invisible and purged from memory to save
+    // resources. We must explicitly check visibility when shown to restore them.
+    checkVisibility();
 }
 
 void ChatWidget::hideEvent(QHideEvent* event)
