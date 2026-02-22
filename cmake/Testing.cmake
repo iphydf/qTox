@@ -67,6 +67,7 @@ endif()
 auto_test(video videomode "" "")
 auto_test(video videoframe "" "${LIBAVUTIL_LIBRARIES}")
 auto_test(widget filesform "" "")
+auto_test(widget filetransferwidget "" "")
 auto_test(widget/form/settings generalform "" "")
 auto_test(widget/tool identicon "" "")
 # keep-sorted end

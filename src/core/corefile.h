@@ -30,6 +30,7 @@ using CoreFilePtr = std::unique_ptr<CoreFile>;
 class CoreFile : public QObject
 {
     Q_OBJECT
+    friend class TestFileTransferWidget;
 
 public:
     void handleAvatarOffer(uint32_t friendId, uint32_t fileId, bool accept, uint64_t filesize);

@@ -190,7 +190,7 @@ void FileTransferWidget::paintEvent(QPaintEvent* event)
     // Draw the widget background:
     painter.setClipRect(QRect(0, 0, width(), height()));
     painter.setBrush(QBrush(backgroundColor));
-    painter.drawRoundedRect(geometry(), r * ratio, r, Qt::RelativeSize);
+    painter.drawRoundedRect(rect(), r * ratio, r, Qt::RelativeSize);
 
     if (drawButtonAreaNeeded()) {
         // Draw the button background:
@@ -222,7 +222,7 @@ void FileTransferWidget::paintEvent(QPaintEvent* event)
         // Draw the right button:
         painter.setBrush(QBrush(buttonColor));
         painter.setClipRect(QRect(width() - buttonFieldWidth, 0, buttonFieldWidth, buttonFieldWidth));
-        painter.drawRoundedRect(geometry(), r * ratio, r, Qt::RelativeSize);
+        painter.drawRoundedRect(rect(), r * ratio, r, Qt::RelativeSize);
     }
 }
 
