@@ -1,3 +1,16 @@
+<a name="v1.18.4-rc.3"></a>
+
+## v1.18.4-rc.3 (2026-02-22)
+
+### Release notes
+
+Landed another fix for an edge case where multiple qtox instances could be started, and have side effects.
+
+#### Bug Fixes
+
+- Prevent multiple qTox instances when opening profile files. ([4ff5f184](https://github.com/TokTok/qTox/commit/4ff5f18420168706087e3b2489401bf9e156f3a3), closes [#661](https://github.com/TokTok/qTox/issues/661))
+- **Settings:** Auto-save settings on change. ([e15c9a54](https://github.com/TokTok/qTox/commit/e15c9a54f8e2c1d59a4b144813bf06b6f0d7a022), closes [#604](https://github.com/TokTok/qTox/issues/604))
+
 <a name="v1.18.4-rc.2"></a>
 
 ## v1.18.4-rc.2 (2026-02-21)
