@@ -42,8 +42,13 @@ QRectF ChatLineContentProxy::boundingRect() const
 void ChatLineContentProxy::paint(QPainter* painter, const QStyleOptionGraphicsItem* option,
                                  QWidget* widget)
 {
-    painter->setClipRect(boundingRect());
-    proxy->paint(painter, option, widget);
+    // The proxy is a child item and paints automatically.
+    // Explicitly painting here forces it to draw out-of-bounds
+    // when ChatLineContentProxy's larger bounding rect intersects the viewport
+    // but the proxy's own bounding rect is outside the clip region.
+    std::ignore = painter;
+    std::ignore = option;
+    std::ignore = widget;
 }
 
 qreal ChatLineContentProxy::getAscent() const

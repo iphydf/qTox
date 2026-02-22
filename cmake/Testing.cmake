@@ -36,6 +36,7 @@ add_subdirectory(test/dbutility)
 set(TEST_RESOURCES test/resources/test_data.qrc ${${BINARY_NAME}_RESOURCES})
 
 # keep-sorted start
+auto_test(chatlog chatlinecontentproxy "" "")
 auto_test(chatlog chatlinestorage "" "")
 auto_test(chatlog chatwidget "" "")
 auto_test(chatlog text "" "")
