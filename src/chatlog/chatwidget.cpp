@@ -1336,13 +1336,9 @@ void ChatWidget::handleMultiClickEvent()
 void ChatWidget::showEvent(QShowEvent* event)
 {
     std::ignore = event;
+    // Empty.
     // The default implementation calls centerOn - for some reason - causing
     // the scrollbar to move.
-
-    // When the widget was hidden, its layout might have been compressed to 0x0,
-    // which caused all lines to be marked invisible and purged from memory to save
-    // resources. We must explicitly check visibility when shown to restore them.
-    checkVisibility();
 }
 
 void ChatWidget::hideEvent(QHideEvent* event)
