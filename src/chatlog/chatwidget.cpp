@@ -1355,11 +1355,18 @@ void ChatWidget::hideEvent(QHideEvent* event)
     // qTox, but that isn't a regression from previously released behavior.
 
     const std::size_t maxWindowSize = settings.getChatMaxWindowSize();
-    auto numLinesToRemove =
-        chatLineStorage->size() > maxWindowSize ? chatLineStorage->size() - maxWindowSize : 0;
 
-    if (numLinesToRemove > 0) {
-        removeLines(chatLineStorage->firstIdx(), chatLineStorage->firstIdx() + numLinesToRemove);
+    if (chatLineStorage->size() > maxWindowSize) {
+        while (chatLineStorage->size() > maxWindowSize) {
+            auto it = chatLineStorage->begin();
+            (*it)->removeFromScene();
+            chatLineStorage->erase(it);
+        }
+
+        if (chatLineStorage->hasIndexedMessage()) {
+            layout(0, chatLineStorage->size(), useableWidth());
+        }
+
         startResizeWorker();
     }
 }

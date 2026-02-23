@@ -24,7 +24,7 @@ class MockChatLog : public IChatLog
 {
     Q_OBJECT
 public:
-    explicit MockChatLog(size_t numMessages);
+    explicit MockChatLog(size_t numMessages, int messagesPerDay_ = 10);
     ~MockChatLog() override;
 
     const ChatLogItem& at(ChatLogIdx idx) const override;
@@ -43,15 +43,18 @@ public:
 
 private:
     std::vector<ChatLogItem> items;
+    int messagesPerDay;
 };
 
-MockChatLog::MockChatLog(size_t numMessages)
+MockChatLog::MockChatLog(size_t numMessages, int messagesPerDay_)
+    : messagesPerDay(messagesPerDay_)
 {
     for (size_t i = 0; i < numMessages; ++i) {
         Message msg;
         msg.content = QString("Message %1").arg(i);
-        // Every 10 messages, increment the day
-        msg.timestamp = QDateTime(QDate(2020, 1, 1).addDays(i / 10), QTime(12, 0)).addSecs(i % 10);
+        // Every messagesPerDay messages, increment the day
+        msg.timestamp = QDateTime(QDate(2020, 1, 1).addDays(i / messagesPerDay), QTime(12, 0))
+                            .addSecs(i % messagesPerDay);
         items.emplace_back(ToxPk(), QString("Sender %1").arg(i % 5),
                            ChatLogMessage{MessageState::complete, msg});
     }
@@ -123,7 +126,7 @@ std::vector<IChatLog::DateChatLogIdxPair> MockChatLog::getDateIdxs(const QDate& 
                                                                    size_t maxDates) const
 {
     std::vector<IChatLog::DateChatLogIdxPair> result;
-    for (size_t i = 0; i < items.size(); i += 10) {
+    for (size_t i = 0; i < items.size(); i += messagesPerDay) {
         auto date = items[i].getTimestamp().date();
         if (date >= startDate) {
             result.push_back({date, ChatLogIdx(i)});
@@ -268,6 +271,7 @@ private slots:
     void testResizeAndInterrupt();
     void testClearPreservesFileTransfers();
     void testHideAndShowRestoresVisibility();
+    void testHideWithManyUnindexedLinesDoesNotClearChat();
 
 private:
     std::unique_ptr<QTemporaryDir> tempHome;
@@ -747,6 +751,30 @@ void TestChatWidget::testHideAndShowRestoresVisibility()
     // The messages should be restored to visibility and re-rendered,
     // which triggers the firstVisibleLineChanged signal.
     QVERIFY(visibilitySpy.count() > 0);
+}
+
+void TestChatWidget::testHideWithManyUnindexedLinesDoesNotClearChat()
+{
+    chatLog = std::make_unique<MockChatLog>(100, 1);
+    chatWidget = std::make_unique<MockChatWidget>(*chatLog, *idHandler, nullptr, *documentCache,
+                                                  *smileyPack, *settings, *style, *messageBoxManager);
+
+    chatWidget->show();
+    chatWidget->resize(400, 300);
+
+    QSignalSpy spy(chatWidget.get(), &ChatWidget::renderFinished);
+    waitForRender(spy);
+
+    QScrollBar* vScroll = chatWidget->verticalScrollBar();
+    for (int i = 0; i < 6; ++i) {
+        vScroll->setValue(vScroll->minimum());
+        waitForRender(spy);
+    }
+
+    chatWidget->hide();
+    waitForRender(spy);
+
+    QVERIFY(!chatWidget->isEmpty());
 }
 
 QTEST_MAIN(TestChatWidget)
