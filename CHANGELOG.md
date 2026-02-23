@@ -1,3 +1,19 @@
+<a name="v1.18.4-rc.4"></a>
+
+## v1.18.4-rc.4 (2026-02-23)
+
+### Release notes
+
+Another RC with multiple graphical glitch fixes and updated flatpak.
+
+#### Bug Fixes
+
+- **Chat:**
+  - Prevent chat messages from disappearing when switching chats. ([29c73f6b](https://github.com/TokTok/qTox/commit/29c73f6b0a21c89aa0f17748debb12179147bcd4))
+  - Prevent file transfer widget from briefly reappearing when scrolling. ([61b7b4bb](https://github.com/TokTok/qTox/commit/61b7b4bbdd3e643f0a709c3c5b818505d2d10e86))
+  - Keep file transfer widget bounds within chat history. ([7755f980](https://github.com/TokTok/qTox/commit/7755f9803172e01803cb5f558afd59ca06d10038))
+  - Restore chat history visibility after hiding window. ([79f7d14b](https://github.com/TokTok/qTox/commit/79f7d14b53e9f07f2461a45e690ca33a55afe8cd), closes [#572](https://github.com/TokTok/qTox/issues/572))
+
 <a name="v1.18.4-rc.3"></a>
 
 ## v1.18.4-rc.3 (2026-02-22)
