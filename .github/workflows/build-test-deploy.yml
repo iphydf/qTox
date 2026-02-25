@@ -35,9 +35,9 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Checkout ci-tools
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: TokTok/ci-tools
           path: third_party/ci-tools
@@ -57,9 +57,9 @@ jobs:
     if: github.event_name != 'push'
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Cache compiler output
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             .cache/ccache
@@ -89,9 +89,9 @@ jobs:
         features: [full]
         build_type: [Debug]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Cache compiler output
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ".cache/ccache"
           key: ${{ github.job }}-ccache
@@ -111,9 +111,9 @@ jobs:
       matrix:
         build_type: [Release]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Cache compiler output
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ".cache/ccache"
           key: ${{ github.job }}-ccache
@@ -133,9 +133,9 @@ jobs:
         features: [minimal]
         build_type: [Debug]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Cache compiler output
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ".cache/ccache"
           key: ${{ github.job }}-ccache
@@ -158,9 +158,9 @@ jobs:
         features: [full]
         build_type: [Debug]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Cache compiler output
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ".cache/ccache"
           key: ${{ github.job }}-ccache
@@ -184,21 +184,21 @@ jobs:
           - arch: ${{ github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'packaging') && 'arm64' }}
     runs-on: ${{ matrix.arch == 'x86_64' && 'macos-15-intel' || 'macos-14' }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Checkout ci-tools
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: TokTok/ci-tools
           path: third_party/ci-tools
           submodules: true
       - name: Checkout dockerfiles
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: TokTok/dockerfiles
           path: third_party/dockerfiles
           submodules: true
       - name: Cache compiler output
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ".cache/ccache"
           key: ${{ github.job }}-${{ matrix.arch }}-ccache
@@ -227,9 +227,9 @@ jobs:
         features: [full]
         build_type: [Release]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Cache compiler output
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ".cache/ccache"
           key: ${{ github.job }}-ccache
@@ -254,18 +254,18 @@ jobs:
     needs: [prepare]
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Cache compiler output
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ".cache/ccache"
           key: ${{ github.job }}-ccache
       - name: Run build
         run: docker compose run --rm wasm_builder platform/wasm/build.sh
       - name: Upload zip
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: qtox-wasm
           path: _site
@@ -336,7 +336,7 @@ jobs:
     env:
       DOXYGEN_CONFIG_FILE: doxygen.conf
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Run
