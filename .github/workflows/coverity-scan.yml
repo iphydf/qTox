@@ -2,7 +2,7 @@ name: coverity-scan
 
 on:
   # Run this workflow every day at 10:00 UTC.
-  schedule: [cron: '0 10 * * *']
+  schedule: [cron: "0 10 * * *"]
   # Allow manual trigger.
   workflow_dispatch:
 
@@ -14,32 +14,31 @@ jobs:
         with:
           submodules: recursive
       - name: Install libraries
-        run:
-          sudo apt-get update &&
+        run: sudo apt-get update &&
           sudo apt-get install -y --no-install-recommends
-            cmake
-            libavcodec-dev
-            libavdevice-dev
-            libavfilter-dev
-            libavutil-dev
-            libexif-dev
-            libgl1-mesa-dev
-            libopenal-dev
-            libopus-dev
-            libqrencode-dev
-            libqt6opengl6-dev
-            libqt6svg6-dev
-            libsodium-dev
-            libsqlcipher-dev
-            libswresample-dev
-            libswscale-dev
-            libvpx-dev
-            libxss-dev
-            ninja-build
-            pkg-config
-            qt6-l10n-tools
-            qt6-tools-dev
-            qt6-tools-dev-tools
+          cmake
+          libavcodec-dev
+          libavdevice-dev
+          libavfilter-dev
+          libavutil-dev
+          libexif-dev
+          libgl1-mesa-dev
+          libopenal-dev
+          libopus-dev
+          libqrencode-dev
+          libqt6opengl6-dev
+          libqt6svg6-dev
+          libsodium-dev
+          libsqlcipher-dev
+          libswresample-dev
+          libswscale-dev
+          libvpx-dev
+          libxss-dev
+          ninja-build
+          pkg-config
+          qt6-l10n-tools
+          qt6-tools-dev
+          qt6-tools-dev-tools
 
       - name: Download Coverity Build Tool
         run: |
@@ -64,15 +63,14 @@ jobs:
         run: cov-analysis-linux64/bin/cov-build --dir cov-int cmake --build _build
 
       - name: Submit the result to Coverity Scan
-        run:
-          tar czvf qTox.tgz cov-int &&
+        run: tar czvf qTox.tgz cov-int &&
           curl
-            --form project=TokTok/qTox
-            --form token=$TOKEN
-            --form email=iphydf@gmail.com
-            --form file=@qTox.tgz
-            --form version="$(git rev-list --count HEAD)"
-            --form description="CI build of $(git rev-parse --abbrev-ref HEAD) branch"
-            https://scan.coverity.com/builds
+          --form project=TokTok/qTox
+          --form token=$TOKEN
+          --form email=iphydf@gmail.com
+          --form file=@qTox.tgz
+          --form version="$(git rev-list --count HEAD)"
+          --form description="CI build of $(git rev-parse --abbrev-ref HEAD) branch"
+          https://scan.coverity.com/builds
         env:
           TOKEN: ${{ secrets.COVERITY_SCAN_TOKEN }}

@@ -2,7 +2,7 @@ name: Package
 
 on:
   # Run this workflow every day at 3:00 UTC to update caches.
-  schedule: [cron: '0 3 * * *']
+  schedule: [cron: "0 3 * * *"]
   # Allow manual trigger.
   workflow_dispatch:
   pull_request:
@@ -17,15 +17,15 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-   build-fedora-rpm:
-     name: Build RPM package on Fedora
-     runs-on: ubuntu-24.04
-     steps:
-       - uses: actions/checkout@v6
-       - name: Cache compiler output
-         uses: actions/cache@v5
-         with:
-           path: ".cache/ccache"
-           key: ${{ github.job }}-ccache
-       - name: Build package
-         run: docker compose run --rm fedora .ci-scripts/package-qtox-linux.sh --source-dir . --target-dir build_dir
+  build-fedora-rpm:
+    name: Build RPM package on Fedora
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - name: Cache compiler output
+        uses: actions/cache@v5
+        with:
+          path: ".cache/ccache"
+          key: ${{ github.job }}-ccache
+      - name: Build package
+        run: docker compose run --rm fedora .ci-scripts/package-qtox-linux.sh --source-dir . --target-dir build_dir
