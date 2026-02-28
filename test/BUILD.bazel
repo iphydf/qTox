@@ -28,6 +28,7 @@ qt_moc(
     tags = ["qt"],
     deps = [
         "//qtox/src",
+        "//qtox/src:core",
         "//qtox/util",
     ],
 )
@@ -60,6 +61,7 @@ cc_library(
     tags = ["qt"],
     deps = [
         "//qtox/src",
+        "//qtox/src:core",
         "@qt//:qt_core",
     ],
 )
@@ -79,6 +81,7 @@ UI_TESTS = ["loginscreen_test"]
         "//c-toxcore",
         "//qtox:res_lib",
         "//qtox/src",
+        "//qtox/src:core",
         "//qtox/util",
         "@qt//:qt_core",
         "@qt//:qt_gui",
@@ -173,6 +176,7 @@ qt_test(
     deps = [
         ":dbutility",
         "//qtox/src",
+        "//qtox/src:core",
         "@qt//:qt_core",
     ],
 )

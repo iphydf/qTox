@@ -24,9 +24,7 @@ qt_moc(
         "chatlog/content/text.h",
         "chatlog/content/timestamp.h",
         "chatlog/customtextdocument.h",
-        "core/core.h",
         "core/coreav.h",
-        "core/corefile.h",
         "core/toxcall.h",
         "ipc.h",
         "model/about/aboutfriend.h",
@@ -215,15 +213,72 @@ cc_library(
     ],
 )
 
+qt_moc(
+    name = "core_moc",
+    srcs = [
+        "core/core.h",
+        "core/corefile.h",
+    ],
+    hdrs = glob(["core/**/*.h"]) + ["model/status.h"],
+    mocopts = [
+        "-Iqtox",
+        "-Iqtox/util/include",
+    ],
+    tags = ["qt"],
+    deps = [
+        "//qtox/util",
+        "@qt//:qt_widgets",
+    ],
+)
+
+cc_library(
+    name = "core",
+    srcs = [":core_moc"] + glob(
+        ["core/**/*.cpp"],
+        exclude = [
+            "core/coreav.cpp",
+            "core/toxcall.cpp",
+        ],
+    ) + [
+        "model/conferenceinvite.cpp",
+        "model/ibootstraplistgenerator.cpp",
+        "model/status.cpp",
+    ],
+    hdrs = glob(["core/**/*.h"]) + [
+        "model/conferenceinvite.h",
+        "model/ibootstraplistgenerator.h",
+        "model/status.h",
+        "model/toxclientstandards.h",
+    ],
+    copts = COPTS,
+    tags = ["qt"],
+    visibility = ["//qtox:__subpackages__"],
+    deps = [
+        "//c-toxcore",
+        "//qtox/audio",
+        "//qtox/util",
+        "@libsodium",
+        "@qt//:qt_core",
+        "@qt//:qt_gui",
+        "@qt//:qt_network",
+    ],
+)
+
 cc_library(
     name = "src",
     srcs = [":version"] + [
         ":src_moc",
         ":src_ui",
+        "core/coreav.cpp",
+        "core/toxcall.cpp",
     ] + glob(
         ["**/*.cpp"],
         exclude = [
+            "core/**",
+            "model/conferenceinvite.cpp",
             "model/exiftransform.cpp",
+            "model/ibootstraplistgenerator.cpp",
+            "model/status.cpp",
             "persistence/serialize.cpp",
             "main.cpp",
         ],
@@ -231,7 +286,12 @@ cc_library(
     hdrs = glob(
         ["**/*.h"],
         exclude = [
+            "core/**",
+            "model/conferenceinvite.h",
             "model/exiftransform.h",
+            "model/ibootstraplistgenerator.h",
+            "model/status.h",
+            "model/toxclientstandards.h",
             "persistence/serialize.h",
         ],
     ),
@@ -247,6 +307,7 @@ cc_library(
     tags = ["qt"],
     visibility = ["//qtox:__subpackages__"],
     deps = [
+        ":core",
         ":exiftransform",
         ":serialize",
         ":stacktrace",
