@@ -16,7 +16,6 @@
 #include "src/model/conferenceinvite.h"
 #include "src/model/ibootstraplistgenerator.h"
 #include "src/model/status.h"
-#include "src/persistence/profile.h"
 #include "util/toxcoreerrorparser.h"
 
 #include <QCoreApplication>
