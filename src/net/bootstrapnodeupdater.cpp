@@ -139,24 +139,28 @@ QList<DhtServer> jsonToNodeList(const QJsonDocument& nodeList)
     return result;
 }
 
-QList<DhtServer> loadNodesFile(QString file)
+QList<DhtServer> loadNodesFile(const QString& file)
 {
     QFile nodesFile{file};
     if (!nodesFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qWarning() << "Couldn't read bootstrap nodes";
+        qWarning() << "Couldn't read bootstrap nodes from" << file;
         return {};
     }
 
-    const QString nodesJson = QString::fromUtf8(nodesFile.readAll());
+    const QByteArray data = nodesFile.readAll();
     nodesFile.close();
 
-    auto jsonDoc = QJsonDocument::fromJson(nodesJson.toUtf8());
+    QJsonParseError parseError;
+    auto jsonDoc = QJsonDocument::fromJson(data, &parseError);
     if (jsonDoc.isNull()) {
-        qWarning() << "Failed to parse JSON document";
+        qWarning() << "Failed to parse bootstrap nodes JSON from" << file << ":"
+                   << parseError.errorString() << "at offset" << parseError.offset;
         return {};
     }
 
-    return jsonToNodeList(jsonDoc);
+    const auto nodes = jsonToNodeList(jsonDoc);
+    qDebug() << "Loaded" << nodes.size() << "bootstrap nodes from" << file;
+    return nodes;
 }
 
 QByteArray serialize(QList<DhtServer> nodes)
@@ -217,9 +221,17 @@ BootstrapNodeUpdater::BootstrapNodeUpdater(const QNetworkProxy& proxy_, Paths& p
 
 QList<DhtServer> BootstrapNodeUpdater::getBootstrapNodes() const
 {
-    auto userFilePath = paths.getUserNodesFilePath();
+    const auto userFilePath = paths.getUserNodesFilePath();
     if (QFile::exists(userFilePath)) {
-        return loadNodesFile(userFilePath);
+        qDebug() << "User bootstrap nodes file found at" << userFilePath;
+        auto nodes = loadNodesFile(userFilePath);
+        if (!nodes.isEmpty()) {
+            return nodes;
+        }
+        qWarning()
+            << "User bootstrap nodes file was empty or invalid, falling back to built-in nodes";
+    } else {
+        qDebug() << "No user bootstrap nodes file at" << userFilePath << ", using built-in nodes";
     }
     return loadNodesFile(builtinNodesFile);
 }
