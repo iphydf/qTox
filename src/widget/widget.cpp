@@ -1731,18 +1731,20 @@ void Widget::removeFriend(Friend* f, bool fake)
         lastDialog->removeFriend(friendPk);
     }
 
+    friendWidgets.remove(friendPk);
+
+    // Delete ChatForm before ChatManager removes the model, because
+    // ChatForm holds references to chatLog and chatState owned by ChatManager.
+    auto* chatForm = chatForms[friendPk];
+    chatForms.remove(friendPk);
+    delete chatForm;
+
     if (!fake) {
         chatManager->removeFriend(friendPk);
     } else {
         chatManager->removeFriendModel(friendPk);
     }
     friendList->removeFriend(friendPk, settings, fake);
-
-    friendWidgets.remove(friendPk);
-
-    auto* chatForm = chatForms[friendPk];
-    chatForms.remove(friendPk);
-    delete chatForm;
 
     delete f;
     if ((contentLayout != nullptr) && contentLayout->mainHead->layout()->isEmpty()) {
@@ -2000,13 +2002,6 @@ void Widget::removeConference(Conference* c, bool fake)
         onAddClicked();
     }
 
-    if (!fake) {
-        chatManager->removeConference(conferenceId);
-    } else {
-        chatManager->removeConferenceModel(conferenceId);
-    }
-    conferenceList->removeConference(conferenceId, fake);
-
     ContentDialog* contentDialog = contentDialogManager->getConferenceDialog(conferenceId);
     if (contentDialog != nullptr) {
         contentDialog->removeConference(conferenceId);
@@ -2015,6 +2010,10 @@ void Widget::removeConference(Conference* c, bool fake)
     chatListWidget->removeConferenceWidget(widget); // deletes widget
 
     conferenceWidgets.remove(conferenceId);
+    conferenceAlertConnections.remove(conferenceId);
+
+    // Destroy ConferenceForm before ChatManager removes the model, because
+    // ~ConferenceForm() calls addSystemInfoMessage() which accesses chatLog.
     auto conferenceFormIt = conferenceForms.find(conferenceId);
     if (conferenceFormIt == conferenceForms.end()) {
         qWarning() << "Tried to remove conference" << conferencenumber
@@ -2022,7 +2021,13 @@ void Widget::removeConference(Conference* c, bool fake)
         return;
     }
     conferenceForms.erase(conferenceFormIt);
-    conferenceAlertConnections.remove(conferenceId);
+
+    if (!fake) {
+        chatManager->removeConference(conferenceId);
+    } else {
+        chatManager->removeConferenceModel(conferenceId);
+    }
+    conferenceList->removeConference(conferenceId, fake);
 
     delete c;
     if ((contentLayout != nullptr) && contentLayout->mainHead->layout()->isEmpty()) {
