@@ -9,6 +9,7 @@
 
 #include <QList>
 #include <QObject>
+#include <QStringList>
 
 class MockSettings : public QObject, public ICoreSettings
 {

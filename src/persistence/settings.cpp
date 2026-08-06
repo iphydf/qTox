@@ -29,6 +29,8 @@
 #include <QFile>
 #include <QFont>
 #include <QHostInfo>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QList>
 #include <QMutexLocker>
 #include <QNetworkProxy>
@@ -649,6 +651,15 @@ void Settings::loadPersonal(const Profile& profile, bool newProfile)
         blockList = ps.value("blackList").toString().split('\n');
     });
 
+    inGroup(ps, "Groups", [this, &ps] {
+        const QJsonObject names =
+            QJsonDocument::fromJson(ps.value("groupNames").toString().toUtf8()).object();
+        groupNames.clear();
+        for (auto it = names.constBegin(); it != names.constEnd(); ++it) {
+            groupNames.insert(it.key(), it.value().toString());
+        }
+    });
+
     inGroup(ps, "Friends", [this, &ps] {
         inArray(ps, "Friend", &friendLst, [this, &ps] {
             FriendProp fp{ps.value("addr").toString()};
@@ -662,6 +673,7 @@ void Settings::loadPersonal(const Profile& profile, bool newProfile)
             fp.autoAcceptCall =
                 Settings::AutoAcceptCallFlags(QFlag(ps.value("autoAcceptCall", 0).toInt()));
             fp.autoConferenceInvite = ps.value("autoConferenceInvite").toBool();
+            fp.autoGroupInvite = ps.value("autoGroupInvite").toBool();
             fp.circleID = ps.value("circle", -1).toInt();
 
             if (getEnableLogging())
@@ -877,6 +889,7 @@ void Settings::savePersonal(QString profileName, const ToxEncrypt* passkey)
             ps.setValue("autoAcceptDir", frnd.autoAcceptDir);
             ps.setValue("autoAcceptCall", static_cast<int>(frnd.autoAcceptCall));
             ps.setValue("autoConferenceInvite", frnd.autoConferenceInvite);
+            ps.setValue("autoGroupInvite", frnd.autoGroupInvite);
             ps.setValue("circle", frnd.circleID);
 
             if (getEnableLogging())
@@ -914,6 +927,15 @@ void Settings::savePersonal(QString profileName, const ToxEncrypt* passkey)
         ps.setValue("typingNotification", typingNotification);
         ps.setValue("enableLogging", enableLogging);
         ps.setValue("blackList", blockList.join('\n'));
+    });
+
+    inGroup(ps, "Groups", [this, &ps] {
+        QJsonObject names;
+        for (auto it = groupNames.cbegin(); it != groupNames.cend(); ++it) {
+            names.insert(it.key(), it.value());
+        }
+        ps.setValue("groupNames",
+                    QString::fromUtf8(QJsonDocument(names).toJson(QJsonDocument::Compact)));
     });
 
     inGroup(ps, "Version", [this, &ps] { //
@@ -1526,6 +1548,37 @@ void Settings::setAutoConferenceInvite(const ToxPk& id, bool accept)
     }
 }
 
+bool Settings::getAutoGroupInvite(const ToxPk& id) const
+{
+    const QMutexLocker<QRecursiveMutex> locker{&bigLock};
+
+    auto it = friendLst.find(id.getByteArray());
+    if (it != friendLst.end()) {
+        return it->autoGroupInvite;
+    }
+
+    return false;
+}
+
+void Settings::setAutoGroupInvite(const ToxPk& id, bool accept)
+{
+    bool updated = false;
+    {
+        const QMutexLocker<QRecursiveMutex> locker{&bigLock};
+
+        auto& frnd = getOrInsertFriendPropRef(id);
+
+        if (frnd.autoGroupInvite != accept) {
+            frnd.autoGroupInvite = accept;
+            updated = true;
+        }
+    }
+
+    if (updated) {
+        emit autoGroupInviteChanged(id, accept);
+    }
+}
+
 QString Settings::getContactNote(const ToxPk& id) const
 {
     const QMutexLocker<QRecursiveMutex> locker{&bigLock};
@@ -1876,6 +1929,32 @@ void Settings::setBlockList(const QStringList& blist)
         emit blockListChanged(blist);
     }
 }
+
+
+QString Settings::getGroupName(const QString& groupIdHex) const
+{
+    const QMutexLocker<QRecursiveMutex> locker{&bigLock};
+    return groupNames.value(groupIdHex);
+}
+
+void Settings::setGroupName(const QString& groupIdHex, const QString& name)
+{
+    const QMutexLocker<QRecursiveMutex> locker{&bigLock};
+    if (name.isEmpty()) {
+        groupNames.remove(groupIdHex);
+    } else {
+        groupNames.insert(groupIdHex, name);
+    }
+    requestSave();
+}
+
+void Settings::removeGroupAlias(const QString& groupIdHex)
+{
+    const QMutexLocker<QRecursiveMutex> locker{&bigLock};
+    groupNames.remove(groupIdHex);
+    requestSave();
+}
+
 
 QString Settings::getInDev() const
 {
