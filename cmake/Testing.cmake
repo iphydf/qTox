@@ -83,6 +83,10 @@ if(GUI_TESTS)
   auto_test(widget loginscreen "${TEST_RESOURCES}" "")
 endif()
 
+if(QT_FEATURE_dbus)
+  auto_test(platform desktopnotifybackend "" "")
+endif()
+
 if(UNIX)
   auto_test(platform posixsignalnotifier "" "")
   auto_test(platform stacktrace "" "")
