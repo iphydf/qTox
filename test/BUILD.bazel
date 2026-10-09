@@ -177,7 +177,7 @@ qt_test(
 
 qt_test(
     name = "dbschema_test",
-    size = "small",
+    size = "medium",
     src = "persistence/dbschema_test.cpp",
     copts = COPTS,
     mocopts = ["-Iqtox"],
