@@ -9,12 +9,11 @@
 #include "ui_loginscreen.h"
 
 #include "src/persistence/profile.h"
-#include "src/persistence/profilelocker.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/form/setpassworddialog.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/profileimporter.h"
-#include "src/widget/translator.h"
 
 #include <QDebug>
 #include <QDialog>
@@ -109,11 +108,31 @@ void LoginScreen::onProfileLoaded()
     done(QDialog::Accepted);
 }
 
-void LoginScreen::onProfileLoadFailed()
+void LoginScreen::onProfileLoadFailed(Session::LoginError error)
 {
-    profileLoadFailure(this, tr("Wrong password."));
-    ui->loginPassword->setFocus();
-    ui->loginPassword->selectAll();
+    switch (error) {
+    case Session::LoginError::None:
+        return;
+    case Session::LoginError::AlreadyExists:
+        emit failure(tr("Couldn't create a new profile"),
+                     tr("A profile with this name already exists."));
+        return;
+    case Session::LoginError::NotWritable:
+        emit failure(tr("Couldn't create a new profile"),
+                     tr("Its Tox save file couldn't be written."));
+        return;
+    case Session::LoginError::InUse:
+        profileLoadFailure(this, tr("This profile is already in use."));
+        return;
+    case Session::LoginError::Unreadable:
+        profileLoadFailure(this, tr("Its Tox save file couldn't be read."));
+        return;
+    case Session::LoginError::WrongPassword:
+        profileLoadFailure(this, tr("Wrong password."));
+        ui->loginPassword->setFocus();
+        ui->loginPassword->selectAll();
+        return;
+    }
 }
 
 void LoginScreen::onAutoLoginChanged(bool state)
@@ -169,11 +188,6 @@ void LoginScreen::onCreateNewProfile()
         return;
     }
 
-    if (Profile::exists(name, paths)) {
-        emit failure(failureTitle, tr("A profile with this name already exists."));
-        return;
-    }
-
     emit createNewProfile(name, pass);
 }
 
@@ -208,11 +222,6 @@ void LoginScreen::onLogin()
     if (name.isEmpty()) {
         profileLoadFailure(this, tr("There is no selected profile.\n\n"
                                     "You may want to create one."));
-        return;
-    }
-
-    if (!ProfileLocker::isLockable(name, paths)) {
-        profileLoadFailure(this, tr("This profile is already in use."));
         return;
     }
 

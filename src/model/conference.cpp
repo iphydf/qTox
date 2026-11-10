@@ -12,7 +12,6 @@
 
 #include <QDebug>
 
-#include <cassert>
 #include <utility>
 
 namespace {
@@ -118,8 +117,11 @@ void Conference::regeneratePeerList()
 
 void Conference::updateUsername(ToxPk pk, const QString newName)
 {
+    // The core's thread is ahead of the peer list: the peer may have left since.
+    if (!peerDisplayNames.contains(pk)) {
+        return;
+    }
     const QString displayName = friendList.decideNickname(pk, newName);
-    assert(peerDisplayNames.contains(pk));
     if (peerDisplayNames[pk] != displayName) {
         // there could be no actual change even if their username changed due to an alias being set
         const auto oldName = peerDisplayNames[pk];

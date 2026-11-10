@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <QPixmap>
+#include <QImage>
 #include <QString>
 
 struct NotificationData
@@ -13,5 +13,5 @@ struct NotificationData
     QString title;
     QString message;
     QString category;
-    QPixmap pixmap;
+    QImage image;
 };

@@ -14,8 +14,8 @@
 #include "src/chatlog/chatlinestorage.h"
 #include "src/core/core.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/style.h"
-#include "src/widget/translator.h"
 
 #include <QAction>
 #include <QApplication>

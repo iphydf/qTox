@@ -11,7 +11,7 @@
 #if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
 #include "src/persistence/settings.h"
 
-#include <QApplication>
+#include <QCoreApplication>
 #include <QDir>
 #include <QProcessEnvironment>
 
@@ -38,7 +38,7 @@ QString currentBinPath()
     if (env.contains(appImageEnvKey)) {
         return env.value(appImageEnvKey);
     }
-    return QApplication::applicationFilePath();
+    return QCoreApplication::applicationFilePath();
 }
 
 inline QString profileRunCommand(const Settings& settings)

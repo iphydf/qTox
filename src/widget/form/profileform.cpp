@@ -8,10 +8,12 @@
 #include "ui_profileform.h"
 
 #include "src/core/core.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/model/profile/iprofileinfo.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/profilelocker.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/commondialogs.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/form/setpassworddialog.h"
@@ -19,8 +21,6 @@
 #include "src/widget/maskablepixmapwidget.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/croppinglabel.h"
-#include "src/widget/tool/imessageboxmanager.h"
-#include "src/widget/translator.h"
 #include "src/widget/widget.h"
 
 #include <QApplication>
@@ -272,9 +272,9 @@ void ProfileForm::onStatusMessageEdited()
     profileInfo->setStatusMessage(bodyUI->statusMessage->text());
 }
 
-void ProfileForm::onSelfAvatarLoaded(const QPixmap& pic)
+void ProfileForm::onSelfAvatarLoaded(const QImage& pic)
 {
-    profilePicture->setPixmap(pic);
+    profilePicture->setPixmap(QPixmap::fromImage(pic));
 }
 
 void ProfileForm::setToxId(const ToxId& id)

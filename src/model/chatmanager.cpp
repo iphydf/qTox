@@ -11,16 +11,20 @@
 #include "src/friendlist.h"
 #include "src/grouplist.h"
 #include "src/model/chathistory.h"
+#include "src/persistence/history.h"
 #include "src/model/chatroom/conferenceroom.h"
 #include "src/model/chatroom/friendchatroom.h"
 #include "src/model/chatroom/grouproom.h"
 #include "src/model/conference.h"
 #include "src/model/friend.h"
 #include "src/model/group.h"
+#include "src/model/status.h"
+#include "src/model/systemmessage.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
 
 #include <QCoreApplication>
+#include <QDateTime>
 
 #include <cassert>
 #include <limits>
@@ -38,6 +42,11 @@ ChatManager::ChatManager(Profile& profile_, Settings& settings_, FriendList& fri
     , sharedMessageProcessorParams(
           std::make_unique<MessageProcessor::SharedParams>(Core::getMaxMessageSize()))
 {
+}
+
+void ChatManager::setDialogsManager(IDialogsManager* dialogsManager_)
+{
+    dialogsManager = dialogsManager_;
 }
 
 void ChatManager::connectToCore(Core& core_)
@@ -160,6 +169,75 @@ std::shared_ptr<GroupRoom> ChatManager::getGroupRoom(const GroupId& groupId) con
     return *it;
 }
 
+IChatLog* ChatManager::getChatLog(const Chat& chat) const
+{
+    if (const auto* f = qobject_cast<const Friend*>(&chat)) {
+        return getFriendChatLog(f->getPublicKey());
+    }
+    if (const auto* conference = qobject_cast<const Conference*>(&chat)) {
+        return getConferenceChatLog(conference->getPersistentId());
+    }
+    if (const auto* group = qobject_cast<const Group*>(&chat)) {
+        return getGroupChatLog(group->getPersistentId());
+    }
+    return nullptr;
+}
+
+IMessageDispatcher* ChatManager::getDispatcher(const Chat& chat) const
+{
+    if (const auto* f = qobject_cast<const Friend*>(&chat)) {
+        return getFriendDispatcher(f->getPublicKey());
+    }
+    if (const auto* conference = qobject_cast<const Conference*>(&chat)) {
+        return getConferenceDispatcher(conference->getPersistentId());
+    }
+    if (const auto* group = qobject_cast<const Group*>(&chat)) {
+        return getGroupDispatcher(group->getPersistentId());
+    }
+    return nullptr;
+}
+
+bool ChatManager::removeHistory(const Chat& chat)
+{
+    History* history = profile.getHistory();
+    if (history == nullptr) {
+        return false;
+    }
+    history->removeChatHistory(chat.getPersistentId());
+    return true;
+}
+
+void ChatManager::removeChat(Chat& chat, bool leave)
+{
+    if (const auto* f = qobject_cast<const Friend*>(&chat)) {
+        // A copy: the friend goes below.
+        const ToxPk friendPk = f->getPublicKey();
+        if (leave) {
+            removeFriend(friendPk);
+        } else {
+            removeFriendModel(friendPk);
+        }
+        friendList.removeFriend(friendPk, settings, !leave);
+    } else if (const auto* conference = qobject_cast<const Conference*>(&chat)) {
+        const ConferenceId conferenceId = conference->getPersistentId();
+        if (leave) {
+            removeConference(conferenceId);
+        } else {
+            removeConferenceModel(conferenceId);
+        }
+        conferenceList.removeConference(conferenceId, !leave);
+    } else if (const auto* group = qobject_cast<const Group*>(&chat)) {
+        const GroupId groupId = group->getPersistentId();
+        if (leave) {
+            removeGroup(groupId);
+        } else {
+            removeGroupModel(groupId);
+        }
+        groupList.removeGroup(groupId, !leave);
+    }
+    delete &chat;
+}
+
 MessageProcessor::SharedParams& ChatManager::getSharedMessageProcessorParams()
 {
     return *sharedMessageProcessorParams;
@@ -259,6 +337,10 @@ void ChatManager::onFriendAdded(uint32_t friendId, const ToxPk& friendPk)
     friendChatLogs[friendPk] = chatHistory;
     friendChatRooms[friendPk] = chatroom;
 
+    connect(friendMessageDispatcher.get(), &IMessageDispatcher::messageReceived, this,
+            [this, newFriend](const ToxPk& sender, const Message& message) {
+                emit messageReceived(*newFriend, sender, message, true);
+            });
     emit friendAdded(newFriend, chatroom, friendMessageDispatcher, chatHistory);
 }
 
@@ -266,11 +348,18 @@ void ChatManager::onFriendStatusChanged(uint32_t friendId, Status::Status status
 {
     const auto& friendPk = friendList.id2Key(friendId);
     Friend* f = friendList.findFriend(friendPk);
-    if (f == nullptr) {
+    if (f == nullptr || f->getStatus() == status) {
         return;
     }
 
     f->setStatus(status);
+    // After what a call has to say about a friend who went offline.
+    if (ChatHistory* chatLog = getFriendChatLog(friendPk);
+        chatLog != nullptr && settings.getStatusChangeNotificationEnabled()) {
+        chatLog->addSystemMessage({SystemMessageType::peerStateChange,
+                                   QDateTime::currentDateTime(),
+                                   {f->getDisplayedName(), Status::getTitle(status)}});
+    }
 }
 
 void ChatManager::onFriendStatusMessageChanged(uint32_t friendId, const QString& message)
@@ -325,7 +414,10 @@ void ChatManager::onConferenceMessageReceived(uint32_t conferencenumber, uint32_
                                               const QString& message, bool isAction)
 {
     const ConferenceId& conferenceId = conferenceList.id2Key(conferencenumber);
-    assert(conferenceList.findConference(conferenceId));
+    // Core's events come queued, also after the user left the conference.
+    if (conferenceList.findConference(conferenceId) == nullptr) {
+        return;
+    }
 
     const ToxPk author = core->getConferencePeerPk(conferencenumber, peernumber);
 
@@ -355,7 +447,9 @@ void ChatManager::onConferencePeerlistChanged(uint32_t conferencenumber)
 {
     const ConferenceId& conferenceId = conferenceList.id2Key(conferencenumber);
     Conference* c = conferenceList.findConference(conferenceId);
-    assert(c);
+    if (c == nullptr) {
+        return;
+    }
     c->regeneratePeerList();
 }
 
@@ -364,7 +458,9 @@ void ChatManager::onConferencePeerNameChanged(uint32_t conferencenumber, const T
 {
     const ConferenceId& conferenceId = conferenceList.id2Key(conferencenumber);
     Conference* c = conferenceList.findConference(conferenceId);
-    assert(c);
+    if (c == nullptr) {
+        return;
+    }
 
     const QString setName = friendList.decideNickname(peerPk, newName);
     c->updateUsername(peerPk, newName);
@@ -375,7 +471,9 @@ void ChatManager::onConferenceTitleChanged(uint32_t conferencenumber, const QStr
 {
     const ConferenceId& conferenceId = conferenceList.id2Key(conferencenumber);
     Conference* c = conferenceList.findConference(conferenceId);
-    assert(c);
+    if (c == nullptr) {
+        return;
+    }
 
     c->setTitle(author, title);
 }
@@ -421,7 +519,8 @@ void ChatManager::onEmptyGroupCreated(uint32_t groupNumber, const GroupId& group
     addSelfToGroup(group);
 }
 
-void ChatManager::onGroupJoined(uint32_t groupNumber, const GroupId& groupId)
+void ChatManager::onGroupJoined(uint32_t groupNumber, const GroupId& groupId,
+                                const QByteArray& password)
 {
     Group* g = groupList.findGroup(groupId);
     if (g == nullptr) {
@@ -435,6 +534,9 @@ void ChatManager::onGroupJoined(uint32_t groupNumber, const GroupId& groupId)
     }
     if (!groupId.isEmpty()) {
         settings.addSavedGroup(groupId.toString());
+        if (!password.isEmpty()) {
+            settings.setGroupPassword(groupId.toString(), password);
+        }
     }
 }
 
@@ -504,10 +606,7 @@ void ChatManager::onGroupSelfJoined(uint32_t groupNumber)
         if (!persistentId.isEmpty()) {
             g = groupList.findGroup(persistentId);
         }
-        if (g == nullptr) {
-            const QString groupName = core->getGroupTitle(groupNumber);
-            g = createGroup(groupNumber, persistentId, groupName);
-        }
+        // Never a new group: Core's events come queued, also after the user left it.
     }
     if (g != nullptr) {
         updateGroupNumber(g, groupNumber);
@@ -672,6 +771,11 @@ Conference* ChatManager::createConference(uint32_t conferencenumber, const Confe
     conferenceLogs[conferenceId] = chatHistory;
     conferenceRooms[conferenceId] = chatroom;
 
+    connect(messageDispatcher.get(), &IMessageDispatcher::messageReceived, this,
+            [this, newConference](const ToxPk& sender, const Message& message) {
+                emit messageReceived(*newConference, sender, message,
+                                     message.mentionsSelf() || settings.getConferenceAlwaysNotify());
+            });
     emit conferenceAdded(newConference, chatroom, messageDispatcher, chatHistory);
 
     return newConference;
@@ -692,6 +796,25 @@ Group* ChatManager::createGroup(uint32_t groupNumber, const GroupId& groupId, co
     Group* newGroup =
         groupList.addGroup(*core, groupNumber, groupId, name, core->getUsername(), friendList);
     assert(newGroup);
+
+    // What the user sets for a group is stored for the next start.
+    const QString id = groupId.toString();
+    connect(newGroup, &Group::titleChangedByUser, this, [this, id](const QString& title) {
+        if (title.isEmpty()) {
+            settings.removeGroupAlias(id);
+        } else {
+            settings.setGroupName(id, title);
+        }
+    });
+    connect(newGroup, &Group::nicknameChanged, this,
+            [this, id](const QString& nickname) { settings.setGroupNickname(id, nickname); });
+    connect(newGroup, &Group::passwordChanged, this, [this, id](const QByteArray& password) {
+        if (password.isEmpty()) {
+            settings.removeGroupPassword(id);
+        } else {
+            settings.setGroupPassword(id, password);
+        }
+    });
 
     newGroup->setPasswordSet(core->getGroupHasPassword(groupNumber));
     newGroup->setPeerLimit(core->getGroupPeerLimit(groupNumber));
@@ -721,6 +844,12 @@ Group* ChatManager::createGroup(uint32_t groupNumber, const GroupId& groupId, co
     groupLogs[groupId] = chatHistory;
     groupRooms[groupId] = chatroom;
 
+    connect(messageDispatcher.get(), &IMessageDispatcher::messageReceived, this,
+            [this, newGroup](const ToxPk& sender, const Message& message) {
+                emit messageReceived(*newGroup, sender, message,
+                                     !message.recipient.isEmpty() || message.mentionsSelf()
+                                         || settings.getConferenceAlwaysNotify());
+            });
     emit groupAdded(newGroup, chatroom, messageDispatcher, chatHistory);
 
     return newGroup;

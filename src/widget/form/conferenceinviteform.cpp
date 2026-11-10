@@ -8,9 +8,9 @@
 #include "src/core/core.h"
 #include "src/model/conferenceinvite.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/form/conferenceinvitewidget.h"
-#include "src/widget/translator.h"
 
 #include <QDateTime>
 #include <QDebug>
@@ -104,12 +104,6 @@ void ConferenceInviteForm::show(ContentLayout* contentLayout)
  */
 bool ConferenceInviteForm::addConferenceInvite(const ConferenceInvite& inviteInfo)
 {
-    // supress duplicate invite messages
-    for (ConferenceInviteWidget* existing : invites) {
-        if (existing->getInviteInfo().getInvite() == inviteInfo.getInvite()) {
-            return false;
-        }
-    }
 
     auto* widget = new ConferenceInviteWidget(this, inviteInfo, settings, core);
     scroll->widget()->layout()->addWidget(widget);
@@ -121,7 +115,10 @@ bool ConferenceInviteForm::addConferenceInvite(const ConferenceInvite& inviteInf
             });
 
     connect(widget, &ConferenceInviteWidget::rejected, this,
-            [this](const ConferenceInvite& inviteInfo_) { deleteInviteWidget(inviteInfo_); });
+            [this](const ConferenceInvite& inviteInfo_) {
+                deleteInviteWidget(inviteInfo_);
+                emit conferenceInviteRejected(inviteInfo_);
+            });
     if (isVisible()) {
         emit conferenceInvitesSeen();
         return false;

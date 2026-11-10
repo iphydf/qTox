@@ -11,6 +11,8 @@
 #include <QRegularExpression>
 #include <QString>
 
+#include <optional>
+
 #include <vector>
 
 class Friend;
@@ -35,12 +37,23 @@ struct MessageMetadata
 
 struct Message
 {
+    /** Typed in front of a message to send it as an action. */
+    static const QString ACTION_PREFIX;
+
     bool isAction{false};
     QString content;
     QDateTime timestamp;
     std::vector<MessageMetadata> metadata;
     ToxPk recipient;
     QString recipientName;
+
+    bool mentionsSelf() const;
+
+    /**
+     * @brief What the user typed, as a message to send.
+     * @return Nothing if it says nothing.
+     */
+    static std::optional<Message> typed(const QString& text);
 };
 
 

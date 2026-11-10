@@ -7,6 +7,8 @@
 
 #include <QList>
 
+#include <array>
+
 extern "C"
 {
 #pragma GCC diagnostic push
@@ -87,7 +89,7 @@ VideoFrame::VideoFrame(IDType sourceID_, AVFrame* sourceFrame, bool freeSourceFr
     : frameID(frameIDs++)
     , sourceID(sourceID_)
     , sourceDimensions(dimensions)
-    , sourceFrameKey(getFrameKey(dimensions.size(), pixFmt, sourceFrame->linesize[0]))
+    , sourceFrameKey(getFrameKey(dimensions.size(), pixFmt, sourceFrame->linesize))
     , freeSourceFrame(freeSourceFrame_)
 {
     // We override the pixel format in the case a deprecated one is used
@@ -291,9 +293,28 @@ QImage VideoFrame::toQImage(QSize frameSize)
     auto [image, frameLocker] =
         toGenericObject(frameSize, AV_PIX_FMT_RGB24, false, [frameSize](AVFrame* const frame) {
             // Converter function (constructs QImage out of AVFrame*)
+            // The image keeps a reference to the buffer, which outlives releaseFrame(). A source
+            // frame that qTox allocated itself has no reference count, so the image copies it.
+            AVBufferRef* const buffer =
+                frame->buf[0] != nullptr ? av_buffer_ref(frame->buf[0]) : nullptr;
+            if (buffer == nullptr) {
+                return QImage{
+                    *frame->data,     frameSize.width(),     frameSize.height(),
+                    *frame->linesize, QImage::Format_RGB888,
+                }
+                    .copy();
+            }
             return QImage{
-                *frame->data,     frameSize.width(),     frameSize.height(),
-                *frame->linesize, QImage::Format_RGB888,
+                *frame->data,
+                frameSize.width(),
+                frameSize.height(),
+                *frame->linesize,
+                QImage::Format_RGB888,
+                [](void* info) {
+                    auto* ref = static_cast<AVBufferRef*>(info);
+                    av_buffer_unref(&ref);
+                },
+                buffer,
             };
         });
 
@@ -443,13 +464,23 @@ size_t VideoFrame::FrameBufferKey::hash(const FrameBufferKey& key)
  *
  * @param frameSize the given size of the frame.
  * @param pixFmt the pixel format of the frame.
- * @param linesize the maximum linesize of the frame, may be larger than the width.
+ * @param linesizes the linesizes of the frame's planes, which may be larger than they need.
  * @return a FrameBufferKey object representing the key for the frameBuffer map.
  */
 VideoFrame::FrameBufferKey VideoFrame::getFrameKey(const QSize& frameSize, const int pixFmt,
-                                                   const int linesize)
+                                                   const int* linesizes)
 {
-    return getFrameKey(frameSize, pixFmt, frameSize.width() == linesize);
+    // Aligned only if no plane has padding: toxav reads the chroma planes without linesizes too.
+    std::array<int, 4> packed{};
+    if (av_image_fill_linesizes(packed.data(), static_cast<AVPixelFormat>(pixFmt), frameSize.width())
+        < 0) {
+        return getFrameKey(frameSize, pixFmt, false);
+    }
+    bool frameAligned = true;
+    for (size_t plane = 0; plane < packed.size(); ++plane) {
+        frameAligned = frameAligned && linesizes[plane] == packed[plane];
+    }
+    return getFrameKey(frameSize, pixFmt, frameAligned);
 }
 
 /**
@@ -534,20 +565,12 @@ AVFrame* VideoFrame::generateAVFrame(const QSize& dimensions, const int pixelFor
      * or if the caller doesn't require frame alignment
      */
 
-    int bufSize;
-
     const bool alreadyAligned =
         dimensions.width() % dataAlignment == 0 && dimensions.height() % dataAlignment == 0;
 
-    if (!requireAligned || alreadyAligned) {
-        bufSize = av_image_alloc(ret->data, ret->linesize, dimensions.width(), dimensions.height(),
-                                 static_cast<AVPixelFormat>(pixelFormat), dataAlignment);
-    } else {
-        bufSize = av_image_alloc(ret->data, ret->linesize, dimensions.width(), dimensions.height(),
-                                 static_cast<AVPixelFormat>(pixelFormat), 1);
-    }
-
-    if (bufSize < 0) {
+    // Reference counted, so that what toQImage() makes can outlive this VideoFrame's buffers.
+    const int alignment = !requireAligned || alreadyAligned ? dataAlignment : 1;
+    if (av_frame_get_buffer(ret, alignment) < 0) {
         av_frame_free(&ret);
         return nullptr;
     }
@@ -562,10 +585,6 @@ AVFrame* VideoFrame::generateAVFrame(const QSize& dimensions, const int pixelFor
                        nullptr, nullptr, nullptr);
 
     if (swsCtx == nullptr) {
-        av_freep(&ret->data[0]);
-#if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(57, 48, 101)
-        av_frame_unref(ret);
-#endif
         av_frame_free(&ret);
         return nullptr;
     }
@@ -573,10 +592,6 @@ AVFrame* VideoFrame::generateAVFrame(const QSize& dimensions, const int pixelFor
     auto it = frameBuffer.find(sourceFrameKey);
     if (it == frameBuffer.end() || it->second == nullptr) {
         sws_freeContext(swsCtx);
-        av_freep(&ret->data[0]);
-#if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(57, 48, 101)
-        av_frame_unref(ret);
-#endif
         av_frame_free(&ret);
         return nullptr;
     }
@@ -618,7 +633,7 @@ AVFrame* VideoFrame::storeAVFrame(AVFrame* frame, const QSize& dimensions, const
         return nullptr;
     }
 
-    const FrameBufferKey frameKey = getFrameKey(dimensions, pixelFormat, frame->linesize[0]);
+    const FrameBufferKey frameKey = getFrameKey(dimensions, pixelFormat, frame->linesize);
 
     // We check the presence of the frame in case of double-computation
     auto it = frameBuffer.find(frameKey);
@@ -626,10 +641,6 @@ AVFrame* VideoFrame::storeAVFrame(AVFrame* frame, const QSize& dimensions, const
         AVFrame* old_ret = it->second;
 
         // Free new frame
-        av_freep(&frame->data[0]);
-#if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(57, 48, 101)
-        av_frame_unref(frame);
-#endif
         av_frame_free(&frame);
         return old_ret;
     }
@@ -663,10 +674,6 @@ void VideoFrame::deleteFrameBuffer()
 #endif
             av_frame_free(&frame);
         } else {
-            av_freep(&frame->data[0]);
-#if LIBAVCODEC_VERSION_INT < AV_VERSION_INT(57, 48, 101)
-            av_frame_unref(frame);
-#endif
             av_frame_free(&frame);
         }
     }

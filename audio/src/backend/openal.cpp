@@ -14,7 +14,6 @@
 #include <QPointer>
 #include <QThread>
 #include <QWaitCondition>
-#include <QtMath>
 
 #include <cassert>
 #include <utility>
@@ -34,16 +33,6 @@ extern "C"
 #endif
 
 namespace {
-void applyGain(int16_t* buffer, uint32_t bufferSize, qreal gainFactor)
-{
-    for (quint32 i = 0; i < bufferSize; ++i) {
-        // gain amplification with clipping to 16-bit boundaries
-        buffer[i] =
-            qBound<int16_t>(std::numeric_limits<int16_t>::min(), qRound(buffer[i] * gainFactor),
-                            std::numeric_limits<int16_t>::max());
-    }
-}
-
 /**
  * @class OpenAL
  * @brief Provides the OpenAL audio backend
@@ -101,16 +90,10 @@ OpenAL::OpenAL(IAudioSettings& _settings)
     alcGetError(nullptr);
 
     audioThread->setObjectName("qTox Audio");
-    QObject::connect(audioThread, &QThread::finished, &voiceTimer, &QTimer::stop);
     QObject::connect(audioThread, &QThread::finished, &captureTimer, &QTimer::stop);
     QObject::connect(audioThread, &QThread::finished, audioThread, &QThread::deleteLater);
 
     moveToThread(audioThread);
-
-    voiceTimer.setSingleShot(true);
-    voiceTimer.moveToThread(audioThread);
-    connect(this, &OpenAL::startActive, this, [this](qreal time) { voiceTimer.start(time); });
-    connect(&voiceTimer, &QTimer::timeout, this, &OpenAL::stopActive);
 
     connect(&captureTimer, &QTimer::timeout, this, &OpenAL::doAudio);
     captureTimer.setInterval(AUDIO_FRAME_DURATION / 2);
@@ -171,7 +154,7 @@ void OpenAL::setOutputVolume(qreal volume)
 qreal OpenAL::minInputGain() const
 {
     const QMutexLocker<QRecursiveMutex> locker(&audioLock);
-    return minInGain;
+    return VoiceGate::minGain;
 }
 
 /**
@@ -182,7 +165,7 @@ qreal OpenAL::minInputGain() const
 qreal OpenAL::maxInputGain() const
 {
     const QMutexLocker<QRecursiveMutex> locker(&audioLock);
-    return maxInGain;
+    return VoiceGate::maxGain;
 }
 
 /**
@@ -193,7 +176,7 @@ qreal OpenAL::maxInputGain() const
 qreal OpenAL::minInputThreshold() const
 {
     const QMutexLocker<QRecursiveMutex> locker(&audioLock);
-    return minInThreshold;
+    return VoiceGate::minThreshold;
 }
 
 /**
@@ -204,7 +187,7 @@ qreal OpenAL::minInputThreshold() const
 qreal OpenAL::maxInputThreshold() const
 {
     const QMutexLocker<QRecursiveMutex> locker(&audioLock);
-    return maxInThreshold;
+    return VoiceGate::maxThreshold;
 }
 
 void OpenAL::reinitInput(const QString& inDevDesc)
@@ -611,37 +594,6 @@ void OpenAL::cleanupOutput()
 }
 
 /**
- * @brief Called by doCapture to calculate volume of the audio buffer
- *
- * @param[in] buf   the current audio buffer
- *
- * @return normalized volume between 0-1
- */
-qreal OpenAL::getVolume()
-{
-    const quint32 samples = AUDIO_FRAME_SAMPLE_COUNT_TOTAL;
-    constexpr qreal sqrt2 = 1.41421356237; // std::numbers::sqrt2
-    // calculate volume as the root mean squared of amplitudes in the sample
-    qreal sumOfSquares = 0;
-    for (quint32 i = 0; i < samples; i++) {
-        auto sample = static_cast<qreal>(inputBuffer[i]) / std::numeric_limits<int16_t>::max();
-        sumOfSquares += std::pow(sample, 2);
-    }
-    const qreal rms = std::sqrt(sumOfSquares / samples);
-    // our calculated normalized volume could possibly be above 1 because our RMS assumes a sinusoidal wave
-    const qreal normalizedVolume = std::min(rms * sqrt2, 1.0);
-    return normalizedVolume;
-}
-
-/**
- * @brief Called by voiceTimer's timeout to disable audio broadcasting
- */
-void OpenAL::stopActive()
-{
-    isActive = false;
-}
-
-/**
  * @brief handles recording of audio frames
  */
 void OpenAL::doInput()
@@ -654,21 +606,14 @@ void OpenAL::doInput()
 
     captureSamples(alInDev, inputBuffer, AUDIO_FRAME_SAMPLE_COUNT_PER_CHANNEL);
 
-    applyGain(inputBuffer, AUDIO_FRAME_SAMPLE_COUNT_TOTAL, gainFactor);
-
-    auto volume = getVolume();
-    if (volume >= inputThreshold) {
-        isActive = true;
-        emit startActive(voiceHold);
-    } else if (!isActive) {
-        volume = 0;
-    }
+    const qreal volume =
+        gate.process(inputBuffer, AUDIO_FRAME_SAMPLE_COUNT_TOTAL, AUDIO_FRAME_DURATION);
 
     // NOTE(sudden6): this loop probably doesn't scale too well with many sources
     for (auto* source : sources) {
         emit source->volumeAvailable(volume);
     }
-    if (!isActive) {
+    if (!gate.isOpen()) {
         return;
     }
 
@@ -782,26 +727,20 @@ void OpenAL::stopLoop(uint sourceId)
 
 qreal OpenAL::inputGain() const
 {
-    return gain;
+    return gate.gain();
 }
 
 qreal OpenAL::getInputThreshold() const
 {
-    return inputThreshold;
-}
-
-qreal OpenAL::inputGainFactor() const
-{
-    return gainFactor;
+    return gate.threshold();
 }
 
 void OpenAL::setInputGain(qreal dB)
 {
-    gain = qBound(minInGain, dB, maxInGain);
-    gainFactor = qPow(10.0, (gain / 20.0));
+    gate.setGain(dB);
 }
 
 void OpenAL::setInputThreshold(qreal normalizedThreshold)
 {
-    inputThreshold = normalizedThreshold;
+    gate.setThreshold(normalizedThreshold);
 }

@@ -35,6 +35,7 @@ public:
 signals:
     void groupCreate(const QString& groupName);
     void groupInviteAccepted(const GroupInvite& inviteInfo);
+    void groupInviteRejected(const GroupInvite& inviteInfo);
     void groupInvitesSeen();
 
 protected:

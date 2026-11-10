@@ -6,13 +6,13 @@
 #include "addfriendform.h"
 
 #include "src/core/core.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/nexus.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/croppinglabel.h"
-#include "src/widget/tool/imessageboxmanager.h"
-#include "src/widget/translator.h"
 
 #include <QApplication>
 #include <QClipboard>
@@ -169,17 +169,12 @@ void AddFriendForm::setMode(Mode mode)
     tabWidget->setCurrentIndex(mode);
 }
 
-bool AddFriendForm::addFriendRequest(const QString& friendAddress, const QString& message_)
+void AddFriendForm::showFriendRequest(const QString& friendAddress, const QString& message_)
 {
-    if (settings.addFriendRequest(friendAddress, message_)) {
-        addFriendRequestWidget(friendAddress, message_);
-        if (isShown()) {
-            onCurrentChanged(tabWidget->currentIndex());
-        }
-
-        return true;
+    addFriendRequestWidget(friendAddress, message_);
+    if (isShown()) {
+        onCurrentChanged(tabWidget->currentIndex());
     }
-    return false;
 }
 
 void AddFriendForm::onUsernameSet(const QString& username)
@@ -190,22 +185,8 @@ void AddFriendForm::onUsernameSet(const QString& username)
 
 void AddFriendForm::addFriend(const QString& idText)
 {
-    const ToxId friendId(idText);
-
-    if (!friendId.isValid()) {
-        messageBoxManager.showWarning(tr("Couldn't add friend"),
-                                      tr("%1 is not a valid Tox ID", "Tox address error").arg(idText));
-        return;
-    }
-
-    deleteFriendRequest(friendId);
-    if (friendId == ownId) {
-        messageBoxManager.showWarning(tr("Couldn't add friend"),
-                                      //: When trying to add your own Tox ID as friend
-                                      tr("You can't add yourself as a friend!"));
-    } else {
-        emit friendRequested(friendId, getMessage());
-    }
+    // Core says what is wrong with an ID.
+    emit friendRequested(ToxId{idText}, getMessage());
 }
 
 void AddFriendForm::onSendTriggered()
@@ -300,18 +281,6 @@ void AddFriendForm::setIdFromClipboard()
     }
 }
 
-void AddFriendForm::deleteFriendRequest(const ToxId& toxId_)
-{
-    const int size = settings.getFriendRequestSize();
-    for (int i = 0; i < size; ++i) {
-        const Settings::Request request = settings.getFriendRequest(i);
-        if (toxId_.getPublicKey() == ToxPk(request.address)) {
-            settings.removeFriendRequest(i);
-            return;
-        }
-    }
-}
-
 void AddFriendForm::onFriendRequestAccepted()
 {
     auto* acceptButton = static_cast<QPushButton*>(sender());
@@ -321,8 +290,6 @@ void AddFriendForm::onFriendRequestAccepted()
     const int indexFromEnd = requestsLayout->count() - index - 1;
     const Settings::Request request = settings.getFriendRequest(indexFromEnd);
     emit friendRequestAccepted(ToxPk{request.address});
-    settings.removeFriendRequest(indexFromEnd);
-    settings.savePersonal();
 }
 
 void AddFriendForm::onFriendRequestRejected()
@@ -332,8 +299,7 @@ void AddFriendForm::onFriendRequestRejected()
     const int index = requestsLayout->indexOf(friendWidget);
     removeFriendRequestWidget(friendWidget);
     const int indexFromEnd = requestsLayout->count() - index - 1;
-    settings.removeFriendRequest(indexFromEnd);
-    settings.savePersonal();
+    emit friendRequestRejected(ToxPk{settings.getFriendRequest(indexFromEnd).address});
 }
 
 void AddFriendForm::onCurrentChanged(int index)

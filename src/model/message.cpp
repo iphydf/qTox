@@ -5,7 +5,28 @@
 
 #include "message.h"
 
+#include <algorithm>
 #include <utility>
+
+const QString Message::ACTION_PREFIX = QStringLiteral("/me ");
+
+std::optional<Message> Message::typed(const QString& text)
+{
+    Message message;
+    message.isAction = text.startsWith(ACTION_PREFIX, Qt::CaseInsensitive);
+    message.content = message.isAction ? text.mid(ACTION_PREFIX.size()) : text;
+    if (message.content.trimmed().isEmpty()) {
+        return std::nullopt;
+    }
+    return message;
+}
+
+bool Message::mentionsSelf() const
+{
+    return std::ranges::any_of(metadata, [](const MessageMetadata& data) {
+        return data.type == MessageMetadataType::selfMention;
+    });
+}
 
 namespace {
 QStringList splitMessage(const QString& message, uint64_t maxLength)

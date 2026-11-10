@@ -22,6 +22,7 @@
 
 class ChatHistory;
 class Conference;
+class Chat;
 class ConferenceList;
 class ConferenceRoom;
 class Core;
@@ -46,6 +47,8 @@ public:
                 IDialogsManager* dialogsManager, QObject* parent = nullptr);
 
     void connectToCore(Core& core);
+    /** Who asks the user about a chat. Set it before any chat appears. */
+    void setDialogsManager(IDialogsManager* dialogsManager);
 
     FriendMessageDispatcher* getFriendDispatcher(const ToxPk& friendPk) const;
     ChatHistory* getFriendChatLog(const ToxPk& friendPk) const;
@@ -56,6 +59,18 @@ public:
     GroupMessageDispatcher* getGroupDispatcher(const GroupId& groupId) const;
     IChatLog* getGroupChatLog(const GroupId& groupId) const;
     std::shared_ptr<GroupRoom> getGroupRoom(const GroupId& groupId) const;
+
+    /** A chat's messages and what sends its messages: nothing for a chat we don't have. */
+    IChatLog* getChatLog(const Chat& chat) const;
+    IMessageDispatcher* getDispatcher(const Chat& chat) const;
+    /**
+     * Forgets a chat and deletes it. What shows it or refers to its messages must go before.
+     * @param leave Also tells Tox: removes the friend, leaves the conference or the group.
+     * Without it, only what we keep of the chat goes, as at a logout.
+     */
+    void removeChat(Chat& chat, bool leave);
+    /** Forgets what was said in the chat. @return False if no history is kept. */
+    bool removeHistory(const Chat& chat);
 
     MessageProcessor::SharedParams& getSharedMessageProcessorParams();
 
@@ -80,6 +95,11 @@ signals:
                     std::shared_ptr<GroupMessageDispatcher> dispatcher,
                     std::shared_ptr<IChatLog> chatLog);
     void groupRemoved(const GroupId& groupId);
+    /**
+     * Someone wrote in a chat. @p notify says whether it is for the user: in a conference or a
+     * group, only a message that names them or is for them alone, unless they want every one.
+     */
+    void messageReceived(Chat& chat, const ToxPk& sender, const Message& message, bool notify);
 
 private slots:
     void onFriendAdded(uint32_t friendId, const ToxPk& friendPk);
@@ -104,7 +124,7 @@ private slots:
     void onGroupPrivateMessageReceived(uint32_t groupNumber, const ToxPk& sender,
                                        const QString& message, bool isAction);
     void onEmptyGroupCreated(uint32_t groupNumber, const GroupId& groupId, const QString& groupName);
-    void onGroupJoined(uint32_t groupNumber, const GroupId& groupId);
+    void onGroupJoined(uint32_t groupNumber, const GroupId& groupId, const QByteArray& password);
     void onGroupPeerJoined(uint32_t groupNumber, const ToxPk& peer, const QString& name,
                            GroupRole role, Status::Status status);
     void onGroupPeerExited(uint32_t groupNumber, const ToxPk& peer);

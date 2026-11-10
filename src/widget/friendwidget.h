@@ -8,7 +8,7 @@
 #include "genericchatroomwidget.h"
 
 #include "src/core/toxpk.h"
-#include "src/model/friendlist/ifriendlistitem.h"
+#include "src/widget/friendlist/ifriendlistitem.h"
 
 #include <memory>
 
@@ -60,7 +60,7 @@ signals:
     void updateFriendActivity(Friend& frnd);
 
 public slots:
-    void onAvatarSet(const ToxPk& friendPk, const QPixmap& pic);
+    void onAvatarSet(const ToxPk& friendPk, const QImage& pic);
     void onAvatarRemoved(const ToxPk& friendPk);
     void onContextMenuCalled(QContextMenuEvent* event);
     void setActive(bool active_);

@@ -577,7 +577,11 @@ void CoreFile::onFileRecvChunkCallback(Tox* tox, uint32_t friendId, uint32_t fil
 
 void CoreFile::onConnectionStatusChanged(uint32_t friendId, Status::Status state)
 {
-    const bool isOffline = state == Status::Status::Offline;
+    // Toxcore ends the transfers only when the friend goes offline. Changes such as to Away come
+    // here too, and so does the status that toxcore reports when the friend connects.
+    if (state != Status::Status::Offline) {
+        return;
+    }
     // TODO: Actually resume broken file transfers
     // We need to:
     // - Start a new file transfer with the same 32byte file ID with toxcore
@@ -585,12 +589,11 @@ void CoreFile::onConnectionStatusChanged(uint32_t friendId, Status::Status state
     // - Update the fileNum in our ToxFile
     // - Update the users of our signals to check the 32byte tox file ID, not the uint32_t file_num
     // (fileId)
-    const ToxFile::FileStatus status = !isOffline ? ToxFile::TRANSMITTING : ToxFile::BROKEN;
     for (const uint64_t key : fileMap.keys()) {
         if (key >> 32 != friendId)
             continue;
-        fileMap[key].status = status;
-        emit fileTransferBrokenUnbroken(fileMap[key], isOffline);
+        fileMap[key].status = ToxFile::BROKEN;
+        emit fileTransferBrokenUnbroken(fileMap[key], true);
         removeFile(friendId, fileMap[key].fileNum);
     }
 }

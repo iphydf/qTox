@@ -64,6 +64,16 @@ public:
         ERROR_ALLOC,
     };
 
+    /** How it reaches the Tox network. */
+    enum class Connection
+    {
+        None,
+        Udp,
+        /** Only through TCP relays. */
+        TcpRelay,
+    };
+    Q_ENUM(Connection)
+
     static std::pair<ToxCorePtr, Core::ToxCoreErrors>
     makeToxCore(const QByteArray& savedata, const ICoreSettings& settings,
                 IBootstrapListGenerator& bootstrapNodes);
@@ -172,6 +182,7 @@ public slots:
 signals:
     void connected();
     void disconnected();
+    void connectionChanged(Core::Connection connection);
 
     void friendRequestReceived(const ToxPk& friendPk, const QString& message);
     void friendAvatarChanged(const ToxPk& friendPk, const QByteArray& pic);
@@ -239,7 +250,8 @@ signals:
     void groupTitleChanged(uint32_t groupNumber, const QString& author, const QString& title);
     void groupTopicChanged(uint32_t groupNumber, const QString& topic);
     void groupSentFailed(uint32_t groupNumber);
-    void groupJoined(uint32_t groupNumber, GroupId groupId);
+    /** @param password we joined with, to join again later. */
+    void groupJoined(uint32_t groupNumber, GroupId groupId, const QByteArray& password);
     void groupSelfJoined(uint32_t groupNumber);
     void groupSelfDisconnected(uint32_t groupNumber);
     void groupPasswordRejected(uint32_t groupNumber);
@@ -382,7 +394,7 @@ private:
     std::unique_ptr<QThread> coreThread;
     const IBootstrapListGenerator& bootstrapListGenerator;
     const ICoreSettings& settings;
-    bool isConnected = false;
+    Connection selfConnection = Connection::None;
     int tolerance = CORE_DISCONNECT_TOLERANCE;
 
     QHash<uint32_t, GroupId> numberToGroupId;

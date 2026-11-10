@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include "src/model/session.h"
+
 #include <QDialog>
 #include <QShortcut>
 #include <QToolButton>
@@ -36,7 +38,7 @@ signals:
 
 public slots:
     void onProfileLoaded();
-    void onProfileLoadFailed();
+    void onProfileLoadFailed(Session::LoginError error);
     void onAutoLoginChanged(bool state);
 
 private slots:

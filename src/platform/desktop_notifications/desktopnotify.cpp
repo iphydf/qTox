@@ -6,10 +6,11 @@
 
 #include "desktopnotifybackend.h"
 
-#include "src/chatlog/textformatter.h"
+#include "src/model/textformatter.h"
 #include "src/persistence/inotificationsettings.h"
 
 #include <QDebug>
+#include <QPixmap>
 #include <QSystemTrayIcon>
 
 struct DesktopNotify::Private
@@ -53,7 +54,7 @@ void DesktopNotify::notifyMessage(const NotificationData& notificationData)
     // Try system-backends first.
     if (d->settings.getNotifySystemBackend()) {
         if (d->dbus->showMessage(notificationData.title, message, notificationData.category,
-                                 notificationData.pixmap)) {
+                                 QPixmap::fromImage(notificationData.image))) {
             return;
         }
     }
@@ -71,5 +72,5 @@ void DesktopNotify::notifyMessage(const NotificationData& notificationData)
     // Fallback to QSystemTrayIcon.
     d->icon->showMessage(notificationData.title,
                          d->dbus->supportsBodyMarkup() ? message.toHtmlEscaped() : message,
-                         notificationData.pixmap);
+                         QPixmap::fromImage(notificationData.image));
 }

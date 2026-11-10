@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "src/widget/tool/imessageboxmanager.h"
+#include "src/model/imessageboxmanager.h"
 
 #include <QObject>
 #include <QWidget>

@@ -8,9 +8,9 @@
 #include "src/core/groupid.h"
 #include "src/model/groupinvite.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/form/groupinvitewidget.h"
-#include "src/widget/translator.h"
 
 #include <QGroupBox>
 #include <QInputDialog>
@@ -77,11 +77,7 @@ GroupInviteForm::GroupInviteForm(Settings& settings_, Core& core_)
                 if (!okPassword) {
                     return;
                 }
-                const QByteArray passwordBytes = password.toUtf8();
-                const GroupId groupId(rawId);
-                if (core.joinGroup(groupId, passwordBytes) >= 0 && !passwordBytes.isEmpty()) {
-                    settings.setGroupPassword(groupId.toString(), passwordBytes);
-                }
+                core.joinGroup(GroupId(rawId), password.toUtf8());
             } else {
                 QMessageBox::warning(this, tr("Join group by ID"), tr("Group ID cannot be empty."));
                 return;
@@ -150,15 +146,6 @@ void GroupInviteForm::show(ContentLayout* contentLayout)
  */
 bool GroupInviteForm::addGroupInvite(const GroupInvite& inviteInfo)
 {
-    // supress duplicate invite messages
-    for (GroupInviteWidget* existing : invites) {
-        const GroupInvite& existingInvite = existing->getInviteInfo();
-        if (existingInvite.getFriendId() == inviteInfo.getFriendId()
-            && existingInvite.getInviteData() == inviteInfo.getInviteData()) {
-            return false;
-        }
-    }
-
     auto* widget = new GroupInviteWidget(this, inviteInfo, settings, core);
     scroll->widget()->layout()->addWidget(widget);
     invites.append(widget);
@@ -167,8 +154,10 @@ bool GroupInviteForm::addGroupInvite(const GroupInvite& inviteInfo)
         emit groupInviteAccepted(inviteInfo_);
     });
 
-    connect(widget, &GroupInviteWidget::rejected, this,
-            [this](const GroupInvite& inviteInfo_) { deleteInviteWidget(inviteInfo_); });
+    connect(widget, &GroupInviteWidget::rejected, this, [this](const GroupInvite& inviteInfo_) {
+        deleteInviteWidget(inviteInfo_);
+        emit groupInviteRejected(inviteInfo_);
+    });
     if (isVisible()) {
         emit groupInvitesSeen();
         return false;

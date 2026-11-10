@@ -9,7 +9,7 @@
 
 #include "src/core/conferenceid.h"
 #include "src/model/chatroom/conferenceroom.h"
-#include "src/model/friendlist/ifriendlistitem.h"
+#include "src/widget/friendlist/ifriendlistitem.h"
 
 #include <memory>
 

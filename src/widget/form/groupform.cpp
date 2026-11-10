@@ -11,13 +11,13 @@
 #include "src/model/group.h"
 #include "src/model/groupmessagedispatcher.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/chatformheader.h"
 #include "src/widget/flowlayout.h"
 #include "src/widget/form/chatform.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/chattextedit.h"
 #include "src/widget/tool/croppinglabel.h"
-#include "src/widget/translator.h"
 
 #include <QApplication>
 #include <QClipboard>
@@ -622,10 +622,7 @@ void GroupForm::setPassword()
     const QString password = QInputDialog::getText(this, tr("Set group password"), tr("Password:"),
                                                    QLineEdit::Password, QString(), &ok);
     if (!self.isNull() && ok) {
-        const QByteArray passwordBytes = password.toUtf8();
-        if (group->setGroupPassword(passwordBytes)) {
-            settings.setGroupPassword(group->getPersistentId().toString(), passwordBytes);
-        }
+        group->setGroupPassword(password.toUtf8());
     }
 }
 
@@ -643,9 +640,7 @@ void GroupForm::setNickname()
 
 void GroupForm::clearPassword()
 {
-    if (group->setGroupPassword({})) {
-        settings.removeGroupPassword(group->getPersistentId().toString());
-    }
+    group->setGroupPassword({});
 }
 
 void GroupForm::setPeerLimit()
@@ -716,38 +711,24 @@ void GroupForm::updatePrivateMessageIndicator()
 
 void GroupForm::onSendTriggered()
 {
-    auto msg = msgEdit->toPlainText();
-
-    const bool isAction = msg.startsWith(ChatForm::ACTION_PREFIX, Qt::CaseInsensitive);
-    if (isAction) {
-        msg.remove(0, ChatForm::ACTION_PREFIX.length());
-    }
-
-    if (msg.isEmpty()) {
+    if (privateMessageTarget.isEmpty()) {
+        GenericChatForm::onSendTriggered();
         return;
     }
 
-    if (!privateMessageTarget.isEmpty()) {
-        if (groupDispatcher == nullptr) {
-            const auto curTime = QDateTime::currentDateTime();
-            addSystemInfoMessage(curTime, SystemMessageType::messageSendFailed, {});
-            cancelPrivateMessage();
-            return;
-        }
-
-        if (!group->getPeerList().contains(privateMessageTarget)) {
-            const auto curTime = QDateTime::currentDateTime();
-            addSystemInfoMessage(curTime, SystemMessageType::messageSendFailed, {});
-            cancelPrivateMessage();
-            return;
-        }
-
-        msgEdit->setLastMessage(msg);
-        msgEdit->clear();
-        groupDispatcher->sendPrivateMessage(privateMessageTarget, isAction, msg);
-    } else {
-        msgEdit->setLastMessage(msg);
-        msgEdit->clear();
-        messageDispatcher.sendMessage(isAction, msg);
+    const std::optional<Message> message = Message::typed(msgEdit->toPlainText());
+    if (!message) {
+        return;
     }
+
+    // Not to a peer who left.
+    if (groupDispatcher == nullptr || !group->getPeerList().contains(privateMessageTarget)) {
+        addSystemInfoMessage(QDateTime::currentDateTime(), SystemMessageType::messageSendFailed, {});
+        cancelPrivateMessage();
+        return;
+    }
+
+    msgEdit->setLastMessage(message->content);
+    msgEdit->clear();
+    groupDispatcher->sendPrivateMessage(privateMessageTarget, message->isAction, message->content);
 }

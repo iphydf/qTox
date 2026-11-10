@@ -23,9 +23,6 @@ extern "C"
 /**
  * @var std::atomic_int subscribers
  * @brief Number of subscribers
- *
- * @var std::atomic_bool deleteOnClose
- * @brief If true, self-delete after the last subscriber is gone
  */
 
 /**
@@ -35,7 +32,6 @@ extern "C"
  */
 CoreVideoSource::CoreVideoSource()
     : subscribers{0}
-    , deleteOnClose{false}
     , stopped{false}
 {
 }
@@ -99,26 +95,8 @@ void CoreVideoSource::subscribe()
 
 void CoreVideoSource::unsubscribe()
 {
-    biglock.lock();
-    if (--subscribers == 0) {
-        if (deleteOnClose) {
-            biglock.unlock();
-            // DANGEROUS: No member access after this point, that's why we manually unlock
-            delete this;
-            return;
-        }
-    }
-    biglock.unlock();
-}
-
-/**
- * @brief Setup delete on close
- * @param If true, self-delete after the last subscriber is gone
- */
-void CoreVideoSource::setDeleteOnClose(bool newstate)
-{
     const QMutexLocker<QMutex> locker(&biglock);
-    deleteOnClose = newstate;
+    --subscribers;
 }
 
 /**

@@ -11,7 +11,7 @@
 doc/html/*
 
 # Executables
-qtox
+/qtox
 *.exe
 build-*-Release
 build-*-Profile

@@ -25,14 +25,12 @@ private:
     CoreVideoSource();
 
     void pushFrame(const vpx_image_t* frame);
-    void setDeleteOnClose(bool newstate);
 
     void stopSource();
     void restartSource();
 
 private:
     std::atomic_int subscribers;
-    std::atomic_bool deleteOnClose;
     QMutex biglock;
     std::atomic_bool stopped;
 

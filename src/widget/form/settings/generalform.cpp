@@ -9,12 +9,12 @@
 
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/form/settings/textcompose.h"
 #include "src/widget/form/settingswidget.h"
 #include "src/widget/popup.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/recursivesignalblocker.h"
-#include "src/widget/translator.h"
 #include "src/widget/widget.h"
 
 #include <QFileDialog>
@@ -23,67 +23,6 @@
 #include <cmath>
 
 namespace {
-const QStringList locales = {
-    "ar",      // Arabic
-    "be",      // Belarusian
-    "ber",     // Berber
-    "bg",      // Bulgarian
-    "bn",      // Bengali
-    "ca",      // Catalan
-    "cs",      // Czech
-    "da",      // Danish
-    "de",      // German
-    "el",      // Greek
-    "en",      // English
-    "eo",      // Esperanto
-    "es",      // Spanish
-    "et",      // Estonian
-    "fa",      // Persian
-    "fi",      // Finnish
-    "fr",      // French
-    "gl",      // Galician
-    "he",      // Hebrew
-    "hr",      // Croatian
-    "hu",      // Hungarian
-    "is",      // Icelandic
-    "it",      // Italian
-    "ja",      // Japanese
-    "jbo",     // Lojban
-    "kmr",     // Kurdish (Northern)
-    "kn",      // Kannada
-    "ko",      // Korean
-    "li",      // Limburgish
-    "lt",      // Lithuanian
-    "lv",      // Latvian
-    "mk",      // Macedonian
-    "nb_NO",   // Norwegian Bokmål
-    "nl",      // Dutch
-    "nl_BE",   // Flemish
-    "pl",      // Polish
-    "pr",      // Pirate
-    "pt",      // Portuguese
-    "pt_BR",   // Brazilian Portuguese
-    "ro",      // Romanian
-    "ru",      // Russian
-    "si",      // Sinhala
-    "sk",      // Slovak
-    "sl",      // Slovenian
-    "sq",      // Albanian
-    "sr",      // Serbian
-    "sr_Latn", // Serbian (Latin)
-    "sv",      // Swedish
-    "sw",      // Swahili
-    "ta",      // Tamil
-    "tr",      // Turkish
-    "ug",      // Uyghur
-    "uk",      // Ukrainian
-    "ur",      // Urdu
-    "vec",     // Venetian
-    "vi",      // Vietnamese
-    "zh_CN",   // Simplified Chinese
-    "zh_TW",   // Traditional Chinese
-};
-
 QFontDatabase::WritingSystem writingSystem(QLocale::Script script)
 {
     switch (script) {
@@ -154,11 +93,6 @@ QFontDatabase::WritingSystem writingSystem(QLocale::Script script)
 
 } // namespace
 
-const QStringList& GeneralForm::getLocales()
-{
-    return locales;
-}
-
 /**
  * @class GeneralForm
  *
@@ -187,25 +121,13 @@ GeneralForm::GeneralForm(Settings& settings_, Style& style_)
 
     bodyUI->transComboBox->insertItem(0, tr("Auto select"));
 
+    const QStringList& locales = Translator::getLocales();
     for (int i = 0; i < locales.size(); ++i) {
-        QString langName;
-
-        if (locales[i].startsWith(QLatin1String("jbo"))) {
-            langName = QLatin1String("Lojban");
-        } else if (locales[i].startsWith(QLatin1String("li"))) {
-            langName = QLatin1String("Limburgs");
-        } else if (locales[i].startsWith(QLatin1String("pr"))) {
-            langName = QLatin1String("Pirate");
-        } else {
-            const QLocale locale{locales[i]};
-            if (!QFontDatabase::families(writingSystem(locale.script())).isEmpty())
-                langName = locale.nativeLanguageName();
-            else
-                langName = tr("%1 (no fonts)").arg(QLocale::languageToString(locale.language()));
-            if (langName.isEmpty()) {
-                langName = QLocale::languageToString(locale.language());
-            }
-        }
+        const QLocale locale{locales[i]};
+        const QString langName =
+            QFontDatabase::families(writingSystem(locale.script())).isEmpty()
+                ? tr("%1 (no fonts)").arg(QLocale::languageToString(locale.language()))
+                : Translator::getLanguageName(locales[i]);
 
         bodyUI->transComboBox->insertItem(i + 1, langName);
     }
@@ -251,7 +173,7 @@ GeneralForm::~GeneralForm()
 
 void GeneralForm::on_transComboBox_currentIndexChanged(int index)
 {
-    const QString& locale = index == 0 ? QString{} : locales[index - 1];
+    const QString& locale = index == 0 ? QString{} : Translator::getLocales()[index - 1];
     settings.setTranslation(locale);
     Translator::translate(settings.getTranslationInUse());
 }

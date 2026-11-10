@@ -172,6 +172,32 @@ jobs:
           --${{ matrix.features }}
           --sanitize
 
+  build-fedora-qml:
+    name: Fedora with the QML user interface
+    needs: [prepare]
+    if: github.event_name != 'push'
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        features: [full]
+        build_type: [Debug]
+    steps:
+      - uses: actions/checkout@v6
+      - name: Cache compiler output
+        uses: actions/cache@v5
+        with:
+          path: ".cache/ccache"
+          key: ${{ github.job }}-ccache
+      - name: Run build
+        run: docker compose run
+          --rm
+          fedora
+          .ci-scripts/build-qtox-linux.sh
+          --build-type ${{ matrix.build_type }}
+          --${{ matrix.features }}
+          --sanitize
+          --qml
+
   build-macos-user:
     name: macOS user
     needs: [prepare]

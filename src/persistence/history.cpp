@@ -230,6 +230,13 @@ History::~History()
     db->sync();
 }
 
+void History::sync()
+{
+    if (isValid()) {
+        db->sync();
+    }
+}
+
 /**
  * @brief Checks if the database was opened successfully
  * @return True if database if opened, false otherwise.

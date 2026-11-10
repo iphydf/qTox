@@ -29,6 +29,7 @@ qt_moc(
     deps = [
         "//qtox/src",
         "//qtox/src:core",
+        "//qtox/src:shared",
         "//qtox/util",
     ],
 )
@@ -43,6 +44,7 @@ cc_library(
     tags = ["qt"],
     deps = [
         "//qtox/src",
+        "//qtox/src:shared",
         "@qt//:qt_core",
         "@qt//:qt_test",
     ],
@@ -62,6 +64,7 @@ cc_library(
     deps = [
         "//qtox/src",
         "//qtox/src:core",
+        "//qtox/src:shared",
         "@qt//:qt_core",
     ],
 )
@@ -69,9 +72,7 @@ cc_library(
 UI_TESTS = ["loginscreen_test"]
 
 TEST_SIZES = {
-    "chatwidget_test": "medium",
     "core_test": "large",
-    "posixsignalnotifier_test": "medium",
 }
 
 TEST_DEPS = [
@@ -81,6 +82,7 @@ TEST_DEPS = [
     "//qtox:res_lib",
     "//qtox/src",
     "//qtox/src:core",
+    "//qtox/src:shared",
     "//qtox/util",
     "@qt//:qt_core",
     "@qt//:qt_gui",
@@ -90,9 +92,11 @@ TEST_DEPS = [
 
 [qt_test(
     name = src[src.rindex("/") + 1:-4],
+    # "medium" for most: they take a second or two alone, but more than the 5 of
+    # "small" when every test runs at once.
     size = TEST_SIZES.get(
         src[src.rindex("/") + 1:-4],
-        "small",
+        "medium",
     ),
     src = src,
     copts = COPTS,
@@ -102,15 +106,63 @@ TEST_DEPS = [
 ) for src in glob(
     ["**/*_test.cpp"],
     exclude = [
+        "audio/voicegate_test.cpp",
         "model/exiftransform_test.cpp",
         "persistence/dbschema_test.cpp",
         "platform/desktopnotifybackend_test.cpp",
         "platform/stacktrace_test.cpp",
+        "video/framerotation_test.cpp",
         "video/videoframe_test.cpp",
         "chatlog/text_test.cpp",
         "**/*_fuzz_test.cpp",
+        "qml/**",
     ],
 )]
+
+cc_library(
+    name = "qml_testservice",
+    testonly = True,
+    hdrs = ["qml/testservice.h"],
+    tags = ["qt"],
+    deps = ["//qtox/src:qml"],
+)
+
+# The QML user interface's. Not the lint's test: it needs qmllint and our plugin.
+[qt_test(
+    name = name,
+    size = size,
+    src = "qml/%s.cpp" % name,
+    copts = COPTS + [
+        "-Iqtox/src/qml",
+        "-I$(GENDIR)/qtox/src/qml",
+        # Qt's repc writes "using namespace" into the headers it generates.
+        "-Wno-header-hygiene",
+    ],
+    mocopts = ["-Iqtox"],
+    qml = True,
+    deps = [
+        ":mock",
+        ":qml_testservice",
+        "//c-toxcore",
+        "//qtox:res_lib",
+        "//qtox/src:core",
+        "//qtox/src:qml",
+        "//qtox/src:shared",
+        "//qtox/util",
+        "@qt//:qt_core",
+        "@qt//:qt_gui",
+        "@qt//:qt_network",
+        "@qt//:qt_qml",
+        "@qt//:qt_quick",
+        "@qt//:qt_quickcontrols2",
+        "@qt//:qt_remoteobjects",
+    ],
+) for name, size in {
+    # 14 seconds alone, over the 30 of "medium" when every test runs at once.
+    "pages_test": "large",
+    # About 2 minutes: it logs in several times and waits for real Tox friends.
+    "toxservice_test": "enormous",
+}.items()]
 
 qt_test(
     name = "desktopnotifybackend_test",
@@ -120,6 +172,7 @@ qt_test(
     mocopts = ["-Iqtox"],
     deps = [
         "//qtox/src",
+        "//qtox/src:shared",
         "@qt//:qt_core",
         "@qt//:qt_dbus",
         "@qt//:qt_gui",
@@ -138,10 +191,24 @@ qt_test(
         ":mock",
         "//qtox:res_lib",
         "//qtox/src",
+        "//qtox/src:shared",
         "//qtox/util",
         "@qt//:qt_core",
         "@qt//:qt_gui",
         "@qt//:qt_widgets",
+    ],
+)
+
+qt_test(
+    name = "framerotation_test",
+    size = "small",
+    src = "video/framerotation_test.cpp",
+    copts = COPTS,
+    mocopts = ["-Iqtox"],
+    deps = [
+        "//qtox/src:shared",
+        "@ffmpeg",
+        "@qt//:qt_core",
     ],
 )
 
@@ -153,6 +220,7 @@ qt_test(
     mocopts = ["-Iqtox"],
     deps = [
         "//qtox/src",
+        "//qtox/src:shared",
         "@ffmpeg",
         "@qt//:qt_concurrent",
         "@qt//:qt_core",
@@ -168,6 +236,18 @@ cc_fuzz_test(
     corpus = ["//tools/toktok-fuzzer/corpus:serialize_fuzz_test"],
     tags = ["qt"],
     deps = ["//qtox/src:serialize"],
+)
+
+qt_test(
+    name = "voicegate_test",
+    size = "small",
+    src = "audio/voicegate_test.cpp",
+    copts = COPTS,
+    mocopts = ["-Iqtox"],
+    deps = [
+        "//qtox/audio",
+        "@qt//:qt_core",
+    ],
 )
 
 qt_test(
@@ -204,6 +284,7 @@ qt_test(
         ":dbutility",
         "//qtox/src",
         "//qtox/src:core",
+        "//qtox/src:shared",
         "@qt//:qt_core",
     ],
 )

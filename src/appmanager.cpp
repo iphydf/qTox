@@ -7,17 +7,17 @@
 
 #include "src/core/toxlogger.h"
 #include "src/ipc.h"
-#include "src/net/toxuri.h"
 #include "src/net/updatecheck.h"
 #include "src/nexus.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
-#include "src/persistence/toxsave.h"
 #include "src/platform/posixsignalnotifier.h"
+#include "src/translator.h"
 #include "src/version.h"
 #include "src/video/camerasource.h"
 #include "src/widget/tool/messageboxmanager.h"
-#include "src/widget/translator.h"
+#include "src/widget/tool/toxsave.h"
+#include "src/widget/tool/toxuri.h"
 #include "src/widget/widget.h"
 
 #include <QApplication>
@@ -382,27 +382,24 @@ int AppManager::startGui(QCommandLineParser& parser)
     // Autologin
     // TODO (kriby): Shift responsibility of linking views to model objects from nexus
     // Further: generate view instances separately (loginScreen, mainGUI, audio)
-    Profile* profile = nullptr;
     if (autoLogin && Profile::exists(profileName, settings->getPaths())
         && !Profile::isEncrypted(profileName, settings->getPaths())) {
-        // Release ownership temporarily because we're calling Qt slot bootstrapWithProfile below.
-        profile = Profile::loadProfile(profileName, QString(), *settings, &parser, *cameraSource,
-                                       *messageBoxManager)
-                      .release();
-        if (profile == nullptr) {
+        Session::LoginResult login = Session::load(profileName, QString(), *settings, *cameraSource,
+                                                   *messageBoxManager, &parser);
+        if (login.session != nullptr) {
+            nexus->logIn(std::move(login));
+        } else {
             QMessageBox::information(nullptr, tr("Error"), tr("Failed to load profile automatically."));
         }
     }
-    if (profile != nullptr) {
-        nexus->bootstrapWithProfile(profile);
-    } else {
+    if (nexus->getProfile() == nullptr) {
         nexus->setParser(&parser);
         const int returnval = nexus->showLogin(profileName);
         if (returnval == QDialog::Rejected) {
             return -1;
         }
-        profile = nexus->getProfile();
     }
+    Profile* profile = nexus->getProfile();
 
     uriDialog = std::make_unique<ToxURIDialog>(nullptr, profile->getCore(), *messageBoxManager);
 

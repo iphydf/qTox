@@ -5,8 +5,8 @@
 
 #include "profileimporter.h"
 
-#include "src/core/core.h"
 #include "src/persistence/paths.h"
+#include "src/persistence/profile.h"
 
 #include <QApplication>
 #include <QFileDialog>
@@ -80,9 +80,9 @@ bool ProfileImporter::importProfile(const QString& path)
         return false;
     }
 
-    const QString profile = info.completeBaseName();
+    const QString profile = Profile::importName(path);
 
-    if (info.suffix() != "tox") {
+    if (profile.isEmpty()) {
         QMessageBox::warning(this, tr("Ignoring non-Tox file", "popup title"),
                              tr("Warning: You have chosen a file that is not a "
                                 "Tox save file; ignoring.",
@@ -91,10 +91,14 @@ bool ProfileImporter::importProfile(const QString& path)
         return false; // ignore importing non-tox file
     }
 
-    const QString settingsPath = paths.getSettingsDirPath();
-    const QString profilePath = QDir(settingsPath).filePath(profile + Core::TOX_EXT);
+    QFile file{path};
+    if (!file.open(QIODevice::ReadOnly)) {
+        QMessageBox::warning(this, tr("Couldn't import the profile"),
+                             tr("Unable to open this file."), QMessageBox::Ok);
+        return false;
+    }
 
-    if (QFileInfo(profilePath).exists()) {
+    if (Profile::exists(profile, paths)) {
         const QString title = tr("Profile already exists", "import confirm title");
         const QString message = tr("A profile named \"%1\" already exists. "
                                    "Do you want to replace it?",
@@ -104,11 +108,25 @@ bool ProfileImporter::importProfile(const QString& path)
 
         if (!erase)
             return false; // import cancelled
-
-        QFile(profilePath).remove();
     }
 
-    QFile::copy(path, profilePath);
+    switch (Profile::importSave(profile, file.readAll(), paths)) {
+    case Profile::ImportResult::OK:
+        break;
+    case Profile::ImportResult::NotToxSave:
+        QMessageBox::warning(this, tr("Couldn't import the profile"),
+                             tr("This is not a Tox save file."), QMessageBox::Ok);
+        return false;
+    case Profile::ImportResult::InUse:
+        QMessageBox::warning(this, tr("Couldn't import the profile"),
+                             tr("The profile \"%1\" is in use.").arg(profile), QMessageBox::Ok);
+        return false;
+    case Profile::ImportResult::NotWritable:
+        QMessageBox::warning(this, tr("Couldn't import the profile"),
+                             tr("Can't write %1.").arg(Profile::getProfilePath(profile, paths)),
+                             QMessageBox::Ok);
+        return false;
+    }
     // no good way to update the ui from here... maybe we need a Widget:refreshUi() function...
     // such a thing would simplify other code as well I believe
     QMessageBox::information(this, tr("Profile imported"),

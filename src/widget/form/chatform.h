@@ -11,14 +11,16 @@
 #include "src/model/imessagedispatcher.h"
 #include "src/model/status.h"
 #include "src/persistence/history.h"
-#include "src/video/netcamview.h"
+#include "src/widget/video/netcamview.h"
 
-#include <QElapsedTimer>
 #include <QLabel>
 #include <QSet>
 #include <QTimer>
 
 class CallConfirmWidget;
+class CallManager;
+class FileManager;
+class FriendChatroom;
 class ContentDialogManager;
 class Core;
 class DocumentCache;
@@ -48,6 +50,7 @@ public:
              SmileyPack& smileyPack, CameraSource& cameraSource, Settings& settings, Style& style,
              IMessageBoxManager& messageBoxManager, ContentDialogManager& contentDialogManager,
              FriendList& friendList, ConferenceList& conferenceList, GroupList& groupList,
+             CallManager& callManager, FileManager& fileManager, FriendChatroom& chatroom,
              QWidget* parent = nullptr);
     ~ChatForm() override;
     void setStatusMessage(const QString& newMessage);
@@ -56,24 +59,15 @@ public:
 
     void show(ContentLayout* contentLayout_) final;
 
-    static const QString ACTION_PREFIX;
-
 signals:
 
     void incomingNotification(uint32_t friendId);
-    void outgoingNotification();
-    void stopNotification();
     void startCallNotification(uint32_t friendId);
     void endCallNotification(uint32_t friendId);
-    void rejectCall(uint32_t friendId);
-    void acceptCall(uint32_t friendId);
     void updateFriendActivity(Friend& frnd);
 
 public slots:
-    void onAvInvite(uint32_t friendId, bool video);
-    void onAvStart(uint32_t friendId, bool video);
-    void onAvEnd(uint32_t friendId, bool error);
-    void onAvatarChanged(const ToxPk& friendPk, const QPixmap& pic);
+    void onAvatarChanged(const ToxPk& friendPk, const QImage& pic);
     void onFileNameChanged(const ToxPk& friendPk);
     void onShowMessagesClicked();
     void onSplitterMoved(int pos, int index);
@@ -109,9 +103,9 @@ private:
     void updateMuteMicButton();
     void updateMuteVolButton();
     void retranslateUi();
-    void showOutgoingCall(bool video);
+    void sendFile(const QString& path);
+    void onCallStateChanged(const ToxPk& friendPk);
     void startCounter();
-    void stopCounter(bool error = false);
     void deleteCounter();
     void updateCallButtons();
     void showNetcam();
@@ -131,17 +125,18 @@ private:
     QMenu statusMessageMenu;
     QLabel* callDuration;
     QTimer* callDurationTimer;
-    QTimer typingTimer;
-    QElapsedTimer timeElapsed;
     QAction* copyStatusAction;
     QPixmap imagePreviewSource;
     ImagePreviewButton* imagePreview;
-    bool isTyping;
-    bool lastCallIsVideo;
+    // What the netcam shows of the call, which can end before the netcam closes.
+    std::shared_ptr<VideoSource> callVideo;
     std::unique_ptr<NetCamView> netcam;
     CameraSource& cameraSource;
     Settings& settings;
     Style& style;
     ContentDialogManager& contentDialogManager;
     Profile& profile;
+    CallManager& callManager;
+    FileManager& fileManager;
+    FriendChatroom& chatroom;
 };

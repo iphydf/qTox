@@ -15,6 +15,7 @@
 #include "src/core/toxfile.h"
 #include "src/core/toxid.h"
 #include "src/core/toxpk.h"
+#include "src/model/invitemanager.h"
 #include "src/model/notificationgenerator.h"
 #include "src/platform/desktop_notifications/desktopnotify.h"
 #include "src/widget/form/debugwidget.h"
@@ -25,6 +26,7 @@
 #include <QSystemTrayIcon>
 #include <QUrl>
 
+#include <functional>
 #include <memory>
 
 namespace Ui {
@@ -32,7 +34,14 @@ class MainWindow;
 }
 
 class AddFriendForm;
+class CallManager;
+class Chat;
+struct Message;
+struct NotificationData;
 class ChatManager;
+class Session;
+class FileManager;
+class FriendRequestManager;
 class AlSink;
 class Camera;
 class ChatForm;
@@ -127,8 +136,8 @@ private:
     };
 
 public:
-    Widget(Profile& profile_, IAudioControl& audio_, CameraSource& cameraSource, Settings& settings,
-           Style& style, IPC& ipc, Nexus& nexus, QWidget* parent = nullptr);
+    Widget(Session& session, CameraSource& cameraSource, Settings& settings, Style& style, IPC& ipc,
+           Nexus& nexus, QWidget* parent = nullptr);
     ~Widget() override;
     void init();
     void setCentralWidget(QWidget* widget, const QString& widgetName);
@@ -141,10 +150,8 @@ public:
     void addGroupDialog(const Group* group, ContentDialog* dialog);
     bool newFriendMessageAlert(const ToxPk& friendId, const QString& text, bool sound = true,
                                QString filename = QString(), size_t filesize = 0);
-    bool newConferenceMessageAlert(const ConferenceId& conferenceId, const ToxPk& authorPk,
-                                   const QString& message, bool notify);
-    bool newGroupMessageAlert(const GroupId& groupId, const ToxPk& authorPk, const QString& message,
-                              bool notify);
+    bool newChatMessageAlert(Chat& chat, GenericChatroomWidget* widget, ContentDialog* contentDialog,
+                             const std::function<NotificationData()>& notification, bool notify);
     bool getIsWindowMinimized();
     void updateIcons();
 
@@ -176,7 +183,7 @@ public slots:
     void onStatusSet(Status::Status status);
     void onFailedToStartCore();
     void onBadProxyCore();
-    void onSelfAvatarLoaded(const QPixmap& pic);
+    void onSelfAvatarLoaded(const QImage& pic);
     void setUsername(const QString& username);
     void setStatusMessage(const QString& statusMessage);
     void addFriendFailed(const ToxPk& userId, const QString& errorInfo = QString());
@@ -185,11 +192,9 @@ public slots:
     void onFriendDisplayedNameChanged(const QString& displayed);
     void onFriendAliasChanged(const ToxPk& friendId, const QString& alias);
     void onFriendRequestReceived(const ToxPk& friendPk, const QString& message);
-    void onFileReceiveRequested(const ToxFile& file);
-    void onConferenceInviteReceived(const ConferenceInvite& inviteInfo);
-    void onConferenceInviteAccepted(const ConferenceInvite& inviteInfo);
-    void onGroupInviteReceived(const GroupInvite& inviteInfo);
+    void onInviteAdded(const InviteManager::Invite& invite, const ToxPk& friendPk);
     void onGroupInviteAccepted(const GroupInvite& inviteInfo);
+    void onMessageReceived(Chat& chat, const ToxPk& sender, const Message& message, bool notify);
     void titleChangedByUser(const QString& title);
     void onConferencePeerAudioPlaying(uint32_t conferencenumber, ToxPk peerPk);
     void onConferenceSendFailed(uint32_t conferencenumber);
@@ -206,7 +211,6 @@ public slots:
     void onCoreChanged(Core& core);
 
 signals:
-    void friendRequestAccepted(const ToxPk& friendPk);
     void friendRequested(const ToxId& friendAddress, const QString& message);
     void statusSet(Status::Status status);
     void statusSelected(Status::Status status);
@@ -248,15 +252,9 @@ private slots:
     void onStartConferenceCall(uint32_t conferenceId);
     void onEndConferenceCall(uint32_t conferenceId);
     void onDialogShown(GenericChatroomWidget* widget);
-    void outgoingNotification();
     void onCallStart(uint32_t friendId);
     void onCallEnd(uint32_t friendId);
     void incomingNotification(uint32_t friendNum);
-    void onRejectCall(uint32_t friendId);
-    void onStopNotification();
-    void dispatchFile(ToxFile file);
-    void dispatchFileWithBool(ToxFile file, bool pausedOrBroken);
-    void dispatchFileSendFailed(uint32_t friendId, const QString& fileName);
     void connectCircleWidget(CircleWidget& circleWidget) const;
     void connectFriendWidget(FriendWidget& friendWidget) const;
     void searchCircle(CircleWidget& circleWidget);
@@ -286,9 +284,7 @@ private:
     bool newMessageAlert(QWidget* currentWindow, bool isActive, bool sound = true, bool notify = true);
     void setActiveToolMenuButton(ActiveToolMenuButton newActiveButton);
     void hideMainForms(GenericChatroomWidget* chatroomWidget);
-    void removeFriend(Friend* f, bool fake = false);
-    void removeConference(Conference* c, bool fake = false);
-    void removeGroup(Group* g, bool fake = false);
+    void removeChat(Chat* chat, bool fake);
     void saveWindowGeometry();
     void saveSplitterGeometry();
     void cycleChats(bool forward);
@@ -303,9 +299,8 @@ private:
     void retranslateUi();
     void focusChatInput();
     void openDialog(GenericChatroomWidget* widget, bool newWindow);
-    void playNotificationSound(IAudioSink::Sound sound, bool loop = false);
+    void playNotificationSound(IAudioSink::Sound sound);
     void cleanupNotificationSound();
-    void acceptFileTransfer(const ToxFile& file, const QString& path);
     void formatWindowTitle(const QString& content);
 
 private:
@@ -377,7 +372,6 @@ private:
     // Eventual goal is to have a notification manager that works on
     // Messages hooked up to message dispatchers but we aren't there
     // yet
-    QMap<ToxPk, QMetaObject::Connection> friendAlertConnections;
     QMap<ToxPk, ChatForm*> chatForms;
 
     QMap<ConferenceId, ConferenceWidget*> conferenceWidgets;
@@ -385,7 +379,6 @@ private:
     // Eventual goal is to have a notification manager that works on
     // Messages hooked up to message dispatchers but we aren't there
     // yet
-    QMap<ConferenceId, QMetaObject::Connection> conferenceAlertConnections;
     QMap<ConferenceId, QSharedPointer<ConferenceForm>> conferenceForms;
 
     QMap<GroupId, GroupWidget*> groupWidgets;
@@ -393,12 +386,16 @@ private:
     // Eventual goal is to have a notification manager that works on
     // Messages hooked up to message dispatchers but we aren't there
     // yet
-    QMap<GroupId, QMetaObject::Connection> groupAlertConnections;
     QMap<GroupId, QSharedPointer<GroupForm>> groupForms;
     Core* core = nullptr;
 
-    std::unique_ptr<ChatManager> chatManager;
-    std::unique_ptr<NotificationGenerator> notificationGenerator;
+    // These are the session's.
+    ChatManager* chatManager;
+    CallManager* callManager;
+    InviteManager* inviteManager;
+    FileManager* fileManager;
+    FriendRequestManager* friendRequestManager;
+    NotificationGenerator* notificationGenerator;
     std::unique_ptr<DesktopNotify> notifier;
 
 #ifdef Q_OS_MAC
@@ -415,9 +412,9 @@ private:
     CameraSource& cameraSource;
     Style& style;
     IMessageBoxManager* messageBoxManager = nullptr; // freed by Qt on destruction
-    std::unique_ptr<FriendList> friendList;
-    std::unique_ptr<ConferenceList> conferenceList;
-    std::unique_ptr<GroupList> groupList;
+    FriendList* friendList;
+    ConferenceList* conferenceList;
+    GroupList* groupList;
     std::unique_ptr<ContentDialogManager> contentDialogManager;
     IPC& ipc;
     std::unique_ptr<ToxSave> toxSave;

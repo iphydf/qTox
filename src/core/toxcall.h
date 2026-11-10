@@ -42,7 +42,7 @@ public:
     ToxCall& operator=(ToxCall&& other) = delete;
 
     bool isActive() const;
-    void setActive(bool value);
+    virtual void setActive(bool value);
 
     bool getMuteVol() const;
     void setMuteVol(bool value);
@@ -56,7 +56,7 @@ public:
     bool getNullVideoBitrate() const;
     void setNullVideoBitrate(bool value);
 
-    CoreVideoSource* getVideoSource() const;
+    const std::shared_ptr<CoreVideoSource>& getVideoSource() const;
 
 protected:
     bool active{false};
@@ -66,7 +66,8 @@ protected:
     bool muteMic{false};
     bool muteVol{false};
     // video
-    CoreVideoSource* videoSource{nullptr};
+    // Its viewers keep it past the call.
+    std::shared_ptr<CoreVideoSource> videoSource;
     QMetaObject::Connection videoInConn;
     bool videoEnabled{false};
     bool nullVideoBitrate{false};
@@ -84,22 +85,28 @@ public:
     ToxFriendCall& operator=(ToxFriendCall&& other) = delete;
     ~ToxFriendCall() override;
 
+    void setActive(bool value) override;
+
     TOXAV_FRIEND_CALL_STATE getState() const;
     void setState(const TOXAV_FRIEND_CALL_STATE& value);
 
     void playAudioBuffer(const int16_t* data, int samples, unsigned channels, int sampleRate) const;
+
+    /** Sends the user's camera, in a video call. */
+    void sendVideo();
+    bool isSendingVideo() const;
 
 private slots:
     void onAudioSourceInvalidated();
     void onAudioSinkInvalidated();
 
 private:
-    QMetaObject::Connection audioSourceInvalid;
     QMetaObject::Connection audioSinkInvalid;
     TOXAV_FRIEND_CALL_STATE state{TOXAV_FRIEND_CALL_STATE_NONE};
     std::unique_ptr<IAudioSink> sink;
     uint32_t friendId;
     CameraSource& cameraSource;
+    bool sendingVideo{false};
 };
 
 class ToxConferenceCall : public ToxCall

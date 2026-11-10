@@ -315,36 +315,35 @@ void Core::process()
 bool Core::checkConnection()
 {
     ASSERT_CORE_THREAD;
-    auto selfConnection = tox_self_get_connection_status(tox.get());
-    const char* connectionName = "unknown";
-    bool toxConnected = false;
-    switch (selfConnection) {
+    Connection newConnection = Connection::None;
+    switch (tox_self_get_connection_status(tox.get())) {
     case TOX_CONNECTION_NONE:
-        toxConnected = false;
         break;
     case TOX_CONNECTION_TCP:
-        toxConnected = true;
-        connectionName = "a TCP relay";
+        newConnection = Connection::TcpRelay;
         break;
     case TOX_CONNECTION_UDP:
-        toxConnected = true;
-        connectionName = "the UDP DHT";
+        newConnection = Connection::Udp;
         break;
     default:
         qWarning() << "tox_self_get_connection_status returned unknown enum!";
         break;
     }
 
-    if (toxConnected && !isConnected) {
-        qDebug() << "Connected to" << connectionName;
-        emit connected();
-    } else if (!toxConnected && isConnected) {
-        qDebug() << "Disconnected from the DHT";
-        emit disconnected();
+    if (newConnection != selfConnection) {
+        const bool wasConnected = selfConnection != Connection::None;
+        selfConnection = newConnection;
+        emit connectionChanged(selfConnection);
+        if (!wasConnected) {
+            qDebug() << "Connected to"
+                     << (selfConnection == Connection::TcpRelay ? "a TCP relay" : "the UDP DHT");
+            emit connected();
+        } else if (selfConnection == Connection::None) {
+            qDebug() << "Disconnected from the DHT";
+            emit disconnected();
+        }
     }
-
-    isConnected = toxConnected;
-    return toxConnected;
+    return selfConnection != Connection::None;
 }
 
 /**
@@ -792,6 +791,9 @@ QString Core::getFriendRequestErrorMessage(const ToxId& friendId, const QString&
 
     if (!friendId.isValid()) {
         return tr("Invalid Tox ID", "Error while sending friend request");
+    }
+    if (friendId.getPublicKey() == getSelfPublicKey()) {
+        return tr("You can't add yourself as a friend!", "Error while sending friend request");
     }
 
     if (message.isEmpty()) {
@@ -1319,7 +1321,7 @@ void Core::loadGroups()
         numberToGroupId[groupNumber] = groupId;
         groupIdToNumber[groupId] = groupNumber;
         startGroupReconnectTimer(groupNumber);
-        emit groupJoined(groupNumber, groupId);
+        emit groupJoined(groupNumber, groupId, {});
     }
 
     const QStringList saved = settings.getSavedGroups();
@@ -1354,7 +1356,7 @@ void Core::loadGroups()
         numberToGroupId[groupNumber] = groupId;
         groupIdToNumber[groupId] = groupNumber;
         startGroupReconnectTimer(groupNumber);
-        emit groupJoined(groupNumber, groupId);
+        emit groupJoined(groupNumber, groupId, storedPassword);
     }
 }
 
@@ -2150,7 +2152,7 @@ uint32_t Core::joinGroup(const GroupInvite& inviteInfo, const QByteArray& passwo
     startGroupReconnectTimer(groupNumber);
 
     emit saveRequest();
-    emit groupJoined(groupNumber, groupId);
+    emit groupJoined(groupNumber, groupId, password);
     return groupNumber;
 }
 
@@ -2188,7 +2190,7 @@ int Core::joinGroup(const GroupId& groupId, const QByteArray& password)
     startGroupReconnectTimer(groupNumber);
 
     emit saveRequest();
-    emit groupJoined(groupNumber, groupId);
+    emit groupJoined(groupNumber, groupId, password);
     return groupNumber;
 }
 

@@ -12,15 +12,16 @@
 #include "src/core/core.h"
 #include "src/core/coreav.h"
 #include "src/friendlist.h"
+#include "src/model/callmanager.h"
 #include "src/model/conference.h"
 #include "src/model/friend.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/chatformheader.h"
 #include "src/widget/conferencewidget.h"
 #include "src/widget/flowlayout.h"
 #include "src/widget/form/chatform.h"
 #include "src/widget/style.h"
-#include "src/widget/translator.h"
 
 #include <QApplication>
 #include <QClipboard>
@@ -69,14 +70,15 @@ QString editName(const QString& name)
 
 ConferenceForm::ConferenceForm(Core& core_, Conference* chatConference, IChatLog& chatLog_,
                                IMessageDispatcher& messageDispatcher_, Settings& settings_,
-                               DocumentCache& documentCache_, SmileyPack& smileyPack_, Style& style_,
-                               IMessageBoxManager& messageBoxManager, FriendList& friendList_,
-                               ConferenceList& conferenceList_, GroupList& groupList_)
+                               DocumentCache& documentCache_, SmileyPack& smileyPack_,
+                               Style& style_, IMessageBoxManager& messageBoxManager,
+                               FriendList& friendList_, ConferenceList& conferenceList_,
+                               GroupList& groupList_, CallManager& callManager_)
     : GenericChatForm(core_, chatConference, chatLog_, messageDispatcher_, documentCache_, smileyPack_,
                       settings_, style_, messageBoxManager, friendList_, conferenceList_, groupList_)
     , core{core_}
     , conference(chatConference)
-    , inCall(false)
+    , callManager{callManager_}
     , settings(settings_)
     , style{style_}
     , friendList{friendList_}
@@ -313,23 +315,23 @@ void ConferenceForm::dropEvent(QDropEvent* ev)
 
 void ConferenceForm::onMicMuteToggle()
 {
-    if (audioInputFlag) {
+    if (inCall()) {
         CoreAV* av = core.getAv();
         const bool oldMuteState = av->isConferenceCallInputMuted(conference);
         const bool newMute = !oldMuteState;
         av->muteCallInput(conference, newMute);
-        headWidget->updateMuteMicButton(inCall, newMute);
+        headWidget->updateMuteMicButton(inCall(), newMute);
     }
 }
 
 void ConferenceForm::onVolMuteToggle()
 {
-    if (audioOutputFlag) {
+    if (inCall()) {
         CoreAV* av = core.getAv();
         const bool oldMuteState = av->isConferenceCallOutputMuted(conference);
         const bool newMute = !oldMuteState;
         av->muteCallOutput(conference, newMute);
-        headWidget->updateMuteVolButton(inCall, newMute);
+        headWidget->updateMuteVolButton(inCall(), newMute);
     }
 }
 
@@ -337,25 +339,25 @@ void ConferenceForm::onCallClicked()
 {
     CoreAV* av = core.getAv();
 
-    if (!inCall) {
+    if (!callManager.inConferenceCall(*conference)) {
         joinConferenceCall();
     } else {
         leaveConferenceCall();
     }
 
-    headWidget->updateCallButtons(true, inCall);
+    headWidget->updateCallButtons(true, inCall());
 
     const bool inMute = av->isConferenceCallInputMuted(conference);
-    headWidget->updateMuteMicButton(inCall, inMute);
+    headWidget->updateMuteMicButton(inCall(), inMute);
 
     const bool outMute = av->isConferenceCallOutputMuted(conference);
-    headWidget->updateMuteVolButton(inCall, outMute);
+    headWidget->updateMuteVolButton(inCall(), outMute);
 }
 
 void ConferenceForm::keyPressEvent(QKeyEvent* ev)
 {
     // Push to talk (CTRL+P)
-    if (ev->key() == Qt::Key_P && ((ev->modifiers() & Qt::ControlModifier) != 0u) && inCall) {
+    if (ev->key() == Qt::Key_P && ((ev->modifiers() & Qt::ControlModifier) != 0u) && inCall()) {
         onMicMuteToggle();
     }
 
@@ -368,7 +370,7 @@ void ConferenceForm::keyPressEvent(QKeyEvent* ev)
 void ConferenceForm::keyReleaseEvent(QKeyEvent* ev)
 {
     // Push to talk (CTRL+P)
-    if (ev->key() == Qt::Key_P && ((ev->modifiers() & Qt::ControlModifier) != 0u) && inCall) {
+    if (ev->key() == Qt::Key_P && ((ev->modifiers() & Qt::ControlModifier) != 0u) && inCall()) {
         onMicMuteToggle();
     }
 
@@ -382,7 +384,7 @@ void ConferenceForm::keyReleaseEvent(QKeyEvent* ev)
 void ConferenceForm::updateUserCount(int numPeers)
 {
     nusersLabel->setText(tr("%n user(s) in chat", "Number of users in chat", numPeers));
-    headWidget->updateCallButtons(true, inCall);
+    headWidget->updateCallButtons(true, inCall());
 }
 
 void ConferenceForm::retranslateUi()
@@ -454,22 +456,20 @@ void ConferenceForm::onLabelContextMenuRequested(const QPoint& localPos)
     }
 }
 
+bool ConferenceForm::inCall() const
+{
+    return callManager.inConferenceCall(*conference);
+}
+
 void ConferenceForm::joinConferenceCall()
 {
-    CoreAV* av = core.getAv();
-    av->joinConferenceCall(*conference);
-    audioInputFlag = true;
-    audioOutputFlag = true;
-    inCall = true;
-    emit startConferenceCallNotification(conference->getId());
+    if (callManager.joinConference(*conference)) {
+        emit startConferenceCallNotification(conference->getId());
+    }
 }
 
 void ConferenceForm::leaveConferenceCall()
 {
-    CoreAV* av = core.getAv();
-    av->leaveConferenceCall(conference->getId());
-    audioInputFlag = false;
-    audioOutputFlag = false;
-    inCall = false;
+    callManager.leaveConference(*conference);
     emit endConferenceCallNotification(conference->getId());
 }

@@ -9,15 +9,18 @@
 #include "src/friendlist.h"
 #include "src/grouplist.h"
 #include "src/model/friend.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/db/rawdatabase.h"
 #include "src/persistence/db/upgrades/dbupgrader.h"
 #include "src/persistence/history.h"
 #include "src/persistence/settings.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
 #include <QObject>
+#include <QSemaphore>
 #include <QTemporaryFile>
 #include <QtTest/QtTest>
+
+#include <thread>
 
 class MockMessageDispatcher : public IMessageDispatcher
 {
@@ -111,6 +114,7 @@ private slots:
     void cleanup();
     void testHistoryLoading();
     void testHistorySearch();
+    void testChatClosedBeforeInsertion();
 
 private:
     std::unique_ptr<QTemporaryFile> dbFile;
@@ -201,6 +205,34 @@ void TestChatHistory::testHistorySearch()
     QVERIFY(result.found);
     QCOMPARE(chatHistory.at(result.pos.logIdx).getContentAsMessage().message.content,
              QString("needle"));
+}
+
+void TestChatHistory::testChatClosedBeforeInsertion()
+{
+    auto chatHistory =
+        std::make_unique<ChatHistory>(*f, history.get(), *idHandler, *settings, *messageDispatcher,
+                                      *friendList, *conferenceList, *groupList);
+
+    // Keep the database busy until the chat closes, as at logout: the message goes in after that.
+    QSemaphore closing;
+    db->execLater(RawDatabase::Query{"SELECT 1;", std::function<void(RowId)>{
+                                                      [&closing](RowId) { closing.acquire(); }}});
+    Message message;
+    message.content = "sent";
+    message.timestamp = QDateTime::currentDateTime();
+    emit messageDispatcher->messageSent(DispatchedMessageId(1), message);
+    std::thread closer{[&closing] {
+        QThread::msleep(100);
+        closing.release();
+    }};
+    chatHistory.reset();
+    closer.join();
+    db->sync();
+
+    const ChatHistory reopened(*f, history.get(), *idHandler, *settings, *messageDispatcher,
+                               *friendList, *conferenceList, *groupList);
+    QCOMPARE(reopened.getNextIdx(), ChatLogIdx(1));
+    QCOMPARE(reopened.at(ChatLogIdx(0)).getContentAsMessage().message.content, QString("sent"));
 }
 
 QTEST_MAIN(TestChatHistory)

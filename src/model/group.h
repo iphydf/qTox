@@ -100,6 +100,7 @@ signals:
     void voiceStateChanged(GroupVoiceState voiceState);
     void privacyStateChanged(GroupPrivacyState privacyState);
     void nicknameChanged(const QString& nickname);
+    void passwordChanged(const QByteArray& password);
 
 private:
     QString displayName(const ToxPk& pk, const QString& peerName) const;

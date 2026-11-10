@@ -10,6 +10,7 @@
 #include "src/core/coreav.h"
 #include "src/net/updatecheck.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/video/camerasource.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/form/settings/aboutform.h"
@@ -18,7 +19,6 @@
 #include "src/widget/form/settings/generalform.h"
 #include "src/widget/form/settings/privacyform.h"
 #include "src/widget/form/settings/userinterfaceform.h"
-#include "src/widget/translator.h"
 #include "src/widget/widget.h"
 
 #include <QLabel>

@@ -24,6 +24,8 @@ private slots:
     void testToQImageEmptySource();
     void testToToxYUVFrameEmptySource();
     void testConcurrency();
+    void testToQImageOutlivesFrame();
+    void testToToxYUVFramePaddedChroma();
 };
 
 void TestVideoFrame::testConcurrency()
@@ -95,6 +97,57 @@ void TestVideoFrame::testToToxYUVFrameEmptySource()
 
     auto [toxFrame, locker] = videoFrame->toToxYUVFrame();
     QVERIFY(!toxFrame.isValid());
+}
+
+void TestVideoFrame::testToQImageOutlivesFrame()
+{
+    AVFrame* frame = av_frame_alloc();
+    frame->width = 16;
+    frame->height = 16;
+    frame->format = AV_PIX_FMT_YUV420P;
+    av_image_alloc(frame->data, frame->linesize, 16, 16, AV_PIX_FMT_YUV420P, 1);
+    // White.
+    memset(frame->data[0], 255, static_cast<size_t>(frame->linesize[0]) * 16);
+    memset(frame->data[1], 128, static_cast<size_t>(frame->linesize[1]) * 8);
+    memset(frame->data[2], 128, static_cast<size_t>(frame->linesize[2]) * 8);
+    auto videoFrame = VideoFrame::fromAVFrameUntracked(1, frame, true);
+
+    const QImage img = videoFrame->toQImage();
+    // As closing the camera does to its frames.
+    videoFrame->releaseFrame();
+    // Read here, not in Qt, which sanitisers don't check.
+    QCOMPARE(img.constScanLine(8)[8 * 3], 255);
+}
+
+void TestVideoFrame::testToToxYUVFramePaddedChroma()
+{
+    // Packed luma rows and padded chroma rows, as av_frame_get_buffer() makes 480 pixels wide.
+    constexpr int width = 480;
+    constexpr int height = 4;
+    constexpr int chromaStride = 256;
+    AVFrame* frame = av_frame_alloc();
+    frame->width = width;
+    frame->height = height;
+    frame->format = AV_PIX_FMT_YUV420P;
+    // One allocation, which VideoFrame frees through the first plane.
+    auto* const buffer =
+        static_cast<uint8_t*>(av_mallocz(width * height + 2 * chromaStride * (height / 2)));
+    frame->data[0] = buffer;
+    frame->data[1] = buffer + width * height;
+    frame->data[2] = frame->data[1] + chromaStride * (height / 2);
+    frame->linesize[0] = width;
+    frame->linesize[1] = chromaStride;
+    frame->linesize[2] = chromaStride;
+    // Each chroma row's pixels say which row they are, from 1.
+    for (int row = 0; row < height / 2; ++row) {
+        memset(frame->data[1] + row * chromaStride, row + 1, width / 2);
+    }
+    auto videoFrame = VideoFrame::fromAVFrameUntracked(1, frame, true);
+
+    auto [toxFrame, locker] = videoFrame->toToxYUVFrame();
+    QVERIFY(toxFrame.isValid());
+    // toxav reads the rows without padding.
+    QCOMPARE(toxFrame.u[width / 2], 2);
 }
 
 QTEST_GUILESS_MAIN(TestVideoFrame)

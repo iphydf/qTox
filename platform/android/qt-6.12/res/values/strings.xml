@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="service_channel">Connection</string>
+    <string name="service_starting">Starting</string>
+    <string name="messages_channel">Messages</string>
+    <string name="reply">Reply</string>
+    <string name="answer">Answer</string>
+    <string name="decline">Decline</string>
+</resources>

@@ -37,6 +37,7 @@ public:
 signals:
     void conferenceCreate(uint8_t type);
     void conferenceInviteAccepted(const ConferenceInvite& inviteInfo);
+    void conferenceInviteRejected(const ConferenceInvite& inviteInfo);
     void conferenceInvitesSeen();
 
 protected:

@@ -8,10 +8,10 @@
 #include "ui_filetransferwidget.h"
 
 #include "src/core/corefile.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/settings.h"
 #include "src/widget/commondialogs.h"
 #include "src/widget/style.h"
-#include "src/widget/tool/imessageboxmanager.h"
 #include "src/widget/widget.h"
 #include "util/display.h"
 
