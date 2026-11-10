@@ -18,6 +18,8 @@ public:
     ConferenceId();
     explicit ConferenceId(const QByteArray& rawId);
     explicit ConferenceId(const uint8_t* rawId);
+    /** The ID that toString() gave, or an empty one. */
+    static ConferenceId fromString(const QString& id);
     int getSize() const override;
     std::unique_ptr<ChatId> clone() const override;
 };

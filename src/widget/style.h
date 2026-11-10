@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include "src/model/theme.h"
+
 #include <QColor>
 #include <QFont>
 #include <QMap>
@@ -41,25 +43,8 @@ public:
         SelectText,
     };
 
-    enum class Font
-    {
-        ExtraBig,
-        Big,
-        BigBold,
-        Medium,
-        MediumBold,
-        Small,
-        SmallLight,
-    };
-
-    enum class MainTheme
-    {
-        Light,
-        Dark,
-    };
-    Q_ENUM(MainTheme)
-
-    static int defaultThemeColor(MainTheme theme);
+    using Font = Theme::Font;
+    using MainTheme = Theme::MainTheme;
 
     static QStringList getThemeColorNames();
     static QString getThemeFolder(int themeColor);

@@ -30,6 +30,8 @@ class FriendList;
 class ConferenceList;
 class GroupList;
 
+class CallManager;
+
 class ConferenceForm : public GenericChatForm
 {
     Q_OBJECT
@@ -38,7 +40,7 @@ public:
                    IMessageDispatcher& messageDispatcher_, Settings& settings_,
                    DocumentCache& documentCache, SmileyPack& smileyPack, Style& style,
                    IMessageBoxManager& messageBoxManager, FriendList& friendList,
-                   ConferenceList& conferenceList, GroupList& groupList);
+                   ConferenceList& conferenceList, GroupList& groupList, CallManager& callManager);
     ~ConferenceForm() override;
 
     void peerAudioPlaying(ToxPk peerPk);
@@ -81,7 +83,9 @@ private:
     FlowLayout* namesListLayout;
     QLabel* nusersLabel;
     TabCompleter* tabber;
-    bool inCall;
+    bool inCall() const;
+
+    CallManager& callManager;
     Settings& settings;
     Style& style;
     FriendList& friendList;

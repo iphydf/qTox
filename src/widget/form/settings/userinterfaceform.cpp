@@ -10,10 +10,10 @@
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
 #include "src/persistence/smileypack.h"
+#include "src/translator.h"
 #include "src/widget/form/settingswidget.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/recursivesignalblocker.h"
-#include "src/widget/translator.h"
 #include "src/widget/widget.h"
 
 #include <QDebug>
@@ -87,6 +87,11 @@ UserInterfaceForm::UserInterfaceForm(SmileyPack& smileyPack_, Settings& settings
     bodyUI->cbSeparateWindow->setChecked(settings.getSeparateWindow());
     bodyUI->cbDontGroupWindows->setChecked(settings.getDontGroupWindows());
     bodyUI->cbDontGroupWindows->setEnabled(settings.getSeparateWindow());
+#ifdef Q_OS_ANDROID
+    // Phones show one window at a time.
+    bodyUI->cbSeparateWindow->hide();
+    bodyUI->cbDontGroupWindows->hide();
+#endif
     bodyUI->cbShowIdenticons->setChecked(settings.getShowIdenticons());
 
     bodyUI->useEmoticons->setChecked(settings.getUseEmoticons());

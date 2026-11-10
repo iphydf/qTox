@@ -120,8 +120,6 @@ protected:
 
 protected:
     const Core& core;
-    bool audioInputFlag;
-    bool audioOutputFlag;
     int curRow;
 
     QAction* clearAction;

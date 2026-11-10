@@ -30,6 +30,8 @@ public:
     void updateConferenceStatus(const ConferenceId& conferenceId);
     void updateGroupStatus(const GroupId& groupId);
     bool isChatActive(const ChatId& chatId);
+    /** The separate window that shows @p chatId, if one does. */
+    ContentDialog* getDialog(const ChatId& chatId) const;
     ContentDialog* getFriendDialog(const ToxPk& friendPk) const;
     ContentDialog* getConferenceDialog(const ConferenceId& conferenceId) const;
     ContentDialog* getGroupDialog(const GroupId& groupId) const;

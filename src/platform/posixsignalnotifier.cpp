@@ -53,6 +53,7 @@ void signalHandler(int signum)
 
 constexpr std::initializer_list<int> terminatingSignals{SIGHUP, SIGINT, SIGQUIT, SIGTERM};
 constexpr std::initializer_list<int> usrSignals{SIGUSR1, SIGUSR2};
+#ifndef Q_OS_ANDROID
 constexpr std::initializer_list<int> crashSignals{SIGSEGV, SIGILL, SIGFPE, SIGABRT, SIGBUS, SIGSYS};
 
 // Give it 128 KiB, should be enough for what we're doing in the crash handler.
@@ -101,6 +102,7 @@ void installCrashHandler()
         }
     }
 }
+#endif // Q_OS_ANDROID
 
 } // namespace
 
@@ -193,7 +195,10 @@ PosixSignalNotifier::PosixSignalNotifier()
     notifier = new QSocketNotifier(g_signalSocketPair[1], QSocketNotifier::Read, this);
     connect(notifier, &QSocketNotifier::activated, this, &PosixSignalNotifier::onSignalReceived);
 
+#ifndef Q_OS_ANDROID
+    // Android's own handler writes a tombstone with the backtrace, which ours would replace.
     installCrashHandler();
+#endif
 }
 #else  // Q_OS_WIN
 PosixSignalNotifier::~PosixSignalNotifier() = default;

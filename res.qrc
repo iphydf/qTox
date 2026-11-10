@@ -63,6 +63,7 @@
         <file>themes/dark/chatArea/scrollBarUpArrow.svg</file>
         <file>themes/dark/chatArea/spinner.svg</file>
         <file>themes/dark/chatArea/typing.svg</file>
+        <file>themes/dark/chatForm/backButton.svg</file>
         <file>themes/dark/chatForm/buttons.qss</file>
         <file>themes/dark/chatForm/callButton.svg</file>
         <file>themes/dark/chatForm/emoteButton.svg</file>
@@ -131,6 +132,7 @@
         <file>themes/default/chatArea/scrollBarUpArrow.svg</file>
         <file>themes/default/chatArea/spinner.svg</file>
         <file>themes/default/chatArea/typing.svg</file>
+        <file>themes/default/chatForm/backButton.svg</file>
         <file>themes/default/chatForm/buttons.qss</file>
         <file>themes/default/chatForm/callButton.svg</file>
         <file>themes/default/chatForm/emoteButton.svg</file>

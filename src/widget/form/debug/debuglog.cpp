@@ -9,8 +9,8 @@
 
 #include "src/model/debug/debuglogmodel.h"
 #include "src/persistence/paths.h"
+#include "src/translator.h"
 #include "src/widget/style.h"
-#include "src/widget/translator.h"
 
 #include <QDebug>
 #include <QDesktopServices>

@@ -1,5 +1,5 @@
 load("@rules_cc//cc:defs.bzl", "cc_library", "objc_library")
-load("//third_party/qt:build_defs.bzl", "qt_moc", "qt_uic")
+load("//third_party/qt:build_defs.bzl", "qt_moc", "qt_qml_module", "qt_repc", "qt_uic")
 load("//tools/project:build_defs.bzl", "mkstamp")
 
 DEFINES = [
@@ -9,6 +9,90 @@ DEFINES = [
     "QT_MESSAGELOGCONTEXT",
     "UPDATE_CHECK_ENABLED",
 ]
+
+# The desktop user interface, built on Qt Widgets. The rest of this package is
+# what every user interface shares, and doesn't depend on Qt Widgets.
+WIDGETS_FILES = [
+    "appmanager.*",
+    "chatlog/**",
+    "main.cpp",
+    "nexus.*",
+    "platform/capslock*",
+    "platform/desktop_notifications/**",
+    "platform/screenshot*",
+    "platform/timer*",
+    "platform/x11_display.*",
+    "widget/**",
+]
+
+# The mobile user interface, built on Qt Quick.
+QML_FILES = ["qml/**"]
+
+qt_moc(
+    name = "shared_moc",
+    srcs = [
+        "core/coreav.h",
+        "core/toxcall.h",
+        "ipc.h",
+        "model/about/aboutfriend.h",
+        "model/callmanager.h",
+        "model/chat.h",
+        "model/chathistory.h",
+        "model/chatkind.h",
+        "model/chatmanager.h",
+        "model/chatroom/conferenceroom.h",
+        "model/chatroom/friendchatroom.h",
+        "model/chatroom/grouproom.h",
+        "model/conference.h",
+        "model/conferencemessagedispatcher.h",
+        "model/debug/debuglogmodel.h",
+        "model/debug/debugobjecttreemodel.h",
+        "model/filemanager.h",
+        "model/friend.h",
+        "model/friendmessagedispatcher.h",
+        "model/friendrequestmanager.h",
+        "model/group.h",
+        "model/groupmessagedispatcher.h",
+        "model/ichatlog.h",
+        "model/imessagedispatcher.h",
+        "model/invitemanager.h",
+        "model/notificationgenerator.h",
+        "model/notifications.h",
+        "model/profile/profileinfo.h",
+        "model/session.h",
+        "model/sessionchatlog.h",
+        "model/theme.h",
+        "net/avatarbroadcaster.h",
+        "net/bootstrapnodeupdater.h",
+        "net/updatecheck.h",
+        "persistence/db/rawdatabaseimpl.h",
+        "persistence/history.h",
+        "persistence/offlinemsgengine.h",
+        "persistence/profile.h",
+        "persistence/settings.h",
+        "persistence/smileypack.h",
+        "platform/androidintents.h",
+        "platform/posixsignalnotifier.h",
+        "platform/systeminsets.h",
+        "video/camerasource.h",
+        "video/corevideosource.h",
+        "video/videosource.h",
+    ],
+    hdrs = glob(
+        ["**/*.h"],
+        exclude = WIDGETS_FILES + QML_FILES,
+    ),
+    mocopts = [
+        "-Iqtox",
+        "-Iqtox/util/include",
+    ] + ["-D%s=1" % d for d in DEFINES],
+    tags = ["qt"],
+    deps = [
+        "//qtox/util",
+        "@qt//:qt_gui",
+        "@qt//:qt_network",
+    ],
+)
 
 qt_moc(
     name = "src_moc",
@@ -24,50 +108,10 @@ qt_moc(
         "chatlog/content/text.h",
         "chatlog/content/timestamp.h",
         "chatlog/customtextdocument.h",
-        "core/coreav.h",
-        "core/toxcall.h",
-        "ipc.h",
-        "model/about/aboutfriend.h",
-        "model/chat.h",
-        "model/chathistory.h",
-        "model/chatmanager.h",
-        "model/chatroom/conferenceroom.h",
-        "model/chatroom/friendchatroom.h",
-        "model/chatroom/grouproom.h",
-        "model/conference.h",
-        "model/conferencemessagedispatcher.h",
-        "model/debug/debuglogmodel.h",
-        "model/debug/debugobjecttreemodel.h",
-        "model/friend.h",
-        "model/friendlist/friendlistmanager.h",
-        "model/friendmessagedispatcher.h",
-        "model/group.h",
-        "model/groupmessagedispatcher.h",
-        "model/ichatlog.h",
-        "model/imessagedispatcher.h",
-        "model/notificationgenerator.h",
-        "model/profile/profileinfo.h",
-        "model/sessionchatlog.h",
-        "net/avatarbroadcaster.h",
-        "net/bootstrapnodeupdater.h",
-        "net/toxuri.h",
-        "net/updatecheck.h",
         "nexus.h",
-        "persistence/db/rawdatabaseimpl.h",
-        "persistence/history.h",
-        "persistence/offlinemsgengine.h",
-        "persistence/profile.h",
-        "persistence/settings.h",
-        "persistence/smileypack.h",
         "platform/desktop_notifications/desktopnotify.h",
         "platform/desktop_notifications/desktopnotifybackend.h",
-        "platform/posixsignalnotifier.h",
         "platform/screenshot_dbus.h",
-        "video/camerasource.h",
-        "video/corevideosource.h",
-        "video/netcamview.h",
-        "video/videosource.h",
-        "video/videosurface.h",
         "widget/about/aboutfriendform.h",
         "widget/categorywidget.h",
         "widget/chatformheader.h",
@@ -105,6 +149,7 @@ qt_moc(
         "widget/form/settings/verticalonlyscroller.h",
         "widget/form/settingswidget.h",
         "widget/form/tabcompleter.h",
+        "widget/friendlist/friendlistmanager.h",
         "widget/friendlistlayout.h",
         "widget/friendlistwidget.h",
         "widget/friendwidget.h",
@@ -128,10 +173,15 @@ qt_moc(
         "widget/tool/messageboxmanager.h",
         "widget/tool/profileimporter.h",
         "widget/tool/removechatdialog.h",
+        "widget/tool/roworcolumn.h",
         "widget/tool/screengrabberchooserrectitem.h",
         "widget/tool/screengrabberoverlayitem.h",
         "widget/tool/screenshotgrabber.h",
         "widget/tool/toolboxgraphicsitem.h",
+        "widget/tool/touchinput.h",
+        "widget/tool/toxuri.h",
+        "widget/video/netcamview.h",
+        "widget/video/videosurface.h",
         "widget/widget.h",
     ],
     hdrs = glob(["**/*.h"]),
@@ -279,12 +329,11 @@ cc_library(
 )
 
 cc_library(
-    name = "src",
+    name = "shared",
     srcs = [":version"] + [
         "core/coreav.cpp",
         "core/toxcall.cpp",
-        ":src_moc",
-        ":src_ui",
+        ":shared_moc",
     ] + glob(
         ["**/*.cpp"],
         exclude = [
@@ -295,8 +344,7 @@ cc_library(
             "model/ibootstraplistgenerator.cpp",
             "model/status.cpp",
             "persistence/serialize.cpp",
-            "main.cpp",
-        ],
+        ] + WIDGETS_FILES + QML_FILES,
     ),
     hdrs = glob(
         ["**/*.h"],
@@ -309,17 +357,11 @@ cc_library(
             "model/status.h",
             "model/toxclientstandards.h",
             "persistence/serialize.h",
-        ],
+        ] + WIDGETS_FILES + QML_FILES,
     ),
     copts = COPTS,
     defines = DEFINES,
     includes = ["."],
-    linkopts = select({
-        "//tools/config:freebsd": [],
-        "//tools/config:linux": [],
-        "//tools/config:osx": ["-framework IOKit"],
-        "//tools/config:windows": [],
-    }),
     tags = ["qt"],
     visibility = ["//qtox:__subpackages__"],
     deps = [
@@ -332,26 +374,75 @@ cc_library(
         "//qtox/audio",
         "//qtox/util",
         "@ffmpeg",
-        "@libqrencode",
         "@libsodium",
         "@libvpx",
         "@openal",
         "@qt//:qt_concurrent",
+        "@qt//:qt_core",
+        "@qt//:qt_gui",
+        "@qt//:qt_network",
+        "@qt//:qt_xml",
+        "@sqlcipher",
+    ] + select({
+        "//tools/config:freebsd": [],
+        "//tools/config:linux": [],
+        "//tools/config:osx": [":avfoundation"],
+        "//tools/config:windows": [],
+    }),
+)
+
+cc_library(
+    name = "src",
+    srcs = [
+        ":src_moc",
+        ":src_ui",
+    ] + glob(
+        WIDGETS_FILES,
+        exclude = [
+            "**/*.h",
+            "**/*.ui",
+            "main.cpp",
+        ],
+    ),
+    hdrs = glob(
+        WIDGETS_FILES,
+        exclude = [
+            "**/*.cpp",
+            "**/*.ui",
+        ],
+    ),
+    copts = COPTS,
+    includes = ["."],
+    linkopts = select({
+        "//tools/config:freebsd": [],
+        "//tools/config:linux": [],
+        "//tools/config:osx": ["-framework IOKit"],
+        "//tools/config:windows": [],
+    }),
+    tags = ["qt"],
+    visibility = ["//qtox:__subpackages__"],
+    deps = [
+        ":core",
+        ":exiftransform",
+        ":shared",
+        "//c-toxcore",
+        "//qtox/audio",
+        "//qtox/util",
+        "@libqrencode",
+        "@libvpx",
         "@qt//:qt_core",
         "@qt//:qt_dbus",
         "@qt//:qt_gui",
         "@qt//:qt_network",
         "@qt//:qt_svg",
         "@qt//:qt_widgets",
-        "@qt//:qt_xml",
-        "@sqlcipher",
     ] + select({
         "//tools/config:freebsd": [],
         "//tools/config:linux": [
             "@x11",
             "@xss",
         ],
-        "//tools/config:osx": [":avfoundation"],
+        "//tools/config:osx": [],
         "//tools/config:windows": [],
     }),
 )
@@ -376,4 +467,113 @@ cc_library(
         "@qt//:qt_core",
         "@qt//:qt_gui",
     ],
+)
+
+# The service and the user interface it talks to.
+[qt_repc(
+    name = "qml_rep_" + kind,
+    srcs = ["qml/toxservice.rep"],
+    tags = ["qt"],
+    type = kind,
+) for kind in [
+    "source",
+    "replica",
+]]
+
+QML_MOC_HDRS = [
+    "qml/callstate.h",
+    "qml/chatkindforeign.h",
+    "qml/chatlistmodel.h",
+    "qml/chatmodel.h",
+    "qml/friendrequestmodel.h",
+    "qml/invitemodel.h",
+    "qml/peerrole.h",
+    "qml/qmlapp.h",
+    "qml/qmlchat.h",
+    "qml/qmlmessageboxmanager.h",
+    "qml/systeminsetsforeign.h",
+    "qml/toxservice.h",
+    "qml/userstatus.h",
+    "qml/voicestate.h",
+]
+
+QML_MOCOPTS = [
+    "-Iqtox",
+    "-Iqtox/src/qml",
+    "-I$(GENDIR)/qtox/src/qml",
+    "-Iqtox/util/include",
+] + ["-D%s=1" % d for d in DEFINES]
+
+QML_DEPS = [
+    ":core",
+    ":shared",
+    "//c-toxcore",
+    "//qtox/audio",
+    "//qtox/util",
+    "@libqrencode",
+    "@qt//:qt_core",
+    "@qt//:qt_gui",
+    "@qt//:qt_network",
+    "@qt//:qt_qml",
+    "@qt//:qt_quick",
+    "@qt//:qt_quickcontrols2",
+    "@qt//:qt_remoteobjects",
+]
+
+qt_moc(
+    name = "qml_moc",
+    srcs = QML_MOC_HDRS + [
+        ":qml_rep_replica",
+        ":qml_rep_source",
+    ],
+    hdrs = glob(["**/*.h"]),
+    mocopts = QML_MOCOPTS,
+    tags = ["qt"],
+    deps = QML_DEPS,
+)
+
+qt_qml_module(
+    name = "qml_module",
+    srcs = glob(["qml/*.qml"]),
+    hdrs = QML_MOC_HDRS,
+    data = glob(["**/*.h"]) + [
+        ":qml_rep_replica",
+        ":qml_rep_source",
+    ],
+    foreign_hdrs = [
+        "model/chatkind.h",
+        "platform/systeminsets.h",
+    ],
+    mocopts = QML_MOCOPTS,
+    tags = ["qt"],
+    uri = "qTox",
+    deps = QML_DEPS,
+)
+
+cc_library(
+    name = "qml",
+    srcs = [
+        ":qml_moc",
+        ":qml_module",
+    ] + glob(
+        ["qml/*.cpp"],
+        exclude = ["qml/main.cpp"],
+    ),
+    hdrs = glob(["qml/*.h"]) + [
+        ":qml_rep_replica",
+        ":qml_rep_source",
+    ],
+    copts = COPTS + [
+        # Qt's generated type registrations include the headers by file name.
+        "-Iqtox/src/qml",
+        "-I$(GENDIR)/qtox/src/qml",
+        # Qt's repc writes "using namespace" into the headers it generates.
+        "-Wno-header-hygiene",
+    ],
+    includes = ["."],
+    tags = ["qt"],
+    visibility = ["//qtox:__subpackages__"],
+    deps = QML_DEPS,
+    # The module's types and resources register themselves when loaded.
+    alwayslink = True,
 )

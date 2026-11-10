@@ -4,8 +4,8 @@
 
 #include "src/persistence/settings.h"
 
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/paths.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
 #include <QDebug>
 #include <QSettings>

@@ -237,7 +237,11 @@ GroupPrivacyState Group::getPrivacyState() const
 
 bool Group::setGroupPassword(const QByteArray& password)
 {
-    return groupQuery.setGroupPassword(toxGroupNum, password);
+    if (!groupQuery.setGroupPassword(toxGroupNum, password)) {
+        return false;
+    }
+    emit passwordChanged(password);
+    return true;
 }
 
 bool Group::setGroupPeerLimit(uint16_t peerLimit_)

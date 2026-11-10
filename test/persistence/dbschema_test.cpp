@@ -5,9 +5,9 @@
 
 #include "dbutility/dbutility.h"
 #include "src/core/toxfile.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/db/rawdatabase.h"
 #include "src/persistence/db/upgrades/dbupgrader.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
 #include <QString>
 #include <QTemporaryFile>

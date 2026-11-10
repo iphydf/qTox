@@ -35,9 +35,9 @@ QString generateContent(const QHash<const Group*, size_t>& groupNotifications, Q
     return it.key()->getPeerList()[sender] + ": " + lastMessage;
 }
 
-QPixmap getSenderAvatar(Profile* profile, const ToxPk& sender)
+QImage getSenderAvatar(Profile* profile, const ToxPk& sender)
 {
-    return profile != nullptr ? profile->loadAvatar(sender) : QPixmap();
+    return profile != nullptr ? profile->loadAvatar(sender) : QImage();
 }
 } // namespace
 
@@ -64,26 +64,27 @@ NotificationData NotificationGenerator::friendMessageNotification(const Friend* 
 
     ret.title = f->getDisplayedName();
     ret.message = message;
-    ret.pixmap = getSenderAvatar(profile, f->getPublicKey());
+    ret.image = getSenderAvatar(profile, f->getPublicKey());
 
     return ret;
 }
 
-NotificationData NotificationGenerator::incomingCallNotification(const Friend* f)
+NotificationData NotificationGenerator::incomingCallNotification(const Friend* f, bool video)
 {
     friendNotifications[f]++;
 
     NotificationData ret;
     ret.category = "call.incoming";
 
+    const QString text = video ? tr("Incoming video call") : tr("Incoming call");
     if (notificationSettings.getNotifyHide()) {
-        ret.title = tr("Incoming call");
+        ret.title = text;
         return ret;
     }
 
     ret.title = f->getDisplayedName();
-    ret.message = tr("Incoming call");
-    ret.pixmap = getSenderAvatar(profile, f->getPublicKey());
+    ret.message = text;
+    ret.image = getSenderAvatar(profile, f->getPublicKey());
 
     return ret;
 }
@@ -104,7 +105,7 @@ NotificationData NotificationGenerator::conferenceMessageNotification(const Conf
 
     ret.title = c->getDisplayedName();
     ret.message = generateContent(conferenceNotifications, message, sender);
-    ret.pixmap = getSenderAvatar(profile, sender);
+    ret.image = getSenderAvatar(profile, sender);
 
     return ret;
 }
@@ -124,7 +125,7 @@ NotificationData NotificationGenerator::groupMessageNotification(const Group* g,
 
     ret.title = g->getDisplayedName();
     ret.message = generateContent(groupNotifications, message, sender);
-    ret.pixmap = getSenderAvatar(profile, sender);
+    ret.image = getSenderAvatar(profile, sender);
 
     return ret;
 }
@@ -146,7 +147,7 @@ NotificationData NotificationGenerator::fileTransferNotification(const Friend* f
     //: e.g. Bob - file transfer
     ret.title = tr("%1 - file transfer").arg(f->getDisplayedName());
     ret.message = filename + " (" + getHumanReadableSize(fileSize) + ")";
-    ret.pixmap = getSenderAvatar(profile, f->getPublicKey());
+    ret.image = getSenderAvatar(profile, f->getPublicKey());
 
     return ret;
 }
@@ -163,7 +164,7 @@ NotificationData NotificationGenerator::conferenceInvitationNotification(const F
 
     ret.title = tr("%1 invites you to join a conference.").arg(from->getDisplayedName());
     ret.message = "";
-    ret.pixmap = getSenderAvatar(profile, from->getPublicKey());
+    ret.image = getSenderAvatar(profile, from->getPublicKey());
 
     return ret;
 }
@@ -180,7 +181,7 @@ NotificationData NotificationGenerator::groupInvitationNotification(const Friend
 
     ret.title = tr("%1 invites you to join a group.").arg(from->getDisplayedName());
     ret.message = "";
-    ret.pixmap = getSenderAvatar(profile, from->getPublicKey());
+    ret.image = getSenderAvatar(profile, from->getPublicKey());
 
     return ret;
 }

@@ -8,10 +8,12 @@
 #include "ui_profileform.h"
 
 #include "src/core/core.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/model/profile/iprofileinfo.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/profilelocker.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/commondialogs.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/form/setpassworddialog.h"
@@ -19,8 +21,7 @@
 #include "src/widget/maskablepixmapwidget.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/croppinglabel.h"
-#include "src/widget/tool/imessageboxmanager.h"
-#include "src/widget/translator.h"
+#include "src/widget/tool/roworcolumn.h"
 #include "src/widget/widget.h"
 
 #include <QApplication>
@@ -116,6 +117,7 @@ ProfileForm::ProfileForm(IProfileInfo* profileInfo_, Settings& settings_, Style&
     // tox
     toxId = new ClickableTE();
     toxId->setFont(Style::getFont(Style::Font::Small));
+    toxId->setWordWrap(true);
     toxId->setToolTip(bodyUI->toxId->toolTip());
 
     auto* toxIdGroup = qobject_cast<QVBoxLayout*>(bodyUI->toxGroup->layout());
@@ -123,6 +125,11 @@ ProfileForm::ProfileForm(IProfileInfo* profileInfo_, Settings& settings_, Style&
     bodyUI->toxId->hide();
 
     bodyUI->qrLabel->setWordWrap(true);
+
+    // Narrow windows stack the QR code over its buttons, and the profile buttons.
+    new RowOrColumn(*bodyUI->qrGroup, *bodyUI->verticalFrame);
+    new RowOrColumn(*bodyUI->profilesButtonsLayout, *bodyUI->profilesGroup);
+    new RowOrColumn(*bodyUI->horizontalLayout_2, *bodyUI->profilesGroup);
 
     profilePicture = new MaskablePixmapWidget(this, QSize(64, 64), ":/img/avatar_mask.svg");
     profilePicture->setPixmap(QPixmap(":/img/contact_dark.svg"));
@@ -222,7 +229,7 @@ void ProfileForm::show(ContentLayout* contentLayout)
     bodyUI->dirPrLink->setText(dirPrLink);
     bodyUI->dirPrLink->setOpenExternalLinks(true);
     bodyUI->dirPrLink->setTextInteractionFlags(Qt::LinksAccessibleByMouse | Qt::TextSelectableByMouse);
-    bodyUI->dirPrLink->setMaximumSize(bodyUI->dirPrLink->sizeHint());
+    bodyUI->dirPrLink->setWordWrap(true);
     bodyUI->userName->setFocus();
     bodyUI->userName->selectAll();
 }
@@ -272,9 +279,9 @@ void ProfileForm::onStatusMessageEdited()
     profileInfo->setStatusMessage(bodyUI->statusMessage->text());
 }
 
-void ProfileForm::onSelfAvatarLoaded(const QPixmap& pic)
+void ProfileForm::onSelfAvatarLoaded(const QImage& pic)
 {
-    profilePicture->setPixmap(pic);
+    profilePicture->setPixmap(QPixmap::fromImage(pic));
 }
 
 void ProfileForm::setToxId(const ToxId& id)
@@ -283,8 +290,15 @@ void ProfileForm::setToxId(const ToxId& id)
     static const QString ToxIdColor = QStringLiteral("%1"
                                                      "<span style='color:blue'>%2</span>"
                                                      "<span style='color:gray'>%3</span>");
-    toxId->setText(
-        ToxIdColor.arg(idString.mid(0, 64)).arg(idString.mid(64, 8)).arg(idString.mid(72, 4)));
+    // Zero-width spaces let the ID wrap in narrow windows. Copying it doesn't use this text.
+    const auto wrappable = [&idString](qsizetype from, qsizetype n) {
+        QStringList chars;
+        for (const QChar c : idString.mid(from, n)) {
+            chars.append(c);
+        }
+        return chars.join(QChar(0x200B));
+    };
+    toxId->setText(ToxIdColor.arg(wrappable(0, 64)).arg(wrappable(64, 8)).arg(wrappable(72, 4)));
 
     delete qr;
     qr = new QRWidget();

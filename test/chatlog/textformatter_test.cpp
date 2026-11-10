@@ -3,7 +3,7 @@
  * Copyright © 2024-2026 The TokTok team.
  */
 
-#include "src/chatlog/textformatter.h"
+#include "src/model/textformatter.h"
 
 #include <QString>
 #include <QtTest/QtTest>

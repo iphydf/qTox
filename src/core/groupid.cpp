@@ -59,3 +59,9 @@ std::unique_ptr<ChatId> GroupId::clone() const
 {
     return std::make_unique<GroupId>(*this);
 }
+
+GroupId GroupId::fromString(const QString& id)
+{
+    const QByteArray raw = QByteArray::fromHex(id.toLatin1());
+    return raw.size() == size ? GroupId{raw} : GroupId{};
+}

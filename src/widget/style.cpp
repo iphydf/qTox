@@ -24,29 +24,6 @@
 #include <QWidget>
 
 /**
- * @enum Style::Font
- *
- * @var ExtraBig
- * @brief [SystemDefault + 2]px, bold
- *
- * @var Big
- * @brief [SystemDefault]px
- *
- * @var BigBold
- * @brief [SystemDefault]px, bold
- *
- * @var Medium
- * @brief [SystemDefault - 1]px
- *
- * @var MediumBold
- * @brief [SystemDefault - 1]px, bold
- *
- * @var Small
- * @brief [SystemDefault - 2]px
- *
- * @var SmallLight
- * @brief [SystemDefault - 2]px, light
- *
  * @var BuiltinThemePath
  * @brief Path to the theme built into the application binary
  */
@@ -57,38 +34,12 @@ const QLatin1String BuiltinThemeDefaultPath{":themes/default/"};
 const QLatin1String BuiltinThemeDarkPath{":themes/dark/"};
 
 // helper functions
-QFont appFont(int pixelSize, QFont::Weight weight)
-{
-    QFont font;
-    font.setPixelSize(pixelSize);
-    font.setWeight(weight);
-    return font;
-}
-
 QString qssifyFont(QFont font)
 {
     return QString("%1 %2px \"%3\"").arg(font.weight()).arg(font.pixelSize()).arg(font.family());
 }
 
 using MainTheme = Style::MainTheme;
-struct ThemeNameColor
-{
-    MainTheme type;
-    QString name;
-    QColor color;
-};
-const QList<ThemeNameColor> themeNameColors = {
-    {MainTheme::Light, QObject::tr("Default"), QColor()},
-    {MainTheme::Light, QObject::tr("Blue"), QColor("#004aa4")},
-    {MainTheme::Light, QObject::tr("Olive"), QColor("#97ba00")},
-    {MainTheme::Light, QObject::tr("Red"), QColor("#c23716")},
-    {MainTheme::Light, QObject::tr("Violet"), QColor("#4617b5")},
-    {MainTheme::Dark, QObject::tr("Dark"), QColor()},
-    {MainTheme::Dark, QObject::tr("Dark blue"), QColor("#00336d")},
-    {MainTheme::Dark, QObject::tr("Dark olive"), QColor("#4d5f00")},
-    {MainTheme::Dark, QObject::tr("Dark red"), QColor("#7a210d")},
-    {MainTheme::Dark, QObject::tr("Dark violet"), QColor("#280d6c")},
-};
 
 using ColorPalette = Style::ColorPalette;
 const QMap<ColorPalette, QString> aliasColors = {
@@ -114,21 +65,11 @@ const QMap<ColorPalette, QString> aliasColors = {
 };
 } // namespace
 
-int Style::defaultThemeColor(MainTheme theme)
-{
-    for (int i = 0; i < themeNameColors.size(); ++i) {
-        if (themeNameColors[i].type == theme) {
-            return i;
-        }
-    }
-    return 0;
-}
-
 QStringList Style::getThemeColorNames()
 {
     QStringList l;
 
-    for (auto t : themeNameColors) {
+    for (const auto& t : Theme::colors()) {
         l << t.name;
     }
 
@@ -214,22 +155,7 @@ QColor Style::getColor(ColorPalette entry)
 
 QFont Style::getFont(Font font)
 {
-    // fonts as defined in
-    // https://github.com/ItsDuke/Tox-UI/blob/master/UI%20GUIDELINES.md
-
-    static const int defSize = QFontInfo(QFont()).pixelSize();
-
-    static const std::map<Font, QFont> fonts = {
-        {Font::ExtraBig, appFont(defSize + 3, QFont::Bold)},
-        {Font::Big, appFont(defSize + 1, QFont::Normal)},
-        {Font::BigBold, appFont(defSize + 1, QFont::Bold)},
-        {Font::Medium, appFont(defSize, QFont::Normal)},
-        {Font::MediumBold, appFont(defSize, QFont::Bold)},
-        {Font::Small, appFont(defSize - 1, QFont::Normal)},
-        {Font::SmallLight, appFont(defSize - 1, QFont::Light)},
-    };
-
-    return fonts.at(font);
+    return Theme::font(font);
 }
 
 QString Style::resolve(const QString& filename, int themeColor, const QFont& baseFont)
@@ -341,10 +267,10 @@ void Style::setThemeColor(int themeColor, int color)
     dictColor.clear();
     initPalette(themeColor);
     initDictColor();
-    if (color < 0 || color >= themeNameColors.size()) {
+    if (color < 0 || color >= Theme::colors().size()) {
         setThemeColor(QColor());
     } else {
-        const auto& themeName = themeNameColors[color];
+        const auto& themeName = Theme::colors()[color];
 
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
         switch (themeName.type) {
@@ -448,7 +374,7 @@ void Style::initDictColor()
 
 QString Style::getThemePath(int themeColor)
 {
-    if (themeNameColors[themeColor].type == MainTheme::Dark) {
+    if (Theme::colors()[themeColor].type == MainTheme::Dark) {
         return BuiltinThemeDarkPath;
     }
 

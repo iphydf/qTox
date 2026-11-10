@@ -59,3 +59,9 @@ std::unique_ptr<ChatId> ConferenceId::clone() const
 {
     return std::make_unique<ConferenceId>(*this);
 }
+
+ConferenceId ConferenceId::fromString(const QString& id)
+{
+    const QByteArray raw = QByteArray::fromHex(id.toLatin1());
+    return raw.size() == size ? ConferenceId{raw} : ConferenceId{};
+}

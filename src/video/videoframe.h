@@ -175,7 +175,7 @@ private:
     };
 
 private:
-    static FrameBufferKey getFrameKey(const QSize& frameSize, int pixFmt, int linesize);
+    static FrameBufferKey getFrameKey(const QSize& frameSize, int pixFmt, const int* linesizes);
     static FrameBufferKey getFrameKey(const QSize& frameSize, int pixFmt, bool frameAligned);
 
     AVFrame* retrieveAVFrame(const QSize& dimensions, int pixelFormat, bool requireAligned) const;

@@ -13,10 +13,11 @@
 #include "src/ipc.h"
 #include "src/model/conferenceinvite.h"
 #include "src/model/groupinvite.h"
+#include "src/model/imessageboxmanager.h"
+#include "src/model/session.h"
 #include "src/model/status.h"
 #include "src/persistence/profile.h"
 #include "src/widget/style.h"
-#include "src/widget/tool/imessageboxmanager.h"
 #include "src/widget/widget.h"
 #include "video/camerasource.h"
 #include "widget/loginscreen.h"
@@ -52,7 +53,6 @@ Q_DECLARE_OPAQUE_POINTER(ToxAV*)
 Nexus::Nexus(Settings& settings_, IMessageBoxManager& messageBoxManager_,
              CameraSource& cameraSource_, IPC& ipc_, QObject* parent)
     : QObject(parent)
-    , profile{nullptr}
     , settings{settings_}
     , widget{nullptr}
     , cameraSource{cameraSource_}
@@ -66,10 +66,8 @@ Nexus::Nexus(Settings& settings_, IMessageBoxManager& messageBoxManager_,
 Nexus::~Nexus()
 {
     widget = nullptr;
-    if (profile != nullptr) {
-        profile->save();
-        profile = nullptr;
-    }
+    // Saves the profile.
+    session = nullptr;
     emit saveGlobal();
 #ifdef Q_OS_MAC
     delete globalMenuBar;
@@ -158,10 +156,10 @@ int Nexus::showLogin(const QString& profileName)
 
     // Delete at the end of the function, but get ready to set a new one.
     // We need to keep it alive for a while longer because it may be used on shutdown.
-    auto oldProfile = std::move(profile);
+    auto oldSession = std::move(session);
     // Finish saving the current profile if needed.
-    if (oldProfile != nullptr) {
-        oldProfile->save();
+    if (oldSession != nullptr) {
+        oldSession->getProfile().save();
     }
 
     LoginScreen loginScreen{settings.getPaths(), *style, settings.getThemeColor(), profileName};
@@ -169,34 +167,14 @@ int Nexus::showLogin(const QString& profileName)
 
     QCoreApplication::sendPostedEvents(nullptr, QEvent::DeferredDelete);
 
-    // TODO(kriby): Move core out of profile
-    // This is awkward because the core is in the profile
-    // The connection order ensures profile will be ready for bootstrap for now
-    connect(this, &Nexus::currentProfileChanged, this, &Nexus::bootstrapWithProfile);
     const int returnval = loginScreen.exec();
     if (returnval == QDialog::Rejected) {
         // Kriby: This will terminate the main application loop, necessary until we refactor
         // away the split startup/return to login behavior.
         qApp->quit();
     }
-    disconnect(this, &Nexus::currentProfileChanged, this, &Nexus::bootstrapWithProfile);
 
     return returnval;
-}
-
-void Nexus::bootstrapWithProfile(Profile* p)
-{
-    // kriby: This is a hack until a proper controller is written
-
-    // We take ownership of the profile here.
-    profile = std::unique_ptr<Profile>(p);
-
-    if (profile != nullptr) {
-        audioControl = std::unique_ptr<IAudioControl>(Audio::makeAudio(settings));
-        assert(audioControl != nullptr);
-        profile->getCore().getAv()->setAudio(*audioControl);
-        start();
-    }
 }
 
 void Nexus::connectLoginScreen(const LoginScreen& loginScreen)
@@ -224,11 +202,11 @@ void Nexus::connectLoginScreen(const LoginScreen& loginScreen)
 void Nexus::showMainGUI()
 {
     // TODO(kriby): Rewrite as view-model connect sequence only, add to a controller class object
-    assert(profile);
+    assert(session);
+    Profile* const profile = &session->getProfile();
 
     // Create GUI
-    widget =
-        std::make_unique<Widget>(*profile, *audioControl, cameraSource, settings, *style, ipc, *this);
+    widget = std::make_unique<Widget>(*session, cameraSource, settings, *style, ipc, *this);
 
     // Start GUI
     widget->init();
@@ -240,17 +218,17 @@ void Nexus::showMainGUI()
     widget->setEnabled(false);
 
     // Connections
-    connect(profile.get(), &Profile::selfAvatarChanged, widget.get(), &Widget::onSelfAvatarLoaded);
+    connect(profile, &Profile::selfAvatarChanged, widget.get(), &Widget::onSelfAvatarLoaded);
 
-    connect(profile.get(), &Profile::coreChanged, widget.get(), &Widget::onCoreChanged);
+    connect(profile, &Profile::coreChanged, widget.get(), &Widget::onCoreChanged);
 
-    connect(profile.get(), &Profile::failedToStart, widget.get(), &Widget::onFailedToStartCore,
+    connect(profile, &Profile::failedToStart, widget.get(), &Widget::onFailedToStartCore,
             Qt::BlockingQueuedConnection);
 
-    connect(profile.get(), &Profile::badProxy, widget.get(), &Widget::onBadProxyCore,
+    connect(profile, &Profile::badProxy, widget.get(), &Widget::onBadProxyCore,
             Qt::BlockingQueuedConnection);
 
-    profile->startCore();
+    session->start();
 
     widget->setEnabled(true);
 }
@@ -261,7 +239,7 @@ void Nexus::showMainGUI()
  */
 Profile* Nexus::getProfile()
 {
-    return profile.get();
+    return session != nullptr ? &session->getProfile() : nullptr;
 }
 
 /**
@@ -271,7 +249,7 @@ Profile* Nexus::getProfile()
  */
 void Nexus::onCreateNewProfile(const QString& name, const QString& pass)
 {
-    setProfile(Profile::createProfile(name, pass, settings, parser, cameraSource, messageBoxManager));
+    logIn(Session::create(name, pass, settings, cameraSource, messageBoxManager, parser));
     parser = nullptr; // only apply cmdline proxy settings once
 }
 
@@ -280,24 +258,21 @@ void Nexus::onCreateNewProfile(const QString& name, const QString& pass)
  */
 void Nexus::onLoadProfile(const QString& name, const QString& pass)
 {
-    setProfile(Profile::loadProfile(name, pass, settings, parser, cameraSource, messageBoxManager));
+    logIn(Session::load(name, pass, settings, cameraSource, messageBoxManager, parser));
     parser = nullptr; // only apply cmdline proxy settings once
 }
 /**
- * Changes the loaded profile and notifies listeners.
- * @param p
+ * Shows the main window for a session, or tells the login screen what went wrong.
  */
-void Nexus::setProfile(std::unique_ptr<Profile> p)
+void Nexus::logIn(Session::LoginResult result)
 {
-    if (p == nullptr) {
-        emit profileLoadFailed();
-        // Warnings are issued during respective createNew/load calls
+    if (result.session == nullptr) {
+        emit profileLoadFailed(result.error);
         return;
     }
     emit profileLoaded();
-
-    // Pushing Profile ownership to the receiver of this signal.
-    emit currentProfileChanged(p.release());
+    session = std::move(result.session);
+    start();
 }
 
 void Nexus::setParser(QCommandLineParser* parser_)

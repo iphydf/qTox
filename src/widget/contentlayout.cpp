@@ -8,8 +8,11 @@
 #include "style.h"
 
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 
+#include <QCoreApplication>
 #include <QFrame>
+#include <QPushButton>
 #include <QStyle>
 #include <QStyleFactory>
 
@@ -53,14 +56,17 @@ ContentLayout::ContentLayout(Settings& settings_, Style& style_, QWidget* parent
 
 ContentLayout::~ContentLayout()
 {
+    Translator::unregister(this);
     clear();
 
     mainHead->deleteLater();
+    backButton->deleteLater();
     mainContent->deleteLater();
 }
 
 void ContentLayout::reloadTheme()
 {
+    backButton->setStyleSheet(style.getStylesheet("chatForm/buttons.qss", settings));
 #ifndef Q_OS_MAC
     mainHead->setStyleSheet(style.getStylesheet("settings/mainHead.qss", settings));
     mainContent->setStyleSheet(style.getStylesheet("window/general.qss", settings));
@@ -95,6 +101,18 @@ void ContentLayout::init()
     mainHead->layout()->setSpacing(0);
     mainHead->setMouseTracking(true);
 
+    backButton = new QPushButton();
+    backButton->setObjectName("backButton");
+    backButton->setProperty("state", "green");
+    backButton->hide();
+    const auto retranslate = [this] {
+        const QString back = QCoreApplication::translate("ContentLayout", "Back");
+        backButton->setToolTip(back);
+        backButton->setAccessibleName(back);
+    };
+    retranslate();
+    Translator::registerHandler(retranslate, this);
+
     mainHLine.setFrameShape(QFrame::HLine);
     mainHLine.setFrameShadow(QFrame::Plain);
     QPalette palette = mainHLine.palette();
@@ -103,7 +121,8 @@ void ContentLayout::init()
 
     mainContent = new QWidget();
     mainContent->setLayout(new QVBoxLayout);
-    mainContent->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
+    // Shrinks below its size hint: a chat's grows with its messages.
+    mainContent->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
     if (QStyleFactory::keys().contains(settings.getStyle()) && settings.getStyle() != "None") {
         QStyle* qstyle = QStyleFactory::create(settings.getStyle());
@@ -122,7 +141,11 @@ void ContentLayout::init()
     mainHLineLayout.addWidget(&mainHLine);
     mainHLineLayout.addSpacing(5);
 
-    addWidget(mainHead);
+    headLayout.setContentsMargins(0, 0, 0, 0);
+    headLayout.setSpacing(0);
+    headLayout.addWidget(backButton, 0, Qt::AlignVCenter);
+    headLayout.addWidget(mainHead);
+    addLayout(&headLayout);
     addLayout(&mainHLineLayout);
     addWidget(mainContent);
 }

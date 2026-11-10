@@ -6,7 +6,6 @@
 #include "aboutfriend.h"
 
 #include "src/model/friend.h"
-#include "src/nexus.h"
 #include "src/persistence/ifriendsettings.h"
 #include "src/persistence/profile.h"
 
@@ -52,7 +51,7 @@ ToxPk AboutFriend::getPublicKey() const
 QPixmap AboutFriend::getAvatar() const
 {
     const ToxPk pk = f->getPublicKey();
-    const QPixmap avatar = profile.loadAvatar(pk);
+    const QPixmap avatar = QPixmap::fromImage(profile.loadAvatar(pk));
     return avatar.isNull() ? QPixmap(QStringLiteral(":/img/contact_dark.svg")) : avatar;
 }
 

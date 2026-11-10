@@ -7,17 +7,18 @@
 
 #include "src/core/toxlogger.h"
 #include "src/ipc.h"
-#include "src/net/toxuri.h"
 #include "src/net/updatecheck.h"
 #include "src/nexus.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
-#include "src/persistence/toxsave.h"
 #include "src/platform/posixsignalnotifier.h"
+#include "src/translator.h"
 #include "src/version.h"
 #include "src/video/camerasource.h"
 #include "src/widget/tool/messageboxmanager.h"
-#include "src/widget/translator.h"
+#include "src/widget/tool/touchinput.h"
+#include "src/widget/tool/toxsave.h"
+#include "src/widget/tool/toxuri.h"
 #include "src/widget/widget.h"
 
 #include <QApplication>
@@ -32,7 +33,30 @@
 #include <ctime>
 #include <memory>
 
+#ifdef Q_OS_ANDROID
+#include <android/log.h>
+#endif
+
 namespace {
+#ifdef Q_OS_ANDROID
+android_LogPriority androidLogPriority(QtMsgType type)
+{
+    switch (type) {
+    case QtDebugMsg:
+        return ANDROID_LOG_DEBUG;
+    case QtInfoMsg:
+        return ANDROID_LOG_INFO;
+    case QtWarningMsg:
+        return ANDROID_LOG_WARN;
+    case QtCriticalMsg:
+        return ANDROID_LOG_ERROR;
+    case QtFatalMsg:
+        return ANDROID_LOG_FATAL;
+    }
+    return ANDROID_LOG_DEFAULT;
+}
+#endif
+
 // logMessageHandler and associated data must be static due to qInstallMessageHandler's
 // inability to register a void* to get back to a class
 #ifdef LOG_TO_FILE
@@ -186,7 +210,12 @@ void logMessageHandler(QtMsgType type, const QMessageLogContext& ctxt, const QSt
     }
 
     const QByteArray LogMsgBytes = logMsg.toUtf8();
+#ifdef Q_OS_ANDROID
+    // Android drops stderr.
+    __android_log_write(androidLogPriority(type), "qTox", LogMsgBytes.constData());
+#else
     fwrite(LogMsgBytes.constData(), 1, LogMsgBytes.size(), stderr);
+#endif
 
 #ifdef LOG_TO_FILE
     const QMutexLocker<QMutex> locker{logBufferMutex};
@@ -274,6 +303,8 @@ int AppManager::startGui(QCommandLineParser& parser)
     connect(settings.get(), &Settings::logToFileChanged, this, applyLogToFile);
 #endif
 
+    qapp->installEventFilter(new TouchInput(qapp.get()));
+
     // Windows platform plugins DLL hell fix
     QCoreApplication::addLibraryPath(QCoreApplication::applicationDirPath());
     QApplication::addLibraryPath("platforms");
@@ -350,27 +381,24 @@ int AppManager::startGui(QCommandLineParser& parser)
     // Autologin
     // TODO (kriby): Shift responsibility of linking views to model objects from nexus
     // Further: generate view instances separately (loginScreen, mainGUI, audio)
-    Profile* profile = nullptr;
     if (autoLogin && Profile::exists(profileName, settings->getPaths())
         && !Profile::isEncrypted(profileName, settings->getPaths())) {
-        // Release ownership temporarily because we're calling Qt slot bootstrapWithProfile below.
-        profile = Profile::loadProfile(profileName, QString(), *settings, &parser, *cameraSource,
-                                       *messageBoxManager)
-                      .release();
-        if (profile == nullptr) {
+        Session::LoginResult login = Session::load(profileName, QString(), *settings, *cameraSource,
+                                                   *messageBoxManager, &parser);
+        if (login.session != nullptr) {
+            nexus->logIn(std::move(login));
+        } else {
             QMessageBox::information(nullptr, tr("Error"), tr("Failed to load profile automatically."));
         }
     }
-    if (profile != nullptr) {
-        nexus->bootstrapWithProfile(profile);
-    } else {
+    if (nexus->getProfile() == nullptr) {
         nexus->setParser(&parser);
         const int returnval = nexus->showLogin(profileName);
         if (returnval == QDialog::Rejected) {
             return -1;
         }
-        profile = nexus->getProfile();
     }
+    Profile* profile = nexus->getProfile();
 
     uriDialog = std::make_unique<ToxURIDialog>(nullptr, profile->getCore(), *messageBoxManager);
 

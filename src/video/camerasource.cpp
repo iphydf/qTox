@@ -418,8 +418,19 @@ void CameraSource::openDevice()
     codecId = cctxOrig->codec_id;
 #else
     // Get the stream's codec's parameters and find a matching decoder
-    AVCodecParameters* cparams = device->context->streams[videoStreamIndex]->codecpar;
+    AVStream* const videoStream = device->context->streams[videoStreamIndex];
+    AVCodecParameters* cparams = videoStream->codecpar;
     codecId = cparams->codec_id;
+#if LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(60, 31, 102)
+    const AVPacketSideData* const displayMatrix =
+        av_packet_side_data_get(cparams->coded_side_data, cparams->nb_coded_side_data,
+                                AV_PKT_DATA_DISPLAYMATRIX);
+    orientation = frameOrientation(
+        displayMatrix != nullptr ? reinterpret_cast<const int32_t*>(displayMatrix->data) : nullptr);
+#else
+    orientation = frameOrientation(reinterpret_cast<const int32_t*>(
+        av_stream_get_side_data(videoStream, AV_PKT_DATA_DISPLAYMATRIX, nullptr)));
+#endif
 #endif
     const AVCodec* codec = avcodec_find_decoder(codecId);
     if (codec == nullptr) {
@@ -466,7 +477,8 @@ void CameraSource::openDevice()
     while (!streamFuture.isRunning())
         QThread::yieldCurrentThread();
 
-    qDebug() << "Opened device" << deviceName << "with codec" << codec->name;
+    qDebug() << "Opened device" << deviceName << "with codec" << codec->name << "turning it"
+             << orientation.quarterTurns << "quarter turns, mirrored:" << orientation.mirror;
     emit deviceOpened();
 }
 
@@ -541,7 +553,14 @@ void CameraSource::stream()
         if (readyToReceive) {
             AVFrame* frame = av_frame_alloc();
             if (frame != nullptr && avcodec_receive_frame(cctx, frame) == 0) {
-                emit frameAvailable(VideoFrame::fromAVFrame(id, frame));
+                if (!orientation.isUpright()) {
+                    AVFrame* const upright = orientFrame(*frame, orientation);
+                    av_frame_free(&frame);
+                    frame = upright;
+                }
+                if (frame != nullptr) {
+                    emit frameAvailable(VideoFrame::fromAVFrame(id, frame));
+                }
             } else {
                 av_frame_free(&frame);
             }

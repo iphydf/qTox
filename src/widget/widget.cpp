@@ -10,10 +10,12 @@
 #include <QDebug>
 #include <QDesktopServices>
 #include <QInputDialog>
+#include <QKeyEvent>
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QMouseEvent>
 #include <QPainter>
+#include <QPushButton>
 #include <QShortcut>
 #include <QString>
 #include <QSvgRenderer>
@@ -48,26 +50,38 @@
 #include "src/friendlist.h"
 #include "src/grouplist.h"
 #include "src/ipc.h"
+#include "src/model/callmanager.h"
 #include "src/model/chathistory.h"
+#include "src/model/chatkind.h"
 #include "src/model/chatmanager.h"
 #include "src/model/chatroom/conferenceroom.h"
 #include "src/model/chatroom/friendchatroom.h"
 #include "src/model/chatroom/grouproom.h"
 #include "src/model/conference.h"
 #include "src/model/conferenceinvite.h"
+#include "src/model/destination.h"
+#include "src/model/filemanager.h"
 #include "src/model/friend.h"
+#include "src/model/friendrequestmanager.h"
 #include "src/model/group.h"
 #include "src/model/groupinvite.h"
 #include "src/model/groupmessagedispatcher.h"
+#include "src/model/invitemanager.h"
 #include "src/model/profile/profileinfo.h"
+#include "src/model/session.h"
 #include "src/model/status.h"
 #include "src/net/updatecheck.h"
 #include "src/nexus.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
 #include "src/persistence/smileypack.h"
-#include "src/persistence/toxsave.h"
+#include "src/platform/androidintents.h"
+#include "src/platform/androidnotifier.h"
+#include "src/platform/keepalive.h"
+#include "src/platform/movetoback.h"
+#include "src/platform/systeminsets.h"
 #include "src/platform/timer.h"
+#include "src/translator.h"
 #include "src/widget/contentdialogmanager.h"
 #include "src/widget/form/addfriendform.h"
 #include "src/widget/form/chatform.h"
@@ -78,23 +92,12 @@
 #include "src/widget/form/settingswidget.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/messageboxmanager.h"
-#include "src/widget/translator.h"
+#include "src/widget/tool/toxsave.h"
 #include "tool/removechatdialog.h"
 
 namespace {
-
-/**
- * @brief Dangerous way to find out if a path is writable.
- * @param filepath Path to file which should be deleted.
- * @return True, if file writeable, false otherwise.
- */
-bool tryRemoveFile(const QString& filepath)
-{
-    QFile tmp(filepath);
-    const bool writable = tmp.open(QIODevice::WriteOnly);
-    tmp.remove();
-    return writable;
-}
+// The old minimum window width: from here up, the window looks as it always did.
+constexpr int twoPaneMinWidth = 775;
 
 const QString activateHandlerKey("activate");
 const QString saveHandlerKey("save");
@@ -110,58 +113,41 @@ bool Widget::toxActivateEventHandler(const QByteArray& data, void* userData)
     return true;
 }
 
-void Widget::acceptFileTransfer(const ToxFile& file, const QString& path)
-{
-    QString filepath;
-    int number = 0;
-
-    const QString suffix = QFileInfo(file.fileName).completeSuffix();
-    const QString base = QFileInfo(file.fileName).baseName();
-
-    do {
-        filepath = QString("%1/%2%3.%4")
-                       .arg(path, base,
-                            number > 0 ? QString(" (%1)").arg(QString::number(number)) : QString(),
-                            suffix);
-        ++number;
-    } while (QFileInfo(filepath).exists());
-
-    // Do not automatically accept the file-transfer if the path is not writable.
-    // The user can still accept it manually.
-    if (tryRemoveFile(filepath)) {
-        CoreFile* coreFile = core->getCoreFile();
-        coreFile->acceptFileRecvRequest(file.friendId, file.fileNum, filepath);
-    } else {
-        qWarning() << "Cannot write to" << filepath;
-    }
-}
-
 Widget* Widget::instance{nullptr};
 
-Widget::Widget(Profile& profile_, IAudioControl& audio_, CameraSource& cameraSource_,
-               Settings& settings_, Style& style_, IPC& ipc_, Nexus& nexus_, QWidget* parent)
+Widget::Widget(Session& session, CameraSource& cameraSource_, Settings& settings_, Style& style_,
+               IPC& ipc_, Nexus& nexus_, QWidget* parent)
     : QMainWindow(parent)
-    , profile{profile_}
+    , profile{session.getProfile()}
     , trayMenu{nullptr}
     , ui(new Ui::MainWindow)
     , activeChatroomWidget{nullptr}
     , eventFlag(false)
     , eventIcon(false)
-    , audio(audio_)
+    , audio(session.getAudio())
     , settings(settings_)
     , smileyPack(new SmileyPack(settings))
     , documentCache(new DocumentCache(*smileyPack, settings))
     , cameraSource{cameraSource_}
     , style{style_}
     , messageBoxManager(new MessageBoxManager(this))
-    , friendList(new FriendList())
-    , conferenceList(new ConferenceList())
-    , groupList(new GroupList())
+    , friendList(&session.getFriendList())
+    , conferenceList(&session.getConferenceList())
+    , groupList(&session.getGroupList())
     , contentDialogManager(new ContentDialogManager(*friendList))
     , ipc{ipc_}
     , toxSave(new ToxSave{settings, ipc, this})
     , nexus{nexus_}
 {
+    chatManager = &session.getChatManager();
+    callManager = &session.getCallManager();
+    inviteManager = &session.getInviteManager();
+    fileManager = &session.getFileManager();
+    friendRequestManager = &session.getFriendRequestManager();
+    notificationGenerator = &session.getNotificationGenerator();
+    profileInfo = &session.getProfileInfo();
+    session.setDialogsManager(contentDialogManager.get());
+
     installEventFilter(this);
     const QString locale = settings.getTranslationInUse();
     Translator::translate(locale);
@@ -169,6 +155,8 @@ Widget::Widget(Profile& profile_, IAudioControl& audio_, CameraSource& cameraSou
 
 void Widget::init()
 {
+    keepAlive = std::make_unique<Platform::KeepAlive>();
+
     ui->setupUi(this);
 
     const QIcon themeIcon = QIcon::fromTheme("qtox");
@@ -178,10 +166,28 @@ void Widget::init()
 
     // Initialised once and early. Notifications can happen through system backends
     // before we initialise the tray icon (if that even ever happens).
-    notifier = std::make_unique<DesktopNotify>(settings, this);
-    notificationGenerator = std::make_unique<NotificationGenerator>(settings, &profile);
-    connect(notifier.get(), &DesktopNotify::notificationClosed, notificationGenerator.get(),
-            &NotificationGenerator::onNotificationActivated);
+#ifdef Q_OS_ANDROID
+    notifier = std::make_unique<AndroidNotifier>();
+#else
+    auto desktop = std::make_unique<DesktopNotify>(settings, nullptr);
+    desktopNotify = desktop.get();
+    notifier = std::move(desktop);
+#endif
+    notifier->showStatus(tr("Offline"));
+    notifications =
+        std::make_unique<Notifications>(*notifier, settings, *notificationGenerator, *chatManager,
+                                        *callManager, *inviteManager, *friendRequestManager,
+                                        *fileManager, *friendList, *conferenceList, *groupList,
+                                        [this](const Chat& chat) { return isInFront(chat); });
+    // Tapped notifications.
+    connect(new AndroidIntents(this), &AndroidIntents::openRequested, this, &Widget::openDestination);
+    connect(notifications.get(), &Notifications::answered, this, [this](const Chat& chat) {
+        // Answering read it.
+        if (GenericChatroomWidget* widget = chatroomWidget(chat)) {
+            widget->resetEventFlags();
+            widget->updateStatusLight();
+        }
+    });
 
     timer = new QTimer();
     timer->start(1000);
@@ -274,14 +280,22 @@ void Widget::init()
 
     core = &profile.getCore();
 
-    chatManager = std::make_unique<ChatManager>(profile, settings, *friendList, *conferenceList,
-                                                *groupList, contentDialogManager.get(), this);
-    connect(chatManager.get(), &ChatManager::friendAdded, this, &Widget::onFriendModelAdded);
-    connect(chatManager.get(), &ChatManager::conferenceAdded, this, &Widget::onConferenceModelAdded);
-    connect(chatManager.get(), &ChatManager::conferenceNeedsName, this, &Widget::onConferenceNeedsName);
-    connect(chatManager.get(), &ChatManager::groupAdded, this, &Widget::onGroupModelAdded);
-    connect(chatManager.get(), &ChatManager::groupRemoved, this,
-            [this](const GroupId& groupId) { removeGroup(groupList->findGroup(groupId), true); });
+    connect(chatManager, &ChatManager::messageReceived, this, &Widget::onMessageReceived);
+    connect(fileManager, &FileManager::offered, this,
+            [this](const ToxFile& file, const ToxPk& friendPk) {
+                std::ignore = file;
+                newFriendMessageAlert(friendPk, true);
+            });
+    connect(inviteManager, &InviteManager::added, this, &Widget::onInviteAdded);
+    connect(inviteManager, &InviteManager::received, this, [this](const ToxPk& friendPk) {
+        updateFriendActivity(*friendList->findFriend(friendPk));
+    });
+    connect(chatManager, &ChatManager::friendAdded, this, &Widget::onFriendModelAdded);
+    connect(chatManager, &ChatManager::conferenceAdded, this, &Widget::onConferenceModelAdded);
+    connect(chatManager, &ChatManager::conferenceNeedsName, this, &Widget::onConferenceNeedsName);
+    connect(chatManager, &ChatManager::groupAdded, this, &Widget::onGroupModelAdded);
+    connect(chatManager, &ChatManager::groupRemoved, this,
+            [this](const GroupId& groupId) { removeChat(groupList->findGroup(groupId), true); });
 
     chatListWidget = new FriendListWidget(*core, this, settings, style, *messageBoxManager,
                                           *friendList, *conferenceList, *groupList, profile,
@@ -314,6 +328,7 @@ void Widget::init()
 
     CoreFile* coreFile = core->getCoreFile();
     filesForm = new FilesForm(*coreFile, settings, style, *messageBoxManager, *friendList);
+    connect(fileManager, &FileManager::updated, filesForm, &FilesForm::onFileUpdated);
     addFriendForm = new AddFriendForm(core->getSelfId(), settings, style, *messageBoxManager, *core);
     conferenceInviteForm = new ConferenceInviteForm(settings, *core);
     groupInviteForm = new GroupInviteForm(settings, *core);
@@ -326,7 +341,7 @@ void Widget::init()
 
     debugWidget = new DebugWidget(settings.getPaths(), style, this);
 
-    profileInfo = new ProfileInfo(core, &profile, settings, nexus);
+    connect(profileInfo, &ProfileInfo::loginRequested, &nexus, &Nexus::showLogin);
     profileForm = new ProfileForm(profileInfo, settings, style, *messageBoxManager);
 
     ui->debugButton->setVisible(settings.getEnableDebug());
@@ -336,7 +351,6 @@ void Widget::init()
 
     connect(&profile, &Profile::selfAvatarChanged, profileForm, &ProfileForm::onSelfAvatarLoaded);
 
-    connect(coreFile, &CoreFile::fileReceiveRequested, this, &Widget::onFileReceiveRequested);
     connect(ui->addButton, &QPushButton::clicked, this, &Widget::onAddClicked);
     connect(ui->conferenceButton, &QPushButton::clicked, this, &Widget::onConferenceClicked);
     connect(ui->groupButton, &QPushButton::clicked, this, &Widget::onGroupClicked);
@@ -358,49 +372,6 @@ void Widget::init()
     connect(filterGroup, &QActionGroup::triggered, this, &Widget::searchChats);
     connect(filterDisplayGroup, &QActionGroup::triggered, this, &Widget::changeDisplayMode);
     connect(ui->friendList, &QWidget::customContextMenuRequested, this, &Widget::friendListContextMenu);
-
-    // NOTE: Order of these signals as well as the use of QueuedConnection is important!
-    // Qt::AutoConnection, signals emitted from the same thread as Widget will
-    // be serviced before other signals. This is a problem when we have tight
-    // calls between file control and file info callbacks.
-    //
-    // File info callbacks are called from the core thread and will use
-    // QueuedConnection by default, our control path can easily end up on the
-    // same thread as widget. This can result in the following behavior if we
-    // are not careful
-    //
-    // * File data is received
-    // * User presses pause at the same time
-    // * Pause waits for data receive callback to complete (and emit fileTransferInfo)
-    // * Pause is executed and emits fileTransferPaused
-    // * Pause signal is handled by Qt::DirectConnection
-    // * fileTransferInfo signal is handled after by Qt::QueuedConnection
-    //
-    // This results in stale file state! In these conditions if we are not
-    // careful toxcore will think we are paused but our UI will think we are
-    // resumed, because the last signal they got was a transmitting file info
-    // signal!
-    connect(coreFile, &CoreFile::fileTransferInfo, this, &Widget::dispatchFile, Qt::QueuedConnection);
-    connect(coreFile, &CoreFile::fileSendStarted, this, &Widget::dispatchFile, Qt::QueuedConnection);
-    connect(coreFile, &CoreFile::fileReceiveRequested, this, &Widget::dispatchFile,
-            Qt::QueuedConnection);
-    connect(coreFile, &CoreFile::fileTransferAccepted, this, &Widget::dispatchFile,
-            Qt::QueuedConnection);
-    connect(coreFile, &CoreFile::fileTransferCancelled, this, &Widget::dispatchFile,
-            Qt::QueuedConnection);
-    connect(coreFile, &CoreFile::fileTransferFinished, this, &Widget::dispatchFile,
-            Qt::QueuedConnection);
-    connect(coreFile, &CoreFile::fileTransferPaused, this, &Widget::dispatchFile, Qt::QueuedConnection);
-    connect(coreFile, &CoreFile::fileTransferRemotePausedUnpaused, this,
-            &Widget::dispatchFileWithBool, Qt::QueuedConnection);
-    connect(coreFile, &CoreFile::fileTransferBrokenUnbroken, this, &Widget::dispatchFileWithBool,
-            Qt::QueuedConnection);
-    connect(coreFile, &CoreFile::fileSendFailed, this, &Widget::dispatchFileSendFailed,
-            Qt::QueuedConnection);
-    // NOTE: We intentionally do not connect the fileUploadFinished and fileDownloadFinished signals
-    // because they are duplicates of fileTransferFinished.
-    // NOTE: We don't hook up the fileNameChanged signal since it is only emitted before a fileReceiveRequest.
-    // We get the initial request with the sanitized name so there is no work for us to do
 
     // keyboard shortcuts
     auto* const quitShortcut = new QShortcut(Qt::CTRL | Qt::Key_Q, this);
@@ -488,6 +459,16 @@ void Widget::init()
     connect(this, &Widget::windowStateChanged, &nexus, &Nexus::onWindowStateChanged);
 #endif
 
+    // The on-screen keyboard pushes the window's content up instead of covering it. Qt keeps the
+    // window's own margins clear of the system bars.
+    auto* systemInsets = new SystemInsets(this);
+    connect(systemInsets, &SystemInsets::changed, this, [this, systemInsets] {
+        ui->centralwidget->setContentsMargins(qRound(systemInsets->getLeft()),
+                                              qRound(systemInsets->getTop()),
+                                              qRound(systemInsets->getRight()),
+                                              qRound(systemInsets->getBottom()));
+    });
+
     contentLayout = nullptr;
     onSeparateWindowChanged(settings.getSeparateWindow(), false);
 
@@ -503,7 +484,7 @@ void Widget::init()
     ui->debugButton->setCheckable(true);
 
     if (contentLayout != nullptr) {
-        onAddClicked();
+        resetContent();
     }
 
     // restore window state
@@ -520,11 +501,21 @@ void Widget::init()
 
     connect(addFriendForm, &AddFriendForm::friendRequested, this, &Widget::friendRequestsUpdate);
     connect(addFriendForm, &AddFriendForm::friendRequestsSeen, this, &Widget::friendRequestsUpdate);
-    connect(addFriendForm, &AddFriendForm::friendRequestAccepted, this, &Widget::friendRequestAccepted);
+    connect(addFriendForm, &AddFriendForm::friendRequestAccepted, friendRequestManager,
+            &FriendRequestManager::accept);
+    connect(addFriendForm, &AddFriendForm::friendRequestRejected, friendRequestManager,
+            &FriendRequestManager::reject);
+    connect(friendRequestManager, &FriendRequestManager::received, this,
+            &Widget::onFriendRequestReceived);
+    connect(friendRequestManager, &FriendRequestManager::removed, this, &Widget::friendRequestsUpdate);
     connect(conferenceInviteForm, &ConferenceInviteForm::conferenceInvitesSeen, this,
             &Widget::conferenceInvitesClear);
     connect(conferenceInviteForm, &ConferenceInviteForm::conferenceInviteAccepted, this,
-            &Widget::onConferenceInviteAccepted);
+            [this](const ConferenceInvite& invite) { inviteManager->accept(invite); });
+    connect(conferenceInviteForm, &ConferenceInviteForm::conferenceInviteRejected, this,
+            [this](const ConferenceInvite& invite) { inviteManager->reject(invite); });
+    connect(groupInviteForm, &GroupInviteForm::groupInviteRejected, this,
+            [this](const GroupInvite& invite) { inviteManager->reject(invite); });
     connect(groupInviteForm, &GroupInviteForm::groupInvitesSeen, this, &Widget::groupInvitesClear);
     connect(groupInviteForm, &GroupInviteForm::groupInviteAccepted, this,
             &Widget::onGroupInviteAccepted);
@@ -661,15 +652,15 @@ Widget::~Widget()
     }
 
     for (Conference* c : conferenceList->getAllConferences()) {
-        removeConference(c, true);
+        removeChat(c, true);
     }
 
     for (Group* g : groupList->getAllGroups()) {
-        removeGroup(g, true);
+        removeChat(g, true);
     }
 
     for (Friend* f : friendList->getAllFriends()) {
-        removeFriend(f, true);
+        removeChat(f, true);
     }
 
     for (auto* form : chatForms) {
@@ -677,7 +668,6 @@ Widget::~Widget()
     }
 
     delete profileForm;
-    delete profileInfo;
     delete addFriendForm;
     delete conferenceInviteForm;
     delete groupInviteForm;
@@ -715,7 +705,7 @@ void Widget::moveEvent(QMoveEvent* event)
 
 void Widget::closeEvent(QCloseEvent* event)
 {
-    if (settings.getShowSystemTray() && settings.getCloseToTray()) {
+    if (icon && settings.getShowSystemTray() && settings.getCloseToTray()) {
         QWidget::closeEvent(event);
     } else {
         if (autoAwayActive) {
@@ -732,7 +722,7 @@ void Widget::closeEvent(QCloseEvent* event)
 void Widget::changeEvent(QEvent* event)
 {
     if (event->type() == QEvent::WindowStateChange) {
-        if (isMinimized() && settings.getShowSystemTray() && settings.getMinimizeToTray()) {
+        if (isMinimized() && icon && settings.getShowSystemTray() && settings.getMinimizeToTray()) {
             hide();
         }
     }
@@ -742,6 +732,7 @@ void Widget::resizeEvent(QResizeEvent* event)
 {
     saveWindowGeometry();
     QMainWindow::resizeEvent(event);
+    updatePanes();
 }
 
 QString Widget::getUsername()
@@ -749,17 +740,15 @@ QString Widget::getUsername()
     return core->getUsername();
 }
 
-void Widget::onSelfAvatarLoaded(const QPixmap& pic)
+void Widget::onSelfAvatarLoaded(const QImage& pic)
 {
-    profilePicture->setPixmap(pic);
+    profilePicture->setPixmap(QPixmap::fromImage(pic));
 }
 
 void Widget::onCoreChanged(Core& core_)
 {
     core = &core_;
 
-    // Model signal handlers are connected via ChatManager.
-    chatManager->connectToCore(core_);
 
     // UI-specific Core signal connections.
     connect(core, &Core::connected, this, &Widget::onConnected);
@@ -768,18 +757,14 @@ void Widget::onCoreChanged(Core& core_)
     connect(core, &Core::usernameSet, this, &Widget::setUsername);
     connect(core, &Core::statusMessageSet, this, &Widget::setStatusMessage);
     connect(core, &Core::failedToAddFriend, this, &Widget::addFriendFailed);
-    connect(core, &Core::friendRequestReceived, this, &Widget::onFriendRequestReceived);
-    connect(core, &Core::conferenceInviteReceived, this, &Widget::onConferenceInviteReceived);
     connect(core, &Core::conferencePeerAudioPlaying, this, &Widget::onConferencePeerAudioPlaying);
     connect(core, &Core::friendTypingChanged, this, &Widget::onFriendTypingChanged);
     connect(core, &Core::conferenceSentFailed, this, &Widget::onConferenceSendFailed);
-    connect(core, &Core::groupInviteReceived, this, &Widget::onGroupInviteReceived);
     connect(core, &Core::groupSentFailed, this, &Widget::onGroupSendFailed);
     connect(core, &Core::usernameSet, this, &Widget::refreshPeerListsLocal);
 
     connect(this, &Widget::statusSet, core, &Core::setStatus);
     connect(this, &Widget::friendRequested, core, &Core::requestFriendship);
-    connect(this, &Widget::friendRequestAccepted, core, &Core::acceptFriendRequest);
     connect(this, &Widget::changeConferenceTitle, core, &Core::changeConferenceTitle);
 }
 
@@ -787,12 +772,14 @@ void Widget::onConnected()
 {
     ui->statusButton->setEnabled(true);
     emit core->statusSet(core->getStatus());
+    notifier->showStatus(tr("Online"));
 }
 
 void Widget::onDisconnected()
 {
     ui->statusButton->setEnabled(false);
     emit core->statusSet(Status::Status::Offline);
+    notifier->showStatus(tr("Offline"));
 }
 
 void Widget::onFailedToStartCore()
@@ -846,9 +833,9 @@ void Widget::onSeparateWindowChanged(bool separate, bool clicked)
         contentWidget->setObjectName("contentWidget");
 
         contentLayout = new ContentLayout(settings, style, contentWidget);
+        connect(contentLayout->backButton, &QPushButton::clicked, this,
+                [this] { showContentPane(false); });
         ui->mainSplitter->addWidget(contentWidget);
-
-        setMinimumWidth(775);
 
         SplitterRestorer restorer(ui->mainSplitter);
         restorer.restore(settings.getSplitterState(), size());
@@ -873,8 +860,6 @@ void Widget::onSeparateWindowChanged(bool separate, bool clicked)
             contentLayout = nullptr;
         }
 
-        setMinimumWidth(ui->tooliconsZone->sizeHint().width());
-
         if (clicked) {
             showNormal();
             resize(width, height());
@@ -891,6 +876,9 @@ void Widget::onSeparateWindowChanged(bool separate, bool clicked)
         setWindowTitle(QString());
         setActiveToolMenuButton(ActiveToolMenuButton::None);
     }
+
+    setMinimumWidth(ui->tooliconsZone->sizeHint().width());
+    updatePanes();
 }
 
 void Widget::setWindowTitle(const QString& title)
@@ -1056,11 +1044,100 @@ void Widget::hideMainForms(GenericChatroomWidget* chatroomWidget)
         contentLayout->clear();
     }
 
+    showContentPane(true);
+
     if (activeChatroomWidget != nullptr) {
         activeChatroomWidget->setAsInactiveChatroom();
     }
 
     activeChatroomWidget = chatroomWidget;
+}
+
+/**
+ * @brief Shows the add friend form, and the chat list if there's room for one pane only.
+ */
+void Widget::resetContent()
+{
+    onAddClicked();
+    showContentPane(false);
+}
+
+bool Widget::isOnePane() const
+{
+    return contentLayout != nullptr && width() < twoPaneMinWidth;
+}
+
+void Widget::showContentPane(bool show)
+{
+    contentPaneShown = show;
+    updatePanes();
+}
+
+/**
+ * @brief Shows the chat list and the content side by side, or one of them if the window is narrow.
+ */
+void Widget::updatePanes()
+{
+    const bool onePane = isOnePane();
+    ui->statusPanel->setVisible(!onePane || !contentPaneShown);
+    if (contentLayout != nullptr) {
+        contentLayout->parentWidget()->setVisible(!onePane || contentPaneShown);
+        contentLayout->backButton->setVisible(onePane);
+    }
+}
+
+/**
+ * @brief Whether the user is looking at @p chat: the active window shows it.
+ */
+bool Widget::isInFront(const Chat& chat) const
+{
+    const ChatId& id = chat.getPersistentId();
+    if (ContentDialog* dialog = contentDialogManager->getDialog(id)) {
+        const QWidget* dialogWindow = dialog->window();
+        return dialogWindow->isActiveWindow() && !dialogWindow->isMinimized()
+               && contentDialogManager->isChatActive(id);
+    }
+    return isActiveWindow() && !isMinimized() && activeChatroomWidget != nullptr
+           && activeChatroomWidget->getChat() == &chat && (!isOnePane() || contentPaneShown);
+}
+
+/**
+ * @brief The chat list's entry for @p chat, if it has one.
+ */
+GenericChatroomWidget* Widget::chatroomWidget(const Chat& chat) const
+{
+    const ChatId& id = chat.getPersistentId();
+    switch (ChatKind::of(chat)) {
+    case ChatKind::Kind::Friend:
+        return friendWidgets.value(static_cast<const ToxPk&>(id));
+    case ChatKind::Kind::Conference:
+        return conferenceWidgets.value(static_cast<const ConferenceId&>(id));
+    case ChatKind::Kind::Group:
+        return groupWidgets.value(static_cast<const GroupId&>(id));
+    }
+    return nullptr;
+}
+
+/**
+ * @brief Opens what a destination.h name names, as its button or chat list entry does.
+ */
+void Widget::openDestination(const QString& destination)
+{
+    if (destination == Destination::friendRequests) {
+        onAddClicked();
+        addFriendForm->setMode(AddFriendForm::Mode::FriendRequest);
+    } else if (destination == Destination::invites) {
+        if (unreadGroupInvites > 0) {
+            onGroupClicked();
+        } else {
+            onConferenceClicked();
+        }
+    } else if (const Chat* chat =
+                   Destination::findChat(destination, *friendList, *conferenceList, *groupList)) {
+        if (GenericChatroomWidget* widget = chatroomWidget(*chat)) {
+            onChatroomWidgetClicked(widget);
+        }
+    }
 }
 
 void Widget::setUsername(const QString& username)
@@ -1094,9 +1171,8 @@ void Widget::setStatusMessage(const QString& statusMessage)
 /**
  * @brief Plays a sound via the audioNotification AudioSink
  * @param sound Sound to play
- * @param loop if true, loop the sound until onStopNotification() is called
  */
-void Widget::playNotificationSound(IAudioSink::Sound sound, bool loop)
+void Widget::playNotificationSound(IAudioSink::Sound sound)
 {
     const bool isBusy = core->getStatus() == Status::Status::Busy;
     const bool busySound = settings.getBusySound();
@@ -1118,10 +1194,6 @@ void Widget::playNotificationSound(IAudioSink::Sound sound, bool loop)
     audioNotification->connectTo_finishedPlaying(this, [this]() { cleanupNotificationSound(); });
 
     audioNotification->playMono16Sound(sound);
-
-    if (loop) {
-        audioNotification->startLoop();
-    }
 }
 
 void Widget::cleanupNotificationSound()
@@ -1132,16 +1204,7 @@ void Widget::cleanupNotificationSound()
 void Widget::incomingNotification(uint32_t friendNum)
 {
     const auto& friendId = friendList->id2Key(friendNum);
-    newFriendMessageAlert(friendId, {}, false);
-
-    // loop until call answered or rejected
-    playNotificationSound(IAudioSink::Sound::IncomingCall, true);
-}
-
-void Widget::outgoingNotification()
-{
-    // loop until call answered or rejected
-    playNotificationSound(IAudioSink::Sound::OutgoingCall, true);
+    newFriendMessageAlert(friendId, false);
 }
 
 void Widget::onStartConferenceCall(uint32_t conferenceId)
@@ -1191,7 +1254,6 @@ void Widget::onCallStart(uint32_t friendId)
 
 void Widget::onCallEnd(uint32_t friendId)
 {
-    playNotificationSound(IAudioSink::Sound::CallEnd);
     const ToxPk& toxPk = friendList->id2Key(friendId);
     // Check if we have such friend in the list
     // as toxPk can be a default value.
@@ -1203,76 +1265,6 @@ void Widget::onCallEnd(uint32_t friendId)
         FriendWidget* widget = friendWidgets[toxPk];
         widget->stopCall();
     }
-}
-
-/**
- * @brief Widget::onStopNotification Stop the notification sound.
- */
-void Widget::onStopNotification()
-{
-    audioNotification.reset();
-}
-
-/**
- * @brief Dispatches file to the appropriate chat log and accepts the transfer if necessary
- */
-void Widget::dispatchFile(ToxFile file)
-{
-    const auto& friendId = friendList->id2Key(file.friendId);
-    Friend* f = friendList->findFriend(friendId);
-    if (f == nullptr) {
-        return;
-    }
-
-    auto pk = f->getPublicKey();
-
-    if (file.status == ToxFile::INITIALIZING && file.direction == ToxFile::RECEIVING) {
-        auto sender = (file.direction == ToxFile::SENDING) ? core->getSelfPublicKey() : pk;
-
-        QString autoAcceptDir = settings.getAutoAcceptDir(f->getPublicKey());
-
-        if (autoAcceptDir.isEmpty() && settings.getAutoSaveEnabled()) {
-            autoAcceptDir = settings.getGlobalAutoAcceptDir();
-        }
-
-        auto maxAutoAcceptSize = settings.getMaxAutoAcceptSize();
-        const bool autoAcceptSizeCheckPassed =
-            maxAutoAcceptSize == 0 || maxAutoAcceptSize >= file.progress.getFileSize();
-
-        if (!autoAcceptDir.isEmpty() && autoAcceptSizeCheckPassed) {
-            acceptFileTransfer(file, autoAcceptDir);
-        }
-    }
-
-    const auto senderPk = (file.direction == ToxFile::SENDING) ? core->getSelfPublicKey() : pk;
-    chatManager->getFriendChatLog(pk)->onFileUpdated(senderPk, file);
-
-    filesForm->onFileUpdated(file);
-}
-
-void Widget::dispatchFileWithBool(ToxFile file, bool pausedOrBroken)
-{
-    std::ignore = pausedOrBroken;
-    dispatchFile(file);
-}
-
-void Widget::dispatchFileSendFailed(uint32_t friendId, const QString& fileName)
-{
-    const auto& friendPk = friendList->id2Key(friendId);
-
-    auto chatForm = chatForms.find(friendPk);
-    if (chatForm == chatForms.end()) {
-        return;
-    }
-
-    chatForm.value()->addSystemInfoMessage(QDateTime::currentDateTime(),
-                                           SystemMessageType::fileSendFailed, {fileName});
-}
-
-void Widget::onRejectCall(uint32_t friendId)
-{
-    CoreAV* const av = core->getAv();
-    av->cancelCall(friendId);
 }
 
 void Widget::onFriendModelAdded(Friend* newFriend, std::shared_ptr<FriendChatroom> chatroom,
@@ -1289,7 +1281,8 @@ void Widget::onFriendModelAdded(Friend* newFriend, std::shared_ptr<FriendChatroo
     auto* friendForm =
         new ChatForm(profile, newFriend, *chatHistory, *friendMessageDispatcher, *documentCache,
                      *smileyPack, cameraSource, settings, style, *messageBoxManager,
-                     *contentDialogManager, *friendList, *conferenceList, *groupList, this);
+                     *contentDialogManager, *friendList, *conferenceList, *groupList, *callManager,
+                     *fileManager, *chatroom, this);
     connect(friendForm, &ChatForm::updateFriendActivity, this, &Widget::updateFriendActivity);
 
     friendWidgets[friendPk] = widget;
@@ -1303,25 +1296,14 @@ void Widget::onFriendModelAdded(Friend* newFriend, std::shared_ptr<FriendChatroo
 
     chatListWidget->addFriendWidget(widget);
 
-    auto notifyReceivedConnection =
-        connect(friendMessageDispatcher.get(), &IMessageDispatcher::messageReceived, this,
-                [this, friendPk](const ToxPk& author, const Message& message) {
-                    std::ignore = author;
-                    newFriendMessageAlert(friendPk, message.content);
-                });
-
-    friendAlertConnections.insert(friendPk, notifyReceivedConnection);
     connect(newFriend, &Friend::aliasChanged, this, &Widget::onFriendAliasChanged);
     connect(newFriend, &Friend::displayedNameChanged, this, &Widget::onFriendDisplayedNameChanged);
     connect(newFriend, &Friend::statusChanged, this, &Widget::onFriendStatusChanged);
     connect(newFriend, &Friend::statusMessageChanged, this, &Widget::onFriendStatusMessageUpdated);
 
     connect(friendForm, &ChatForm::incomingNotification, this, &Widget::incomingNotification);
-    connect(friendForm, &ChatForm::outgoingNotification, this, &Widget::outgoingNotification);
-    connect(friendForm, &ChatForm::stopNotification, this, &Widget::onStopNotification);
     connect(friendForm, &ChatForm::startCallNotification, this, &Widget::onCallStart);
     connect(friendForm, &ChatForm::endCallNotification, this, &Widget::onCallEnd);
-    connect(friendForm, &ChatForm::rejectCall, this, &Widget::onRejectCall);
 
     connect(widget, &FriendWidget::newWindowOpened, this, &Widget::openNewDialog);
     connect(widget, &FriendWidget::chatroomWidgetClicked, this, &Widget::onChatroomWidgetClicked);
@@ -1336,7 +1318,7 @@ void Widget::onFriendModelAdded(Friend* newFriend, std::shared_ptr<FriendChatroo
     connect(&profile, &Profile::friendAvatarRemoved, widget, &FriendWidget::onAvatarRemoved);
 
     // Try to get the avatar from the cache
-    const QPixmap avatar = profile.loadAvatar(friendPk);
+    const QImage avatar = profile.loadAvatar(friendPk);
     if (!avatar.isNull()) {
         friendForm->onAvatarChanged(friendPk, avatar);
         widget->onAvatarSet(friendPk, avatar);
@@ -1416,6 +1398,7 @@ void Widget::openDialog(GenericChatroomWidget* widget, bool newWindow)
 {
     widget->resetEventFlags();
     widget->updateStatusLight();
+    notifications->shown(Destination::chat(*widget->getChat()));
 
     GenericChatForm* form;
     const Friend* frnd = widget->getFriend();
@@ -1434,6 +1417,11 @@ void Widget::openDialog(GenericChatroomWidget* widget, bool newWindow)
         form = groupForms[group->getPersistentId()].data();
         contentDialogManager->focusChat(group->getPersistentId());
         chatFormIsSet = contentDialogManager->chatWidgetExists(group->getPersistentId());
+    }
+
+    if (!chatFormIsSet && !newWindow && widget == activeChatroomWidget) {
+        showContentPane(true);
+        return;
     }
 
     if ((chatFormIsSet || form->isVisible()) && !newWindow) {
@@ -1485,7 +1473,7 @@ void Widget::addFriendDialog(const Friend* frnd, ContentDialog* dialog)
     FriendWidget* widget = friendWidgets[friendPk];
     const bool isCurrent = activeChatroomWidget == widget;
     if ((contentDialog == nullptr) && !isSeparate && isCurrent) {
-        onAddClicked();
+        resetContent();
     }
 
     auto* form = chatForms[friendPk];
@@ -1523,7 +1511,7 @@ void Widget::addFriendDialog(const Friend* frnd, ContentDialog* dialog)
     connect(&profile, &Profile::friendAvatarSet, friendWidget, &FriendWidget::onAvatarSet);
     connect(&profile, &Profile::friendAvatarRemoved, friendWidget, &FriendWidget::onAvatarRemoved);
 
-    const QPixmap avatar = profile.loadAvatar(frnd->getPublicKey());
+    const QImage avatar = profile.loadAvatar(frnd->getPublicKey());
     if (!avatar.isNull()) {
         friendWidget->onAvatarSet(frnd->getPublicKey(), avatar);
     }
@@ -1538,7 +1526,7 @@ void Widget::addConferenceDialog(const Conference* conference, ContentDialog* di
     ConferenceWidget* widget = conferenceWidgets[conferenceId];
     const bool isCurrentWindow = activeChatroomWidget == widget;
     if ((conferenceDialog == nullptr) && !separated && isCurrentWindow) {
-        onAddClicked();
+        resetContent();
     }
 
     auto* chatForm = conferenceForms[conferenceId].data();
@@ -1583,7 +1571,7 @@ void Widget::addGroupDialog(const Group* group, ContentDialog* dialog)
     GroupWidget* widget = groupWidgets[groupId];
     const bool isCurrentWindow = activeChatroomWidget == widget;
     if ((groupDialog == nullptr) && !separated && isCurrentWindow) {
-        onAddClicked();
+        resetContent();
     }
 
     auto* chatForm = groupForms[groupId].data();
@@ -1615,8 +1603,7 @@ void Widget::addGroupDialog(const Group* group, ContentDialog* dialog)
     emit widget->chatroomWidgetClicked(widget);
 }
 
-bool Widget::newFriendMessageAlert(const ToxPk& friendId, const QString& text, bool sound,
-                                   QString filename, size_t filesize)
+bool Widget::newFriendMessageAlert(const ToxPk& friendId, bool sound)
 {
     bool hasActive;
     QWidget* currentWindow;
@@ -1652,20 +1639,6 @@ bool Widget::newFriendMessageAlert(const ToxPk& friendId, const QString& text, b
         f->setEventFlag(true);
         widget->updateStatusLight();
         ui->friendList->trackWidget(settings, style, widget);
-        if (notifier != nullptr) {
-            NotificationData notificationData;
-            if (filename.isEmpty()) {
-                if (text.isEmpty()) {
-                    notificationData = notificationGenerator->incomingCallNotification(f);
-                } else {
-                    notificationData = notificationGenerator->friendMessageNotification(f, text);
-                }
-            } else {
-                notificationData =
-                    notificationGenerator->fileTransferNotification(f, filename, filesize);
-            }
-            notifier->notifyMessage(notificationData);
-        }
 
         if (contentDialog == nullptr) {
             if (hasActive) {
@@ -1681,18 +1654,18 @@ bool Widget::newFriendMessageAlert(const ToxPk& friendId, const QString& text, b
     return false;
 }
 
-bool Widget::newConferenceMessageAlert(const ConferenceId& conferenceId, const ToxPk& authorPk,
-                                       const QString& message, bool notify)
+/**
+ * A message in a conference or a group: marks the chat and alerts the user, unless they are
+ * looking at it. Notifications shows its notification.
+ */
+bool Widget::newChatMessageAlert(Chat& chat, GenericChatroomWidget* widget,
+                                 ContentDialog* contentDialog, bool notify)
 {
-    bool hasActive;
     QWidget* currentWindow;
-    ContentDialog* contentDialog = contentDialogManager->getConferenceDialog(conferenceId);
-    Conference* c = conferenceList->findConference(conferenceId);
-    ConferenceWidget* widget = conferenceWidgets[conferenceId];
-
+    bool hasActive;
     if (contentDialog != nullptr) {
         currentWindow = contentDialog->window();
-        hasActive = contentDialogManager->isChatActive(conferenceId);
+        hasActive = contentDialogManager->isChatActive(chat.getPersistentId());
     } else {
         currentWindow = window();
         hasActive = widget == activeChatroomWidget;
@@ -1702,61 +1675,11 @@ bool Widget::newConferenceMessageAlert(const ConferenceId& conferenceId, const T
         return false;
     }
 
-    c->setEventFlag(true);
+    chat.setEventFlag(true);
     widget->updateStatusLight();
-    if (notifier != nullptr) {
-        auto notificationData =
-            notificationGenerator->conferenceMessageNotification(c, authorPk, message);
-        notifier->notifyMessage(notificationData);
+    if (contentDialog == nullptr && hasActive) {
+        setWindowTitle(widget->getTitle());
     }
-
-    if (contentDialog == nullptr) {
-        if (hasActive) {
-            setWindowTitle(widget->getTitle());
-        }
-    } else {
-        contentDialogManager->updateConferenceStatus(conferenceId);
-    }
-
-    return true;
-}
-
-bool Widget::newGroupMessageAlert(const GroupId& groupId, const ToxPk& authorPk,
-                                  const QString& message, bool notify)
-{
-    bool hasActive;
-    QWidget* currentWindow;
-    ContentDialog* contentDialog = contentDialogManager->getGroupDialog(groupId);
-    Group* g = groupList->findGroup(groupId);
-    GroupWidget* widget = groupWidgets[groupId];
-
-    if (contentDialog != nullptr) {
-        currentWindow = contentDialog->window();
-        hasActive = contentDialogManager->isChatActive(groupId);
-    } else {
-        currentWindow = window();
-        hasActive = widget == activeChatroomWidget;
-    }
-
-    if (!newMessageAlert(currentWindow, hasActive, true, notify)) {
-        return false;
-    }
-
-    g->setEventFlag(true);
-    widget->updateStatusLight();
-    if (notifier != nullptr) {
-        auto notificationData = notificationGenerator->groupMessageNotification(g, authorPk, message);
-        notifier->notifyMessage(notificationData);
-    }
-
-    if (contentDialog == nullptr) {
-        if (hasActive) {
-            setWindowTitle(widget->getTitle());
-        }
-    } else {
-        contentDialogManager->updateGroupStatus(groupId);
-    }
-
     return true;
 }
 
@@ -1815,21 +1738,9 @@ bool Widget::newMessageAlert(QWidget* currentWindow, bool isActive, bool sound, 
 
 void Widget::onFriendRequestReceived(const ToxPk& friendPk, const QString& message)
 {
-    if (addFriendForm->addFriendRequest(friendPk.toString(), message)) {
-        friendRequestsUpdate();
-        newMessageAlert(window(), isActiveWindow(), true, true);
-        if (notifier != nullptr) {
-            auto notificationData =
-                notificationGenerator->friendRequestNotification(friendPk, message);
-            notifier->notifyMessage(notificationData);
-        }
-    }
-}
-
-void Widget::onFileReceiveRequested(const ToxFile& file)
-{
-    const ToxPk& friendPk = friendList->id2Key(file.friendId);
-    newFriendMessageAlert(friendPk, {}, true, file.fileName, file.progress.getFileSize());
+    addFriendForm->showFriendRequest(friendPk.toString(), message);
+    friendRequestsUpdate();
+    newMessageAlert(window(), isActiveWindow(), true, true);
 }
 
 void Widget::updateFriendActivity(const Friend& frnd)
@@ -1843,69 +1754,95 @@ void Widget::updateFriendActivity(const Friend& frnd)
     chatListWidget->updateActivityTime(oldTime); // update old category widget
 }
 
-void Widget::removeFriend(Friend* f, bool fake)
+/**
+ * Takes a chat out of the user interface, then has the chat manager forget it.
+ * @param fake Only the user interface closes: the user stays in the chat.
+ */
+void Widget::removeChat(Chat* chat, bool fake)
 {
-    assert(f);
+    assert(chat);
     if (!fake) {
-        RemoveChatDialog ask(this, *f);
+        // The chat can go while the dialog is open.
+        const QPointer<Chat> asked{chat};
+        RemoveChatDialog ask(this, *chat);
         ask.exec();
 
-        if (!ask.accepted()) {
+        if (!ask.accepted() || asked.isNull()) {
             return;
         }
 
         if (ask.removeHistory()) {
-            profile.getHistory()->removeChatHistory(f->getPersistentId());
+            chatManager->removeHistory(*chat);
         }
     }
 
-    const ToxPk friendPk = f->getPublicKey();
-    auto* widget = friendWidgets[friendPk];
-    widget->setAsInactiveChatroom();
-    if (widget == activeChatroomWidget) {
-        activeChatroomWidget = nullptr;
-        onAddClicked();
+    const auto deactivate = [this](GenericChatroomWidget* widget) {
+        widget->setAsInactiveChatroom();
+        if (widget == activeChatroomWidget) {
+            activeChatroomWidget = nullptr;
+            resetContent();
+        }
+    };
+
+    // The forms go before the chat manager forgets the chat: they refer to its messages, and a
+    // conference's or a group's form adds one more as it goes.
+    if (const auto* f = qobject_cast<const Friend*>(chat)) {
+        const ToxPk friendPk = f->getPublicKey();
+        FriendWidget* widget = friendWidgets.take(friendPk);
+        if (widget == nullptr) {
+            qWarning() << "Tried to remove a friend who has no FriendWidget";
+            return;
+        }
+        deactivate(widget);
+        chatListWidget->removeFriendWidget(widget);
+        if (ContentDialog* dialog = contentDialogManager->getFriendDialog(friendPk)) {
+            dialog->removeFriend(friendPk);
+        }
+        delete chatForms.take(friendPk);
+    } else if (const auto* conference = qobject_cast<const Conference*>(chat)) {
+        const ConferenceId conferenceId = conference->getPersistentId();
+        ConferenceWidget* widget = conferenceWidgets.take(conferenceId);
+        if (widget == nullptr) {
+            qWarning() << "Tried to remove a conference that has no ConferenceWidget";
+            return;
+        }
+        deactivate(widget);
+        if (ContentDialog* dialog = contentDialogManager->getConferenceDialog(conferenceId)) {
+            dialog->removeConference(conferenceId);
+        }
+        chatListWidget->removeConferenceWidget(widget); // deletes widget
+        conferenceForms.remove(conferenceId);
+    } else if (const auto* group = qobject_cast<const Group*>(chat)) {
+        const GroupId groupId = group->getPersistentId();
+        GroupWidget* widget = groupWidgets.take(groupId);
+        if (widget == nullptr) {
+            qWarning() << "Tried to remove a group that has no GroupWidget";
+            return;
+        }
+        deactivate(widget);
+        if (ContentDialog* dialog = contentDialogManager->getGroupDialog(groupId)) {
+            dialog->removeGroup(groupId);
+        }
+        chatListWidget->removeGroupWidget(widget); // deletes widget
+        groupForms.remove(groupId);
     }
 
-    friendAlertConnections.remove(friendPk);
-
-    chatListWidget->removeFriendWidget(widget);
-
-    ContentDialog* lastDialog = contentDialogManager->getFriendDialog(friendPk);
-    if (lastDialog != nullptr) {
-        lastDialog->removeFriend(friendPk);
-    }
-
-    friendWidgets.remove(friendPk);
-
-    // Delete ChatForm before ChatManager removes the model, because
-    // ChatForm holds references to chatLog and chatState owned by ChatManager.
-    auto* chatForm = chatForms[friendPk];
-    chatForms.remove(friendPk);
-    delete chatForm;
-
-    if (!fake) {
-        chatManager->removeFriend(friendPk);
-    } else {
-        chatManager->removeFriendModel(friendPk);
-    }
-    friendList->removeFriend(friendPk, settings, fake);
-
-    delete f;
+    chatManager->removeChat(*chat, !fake);
     if ((contentLayout != nullptr) && contentLayout->mainHead->layout()->isEmpty()) {
-        onAddClicked();
+        resetContent();
     }
 }
 
 void Widget::removeFriend(const ToxPk& friendId)
 {
-    removeFriend(friendList->findFriend(friendId), false);
+    removeChat(friendList->findFriend(friendId), false);
 }
 
 void Widget::onDialogShown(GenericChatroomWidget* widget)
 {
     widget->resetEventFlags();
     widget->updateStatusLight();
+    notifications->shown(Destination::chat(*widget->getChat()));
 
     ui->friendList->updateTracking(widget);
     resetIcon();
@@ -2069,67 +2006,44 @@ void Widget::copyFriendIdToClipboard(const ToxPk& friendId)
     }
 }
 
-void Widget::onConferenceInviteReceived(const ConferenceInvite& inviteInfo)
+void Widget::onInviteAdded(const InviteManager::Invite& invite, const ToxPk& friendPk)
 {
-    const uint32_t friendId = inviteInfo.getFriendId();
-    const ToxPk& friendPk = friendList->id2Key(friendId);
-    const Friend* f = friendList->findFriend(friendPk);
-    updateFriendActivity(*f);
-
-    const uint8_t confType = inviteInfo.getType();
-    if (confType == TOX_CONFERENCE_TYPE_TEXT || confType == TOX_CONFERENCE_TYPE_AV) {
-        if (settings.getAutoConferenceInvite(f->getPublicKey())) {
-            onConferenceInviteAccepted(inviteInfo);
-        } else {
-            if (!conferenceInviteForm->addConferenceInvite(inviteInfo)) {
-                return;
-            }
-
-            ++unreadConferenceInvites;
-            conferenceInvitesUpdate();
-            newMessageAlert(window(), isActiveWindow(), true, true);
-            if (notifier != nullptr) {
-                auto notificationData = notificationGenerator->conferenceInvitationNotification(f);
-                notifier->notifyMessage(notificationData);
-            }
+    std::ignore = friendPk;
+    if (const auto* conference = std::get_if<ConferenceInvite>(&invite)) {
+        if (!conferenceInviteForm->addConferenceInvite(*conference)) {
+            return;
         }
+        ++unreadConferenceInvites;
+        conferenceInvitesUpdate();
     } else {
-        qWarning() << "onConferenceInviteReceived: Unknown conference type:" << confType;
-        return;
+        if (!groupInviteForm->addGroupInvite(std::get<GroupInvite>(invite))) {
+            return;
+        }
+        ++unreadGroupInvites;
+        groupInvitesUpdate();
     }
+
+    newMessageAlert(window(), isActiveWindow(), true, true);
 }
 
-void Widget::onConferenceInviteAccepted(const ConferenceInvite& inviteInfo)
+void Widget::onMessageReceived(Chat& chat, const ToxPk& sender, const Message& message, bool notify)
 {
-    const uint32_t conferenceId = core->joinConference(inviteInfo);
-    if (conferenceId == std::numeric_limits<uint32_t>::max()) {
-        qWarning() << "onConferenceInviteAccepted: Unable to accept conference invite";
-        return;
-    }
-}
-
-void Widget::onGroupInviteReceived(const GroupInvite& inviteInfo)
-{
-    const uint32_t friendId = inviteInfo.getFriendId();
-    const ToxPk& friendPk = friendList->id2Key(friendId);
-    const Friend* f = friendList->findFriend(friendPk);
-    if (f != nullptr) {
-        updateFriendActivity(*f);
-
-        if (settings.getAutoGroupInvite(f->getPublicKey())) {
-            onGroupInviteAccepted(inviteInfo);
-        } else {
-            if (!groupInviteForm->addGroupInvite(inviteInfo)) {
-                return;
-            }
-
-            ++unreadGroupInvites;
-            groupInvitesUpdate();
-            newMessageAlert(window(), isActiveWindow(), true, true);
-            if (notifier != nullptr) {
-                auto notificationData = notificationGenerator->groupInvitationNotification(f);
-                notifier->notifyMessage(notificationData);
-            }
+    // Notifications shows them.
+    std::ignore = sender;
+    std::ignore = message;
+    if (const auto* f = qobject_cast<const Friend*>(&chat)) {
+        newFriendMessageAlert(f->getPublicKey());
+    } else if (const auto* conference = qobject_cast<const Conference*>(&chat)) {
+        const ConferenceId& id = conference->getPersistentId();
+        ContentDialog* dialog = contentDialogManager->getConferenceDialog(id);
+        if (newChatMessageAlert(chat, conferenceWidgets[id], dialog, notify) && dialog != nullptr) {
+            contentDialogManager->updateConferenceStatus(id);
+        }
+    } else if (const auto* group = qobject_cast<const Group*>(&chat)) {
+        const GroupId& id = group->getPersistentId();
+        ContentDialog* dialog = contentDialogManager->getGroupDialog(id);
+        if (newChatMessageAlert(chat, groupWidgets[id], dialog, notify) && dialog != nullptr) {
+            contentDialogManager->updateGroupStatus(id);
         }
     }
 }
@@ -2140,21 +2054,10 @@ void Widget::onGroupInviteAccepted(const GroupInvite& inviteInfo)
     const QString password =
         QInputDialog::getText(this, tr("Group password (optional)"), tr("Password:"),
                               QLineEdit::Password, QString(), &okPassword);
-    if (!okPassword) {
-        return;
-    }
-    const QByteArray passwordBytes = password.toUtf8();
-    const uint32_t groupNumber = core->joinGroup(inviteInfo, passwordBytes);
-    if (groupNumber == std::numeric_limits<uint32_t>::max()) {
-        qWarning() << "onGroupInviteAccepted: Unable to accept group invite";
-        return;
-    }
-
-    // Store the password so we can rejoin later
-    const QByteArray inviteData = inviteInfo.getInviteData();
-    if (inviteData.size() >= GroupId::size && !passwordBytes.isEmpty()) {
-        const GroupId groupId(reinterpret_cast<const uint8_t*>(inviteData.constData()));
-        settings.setGroupPassword(groupId.toString(), passwordBytes);
+    if (okPassword) {
+        inviteManager->accept(inviteInfo, password);
+    } else {
+        inviteManager->reject(inviteInfo);
     }
 }
 
@@ -2174,142 +2077,16 @@ void Widget::onConferencePeerAudioPlaying(uint32_t conferencenumber, ToxPk peerP
     form->peerAudioPlaying(peerPk);
 }
 
-void Widget::removeConference(Conference* c, bool fake)
-{
-    assert(c);
-    if (!fake) {
-        RemoveChatDialog ask(this, *c);
-        ask.exec();
-
-        if (!ask.accepted()) {
-            return;
-        }
-
-        if (ask.removeHistory()) {
-            profile.getHistory()->removeChatHistory(c->getPersistentId());
-        }
-    }
-
-    const auto& conferenceId = c->getPersistentId();
-    const auto conferencenumber = c->getId();
-    auto conferenceWidgetIt = conferenceWidgets.find(conferenceId);
-    if (conferenceWidgetIt == conferenceWidgets.end()) {
-        qWarning() << "Tried to remove conference" << conferencenumber
-                   << "but ConferenceWidget doesn't exist";
-        return;
-    }
-    auto* widget = conferenceWidgetIt.value();
-    widget->setAsInactiveChatroom();
-    if (static_cast<GenericChatroomWidget*>(widget) == activeChatroomWidget) {
-        activeChatroomWidget = nullptr;
-        onAddClicked();
-    }
-
-    ContentDialog* contentDialog = contentDialogManager->getConferenceDialog(conferenceId);
-    if (contentDialog != nullptr) {
-        contentDialog->removeConference(conferenceId);
-    }
-
-    chatListWidget->removeConferenceWidget(widget); // deletes widget
-
-    conferenceWidgets.remove(conferenceId);
-    conferenceAlertConnections.remove(conferenceId);
-
-    // Destroy ConferenceForm before ChatManager removes the model, because
-    // ~ConferenceForm() calls addSystemInfoMessage() which accesses chatLog.
-    auto conferenceFormIt = conferenceForms.find(conferenceId);
-    if (conferenceFormIt == conferenceForms.end()) {
-        qWarning() << "Tried to remove conference" << conferencenumber
-                   << "but ConferenceForm doesn't exist";
-        return;
-    }
-    conferenceForms.erase(conferenceFormIt);
-
-    if (!fake) {
-        chatManager->removeConference(conferenceId);
-    } else {
-        chatManager->removeConferenceModel(conferenceId);
-    }
-    conferenceList->removeConference(conferenceId, fake);
-
-    delete c;
-    if ((contentLayout != nullptr) && contentLayout->mainHead->layout()->isEmpty()) {
-        onAddClicked();
-    }
-}
 
 void Widget::removeConference(const ConferenceId& conferenceId)
 {
-    removeConference(conferenceList->findConference(conferenceId));
+    removeChat(conferenceList->findConference(conferenceId), false);
 }
 
-void Widget::removeGroup(Group* g, bool fake)
-{
-    assert(g);
-    if (!fake) {
-        // The group can go while the dialog is open.
-        const GroupId asked = g->getPersistentId();
-        RemoveChatDialog ask(this, *g);
-        ask.exec();
-
-        if (!ask.accepted() || groupList->findGroup(asked) != g) {
-            return;
-        }
-
-        if (ask.removeHistory()) {
-            profile.getHistory()->removeChatHistory(g->getPersistentId());
-        }
-    }
-
-    const auto& groupId = g->getPersistentId();
-    const auto groupNumber = g->getId();
-    auto groupWidgetIt = groupWidgets.find(groupId);
-    if (groupWidgetIt == groupWidgets.end()) {
-        qWarning() << "Tried to remove group" << groupNumber << "but GroupWidget doesn't exist";
-        return;
-    }
-    auto* widget = groupWidgetIt.value();
-    widget->setAsInactiveChatroom();
-    if (static_cast<GenericChatroomWidget*>(widget) == activeChatroomWidget) {
-        activeChatroomWidget = nullptr;
-        onAddClicked();
-    }
-
-    ContentDialog* contentDialog = contentDialogManager->getGroupDialog(groupId);
-    if (contentDialog != nullptr) {
-        contentDialog->removeGroup(groupId);
-    }
-
-    chatListWidget->removeGroupWidget(widget); // deletes widget
-
-    groupWidgets.remove(groupId);
-    groupAlertConnections.remove(groupId);
-
-    // Destroy GroupForm before ChatManager removes the model, because
-    // ~GroupForm() calls addSystemInfoMessage() which accesses chatLog.
-    auto groupFormIt = groupForms.find(groupId);
-    if (groupFormIt == groupForms.end()) {
-        qWarning() << "Tried to remove group" << groupNumber << "but GroupForm doesn't exist";
-        return;
-    }
-    groupForms.erase(groupFormIt);
-
-    if (!fake) {
-        chatManager->removeGroup(groupId);
-    } else {
-        chatManager->removeGroupModel(groupId);
-    }
-    groupList->removeGroup(groupId, fake);
-
-    delete g;
-    if ((contentLayout != nullptr) && contentLayout->mainHead->layout()->isEmpty()) {
-        onAddClicked();
-    }
-}
 
 void Widget::removeGroup(const GroupId& groupId)
 {
-    removeGroup(groupList->findGroup(groupId));
+    removeChat(groupList->findGroup(groupId), false);
 }
 
 void Widget::onGroupModelAdded(Group* newGroup, std::shared_ptr<GroupRoom> chatroom,
@@ -2320,19 +2097,6 @@ void Widget::onGroupModelAdded(Group* newGroup, std::shared_ptr<GroupRoom> chatr
 
     const auto compact = settings.getCompactLayout();
     auto* widget = new GroupWidget(chatroom, compact, settings, style, this);
-
-    auto notifyReceivedConnection =
-        connect(messageDispatcher.get(), &IMessageDispatcher::messageReceived, this,
-                [this, groupId](const ToxPk& author, const Message& message) {
-                    auto isTargeted =
-                        std::any_of(message.metadata.begin(), message.metadata.end(),
-                                    [](MessageMetadata metadata) {
-                                        return metadata.type == MessageMetadataType::selfMention;
-                                    });
-                    newGroupMessageAlert(groupId, author, message.content,
-                                         isTargeted || settings.getConferenceAlwaysNotify());
-                });
-    groupAlertConnections.insert(groupId, notifyReceivedConnection);
 
     auto* form = new GroupForm(*core, newGroup, *chatHistory, *messageDispatcher, settings,
                                *documentCache, *smileyPack, style, *messageBoxManager, *friendList,
@@ -2362,16 +2126,6 @@ void Widget::onGroupModelAdded(Group* newGroup, std::shared_ptr<GroupRoom> chatr
                 }
                 chatListWidget->itemsChanged();
             });
-    connect(newGroup, &Group::titleChangedByUser, this, [this, groupId](const QString& title) {
-        if (title.isEmpty()) {
-            settings.removeGroupAlias(groupId.toString());
-        } else {
-            settings.setGroupName(groupId.toString(), title);
-        }
-    });
-    connect(newGroup, &Group::nicknameChanged, this, [this, groupId](const QString& nickname) {
-        settings.setGroupNickname(groupId.toString(), nickname);
-    });
 }
 
 void Widget::onConferenceModelAdded(Conference* newConference, std::shared_ptr<ConferenceRoom> chatroom,
@@ -2383,22 +2137,9 @@ void Widget::onConferenceModelAdded(Conference* newConference, std::shared_ptr<C
     const auto compact = settings.getCompactLayout();
     auto* widget = new ConferenceWidget(chatroom, compact, settings, style, this);
 
-    auto notifyReceivedConnection =
-        connect(messageDispatcher.get(), &IMessageDispatcher::messageReceived, this,
-                [this, conferenceId](const ToxPk& author, const Message& message) {
-                    auto isTargeted =
-                        std::any_of(message.metadata.begin(), message.metadata.end(),
-                                    [](MessageMetadata metadata) {
-                                        return metadata.type == MessageMetadataType::selfMention;
-                                    });
-                    newConferenceMessageAlert(conferenceId, author, message.content,
-                                              isTargeted || settings.getConferenceAlwaysNotify());
-                });
-    conferenceAlertConnections.insert(conferenceId, notifyReceivedConnection);
-
     auto* form = new ConferenceForm(*core, newConference, *chatHistory, *messageDispatcher,
-                                    settings, *documentCache, *smileyPack, style,
-                                    *messageBoxManager, *friendList, *conferenceList, *groupList);
+                                    settings, *documentCache, *smileyPack, style, *messageBoxManager,
+                                    *friendList, *conferenceList, *groupList, *callManager);
     connect(&settings, &Settings::nameColorsChanged, form, &GenericChatForm::setColorizedNames);
     form->setColorizedNames(settings.getEnableConferencesColor());
     conferenceWidgets[conferenceId] = widget;
@@ -2453,6 +2194,18 @@ void Widget::resetIcon()
 bool Widget::event(QEvent* e)
 {
     switch (e->type()) {
+    case QEvent::KeyPress:
+        if (static_cast<QKeyEvent*>(e)->key() == Qt::Key_Back) {
+            if (isOnePane() && contentPaneShown) {
+                showContentPane(false);
+            } else {
+                // Closing would quit, and take us offline.
+                Platform::moveToBack();
+            }
+            e->accept();
+            return true;
+        }
+        break;
     case QEvent::MouseButtonPress:
     case QEvent::MouseButtonDblClick:
         focusChatInput();
@@ -2465,6 +2218,10 @@ bool Widget::event(QEvent* e)
             activeChatroomWidget->resetEventFlags();
             activeChatroomWidget->updateStatusLight();
             setWindowTitle(activeChatroomWidget->getTitle());
+            const Chat& chat = *activeChatroomWidget->getChat();
+            if (isInFront(chat)) {
+                notifications->shown(Destination::chat(chat));
+            }
         }
 
         if (eventFlag) {
@@ -2558,7 +2315,9 @@ void Widget::onTryCreateTrayIcon()
         }
     }
 
-    notifier->setIcon(icon.get());
+    if (desktopNotify != nullptr) {
+        desktopNotify->setIcon(icon.get());
+    }
 }
 
 void Widget::setStatusOnline()
@@ -2642,7 +2401,7 @@ void Widget::saveWindowGeometry()
 
 void Widget::saveSplitterGeometry()
 {
-    if (!settings.getSeparateWindow()) {
+    if (!settings.getSeparateWindow() && !isOnePane()) {
         settings.setSplitterState(ui->mainSplitter->saveState());
     }
 }
@@ -2735,6 +2494,10 @@ void Widget::reloadTheme()
     ui->statusButton->setStyleSheet(style.getStylesheet("statusButton/statusButton.qss", settings));
 
     profilePicture->setStyleSheet(style.getStylesheet("window/profile.qss", settings));
+
+    if (contentLayout != nullptr) {
+        contentLayout->reloadTheme();
+    }
 }
 
 void Widget::nextChat()

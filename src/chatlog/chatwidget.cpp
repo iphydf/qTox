@@ -14,14 +14,15 @@
 #include "src/chatlog/chatlinestorage.h"
 #include "src/core/core.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/style.h"
-#include "src/widget/translator.h"
 
 #include <QAction>
 #include <QApplication>
 #include <QClipboard>
 #include <QDebug>
 #include <QMouseEvent>
+#include <QPointingDevice>
 #include <QScrollBar>
 #include <QShortcut>
 #include <QTimer>
@@ -394,7 +395,11 @@ void ChatWidget::mouseMoveEvent(QMouseEvent* ev)
 
     const QPointF scenePos = mapToScene(ev->pos());
 
-    if ((ev->buttons() & Qt::LeftButton) != 0u) {
+    // Fingers scroll, and select with the long press menu.
+    const bool touch = ev->pointingDevice() != nullptr
+                       && ev->pointingDevice()->type() == QInputDevice::DeviceType::TouchScreen;
+
+    if ((ev->buttons() & Qt::LeftButton) != 0u && !touch) {
         // autoscroll
         if (ev->pos().y() < 0)
             selectionScrollDir = AutoScrollDirection::Up;

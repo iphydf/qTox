@@ -11,7 +11,6 @@
 
 #include <QDebug>
 #include <QHash>
-#include <QMenu>
 
 Friend* FriendList::addFriend(uint32_t friendId, const ToxPk& friendPk, Settings& settings)
 {

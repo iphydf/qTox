@@ -7,10 +7,11 @@
 set -euo pipefail
 
 usage() {
-  echo "$0 [--minimal|--full] --build-type [Debug|Release] [--with-gui-tests] [--sanitize] [--tidy]"
+  echo "$0 [--minimal|--full] --build-type [Debug|Release] [--with-gui-tests] [--sanitize] [--tidy] [--qml]"
   echo "Build script to build/test qtox from a CI environment."
   echo "--minimal or --full are required, --build-type is required."
   echo "UndefinedBehaviorSanitizer is always enabled. In Release builds, it is used without additional runtime dependencies."
+  echo "--qml builds the QML user interface instead of the Qt Widgets one, and lints its QML."
 }
 
 while (($# > 0)); do
@@ -41,6 +42,10 @@ while (($# > 0)); do
       ;;
     --with-gui-tests)
       GUI_TESTS=1
+      shift
+      ;;
+    --qml)
+      QML=1
       shift
       ;;
     --help | -h)
@@ -74,6 +79,10 @@ fi
 
 if [ ! -z "${GUI_TESTS+x}" ]; then
   CMAKE_ARGS+=("-DGUI_TESTS=ON")
+fi
+
+if [ ! -z "${QML+x}" ]; then
+  CMAKE_ARGS+=("-DQTOX_UI=qml")
 fi
 
 if [ "$BUILD_TYPE" = "Debug" ]; then
@@ -145,5 +154,8 @@ if [ ! -z "${TIDY+x}" ]; then
     tools/lsp_tidy.py --compile-commands-dir "$BUILD_DIR" --wait
   fi
 else
+  if [ ! -z "${QML+x}" ]; then
+    cmake --build "$BUILD_DIR" --target qtox_qml_lint
+  fi
   ctest -j"$(nproc)" --test-dir "$BUILD_DIR" --output-on-failure
 fi

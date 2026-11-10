@@ -6,54 +6,70 @@
 
 #include "desktopnotifybackend.h"
 
-#include "src/chatlog/textformatter.h"
+#include "src/model/notificationdata.h"
 #include "src/persistence/inotificationsettings.h"
 
 #include <QDebug>
+#include <QPixmap>
 #include <QSystemTrayIcon>
+
+#include <tuple>
 
 struct DesktopNotify::Private
 {
-    INotificationSettings& settings;
+    const INotificationSettings& settings;
     QSystemTrayIcon* icon;
     DesktopNotifyBackend* dbus;
+    IListener* listener;
 };
 
-DesktopNotify::DesktopNotify(INotificationSettings& settings, QObject* parent)
+DesktopNotify::DesktopNotify(const INotificationSettings& settings, QObject* parent)
     : QObject(parent)
     , d(std::make_unique<Private>(Private{
           settings,
           nullptr,
           new DesktopNotifyBackend(this),
+          nullptr,
       }))
 {
-    connect(d->dbus, &DesktopNotifyBackend::messageClicked, this, &DesktopNotify::notificationClosed);
-    if (d->icon != nullptr) {
-        connect(d->icon, &QSystemTrayIcon::messageClicked, this, &DesktopNotify::notificationClosed);
-    }
+    connect(d->dbus, &DesktopNotifyBackend::messageClicked, this, &DesktopNotify::onClicked);
 }
 
 DesktopNotify::~DesktopNotify() = default;
 
 void DesktopNotify::setIcon(QSystemTrayIcon* icon)
 {
+    if (d->icon != nullptr) {
+        disconnect(d->icon, &QSystemTrayIcon::messageClicked, this, &DesktopNotify::onClicked);
+    }
     d->icon = icon;
+    if (d->icon != nullptr) {
+        connect(d->icon, &QSystemTrayIcon::messageClicked, this, &DesktopNotify::onClicked);
+    }
 }
 
-void DesktopNotify::notifyMessage(const NotificationData& notificationData)
+void DesktopNotify::setListener(IListener* listener_)
 {
-    if (!(d->settings.getNotify() && d->settings.getDesktopNotify())) {
-        return;
-    }
+    d->listener = listener_;
+}
 
-    const QString message = d->settings.getHidePostNullSuffix()
-                                ? TextFormatter::processPostNullSuffix(notificationData.message, false)
-                                : notificationData.message;
+void DesktopNotify::onClicked()
+{
+    if (d->listener != nullptr) {
+        d->listener->opened();
+    }
+}
+
+void DesktopNotify::show(const QString& tag, const NotificationData& data, Actions actions)
+{
+    // Nothing tells them apart, and the desktop has no buttons for them.
+    std::ignore = tag;
+    std::ignore = actions;
 
     // Try system-backends first.
     if (d->settings.getNotifySystemBackend()) {
-        if (d->dbus->showMessage(notificationData.title, message, notificationData.category,
-                                 notificationData.pixmap)) {
+        if (d->dbus->showMessage(data.title, data.message, data.category,
+                                 QPixmap::fromImage(data.image))) {
             return;
         }
     }
@@ -69,7 +85,26 @@ void DesktopNotify::notifyMessage(const NotificationData& notificationData)
     }
 
     // Fallback to QSystemTrayIcon.
-    d->icon->showMessage(notificationData.title,
-                         d->dbus->supportsBodyMarkup() ? message.toHtmlEscaped() : message,
-                         notificationData.pixmap);
+    d->icon->showMessage(data.title,
+                         d->dbus->supportsBodyMarkup() ? data.message.toHtmlEscaped() : data.message,
+                         QPixmap::fromImage(data.image));
+}
+
+void DesktopNotify::cancel(const QString& tag)
+{
+    // The next one replaces it.
+    std::ignore = tag;
+}
+
+void DesktopNotify::showStatus(const QString& status)
+{
+    // Desktops keep running without one.
+    std::ignore = status;
+}
+
+void DesktopNotify::setRecording(bool microphone, bool camera)
+{
+    // Desktops let apps record in the background.
+    std::ignore = microphone;
+    std::ignore = camera;
 }

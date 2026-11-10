@@ -55,7 +55,7 @@ public:
     bool sendConferenceCallAudio(int conferenceNum, const int16_t* pcm, size_t samples,
                                  uint8_t chans, uint32_t rate) const;
 
-    VideoSource* getVideoSourceFromCall(int friendNum) const;
+    std::shared_ptr<VideoSource> getVideoSourceFromCall(int friendNum) const;
     void sendNoVideo();
 
     void joinConferenceCall(const Conference& conference);

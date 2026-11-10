@@ -254,6 +254,10 @@ bool CoreAV::answerCall(uint32_t friendNum, bool video)
     const uint32_t videoBitrate = video ? VIDEO_DEFAULT_BITRATE : 0;
     if (toxav_answer(toxav.get(), friendNum, audioSettings.getAudioBitrate(), videoBitrate, &err)) {
         it->second->setActive(true);
+        // The camera stays off until the user answers with it.
+        if (video) {
+            it->second->sendVideo();
+        }
         return true;
     }
     qWarning() << "Failed to answer call with error" << err;
@@ -287,6 +291,9 @@ bool CoreAV::startCall(uint32_t friendNum, bool video)
     assert(audio != nullptr);
     ToxFriendCallPtr call =
         std::make_unique<ToxFriendCall>(friendNum, video, *this, *audio, cameraSource);
+    if (video) {
+        call->sendVideo();
+    }
     // Call object must be owned by this thread or there will be locking problems with Audio
     call->moveToThread(thread());
     assert(call != nullptr);
@@ -387,7 +394,7 @@ void CoreAV::sendCallVideo(uint32_t callId, std::shared_ptr<VideoFrame> vframe)
 
         ToxFriendCall& call = *it->second;
 
-        if (!call.getVideoEnabled() || !call.isActive()
+        if (!call.isSendingVideo() || !call.isActive()
             || ((call.getState() & TOXAV_FRIEND_CALL_STATE_ACCEPTING_V) == 0)) {
             return;
         }
@@ -540,7 +547,7 @@ bool CoreAV::isAnyCallActive() const
  * @param friendNum Id of friend in call list.
  * @return Video surface to show
  */
-VideoSource* CoreAV::getVideoSourceFromCall(int friendNum) const
+std::shared_ptr<VideoSource> CoreAV::getVideoSourceFromCall(int friendNum) const
 {
     const QReadLocker locker{&callsLock};
 
@@ -909,7 +916,7 @@ void CoreAV::videoFrameCallback(ToxAV* toxAV, uint32_t friendNum, uint16_t w, ui
         return;
     }
 
-    CoreVideoSource* videoSource = it->second->getVideoSource();
+    CoreVideoSource* videoSource = it->second->getVideoSource().get();
     if (videoSource == nullptr) {
         return;
     }

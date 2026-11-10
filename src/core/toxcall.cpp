@@ -23,7 +23,7 @@
  * ...)
  *
  * @var bool ToxFriendCall::videoEnabled
- * @brief True if our user asked for a video call, sending and receiving.
+ * @brief True for a video call, which sends the user's camera once sendVideo() says so.
  *
  * @var bool ToxFriendCall::nullVideoBitrate
  * @brief True if our video bitrate is zero, i.e. if the device is closed.
@@ -39,7 +39,6 @@ ToxCall::ToxCall(bool VideoEnabled_, CoreAV& av_, IAudioControl& audio_)
     : av{&av_}
     , audio(audio_)
     , videoEnabled{VideoEnabled_}
-    , audioSource(audio_.makeSource())
 {
 }
 
@@ -100,7 +99,7 @@ void ToxCall::setNullVideoBitrate(bool value)
     nullVideoBitrate = value;
 }
 
-CoreVideoSource* ToxCall::getVideoSource() const
+const std::shared_ptr<CoreVideoSource>& ToxCall::getVideoSource() const
 {
     return videoSource;
 }
@@ -112,43 +111,58 @@ ToxFriendCall::ToxFriendCall(uint32_t friendNum, bool VideoEnabled, CoreAV& av_,
     , friendId{friendNum}
     , cameraSource{cameraSource_}
 {
-    connect(audioSource.get(), &IAudioSource::frameAvailable, &av_,
-            [&av_, friendNum](const int16_t* pcm, size_t samples, uint8_t chans, uint32_t rate) {
-                av_.sendCallAudio(friendNum, pcm, samples, chans, rate);
-            });
-
-    audioSourceInvalid = connect(audioSource.get(), &IAudioSource::invalidated, this,
-                                 &ToxFriendCall::onAudioSourceInvalidated);
-
     if (sink) {
         audioSinkInvalid = sink->connectTo_invalidated(this, [this]() { onAudioSinkInvalidated(); });
     }
 
     // register video
     if (videoEnabled) {
-        videoSource = new CoreVideoSource();
-
-        if (cameraSource.isNone()) {
-            cameraSource.setupDefault();
-        }
-        cameraSource.subscribe();
-        videoInConn = QObject::connect(&cameraSource, &VideoSource::frameAvailable, &av_,
-                                       [&av_, friendNum](std::shared_ptr<VideoFrame> frame) {
-                                           av_.sendCallVideo(friendNum, frame);
-                                       });
-        if (videoInConn == nullptr) {
-            qDebug() << "Video connection not working";
-        }
+        videoSource.reset(new CoreVideoSource());
     }
+}
+
+void ToxFriendCall::setActive(bool value)
+{
+    ToxCall::setActive(value);
+    // The microphone stays off while the call rings.
+    if (value && audioSource == nullptr) {
+        onAudioSourceInvalidated();
+    }
+}
+
+void ToxFriendCall::sendVideo()
+{
+    if (!videoEnabled || sendingVideo) {
+        return;
+    }
+    sendingVideo = true;
+
+    if (cameraSource.isNone()) {
+        cameraSource.setupDefault();
+    }
+    cameraSource.subscribe();
+    CoreAV* const coreAv = av;
+    const uint32_t friendNum = friendId;
+    videoInConn = QObject::connect(&cameraSource, &VideoSource::frameAvailable, coreAv,
+                                   [coreAv, friendNum](std::shared_ptr<VideoFrame> frame) {
+                                       coreAv->sendCallVideo(friendNum, frame);
+                                   });
+    if (videoInConn == nullptr) {
+        qDebug() << "Video connection not working";
+    }
+}
+
+bool ToxFriendCall::isSendingVideo() const
+{
+    return sendingVideo;
 }
 
 ToxFriendCall::~ToxFriendCall()
 {
-    if (videoEnabled) {
+    if (sendingVideo) {
         cameraSource.unsubscribe();
     }
     QObject::disconnect(audioSinkInvalid);
-    QObject::disconnect(audioSourceInvalid);
 }
 
 void ToxFriendCall::onAudioSourceInvalidated()
@@ -158,9 +172,12 @@ void ToxFriendCall::onAudioSourceInvalidated()
         qWarning() << "Failed to create a new audio source";
         return;
     }
-    connect(newSrc.get(), &IAudioSource::frameAvailable, this,
-            [this](const int16_t* pcm, size_t samples, uint8_t chans, uint32_t rate) {
-                av->sendCallAudio(friendId, pcm, samples, chans, rate);
+    // Not this call's: another thread may end the call while a frame is on its way.
+    CoreAV* const coreAv = av;
+    const uint32_t friendNum = friendId;
+    connect(newSrc.get(), &IAudioSource::frameAvailable, coreAv,
+            [coreAv, friendNum](const int16_t* pcm, size_t samples, uint8_t chans, uint32_t rate) {
+                coreAv->sendCallAudio(friendNum, pcm, samples, chans, rate);
             });
     audioSource = std::move(newSrc);
 
@@ -202,6 +219,8 @@ ToxConferenceCall::ToxConferenceCall(const Conference& conference_, CoreAV& av_,
     : ToxCall(false, av_, audio_)
     , conference{conference_}
 {
+    // The user joins at once: there's no ringing.
+    audioSource = audio.makeSource();
     if (audioSource == nullptr) {
         qWarning() << "Created conference call without working audio source";
         return;

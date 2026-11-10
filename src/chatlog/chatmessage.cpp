@@ -6,7 +6,7 @@
 #include "chatmessage.h"
 
 #include "chatlinecontentproxy.h"
-#include "textformatter.h"
+#include "src/model/textformatter.h"
 
 #include "content/broken.h"
 #include "content/filetransferwidget.h"
@@ -15,11 +15,11 @@
 #include "content/spinner.h"
 #include "content/text.h"
 #include "content/timestamp.h"
+#include "src/model/identicon.h"
 #include "src/persistence/history.h"
 #include "src/persistence/settings.h"
 #include "src/persistence/smileypack.h"
 #include "src/widget/style.h"
-#include "src/widget/tool/identicon.h"
 
 #include <QCryptographicHash>
 #include <QDebug>

@@ -34,7 +34,7 @@ public:
     NotificationGenerator& operator=(NotificationGenerator&&) = delete;
 
     NotificationData friendMessageNotification(const Friend* f, const QString& message);
-    NotificationData incomingCallNotification(const Friend* f);
+    NotificationData incomingCallNotification(const Friend* f, bool video);
     NotificationData conferenceMessageNotification(const Conference* c, const ToxPk& sender,
                                                    const QString& message);
     NotificationData groupMessageNotification(const Group* g, const ToxPk& sender,

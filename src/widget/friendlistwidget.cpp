@@ -15,10 +15,10 @@
 #include "src/friendlist.h"
 #include "src/model/conference.h"
 #include "src/model/friend.h"
-#include "src/model/friendlist/friendlistmanager.h"
 #include "src/model/status.h"
 #include "src/persistence/settings.h"
 #include "src/widget/categorywidget.h"
+#include "src/widget/friendlist/friendlistmanager.h"
 
 #include <QDragEnterEvent>
 #include <QDragLeaveEvent>

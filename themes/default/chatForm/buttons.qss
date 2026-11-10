@@ -101,6 +101,15 @@ QAbstractButton#searchDownButton
     height: 35px;
 }
 
+QAbstractButton#backButton
+{
+    background-image: url("@getImagePath(chatForm/backButton.svg)");
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+}
+
 QAbstractButton#choiceDateButton
 {
     background-image: url("@getImagePath(chatForm/searchCalendarButton.svg)");

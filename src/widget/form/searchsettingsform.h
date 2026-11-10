@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "src/widget/searchtypes.h"
+#include "src/model/searchtypes.h"
 
 #include <QWidget>
 

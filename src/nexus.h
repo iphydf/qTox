@@ -7,6 +7,7 @@
 #pragma once
 
 #include "audio/iaudiocontrol.h"
+#include "src/model/session.h"
 
 #include <QObject>
 
@@ -40,6 +41,8 @@ public:
           IPC& ipc, QObject* parent = nullptr);
     ~Nexus() override;
     void start();
+    /** Starts with the session, or tells the login screen why there is none. */
+    void logIn(Session::LoginResult result);
     void showMainGUI();
     void setParser(QCommandLineParser* parser_);
     Profile* getProfile();
@@ -74,26 +77,22 @@ private:
     QActionGroup* windowActions = nullptr;
 #endif
 signals:
-    void currentProfileChanged(Profile* Profile);
     void profileLoaded();
-    void profileLoadFailed();
+    void profileLoadFailed(Session::LoginError error);
     void saveGlobal();
 
 public slots:
     void onCreateNewProfile(const QString& name, const QString& pass);
     void onLoadProfile(const QString& name, const QString& pass);
     int showLogin(const QString& profileName = QString());
-    void bootstrapWithProfile(Profile* p);
 
 private:
     void connectLoginScreen(const LoginScreen& loginScreen);
-    void setProfile(std::unique_ptr<Profile> p);
 
 private:
-    std::unique_ptr<Profile> profile;
+    std::unique_ptr<Session> session;
     Settings& settings;
     std::unique_ptr<Widget> widget;
-    std::unique_ptr<IAudioControl> audioControl;
     QCommandLineParser* parser = nullptr;
     CameraSource& cameraSource;
     std::unique_ptr<Style> style;

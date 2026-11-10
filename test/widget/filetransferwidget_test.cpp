@@ -6,9 +6,9 @@
 
 #include "src/core/corefile.h"
 #include "src/core/toxfile.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/settings.h"
 #include "src/widget/style.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
 #include <QDebug>
 #include <QImage>

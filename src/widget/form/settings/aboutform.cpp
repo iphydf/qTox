@@ -8,11 +8,11 @@
 #include "ui_aboutsettings.h"
 
 #include "src/net/updatecheck.h"
+#include "src/translator.h"
 #include "src/version.h"
 #include "src/widget/form/settings/textcompose.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/recursivesignalblocker.h"
-#include "src/widget/translator.h"
 
 #include <QDebug>
 #include <QDesktopServices>

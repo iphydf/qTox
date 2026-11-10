@@ -1,0 +1,3 @@
+# fontconfig finds a pattern's memory by its offset from the pattern, which
+# LeakSanitizer can't follow.
+leak:libfontconfig

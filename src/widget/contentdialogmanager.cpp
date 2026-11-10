@@ -181,19 +181,24 @@ bool ContentDialogManager::isChatActive(const ChatId& chatId)
     return dialog->isChatActive(chatId);
 }
 
+ContentDialog* ContentDialogManager::getDialog(const ChatId& chatId) const
+{
+    return chatDialogs.value(chatId);
+}
+
 ContentDialog* ContentDialogManager::getFriendDialog(const ToxPk& friendPk) const
 {
-    return chatDialogs.value(friendPk);
+    return getDialog(friendPk);
 }
 
 ContentDialog* ContentDialogManager::getConferenceDialog(const ConferenceId& conferenceId) const
 {
-    return chatDialogs.value(conferenceId);
+    return getDialog(conferenceId);
 }
 
 ContentDialog* ContentDialogManager::getGroupDialog(const GroupId& groupId) const
 {
-    return chatDialogs.value(groupId);
+    return getDialog(groupId);
 }
 
 void ContentDialogManager::addContentDialog(ContentDialog& dialog)

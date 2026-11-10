@@ -8,9 +8,9 @@
 #include "src/core/toxfile.h"
 #include "src/core/toxpk.h"
 #include "src/model/brokenmessagereason.h"
+#include "src/model/searchtypes.h"
 #include "src/model/systemmessage.h"
 #include "src/persistence/db/rawdatabase.h"
-#include "src/widget/searchtypes.h"
 
 #include <QDateTime>
 #include <QHash>
@@ -213,6 +213,9 @@ public:
 public:
     History(std::shared_ptr<RawDatabase> db, Settings& settings, IMessageBoxManager& messageBoxManager);
     ~History() override;
+
+    /** Waits for the queries already asked for, and their callbacks. */
+    void sync();
 
     bool isValid();
 

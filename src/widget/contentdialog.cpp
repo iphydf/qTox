@@ -17,6 +17,7 @@
 #include "src/model/group.h"
 #include "src/model/status.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/conferencewidget.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/form/chatform.h"
@@ -24,7 +25,6 @@
 #include "src/widget/friendwidget.h"
 #include "src/widget/groupwidget.h"
 #include "src/widget/style.h"
-#include "src/widget/translator.h"
 #include "src/widget/widget.h"
 
 #include <QBoxLayout>

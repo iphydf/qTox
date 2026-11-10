@@ -5,7 +5,7 @@
 
 #include "src/core/toxstring.h"
 
-#include "src/widget/form/settings/generalform.h" // getLocales
+#include "src/translator.h"
 
 #include <QByteArray>
 #include <QString>
@@ -250,7 +250,7 @@ void TestToxString::nullptrUINT8Test()
  */
 void TestToxString::localesTest()
 {
-    const QStringList& locales = GeneralForm::getLocales();
+    const QStringList& locales = Translator::getLocales();
     for (const QString& locale : locales) {
         const QString lang = QLocale(locale).nativeLanguageName();
         const ToxString test(lang);

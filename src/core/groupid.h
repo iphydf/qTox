@@ -17,6 +17,8 @@ public:
     GroupId();
     explicit GroupId(const QByteArray& rawId);
     explicit GroupId(const uint8_t* rawId);
+    /** The ID that toString() gave, or an empty one. */
+    static GroupId fromString(const QString& id);
     int getSize() const override;
     std::unique_ptr<ChatId> clone() const override;
 };

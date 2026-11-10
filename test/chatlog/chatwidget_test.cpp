@@ -7,10 +7,10 @@
 #include "src/chatlog/documentcache.h"
 #include "src/core/icoreidhandler.h"
 #include "src/model/ichatlog.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/settings.h"
 #include "src/persistence/smileypack.h"
 #include "src/widget/style.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
 #include <QApplication>
 #include <QObject>

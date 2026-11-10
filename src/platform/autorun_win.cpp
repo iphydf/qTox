@@ -11,7 +11,7 @@
 #ifdef Q_OS_WIN
 #include "src/persistence/settings.h"
 
-#include <QApplication>
+#include <QCoreApplication>
 
 #include <string>
 #include <windows.h>
@@ -40,7 +40,7 @@ inline tstring toTString(QString s)
 namespace Platform {
 inline tstring currentCommandLine(const Settings& settings)
 {
-    return toTString("\"" + QApplication::applicationFilePath().replace('/', '\\') + "\" -p \""
+    return toTString("\"" + QCoreApplication::applicationFilePath().replace('/', '\\') + "\" -p \""
                      + settings.getCurrentProfile() + "\"");
 }
 

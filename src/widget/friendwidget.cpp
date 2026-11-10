@@ -433,7 +433,7 @@ void FriendWidget::resetEventFlags()
     chatroom->resetEventFlags();
 }
 
-void FriendWidget::onAvatarSet(const ToxPk& friendPk, const QPixmap& pic)
+void FriendWidget::onAvatarSet(const ToxPk& friendPk, const QImage& pic)
 {
     auto* const frnd = chatroom->getFriend();
     if (friendPk != frnd->getPublicKey()) {
@@ -441,7 +441,7 @@ void FriendWidget::onAvatarSet(const ToxPk& friendPk, const QPixmap& pic)
     }
 
     isDefaultAvatar = false;
-    avatar->setPixmap(pic);
+    avatar->setPixmap(QPixmap::fromImage(pic));
 }
 
 void FriendWidget::onAvatarRemoved(const ToxPk& friendPk)

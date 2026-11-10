@@ -14,7 +14,6 @@
 #include "src/model/group.h"
 #include "src/model/status.h"
 #include "src/persistence/settings.h"
-#include "src/widget/contentdialog.h"
 
 #include <QCollator>
 
@@ -42,6 +41,29 @@ FriendChatroom::FriendChatroom(Friend* frnd_, IDialogsManager* dialogsManager_, 
     , conferenceList{conferenceList_}
     , groupList{groupList_}
 {
+    constexpr auto typingDuration = std::chrono::seconds{3};
+    typingTimer.setSingleShot(true);
+    typingTimer.setInterval(typingDuration);
+    connect(&typingTimer, &QTimer::timeout, this, [this] {
+        typing = false;
+        core.sendTyping(frnd->getId(), false);
+    });
+}
+
+void FriendChatroom::setDraftHasText(bool hasText)
+{
+    // Off: the friend who saw the user typing sees them stop, and nothing after.
+    const bool nowTyping = hasText && settings.getTypingNotification();
+    if (nowTyping == typing) {
+        return;
+    }
+    typing = nowTyping;
+    core.sendTyping(frnd->getId(), nowTyping);
+    if (nowTyping) {
+        typingTimer.start();
+    } else {
+        typingTimer.stop();
+    }
 }
 
 Friend* FriendChatroom::getFriend()

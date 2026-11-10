@@ -8,6 +8,8 @@
 #include <QBoxLayout>
 #include <QFrame>
 
+class QPushButton;
+
 class Settings;
 class Style;
 
@@ -20,10 +22,13 @@ public:
 
     void clear() const;
 
+    QHBoxLayout headLayout;
     QFrame mainHLine;
     QHBoxLayout mainHLineLayout;
     QWidget* mainContent;
     QWidget* mainHead;
+    // Shown when the main window has room for one pane only.
+    QPushButton* backButton;
     Settings& settings;
     Style& style;
 

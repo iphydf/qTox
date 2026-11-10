@@ -17,6 +17,7 @@
 #include "src/model/group.h"
 #include "src/persistence/settings.h"
 #include "src/persistence/smileypack.h"
+#include "src/translator.h"
 #include "src/widget/chatformheader.h"
 #include "src/widget/contentdialog.h"
 #include "src/widget/contentlayout.h"
@@ -27,7 +28,6 @@
 #include "src/widget/style.h"
 #include "src/widget/tool/chattextedit.h"
 #include "src/widget/tool/flyoutoverlaywidget.h"
-#include "src/widget/translator.h"
 #include "src/widget/widget.h"
 
 #include <QClipboard>
@@ -133,8 +133,6 @@ GenericChatForm::GenericChatForm(const Core& core_, const Chat* chat, IChatLog& 
                                  QWidget* parent_)
     : QWidget(parent_, Qt::Window)
     , core{core_}
-    , audioInputFlag(false)
-    , audioOutputFlag(false)
     , chatLog(chatLog_)
     , messageDispatcher(messageDispatcher_)
     , smileyPack{smileyPack_}
@@ -448,21 +446,15 @@ void GenericChatForm::onChatContextMenuRequested(QPoint pos)
 
 void GenericChatForm::onSendTriggered()
 {
-    auto msg = msgEdit->toPlainText();
-
-    const bool isAction = msg.startsWith(ChatForm::ACTION_PREFIX, Qt::CaseInsensitive);
-    if (isAction) {
-        msg.remove(0, ChatForm::ACTION_PREFIX.length());
-    }
-
-    if (msg.isEmpty()) {
+    const std::optional<Message> message = Message::typed(msgEdit->toPlainText());
+    if (!message) {
         return;
     }
 
-    msgEdit->setLastMessage(msg);
+    msgEdit->setLastMessage(message->content);
     msgEdit->clear();
 
-    messageDispatcher.sendMessage(isAction, msg);
+    messageDispatcher.sendMessage(message->isAction, message->content);
 }
 
 

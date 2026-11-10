@@ -9,7 +9,6 @@
 #include "src/core/icoreidhandler.h"
 #include "src/model/chat.h"
 #include "src/persistence/settings.h"
-#include "src/widget/form/chatform.h"
 
 namespace {
 /**
@@ -51,9 +50,9 @@ bool handleActionPrefix(QString& content)
     // inserting and parsing for ACTION_PREFIX in our messages even
     // though we have the ability to something more intelligent now
     // that we aren't owned by chat form logic
-    auto isAction = content.startsWith(ChatForm::ACTION_PREFIX, Qt::CaseInsensitive);
+    auto isAction = content.startsWith(Message::ACTION_PREFIX, Qt::CaseInsensitive);
     if (isAction) {
-        content.remove(0, ChatForm::ACTION_PREFIX.size());
+        content.remove(0, Message::ACTION_PREFIX.size());
     }
 
     return isAction;
@@ -99,6 +98,14 @@ ChatHistory::ChatHistory(Chat& chat_, History* history_, const ICoreIdHandler& c
     // We don't manage any of the item updates ourselves, we just forward along
     // the underlying sessionChatLog's updates
     connect(&sessionChatLog, &IChatLog::itemUpdated, this, &IChatLog::itemUpdated);
+}
+
+ChatHistory::~ChatHistory()
+{
+    // The database calls back here once it stored a sent message: wait for that before going.
+    if (history != nullptr) {
+        history->sync();
+    }
 }
 
 const ChatLogItem& ChatHistory::at(ChatLogIdx idx) const
@@ -259,7 +266,7 @@ void ChatHistory::onMessageReceived(const ToxPk& sender, const Message& message)
         auto displayName = chat.getDisplayedName(sender);
         auto content = message.content;
         if (message.isAction) {
-            content = ChatForm::ACTION_PREFIX + content;
+            content = Message::ACTION_PREFIX + content;
         }
 
         history->addNewMessage(chatId, content, sender, message.timestamp, true, displayName, {},
@@ -277,12 +284,17 @@ void ChatHistory::onMessageSent(DispatchedMessageId id, const Message& message)
 
         auto content = message.content;
         if (message.isAction) {
-            content = ChatForm::ACTION_PREFIX + content;
+            content = Message::ACTION_PREFIX + content;
         }
 
         auto username = coreIdHandler.getUsername();
 
-        auto onInsertion = [this, id](RowId historyId) { handleDispatchedMessage(id, historyId); };
+        // The database calls this on its own thread: handle it on ours.
+        auto onInsertion = [this, id](RowId historyId) {
+            QMetaObject::invokeMethod(
+                this, [this, id, historyId] { handleDispatchedMessage(id, historyId); },
+                Qt::QueuedConnection);
+        };
 
         history->addNewMessage(chatId, content, selfPk, message.timestamp, false, username,
                                onInsertion, message.recipient, message.recipientName);

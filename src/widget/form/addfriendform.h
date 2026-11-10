@@ -45,11 +45,12 @@ public:
     void show(ContentLayout* contentLayout);
     void setMode(Mode mode);
 
-    bool addFriendRequest(const QString& friendAddress, const QString& message_);
+    void showFriendRequest(const QString& friendAddress, const QString& message_);
 
 signals:
     void friendRequested(const ToxId& friendAddress, const QString& message);
     void friendRequestAccepted(const ToxPk& friendAddress);
+    void friendRequestRejected(const ToxPk& friendAddress);
     void friendRequestsSeen();
 
 public slots:
@@ -71,7 +72,6 @@ private:
     void removeFriendRequestWidget(QWidget* friendWidget);
     static void retranslateAcceptButton(QPushButton* acceptButton);
     static void retranslateRejectButton(QPushButton* rejectButton);
-    void deleteFriendRequest(const ToxId& toxId_);
     void setIdFromClipboard();
     QString getMessage() const;
     QString getImportMessage() const;

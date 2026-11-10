@@ -1,0 +1,13 @@
+{
+  "name": "qTox",
+  "author": "The TokTok team",
+  "description": "The standards qTox sets for its own QML code",
+  "version": "1.0",
+  "loggingCategories": [
+    {
+      "name": "untrusted-text",
+      "settingsName": "UntrustedText",
+      "description": "Warns about text that Qt Quick may show as HTML"
+    }
+  ]
+}

@@ -7,6 +7,7 @@
 
 #include <QObject>
 #include <QString>
+#include <QTimer>
 #include <QVector>
 
 class Chat;
@@ -73,6 +74,11 @@ public slots:
     QVector<CircleToDisplay> getOtherCircles() const;
 
     void resetEventFlags();
+    /**
+     * The user's draft for the friend changed. While it has text, the friend sees that the user
+     * is typing: for a while, and not if the user turned that off.
+     */
+    void setDraftHasText(bool hasText);
 
     bool possibleToOpenInNewWindow() const;
     bool canBeRemovedFromWindow() const;
@@ -84,6 +90,9 @@ signals:
 
 private:
     bool active{false};
+    // Whether the friend sees the user typing.
+    bool typing{false};
+    QTimer typingTimer;
     Friend* frnd{nullptr};
     IDialogsManager* dialogsManager{nullptr};
     Core& core;

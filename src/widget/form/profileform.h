@@ -50,7 +50,7 @@ public:
     bool isShown() const;
 
 public slots:
-    void onSelfAvatarLoaded(const QPixmap& pic);
+    void onSelfAvatarLoaded(const QImage& pic);
     void onLogoutClicked();
 
 private slots:
