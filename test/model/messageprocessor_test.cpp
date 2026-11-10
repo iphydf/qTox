@@ -11,15 +11,6 @@
 
 #include <tox/tox.h>
 
-namespace {
-bool messageHasSelfMention(const Message& message)
-{
-    return std::any_of(message.metadata.begin(), message.metadata.end(), [](MessageMetadata meta) {
-        return meta.type == MessageMetadataType::selfMention;
-    });
-}
-} // namespace
-
 class TestMessageProcessor : public QObject
 {
     Q_OBJECT
@@ -55,55 +46,55 @@ void TestMessageProcessor::testSelfMention()
 
         // Using my name or public key should match
         auto processedMessage = messageProcessor.processIncomingCoreMessage(false, str % " hi");
-        QVERIFY(messageHasSelfMention(processedMessage));
+        QVERIFY(processedMessage.mentionsSelf());
 
         // Action messages should match too
         processedMessage = messageProcessor.processIncomingCoreMessage(true, str % " hi");
-        QVERIFY(messageHasSelfMention(processedMessage));
+        QVERIFY(processedMessage.mentionsSelf());
 
         // Too much text shouldn't match
         processedMessage = messageProcessor.processIncomingCoreMessage(false, str % "2");
-        QVERIFY(!messageHasSelfMention(processedMessage));
+        QVERIFY(!processedMessage.mentionsSelf());
 
         // Unless it's a colon
         processedMessage = messageProcessor.processIncomingCoreMessage(false, str % ": test");
-        QVERIFY(messageHasSelfMention(processedMessage));
+        QVERIFY(processedMessage.mentionsSelf());
 
         // remove last character
         QString chopped = str;
         chopped.chop(1);
         // Too little text shouldn't match
         processedMessage = messageProcessor.processIncomingCoreMessage(false, chopped);
-        QVERIFY(!messageHasSelfMention(processedMessage));
+        QVERIFY(!processedMessage.mentionsSelf());
 
         // make lower case
         QString lower = QString(str).toLower();
 
         // The regex should be case insensitive
         processedMessage = messageProcessor.processIncomingCoreMessage(false, lower % " hi");
-        QVERIFY(messageHasSelfMention(processedMessage));
+        QVERIFY(processedMessage.mentionsSelf());
     }
 
     // New user name changes should be detected
     sharedParams.onUserNameSet("NewUserName");
     auto processedMessage = messageProcessor.processIncomingCoreMessage(false, "NewUserName: hi");
-    QVERIFY(messageHasSelfMention(processedMessage));
+    QVERIFY(processedMessage.mentionsSelf());
 
     // Special characters should be removed
     sharedParams.onUserNameSet("New\nUserName");
     processedMessage = messageProcessor.processIncomingCoreMessage(false, "NewUserName: hi");
-    QVERIFY(messageHasSelfMention(processedMessage));
+    QVERIFY(processedMessage.mentionsSelf());
 
     // Regression tests for: https://github.com/qTox/qTox/issues/2119
     {
         // Empty usernames should not match
         sharedParams.onUserNameSet("");
         processedMessage = messageProcessor.processIncomingCoreMessage(false, "");
-        QVERIFY(!messageHasSelfMention(processedMessage));
+        QVERIFY(!processedMessage.mentionsSelf());
 
         // Empty usernames matched on everything, ensure this is not the case
         processedMessage = messageProcessor.processIncomingCoreMessage(false, "a");
-        QVERIFY(!messageHasSelfMention(processedMessage));
+        QVERIFY(!processedMessage.mentionsSelf());
     }
 }
 

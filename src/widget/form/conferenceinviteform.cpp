@@ -8,9 +8,9 @@
 #include "src/core/core.h"
 #include "src/model/conferenceinvite.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/form/conferenceinvitewidget.h"
-#include "src/widget/translator.h"
 
 #include <QDateTime>
 #include <QDebug>

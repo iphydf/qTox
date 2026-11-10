@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "searchtypes.h"
+#include "src/model/searchtypes.h"
 
 #include <QLineEdit>
 #include <QWidget>

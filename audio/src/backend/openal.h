@@ -8,6 +8,7 @@
 
 #include "alsink.h"
 #include "alsource.h"
+#include "voicegate.h"
 
 #include "audio/iaudiocontrol.h"
 
@@ -74,18 +75,14 @@ public:
     void startLoop(uint sourceId);
     void stopLoop(uint sourceId);
     void playMono16Sound(AlSink& sink, const IAudioSink::Sound& sound);
-    void stopActive();
 
     void playAudioBuffer(uint sourceId, const int16_t* data, int samples, unsigned channels,
                          int sampleRate);
-signals:
-    void startActive(qreal msec);
 
 protected:
     static void checkAlError() noexcept;
     static void checkAlcError(ALCdevice* device) noexcept;
 
-    qreal inputGainFactor() const;
     virtual void cleanupInput();
     virtual void cleanupOutput();
 
@@ -106,8 +103,6 @@ private:
 
     static void cleanupBuffers(uint sourceId);
     void cleanupSound();
-
-    qreal getVolume();
 
 protected:
     IAudioSettings& settings;
@@ -131,15 +126,6 @@ protected:
     std::unordered_set<AlSource*> sources;
 
     int inputChannels = 0;
-    qreal gain = 0;
-    qreal gainFactor = 1;
-    static constexpr qreal minInGain = -30;
-    static constexpr qreal maxInGain = 30;
-    qreal inputThreshold = 0;
-    qreal voiceHold = 250;
-    bool isActive = false;
-    QTimer voiceTimer;
-    const qreal minInThreshold = 0.0;
-    const qreal maxInThreshold = 0.4;
+    VoiceGate gate;
     int16_t* inputBuffer = nullptr;
 };

@@ -12,6 +12,7 @@
 #include "src/core/core.h"
 #include "src/core/coreav.h"
 #include "src/core/corefile.h"
+#include "src/model/callduration.h"
 #include "src/model/friend.h"
 #include "src/model/status.h"
 #include "src/nexus.h"
@@ -19,7 +20,7 @@
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
 #include "src/platform/screenshot.h"
-#include "src/video/netcamview.h"
+#include "src/translator.h"
 #include "src/widget/chatformheader.h"
 #include "src/widget/contentdialogmanager.h"
 #include "src/widget/form/loadhistorydialog.h"
@@ -31,7 +32,7 @@
 #include "src/widget/tool/chattextedit.h"
 #include "src/widget/tool/croppinglabel.h"
 #include "src/widget/tool/screenshotgrabber.h"
-#include "src/widget/translator.h"
+#include "src/widget/video/netcamview.h"
 #include "src/widget/widget.h"
 
 #include <QApplication>
@@ -61,37 +62,6 @@ namespace {
 constexpr int CHAT_WIDGET_MIN_HEIGHT = 50;
 constexpr int SCREENSHOT_GRABBER_OPENING_DELAY = 500;
 constexpr int TYPING_NOTIFICATION_DURATION = 3000;
-} // namespace
-
-const QString ChatForm::ACTION_PREFIX = QStringLiteral("/me ");
-
-namespace {
-QString secondsToDHMS(quint32 duration)
-{
-    const QString res;
-    const QString cD = ChatForm::tr("Call duration: ");
-    const quint32 seconds = duration % 60;
-    duration /= 60;
-    const quint32 minutes = duration % 60;
-    duration /= 60;
-    const quint32 hours = duration % 24;
-    const quint32 days = duration / 24;
-
-    // I assume no one will ever have call longer than a month
-    if (days != 0u) {
-        return cD + QString::asprintf("%ud%02uh %02um %02us", days, hours, minutes, seconds);
-    }
-
-    if (hours != 0u) {
-        return cD + QString::asprintf("%02uh %02um %02us", hours, minutes, seconds);
-    }
-
-    if (minutes != 0u) {
-        return cD + QString::asprintf("%02um %02us", minutes, seconds);
-    }
-
-    return cD + QString::asprintf("%02us", seconds);
-}
 } // namespace
 
 ChatForm::ChatForm(Profile& profile_, Friend* chatFriend, IChatLog& chatLog_,
@@ -505,13 +475,13 @@ void ChatForm::onStatusMessage(const QString& message)
     }
 }
 
-void ChatForm::onAvatarChanged(const ToxPk& friendPk, const QPixmap& pic)
+void ChatForm::onAvatarChanged(const ToxPk& friendPk, const QImage& pic)
 {
     if (friendPk != f->getPublicKey()) {
         return;
     }
 
-    headWidget->setAvatar(pic);
+    headWidget->setAvatar(QPixmap::fromImage(pic));
 }
 
 std::unique_ptr<NetCamView> ChatForm::createNetcam()

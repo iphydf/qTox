@@ -7,12 +7,12 @@
 
 #include "ui_advancedsettings.h"
 
-#include "src/net/toxuri.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
-#include "src/widget/tool/imessageboxmanager.h"
+#include "src/translator.h"
 #include "src/widget/tool/recursivesignalblocker.h"
-#include "src/widget/translator.h"
+#include "src/widget/tool/toxuri.h"
 #include "util/network.h"
 
 #include <QApplication>

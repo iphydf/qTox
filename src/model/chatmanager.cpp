@@ -324,7 +324,10 @@ void ChatManager::onConferenceMessageReceived(uint32_t conferencenumber, uint32_
                                               const QString& message, bool isAction)
 {
     const ConferenceId& conferenceId = conferenceList.id2Key(conferencenumber);
-    assert(conferenceList.findConference(conferenceId));
+    // Core's events come queued, also after the user left the conference.
+    if (conferenceList.findConference(conferenceId) == nullptr) {
+        return;
+    }
 
     const ToxPk author = core->getConferencePeerPk(conferencenumber, peernumber);
 
@@ -354,7 +357,9 @@ void ChatManager::onConferencePeerlistChanged(uint32_t conferencenumber)
 {
     const ConferenceId& conferenceId = conferenceList.id2Key(conferencenumber);
     Conference* c = conferenceList.findConference(conferenceId);
-    assert(c);
+    if (c == nullptr) {
+        return;
+    }
     c->regeneratePeerList();
 }
 
@@ -363,7 +368,9 @@ void ChatManager::onConferencePeerNameChanged(uint32_t conferencenumber, const T
 {
     const ConferenceId& conferenceId = conferenceList.id2Key(conferencenumber);
     Conference* c = conferenceList.findConference(conferenceId);
-    assert(c);
+    if (c == nullptr) {
+        return;
+    }
 
     const QString setName = friendList.decideNickname(peerPk, newName);
     c->updateUsername(peerPk, newName);
@@ -374,7 +381,9 @@ void ChatManager::onConferenceTitleChanged(uint32_t conferencenumber, const QStr
 {
     const ConferenceId& conferenceId = conferenceList.id2Key(conferencenumber);
     Conference* c = conferenceList.findConference(conferenceId);
-    assert(c);
+    if (c == nullptr) {
+        return;
+    }
 
     c->setTitle(author, title);
 }

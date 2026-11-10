@@ -176,7 +176,7 @@ public slots:
     void onStatusSet(Status::Status status);
     void onFailedToStartCore();
     void onBadProxyCore();
-    void onSelfAvatarLoaded(const QPixmap& pic);
+    void onSelfAvatarLoaded(const QImage& pic);
     void setUsername(const QString& username);
     void setStatusMessage(const QString& statusMessage);
     void addFriendFailed(const ToxPk& userId, const QString& errorInfo = QString());

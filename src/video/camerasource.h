@@ -5,6 +5,7 @@
 
 #pragma once
 
+#include "src/video/framerotation.h"
 #include "src/video/videomode.h"
 #include "src/video/videosource.h"
 
@@ -59,6 +60,8 @@ private:
     // TODO: Remove when ffmpeg version will be bumped to the 3.1.0
     AVCodecContext* cctxOrig;
     int videoStreamIndex;
+    // How to turn the device's frames upright: phones' cameras are mounted sideways.
+    FrameOrientation orientation;
 
     QReadWriteLock deviceMutex;
     QReadWriteLock streamMutex;

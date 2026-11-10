@@ -7,9 +7,9 @@
 
 #include "src/core/chatid.h"
 #include "src/core/toxpk.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/db/rawdatabase.h"
 #include "src/persistence/db/upgrades/dbto11.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
 #include <QDebug>
 #include <QString>

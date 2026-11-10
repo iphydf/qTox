@@ -26,8 +26,6 @@ public:
         return tr("General");
     }
 
-    static const QStringList& getLocales();
-
 signals:
     void updateIcons();
 

@@ -1,0 +1,179 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright © 2026 The TokTok team.
+
+#include <QDateTime>
+#include <QStringList>
+
+// What the user interface sees of the Tox service. The service also shares
+// the models named in remotemodels.h.
+class ToxService
+{
+    PROP(QStringList profiles READONLY);
+    PROP(QStringList encryptedProfiles READONLY);
+    // The language in use, and the one chosen (empty for the system's).
+    PROP(QString translation READONLY);
+    PROP(QString language READWRITE);
+    PROP(bool loggedIn READONLY);
+    // The profile logged in, or empty.
+    PROP(QString profileName READONLY);
+    PROP(bool online READONLY);
+    PROP(QString selfName READONLY);
+    PROP(QString selfId READONLY);
+    PROP(QString selfStatusMessage READONLY);
+    // A Status::Status: Online, Away or Busy.
+    PROP(int selfStatus READONLY);
+    // A PNG, and what changes with it: empty for none.
+    PROP(QByteArray selfAvatar READONLY);
+    PROP(QString selfAvatarHash READONLY);
+    // Whether a friend without an avatar shows an identicon of their key.
+    PROP(bool showIdenticons READONLY);
+    // The call in a chat (a ChatKind::Kind and an ID), in a CallState::State, and since when it's
+    // active. Conference calls are active from the start.
+    PROP(int callKind READONLY);
+    PROP(QString callChat READONLY);
+    PROP(int callState READONLY);
+    PROP(QDateTime callStarted READONLY);
+    PROP(bool callMicMuted READONLY);
+    PROP(bool callSpeakerMuted READONLY);
+    // Whether a call plays on the loudspeaker rather than the earpiece, on Android.
+    PROP(bool callLoudspeaker READONLY);
+    // Whether the friend in the call sends video: callVideoFrame() has it.
+    PROP(bool callVideo READONLY);
+    // Whether the friend calling offers video, and whether the user's camera goes to them:
+    // selfVideoFrame() has what it sees.
+    PROP(bool callOffersVideo READONLY);
+    PROP(bool callSendsVideo READONLY);
+    PROP(bool canSwitchCamera READONLY);
+    PROP(int friendRequestCount READONLY);
+    PROP(int inviteCount READONLY);
+
+    // The profile's privacy, notification and file settings.
+    PROP(bool typingNotification READWRITE);
+    // Whether chats say when friends' statuses change.
+    PROP(bool statusChangeMessages READWRITE);
+    PROP(bool keepHistory READWRITE);
+    PROP(bool notify READWRITE);
+    PROP(bool conferenceAlwaysNotify READWRITE);
+    // Whether calls ring, also while the user is busy.
+    PROP(bool notifySound READWRITE);
+    PROP(bool busySound READWRITE);
+    // Whether files from every friend are saved without asking, up to this many bytes, 0 for any.
+    PROP(bool autoSaveFiles READWRITE);
+    PROP(qint64 maxAutoAcceptSize READWRITE);
+
+    // Tox's network settings, applied at the next login.
+    PROP(bool udpEnabled READWRITE);
+    PROP(bool ipv6Enabled READWRITE);
+    PROP(bool lanDiscoveryEnabled READWRITE);
+    // An ICoreSettings::ProxyType.
+    PROP(int proxyType READWRITE);
+    PROP(QString proxyAddress READWRITE);
+    PROP(int proxyPort READWRITE);
+
+    // With autoLogin, the service logs in by itself when it starts, unless the profile has a
+    // password.
+    SLOT(void createProfile(const QString& name, const QString& password, bool autoLogin));
+    SLOT(void loadProfile(const QString& name, const QString& password, bool autoLogin));
+    SLOT(void logout());
+    // An empty password removes it.
+    SLOT(void setPassword(const QString& password));
+    SLOT(void renameProfile(const QString& name));
+    // Logs out and deletes the profile's files.
+    SLOT(void deleteProfile());
+    // The Tox save file of the profile logged in, as the Widgets UI exports it.
+    SLOT(QByteArray exportProfile());
+    // Adds a Tox save file as profile @p name, replacing one of that name.
+    SLOT(void importProfile(const QString& name, const QByteArray& save));
+    SLOT(void changeName(const QString& name));
+    SLOT(void changeStatusMessage(const QString& message));
+    SLOT(void changeStatus(int status));
+    // A new random NoSpam: requests to the old Tox ID no longer arrive.
+    SLOT(void newNospam());
+    // A PNG that ProfileInfo::createAvatar() made.
+    SLOT(void changeAvatar(const QByteArray& avatar));
+    SLOT(void removeAvatar());
+    SLOT(void addFriend(const QString& toxId, const QString& message));
+    SLOT(void acceptFriendRequest(const QString& publicKey));
+    SLOT(void rejectFriendRequest(const QString& publicKey));
+    // An empty alias shows the friend's own name.
+    SLOT(void setFriendAlias(const QString& publicKey, const QString& alias));
+    SLOT(void removeFriend(const QString& publicKey, bool removeHistory));
+    // Deletes a friend's chat history and clears the chat, as the Widgets UI does.
+    SLOT(void removeHistory(const QString& publicKey));
+    // What the user notes about a friend: only they see it.
+    SLOT(void setFriendNote(const QString& publicKey, const QString& note));
+    // A group's password, if it has one: conferences have none.
+    SLOT(void acceptInvite(const QString& id, const QString& password));
+    SLOT(void rejectInvite(const QString& id));
+
+    // A chat is a ChatKind::Kind and an ID: a friend's public key, or a conference's or a
+    // group's persistent ID. openChat shares it as remotemodels.h's chat model.
+    SLOT(void openChat(int kind, const QString& id));
+    SLOT(void sendMessage(int kind, const QString& id, const QString& text));
+    // The chat model's row of the next message with the phrase, from @p fromRow on, or -1.
+    SLOT(int findMessage(int kind, const QString& id, const QString& phrase, int fromRow, bool backward));
+    // A friend's file: its number is the chat model's fileNum.
+    SLOT(void acceptFile(const QString& publicKey, int fileNum));
+    SLOT(void cancelFile(const QString& publicKey, int fileNum, bool sending));
+    // Pauses the user's side of a transfer, or resumes it.
+    SLOT(void pauseFile(const QString& publicKey, int fileNum));
+    // A file the service can open.
+    SLOT(void sendFile(const QString& publicKey, const QString& path));
+    // A new conference's ID, or empty if Tox couldn't make one.
+    SLOT(QString createConference(const QString& title));
+    // The friend must be online.
+    SLOT(void inviteToConference(const QString& id, const QString& publicKey));
+    SLOT(void setConferenceTitle(const QString& id, const QString& title));
+    // A new public group's ID, or empty if Tox couldn't make one.
+    SLOT(QString createGroup(const QString& name));
+    // Joins a public group by its ID, with its password if it has one. Its ID, or empty if Tox
+    // couldn't join.
+    SLOT(QString joinGroup(const QString& id, const QString& password));
+    // The friend must be online.
+    SLOT(void inviteToGroup(const QString& id, const QString& publicKey));
+    SLOT(void setGroupTopic(const QString& id, const QString& topic));
+    // The user's name in the group: empty for the profile's.
+    SLOT(void setGroupNickname(const QString& id, const QString& nickname));
+    // What the founder decides: an empty password removes it; a private group takes only the
+    // friends its members invite; a VoiceState::State says who may write.
+    SLOT(void setGroupPassword(const QString& id, const QString& password));
+    SLOT(void setGroupPrivate(const QString& id, bool isPrivate));
+    SLOT(void setGroupPeerLimit(const QString& id, int peerLimit));
+    SLOT(void setGroupTopicLocked(const QString& id, bool locked));
+    SLOT(void setGroupVoiceState(const QString& id, int voiceState));
+    // A peer by their key in the group: a moderator's or the founder's to do. The role is a
+    // PeerRole::Role.
+    SLOT(void setGroupPeerRole(const QString& id, const QString& publicKey, int role));
+    SLOT(void kickGroupPeer(const QString& id, const QString& publicKey));
+    // To one peer in the group, by their key there, which the others don't see.
+    SLOT(void sendGroupPrivateMessage(const QString& id, const QString& publicKey, const QString& text));
+    // One call at a time, with the user's camera if @p video.
+    SLOT(void startCall(const QString& publicKey, bool video));
+    SLOT(void answerCall(bool video));
+    // An audio conference's.
+    SLOT(void joinConferenceCall(const QString& id));
+    // Hangs up, declines or stops calling.
+    SLOT(void endCall());
+    SLOT(void toggleCallMic());
+    SLOT(void toggleCallSpeaker());
+    SLOT(void toggleCallLoudspeaker());
+    // The next camera, while the user's camera goes to the friend.
+    SLOT(void switchCamera());
+    SLOT(void leaveConference(const QString& id));
+    SLOT(void leaveGroup(const QString& id));
+    // Whether to join the conferences and groups a friend invites the user to without asking.
+    SLOT(void setAutoAcceptInvites(const QString& publicKey, bool accept));
+    // Whether to save a friend's files without asking.
+    SLOT(void setAutoAcceptFiles(const QString& publicKey, bool accept));
+    // Tells a friend whether the user is writing to them.
+    SLOT(void setTyping(const QString& publicKey, bool typing));
+    SLOT(void eraseHistory());
+    // The chat the user is looking at, which needs no notifications; any kind
+    // that isn't a ChatKind::Kind for none.
+    SLOT(void setActiveChat(int kind, const QString& id));
+
+    SIGNAL(error(const QString& title, const QString& text));
+    // The friend's video, and the user's camera, a JPEG at a time.
+    SIGNAL(callVideoFrame(const QByteArray& jpeg));
+    SIGNAL(selfVideoFrame(const QByteArray& jpeg));
+};

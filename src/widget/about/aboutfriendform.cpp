@@ -8,9 +8,9 @@
 #include "ui_aboutfriendform.h"
 
 #include "src/core/toxpk.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/widget/popup.h"
 #include "src/widget/style.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
 #include <QFileDialog>
 #include <QMessageBox>

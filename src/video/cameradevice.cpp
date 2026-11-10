@@ -8,12 +8,13 @@
 #include "scopedavdictionary.h"
 
 #include "src/persistence/settings.h"
+#include "src/platform/camera/android.h"      // IWYU pragma: keep
 #include "src/platform/camera/avfoundation.h" // IWYU pragma: keep
 #include "src/platform/camera/directshow.h"   // IWYU pragma: keep
 #include "src/platform/camera/v4l2.h"         // IWYU pragma: keep
 
-#include <QApplication>
 #include <QDebug>
+#include <QGuiApplication>
 #include <QMutex>
 #include <QMutexLocker>
 #include <QScreen>
@@ -183,7 +184,7 @@ CameraDevice* CameraDevice::open(QString devName, VideoMode mode)
         return nullptr;
     }
 
-#if defined(USING_V4L) || defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+#if defined(USING_V4L) || defined(Q_OS_WIN) || defined(Q_OS_MACOS) || defined(Q_OS_ANDROID)
     float fps = 5;
     if (mode.fps > 0.0f) {
         fps = mode.fps;
@@ -205,7 +206,7 @@ CameraDevice* CameraDevice::open(QString devName, VideoMode mode)
             screen.setWidth(mode.width);
             screen.setHeight(mode.height);
         } else {
-            QScreen* defaultScreen = QApplication::primaryScreen();
+            QScreen* defaultScreen = QGuiApplication::primaryScreen();
             const qreal pixRatio = defaultScreen->devicePixelRatio();
 
             screen = defaultScreen->size();
@@ -263,6 +264,15 @@ CameraDevice* CameraDevice::open(QString devName, VideoMode mode)
         options["probesize"] = probesize;
         // TODO(iphydf): Find available pixel formats and select the first one.
         options["pixel_format"] = "uyvy422";
+    }
+#endif
+#ifdef Q_OS_ANDROID
+    else if (QString::fromUtf8(iformat->name) == QStringLiteral("android_camera")) {
+        options["camera_index"] = devName;
+        if (!mode.isUnspecified()) {
+            options["video_size"] = videoSize;
+            options["framerate"] = framerate;
+        }
     }
 #endif
     else if (!mode.isUnspecified()) {
@@ -365,6 +375,10 @@ QVector<QPair<QString, QString>> CameraDevice::getDeviceList()
     else if (QString::fromUtf8(iformat->name) == QStringLiteral("avfoundation"))
         devices += avfoundation::getDeviceList();
 #endif
+#ifdef Q_OS_ANDROID
+    else if (QString::fromUtf8(iformat->name) == QStringLiteral("android_camera"))
+        devices += androidcamera::getDeviceList();
+#endif
     else
         devices += getRawDeviceListGeneric();
 
@@ -429,7 +443,7 @@ bool CameraDevice::isScreen(const QString& devName)
  */
 QVector<VideoMode> CameraDevice::getScreenModes()
 {
-    QList<QScreen*> screens = QApplication::screens();
+    QList<QScreen*> screens = QGuiApplication::screens();
     QVector<VideoMode> result;
 
     std::for_each(screens.begin(), screens.end(), [&result](QScreen* s) {
@@ -469,6 +483,10 @@ QVector<VideoMode> CameraDevice::getVideoModes(QString devName)
 #ifdef Q_OS_MACOS
     else if (QString::fromUtf8(iformat->name) == QStringLiteral("avfoundation"))
         return avfoundation::getDeviceModes(devName);
+#endif
+#ifdef Q_OS_ANDROID
+    else if (QString::fromUtf8(iformat->name) == QStringLiteral("android_camera"))
+        return androidcamera::getDeviceModes(devName);
 #endif
     else
         qWarning() << "Video mode listing not implemented for input" << iformat->name;
@@ -547,6 +565,11 @@ bool CameraDevice::getDefaultInputFormat()
     if ((iformat = av_find_input_format("avfoundation")) != nullptr)
         return true;
     if ((iformat = av_find_input_format("qtkit")) != nullptr)
+        return true;
+#endif
+
+#ifdef Q_OS_ANDROID
+    if ((iformat = av_find_input_format("android_camera")) != nullptr)
         return true;
 #endif
 

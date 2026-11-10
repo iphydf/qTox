@@ -12,9 +12,9 @@
 #include "src/friendlist.h"
 #include "src/model/conference.h"
 #include "src/model/status.h"
+#include "src/translator.h"
 #include "src/widget/friendwidget.h"
 #include "src/widget/style.h"
-#include "src/widget/translator.h"
 #include "src/widget/widget.h"
 #include "tool/croppinglabel.h"
 

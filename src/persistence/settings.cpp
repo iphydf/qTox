@@ -7,25 +7,23 @@
 #include "settings.h"
 
 #include "src/core/core.h"
-#include "src/nexus.h"
+#include "src/model/imessageboxmanager.h"
+#include "src/model/theme.h"
 #include "src/persistence/globalsettingsupgrader.h"
 #include "src/persistence/personalsettingsupgrader.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/profilelocker.h"
 #include "src/persistence/settingsserializer.h"
+#include "src/translator.h"
 
 #ifdef QTOX_PLATFORM_EXT
 #include "src/platform/autorun.h"
 #endif
-#include "src/widget/form/settings/generalform.h" // getLocales
-#include "src/widget/style.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
-#include <QApplication>
+#include <QCoreApplication>
 #include <QCryptographicHash>
 #include <QDebug>
 #include <QDir>
-#include <QErrorMessage>
 #include <QFile>
 #include <QFont>
 #include <QHostInfo>
@@ -35,8 +33,6 @@
 #include <QMutexLocker>
 #include <QNetworkProxy>
 #include <QStandardPaths>
-#include <QStyleFactory>
-#include <QStyleHints>
 #include <QThread>
 #include <QTimer>
 #include <QtCore/QCommandLineParser>
@@ -93,7 +89,8 @@ static constexpr int GLOBAL_SETTINGS_VERSION = 1;
 static constexpr int PERSONAL_SETTINGS_VERSION = 1;
 static constexpr int SAVE_TIMER_INTERVAL_MS = 500;
 
-Settings::Settings(IMessageBoxManager& messageBoxManager_, Paths::Portable mode)
+Settings::Settings(IMessageBoxManager& messageBoxManager_, Paths::Portable mode,
+                   const QString& portablePath)
     : loaded{false}
     , useCustomDhtList{false}
     , dhtServerId{-1}
@@ -154,7 +151,6 @@ Settings::Settings(IMessageBoxManager& messageBoxManager_, Paths::Portable mode)
     , dialogSettingsGeometry{}
     , style{}
     , showSystemTray{true}
-    , chatMessageFont{Style::getFont(Style::Font::Big)}
     , stylePreference{StyleType::WITH_CHARS}
     , firstColumnHandlePos{50}
     , secondColumnHandlePosFromRight{50}
@@ -201,6 +197,9 @@ Settings::Settings(IMessageBoxManager& messageBoxManager_, Paths::Portable mode)
         savePersonal();
     });
 
+    if (!portablePath.isEmpty()) {
+        paths.setPortablePath(portablePath);
+    }
     moveToThread(settingsThread);
     loadGlobal();
 }
@@ -324,14 +323,7 @@ void Settings::loadGlobal()
             smileyPack = ":/smileys/EmojiOne/emoticons.xml";
         }
 
-        const Style::MainTheme systemTheme =
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-            QGuiApplication::styleHints()->colorScheme() == Qt::ColorScheme::Dark
-#else
-            QGuiApplication::palette().color(QPalette::Window).value() < 128
-#endif
-                ? Style::MainTheme::Dark
-                : Style::MainTheme::Light;
+        const Theme::MainTheme systemTheme = Theme::system();
         qDebug() << "System theme:" << systemTheme;
 
         emojiFontPointSize = s.value("emojiFontPointSize", emojiFontPointSize).toInt();
@@ -342,21 +334,18 @@ void Settings::loadGlobal()
         dateFormat = s.value("dateFormat", dateFormat).toString();
         minimizeOnClose = s.value("minimizeOnClose", minimizeOnClose).toBool();
         minimizeToTray = s.value("minimizeToTray", minimizeToTray).toBool();
-        lightTrayIcon = s.value("lightTrayIcon", systemTheme == Style::MainTheme::Dark).toBool();
+        lightTrayIcon = s.value("lightTrayIcon", systemTheme == Theme::MainTheme::Dark).toBool();
         useEmoticons = s.value("useEmoticons", useEmoticons).toBool();
         statusChangeNotificationEnabled =
             s.value("statusChangeNotificationEnabled", statusChangeNotificationEnabled).toBool();
         showConferenceJoinLeaveMessages =
             s.value("showConferenceJoinLeaveMessages", showConferenceJoinLeaveMessages).toBool();
         spellCheckingEnabled = s.value("spellCheckingEnabled", spellCheckingEnabled).toBool();
-        themeColor = s.value("themeColor", Style::defaultThemeColor(systemTheme)).toInt();
+        themeColor = s.value("themeColor", Theme::defaultColor(systemTheme)).toInt();
         style = s.value("style", style).toString();
-        if (style == "") // Default to Fusion if available, otherwise no style
-        {
-            if (QStyleFactory::keys().contains("Fusion"))
-                style = "Fusion";
-            else
-                style = "None";
+        // Default to Fusion. A UI without it treats an unknown style as no style.
+        if (style.isEmpty()) {
+            style = "Fusion";
         }
         nameColors = s.value("nameColors", nameColors).toBool();
         imagePreview = s.value("imagePreview", imagePreview).toBool();
@@ -366,7 +355,9 @@ void Settings::loadGlobal()
     });
 
     inGroup(s, "Chat", [this, &s] {
-        chatMessageFont = s.value("chatMessageFont", chatMessageFont).value<QFont>();
+        if (s.contains("chatMessageFont")) {
+            chatMessageFont = s.value("chatMessageFont").value<QFont>();
+        }
     });
 
     inGroup(s, "State", [this, &s] {
@@ -728,6 +719,26 @@ void Settings::resetToDefault()
         local.remove();
 }
 
+void Settings::unloadPersonal(const Profile& profile)
+{
+    // Where the save timer reads loadedProfile.
+    if (QThread::currentThread() != settingsThread) {
+        QMetaObject::invokeMethod(this, [this, &profile] { unloadPersonal(profile); }, Qt::BlockingQueuedConnection);
+        return;
+    }
+
+    const QMutexLocker<QRecursiveMutex> locker{&bigLock};
+    if (loadedProfile != &profile) {
+        return;
+    }
+    if (saveTimer->isActive()) {
+        saveTimer->stop();
+        saveGlobal();
+        savePersonal(profile.getName(), profile.getPasskey());
+    }
+    loadedProfile = nullptr;
+}
+
 /**
  * @brief Asynchronous, saves the global settings.
  */
@@ -820,7 +831,9 @@ void Settings::saveGlobal()
     });
 
     inGroup(s, "Chat", [this, &s] { //
-        s.setValue("chatMessageFont", chatMessageFont);
+        if (chatMessageFont) {
+            s.setValue("chatMessageFont", *chatMessageFont);
+        }
     });
 
     inGroup(s, "State", [this, &s] {
@@ -1264,7 +1277,7 @@ void Settings::setConferenceAlwaysNotify(bool newValue)
 
 QString Settings::getSystemTranslation()
 {
-    const QStringList& locales = GeneralForm::getLocales();
+    const QStringList& locales = Translator::getLocales();
     QString locale = QLocale::system().name();
 
     // try to find an exact match (e.g. pt_BR)
@@ -1637,12 +1650,15 @@ void Settings::setMaxAutoAcceptSize(size_t size)
 const QFont& Settings::getChatMessageFont() const
 {
     const QMutexLocker<QRecursiveMutex> locker(&bigLock);
-    return chatMessageFont;
+    if (!chatMessageFont) {
+        chatMessageFont = Theme::font(Theme::Font::Big);
+    }
+    return *chatMessageFont;
 }
 
 void Settings::setChatMessageFont(const QFont& font)
 {
-    if (setVal(chatMessageFont, font)) {
+    if (setVal(chatMessageFont, std::optional<QFont>{font})) {
         emit chatMessageFontChanged(font);
     }
 }
@@ -2519,7 +2535,7 @@ void Settings::sync()
     }
 
     const QMutexLocker<QRecursiveMutex> locker{&bigLock};
-    qApp->processEvents();
+    QCoreApplication::processEvents();
 }
 
 Settings::FriendProp& Settings::getOrInsertFriendPropRef(const ToxPk& id)

@@ -5,7 +5,7 @@
 
 #include "chattextedit.h"
 
-#include "src/widget/translator.h"
+#include "src/translator.h"
 
 #include <QApplication>
 #include <QClipboard>

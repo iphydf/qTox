@@ -7,14 +7,13 @@
 
 #include "src/core/core.h"
 #include "src/model/toxclientstandards.h"
-#include "src/nexus.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
 
-#include <QApplication>
 #include <QBuffer>
 #include <QClipboard>
 #include <QFile>
+#include <QGuiApplication>
 #include <QImageReader>
 
 namespace {
@@ -77,7 +76,7 @@ bool tryRemoveFile(const QString& filepath)
  * @class ProfileInfo
  * @brief Implement interface, that provides information about self profile.
  * Also, provide methods to work with profile file.
- * @note Should be used only when QApplication constructed.
+ * @note Should be used only when QGuiApplication constructed.
  */
 
 /**
@@ -86,11 +85,10 @@ bool tryRemoveFile(const QString& filepath)
  * @param profile Pointer to Profile.
  * @note All pointers parameters shouldn't be null.
  */
-ProfileInfo::ProfileInfo(Core* core_, Profile* profile_, Settings& settings_, Nexus& nexus_)
+ProfileInfo::ProfileInfo(Core* core_, Profile* profile_, Settings& settings_)
     : profile{profile_}
     , core{core_}
     , settings{settings_}
-    , nexus{nexus_}
 {
     connect(core_, &Core::idSet, this, &ProfileInfo::idChanged);
     connect(core_, &Core::usernameSet, this, &ProfileInfo::usernameChanged);
@@ -134,7 +132,7 @@ void ProfileInfo::copyId() const
 {
     const ToxId selfId = core->getSelfId();
     const QString txt = selfId.toString();
-    QClipboard* clip = QApplication::clipboard();
+    QClipboard* clip = QGuiApplication::clipboard();
     clip->setText(txt, QClipboard::Clipboard);
     if (clip->supportsSelection()) {
         clip->setText(txt, QClipboard::Selection);
@@ -186,7 +184,7 @@ IProfileInfo::RenameResult ProfileInfo::renameProfile(const QString& name)
         return RenameResult::ProfileAlreadyExists;
     }
 
-    if (!profile->rename(name)) {
+    if (!profile->rename(newName)) {
         return RenameResult::Error;
     }
 
@@ -223,7 +221,7 @@ IProfileInfo::SaveResult ProfileInfo::exportProfile(const QString& path) const
 QStringList ProfileInfo::removeProfile()
 {
     QStringList manualDeleteFiles = profile->remove();
-    QMetaObject::invokeMethod(&nexus, "showLogin");
+    emit loginRequested(QString());
     return manualDeleteFiles;
 }
 
@@ -232,9 +230,8 @@ QStringList ProfileInfo::removeProfile()
  */
 void ProfileInfo::logout()
 {
-    // TODO(kriby): Refactor all of these invokeMethod calls with connect() properly when possible
     settings.saveGlobal();
-    QMetaObject::invokeMethod(&nexus, "showLogin", Q_ARG(QString, settings.getCurrentProfile()));
+    emit loginRequested(settings.getCurrentProfile());
 }
 
 /**
@@ -243,7 +240,7 @@ void ProfileInfo::logout()
  */
 void ProfileInfo::copyQr(const QImage& image) const
 {
-    QApplication::clipboard()->setImage(image);
+    QGuiApplication::clipboard()->setImage(image);
 }
 
 /**
@@ -288,7 +285,7 @@ IProfileInfo::SetAvatarResult ProfileInfo::setAvatar(const QString& path)
         return SetAvatarResult::CanNotOpen;
     }
     QByteArray avatar;
-    const auto err = createAvatarFromFile(file, avatar);
+    const auto err = createAvatar(file.readAll(), avatar);
     if (err == SetAvatarResult::OK) {
         profile->setAvatar(avatar);
     }
@@ -296,15 +293,14 @@ IProfileInfo::SetAvatarResult ProfileInfo::setAvatar(const QString& path)
 }
 
 /**
- * @brief Create an avatar from an image file
- * @param file Image file, which should be the new avatar.
+ * @brief Create an avatar from an image file's contents
+ * @param image The contents of an image file, which should be the new avatar.
  * @param avatar Output avatar of correct file type and size.
  * @return SetAvatarResult
  */
-IProfileInfo::SetAvatarResult ProfileInfo::createAvatarFromFile(QFile& file, QByteArray& avatar)
+IProfileInfo::SetAvatarResult ProfileInfo::createAvatar(const QByteArray& image, QByteArray& avatar)
 {
-    const QByteArray fileContents{file.readAll()};
-    auto err = byteArrayToPng(fileContents, avatar);
+    auto err = byteArrayToPng(image, avatar);
     if (err != SetAvatarResult::OK) {
         return err;
     }

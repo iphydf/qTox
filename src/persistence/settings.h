@@ -26,6 +26,7 @@
 #include <QObject>
 #include <QPixmap>
 
+#include <optional>
 #include <utility>
 
 class Profile;
@@ -135,8 +136,9 @@ public:
     };
 
 public:
+    /** @param portablePath Where the settings are, instead of where @p mode puts them. */
     explicit Settings(IMessageBoxManager& messageBoxManager,
-                      Paths::Portable mode = Paths::Portable::Auto);
+                      Paths::Portable mode = Paths::Portable::Auto, const QString& portablePath = {});
     ~Settings() override;
     Settings(Settings& settings) = delete;
     Settings& operator=(const Settings&) = delete;
@@ -151,6 +153,8 @@ public:
 
     void loadGlobal();
     void loadPersonal(const Profile& profile, bool newProfile);
+    /** Forgets @p profile, which is going away, after saving the changes still waiting. */
+    void unloadPersonal(const Profile& profile);
 
     void resetToDefault();
 
@@ -696,7 +700,8 @@ private:
     bool showSystemTray;
 
     // ChatView
-    QFont chatMessageFont;
+    // Set on first use: fonts need a QGuiApplication, which the QML UI's Tox service doesn't have.
+    mutable std::optional<QFont> chatMessageFont;
     StyleType stylePreference;
     int firstColumnHandlePos;
     int secondColumnHandlePosFromRight;

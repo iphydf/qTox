@@ -5,44 +5,17 @@
 
 #include "imagepreviewwidget.h"
 
-#include "src/core/untrustedimage.h"
-#include "src/model/exiftransform.h"
+#include "src/model/previewimage.h"
 
 #include <QApplication>
 #include <QBuffer>
-#include <QFile>
-#include <QFileInfo>
 #include <QScreen>
 #include <QString>
 
 namespace {
 QPixmap pixmapFromFile(const QString& filename)
 {
-    static const QStringList previewExtensions = {
-        "gif",  // Graphics Interchange Format
-        "jpeg", // Joint Photographic Experts Group
-        "jpg",  // Joint Photographic Experts Group
-        "png",  // Portable Network Graphics
-        "qoi",  // Quite OK Image Format
-        "svg",  // Scalable Vector Graphics
-        "webp", // WebP
-    };
-
-    if (!previewExtensions.contains(QFileInfo(filename).suffix().toLower())) {
-        return {};
-    }
-
-    QFile imageFile(filename);
-    if (!imageFile.open(QIODevice::ReadOnly)) {
-        return {};
-    }
-
-    const QByteArray imageFileData = imageFile.readAll();
-    QImage image = UntrustedImage::decode(imageFileData);
-    auto orientation = ExifTransform::getOrientation(imageFileData);
-    image = ExifTransform::applyTransformation(image, orientation);
-
-    return QPixmap::fromImage(image);
+    return QPixmap::fromImage(loadPreviewImage(filename));
 }
 
 QPixmap scaleCropIntoSquare(const QPixmap& source, const int targetSize)

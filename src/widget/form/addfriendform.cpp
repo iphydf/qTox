@@ -6,13 +6,13 @@
 #include "addfriendform.h"
 
 #include "src/core/core.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/nexus.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/croppinglabel.h"
-#include "src/widget/tool/imessageboxmanager.h"
-#include "src/widget/translator.h"
 
 #include <QApplication>
 #include <QClipboard>

@@ -11,13 +11,13 @@
 #include "src/model/group.h"
 #include "src/model/groupmessagedispatcher.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/chatformheader.h"
 #include "src/widget/flowlayout.h"
 #include "src/widget/form/chatform.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/chattextedit.h"
 #include "src/widget/tool/croppinglabel.h"
-#include "src/widget/translator.h"
 
 #include <QApplication>
 #include <QClipboard>
@@ -711,9 +711,9 @@ void GroupForm::onSendTriggered()
 {
     auto msg = msgEdit->toPlainText();
 
-    const bool isAction = msg.startsWith(ChatForm::ACTION_PREFIX, Qt::CaseInsensitive);
+    const bool isAction = msg.startsWith(Message::ACTION_PREFIX, Qt::CaseInsensitive);
     if (isAction) {
-        msg.remove(0, ChatForm::ACTION_PREFIX.length());
+        msg.remove(0, Message::ACTION_PREFIX.length());
     }
 
     if (msg.isEmpty()) {

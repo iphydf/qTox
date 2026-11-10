@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Launchers without adaptive icons show the logo as it is. -->
+    <drawable name="ic_launcher">@drawable/qtox_logo</drawable>
+</resources>

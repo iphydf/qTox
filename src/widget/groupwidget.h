@@ -8,7 +8,7 @@
 
 #include "src/core/groupid.h"
 #include "src/model/chatroom/grouproom.h"
-#include "src/model/friendlist/ifriendlistitem.h"
+#include "src/widget/friendlist/ifriendlistitem.h"
 
 #include <memory>
 

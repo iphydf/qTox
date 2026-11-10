@@ -8,8 +8,8 @@
 #include "src/conferencelist.h"
 #include "src/friendlist.h"
 #include "src/model/chatlogitem.h"
+#include "src/model/searchtypes.h"
 #include "src/model/systemmessage.h"
-#include "src/widget/searchtypes.h"
 #include "util/strongtype.h"
 
 using ChatLogIdx =

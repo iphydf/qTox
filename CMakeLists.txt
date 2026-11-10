@@ -193,6 +193,18 @@ include_directories(${CMAKE_SOURCE_DIR})
 
 include(Dependencies)
 
+# One user interface per build: Qt Widgets on the desktop, QML on mobile (which
+# needs Qt 6.12).
+if(ANDROID AND Qt6Core_VERSION VERSION_GREATER_EQUAL 6.12)
+  set(QTOX_UI_DEFAULT qml)
+else()
+  set(QTOX_UI_DEFAULT widgets)
+endif()
+set(QTOX_UI
+    "${QTOX_UI_DEFAULT}"
+    CACHE STRING "The user interface to build: widgets or qml")
+set_property(CACHE QTOX_UI PROPERTY STRINGS widgets qml)
+
 # ##############################################################################
 #
 # :: qTox main library sources
@@ -259,6 +271,8 @@ set(${BINARY_NAME}_SOURCES
     src/ipc.h
     src/nexus.cpp
     src/nexus.h
+    src/translator.cpp
+    src/translator.h
     src/chatlog/chatlinecontent.cpp
     src/chatlog/chatlinecontent.h
     src/chatlog/chatlinecontentproxy.cpp
@@ -293,8 +307,6 @@ set(${BINARY_NAME}_SOURCES
     src/chatlog/pixmapcache.h
     src/core/toxfileprogress.cpp
     src/core/toxfileprogress.h
-    src/chatlog/textformatter.cpp
-    src/chatlog/textformatter.h
     src/core/coreav.cpp
     src/core/coreav.h
     src/core/core.cpp
@@ -348,6 +360,8 @@ set(${BINARY_NAME}_SOURCES
     src/model/about/aboutfriend.h
     src/model/about/iaboutfriend.cpp
     src/model/about/iaboutfriend.h
+    src/model/callduration.cpp
+    src/model/callduration.h
     src/model/chathistory.cpp
     src/model/chathistory.h
     src/model/chatmanager.cpp
@@ -372,10 +386,6 @@ set(${BINARY_NAME}_SOURCES
     src/model/dialogs/idialogsmanager.cpp
     src/model/exiftransform.cpp
     src/model/exiftransform.h
-    src/model/friendlist/friendlistmanager.cpp
-    src/model/friendlist/friendlistmanager.h
-    src/model/friendlist/ifriendlistitem.cpp
-    src/model/friendlist/ifriendlistitem.h
     src/model/friendmessagedispatcher.cpp
     src/model/friendmessagedispatcher.h
     src/model/friend.cpp
@@ -395,27 +405,36 @@ set(${BINARY_NAME}_SOURCES
     src/model/ibootstraplistgenerator.cpp
     src/model/ibootstraplistgenerator.h
     src/model/ichatlog.h
+    src/model/identicon.cpp
+    src/model/identicon.h
+    src/model/imessageboxmanager.cpp
+    src/model/imessageboxmanager.h
     src/model/imessagedispatcher.cpp
     src/model/imessagedispatcher.h
     src/model/message.cpp
     src/model/message.h
     src/model/notificationgenerator.cpp
     src/model/notificationgenerator.h
+    src/model/previewimage.cpp
+    src/model/previewimage.h
     src/model/profile/iprofileinfo.cpp
     src/model/profile/iprofileinfo.h
     src/model/profile/profileinfo.cpp
     src/model/profile/profileinfo.h
+    src/model/searchtypes.h
     src/model/sessionchatlog.cpp
     src/model/sessionchatlog.h
     src/model/status.cpp
     src/model/status.h
+    src/model/textformatter.cpp
+    src/model/textformatter.h
+    src/model/theme.cpp
+    src/model/theme.h
     src/model/toxclientstandards.h
     src/net/bootstrapnodeupdater.cpp
     src/net/bootstrapnodeupdater.h
     src/net/avatarbroadcaster.cpp
     src/net/avatarbroadcaster.h
-    src/net/toxuri.cpp
-    src/net/toxuri.h
     src/net/updatecheck.cpp
     src/net/updatecheck.h
     src/net/updateversion.cpp
@@ -458,12 +477,12 @@ set(${BINARY_NAME}_SOURCES
     src/persistence/personalsettingsupgrader.h
     src/persistence/smileypack.cpp
     src/persistence/smileypack.h
-    src/persistence/toxsave.cpp
-    src/persistence/toxsave.h
     src/platform/autorun.h
     src/platform/autorun_osx.cpp
     src/platform/autorun_win.cpp
     src/platform/autorun_xdg.cpp
+    src/platform/camera/android.cpp
+    src/platform/camera/android.h
     src/platform/camera/directshow.cpp
     src/platform/camera/directshow.h
     src/platform/camera/v4l2.cpp
@@ -495,10 +514,10 @@ set(${BINARY_NAME}_SOURCES
     src/video/camerasource.h
     src/video/corevideosource.cpp
     src/video/corevideosource.h
+    src/video/framerotation.cpp
+    src/video/framerotation.h
     src/video/ivideosettings.cpp
     src/video/ivideosettings.h
-    src/video/netcamview.cpp
-    src/video/netcamview.h
     src/video/scopedavdictionary.cpp
     src/video/scopedavdictionary.h
     src/video/videoframe.cpp
@@ -507,8 +526,6 @@ set(${BINARY_NAME}_SOURCES
     src/video/videomode.h
     src/video/videosource.cpp
     src/video/videosource.h
-    src/video/videosurface.cpp
-    src/video/videosurface.h
     src/widget/about/aboutfriendform.cpp
     src/widget/about/aboutfriendform.h
     src/widget/categorywidget.cpp
@@ -529,11 +546,14 @@ set(${BINARY_NAME}_SOURCES
     src/widget/emoticonswidget.h
     src/widget/flowlayout.cpp
     src/widget/flowlayout.h
+    src/widget/friendlist/friendlistmanager.cpp
+    src/widget/friendlist/friendlistmanager.h
+    src/widget/friendlist/ifriendlistitem.cpp
+    src/widget/friendlist/ifriendlistitem.h
     src/widget/imagepreviewwidget.h
     src/widget/imagepreviewwidget.cpp
     src/widget/searchform.cpp
     src/widget/searchform.h
-    src/widget/searchtypes.h
     src/widget/form/addfriendform.cpp
     src/widget/form/addfriendform.h
     src/widget/form/chatform.cpp
@@ -631,8 +651,6 @@ set(${BINARY_NAME}_SOURCES
     src/widget/tool/activatedialog.h
     src/widget/tool/adjustingscrollarea.cpp
     src/widget/tool/adjustingscrollarea.h
-    src/widget/tool/imessageboxmanager.h
-    src/widget/tool/imessageboxmanager.cpp
     src/widget/tool/messageboxmanager.cpp
     src/widget/tool/messageboxmanager.h
     src/widget/tool/callconfirmwidget.cpp
@@ -643,8 +661,6 @@ set(${BINARY_NAME}_SOURCES
     src/widget/tool/croppinglabel.h
     src/widget/tool/flyoutoverlaywidget.cpp
     src/widget/tool/flyoutoverlaywidget.h
-    src/widget/tool/identicon.cpp
-    src/widget/tool/identicon.h
     src/widget/tool/movablewidget.cpp
     src/widget/tool/movablewidget.h
     src/widget/tool/profileimporter.cpp
@@ -661,8 +677,14 @@ set(${BINARY_NAME}_SOURCES
     src/widget/tool/screenshotgrabber.h
     src/widget/tool/toolboxgraphicsitem.cpp
     src/widget/tool/toolboxgraphicsitem.h
-    src/widget/translator.cpp
-    src/widget/translator.h
+    src/widget/tool/toxsave.cpp
+    src/widget/tool/toxsave.h
+    src/widget/tool/toxuri.cpp
+    src/widget/tool/toxuri.h
+    src/widget/video/netcamview.cpp
+    src/widget/video/netcamview.h
+    src/widget/video/videosurface.cpp
+    src/widget/video/videosurface.h
     src/widget/widget.cpp
     src/widget/widget.h)
 
@@ -718,15 +740,31 @@ add_subdirectory(audio)
 add_subdirectory(translations)
 add_subdirectory(cmake/warnings)
 
-add_library(${BINARY_NAME}_static STATIC ${${BINARY_NAME}_FORMS}
-                                         ${${BINARY_NAME}_SOURCES})
-target_link_libraries(${BINARY_NAME}_static ${CMAKE_REQUIRED_LIBRARIES}
-                      ${ALL_LIBRARIES} coverage_config)
+# The desktop user interface, built on Qt Widgets (as WIDGETS_FILES in
+# src/BUILD.bazel). The rest is what every user interface shares, and doesn't
+# depend on Qt Widgets.
+set(WIDGETS_SOURCES_REGEX
+    "^src/(appmanager|nexus)\\.|^src/(chatlog|widget)/|^src/platform/(capslock|desktop_notifications/|screenshot|timer|x11_display)"
+)
+set(${BINARY_NAME}_WIDGETS_SOURCES ${${BINARY_NAME}_SOURCES})
+list(FILTER ${BINARY_NAME}_WIDGETS_SOURCES INCLUDE REGEX
+     "${WIDGETS_SOURCES_REGEX}")
+set(${BINARY_NAME}_SHARED_SOURCES ${${BINARY_NAME}_SOURCES})
+list(FILTER ${BINARY_NAME}_SHARED_SOURCES EXCLUDE REGEX
+     "${WIDGETS_SOURCES_REGEX}")
+set(SHARED_LIBRARIES ${ALL_LIBRARIES})
+list(REMOVE_ITEM SHARED_LIBRARIES Qt6::DBus Qt6::Svg Qt6::Widgets)
 
-target_link_libraries(${BINARY_NAME}_static qtox::warnings)
-target_link_libraries(${BINARY_NAME}_static util_library)
-target_link_libraries(${BINARY_NAME}_static audio_library)
-target_link_libraries(${BINARY_NAME}_static translations_library)
+add_library(${BINARY_NAME}_shared STATIC ${${BINARY_NAME}_SHARED_SOURCES})
+target_link_libraries(
+  ${BINARY_NAME}_shared
+  PUBLIC ${CMAKE_REQUIRED_LIBRARIES} ${SHARED_LIBRARIES} coverage_config
+         util_library audio_library translations_library
+  PRIVATE qtox::warnings)
+if(ANDROID)
+  # androidcamera lists the cameras.
+  target_link_libraries(${BINARY_NAME}_shared PRIVATE camera2ndk)
+endif()
 
 if(COMMAND qt_policy)
   # set QTP0002 policy: target properties that specify Android-specific paths
@@ -734,14 +772,149 @@ if(COMMAND qt_policy)
   qt_policy(SET QTP0002 NEW)
 endif()
 
-qt_add_executable(${BINARY_NAME} WIN32 MACOSX_BUNDLE
-                  ${${BINARY_NAME}_RESOURCES} ${SMILEY_RESOURCES} src/main.cpp)
-target_link_libraries(
-  ${BINARY_NAME} PRIVATE ${BINARY_NAME}_static ${CMAKE_REQUIRED_LIBRARIES}
-                         ${ALL_LIBRARIES})
+if(QTOX_UI STREQUAL "qml")
+  find_package(Qt6 REQUIRED COMPONENTS Qml Quick QuickControls2 RemoteObjects)
+  message(STATUS "Building the QML user interface")
+
+  set(QML_UI_SOURCES
+      src/qml/avatarprovider.cpp
+      src/qml/avatarprovider.h
+      src/qml/backend.cpp
+      src/qml/backend.h
+      src/qml/callaudio.cpp
+      src/qml/callaudio.h
+      src/qml/callstate.h
+      src/qml/callvideoprovider.cpp
+      src/qml/callvideoprovider.h
+      src/qml/chatkind.h
+      src/qml/chatlistmodel.cpp
+      src/qml/chatlistmodel.h
+      src/qml/chatmodel.cpp
+      src/qml/chatmodel.h
+      src/qml/files.cpp
+      src/qml/files.h
+      src/qml/friendrequestmodel.cpp
+      src/qml/friendrequestmodel.h
+      src/qml/inotifier.cpp
+      src/qml/inotifier.h
+      src/qml/invitemodel.cpp
+      src/qml/invitemodel.h
+      src/qml/peerrole.h
+      src/qml/qmlapp.cpp
+      src/qml/qmlapp.h
+      src/qml/qmlchat.cpp
+      src/qml/qmlchat.h
+      src/qml/qmldialogsmanager.cpp
+      src/qml/qmldialogsmanager.h
+      src/qml/qmlmessageboxmanager.cpp
+      src/qml/qmlmessageboxmanager.h
+      src/qml/previewprovider.cpp
+      src/qml/previewprovider.h
+      src/qml/qrprovider.cpp
+      src/qml/qrprovider.h
+      src/qml/remotemodels.h
+      src/qml/systeminsets.cpp
+      src/qml/systeminsets.h
+      src/qml/systemnotifier.cpp
+      src/qml/systemnotifier.h
+      src/qml/toxservice.cpp
+      src/qml/toxservice.h
+      src/qml/userstatus.h
+      src/qml/voicestate.h)
+  set(QML_UI_FILES
+      src/qml/AboutPage.qml
+      src/qml/AddFriendPage.qml
+      src/qml/Avatar.qml
+      src/qml/BackButton.qml
+      src/qml/CallBar.qml
+      src/qml/ChatPage.qml
+      src/qml/ConferenceDetailsPage.qml
+      src/qml/FollowingListView.qml
+      src/qml/FriendDetailsPage.qml
+      src/qml/FriendsPage.qml
+      src/qml/GroupDetailsPage.qml
+      src/qml/InviteDialog.qml
+      src/qml/ListRow.qml
+      src/qml/LoginPage.qml
+      src/qml/Main.qml
+      src/qml/RequestsPage.qml
+      src/qml/SettingsPage.qml
+      src/qml/SharePage.qml
+      src/qml/StatusDot.qml
+      src/qml/ToxIdPage.qml
+      src/qml/WrappingSwitch.qml)
+  # QML sees its module's types only next to the module's qmldir.
+  foreach(QML_FILE ${QML_UI_FILES})
+    get_filename_component(QML_FILE_NAME ${QML_FILE} NAME)
+    set_source_files_properties(${QML_FILE} PROPERTIES QT_RESOURCE_ALIAS
+                                                       ${QML_FILE_NAME})
+  endforeach()
+
+  # A library, so that the tests can use it too.
+  qt_add_library(${BINARY_NAME}_qml STATIC ${QML_UI_SOURCES})
+  qt_add_qml_module(
+    ${BINARY_NAME}_qml
+    URI
+    qTox
+    VERSION
+    1.0
+    # Where the QML engine looks for modules in resources.
+    RESOURCE_PREFIX
+    /qt/qml
+    # Where QML tools look for it.
+    OUTPUT_DIRECTORY
+    ${CMAKE_CURRENT_BINARY_DIR}/qTox
+    QML_FILES
+    ${QML_UI_FILES})
+  target_link_libraries(
+    ${BINARY_NAME}_qml
+    PUBLIC ${BINARY_NAME}_shared
+           ${CMAKE_REQUIRED_LIBRARIES}
+           ${SHARED_LIBRARIES}
+           Qt6::Qml
+           Qt6::Quick
+           Qt6::QuickControls2
+           Qt6::RemoteObjects)
+  # The service and the user interface it talks to.
+  qt_add_repc_sources(${BINARY_NAME}_qml src/qml/toxservice.rep)
+  qt_add_repc_replicas(${BINARY_NAME}_qml src/qml/toxservice.rep)
+  # Qt's generated type registrations include the headers by file name.
+  target_include_directories(${BINARY_NAME}_qml
+                             PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/qml)
+
+  qt_add_executable(
+    ${BINARY_NAME} WIN32 MACOSX_BUNDLE ${${BINARY_NAME}_RESOURCES}
+    ${SMILEY_RESOURCES} src/qml/main.cpp)
+  target_link_libraries(${BINARY_NAME} PRIVATE ${BINARY_NAME}_qml
+                                               ${BINARY_NAME}_qmlplugin)
+  if(ANDROID)
+    # The service's QAndroidService.
+    find_package(Qt6 REQUIRED COMPONENTS CorePrivate)
+    target_link_libraries(${BINARY_NAME} PRIVATE Qt6::CorePrivate)
+  endif()
+  # Our warnings for our code only: Qt generates code for the QML module.
+  set_source_files_properties(
+    ${QML_UI_SOURCES} src/qml/main.cpp
+    PROPERTIES COMPILE_OPTIONS
+               "$<TARGET_PROPERTY:qtox_warnings,INTERFACE_COMPILE_OPTIONS>")
+else()
+  add_library(${BINARY_NAME}_static STATIC ${${BINARY_NAME}_FORMS}
+                                           ${${BINARY_NAME}_WIDGETS_SOURCES})
+  target_link_libraries(${BINARY_NAME}_static ${BINARY_NAME}_shared
+                        ${CMAKE_REQUIRED_LIBRARIES} ${ALL_LIBRARIES})
+  target_link_libraries(${BINARY_NAME}_static qtox::warnings)
+
+  qt_add_executable(
+    ${BINARY_NAME} WIN32 MACOSX_BUNDLE ${${BINARY_NAME}_RESOURCES}
+    ${SMILEY_RESOURCES} src/main.cpp)
+  target_link_libraries(
+    ${BINARY_NAME} PRIVATE ${BINARY_NAME}_static ${CMAKE_REQUIRED_LIBRARIES}
+                           ${ALL_LIBRARIES})
+endif()
 set_target_properties(
   ${BINARY_NAME}
   PROPERTIES
+    QT_ANDROID_PACKAGE_NAME io.github.qtox.qtox
     QT_ANDROID_TARGET_SDK_VERSION 34
     QT_ANDROID_MIN_SDK_VERSION 24
     QT_ANDROID_PACKAGE_SOURCE_DIR

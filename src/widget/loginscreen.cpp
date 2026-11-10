@@ -11,10 +11,10 @@
 #include "src/persistence/profile.h"
 #include "src/persistence/profilelocker.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/form/setpassworddialog.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/profileimporter.h"
-#include "src/widget/translator.h"
 
 #include <QDebug>
 #include <QDialog>

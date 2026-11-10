@@ -14,7 +14,6 @@
 #include "src/model/group.h"
 #include "src/model/status.h"
 #include "src/persistence/settings.h"
-#include "src/widget/contentdialog.h"
 
 #include <QCollator>
 

@@ -8,10 +8,10 @@
 #include "src/core/corefile.h"
 #include "src/core/toxfile.h"
 #include "src/friendlist.h"
+#include "src/model/imessageboxmanager.h"
+#include "src/translator.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/style.h"
-#include "src/widget/tool/imessageboxmanager.h"
-#include "src/widget/translator.h"
 #include "src/widget/widget.h"
 #include "util/display.h"
 

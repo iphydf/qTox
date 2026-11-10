@@ -8,7 +8,6 @@
 
 #include "src/model/status.h"
 #include "src/persistence/profile.h"
-#include "src/widget/form/chatform.h"
 
 #include <QDebug>
 

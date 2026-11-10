@@ -5,7 +5,17 @@
 
 #include "message.h"
 
+#include <algorithm>
 #include <utility>
+
+const QString Message::ACTION_PREFIX = QStringLiteral("/me ");
+
+bool Message::mentionsSelf() const
+{
+    return std::ranges::any_of(metadata, [](const MessageMetadata& data) {
+        return data.type == MessageMetadataType::selfMention;
+    });
+}
 
 namespace {
 QStringList splitMessage(const QString& message, uint64_t maxLength)

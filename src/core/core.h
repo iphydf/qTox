@@ -63,6 +63,16 @@ public:
         ERROR_ALLOC,
     };
 
+    /** How it reaches the Tox network. */
+    enum class Connection
+    {
+        None,
+        Udp,
+        /** Only through TCP relays. */
+        TcpRelay,
+    };
+    Q_ENUM(Connection)
+
     static std::pair<ToxCorePtr, Core::ToxCoreErrors>
     makeToxCore(const QByteArray& savedata, const ICoreSettings& settings,
                 IBootstrapListGenerator& bootstrapNodes);
@@ -171,6 +181,7 @@ public slots:
 signals:
     void connected();
     void disconnected();
+    void connectionChanged(Core::Connection connection);
 
     void friendRequestReceived(const ToxPk& friendPk, const QString& message);
     void friendAvatarChanged(const ToxPk& friendPk, const QByteArray& pic);
@@ -380,7 +391,7 @@ private:
     std::unique_ptr<QThread> coreThread;
     const IBootstrapListGenerator& bootstrapListGenerator;
     const ICoreSettings& settings;
-    bool isConnected = false;
+    Connection selfConnection = Connection::None;
     int tolerance = CORE_DISCONNECT_TOLERANCE;
 
     QHash<uint32_t, GroupId> numberToGroupId;

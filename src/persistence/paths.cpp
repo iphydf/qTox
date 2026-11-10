@@ -5,7 +5,7 @@
 
 #include "paths.h"
 
-#include <QApplication>
+#include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -70,7 +70,7 @@ using Portable = Paths::Portable;
 bool portableFromMode(Portable mode)
 {
     bool portable = false;
-    const QString basePortable = qApp->applicationDirPath();
+    const QString basePortable = QCoreApplication::applicationDirPath();
     const QString baseNonPortable = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     const QString portableSettingsPath = basePortable % QDir::separator() % globalSettingsFile;
 
@@ -99,7 +99,7 @@ bool portableFromMode(Portable mode)
 
 QString basePathFromPortable(bool portable)
 {
-    const QString basePortable = qApp->applicationDirPath();
+    const QString basePortable = QCoreApplication::applicationDirPath();
     const QString baseNonPortable = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
     QString basePath = portable ? basePortable : baseNonPortable;
     if (basePath.isEmpty()) {
@@ -267,7 +267,7 @@ QStringList Paths::getThemeDirs() const
     }
 
     // look for themes beside the qTox binary with lowest priority
-    const QString curPath = qApp->applicationDirPath();
+    const QString curPath = QCoreApplication::applicationDirPath();
     themeFolders += curPath % QDir::separator() % themeFolder % QDir::separator();
 
     return themeFolders;
@@ -289,7 +289,7 @@ QString Paths::getSettingsDirPath() const
     }
 
     if (portable) {
-        return qApp->applicationDirPath() + QDir::separator();
+        return QCoreApplication::applicationDirPath() + QDir::separator();
     }
 
 // workaround for https://bugreports.qt-project.org/browse/QTBUG-38845
@@ -318,7 +318,7 @@ QString Paths::getSettingsDirPath() const
 QString Paths::getAppDataDirPath() const
 {
     if (portable)
-        return qApp->applicationDirPath() + QDir::separator();
+        return QCoreApplication::applicationDirPath() + QDir::separator();
 
 // workaround for https://bugreports.qt-project.org/browse/QTBUG-38845
 #ifdef Q_OS_WIN
@@ -345,7 +345,7 @@ QString Paths::getAppDataDirPath() const
 QString Paths::getAppCacheDirPath() const
 {
     if (portable)
-        return qApp->applicationDirPath() + QDir::separator();
+        return QCoreApplication::applicationDirPath() + QDir::separator();
 
 // workaround for https://bugreports.qt-project.org/browse/QTBUG-38845
 #ifdef Q_OS_WIN

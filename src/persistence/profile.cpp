@@ -12,12 +12,10 @@
 #include "src/core/coreav.h"
 #include "src/core/corefile.h"
 #include "src/core/untrustedimage.h"
+#include "src/model/identicon.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/net/avatarbroadcaster.h"
 #include "src/net/bootstrapnodeupdater.h"
-#include "src/nexus.h"
-#include "src/widget/tool/identicon.h"
-#include "src/widget/tool/imessageboxmanager.h"
-#include "src/widget/widget.h"
 
 #include <QBuffer>
 #include <QDebug>
@@ -382,7 +380,10 @@ void Profile::save()
     ProfileLocker::unlock();
 }
 
-Profile::~Profile() = default;
+Profile::~Profile()
+{
+    settings.unloadPersonal(*this);
+}
 
 /**
  * @brief Lists all the files in the config dir with a given extension
@@ -550,9 +551,9 @@ QString Profile::avatarPath(const ToxPk& owner, bool forceUnencrypted)
 
 /**
  * @brief Get our avatar from cache.
- * @return Avatar as QPixmap.
+ * @return Avatar as QImage.
  */
-QPixmap Profile::loadAvatar()
+QImage Profile::loadAvatar()
 {
     return loadAvatar(core->getSelfPublicKey());
 }
@@ -560,13 +561,13 @@ QPixmap Profile::loadAvatar()
 /**
  * @brief Get a contact's avatar from cache.
  * @param owner Friend PK to load avatar.
- * @return Avatar as QPixmap.
+ * @return Avatar as QImage.
  */
-QPixmap Profile::loadAvatar(const ToxPk& owner)
+QImage Profile::loadAvatar(const ToxPk& owner)
 {
-    const QPixmap pic = QPixmap::fromImage(UntrustedImage::decode(loadAvatarData(owner)));
+    const QImage pic = UntrustedImage::decode(loadAvatarData(owner));
     if (pic.isNull() && settings.getShowIdenticons()) {
-        return QPixmap::fromImage(Identicon(owner.getByteArray()).toImage(16));
+        return Identicon(owner.getByteArray()).toImage(16);
     }
     return pic;
 }
@@ -638,25 +639,24 @@ void Profile::loadDatabase(QString password, IMessageBoxManager& messageBoxManag
  */
 void Profile::setAvatar(QByteArray pic)
 {
-    QPixmap pixmap;
+    QImage image;
     QByteArray avatarData;
     const ToxPk& selfPk = core->getSelfPublicKey();
     if (!pic.isEmpty()) {
-        pixmap.loadFromData(pic);
+        image.loadFromData(pic);
         avatarData = pic;
     } else {
         if (settings.getShowIdenticons()) {
-            const QImage identicon = Identicon(selfPk.getByteArray()).toImage(32);
-            pixmap = QPixmap::fromImage(identicon);
+            image = Identicon(selfPk.getByteArray()).toImage(32);
 
         } else {
-            pixmap.load(":/img/contact_dark.svg");
+            image.load(":/img/contact_dark.svg");
         }
     }
 
     saveAvatar(selfPk, avatarData);
 
-    emit selfAvatarChanged(pixmap);
+    emit selfAvatarChanged(image);
     avatarBroadcaster->setAvatar(avatarData);
     avatarBroadcaster->enableAutoBroadcast();
 }
@@ -669,26 +669,25 @@ void Profile::setAvatar(QByteArray pic)
  */
 void Profile::setFriendAvatar(const ToxPk& owner, QByteArray pic)
 {
-    QPixmap pixmap;
+    QImage image;
     QByteArray avatarData;
     if (!pic.isEmpty()) {
-        pixmap = QPixmap::fromImage(UntrustedImage::decode(pic));
-        if (pixmap.isNull()) {
+        image = UntrustedImage::decode(pic);
+        if (image.isNull()) {
             qWarning() << "Ignoring invalid avatar for" << owner.toString();
         }
     }
-    if (!pixmap.isNull()) {
+    if (!image.isNull()) {
         avatarData = pic;
-        emit friendAvatarSet(owner, pixmap);
+        emit friendAvatarSet(owner, image);
     } else if (settings.getShowIdenticons()) {
-        const QImage identicon = Identicon(owner.getByteArray()).toImage(32);
-        pixmap = QPixmap::fromImage(identicon);
-        emit friendAvatarSet(owner, pixmap);
+        image = Identicon(owner.getByteArray()).toImage(32);
+        emit friendAvatarSet(owner, image);
     } else {
-        pixmap.load(":/img/contact_dark.svg");
+        image.load(":/img/contact_dark.svg");
         emit friendAvatarRemoved(owner);
     }
-    friendAvatarChanged(owner, pixmap);
+    friendAvatarChanged(owner, image);
     saveAvatar(owner, avatarData);
 }
 

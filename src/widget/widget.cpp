@@ -66,8 +66,8 @@
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
 #include "src/persistence/smileypack.h"
-#include "src/persistence/toxsave.h"
 #include "src/platform/timer.h"
+#include "src/translator.h"
 #include "src/widget/contentdialogmanager.h"
 #include "src/widget/form/addfriendform.h"
 #include "src/widget/form/chatform.h"
@@ -78,7 +78,7 @@
 #include "src/widget/form/settingswidget.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/messageboxmanager.h"
-#include "src/widget/translator.h"
+#include "src/widget/tool/toxsave.h"
 #include "tool/removechatdialog.h"
 
 namespace {
@@ -326,7 +326,8 @@ void Widget::init()
 
     debugWidget = new DebugWidget(settings.getPaths(), style, this);
 
-    profileInfo = new ProfileInfo(core, &profile, settings, nexus);
+    profileInfo = new ProfileInfo(core, &profile, settings);
+    connect(profileInfo, &ProfileInfo::loginRequested, &nexus, &Nexus::showLogin);
     profileForm = new ProfileForm(profileInfo, settings, style, *messageBoxManager);
 
     ui->debugButton->setVisible(settings.getEnableDebug());
@@ -749,9 +750,9 @@ QString Widget::getUsername()
     return core->getUsername();
 }
 
-void Widget::onSelfAvatarLoaded(const QPixmap& pic)
+void Widget::onSelfAvatarLoaded(const QImage& pic)
 {
-    profilePicture->setPixmap(pic);
+    profilePicture->setPixmap(QPixmap::fromImage(pic));
 }
 
 void Widget::onCoreChanged(Core& core_)
@@ -1336,7 +1337,7 @@ void Widget::onFriendModelAdded(Friend* newFriend, std::shared_ptr<FriendChatroo
     connect(&profile, &Profile::friendAvatarRemoved, widget, &FriendWidget::onAvatarRemoved);
 
     // Try to get the avatar from the cache
-    const QPixmap avatar = profile.loadAvatar(friendPk);
+    const QImage avatar = profile.loadAvatar(friendPk);
     if (!avatar.isNull()) {
         friendForm->onAvatarChanged(friendPk, avatar);
         widget->onAvatarSet(friendPk, avatar);
@@ -1523,7 +1524,7 @@ void Widget::addFriendDialog(const Friend* frnd, ContentDialog* dialog)
     connect(&profile, &Profile::friendAvatarSet, friendWidget, &FriendWidget::onAvatarSet);
     connect(&profile, &Profile::friendAvatarRemoved, friendWidget, &FriendWidget::onAvatarRemoved);
 
-    const QPixmap avatar = profile.loadAvatar(frnd->getPublicKey());
+    const QImage avatar = profile.loadAvatar(frnd->getPublicKey());
     if (!avatar.isNull()) {
         friendWidget->onAvatarSet(frnd->getPublicKey(), avatar);
     }
@@ -2372,13 +2373,9 @@ void Widget::onConferenceModelAdded(Conference* newConference, std::shared_ptr<C
     auto notifyReceivedConnection =
         connect(messageDispatcher.get(), &IMessageDispatcher::messageReceived, this,
                 [this, conferenceId](const ToxPk& author, const Message& message) {
-                    auto isTargeted =
-                        std::any_of(message.metadata.begin(), message.metadata.end(),
-                                    [](MessageMetadata metadata) {
-                                        return metadata.type == MessageMetadataType::selfMention;
-                                    });
                     newConferenceMessageAlert(conferenceId, author, message.content,
-                                              isTargeted || settings.getConferenceAlwaysNotify());
+                                              message.mentionsSelf()
+                                                  || settings.getConferenceAlwaysNotify());
                 });
     conferenceAlertConnections.insert(conferenceId, notifyReceivedConnection);
 

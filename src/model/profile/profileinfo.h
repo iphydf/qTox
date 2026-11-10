@@ -12,17 +12,15 @@
 #include <QObject>
 
 class Core;
-class QFile;
 class QPoint;
 class Profile;
 class Settings;
-class Nexus;
 
 class ProfileInfo : public QObject, public IProfileInfo
 {
     Q_OBJECT
 public:
-    ProfileInfo(Core* core_, Profile* profile_, Settings& settings, Nexus& nexus);
+    ProfileInfo(Core* core_, Profile* profile_, Settings& settings);
 
     bool setPassword(const QString& password) override;
     bool deletePassword() override;
@@ -45,16 +43,20 @@ public:
     SetAvatarResult setAvatar(const QString& path) override;
     void removeAvatar() override;
 
+    static IProfileInfo::SetAvatarResult createAvatar(const QByteArray& image, QByteArray& avatar);
+
     SIGNAL_IMPL(ProfileInfo, idChanged, const ToxId& id)
     SIGNAL_IMPL(ProfileInfo, usernameChanged, const QString& name)
     SIGNAL_IMPL(ProfileInfo, statusMessageChanged, const QString& message)
 
+signals:
+    /** The profile was left; the UI shows the login screen with this profile chosen. */
+    void loginRequested(const QString& profileName);
+
 private:
-    IProfileInfo::SetAvatarResult createAvatarFromFile(QFile& file, QByteArray& avatar);
     static IProfileInfo::SetAvatarResult byteArrayToPng(QByteArray inData, QByteArray& outPng);
     static IProfileInfo::SetAvatarResult scalePngToAvatar(QByteArray& avatar);
     Profile* const profile;
     Core* const core;
     Settings& settings;
-    Nexus& nexus;
 };

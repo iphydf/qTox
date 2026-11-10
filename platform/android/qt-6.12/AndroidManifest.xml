@@ -8,6 +8,12 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"  />
     <uses-permission android:name="android.permission.CAMERA"  />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
 
     <supports-screens
@@ -18,19 +24,29 @@
     <application
         android:name="org.qtproject.qt.android.bindings.QtApplication"
         android:hardwareAccelerated="true"
-        android:label="qtox"
+        android:icon="@drawable/ic_launcher"
+        android:label="qTox"
         android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:fullBackupOnly="false">
+        <!-- QtoxActivity keeps the pages clear of the keyboard. One instance, in its own task: Qt
+             runs once, so other apps' shares go to it too. -->
         <activity
-            android:name="org.qtproject.qt.android.bindings.QtActivity"
+            android:name="io.github.qtox.qtox.QtoxActivity"
             android:configChanges="orientation|uiMode|screenLayout|screenSize|smallestScreenSize|layoutDirection|locale|fontScale|keyboard|keyboardHidden|navigation|mcc|mnc|density"
-            android:launchMode="singleTop"
+            android:launchMode="singleTask"
             android:screenOrientation="unspecified"
+            android:windowSoftInputMode="adjustNothing"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Other apps' Share: a file or text to send to a chat. -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
             </intent-filter>
 
           <meta-data
@@ -41,6 +57,27 @@
                 android:name="android.app.arguments"
                 android:value="" />
         </activity>
+
+        <!-- Tox, in its own process so it outlives the user interface. -->
+        <service
+            android:name="io.github.qtox.qtox.QtoxService"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging|microphone|camera"
+            android:process=":tox">
+          <meta-data
+                android:name="android.app.lib_name"
+                android:value="qtox" />
+
+          <meta-data
+                android:name="android.app.arguments"
+                android:value="--service" />
+        </service>
+
+        <!-- What the user does from notifications, which the service does. -->
+        <receiver
+            android:name="io.github.qtox.qtox.NotificationReceiver"
+            android:exported="false"
+            android:process=":tox" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

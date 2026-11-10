@@ -29,6 +29,7 @@ qt_moc(
     deps = [
         "//qtox/src",
         "//qtox/src:core",
+        "//qtox/src:shared",
         "//qtox/util",
     ],
 )
@@ -43,6 +44,7 @@ cc_library(
     tags = ["qt"],
     deps = [
         "//qtox/src",
+        "//qtox/src:shared",
         "@qt//:qt_core",
         "@qt//:qt_test",
     ],
@@ -62,6 +64,7 @@ cc_library(
     deps = [
         "//qtox/src",
         "//qtox/src:core",
+        "//qtox/src:shared",
         "@qt//:qt_core",
     ],
 )
@@ -81,6 +84,7 @@ TEST_DEPS = [
     "//qtox:res_lib",
     "//qtox/src",
     "//qtox/src:core",
+    "//qtox/src:shared",
     "//qtox/util",
     "@qt//:qt_core",
     "@qt//:qt_gui",
@@ -99,13 +103,17 @@ TEST_DEPS = [
 ) for src in glob(
     ["**/*_test.cpp"],
     exclude = [
+        "audio/voicegate_test.cpp",
         "model/exiftransform_test.cpp",
         "persistence/dbschema_test.cpp",
         "platform/desktopnotifybackend_test.cpp",
         "platform/stacktrace_test.cpp",
+        "video/framerotation_test.cpp",
         "video/videoframe_test.cpp",
         "chatlog/text_test.cpp",
         "**/*_fuzz_test.cpp",
+        # The QML user interface's, which CMake builds with QTOX_UI=qml.
+        "qml/**",
     ],
 )]
 
@@ -117,6 +125,7 @@ qt_test(
     mocopts = ["-Iqtox"],
     deps = [
         "//qtox/src",
+        "//qtox/src:shared",
         "@qt//:qt_core",
         "@qt//:qt_dbus",
         "@qt//:qt_gui",
@@ -135,10 +144,24 @@ qt_test(
         ":mock",
         "//qtox:res_lib",
         "//qtox/src",
+        "//qtox/src:shared",
         "//qtox/util",
         "@qt//:qt_core",
         "@qt//:qt_gui",
         "@qt//:qt_widgets",
+    ],
+)
+
+qt_test(
+    name = "framerotation_test",
+    size = "small",
+    src = "video/framerotation_test.cpp",
+    copts = COPTS,
+    mocopts = ["-Iqtox"],
+    deps = [
+        "//qtox/src:shared",
+        "@ffmpeg",
+        "@qt//:qt_core",
     ],
 )
 
@@ -150,6 +173,7 @@ qt_test(
     mocopts = ["-Iqtox"],
     deps = [
         "//qtox/src",
+        "//qtox/src:shared",
         "@ffmpeg",
         "@qt//:qt_concurrent",
         "@qt//:qt_core",
@@ -165,6 +189,18 @@ cc_fuzz_test(
     corpus = ["//tools/toktok-fuzzer/corpus:serialize_fuzz_test"],
     tags = ["qt"],
     deps = ["//qtox/src:serialize"],
+)
+
+qt_test(
+    name = "voicegate_test",
+    size = "small",
+    src = "audio/voicegate_test.cpp",
+    copts = COPTS,
+    mocopts = ["-Iqtox"],
+    deps = [
+        "//qtox/audio",
+        "@qt//:qt_core",
+    ],
 )
 
 qt_test(
@@ -201,6 +237,7 @@ qt_test(
         ":dbutility",
         "//qtox/src",
         "//qtox/src:core",
+        "//qtox/src:shared",
         "@qt//:qt_core",
     ],
 )

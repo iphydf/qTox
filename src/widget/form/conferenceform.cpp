@@ -15,12 +15,12 @@
 #include "src/model/conference.h"
 #include "src/model/friend.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/chatformheader.h"
 #include "src/widget/conferencewidget.h"
 #include "src/widget/flowlayout.h"
 #include "src/widget/form/chatform.h"
 #include "src/widget/style.h"
-#include "src/widget/translator.h"
 
 #include <QApplication>
 #include <QClipboard>

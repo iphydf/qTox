@@ -10,20 +10,28 @@ DEFINES = [
     "UPDATE_CHECK_ENABLED",
 ]
 
+# The desktop user interface, built on Qt Widgets. The rest of this package is
+# what every user interface shares, and doesn't depend on Qt Widgets.
+WIDGETS_FILES = [
+    "appmanager.*",
+    "chatlog/**",
+    "main.cpp",
+    "nexus.*",
+    "platform/capslock*",
+    "platform/desktop_notifications/**",
+    "platform/screenshot*",
+    "platform/timer*",
+    "platform/x11_display.*",
+    "widget/**",
+]
+
+# The mobile user interface, built on Qt Quick, which this Bazel build doesn't
+# have yet; CMake builds it with QTOX_UI=qml.
+QML_FILES = ["qml/**"]
+
 qt_moc(
-    name = "src_moc",
+    name = "shared_moc",
     srcs = [
-        "appmanager.h",
-        "chatlog/chatlinecontent.h",
-        "chatlog/chatlinecontentproxy.h",
-        "chatlog/chatwidget.h",
-        "chatlog/content/broken.h",
-        "chatlog/content/filetransferwidget.h",
-        "chatlog/content/notificationicon.h",
-        "chatlog/content/spinner.h",
-        "chatlog/content/text.h",
-        "chatlog/content/timestamp.h",
-        "chatlog/customtextdocument.h",
         "core/coreav.h",
         "core/toxcall.h",
         "ipc.h",
@@ -39,7 +47,6 @@ qt_moc(
         "model/debug/debuglogmodel.h",
         "model/debug/debugobjecttreemodel.h",
         "model/friend.h",
-        "model/friendlist/friendlistmanager.h",
         "model/friendmessagedispatcher.h",
         "model/group.h",
         "model/groupmessagedispatcher.h",
@@ -48,26 +55,55 @@ qt_moc(
         "model/notificationgenerator.h",
         "model/profile/profileinfo.h",
         "model/sessionchatlog.h",
+        "model/theme.h",
         "net/avatarbroadcaster.h",
         "net/bootstrapnodeupdater.h",
-        "net/toxuri.h",
         "net/updatecheck.h",
-        "nexus.h",
         "persistence/db/rawdatabaseimpl.h",
         "persistence/history.h",
         "persistence/offlinemsgengine.h",
         "persistence/profile.h",
         "persistence/settings.h",
         "persistence/smileypack.h",
-        "platform/desktop_notifications/desktopnotify.h",
-        "platform/desktop_notifications/desktopnotifybackend.h",
         "platform/posixsignalnotifier.h",
-        "platform/screenshot_dbus.h",
         "video/camerasource.h",
         "video/corevideosource.h",
-        "video/netcamview.h",
         "video/videosource.h",
-        "video/videosurface.h",
+    ],
+    hdrs = glob(
+        ["**/*.h"],
+        exclude = WIDGETS_FILES + QML_FILES,
+    ),
+    mocopts = [
+        "-Iqtox",
+        "-Iqtox/util/include",
+    ] + ["-D%s=1" % d for d in DEFINES],
+    tags = ["qt"],
+    deps = [
+        "//qtox/util",
+        "@qt//:qt_gui",
+        "@qt//:qt_network",
+    ],
+)
+
+qt_moc(
+    name = "src_moc",
+    srcs = [
+        "appmanager.h",
+        "chatlog/chatlinecontent.h",
+        "chatlog/chatlinecontentproxy.h",
+        "chatlog/chatwidget.h",
+        "chatlog/content/broken.h",
+        "chatlog/content/filetransferwidget.h",
+        "chatlog/content/notificationicon.h",
+        "chatlog/content/spinner.h",
+        "chatlog/content/text.h",
+        "chatlog/content/timestamp.h",
+        "chatlog/customtextdocument.h",
+        "nexus.h",
+        "platform/desktop_notifications/desktopnotify.h",
+        "platform/desktop_notifications/desktopnotifybackend.h",
+        "platform/screenshot_dbus.h",
         "widget/about/aboutfriendform.h",
         "widget/categorywidget.h",
         "widget/chatformheader.h",
@@ -105,6 +141,7 @@ qt_moc(
         "widget/form/settings/verticalonlyscroller.h",
         "widget/form/settingswidget.h",
         "widget/form/tabcompleter.h",
+        "widget/friendlist/friendlistmanager.h",
         "widget/friendlistlayout.h",
         "widget/friendlistwidget.h",
         "widget/friendwidget.h",
@@ -132,6 +169,9 @@ qt_moc(
         "widget/tool/screengrabberoverlayitem.h",
         "widget/tool/screenshotgrabber.h",
         "widget/tool/toolboxgraphicsitem.h",
+        "widget/tool/toxuri.h",
+        "widget/video/netcamview.h",
+        "widget/video/videosurface.h",
         "widget/widget.h",
     ],
     hdrs = glob(["**/*.h"]),
@@ -279,12 +319,11 @@ cc_library(
 )
 
 cc_library(
-    name = "src",
+    name = "shared",
     srcs = [":version"] + [
         "core/coreav.cpp",
         "core/toxcall.cpp",
-        ":src_moc",
-        ":src_ui",
+        ":shared_moc",
     ] + glob(
         ["**/*.cpp"],
         exclude = [
@@ -295,8 +334,7 @@ cc_library(
             "model/ibootstraplistgenerator.cpp",
             "model/status.cpp",
             "persistence/serialize.cpp",
-            "main.cpp",
-        ],
+        ] + WIDGETS_FILES + QML_FILES,
     ),
     hdrs = glob(
         ["**/*.h"],
@@ -309,17 +347,11 @@ cc_library(
             "model/status.h",
             "model/toxclientstandards.h",
             "persistence/serialize.h",
-        ],
+        ] + WIDGETS_FILES + QML_FILES,
     ),
     copts = COPTS,
     defines = DEFINES,
     includes = ["."],
-    linkopts = select({
-        "//tools/config:freebsd": [],
-        "//tools/config:linux": [],
-        "//tools/config:osx": ["-framework IOKit"],
-        "//tools/config:windows": [],
-    }),
     tags = ["qt"],
     visibility = ["//qtox:__subpackages__"],
     deps = [
@@ -332,26 +364,75 @@ cc_library(
         "//qtox/audio",
         "//qtox/util",
         "@ffmpeg",
-        "@libqrencode",
         "@libsodium",
         "@libvpx",
         "@openal",
         "@qt//:qt_concurrent",
+        "@qt//:qt_core",
+        "@qt//:qt_gui",
+        "@qt//:qt_network",
+        "@qt//:qt_xml",
+        "@sqlcipher",
+    ] + select({
+        "//tools/config:freebsd": [],
+        "//tools/config:linux": [],
+        "//tools/config:osx": [":avfoundation"],
+        "//tools/config:windows": [],
+    }),
+)
+
+cc_library(
+    name = "src",
+    srcs = [
+        ":src_moc",
+        ":src_ui",
+    ] + glob(
+        WIDGETS_FILES,
+        exclude = [
+            "**/*.h",
+            "**/*.ui",
+            "main.cpp",
+        ],
+    ),
+    hdrs = glob(
+        WIDGETS_FILES,
+        exclude = [
+            "**/*.cpp",
+            "**/*.ui",
+        ],
+    ),
+    copts = COPTS,
+    includes = ["."],
+    linkopts = select({
+        "//tools/config:freebsd": [],
+        "//tools/config:linux": [],
+        "//tools/config:osx": ["-framework IOKit"],
+        "//tools/config:windows": [],
+    }),
+    tags = ["qt"],
+    visibility = ["//qtox:__subpackages__"],
+    deps = [
+        ":core",
+        ":exiftransform",
+        ":shared",
+        "//c-toxcore",
+        "//qtox/audio",
+        "//qtox/util",
+        "@libqrencode",
+        "@libvpx",
         "@qt//:qt_core",
         "@qt//:qt_dbus",
         "@qt//:qt_gui",
         "@qt//:qt_network",
         "@qt//:qt_svg",
         "@qt//:qt_widgets",
-        "@qt//:qt_xml",
-        "@sqlcipher",
     ] + select({
         "//tools/config:freebsd": [],
         "//tools/config:linux": [
             "@x11",
             "@xss",
         ],
-        "//tools/config:osx": [":avfoundation"],
+        "//tools/config:osx": [],
         "//tools/config:windows": [],
     }),
 )

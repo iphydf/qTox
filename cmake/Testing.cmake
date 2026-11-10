@@ -1,33 +1,34 @@
-# SPDX-License-Identifier: GPL-3.0-or-later
-# Copyright © 2019 by The qTox Project Contributors
-# Copyright © 2024-2025 The TokTok team.
+# SPDX-License-Identifier: GPL-3.0-or-later Copyright © 2019 by The qTox Project
+# Contributors Copyright © 2024-2025 The TokTok team.
 
-################################################################################
+# ##############################################################################
 #
 # :: Testing
 #
-################################################################################
+# ##############################################################################
 
 enable_testing()
 
+# The shared code and one user interface.
+if(QTOX_UI STREQUAL "qml")
+  set(QTOX_TEST_LIBRARIES ${BINARY_NAME}_qml ${BINARY_NAME}_qmlplugin)
+else()
+  set(QTOX_TEST_LIBRARIES ${BINARY_NAME}_static)
+endif()
+
 function(auto_test subsystem module extra_res extra_libs)
-  add_executable(test_${module}
-    test/${subsystem}/${module}_test.cpp ${extra_res})
-  target_link_libraries(test_${module}
-    ${BINARY_NAME}_static
-    ${CHECK_LIBRARIES}
-    Qt6::Test
-    ${extra_libs})
+  add_executable(test_${module} test/${subsystem}/${module}_test.cpp
+                                ${extra_res})
+  target_link_libraries(test_${module} ${QTOX_TEST_LIBRARIES}
+                        ${CHECK_LIBRARIES} Qt6::Test ${extra_libs})
   if(QT_FEATURE_static)
-    target_link_libraries(test_${module}
-      Qt6::QOffscreenIntegrationPlugin)
+    target_link_libraries(test_${module} Qt6::QOffscreenIntegrationPlugin)
   endif()
-  add_test(
-    NAME test_${module}
-    COMMAND ${TEST_CROSSCOMPILING_EMULATOR} test_${module})
+  add_test(NAME test_${module} COMMAND ${TEST_CROSSCOMPILING_EMULATOR}
+                                       test_${module})
   # don't require a display server for GUI tests
-  set_tests_properties(test_${module} PROPERTIES
-    ENVIRONMENT "QT_QPA_PLATFORM=offscreen")
+  set_tests_properties(test_${module} PROPERTIES ENVIRONMENT
+                                                 "QT_QPA_PLATFORM=offscreen")
 endfunction()
 
 add_subdirectory(test/mock)
@@ -35,7 +36,20 @@ add_subdirectory(test/dbutility)
 
 set(TEST_RESOURCES test/resources/test_data.qrc ${${BINARY_NAME}_RESOURCES})
 
+# Both user interfaces' audio and video.
+auto_test(audio voicegate "" "")
+auto_test(video framerotation "" "")
+auto_test(video videoframe "" "${LIBAVUTIL_LIBRARIES}")
+
+if(QTOX_UI STREQUAL "qml")
+  auto_test(qml pages "${${BINARY_NAME}_RESOURCES}" "")
+  auto_test(qml toxservice "${${BINARY_NAME}_RESOURCES}" "mock_library")
+  # The other tests are the Widgets build's.
+  return()
+endif()
+
 # keep-sorted start
+auto_test(app translator "" "")
 auto_test(chatlog chatlinecontentproxy "" "")
 auto_test(chatlog chatlinestorage "" "")
 auto_test(chatlog chatwidget "" "")
@@ -51,9 +65,10 @@ auto_test(core untrustedimage "" "")
 auto_test(model chathistory "" "")
 auto_test(model conferencemessagedispatcher "" "mock_library")
 auto_test(model exiftransform "" "")
-auto_test(model friendlistmanager "" "")
+auto_test(widget friendlistmanager "" "")
 auto_test(model friendmessagedispatcher "" "")
 auto_test(model group "" "mock_library")
+auto_test(model identicon "" "")
 auto_test(model messageprocessor "" "")
 auto_test(model notificationgenerator "" "mock_library")
 auto_test(model sessionchatlog "" "")
@@ -69,16 +84,13 @@ if("EmojiOne" IN_LIST SMILEY_PACKS)
   auto_test(persistence smileypack "${SMILEY_RESOURCES}" "") # needs emojione
 endif()
 auto_test(video videomode "" "")
-auto_test(video videoframe "" "${LIBAVUTIL_LIBRARIES}")
 auto_test(widget filesform "" "")
 auto_test(widget filetransferwidget "" "")
-auto_test(widget/form/settings generalform "" "")
-auto_test(widget/tool identicon "" "")
 # keep-sorted end
 
-# GUI tests, run only when requested using the offscreen platform.
-# These are heavily dependent on specific Qt versions to be pixel-perfect, so
-# if they fail with new versions, it's not necessarily a bug.
+# GUI tests, run only when requested using the offscreen platform. These are
+# heavily dependent on specific Qt versions to be pixel-perfect, so if they fail
+# with new versions, it's not necessarily a bug.
 # TODO(iphydf): Add an easier way to regenerate golden images.
 if(GUI_TESTS)
   auto_test(widget loginscreen "${TEST_RESOURCES}" "")

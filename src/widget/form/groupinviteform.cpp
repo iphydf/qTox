@@ -8,9 +8,9 @@
 #include "src/core/groupid.h"
 #include "src/model/groupinvite.h"
 #include "src/persistence/settings.h"
+#include "src/translator.h"
 #include "src/widget/contentlayout.h"
 #include "src/widget/form/groupinvitewidget.h"
-#include "src/widget/translator.h"
 
 #include <QGroupBox>
 #include <QInputDialog>

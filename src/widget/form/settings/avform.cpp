@@ -10,13 +10,13 @@
 #include "audio/iaudiosource.h"
 #include "src/core/core.h"
 #include "src/core/coreav.h"
+#include "src/translator.h"
 #include "src/video/cameradevice.h"
 #include "src/video/camerasource.h"
 #include "src/video/ivideosettings.h"
-#include "src/video/videosurface.h"
 #include "src/widget/tool/recursivesignalblocker.h"
 #include "src/widget/tool/screenshotgrabber.h"
-#include "src/widget/translator.h"
+#include "src/widget/video/videosurface.h"
 #include "util/ranges.h"
 
 #include <QDebug>

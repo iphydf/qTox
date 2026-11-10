@@ -315,36 +315,35 @@ void Core::process()
 bool Core::checkConnection()
 {
     ASSERT_CORE_THREAD;
-    auto selfConnection = tox_self_get_connection_status(tox.get());
-    const char* connectionName = "unknown";
-    bool toxConnected = false;
-    switch (selfConnection) {
+    Connection newConnection = Connection::None;
+    switch (tox_self_get_connection_status(tox.get())) {
     case TOX_CONNECTION_NONE:
-        toxConnected = false;
         break;
     case TOX_CONNECTION_TCP:
-        toxConnected = true;
-        connectionName = "a TCP relay";
+        newConnection = Connection::TcpRelay;
         break;
     case TOX_CONNECTION_UDP:
-        toxConnected = true;
-        connectionName = "the UDP DHT";
+        newConnection = Connection::Udp;
         break;
     default:
         qWarning() << "tox_self_get_connection_status returned unknown enum!";
         break;
     }
 
-    if (toxConnected && !isConnected) {
-        qDebug() << "Connected to" << connectionName;
-        emit connected();
-    } else if (!toxConnected && isConnected) {
-        qDebug() << "Disconnected from the DHT";
-        emit disconnected();
+    if (newConnection != selfConnection) {
+        const bool wasConnected = selfConnection != Connection::None;
+        selfConnection = newConnection;
+        emit connectionChanged(selfConnection);
+        if (!wasConnected) {
+            qDebug() << "Connected to"
+                     << (selfConnection == Connection::TcpRelay ? "a TCP relay" : "the UDP DHT");
+            emit connected();
+        } else if (selfConnection == Connection::None) {
+            qDebug() << "Disconnected from the DHT";
+            emit disconnected();
+        }
     }
-
-    isConnected = toxConnected;
-    return toxConnected;
+    return selfConnection != Connection::None;
 }
 
 /**

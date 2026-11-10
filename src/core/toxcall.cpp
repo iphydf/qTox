@@ -23,7 +23,7 @@
  * ...)
  *
  * @var bool ToxFriendCall::videoEnabled
- * @brief True if our user asked for a video call, sending and receiving.
+ * @brief True for a video call, which sends the user's camera once sendVideo() says so.
  *
  * @var bool ToxFriendCall::nullVideoBitrate
  * @brief True if our video bitrate is zero, i.e. if the device is closed.
@@ -127,24 +127,39 @@ ToxFriendCall::ToxFriendCall(uint32_t friendNum, bool VideoEnabled, CoreAV& av_,
     // register video
     if (videoEnabled) {
         videoSource = new CoreVideoSource();
-
-        if (cameraSource.isNone()) {
-            cameraSource.setupDefault();
-        }
-        cameraSource.subscribe();
-        videoInConn = QObject::connect(&cameraSource, &VideoSource::frameAvailable, &av_,
-                                       [&av_, friendNum](std::shared_ptr<VideoFrame> frame) {
-                                           av_.sendCallVideo(friendNum, frame);
-                                       });
-        if (videoInConn == nullptr) {
-            qDebug() << "Video connection not working";
-        }
     }
+}
+
+void ToxFriendCall::sendVideo()
+{
+    if (!videoEnabled || sendingVideo) {
+        return;
+    }
+    sendingVideo = true;
+
+    if (cameraSource.isNone()) {
+        cameraSource.setupDefault();
+    }
+    cameraSource.subscribe();
+    CoreAV* const coreAv = av;
+    const uint32_t friendNum = friendId;
+    videoInConn = QObject::connect(&cameraSource, &VideoSource::frameAvailable, coreAv,
+                                   [coreAv, friendNum](std::shared_ptr<VideoFrame> frame) {
+                                       coreAv->sendCallVideo(friendNum, frame);
+                                   });
+    if (videoInConn == nullptr) {
+        qDebug() << "Video connection not working";
+    }
+}
+
+bool ToxFriendCall::isSendingVideo() const
+{
+    return sendingVideo;
 }
 
 ToxFriendCall::~ToxFriendCall()
 {
-    if (videoEnabled) {
+    if (sendingVideo) {
         cameraSource.unsubscribe();
     }
     QObject::disconnect(audioSinkInvalid);

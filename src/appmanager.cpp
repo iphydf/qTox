@@ -7,17 +7,17 @@
 
 #include "src/core/toxlogger.h"
 #include "src/ipc.h"
-#include "src/net/toxuri.h"
 #include "src/net/updatecheck.h"
 #include "src/nexus.h"
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
-#include "src/persistence/toxsave.h"
 #include "src/platform/posixsignalnotifier.h"
+#include "src/translator.h"
 #include "src/version.h"
 #include "src/video/camerasource.h"
 #include "src/widget/tool/messageboxmanager.h"
-#include "src/widget/translator.h"
+#include "src/widget/tool/toxsave.h"
+#include "src/widget/tool/toxuri.h"
 #include "src/widget/widget.h"
 
 #include <QApplication>

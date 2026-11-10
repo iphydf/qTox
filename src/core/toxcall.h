@@ -89,6 +89,10 @@ public:
 
     void playAudioBuffer(const int16_t* data, int samples, unsigned channels, int sampleRate) const;
 
+    /** Sends the user's camera, in a video call. */
+    void sendVideo();
+    bool isSendingVideo() const;
+
 private slots:
     void onAudioSourceInvalidated();
     void onAudioSinkInvalidated();
@@ -100,6 +104,7 @@ private:
     std::unique_ptr<IAudioSink> sink;
     uint32_t friendId;
     CameraSource& cameraSource;
+    bool sendingVideo{false};
 };
 
 class ToxConferenceCall : public ToxCall

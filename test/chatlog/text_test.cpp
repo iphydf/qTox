@@ -5,10 +5,10 @@
 #include "src/chatlog/content/text.h"
 
 #include "src/chatlog/documentcache.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/settings.h"
 #include "src/persistence/smileypack.h"
 #include "src/widget/style.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
 #include <QApplication>
 #include <QObject>

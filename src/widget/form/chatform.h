@@ -11,7 +11,7 @@
 #include "src/model/imessagedispatcher.h"
 #include "src/model/status.h"
 #include "src/persistence/history.h"
-#include "src/video/netcamview.h"
+#include "src/widget/video/netcamview.h"
 
 #include <QElapsedTimer>
 #include <QLabel>
@@ -56,8 +56,6 @@ public:
 
     void show(ContentLayout* contentLayout_) final;
 
-    static const QString ACTION_PREFIX;
-
 signals:
 
     void incomingNotification(uint32_t friendId);
@@ -73,7 +71,7 @@ public slots:
     void onAvInvite(uint32_t friendId, bool video);
     void onAvStart(uint32_t friendId, bool video);
     void onAvEnd(uint32_t friendId, bool error);
-    void onAvatarChanged(const ToxPk& friendPk, const QPixmap& pic);
+    void onAvatarChanged(const ToxPk& friendPk, const QImage& pic);
     void onFileNameChanged(const ToxPk& friendPk);
     void onShowMessagesClicked();
     void onSplitterMoved(int pos, int index);

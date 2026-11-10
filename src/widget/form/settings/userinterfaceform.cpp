@@ -10,10 +10,10 @@
 #include "src/persistence/profile.h"
 #include "src/persistence/settings.h"
 #include "src/persistence/smileypack.h"
+#include "src/translator.h"
 #include "src/widget/form/settingswidget.h"
 #include "src/widget/style.h"
 #include "src/widget/tool/recursivesignalblocker.h"
-#include "src/widget/translator.h"
 #include "src/widget/widget.h"
 
 #include <QDebug>

@@ -9,7 +9,6 @@
 #include "src/core/icoreidhandler.h"
 #include "src/model/chat.h"
 #include "src/persistence/settings.h"
-#include "src/widget/form/chatform.h"
 
 namespace {
 /**
@@ -51,9 +50,9 @@ bool handleActionPrefix(QString& content)
     // inserting and parsing for ACTION_PREFIX in our messages even
     // though we have the ability to something more intelligent now
     // that we aren't owned by chat form logic
-    auto isAction = content.startsWith(ChatForm::ACTION_PREFIX, Qt::CaseInsensitive);
+    auto isAction = content.startsWith(Message::ACTION_PREFIX, Qt::CaseInsensitive);
     if (isAction) {
-        content.remove(0, ChatForm::ACTION_PREFIX.size());
+        content.remove(0, Message::ACTION_PREFIX.size());
     }
 
     return isAction;
@@ -259,7 +258,7 @@ void ChatHistory::onMessageReceived(const ToxPk& sender, const Message& message)
         auto displayName = chat.getDisplayedName(sender);
         auto content = message.content;
         if (message.isAction) {
-            content = ChatForm::ACTION_PREFIX + content;
+            content = Message::ACTION_PREFIX + content;
         }
 
         history->addNewMessage(chatId, content, sender, message.timestamp, true, displayName, {},
@@ -277,7 +276,7 @@ void ChatHistory::onMessageSent(DispatchedMessageId id, const Message& message)
 
         auto content = message.content;
         if (message.isAction) {
-            content = ChatForm::ACTION_PREFIX + content;
+            content = Message::ACTION_PREFIX + content;
         }
 
         auto username = coreIdHandler.getUsername();

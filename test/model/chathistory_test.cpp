@@ -9,11 +9,11 @@
 #include "src/friendlist.h"
 #include "src/grouplist.h"
 #include "src/model/friend.h"
+#include "src/model/imessageboxmanager.h"
 #include "src/persistence/db/rawdatabase.h"
 #include "src/persistence/db/upgrades/dbupgrader.h"
 #include "src/persistence/history.h"
 #include "src/persistence/settings.h"
-#include "src/widget/tool/imessageboxmanager.h"
 
 #include <QObject>
 #include <QTemporaryFile>
