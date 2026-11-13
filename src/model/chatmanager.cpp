@@ -379,7 +379,7 @@ void ChatManager::onConferenceTitleChanged(uint32_t conferencenumber, const QStr
     c->setTitle(author, title);
 }
 
-void ChatManager::onGroupMessageReceived(uint32_t groupNumber, uint32_t peerId,
+void ChatManager::onGroupMessageReceived(uint32_t groupNumber, const ToxPk& sender,
                                          const QString& message, bool isAction)
 {
     const GroupId& groupId = groupList.id2Key(groupNumber);
@@ -388,12 +388,10 @@ void ChatManager::onGroupMessageReceived(uint32_t groupNumber, uint32_t peerId,
         return;
     }
 
-    const ToxPk author = core->getGroupPeerPk(groupNumber, peerId);
-
-    groupMessageDispatchers[groupId]->onMessageReceived(author, isAction, message);
+    groupMessageDispatchers[groupId]->onMessageReceived(sender, isAction, message);
 }
 
-void ChatManager::onGroupPrivateMessageReceived(uint32_t groupNumber, uint32_t peerId,
+void ChatManager::onGroupPrivateMessageReceived(uint32_t groupNumber, const ToxPk& sender,
                                                 const QString& message, bool isAction)
 {
     const GroupId& groupId = groupList.id2Key(groupNumber);
@@ -402,9 +400,7 @@ void ChatManager::onGroupPrivateMessageReceived(uint32_t groupNumber, uint32_t p
         return;
     }
 
-    const ToxPk author = core->getGroupPeerPk(groupNumber, peerId);
-
-    groupMessageDispatchers[groupId]->onPrivateMessageReceived(author, isAction, message);
+    groupMessageDispatchers[groupId]->onPrivateMessageReceived(sender, isAction, message);
 }
 
 void ChatManager::onEmptyGroupCreated(uint32_t groupNumber, const GroupId& groupId,
@@ -435,7 +431,8 @@ void ChatManager::onGroupJoined(uint32_t groupNumber, const GroupId& groupId)
     }
 }
 
-void ChatManager::onGroupPeerJoined(uint32_t groupNumber, uint32_t peerId)
+void ChatManager::onGroupPeerJoined(uint32_t groupNumber, const ToxPk& peer, const QString& name,
+                                    GroupRole role, Status::Status status)
 {
     const GroupId& groupId = groupList.id2Key(groupNumber);
     Group* g = groupList.findGroup(groupId);
@@ -443,10 +440,10 @@ void ChatManager::onGroupPeerJoined(uint32_t groupNumber, uint32_t peerId)
         return;
     }
 
-    g->onPeerJoin(peerId);
+    g->onPeerJoin(peer, name, role, status);
 }
 
-void ChatManager::onGroupPeerExited(uint32_t groupNumber, uint32_t peerId)
+void ChatManager::onGroupPeerExited(uint32_t groupNumber, const ToxPk& peer)
 {
     const GroupId& groupId = groupList.id2Key(groupNumber);
     Group* g = groupList.findGroup(groupId);
@@ -454,10 +451,10 @@ void ChatManager::onGroupPeerExited(uint32_t groupNumber, uint32_t peerId)
         return;
     }
 
-    g->onPeerExit(peerId);
+    g->onPeerExit(peer);
 }
 
-void ChatManager::onGroupPeerNameChanged(uint32_t groupNumber, uint32_t peerId, const QString& newName)
+void ChatManager::onGroupPeerNameChanged(uint32_t groupNumber, const ToxPk& peer, const QString& newName)
 {
     const GroupId& groupId = groupList.id2Key(groupNumber);
     Group* g = groupList.findGroup(groupId);
@@ -465,10 +462,10 @@ void ChatManager::onGroupPeerNameChanged(uint32_t groupNumber, uint32_t peerId, 
         return;
     }
 
-    g->onPeerNameChanged(peerId, newName);
+    g->onPeerNameChanged(peer, newName);
 }
 
-void ChatManager::onGroupPeerStatusChanged(uint32_t groupNumber, uint32_t peerId, Status::Status status)
+void ChatManager::onGroupPeerStatusChanged(uint32_t groupNumber, const ToxPk& peer, Status::Status status)
 {
     const GroupId& groupId = groupList.id2Key(groupNumber);
     Group* g = groupList.findGroup(groupId);
@@ -476,7 +473,7 @@ void ChatManager::onGroupPeerStatusChanged(uint32_t groupNumber, uint32_t peerId
         return;
     }
 
-    g->onPeerStatusChanged(peerId, status);
+    g->onPeerStatusChanged(peer, status);
 }
 
 void ChatManager::onGroupTopicChanged(uint32_t groupNumber, const QString& topic)
@@ -530,12 +527,13 @@ void ChatManager::onGroupSelfJoined(uint32_t groupNumber)
 
 void ChatManager::addSelfToGroup(Group* g)
 {
-    const uint32_t groupNumber = g->getId();
-    const uint32_t selfPeerId = core->getGroupSelfPeerId(groupNumber);
-    if (selfPeerId == std::numeric_limits<uint32_t>::max()) {
+    const auto groupNumber = static_cast<int>(g->getId());
+    const ToxPk self = core->getGroupSelfPk(groupNumber);
+    if (self.isEmpty()) {
         return;
     }
-    g->onPeerJoin(selfPeerId);
+    g->onPeerJoin(self, core->getGroupSelfName(groupNumber),
+                  core->getGroupPeerRole(groupNumber, self), core->getGroupSelfStatus(groupNumber));
 }
 
 void ChatManager::updateGroupNumber(Group* g, uint32_t groupNumber)
