@@ -1255,7 +1255,7 @@ por ke vi povu konservi la dosieron en Vindozo.</translation>
     <message>
         <source>Set alias...</source>
         <translatorcomment>Automated translation.</translatorcomment>
-        <translation type="unfinished">Agordi kromnomon...</translation>
+        <translation type="unfinished">Agordi kaŝnomon...</translation>
     </message>
     <message>
         <source>Auto accept files from this friend</source>
@@ -1577,15 +1577,15 @@ anstataŭ tute fermiĝi.</translation>
     </message>
     <message>
         <source>mute</source>
-        <translation type="unfinished">muta</translation>
+        <translation type="unfinished">silentigi</translation>
     </message>
     <message>
         <source>unmute</source>
-        <translation type="unfinished">malmute</translation>
+        <translation type="unfinished">malsilentigi</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation type="unfinished">kopii samran ID</translation>
+        <translation type="unfinished">kopii la ID de la partoprenanto</translation>
     </message>
     <message>
         <source>promote to moderator</source>
@@ -1644,7 +1644,7 @@ anstataŭ tute fermiĝi.</translation>
         <translation type="unfinished">Agordi pasvorton de grupo...</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation type="unfinished">Agordi limon de membroj...</translation>
     </message>
     <message>
@@ -1660,11 +1660,11 @@ anstataŭ tute fermiĝi.</translation>
         <translation type="unfinished">Ĉiuj</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation type="unfinished">Moderigantoj kaj fondinto</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation type="unfinished">Nur fondinto</translation>
     </message>
     <message>
@@ -1672,8 +1672,8 @@ anstataŭ tute fermiĝi.</translation>
         <translation type="unfinished">Videbleco de grupo</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation type="unfinished">Publika (aliĝo per ligilo)</translation>
+        <source>Public (join by ID)</source>
+        <translation type="unfinished">Publika (aliĝo per identigilo)</translation>
     </message>
     <message>
         <source>Private (invite only)</source>
@@ -1696,11 +1696,11 @@ anstataŭ tute fermiĝi.</translation>
         <translation type="unfinished">Kromnomo:</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation type="unfinished">Agordi limon de membroj</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation type="unfinished">Limo de membroj:</translation>
     </message>
     <message>
@@ -1712,8 +1712,8 @@ anstataŭ tute fermiĝi.</translation>
         <translation type="unfinished">Temo:</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation type="unfinished">Privata mesaĝo al: %1</translation>
+        <source>Private message to %1</source>
+        <translation type="unfinished">Privata mesaĝo al %1</translation>
     </message>
 </context>
 <context>
@@ -1735,8 +1735,8 @@ anstataŭ tute fermiĝi.</translation>
         <translation type="unfinished">Aliĝi al grupo per identigilo</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation type="unfinished">Enigu la babilejan identigilon de la grupo (64 deksesumaj signoj):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation type="unfinished">Enigu la identigilon de la grupo (64 deksesumaj signoj):</translation>
     </message>
     <message>
         <source>Invalid group ID. Expected 64 hex characters.</source>
@@ -1771,15 +1771,15 @@ anstataŭ tute fermiĝi.</translation>
     <name>GroupInviteWidget</name>
     <message>
         <source>Invited by %1 to %2 on %3 at %4.</source>
-        <translation type="unfinished">Invitita de %1 al %2 je %3 je %4.</translation>
+        <translation type="unfinished">Invitita de %1 al %2 la %3 je %4.</translation>
     </message>
     <message>
         <source>Join</source>
-        <translation type="unfinished">Aliĝu</translation>
+        <translation type="unfinished">Aliĝi</translation>
     </message>
     <message>
         <source>Decline</source>
-        <translation type="unfinished">Malkresko</translation>
+        <translation type="unfinished">Rifuzi</translation>
     </message>
 </context>
 <context>
@@ -1790,11 +1790,11 @@ anstataŭ tute fermiĝi.</translation>
     </message>
     <message>
         <source>Remove chat from this window</source>
-        <translation type="unfinished">Forigu babilejon el ĉi tiu fenestro</translation>
+        <translation type="unfinished">Forigi babilejon el ĉi tiu fenestro</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation type="unfinished">Titoli...</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">Agordi kaŝnomon...</translation>
     </message>
     <message>
         <source>Quit group</source>

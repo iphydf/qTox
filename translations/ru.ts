@@ -1421,7 +1421,7 @@ instead of closing entirely.</source>
         <translation>Заблокировать тему</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation>Модераторы и основатель</translation>
     </message>
     <message>
@@ -1429,7 +1429,7 @@ instead of closing entirely.</source>
         <translation>Тема отсутствует</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation>Только основатель</translation>
     </message>
     <message>
@@ -1437,7 +1437,7 @@ instead of closing entirely.</source>
         <translation>Пароль:</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation>Лимит участников:</translation>
     </message>
     <message>
@@ -1445,8 +1445,8 @@ instead of closing entirely.</source>
         <translation>Приватная (только по приглашению)</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation>Публичная (вступление по ссылке)</translation>
+        <source>Public (join by ID)</source>
+        <translation>Публичная (вступление по ID)</translation>
     </message>
     <message>
         <source>Remove group password</source>
@@ -1465,11 +1465,11 @@ instead of closing entirely.</source>
         <translation>Установить тему группы</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation>Установить лимит участников</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation>Установить лимит участников...</translation>
     </message>
     <message>
@@ -1482,7 +1482,7 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Who can speak</source>
-        <translation>Кто может говорить</translation>
+        <translation>Кто может писать</translation>
     </message>
     <message numerus="yes">
         <source>%n user(s) in chat</source>
@@ -1503,7 +1503,7 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation>скопировать идентификатор узла</translation>
+        <translation>скопировать ID участника</translation>
     </message>
     <message>
         <source>Set nickname...</source>
@@ -1519,11 +1519,11 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Away</source>
-        <translation>Отошёл</translation>
+        <translation>Отошёл/отошла</translation>
     </message>
     <message>
         <source>Busy</source>
-        <translation>Занят</translation>
+        <translation>Занят/занята</translation>
     </message>
     <message>
         <source>Set nickname</source>
@@ -1538,8 +1538,8 @@ instead of closing entirely.</source>
         <translation>личное сообщение</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation>Личное сообщение для: %1</translation>
+        <source>Private message to %1</source>
+        <translation>Личное сообщение для %1</translation>
     </message>
 </context>
 <context>
@@ -1557,8 +1557,8 @@ instead of closing entirely.</source>
         <translation>Введите имя группы</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation>Введите Chat ID группы (64 шестнадцатеричных символа):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation>Введите ID группы (64 шестнадцатеричных символа):</translation>
     </message>
     <message>
         <source>Group password (optional)</source>
@@ -1597,7 +1597,7 @@ instead of closing entirely.</source>
     <name>GroupInviteWidget</name>
     <message>
         <source>Invited by %1 to %2 on %3 at %4.</source>
-        <translation>Приглашён %1 в %2 от %3 в %4.</translation>
+        <translation>Приглашение от %1 в %2 поступило %3 в %4.</translation>
     </message>
     <message>
         <source>Join</source>
@@ -1612,15 +1612,15 @@ instead of closing entirely.</source>
     <name>GroupWidget</name>
     <message>
         <source>Open chat in new window</source>
-        <translation>Перенести разговор в новое окно</translation>
+        <translation>Открыть чат в новом окне</translation>
     </message>
     <message>
         <source>Remove chat from this window</source>
-        <translation>Исключить разговор из этого окна</translation>
+        <translation>Убрать чат из этого окна</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation>Установить заголовок...</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">Установить псевдоним...</translation>
     </message>
     <message>
         <source>Quit group</source>
@@ -2618,7 +2618,7 @@ This ID includes the NoSpam code (in blue), and the checksum (in gray).</source>
     <message>
         <source>private</source>
         <comment>Label for private group messages</comment>
-        <translation>приват</translation>
+        <translation>личное</translation>
     </message>
     <message>
         <source>Default</source>

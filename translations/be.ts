@@ -1457,11 +1457,11 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>unmute</source>
-        <translation type="unfinished">уключаць</translation>
+        <translation type="unfinished">уключыць гук</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation type="unfinished">скапіяваць ID піра</translation>
+        <translation type="unfinished">скапіяваць ID удзельніка</translation>
     </message>
     <message>
         <source>promote to moderator</source>
@@ -1520,7 +1520,7 @@ instead of closing entirely.</source>
         <translation type="unfinished">Усталяваць пароль групы…</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation type="unfinished">Усталяваць ліміт удзельнікаў…</translation>
     </message>
     <message>
@@ -1536,11 +1536,11 @@ instead of closing entirely.</source>
         <translation type="unfinished">Усе</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation type="unfinished">Мадэратары і заснавальнік</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation type="unfinished">Толькі заснавальнік</translation>
     </message>
     <message>
@@ -1548,8 +1548,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">Бачнасць групы</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation type="unfinished">Публічная (па спасылцы)</translation>
+        <source>Public (join by ID)</source>
+        <translation type="unfinished">Публічная (па ID)</translation>
     </message>
     <message>
         <source>Private (invite only)</source>
@@ -1572,11 +1572,11 @@ instead of closing entirely.</source>
         <translation type="unfinished">Мянушка:</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation type="unfinished">Усталяваць ліміт удзельнікаў</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation type="unfinished">Ліміт удзельнікаў:</translation>
     </message>
     <message>
@@ -1588,8 +1588,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">Тэма:</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation type="unfinished">Асабістае паведамленне для: %1</translation>
+        <source>Private message to %1</source>
+        <translation type="unfinished">Асабістае паведамленне для %1</translation>
     </message>
 </context>
 <context>
@@ -1611,8 +1611,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">Далучыцца да групы па ID</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation type="unfinished">Увядзіце ID чата групы (64 шаснаццатковыя сімвалы):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation type="unfinished">Увядзіце ID групы (64 шаснаццатковыя сімвалы):</translation>
     </message>
     <message>
         <source>Invalid group ID. Expected 64 hex characters.</source>
@@ -1647,7 +1647,7 @@ instead of closing entirely.</source>
     <name>GroupInviteWidget</name>
     <message>
         <source>Invited by %1 to %2 on %3 at %4.</source>
-        <translation type="unfinished">%1 запрасіў(-ла) у %2 %3 у %4.</translation>
+        <translation type="unfinished">Запрашэнне ад %1 у %2 прыйшло %3 а %4.</translation>
     </message>
     <message>
         <source>Join</source>
@@ -1669,8 +1669,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">Выдаліць чат з гэтага вакна</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation type="unfinished">Усталяваць назву…</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">Усталяваць псеўданім…</translation>
     </message>
     <message>
         <source>Quit group</source>

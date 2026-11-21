@@ -1459,21 +1459,21 @@ instead of closing entirely.</source>
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
         <translation type="unfinished">
-            <numerusform>پاراڭدا %n ئىشلەتكۈچى</numerusform>
-            <numerusform>پاراڭدا %n ئىشلەتكۈچى</numerusform>
+            <numerusform>سۆھبەتتە %n ئىشلەتكۈچى</numerusform>
+            <numerusform>سۆھبەتتە %n ئىشلەتكۈچى</numerusform>
         </translation>
     </message>
     <message>
         <source>mute</source>
-        <translation type="unfinished">mute</translation>
+        <translation type="unfinished">ئاۋازنى تاقاش</translation>
     </message>
     <message>
         <source>unmute</source>
-        <translation type="unfinished">unmute</translation>
+        <translation type="unfinished">ئاۋازنى ئېچىش</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation type="unfinished">تورداشلارنىڭ كىملىكىنى كۆپەيتىڭ</translation>
+        <translation type="unfinished">قاتناشقۇچىنىڭ كىملىكىنى كۆچۈرۈش</translation>
     </message>
     <message>
         <source>promote to moderator</source>
@@ -1517,7 +1517,7 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Away</source>
-        <translation type="unfinished">ئايرىلىش</translation>
+        <translation type="unfinished">نېرىدا</translation>
     </message>
     <message>
         <source>Busy</source>
@@ -1532,7 +1532,7 @@ instead of closing entirely.</source>
         <translation type="unfinished">گۇرۇپپا پارولى تەڭشەش...</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation type="unfinished">ئەزا چېكى تەڭشەش...</translation>
     </message>
     <message>
@@ -1548,11 +1548,11 @@ instead of closing entirely.</source>
         <translation type="unfinished">ھەممەيلەن</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation type="unfinished">باشقۇرغۇچىلار ۋە قۇرغۇچى</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation type="unfinished">پەقەت قۇرغۇچى</translation>
     </message>
     <message>
@@ -1560,8 +1560,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">گۇرۇپپىنىڭ كۆرۈنۈشچانلىقى</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation type="unfinished">ئاممىۋى (ئۇلانما ئارقىلىق قوشۇلۇش)</translation>
+        <source>Public (join by ID)</source>
+        <translation type="unfinished">ئاممىۋى (ID ئارقىلىق قوشۇلۇش)</translation>
     </message>
     <message>
         <source>Private (invite only)</source>
@@ -1573,7 +1573,7 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Password:</source>
-        <translation type="unfinished">پاورل:</translation>
+        <translation type="unfinished">پارول:</translation>
     </message>
     <message>
         <source>Set nickname</source>
@@ -1584,11 +1584,11 @@ instead of closing entirely.</source>
         <translation type="unfinished">لەقەم:</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation type="unfinished">ئەزا چېكى تەڭشەش</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation type="unfinished">ئەزا چېكى:</translation>
     </message>
     <message>
@@ -1600,8 +1600,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">تېما:</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation type="unfinished">شەخسىي ئۇچۇر تاپشۇرۇۋالغۇچى: %1</translation>
+        <source>Private message to %1</source>
+        <translation type="unfinished">%1 غا شەخسىي ئۇچۇر</translation>
     </message>
 </context>
 <context>
@@ -1623,8 +1623,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">ID ئارقىلىق گۇرۇپپىغا قوشۇلۇش</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation type="unfinished">گۇرۇپپىنىڭ پاراڭ ID سىنى كىرگۈزۈڭ (64 ئون ئالتىلىك ھەرپ):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation type="unfinished">گۇرۇپپا ID سىنى كىرگۈزۈڭ (64 ئون ئالتىلىك ھەرپ):</translation>
     </message>
     <message>
         <source>Invalid group ID. Expected 64 hex characters.</source>
@@ -1636,7 +1636,7 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>Password:</source>
-        <translation type="unfinished">پاورل:</translation>
+        <translation type="unfinished">پارول:</translation>
     </message>
     <message>
         <source>Group ID cannot be empty.</source>
@@ -1681,8 +1681,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">بۇ كۆزنەكتىن سۆھبەتنى ئۆچۈرۈش</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation type="unfinished">ماۋزۇ تەڭشەش...</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">لەقەم قويۇش...</translation>
     </message>
     <message>
         <source>Quit group</source>
@@ -1693,8 +1693,8 @@ instead of closing entirely.</source>
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
         <translation type="unfinished">
-            <numerusform>پاراڭدا %n ئىشلەتكۈچى</numerusform>
-            <numerusform>پاراڭدا %n ئىشلەتكۈچى</numerusform>
+            <numerusform>سۆھبەتتە %n ئىشلەتكۈچى</numerusform>
+            <numerusform>سۆھبەتتە %n ئىشلەتكۈچى</numerusform>
         </translation>
     </message>
     <message>
@@ -3551,7 +3551,7 @@ is too low may make the scroll bar disappear.</source>
     </message>
     <message>
         <source>Password:</source>
-        <translation type="unfinished">پاورل:</translation>
+        <translation type="unfinished">پارول:</translation>
     </message>
     <message>
         <source>Create new conference...</source>

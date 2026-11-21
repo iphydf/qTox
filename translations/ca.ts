@@ -1683,7 +1683,7 @@ en lloc de tancar-se completament.</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation type="unfinished">copia l&apos;ID del parell</translation>
+        <translation type="unfinished">copia l&apos;ID del participant</translation>
     </message>
     <message>
         <source>promote to moderator</source>
@@ -1742,7 +1742,7 @@ en lloc de tancar-se completament.</translation>
         <translation type="unfinished">Estableix la contrasenya del grup...</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation type="unfinished">Estableix el límit de membres...</translation>
     </message>
     <message>
@@ -1758,11 +1758,11 @@ en lloc de tancar-se completament.</translation>
         <translation type="unfinished">Tothom</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation type="unfinished">Moderadors i fundador</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation type="unfinished">Només el fundador</translation>
     </message>
     <message>
@@ -1770,8 +1770,8 @@ en lloc de tancar-se completament.</translation>
         <translation type="unfinished">Visibilitat del grup</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation type="unfinished">Públic (accés per enllaç)</translation>
+        <source>Public (join by ID)</source>
+        <translation type="unfinished">Públic (accés per ID)</translation>
     </message>
     <message>
         <source>Private (invite only)</source>
@@ -1794,11 +1794,11 @@ en lloc de tancar-se completament.</translation>
         <translation type="unfinished">Sobrenom:</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation type="unfinished">Estableix el límit de membres</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation type="unfinished">Límit de membres:</translation>
     </message>
     <message>
@@ -1810,8 +1810,8 @@ en lloc de tancar-se completament.</translation>
         <translation type="unfinished">Tema:</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation type="unfinished">Missatge privat a: %1</translation>
+        <source>Private message to %1</source>
+        <translation type="unfinished">Missatge privat a %1</translation>
     </message>
 </context>
 <context>
@@ -1833,8 +1833,8 @@ en lloc de tancar-se completament.</translation>
         <translation type="unfinished">Uneix-te a un grup per ID</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation type="unfinished">Introduïu l&apos;ID del xat del grup (64 caràcters hexadecimals):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation type="unfinished">Introduïu l&apos;ID del grup (64 caràcters hexadecimals):</translation>
     </message>
     <message>
         <source>Invalid group ID. Expected 64 hex characters.</source>
@@ -1891,8 +1891,8 @@ en lloc de tancar-se completament.</translation>
         <translation type="unfinished">Elimina el xat d&apos;aquesta finestra</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation type="unfinished">Estableix el títol...</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">Estableix l&apos;àlies...</translation>
     </message>
     <message>
         <source>Quit group</source>
@@ -2613,7 +2613,7 @@ Premeu Maj+F1 per a més informació.</translation>
     </message>
     <message>
         <source>%1 invites you to join a group.</source>
-        <translation type="unfinished">%1 et convida a unir-te a un grup.</translation>
+        <translation type="unfinished">%1 us convida a unir-vos a un grup.</translation>
     </message>
     <message>
         <source>Friend request received</source>

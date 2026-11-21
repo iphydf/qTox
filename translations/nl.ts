@@ -1472,7 +1472,7 @@ in plaats van volledig te sluiten.</translation>
         <translation type="unfinished">Groepswachtwoord instellen…</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation type="unfinished">Ledenlimiet instellen…</translation>
     </message>
     <message>
@@ -1488,11 +1488,11 @@ in plaats van volledig te sluiten.</translation>
         <translation type="unfinished">Iedereen</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation type="unfinished">Moderators en oprichter</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation type="unfinished">Alleen oprichter</translation>
     </message>
     <message>
@@ -1500,8 +1500,8 @@ in plaats van volledig te sluiten.</translation>
         <translation type="unfinished">Zichtbaarheid van de groep</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation type="unfinished">Openbaar (deelnemen via link)</translation>
+        <source>Public (join by ID)</source>
+        <translation type="unfinished">Openbaar (deelnemen via ID)</translation>
     </message>
     <message>
         <source>Private (invite only)</source>
@@ -1524,11 +1524,11 @@ in plaats van volledig te sluiten.</translation>
         <translation type="unfinished">Bijnaam:</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation type="unfinished">Ledenlimiet instellen</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation type="unfinished">Ledenlimiet:</translation>
     </message>
     <message>
@@ -1540,8 +1540,8 @@ in plaats van volledig te sluiten.</translation>
         <translation type="unfinished">Onderwerp:</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation type="unfinished">Privébericht aan: %1</translation>
+        <source>Private message to %1</source>
+        <translation type="unfinished">Privébericht aan %1</translation>
     </message>
 </context>
 <context>
@@ -1563,8 +1563,8 @@ in plaats van volledig te sluiten.</translation>
         <translation type="unfinished">Deelnemen aan groep via ID</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation type="unfinished">Voer de chat-ID van de groep in (64 hexadecimale tekens):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation type="unfinished">Voer de groeps-ID in (64 hexadecimale tekens):</translation>
     </message>
     <message>
         <source>Invalid group ID. Expected 64 hex characters.</source>
@@ -1621,8 +1621,8 @@ in plaats van volledig te sluiten.</translation>
         <translation type="unfinished">Chat verwijderen uit dit venster</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation type="unfinished">Stel titel in…</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">Alias instellen…</translation>
     </message>
     <message>
         <source>Quit group</source>
@@ -2047,7 +2047,7 @@ Druk op Shift+F1 voor meer informatie.</translation>
     </message>
     <message>
         <source>Create a group</source>
-        <translation type="unfinished">Een groep aanmaken</translation>
+        <translation type="unfinished">Groep aanmaken</translation>
     </message>
     <message>
         <source>Group</source>

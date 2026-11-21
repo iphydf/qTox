@@ -1440,22 +1440,22 @@ umjesto da se potpuno zatvori.</translation>
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
         <translation type="unfinished">
-            <numerusform>%n korisnik u razgovoru</numerusform>
-            <numerusform>%n korisnika u razgovoru</numerusform>
-            <numerusform>%n korisnika u razgovoru</numerusform>
+            <numerusform>%n korisnik u čavrljanju</numerusform>
+            <numerusform>%n korisnika u čavrljanju</numerusform>
+            <numerusform>%n korisnika u čavrljanju</numerusform>
         </translation>
     </message>
     <message>
         <source>mute</source>
-        <translation type="unfinished">isključen zvuk</translation>
+        <translation type="unfinished">isključi zvuk</translation>
     </message>
     <message>
         <source>unmute</source>
-        <translation type="unfinished">iključi zvuk</translation>
+        <translation type="unfinished">uključi zvuk</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation type="unfinished">kopiraj peer ID</translation>
+        <translation type="unfinished">kopiraj ID sudionika</translation>
     </message>
     <message>
         <source>promote to moderator</source>
@@ -1514,7 +1514,7 @@ umjesto da se potpuno zatvori.</translation>
         <translation type="unfinished">Postavi lozinku grupe …</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation type="unfinished">Postavi ograničenje članova …</translation>
     </message>
     <message>
@@ -1530,11 +1530,11 @@ umjesto da se potpuno zatvori.</translation>
         <translation type="unfinished">Svi</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation type="unfinished">Moderatori i osnivač</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation type="unfinished">Samo osnivač</translation>
     </message>
     <message>
@@ -1542,8 +1542,8 @@ umjesto da se potpuno zatvori.</translation>
         <translation type="unfinished">Vidljivost grupe</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation type="unfinished">Javna (pridruživanje putem poveznice)</translation>
+        <source>Public (join by ID)</source>
+        <translation type="unfinished">Javna (pridruživanje putem ID-a)</translation>
     </message>
     <message>
         <source>Private (invite only)</source>
@@ -1566,11 +1566,11 @@ umjesto da se potpuno zatvori.</translation>
         <translation type="unfinished">Nadimak:</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation type="unfinished">Postavi ograničenje članova</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation type="unfinished">Ograničenje članova:</translation>
     </message>
     <message>
@@ -1582,8 +1582,8 @@ umjesto da se potpuno zatvori.</translation>
         <translation type="unfinished">Tema:</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation type="unfinished">Privatna poruka za: %1</translation>
+        <source>Private message to %1</source>
+        <translation type="unfinished">Privatna poruka za %1</translation>
     </message>
 </context>
 <context>
@@ -1605,8 +1605,8 @@ umjesto da se potpuno zatvori.</translation>
         <translation type="unfinished">Pridruži se grupi putem ID-a</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation type="unfinished">Upiši ID razgovora grupe (64 heksadecimalna znaka):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation type="unfinished">Upiši ID grupe (64 heksadecimalna znaka):</translation>
     </message>
     <message>
         <source>Invalid group ID. Expected 64 hex characters.</source>
@@ -1663,8 +1663,8 @@ umjesto da se potpuno zatvori.</translation>
         <translation type="unfinished">Ukloni čavrljanje iz ovog prozora</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation type="unfinished">Postavi naslov …</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">Postavi pseudonim …</translation>
     </message>
     <message>
         <source>Quit group</source>
@@ -1675,9 +1675,9 @@ umjesto da se potpuno zatvori.</translation>
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
         <translation type="unfinished">
-            <numerusform>%n korisnik u razgovoru</numerusform>
-            <numerusform>%n korisnika u razgovoru</numerusform>
-            <numerusform>%n korisnika u razgovoru</numerusform>
+            <numerusform>%n korisnik u čavrljanju</numerusform>
+            <numerusform>%n korisnika u čavrljanju</numerusform>
+            <numerusform>%n korisnika u čavrljanju</numerusform>
         </translation>
     </message>
     <message>

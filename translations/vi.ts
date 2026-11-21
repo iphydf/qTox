@@ -1418,7 +1418,7 @@ thay vì thoát hẳn.</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation type="unfinished">sao chép ID ngang hàng</translation>
+        <translation type="unfinished">sao chép ID thành viên</translation>
     </message>
     <message>
         <source>promote to moderator</source>
@@ -1477,7 +1477,7 @@ thay vì thoát hẳn.</translation>
         <translation type="unfinished">Đặt mật khẩu nhóm...</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation type="unfinished">Đặt giới hạn thành viên...</translation>
     </message>
     <message>
@@ -1493,11 +1493,11 @@ thay vì thoát hẳn.</translation>
         <translation type="unfinished">Mọi người</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation type="unfinished">Điều hành viên và người sáng lập</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation type="unfinished">Chỉ người sáng lập</translation>
     </message>
     <message>
@@ -1505,8 +1505,8 @@ thay vì thoát hẳn.</translation>
         <translation type="unfinished">Chế độ hiển thị của nhóm</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation type="unfinished">Công khai (tham gia bằng liên kết)</translation>
+        <source>Public (join by ID)</source>
+        <translation type="unfinished">Công khai (tham gia bằng ID)</translation>
     </message>
     <message>
         <source>Private (invite only)</source>
@@ -1529,11 +1529,11 @@ thay vì thoát hẳn.</translation>
         <translation type="unfinished">Biệt danh:</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation type="unfinished">Đặt giới hạn thành viên</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation type="unfinished">Giới hạn thành viên:</translation>
     </message>
     <message>
@@ -1545,8 +1545,8 @@ thay vì thoát hẳn.</translation>
         <translation type="unfinished">Chủ đề:</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation type="unfinished">Tin nhắn riêng tới: %1</translation>
+        <source>Private message to %1</source>
+        <translation type="unfinished">Tin nhắn riêng tới %1</translation>
     </message>
 </context>
 <context>
@@ -1568,8 +1568,8 @@ thay vì thoát hẳn.</translation>
         <translation type="unfinished">Tham gia nhóm bằng ID</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation type="unfinished">Nhập ID trò chuyện của nhóm (64 ký tự thập lục phân):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation type="unfinished">Nhập ID nhóm (64 ký tự thập lục phân):</translation>
     </message>
     <message>
         <source>Invalid group ID. Expected 64 hex characters.</source>
@@ -1626,8 +1626,8 @@ thay vì thoát hẳn.</translation>
         <translation type="unfinished">Xóa trò chuyện khỏi cửa sổ này</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation type="unfinished">Đặt tiêu đề...</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">Đặt bí danh...</translation>
     </message>
     <message>
         <source>Quit group</source>

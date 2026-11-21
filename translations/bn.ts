@@ -1671,15 +1671,15 @@ instead of closing entirely.</source>
     </message>
     <message>
         <source>mute</source>
-        <translation type="unfinished">নিঃশব্দ</translation>
+        <translation type="unfinished">নিঃশব্দ করুন</translation>
     </message>
     <message>
         <source>unmute</source>
-        <translation type="unfinished">নিঃশব্দ</translation>
+        <translation type="unfinished">শব্দ চালু করুন</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation type="unfinished">পিয়ার আইডি কপি করুন</translation>
+        <translation type="unfinished">অংশগ্রহণকারীর আইডি কপি করুন</translation>
     </message>
     <message>
         <source>promote to moderator</source>
@@ -1738,7 +1738,7 @@ instead of closing entirely.</source>
         <translation type="unfinished">গ্রুপের পাসওয়ার্ড নির্ধারণ করুন...</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation type="unfinished">সদস্য সীমা নির্ধারণ করুন...</translation>
     </message>
     <message>
@@ -1754,11 +1754,11 @@ instead of closing entirely.</source>
         <translation type="unfinished">সবাই</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation type="unfinished">মডারেটর ও প্রতিষ্ঠাতা</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation type="unfinished">শুধু প্রতিষ্ঠাতা</translation>
     </message>
     <message>
@@ -1766,8 +1766,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">গ্রুপের দৃশ্যমানতা</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation type="unfinished">সর্বজনীন (লিংকের মাধ্যমে যোগদান)</translation>
+        <source>Public (join by ID)</source>
+        <translation type="unfinished">সর্বজনীন (আইডি দিয়ে যোগদান)</translation>
     </message>
     <message>
         <source>Private (invite only)</source>
@@ -1790,11 +1790,11 @@ instead of closing entirely.</source>
         <translation type="unfinished">ডাকনাম:</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation type="unfinished">সদস্য সীমা নির্ধারণ করুন</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation type="unfinished">সদস্য সীমা:</translation>
     </message>
     <message>
@@ -1806,8 +1806,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">বিষয়:</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation type="unfinished">ব্যক্তিগত বার্তা প্রাপক: %1</translation>
+        <source>Private message to %1</source>
+        <translation type="unfinished">%1-কে ব্যক্তিগত বার্তা</translation>
     </message>
 </context>
 <context>
@@ -1829,8 +1829,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">আইডি দিয়ে গ্রুপে যোগ দিন</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation type="unfinished">গ্রুপের চ্যাট আইডি লিখুন (৬৪টি হেক্স অক্ষর):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation type="unfinished">গ্রুপ আইডি লিখুন (৬৪টি হেক্স অক্ষর):</translation>
     </message>
     <message>
         <source>Invalid group ID. Expected 64 hex characters.</source>
@@ -1887,8 +1887,8 @@ instead of closing entirely.</source>
         <translation type="unfinished">এই উইন্ডো থেকে চ্যাট সরান</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation type="unfinished">শিরোনাম সেট করুন...</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">উপনাম সেট করুন...</translation>
     </message>
     <message>
         <source>Quit group</source>

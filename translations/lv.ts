@@ -1137,7 +1137,7 @@ lai failu varētu saglabāt Windows operētājsistēmā.</translation>
     </message>
     <message>
         <source>Invite to group &apos;%1&apos;</source>
-        <translation type="unfinished">Uzaicināt grupā “%1”</translation>
+        <translation type="unfinished">Uzaicināt grupā &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Set alias...</source>
@@ -1420,9 +1420,9 @@ nevis pilnībā aizvērsies.</translation>
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
         <translation type="unfinished">
-            <numerusform>%n lietotājs čatā (tērzēšanā)</numerusform>
-            <numerusform>%n lietotāji čatā (tērzēšanā)</numerusform>
-            <numerusform>%n lietotāji čatā (tērzēšanā)</numerusform>
+            <numerusform>%n lietotājs tērzēšanā</numerusform>
+            <numerusform>%n lietotāji tērzēšanā</numerusform>
+            <numerusform>%n lietotāju tērzēšanā</numerusform>
         </translation>
     </message>
     <message>
@@ -1435,7 +1435,7 @@ nevis pilnībā aizvērsies.</translation>
     </message>
     <message>
         <source>copy peer ID</source>
-        <translation type="unfinished">kopēt vienaudžu&#xa0;ID</translation>
+        <translation type="unfinished">kopēt dalībnieka ID</translation>
     </message>
     <message>
         <source>promote to moderator</source>
@@ -1494,7 +1494,7 @@ nevis pilnībā aizvērsies.</translation>
         <translation type="unfinished">Iestatīt grupas paroli ...</translation>
     </message>
     <message>
-        <source>Set peer limit...</source>
+        <source>Set member limit...</source>
         <translation type="unfinished">Iestatīt dalībnieku ierobežojumu ...</translation>
     </message>
     <message>
@@ -1510,11 +1510,11 @@ nevis pilnībā aizvērsies.</translation>
         <translation type="unfinished">Visi</translation>
     </message>
     <message>
-        <source>Moderators and Founder</source>
+        <source>Moderators and the founder</source>
         <translation type="unfinished">Moderatori un dibinātājs</translation>
     </message>
     <message>
-        <source>Only Founder</source>
+        <source>Only the founder</source>
         <translation type="unfinished">Tikai dibinātājs</translation>
     </message>
     <message>
@@ -1522,8 +1522,8 @@ nevis pilnībā aizvērsies.</translation>
         <translation type="unfinished">Grupas redzamība</translation>
     </message>
     <message>
-        <source>Public (join by link)</source>
-        <translation type="unfinished">Publiska (pievienošanās ar saiti)</translation>
+        <source>Public (join by ID)</source>
+        <translation type="unfinished">Publiska (pievienošanās ar ID)</translation>
     </message>
     <message>
         <source>Private (invite only)</source>
@@ -1546,11 +1546,11 @@ nevis pilnībā aizvērsies.</translation>
         <translation type="unfinished">Segvārds:</translation>
     </message>
     <message>
-        <source>Set peer limit</source>
+        <source>Set member limit</source>
         <translation type="unfinished">Iestatīt dalībnieku ierobežojumu</translation>
     </message>
     <message>
-        <source>Peer limit:</source>
+        <source>Member limit:</source>
         <translation type="unfinished">Dalībnieku ierobežojums:</translation>
     </message>
     <message>
@@ -1562,8 +1562,8 @@ nevis pilnībā aizvērsies.</translation>
         <translation type="unfinished">Tēma:</translation>
     </message>
     <message>
-        <source>Private message to: %1</source>
-        <translation type="unfinished">Privāta ziņa saņēmējam: %1</translation>
+        <source>Private message to %1</source>
+        <translation type="unfinished">Privāta ziņa saņēmējam %1</translation>
     </message>
 </context>
 <context>
@@ -1585,8 +1585,8 @@ nevis pilnībā aizvērsies.</translation>
         <translation type="unfinished">Pievienoties grupai pēc ID</translation>
     </message>
     <message>
-        <source>Enter the group Chat ID (64 hex characters):</source>
-        <translation type="unfinished">Ievadiet grupas tērzēšanas ID (64 heksadecimālas rakstzīmes):</translation>
+        <source>Enter the group ID (64 hex characters):</source>
+        <translation type="unfinished">Ievadiet grupas ID (64 heksadecimālas rakstzīmes):</translation>
     </message>
     <message>
         <source>Invalid group ID. Expected 64 hex characters.</source>
@@ -1643,8 +1643,8 @@ nevis pilnībā aizvērsies.</translation>
         <translation type="unfinished">Noņemt tērzēšanu no šī loga</translation>
     </message>
     <message>
-        <source>Set title...</source>
-        <translation type="unfinished">Uzstādīt nosaukumu ...</translation>
+        <source>Set alias...</source>
+        <translation type="unfinished">Iestatīt pseidonīmu ...</translation>
     </message>
     <message>
         <source>Quit group</source>
@@ -1655,9 +1655,9 @@ nevis pilnībā aizvērsies.</translation>
         <source>%n user(s) in chat</source>
         <comment>Number of users in chat</comment>
         <translation type="unfinished">
-            <numerusform>%n lietotājs čatā (tērzēšanā)</numerusform>
-            <numerusform>%n lietotāji čatā (tērzēšanā)</numerusform>
-            <numerusform>%n lietotāji čatā (tērzēšanā)</numerusform>
+            <numerusform>%n lietotājs tērzēšanā</numerusform>
+            <numerusform>%n lietotāji tērzēšanā</numerusform>
+            <numerusform>%n lietotāju tērzēšanā</numerusform>
         </translation>
     </message>
     <message>
